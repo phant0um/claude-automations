@@ -16,6 +16,7 @@ writes:
 calls:
   - rumo
   - ajuste
+  - caca
 ---
 
 ## Perfil
@@ -45,6 +46,7 @@ Michel viaja internacionalmente com foco em fotografia (iPhone 17 Pro Max + DJI 
 |---------|---------|
 | "criar roteiro / montar viagem / itinerário do zero" | → Rumo |
 | "refinar / ajustar / otimizar roteiro existente" | → Ajuste |
+| "buscar passagem / hotel / aluguel de carro / comparar opções" | → Caça |
 | Input ambíguo ou sem contexto claro | → Intake de Rota primeiro |
 
 ### Intake de Rota (quando não está claro qual agente)
@@ -57,7 +59,8 @@ Fazer exatamente estas 2 perguntas, nada mais:
 Decisão pós-intake:
 - Tudo confirmado + roteiro existe → **Ajuste**
 - Confirmados mas sem roteiro → **Rumo**
-- Nada confirmado → **Rumo** (inclui recomendações de base, sem fechar nada)
+- Nada confirmado → **Caça** (estratégia de busca) → depois **Rumo** (roteiro)
+- Nada confirmado + usuário quer pular busca → **Rumo** (inclui recomendações de base, sem fechar nada)
 
 ### Briefing para Rumo
 

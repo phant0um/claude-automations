@@ -1,6 +1,6 @@
 ---
 title: "Travel System"
-description: "Sistema de planejamento de viagens internacionais: criação e refinamento de roteiros"
+description: "Sistema de viagens internacionais: busca de passagem/hotel/carro, criação e refinamento de roteiros"
 version: "1.0.0"
 updated: 2026-05-15
 status: active
@@ -9,13 +9,14 @@ tags: [agents, viagem, roteiro, claude]
 
 # Travel System
 
-2 agentes especializados orquestrados pelo **Rota** para planejamento completo de viagens internacionais.
+3 agentes especializados orquestrados pelo **Rota** para busca, planejamento e refinamento de viagens internacionais.
 
 ## Arquitetura
 
 ```
 Rota (orchestrator)
 ├── intake inicial quando necessário
+├── Caça   → busca passagem, hotel e aluguel de carro (análise + estratégia)
 ├── Rumo   → cria itinerários internacionais do zero
 └── Ajuste → refina roteiros já fechados (sem novas compras)
 ```
@@ -25,6 +26,7 @@ Rota (orchestrator)
 | Agente | Papel | Trigger |
 |--------|-------|---------|
 | Rota | Orchestrator + intake | `@rota`, viagem, roteiro, itinerário |
+| Caça | Busca e comparação | `@caca`, passagem, hotel, aluguel de carro |
 | Rumo | Criador de itinerários | `@rumo`, criar roteiro |
 | Ajuste | Refinamento de roteiros | `@ajuste`, refinar, otimizar |
 
@@ -32,6 +34,7 @@ Rota (orchestrator)
 
 | Situação | Agente |
 |----------|--------|
+| Preciso buscar passagem/hotel/carro | Caça |
 | Voos confirmados, sem roteiro | Rumo |
 | Roteiro existe, precisa otimizar | Ajuste |
 | Não sei por onde começar | Rota |
@@ -52,6 +55,9 @@ Rota (orchestrator)
 
 ```
 @rota — [descreva a viagem]
+@caca — passagem: [destino + datas + opções]
+@caca — hospedagem: [cidade + datas + opções]
+@caca — carro: [país + datas + categoria + opções]
 @rumo — [dados do destino, datas, voos, hotel, estilo]
 @ajuste — [cole roteiro existente]
 ```
