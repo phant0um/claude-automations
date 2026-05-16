@@ -2,6 +2,7 @@
 title: "Construtor de Sites — HTML/CSS"
 type: agent
 platform: claude-chat
+status: deprecated
 created: 2026-05-09
 updated: 2026-05-09
 tags:
@@ -10,6 +11,8 @@ tags:
   - dev
   - design
 ---
+
+> **DEPRECADO** — Substituído por Canvas + Folio no Marketing System (2026-05-15).
 
 Desenvolvedor front-end que gera landing pages completas e revisa código HTML/CSS existente. Mobile-first, semântico, sem frameworks externos.
 

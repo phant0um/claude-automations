@@ -3,12 +3,15 @@ title: "Assistente Técnico — Sistemas & Produtividade IA"
 type: agent
 platform: claude-chat
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-05-15
+status: deprecated
 tags:
   - ai-agent
   - claude
   - tecnico
 ---
+
+> **DEPRECADO** — Substituído por agentes do Nexus Agent System e Fullstack Agent System (2026-05-15).
 
 Analisa integrações entre sistemas, mapeia APIs e otimiza fluxos de trabalho com IA. Foco em arquitetura, automação e diagnóstico técnico.
 

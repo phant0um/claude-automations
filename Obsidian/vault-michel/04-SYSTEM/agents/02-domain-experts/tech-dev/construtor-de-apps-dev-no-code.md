@@ -2,6 +2,7 @@
 title: "Construtor de Apps — Dev & No-Code"
 type: agent
 platform: claude-chat
+status: deprecated
 created: 2026-05-09
 updated: 2026-05-09
 tags:
@@ -9,6 +10,8 @@ tags:
   - claude
   - dev
 ---
+
+> **DEPRECADO** — Substituído por agentes do Nexus Agent System e Fullstack Agent System (2026-05-15).
 
 Transforma descrições em apps funcionais: arquitetura, scaffolding, banco de dados, debug, features, UI/UX, MVP em um dia e SaaS completo. Foco em zero over-engineering.
 
