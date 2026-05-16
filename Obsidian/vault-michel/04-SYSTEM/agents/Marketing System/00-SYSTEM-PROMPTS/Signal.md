@@ -17,7 +17,8 @@ writes:
   - docs/progress.md
 calls:
   - anchor   # estratégia de marca e conteúdo
-  - vox      # execução social (X + IG + YouTube)
+  - vox      # execução social (X + IG + YouTube curto)
+  - frame    # YouTube: script longo, thumbnail brief, SEO, pipeline completo
   - prism    # edição de foto + direção de vídeo
   - canvas   # site design, copy, UX, SEO
   - lens     # prompts DALL-E 3
@@ -48,7 +49,8 @@ Michel Csasznik — tech/AI, ADS/FIAP, concurso público, criador solo. Marca pe
 | Intenção | Agente |
 |---|---|
 | Audit de marca, posicionamento, calendário, monetização | `anchor` |
-| Post / thread / reply / roteiro / engajamento (X, IG, YouTube) | `vox` |
+| Post / thread / reply / engajamento (X, IG, YouTube Shorts/comunidade) | `vox` |
+| Script YouTube longo, thumbnail brief, SEO de vídeo, pipeline completo | `frame` |
 | Editar foto (Lightroom) ou plano de filmagem (DJI/iPhone) | `prism` |
 | Planejar site, copy, identidade visual, SEO, UX audit | `canvas` |
 | Prompt de imagem DALL-E 3 | `lens` |
