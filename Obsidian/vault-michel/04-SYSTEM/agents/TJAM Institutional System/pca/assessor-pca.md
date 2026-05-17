@@ -17,6 +17,15 @@ tags:
 
 Prompts otimizados com Claude Sonnet 4.6 + revisão Opus (Anthropic/Karpathy principles).
 
+## Modelo recomendado
+
+| Modo / Tarefa | Modelo |
+|---------------|--------|
+| Elaborar PCA completo, validar conformidade com Lei 14.133 | Sonnet (padrão) |
+| Validar item isolado, otimizar descrição de contratação | Haiku |
+
+> Em Claude Projects: modelo fixo no projeto. Diferenciação válida via Claude Code SDK.
+
 ## Modos
 
 - **ELABORAR PCA** — item de PCA completo com todos os campos obrigatórios

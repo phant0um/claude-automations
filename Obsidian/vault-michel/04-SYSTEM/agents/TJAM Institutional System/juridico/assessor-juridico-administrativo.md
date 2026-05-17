@@ -17,6 +17,15 @@ tags:
 
 Prompts otimizados com Claude Sonnet 4.6 + revisão Opus (Anthropic/Karpathy principles).
 
+## Modelo recomendado
+
+| Modo / Tarefa | Modelo |
+|---------------|--------|
+| Fundamentação normativa, parecer complexo, mapeamento de quadro legal | Opus |
+| Extração de citações, análise de texto simples | Sonnet (padrão) |
+
+> Em Claude Projects: modelo fixo no projeto. Diferenciação válida via Claude Code SDK.
+
 ## Modos
 
 - **EXTRAIR CITAÇÕES** — tabela normativa com status de vigência por referência

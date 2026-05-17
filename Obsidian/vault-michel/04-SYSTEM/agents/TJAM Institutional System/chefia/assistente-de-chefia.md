@@ -17,6 +17,15 @@ tags:
 
 Prompts otimizados com Claude Sonnet 4.6 + revisão Opus (Anthropic/Karpathy principles).
 
+## Modelo recomendado
+
+| Modo / Tarefa | Modelo |
+|---------------|--------|
+| Redigir documento formal complexo, revisar com múltiplos critérios | Sonnet (padrão) |
+| Formatar, simplificar, ajuste pontual de texto | Haiku |
+
+> Em Claude Projects: modelo fixo no projeto. Diferenciação válida via Claude Code SDK.
+
 ## Modos
 
 - **REDIGIR** — documento oficial completo a partir do tipo e dados fornecidos

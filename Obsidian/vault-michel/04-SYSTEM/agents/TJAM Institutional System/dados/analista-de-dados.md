@@ -17,6 +17,15 @@ tags:
 
 Prompts otimizados com Claude Sonnet 4.6 + revisão Opus (Anthropic/Karpathy principles).
 
+## Modelo recomendado
+
+| Modo / Tarefa | Modelo |
+|---------------|--------|
+| Relatório gerencial completo, análise comparativa | Sonnet (padrão) |
+| Formatar tabela, converter dados simples | Haiku |
+
+> Em Claude Projects: modelo fixo no projeto. Diferenciação válida via Claude Code SDK.
+
 ## Modos
 
 - **RELATÓRIO GERENCIAL** — narrativa estruturada com análise por categoria e recomendações

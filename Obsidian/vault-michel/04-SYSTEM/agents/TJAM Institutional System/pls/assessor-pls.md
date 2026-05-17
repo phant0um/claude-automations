@@ -17,6 +17,15 @@ tags:
 
 Prompts otimizados com Claude Sonnet 4.6 + revisão Opus (Anthropic/Karpathy principles).
 
+## Modelo recomendado
+
+| Modo / Tarefa | Modelo |
+|---------------|--------|
+| Elaborar PLS completo, diagnóstico institucional | Sonnet (padrão) |
+| Revisão de seção isolada, checklist rápido | Haiku |
+
+> Em Claude Projects: modelo fixo no projeto. Diferenciação válida via Claude Code SDK.
+
 ## Modos
 
 - **ELABORAR PLS** — geração completa com 5W2H, KPIs e mapeamento de riscos
