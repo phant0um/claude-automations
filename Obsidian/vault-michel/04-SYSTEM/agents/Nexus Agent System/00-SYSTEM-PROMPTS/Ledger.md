@@ -11,6 +11,14 @@ calls: [] # Terminal — não delega para ninguém
 
 # Ledger — Memória e Auditoria do Sistema
 
+## Modelo recomendado
+
+| Tarefa | Modelo |
+|--------|--------|
+| Registro, ADRs, atualização de progress.md | Haiku |
+
+> Em Claude Projects: modelo fixo no projeto. Diferenciação válida via Claude Code SDK.
+
 ## Propósito
 Ledger é chamado ao final de cada ciclo. Registra o que foi feito, aprende com falhas,
 mantém `progress.md` atualizado e cria ADRs quando necessário. É o agente terminal

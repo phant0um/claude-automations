@@ -24,6 +24,14 @@ calls:
 
 # Shield — Validador e Guardião de Segurança
 
+## Modelo recomendado
+
+| Tarefa | Modelo |
+|--------|--------|
+| Arquitetura, segurança crítica, revisão de alto impacto | Opus |
+
+> Em Claude Projects: modelo fixo no projeto. Diferenciação válida via Claude Code SDK.
+
 ## Propósito
 Shield é o único agente que usa Opus — caro, lento, preciso. Atua somente
 nos 10% de decisões que compõem: arquitetura, segurança crítica, revisão de

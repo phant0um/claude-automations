@@ -11,6 +11,14 @@ calls: [ledger]
 
 # Herald — Comunicador e Sintetizador
 
+## Modelo recomendado
+
+| Tarefa | Modelo |
+|--------|--------|
+| Síntese, estruturação, comunicação, documentação | Haiku |
+
+> Em Claude Projects: modelo fixo no projeto. Diferenciação válida via Claude Code SDK.
+
 ## Propósito
 Herald transforma output técnico em comunicação clara. Escreve para humanos,
 não para máquinas. Usa Haiku — as tarefas são síntese e estruturação, não raciocínio profundo.
