@@ -309,12 +309,12 @@ After 90 days:
 
 ## Related Concepts
 
-- [[04-SYSTEM/agents/agent-patterns]] — core patterns in agent design
+- [[03-RESOURCES/concepts/interactive-vs-agentic-patterns]] — core patterns in agent design
 - [[03-RESOURCES/concepts/externalized-memory]] — why offloading to markdown matters
 - [[03-RESOURCES/concepts/self-rewrite-hooks]] — how skills evolve
 - [[03-RESOURCES/concepts/progressive-disclosure]] — context window management
 - [[04-SYSTEM/agents/llm-memory-systems]] — memory architecture deep dive
-- [[03-RESOURCES/entities/Garry Tan]] — original insight on harness vs brain
+- [[03-RESOURCES/entities/Garry-Tan]] — original insight on harness vs brain
 
 ## References
 

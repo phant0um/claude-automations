@@ -27,6 +27,15 @@ Livros, papers, vídeos, cursos e artigos referenciados no vault.
 
 - [[03-RESOURCES/sources/clipping-8-prompts-senior-engineer-auroramartel]] — @AuroraMar1eL (Aurora Martel); 8 prompts de engenharia via Role Assignment; Architect/Engineer/Reviewer/Optimizer multi-agent pattern
 
+## Fontes Ingeridas em 2026-05-18
+
+- [[03-RESOURCES/sources/thread-alex-prompter-epistemic-audit-mode]] — @alex_prompter; Epistemic Audit Mode; 7 prompts encadeados para auditar raciocínio; Claim Decomposer, Steel Man, Epistemic Brief
+- [[03-RESOURCES/sources/hermes-superagent-12-integrations]] — @itsolelehmann; Hermes + 12 integrações; framework 4-jobs (Research/Action/Workspace/Memory); Firecrawl, Bland, Readwise, Obsidian
+- [[03-RESOURCES/sources/diamandis-claude-killed-6-moats]] — @PeterDiamandis; "unhobbling" de capacidades latentes; verticais next (Healthcare, Real Estate, Construction); 6 moats de sobrevivência
+- [[03-RESOURCES/sources/archify-claude-skill-architecture-diagrams]] — tt-a1i; Claude Skill para diagramas; 5 tipos; dark/light toggle; 4× native rasterization; SVG dual-theme; fork de Cocoon-AI
+- [[03-RESOURCES/sources/claude-code-rce-deeplink-vulnerability]] — Guru Baran/Joernchen; RCE no Claude Code via deeplink; eagerParseCliFlag context-blind; trust bypass; corrigido v2.1.118
+- [[03-RESOURCES/sources/jacob-harris-why-i-dont-vibe-code]] — Jacob Harris/@dotey; anti-vibe-coding; complexidade essencial vs acidental; fricção como sinal de design; Brooks "No Silver Bullet"
+
 ## Por Tipo
 
 - **Livros**

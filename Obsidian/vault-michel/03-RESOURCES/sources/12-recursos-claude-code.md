@@ -10,7 +10,7 @@ tags: [claude-code, tools, features, best-practices, ai-development]
 
 # 12 Recursos Indispensáveis no Claude Code
 
-**Autor:** [[Avi Chawla]]  
+**Autor:** [[Avi-Chawla]]  
 **Fonte:** Twitter thread (@_avichawla)  
 **Data:** 2026-04-18
 
@@ -37,7 +37,7 @@ Avi Chawla (engenheiro e educador em IA/Claude) lista os 12 recursos mais críti
 
 ### Tier 4: Extensão + Integração
 
-7. **[[MCP]]** — Conecta Claude a bancos de dados, APIs, serviços. Acesso ao mundo real.
+7. **[[mcp]]** — Conecta Claude a bancos de dados, APIs, serviços. Acesso ao mundo real.
 8. **Plugins** — Adiciona Docker, pytest, VS Code extensions sem código de integração.
 9. **Comandos de Barra** — Atalhos em `.claude/commands/` para disparar fluxos complexos.
 
@@ -59,8 +59,8 @@ Cada layer habilita a layer seguinte. CLAUDE.md + Permissões = base segura. Ski
 
 ## Conexões com a Vault
 
-- [[04-SYSTEM/agents/Claude-Code]] — Implementação prática
-- [[03-RESOURCES/concepts/prompt-engineering]] — Base para skills
+- [[04-SYSTEM/agents/Claude Code]] — Implementação prática
+- [[03-RESOURCES/concepts/prompt-engineering-patterns]] — Base para skills
 - [[03-RESOURCES/entities/Avi-Chawla]] — Autor
 
 ## Aplicação Prática

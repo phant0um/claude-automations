@@ -122,7 +122,7 @@ Nemotron 3 Super is a 120B parameter (12B active) hybrid Mamba-Attention Mixture
 
 ## Related Concepts
 
-[[04-SYSTEM/agents/agentic-reasoning]] · [[03-RESOURCES/concepts/mixture-of-experts]] · [[03-RESOURCES/concepts/inference-optimization]] · [[03-RESOURCES/concepts/hybrid-architectures]] · [[03-RESOURCES/concepts/speculative-decoding]] · [[03-RESOURCES/concepts/model-quantization]]
+[[03-RESOURCES/concepts/agentic-reasoning]] · [[03-RESOURCES/concepts/mixture-of-experts]] · [[03-RESOURCES/concepts/inference-optimization]] · [[03-RESOURCES/concepts/hybrid-architectures]] · [[03-RESOURCES/concepts/speculative-decoding]] · [[03-RESOURCES/concepts/model-quantization]]
 
 ## References
 
