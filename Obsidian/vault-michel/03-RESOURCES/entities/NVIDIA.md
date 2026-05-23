@@ -19,15 +19,15 @@ NVIDIA is a leading AI infrastructure and model development company. Active in L
 
 - **Nemotron Series:** Open hybrid Mamba-Attention MoE models
   - Nemotron 3 Nano (first Mamba-Attention hybrid)
-  - [[03-RESOURCES/sources/nemotron-3-super-hybrid-mamba-attention-moe|Nemotron 3 Super]] (120B-A12B, SOTA throughput)
+  - [[03-RESOURCES/sources/ml-research-papers/nemotron-3-super-hybrid-mamba-attention-moe|Nemotron 3 Super]] (120B-A12B, SOTA throughput)
 - **NVFP4:** Low-precision training format enabling stable 4-bit pre-training
 - **NeMo Framework:** Model training and inference optimization
 - **TRT-LLM:** CUDA kernel-optimized LLM inference
 
 ## Relevance to Vault
 
-[[03-RESOURCES/concepts/mixture-of-experts]] · [[03-RESOURCES/concepts/inference-optimization]] · [[03-RESOURCES/concepts/agentic-reasoning]]
+[[03-RESOURCES/concepts/llm-ml-foundations/mixture-of-experts]] · [[03-RESOURCES/concepts/llm-ml-foundations/inference-optimization]] · [[03-RESOURCES/concepts/agent-systems/agentic-reasoning]]
 
 ---
 
-**Sources:** [[03-RESOURCES/sources/nemotron-3-super-hybrid-mamba-attention-moe]]
+**Sources:** [[03-RESOURCES/sources/ml-research-papers/nemotron-3-super-hybrid-mamba-attention-moe]]

@@ -2,6 +2,7 @@
 title: Fontes
 type: index
 created: 2026-04-14
+triagem_score: 4
 ---
 
 # Fontes

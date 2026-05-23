@@ -1,7 +1,51 @@
 ---
 title: Hot Cache
 type: hot-cache
-updated: 2026-05-19
+updated: 2026-05-23
+---
+
+## Sources Subfolder Reorganization — 2026-05-23
+
+**580 files** moved from flat `03-RESOURCES/sources/` into 14 subfolders.
+
+| Subfolder | Files |
+|-----------|-------|
+| `ai-agents-harness/` | 73 |
+| `claude-code-cowork/` | 11 |
+| `claude-code-skills/` | 52 |
+| `fiap-academic/` | 83 |
+| `financial-trading/` | 12 |
+| `guides-courses-howtos/` | 82 |
+| `hermes-agent/` *(new)* | 23 |
+| `memory-context-rag/` | 39 |
+| `misc-low-confidence/` | 54 |
+| `ml-research-papers/` | 45 |
+| `open-source-ecosystems/` | 24 |
+| `pkm-obsidian-second-brain/` | 26 |
+| `skills-prompting-mcp/` | 40 |
+| `token-economy-cost/` | 16 |
+
+**3082 wikilinks** updated across vault. `sources-index.md` stays at root.
+
+---
+
+## Batch Ingest FIAP — 2026-05-20
+
+**60 source stubs criados** (Fases 1–6) + 60 entradas no manifest. Fase 7 já existia (15 stubs).
+
+| Fase | Stubs | Tema |
+|------|-------|------|
+| Fase 1 | 10 | Dev Environment — Python, SCRUM, requisitos |
+| Fase 2 | 9 | Prototyping — Python avançado, UML, UX/UI |
+| Fase 3 | 9 | Modelling — BD relacional, ER, DDL, normalização |
+| Fase 4 | 12 | View — HTML, CSS, Bootstrap, JS, GitHub |
+| Fase 5 | 12 | OO — Java, classes, encapsulamento, herança, IA |
+| Fase 6 | 12 | Model — JDBC, SQL completo, Java + Oracle |
+
+**Total FIAP no vault:** 75 apostilas (7 fases) → 75 stubs em `03-RESOURCES/sources/fiap-fase-NN-*`.
+
+**Pages criadas:** sources=75 (clips=26, fiap=75, ebook=2)
+
 ---
 
 ## Relatório Pós-Ingest Semanal — 2026-05-19
@@ -36,7 +80,7 @@ updated: 2026-05-19
 
 **Connection-finder (cluster memória):** Memory Curse paradox + δ-mem + Memory≡Skills adicionados a `agent-memory-architecture` e `agent-memory-four-layers` | `llm-wiki-pattern` + source wiki+recording
 
-**Conceitos novos:** [[03-RESOURCES/concepts/subagent-pattern-empirical]] — sub-agents vencem 7/10 prod; heurística de decisão
+**Conceitos novos:** [[03-RESOURCES/concepts/agent-systems/subagent-pattern-empirical]] — sub-agents vencem 7/10 prod; heurística de decisão
 
 **Frontmatter batch fix:** 175 concept/entity pages → `updated: 2026-05-19` adicionado
 
@@ -170,56 +214,56 @@ FIAP Fase 7 (15 PDFs) + 2 ebooks + 27 Clippings aprovados. 14 rejeitados movidos
 **Pages criadas:** sources=43 (clips=26, fiap=15, ebook=2)
 
 ### Clippings — Pesquisa
-- [[03-RESOURCES/sources/delta-mem-efficient-online-memory]] — online memory δ-mem (NTU/Fudan/SJTU)
-- [[03-RESOURCES/sources/beyond-individual-intelligence-multi-agent-survey]] — survey MAS: collaboration, failure attribution, self-evolution
-- [[03-RESOURCES/sources/llms-improving-llms-agentic-discovery]] — LLMs descobrindo test-time scaling (UMD/Google/Meta)
-- [[03-RESOURCES/sources/memory-curse-expanded-recall-cooperative-intent]] — memory curse: recall expandido erode cooperação (CMU/Harvard/Michigan)
-- [[03-RESOURCES/sources/is-grep-all-you-need-agent-harnesses-search]] — PwC: harness > RAG vetorial
-- [[03-RESOURCES/sources/geometric-calculator-inside-neural-network]] — mech-interp: calc geométrico em Llama 3.1
-- [[03-RESOURCES/sources/efficient-pretraining-token-superposition]] — Nous Research: token superposition
-- [[03-RESOURCES/sources/long-context-pretraining-lighthouse-attention]] — Nous Research: Lighthouse attention O(n)
-- [[03-RESOURCES/sources/ai-co-mathematician-google]] — Google: agente co-matemático
+- [[03-RESOURCES/sources/memory-context-rag/delta-mem-efficient-online-memory]] — online memory δ-mem (NTU/Fudan/SJTU)
+- [[03-RESOURCES/sources/ml-research-papers/beyond-individual-intelligence-multi-agent-survey]] — survey MAS: collaboration, failure attribution, self-evolution
+- [[03-RESOURCES/sources/ml-research-papers/llms-improving-llms-agentic-discovery]] — LLMs descobrindo test-time scaling (UMD/Google/Meta)
+- [[03-RESOURCES/sources/memory-context-rag/memory-curse-expanded-recall-cooperative-intent]] — memory curse: recall expandido erode cooperação (CMU/Harvard/Michigan)
+- [[03-RESOURCES/sources/memory-context-rag/is-grep-all-you-need-agent-harnesses-search]] — PwC: harness > RAG vetorial
+- [[03-RESOURCES/sources/ml-research-papers/geometric-calculator-inside-neural-network]] — mech-interp: calc geométrico em Llama 3.1
+- [[03-RESOURCES/sources/ml-research-papers/efficient-pretraining-token-superposition]] — Nous Research: token superposition
+- [[03-RESOURCES/sources/memory-context-rag/long-context-pretraining-lighthouse-attention]] — Nous Research: Lighthouse attention O(n)
+- [[03-RESOURCES/sources/ml-research-papers/ai-co-mathematician-google]] — Google: agente co-matemático
 
 ### Clippings — Prático (Claude/Agents)
-- [[03-RESOURCES/sources/memory-skills-same-harness-tricalt]] — memória + skills = mesmo harness
-- [[03-RESOURCES/sources/5-agent-content-pipeline-300k]] — 5-agent content pipeline
-- [[03-RESOURCES/sources/claude-mcp-servers-complete-guide-cyrilxbt]] — MCP zero-to-everything (@cyrilXBT)
-- [[03-RESOURCES/sources/paperclip-hermes-10-agents]] — Paperclip + Hermes 10 agents
-- [[03-RESOURCES/sources/agent-wiki-recording-not-bigger-desk]] — wiki + recording > context window maior
-- [[03-RESOURCES/sources/claude-cowork-setup-es]] — Claude Cowork setup ES
-- [[03-RESOURCES/sources/wilwaldon-claude-code-frontend-toolkit]] — frontend toolkit GitHub
-- [[03-RESOURCES/sources/tmylla-awesome-llm4cybersecurity]] — 612+ papers LLM4Cybersecurity
-- [[03-RESOURCES/sources/light-heart-labs-dreamserver]] — local AI stack completo
-- [[03-RESOURCES/sources/openhuman-vs-hermes-vs-openclaw]] — comparativo agent operators
-- [[03-RESOURCES/sources/10-claude-code-workflows-build-software]] — 10 workflows Claude Code
-- [[03-RESOURCES/sources/12-claude-code-setup-tricks-real-engineer]] — 12 setup tricks
-- [[03-RESOURCES/sources/backend-1m-users-design]] — backend 1M users
-- [[03-RESOURCES/sources/40-claude-code-practices-10x]] — 40 práticas Claude Code
-- [[03-RESOURCES/sources/obsidian-beginner-productivity-trap]] — anti-patterns Obsidian
-- [[03-RESOURCES/sources/post-shannholmberg-hermes-prototype-production]] — Hermes prototype→prod
-- [[03-RESOURCES/sources/openai-founder-obsidian-second-brain-jp]] — Obsidian second-brain JP
+- [[03-RESOURCES/sources/memory-context-rag/memory-skills-same-harness-tricalt]] — memória + skills = mesmo harness
+- [[03-RESOURCES/sources/guides-courses-howtos/5-agent-content-pipeline-300k]] — 5-agent content pipeline
+- [[03-RESOURCES/sources/skills-prompting-mcp/claude-mcp-servers-complete-guide-cyrilxbt]] — MCP zero-to-everything (@cyrilXBT)
+- [[03-RESOURCES/sources/hermes-agent/paperclip-hermes-10-agents]] — Paperclip + Hermes 10 agents
+- [[03-RESOURCES/sources/memory-context-rag/agent-wiki-recording-not-bigger-desk]] — wiki + recording > context window maior
+- [[03-RESOURCES/sources/claude-code-cowork/claude-cowork-setup-es]] — Claude Cowork setup ES
+- [[03-RESOURCES/sources/open-source-ecosystems/wilwaldon-claude-code-frontend-toolkit]] — frontend toolkit GitHub
+- [[03-RESOURCES/sources/open-source-ecosystems/tmylla-awesome-llm4cybersecurity]] — 612+ papers LLM4Cybersecurity
+- [[03-RESOURCES/sources/open-source-ecosystems/light-heart-labs-dreamserver]] — local AI stack completo
+- [[03-RESOURCES/sources/hermes-agent/openhuman-vs-hermes-vs-openclaw]] — comparativo agent operators
+- [[03-RESOURCES/sources/guides-courses-howtos/10-claude-code-workflows-build-software]] — 10 workflows Claude Code
+- [[03-RESOURCES/sources/guides-courses-howtos/12-claude-code-setup-tricks-real-engineer]] — 12 setup tricks
+- [[03-RESOURCES/sources/guides-courses-howtos/backend-1m-users-design]] — backend 1M users
+- [[03-RESOURCES/sources/guides-courses-howtos/40-claude-code-practices-10x]] — 40 práticas Claude Code
+- [[03-RESOURCES/sources/pkm-obsidian-second-brain/obsidian-beginner-productivity-trap]] — anti-patterns Obsidian
+- [[03-RESOURCES/sources/hermes-agent/post-shannholmberg-hermes-prototype-production]] — Hermes prototype→prod
+- [[03-RESOURCES/sources/pkm-obsidian-second-brain/openai-founder-obsidian-second-brain-jp]] — Obsidian second-brain JP
 
 ### FIAP — Fase 7
-- [[03-RESOURCES/sources/fiap-fase-07-01-juntando-tudo]]
-- [[03-RESOURCES/sources/fiap-fase-07-02-estudo-caso-backend]]
-- [[03-RESOURCES/sources/fiap-fase-07-03-nodejs-typescript]]
-- [[03-RESOURCES/sources/fiap-fase-07-04-reactjs-vite]]
-- [[03-RESOURCES/sources/fiap-fase-07-05-reactjs-estrutura-props-router]]
-- [[03-RESOURCES/sources/fiap-fase-07-06-reactjs-state-effect-context]]
-- [[03-RESOURCES/sources/fiap-fase-07-07-nextjs]]
-- [[03-RESOURCES/sources/fiap-fase-07-08-nextjs-api-mock]]
-- [[03-RESOURCES/sources/fiap-fase-07-09-estudo-caso-frontend]]
-- [[03-RESOURCES/sources/fiap-fase-07-10-plataformas-chatbots]]
-- [[03-RESOURCES/sources/fiap-fase-07-11-chatbot-watson]]
-- [[03-RESOURCES/sources/fiap-fase-07-12-analise-metricas]]
-- [[03-RESOURCES/sources/fiap-fase-07-13-orquestracao-node-red]]
-- [[03-RESOURCES/sources/fiap-fase-07-14-grand-finale]]
-- [[03-RESOURCES/sources/fiap-fase-07-cap6-sustentabilidade]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-01-juntando-tudo]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-02-estudo-caso-backend]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-03-nodejs-typescript]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-04-reactjs-vite]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-05-reactjs-estrutura-props-router]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-06-reactjs-state-effect-context]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-07-nextjs]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-08-nextjs-api-mock]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-09-estudo-caso-frontend]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-10-plataformas-chatbots]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-11-chatbot-watson]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-12-analise-metricas]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-13-orquestracao-node-red]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-14-grand-finale]]
+- [[03-RESOURCES/sources/fiap-academic/fiap-fase-07-cap6-sustentabilidade]]
 - **Entidade nova:** [[03-RESOURCES/entities/fiap/fase-7]]
 
 ### Ebooks
-- [[03-RESOURCES/sources/ebook-ciencia-de-dados-luiza-reixach]] — Data Science completo (ADS FIAP)
-- [[03-RESOURCES/sources/ebook-complete-guide-building-skill-claude]] — guia definitivo Claude Skills
+- [[03-RESOURCES/sources/fiap-academic/ebook-ciencia-de-dados-luiza-reixach]] — Data Science completo (ADS FIAP)
+- [[03-RESOURCES/sources/claude-code-skills/ebook-complete-guide-building-skill-claude]] — guia definitivo Claude Skills
 
 
 
@@ -237,9 +281,9 @@ Clusters novos: agent-evaluation, GEO, Hermes ecosystem (8 files)
 Output: [[06-GENERATED/queue/process-queue-0-2026-05-18]]
 
 ## Concepts criados 2026-05-18
-- **NEW**: `concepts/kv-cache-llms.md` — mecanismo Attention(Q,K,V), conexão prompt-caching/hot.md
-- **NEW**: `concepts/geo-generative-engine-optimization.md` — MCP+llms.txt+OAuth para AI search
-- **UPD**: `concepts/agent-evaluation-production.md` — +Wolfe long-horizon patterns +ECHO world model
+- **NEW**: `concepts/llm-ml-foundations/kv-cache-llms.md` — mecanismo Attention(Q,K,V), conexão prompt-caching/hot.md
+- **NEW**: `concepts/ai-strategy-org/geo-generative-engine-optimization.md` — MCP+llms.txt+OAuth para AI search
+- **UPD**: `concepts/agent-systems/agent-evaluation-production.md` — +Wolfe long-horizon patterns +ECHO world model
 
 ## Skills + Agente criados 2026-05-18
 - **NEW skill** `~/.claude/skills/agent-eval.md` — framework eval: paradigma, trajetória, scaffold vs modelo
@@ -261,13 +305,13 @@ Output: [[06-GENERATED/queue/process-queue-0-2026-05-18]]
 - **Strategy** (1): Diamandis 6 moats unhobbling
 
 ### Pages-chave do dia
-- [[03-RESOURCES/sources/sub-agents-vs-multi-agents-full-guide]] — production data: sub-agents win 7/10
-- [[03-RESOURCES/sources/echo-terminal-agents-world-models]] — terminal world model grátis via GRPO
-- [[03-RESOURCES/sources/12-factor-agents-humanlayer]] — princípios produção LLM software
-- [[03-RESOURCES/sources/claude-code-rce-deeplink-vulnerability]] — RCE patched v2.1.118, deeplink risk
-- [[03-RESOURCES/sources/cut-token-bill-87-percent-7-days]] — token engineering open-source
-- [[03-RESOURCES/sources/agent-evaluation-detailed-guide]] — Cameron Wolfe long-horizon eval patterns
-- [[03-RESOURCES/sources/codegraph-pre-indexed-knowledge-graph]] — 94% fewer tool calls
+- [[03-RESOURCES/sources/ai-agents-harness/sub-agents-vs-multi-agents-full-guide]] — production data: sub-agents win 7/10
+- [[03-RESOURCES/sources/ai-agents-harness/echo-terminal-agents-world-models]] — terminal world model grátis via GRPO
+- [[03-RESOURCES/sources/ai-agents-harness/12-factor-agents-humanlayer]] — princípios produção LLM software
+- [[03-RESOURCES/sources/skills-prompting-mcp/claude-code-rce-deeplink-vulnerability]] — RCE patched v2.1.118, deeplink risk
+- [[03-RESOURCES/sources/token-economy-cost/cut-token-bill-87-percent-7-days]] — token engineering open-source
+- [[03-RESOURCES/sources/ai-agents-harness/agent-evaluation-detailed-guide]] — Cameron Wolfe long-horizon eval patterns
+- [[03-RESOURCES/sources/memory-context-rag/codegraph-pre-indexed-knowledge-graph]] — 94% fewer tool calls
 
 ## Triagem 2026-05-19
 **Candidatos:** 119 | **Aprovados:** 107 | **Rejeitados:** 12
@@ -286,54 +330,97 @@ Relatório: [[06-GENERATED/triagem/triagem-2026-05-19]]
 
 **ai-agents**
 
-- [[03-RESOURCES/sources/20-claude-skills-most-builders-don-t-know-exist]]
-- [[03-RESOURCES/sources/activegraph-a-continuity-layer-for-long-running-agents]]
-- [[03-RESOURCES/sources/agent-evaluation-a-detailed-guide]]
-- [[03-RESOURCES/sources/agent-performance-model-bound-versus-harness-bound]]
-- [[03-RESOURCES/sources/before-you-build-you-need-to-understand-how-llms-actually-work]]
-- [[03-RESOURCES/sources/claude]]
-- [[03-RESOURCES/sources/claude-code]]
-- [[03-RESOURCES/sources/claude-hermes]]
-- [[03-RESOURCES/sources/composiohqawesome-claude-skills-a-curated-list-of-awesome-claude-skills-resource]]
-- [[03-RESOURCES/sources/harnessing-agentic-evolution]]
-- [[03-RESOURCES/sources/hermes-agent-masterclass]]
-- [[03-RESOURCES/sources/hkudscli-anything-cli-anything-making-all-software-agent-native-cli-hub-httpscli]]
-- [[03-RESOURCES/sources/how-openhuman-works-and-how-to-set-it-up-in-5-minutes]]
-- [[03-RESOURCES/sources/how-to-become-a-claude-power-user-for-free-full-course]]
-- [[03-RESOURCES/sources/how-to-become-a-hermes-agent-operator]]
-- [[03-RESOURCES/sources/how-to-build-llm-architectures-from-scratch-10-practical-lessons-most-people-lea]]
-- [[03-RESOURCES/sources/how-to-make-your-hermes-agent-go-supergrok]]
-- [[03-RESOURCES/sources/i-tried-letting-my-scheduled-agents-deliver-only-html-and-i-m-not-going-back]]
-- [[03-RESOURCES/sources/imbad0202academic-research-skills-academic-research-skills-for-claude-code-resea]]
-- [[03-RESOURCES/sources/introducing-multi-harness-orchestration]]
-- [[03-RESOURCES/sources/k-dense-aiscientific-agent-skills-a-set-of-ready-to-use-agent-skills-for-researc]]
-- [[03-RESOURCES/sources/prompt-caching-clearly-explained]]
-- [[03-RESOURCES/sources/teng-linnotebooklm-py-unofficial-python-api-and-agentic-skill-for-google-noteboo]]
-- [[03-RESOURCES/sources/the-5-claude-prompting-techniques-anthropic-engineers-use-internally-that-aren-t]]
-- [[03-RESOURCES/sources/tinyhumansaiopenhuman-your-personal-ai-super-intelligence-private-simple-and-ext]]
-- [[03-RESOURCES/sources/top-13-skills-et-plugins-claude-code-en-2026]]
+- [[03-RESOURCES/sources/claude-code-skills/20-claude-skills-most-builders-don-t-know-exist]]
+- [[03-RESOURCES/sources/memory-context-rag/activegraph-a-continuity-layer-for-long-running-agents]]
+- [[03-RESOURCES/sources/ai-agents-harness/agent-evaluation-a-detailed-guide]]
+- [[03-RESOURCES/sources/ai-agents-harness/agent-performance-model-bound-versus-harness-bound]]
+- [[03-RESOURCES/sources/guides-courses-howtos/before-you-build-you-need-to-understand-how-llms-actually-work]]
+- [[03-RESOURCES/sources/misc-low-confidence/claude]]
+- [[03-RESOURCES/sources/misc-low-confidence/claude-code]]
+- [[03-RESOURCES/sources/hermes-agent/claude-hermes]]
+- [[03-RESOURCES/sources/claude-code-skills/composiohqawesome-claude-skills-a-curated-list-of-awesome-claude-skills-resource]]
+- [[03-RESOURCES/sources/ai-agents-harness/harnessing-agentic-evolution]]
+- [[03-RESOURCES/sources/hermes-agent/hermes-agent-masterclass]]
+- [[03-RESOURCES/sources/open-source-ecosystems/hkudscli-anything-cli-anything-making-all-software-agent-native-cli-hub-httpscli]]
+- [[03-RESOURCES/sources/misc-low-confidence/how-openhuman-works-and-how-to-set-it-up-in-5-minutes]]
+- [[03-RESOURCES/sources/guides-courses-howtos/how-to-become-a-claude-power-user-for-free-full-course]]
+- [[03-RESOURCES/sources/hermes-agent/how-to-become-a-hermes-agent-operator]]
+- [[03-RESOURCES/sources/guides-courses-howtos/how-to-build-llm-architectures-from-scratch-10-practical-lessons-most-people-lea]]
+- [[03-RESOURCES/sources/misc-low-confidence/how-to-make-your-hermes-agent-go-supergrok]]
+- [[03-RESOURCES/sources/misc-low-confidence/i-tried-letting-my-scheduled-agents-deliver-only-html-and-i-m-not-going-back]]
+- [[03-RESOURCES/sources/ml-research-papers/imbad0202academic-research-skills-academic-research-skills-for-claude-code-resea]]
+- [[03-RESOURCES/sources/misc-low-confidence/introducing-multi-harness-orchestration]]
+- [[03-RESOURCES/sources/claude-code-skills/k-dense-aiscientific-agent-skills-a-set-of-ready-to-use-agent-skills-for-researc]]
+- [[03-RESOURCES/sources/memory-context-rag/prompt-caching-clearly-explained]]
+- [[03-RESOURCES/sources/misc-low-confidence/teng-linnotebooklm-py-unofficial-python-api-and-agentic-skill-for-google-noteboo]]
+- [[03-RESOURCES/sources/skills-prompting-mcp/the-5-claude-prompting-techniques-anthropic-engineers-use-internally-that-aren-t]]
+- [[03-RESOURCES/sources/open-source-ecosystems/tinyhumansaiopenhuman-your-personal-ai-super-intelligence-private-simple-and-ext]]
+- [[03-RESOURCES/sources/claude-code-skills/top-13-skills-et-plugins-claude-code-en-2026]]
 
 **articles**
 
-- [[03-RESOURCES/sources/2026-ai-native]]
-- [[03-RESOURCES/sources/ai-native]]
-- [[03-RESOURCES/sources/from-models-to-systems]]
-- [[03-RESOURCES/sources/post-by-aurimas-gr-on-x]]
-- [[03-RESOURCES/sources/post-by-itsolelehmann-on-x]]
-- [[03-RESOURCES/sources/post-by-suryanshti777-on-x]]
+- [[03-RESOURCES/sources/ai-agents-harness/2026-ai-native]]
+- [[03-RESOURCES/sources/ai-agents-harness/ai-native]]
+- [[03-RESOURCES/sources/ai-agents-harness/from-models-to-systems]]
+- [[03-RESOURCES/sources/misc-low-confidence/post-by-aurimas-gr-on-x]]
+- [[03-RESOURCES/sources/misc-low-confidence/post-by-itsolelehmann-on-x]]
+- [[03-RESOURCES/sources/misc-low-confidence/post-by-suryanshti777-on-x]]
 
 **ml-research**
 
-- [[03-RESOURCES/sources/applying-statistics-to-llm-evaluations]]
-- [[03-RESOURCES/sources/continual-learning-with-rl-for-llms]]
-- [[03-RESOURCES/sources/rl-scaling-laws-for-llms]]
-- [[03-RESOURCES/sources/rubric-based-rewards-for-rl]]
-- [[03-RESOURCES/sources/targeted-neuron-modulation-via-contrastive-pair-search]]
-- [[03-RESOURCES/sources/the-anatomy-of-an-llm-benchmark]]
-- [[03-RESOURCES/sources/x-api-hermes-via-xurl-skill]]
+- [[03-RESOURCES/sources/ml-research-papers/applying-statistics-to-llm-evaluations]]
+- [[03-RESOURCES/sources/ml-research-papers/continual-learning-with-rl-for-llms]]
+- [[03-RESOURCES/sources/ml-research-papers/rl-scaling-laws-for-llms]]
+- [[03-RESOURCES/sources/ml-research-papers/rubric-based-rewards-for-rl]]
+- [[03-RESOURCES/sources/ml-research-papers/targeted-neuron-modulation-via-contrastive-pair-search]]
+- [[03-RESOURCES/sources/ml-research-papers/the-anatomy-of-an-llm-benchmark]]
+- [[03-RESOURCES/sources/hermes-agent/x-api-hermes-via-xurl-skill]]
 
 **obsidian**
 
-- [[03-RESOURCES/sources/how-to-build-an-obsidian-dashboard-that-shows-you-everything-that-matters-today]]
+- [[03-RESOURCES/sources/guides-courses-howtos/how-to-build-an-obsidian-dashboard-that-shows-you-everything-that-matters-today]]
 
 Relatório: [[06-GENERATED/ingest-report/ingest-diario-2026-05-19]]
+
+## Triagem 2026-05-23
+**Candidatos:** 108 | **Aprovados:** 71 | **Rejeitados:** 37
+Clusters: agent-memory (4 fontes), harness-engineering (3), obsidian-claude (3)
+Top scores: Code-as-Agent-Harness (9), Compiling-Agentic-Workflows (9), EvolveMem (8), I-Connected-Claude-Obsidian (8), Anatomy-Claude-Skill (8)
+Conceitos faltando: `agent-memory-layers`, `harness-engineering` | Entidades: Hermes Agent, Garry Tan
+Relatório: [[06-GENERATED/triagem/triagem-2026-05-23]]
+
+### Ingest 2026-05-23 — Prioritárias Triagem
+- **I Connected Claude to Obsidian Vault** → [[03-RESOURCES/sources/pkm-obsidian-second-brain/i-connected-claude-obsidian-vault-damidefi]] — síntese diária via N8N + CLAUDE.md como cognitive partner
+- **COG second-brain** → [[03-RESOURCES/sources/pkm-obsidian-second-brain/huytieu-cog-second-brain]] — 17 skills, 6 worker agents, People CRM, auto-evolve; inspirado GBrain/GStack
+
+## Pipeline Diário v2 2026-05-23
+**Triagem v2:** 212 candidatos → 212 aprovados, 0 rejeitados (64 FIAP PDFs + 71 ai-agents + 77 concurso)
+**Ingest:** 24 sources (ai-agents-harness=7, memory-rag=5, ml-research=3, open-source=2, pkm=2, skills=1, concurso=3)
+**Skipped (já existiam):** i-connected-claude-obsidian, multi-agent-arch, rag-deep-dive, vector-db, mcp-deep, codegraph, cog-second-brain = 7 dups
+**Top action:** criar conceito `harness-engineering` — 5 sources convergem (code-as-agent-harness, three-harness-layers, agent-harness-breakdown-chinese, harness-engineering-10x-chinese, how-to-build-ai-os)
+**Destaques score 9:** Code as Agent Harness (UIUC/Meta/Stanford 100p survey), Compiling Agentic Workflows (128-462× mais barato), EvolveMem (+25.7% LoCoMo)
+**Pendentes next run:** 188 candidatos (64 FIAP PDFs + 55 concurso 5-7 + 69 ai-agents 5-7)
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-23]]
+→ [[06-GENERATED/triagem/triagem-2026-05-23-v2]]
+
+## Ingest Legislação 2026-05-23 — Batch Completo
+**69 novas source pages** criadas em `03-RESOURCES/sources/concurso-legislacao/`
+**Manifest:** 562 entradas (was 493 → +69 legislação)
+
+### Estrutura final concurso-legislacao/
+| Pasta | Arquivos | Highlights |
+|-------|----------|-----------|
+| `irpf/` | 6 | L7713, L4506, IRRF, D9580, PRONAC, Deduções incentivadas |
+| `irpf/manual-mir/` | 10 | Rendimentos T/K/Outros, Bens F/Imóveis, Despesas, Doações, Decisão, Entrega |
+| `tributario/` | 22 | CTN, CSLL, ITR, PIS/COFINS, CIDE, LRF, IOF, IPI, REFIS, IFRS |
+| `administrativo/` | 13 | L8112, NLLC, Improbidade, LAI, EPD, Carreiras RFB, Concursos |
+| `previdenciario/` | 6 | RGPS, LCOS, LBPS, Fator Prev |
+| `societario/` | 4 | SA, CC, IFRS, Finanças Públicas |
+| `constitucional/` | 2 | CF88, EC132 |
+| `aduaneiro/` | 5 | II, IE, Reg Aduaneiro, IN1600 |
+| `penal/` | 3 | CP, Crimes Tributários, Sonegação |
+
+→ [[02-AREAS/concurso/concurso-index]]
+→ [[03-RESOURCES/sources/concurso-legislacao/irpf/lei-7713-irpf-1988]]
+→ [[03-RESOURCES/sources/concurso-legislacao/constitucional/cf88-compilada]]
+→ [[03-RESOURCES/sources/concurso-legislacao/tributario/lei-5172-ctn-1966]]

@@ -3,82 +3,81 @@ title: Agentes de IA
 type: index
 space: ai-agents
 created: 2026-04-14
-updated: 2026-05-14
+updated: 2026-05-15
 ---
 
 # Agentes de IA — Prompts & Workflows
 
 Biblioteca de 37 agentes Claude organizados em 8 categorias. Prompts otimizados com Claude Sonnet 4.6 / Opus.
 
-## Core Ops (Qualidade, Segurança, Infra)
+## Core (Qualidade, Segurança, Infra + Feature Dev)
 
-**Propósito:** Gates contínuos de qualidade, validação de segurança, saúde do repositório
+**Propósito:** Gates contínuos de qualidade, validação de segurança, saúde do repositório e pipeline de desenvolvimento
 
-- [[04-SYSTEM/agents/00-core-ops/guard|Guard]] — Security auditor (OWASP LLM Top 10) · `@guard` · Opus
-- [[04-SYSTEM/agents/00-core-ops/verify|Verify]] — Post-impl QA gate · `@verify` · Opus
-- [[04-SYSTEM/agents/00-core-ops/review|Review]] — Drift review docs↔code↔config · `@review` · Sonnet
-- [[04-SYSTEM/agents/00-core-ops/ingest-report|Ingest Report]] — Relatório semanal Clippings/ · Manual/cron · Haiku
+- [[04-SYSTEM/agents/00-core/guard|Guard]] — Security auditor (OWASP LLM Top 10) · `@guard` · Opus
+- [[04-SYSTEM/agents/00-core/verify|Verify]] — Post-impl QA gate · `@verify` · Opus
+- [[04-SYSTEM/agents/00-core/review|Review]] — Drift review docs↔code↔config · `@review` · Sonnet
+- [[04-SYSTEM/agents/00-core/ingest-report|Ingest Report]] — Relatório semanal Clippings/ · Manual/cron · Haiku
+- [[04-SYSTEM/agents/00-core/spec|Spec]] — Spec-Driven Development · `@spec` · Haiku
+- [[04-SYSTEM/agents/00-core/extend|Extend]] — Extensão cirúrgica de agentes · `@extend` · Sonnet
+- [[04-SYSTEM/agents/00-core/hill|Hill]] — Hill-climbing: eval→diagnose→fix · `@hill` · Haiku
 
-## Feature Dev (Spec→Impl→Verify Pipeline)
+## Knowledge System (Pesquisa, Escrita, Decisões)
 
-**Propósito:** Desenvolvimento orientado por especificação com avaliação iterativa
+**Propósito:** Pesquisa aprofundada, produção de texto, decisões complexas e otimização de prompts
 
-- [[04-SYSTEM/agents/01-feature-dev/spec|Spec]] — Spec-Driven Development · `@spec` · Haiku
-- [[04-SYSTEM/agents/01-feature-dev/extend|Extend]] — Extensão cirúrgica de agentes · `@extend` · Sonnet
-- [[04-SYSTEM/agents/01-feature-dev/hill|Hill]] — Hill-climbing: eval→diagnose→fix · `@hill` · Haiku
+- [[04-SYSTEM/agents/Knowledge System/kore|Kore]] — Orquestrador · `@kore`
+- [[04-SYSTEM/agents/Knowledge System/farol|Farol]] — Pesquisa e aprendizado
+- [[04-SYSTEM/agents/Knowledge System/pena|Pena]] — Escrita e clarificação
+- [[04-SYSTEM/agents/Knowledge System/bussola|Bussola]] — Decisões e projetos complexos
+- [[04-SYSTEM/agents/Knowledge System/sigma|Sigma]] — Otimização de prompts
 
-## Domain Experts (Funcional por Domínio)
+## Edu System (Concurso, Idiomas, TI & Carreira)
 
-### Escrita & Conteúdo
+**Propósito:** Estudos para concurso público, idiomas, formação em TI e desenvolvimento de carreira
 
-- [[04-SYSTEM/agents/02-domain-experts/escrita-conteudo/assistente-de-escrita-conteudo|Assistente de Escrita & Conteúdo]] — 6 modos: pensamento, escrita, problemas, negócio, reflexão, conteúdo
-- [[04-SYSTEM/agents/02-domain-experts/escrita-conteudo/assistente-de-projetos-decisoes|Assistente de Projetos & Decisões]] — 9 modos: contexto, tarefas, problemas, vieses, estratégia
-- [[04-SYSTEM/agents/02-domain-experts/escrita-conteudo/assistente-de-research-conhecimento|Assistente de Research & Conhecimento]] — 3 modos: investigação, aprendizagem, simplificação
-- [[04-SYSTEM/agents/02-domain-experts/escrita-conteudo/otimizador-de-prompts|Otimizador de Prompts]] — diagnóstico, reescrita, comparativo
+- [[04-SYSTEM/agents/Edu System/00-SYSTEM-PROMPTS/Mestre|Mestre]] — Orquestrador · `@mestre`
+- [[04-SYSTEM/agents/Edu System/00-SYSTEM-PROMPTS/Banca|Banca]] — Concurso público (aulas, questões, plano por banca)
+- [[04-SYSTEM/agents/Edu System/00-SYSTEM-PROMPTS/Babel|Babel]] — Idiomas para viajantes (4 modos: situacional, conversação, técnico)
+- [[04-SYSTEM/agents/Edu System/00-SYSTEM-PROMPTS/Stack|Stack]] — TI, ADS e carreira tech (tutor adaptativo, projeto guiado, entrevista)
+- [[04-SYSTEM/agents/Edu System/00-SYSTEM-PROMPTS/Sintese|Sintese]] — Resumos Obsidian, flashcards Anki, questões, mapa mental
+- [[04-SYSTEM/agents/Edu System/00-SYSTEM-PROMPTS/Trilha|Trilha]] — CV PT-BR + EN, otimização ATS, LinkedIn, estágios
+- [[04-SYSTEM/agents/Edu System/00-SYSTEM-PROMPTS/Tutor|Tutor]] — Tutor adaptativo geral
 
-### Técnico & Dev
+## Travel System (Viagens end-to-end)
 
-- [[04-SYSTEM/agents/02-domain-experts/tech-dev/assistente-tecnico-sistemas-produtividade-ia|Assistente Técnico — Sistemas & IA]] — integração, otimização de fluxo
-- [[04-SYSTEM/agents/02-domain-experts/tech-dev/construtor-de-apps-dev-no-code|Construtor de Apps — Dev & No-Code]] — 9 modos: app completo, screenshot→código, debug, MVP, SaaS
-- [[04-SYSTEM/agents/02-domain-experts/tech-dev/construtor-de-sites-htmlcss|Construtor de Sites — HTML/CSS]] — landing pages, revisão de código
-- [[04-SYSTEM/agents/02-domain-experts/tech-dev/conversor-markdown-html|Conversor Markdown → HTML]] — 3 modos: análise de formato, conversão econômica, multi-view
-- [[04-SYSTEM/agents/02-domain-experts/tech-dev/pipeline-de-desenvolvimento-ads|Pipeline de Desenvolvimento — ADS]] — 6 etapas: arquitetura→scaffolding→review→refatoração→docs
+**Propósito:** Busca de voos/hotéis, criação e refinamento de itinerários
 
-### Visual & Design
+- [[04-SYSTEM/agents/Travel System/rota|Rota]] — Orquestrador · `@rota`
+- [[04-SYSTEM/agents/Travel System/00-SYSTEM-PROMPTS/Caca|Caça]] — Busca estratégica de voos, hotéis e carros
+- [[04-SYSTEM/agents/Travel System/rumo|Rumo]] — Criação de itinerário (roteiros diários)
+- [[04-SYSTEM/agents/Travel System/ajuste|Ajuste]] — Refinamento de roteiros já fechados
 
-- [[04-SYSTEM/agents/02-domain-experts/design-visual/criacao-visual-fotos-videos|Criação Visual — Fotos & Vídeos]] — editor Lightroom/Picsart, diretor DJI/iPhone
-- [[04-SYSTEM/agents/02-domain-experts/design-visual/designer-estrategista-de-sites|Designer & Estrategista de Sites]] — 8 modos: planejamento, copy, identidade visual, SEO, UX
+## Finance System (Investimentos & Mercado)
 
-### Conteúdo & Marca Pessoal
+**Propósito:** Análise de ativos, portfólio, cripto e macro
 
-- [[04-SYSTEM/agents/02-domain-experts/content-personal-brand/estrategista-de-conteudo-viagem-fotografia|Estrategista de Conteúdo — Viagem & Fotografia]] — 7 modos: estratégia, pilares, calendário, performance
-- [[04-SYSTEM/agents/02-domain-experts/content-personal-brand/marca-pessoal-monetizacao-solo|Marca Pessoal & Monetização Solo]] — 7 modos: auditoria, posicionamento, monetização
+- [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Nexo|Nexo]] — Orquestrador · `@nexo`
+- [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Valor|Valor]] — Fundamentalista (ações BR/EUA)
+- [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Fluxo|Fluxo]] — ETF e FII
+- [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Macro|Macro]] — Macro, BCB, IBGE, Fed
+- [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Quant|Quant]] — Análise quantitativa
+- [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Cripto|Cripto]] — Criptomoedas e DeFi
 
-### Educação
+## Standalone
 
-- [[04-SYSTEM/agents/02-domain-experts/educacao/professor-de-concurso-publico|Professor de Concurso Público]] — aulas, questões, plano de estudos por banca
-- [[04-SYSTEM/agents/02-domain-experts/educacao/professor-de-idiomas-para-viajantes|Professor de Idiomas para Viajantes]] — 4 modos: aula situacional, conversação, inglês técnico
-- [[04-SYSTEM/agents/02-domain-experts/educacao/tutor-de-ti-ads-carreira-tech|Tutor de TI — ADS & Carreira Tech]] — 5 modos: tutor adaptativo, projeto guiado, entrevista
-- [[04-SYSTEM/agents/02-domain-experts/educacao/gerador-de-resumos-de-estudo|Gerador de Resumos de Estudo]] — 4 modos: resumo Obsidian, flashcards Anki, questões, mapa mental
-- [[04-SYSTEM/agents/02-domain-experts/educacao/coach-de-curriculo-linkedin-estagios-ti|Coach de Currículo & LinkedIn]] — CV PT-BR + EN, otimização ATS
-
-### Viagem
-
-- [[04-SYSTEM/agents/02-domain-experts/travel/agente-de-viagem-criador-de-itinerario|Criador de Itinerário]] — roteiros diários, voos/hotel fechados
-- [[04-SYSTEM/agents/02-domain-experts/travel/agente-de-viagem-refinamento-de-itinerario|Refinamento de Itinerário]] — otimiza roteiros já fechados
-
-### Legal & Governança
-
-- [[04-SYSTEM/agents/02-domain-experts/legal-gov/assessor-juridico-direito-publico-administrativo|Assessor Jurídico — Direito Público]] — citações normativas, marco legal
+- [[04-SYSTEM/agents/standalone/mtg-arena-coach|MTG Arena Coach]] — Coach de MTG Arena (draft, sealed, constructed)
+- [[04-SYSTEM/agents/standalone/irpf-consolidator|IRPF Consolidador]] — Extrai informes de rendimento e mapeia fichas IRPF (trigger: `@irpf`)
 
 ## Institutional (TJAM — Compliance & Governança)
 
-**Propósito:** Agentes especializados para fluxos de conformidade e relatórios institucionais
+**Propósito:** Agentes role-based para fluxos institucionais do TJAM
 
-- [[04-SYSTEM/agents/03-institutional/patrimonio-almoxarifado/tjam-assessor-patrimonio-e-almoxarifado|Assessor Patrimônio & Almoxarifado]] — 7 modos: redação, revisão, normativo, PLS, fiscalização, automação
-- [[04-SYSTEM/agents/03-institutional/sustentabilidade/tjam-assessor-de-sustentabilidade-pls|Assessor de Sustentabilidade — PLS]] — planos 5W2H, CNJ 400/2021, ODS
-- [[04-SYSTEM/agents/03-institutional/contratos-dados/tjam-fiscal-de-contratos-analista-de-dados|Fiscal de Contratos & Analista de Dados]] — auditoria contratual, Google Sheets ETL
-- [[04-SYSTEM/agents/03-institutional/relatorios/gerador-de-relatorios-sheets-documento|Gerador de Relatórios — Sheets → Documento]] — 3 modos: relatório gerencial, sumário executivo, ata
+- [[04-SYSTEM/agents/TJAM Institutional System/chefia/assistente-de-chefia|Assistente de Chefia]] — suporte à chefia, despachos, comunicações internas
+- [[04-SYSTEM/agents/TJAM Institutional System/dados/analista-de-dados|Analista de Dados]] — análise institucional, Google Sheets ETL
+- [[04-SYSTEM/agents/TJAM Institutional System/juridico/assessor-juridico-administrativo|Assessor Jurídico Administrativo]] — minutas, pareceres, direito administrativo
+- [[04-SYSTEM/agents/TJAM Institutional System/pca/assessor-pca|Assessor PCA]] — Plano de Contratações Anuais, normativas
+- [[04-SYSTEM/agents/TJAM Institutional System/pls/assessor-pls|Assessor PLS]] — Plano de Logística Sustentável, CNJ 400/2021
 
 ## Infrastructure (Proxies, Integrations)
 
@@ -89,6 +88,6 @@ Biblioteca de 37 agentes Claude organizados em 8 categorias. Prompts otimizados 
 ## Referências
 
 - [[03-RESOURCES/concepts/prompt-engineering|Prompt Engineering]] — princípios e técnicas
-- [[03-RESOURCES/concepts/prompt-engineering-patterns|Prompt Engineering Patterns]] — 10 padrões
-- [[03-RESOURCES/concepts/agentic-agents|Agentic Agents]] — agentes IA
+- [[03-RESOURCES/concepts/llm-ml-foundations/prompt-engineering-patterns|Prompt Engineering Patterns]] — 10 padrões
+- [[03-RESOURCES/concepts/agent-systems/agentic-agents|Agentic Agents]] — agentes IA
 - [[03-RESOURCES/entities/anthropic|Anthropic]] — empresa por trás do Claude

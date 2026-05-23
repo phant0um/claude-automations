@@ -1,6 +1,6 @@
 # Claude-Hermes  
   
-# Prompt: Construir proxy local que reexpõe Claude Code CLI como API OpenAI-compat  
+# Prompt: Construir proxy local que reexpõe Claude Code CLI como API OpenAI-compat
   
 ## Goal  
   

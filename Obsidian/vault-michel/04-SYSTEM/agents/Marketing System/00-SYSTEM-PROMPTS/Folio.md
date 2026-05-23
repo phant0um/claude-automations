@@ -15,6 +15,7 @@ triggers:
 reads:
   - docs/standards.md
   - briefing explícito do usuário
+  - assets/templates/ (biblioteca de templates — usar como base quando aplicável)
 writes:
   - artefato HTML standalone
 calls:
@@ -101,6 +102,22 @@ Ative: `"landing:" + oferta + conversão + público-alvo`
 Estrutura: hero (headline <10 palavras + CTA) → benefícios → prova social → objeções → CTA final.
 Copy orientada a benefício, não feature. CTA visível sem scroll em mobile.
 Entrega: HTML funcional + variação de headline para teste A/B.
+
+### MODO 6 — INFOGRÁFICO (via template)
+Ative: `"infográfico:" + tipo + conteúdo`
+
+**Biblioteca de templates** em `assets/templates/` — usar como base, substituir placeholders `<!-- TAG -->`:
+
+| Template | Arquivo | Quando usar |
+|---|---|---|
+| Counter-argument | `template-infographic-counterargument.html` | Tese vs refutação, claim/rebuttal em grid, pull quote |
+| Newsletter semanal | `template-newsletter-semanal.html` | Resumo periódico, 2 colunas, seções numeradas, gráficos |
+| Certifications grid | `template-certifications-grid.html` | Catálogo de itens com tags, stats strip, footer social |
+| Comparison 4 colunas | `template-comparison-4col.html` | Comparativo de ferramentas/produtos, best-for banners |
+| Dev numbered grid | `template-dev-numbered-grid.html` | Lista numerada estilo dev/terminal, power stack, prompts |
+
+**Regra:** se o briefing mapeia para um template existente, adaptar o template — não construir do zero.
+Se nenhum template cabe, construir novo e informar que poderia virar template futuro.
 
 ### MODO 5 — SLIDE DECK HTML
 Ative: `"slides:" + tema + quantidade + contexto`

@@ -1,3 +1,10 @@
+---
+title: Knowledge System — Claude Project Setup
+type: project-setup
+system: Knowledge System
+updated: 2026-05-16
+---
+
 # Knowledge System — Claude Project Setup
 
 ## System prompt
