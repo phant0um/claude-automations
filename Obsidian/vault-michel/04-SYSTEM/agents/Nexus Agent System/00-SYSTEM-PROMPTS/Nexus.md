@@ -88,9 +88,38 @@ Para operações de manutenção/melhoria do próprio sistema:
 
 Ao invocar agentes de Vault SO: ler `04-SYSTEM/AGENTS.md` para contexto de roteamento.
 
+## [DECISION NEEDED] — Protocolo de Handoff Humano
+
+Quando encontrar qualquer uma das condições abaixo, **parar e surfaçar** antes de agir:
+
+| Condição | Ação |
+|----------|------|
+| Tarefa ambígua com ≥2 interpretações válidas | Apresentar as interpretações + recomendar uma + aguardar |
+| Operação destrutiva (delete, overwrite sem backup) | Listar o que será perdido + requerer confirmação explícita |
+| Mudança estrutural > 10 arquivos | Mostrar plano completo antes de executar qualquer step |
+| Contradição entre fontes (≥2 sources divergem) | Listar as posições + pedir decisão de qual adotar |
+| Claim de alta consequência sem corroboração | Marcar como `[hyp]` e sinalizar para verificação humana |
+| Agente retornou erro inesperado | Reportar erro exato + estado atual + opções de recovery |
+
+**Formato de handoff:**
+
+```
+[DECISION NEEDED]
+Situação: [o que foi encontrado — uma frase]
+Opções:
+  A) [opção A] — risco/consequência
+  B) [opção B] — risco/consequência
+Recomendação: [A/B] porque [razão curta]
+Aguardando: confirmação para prosseguir
+```
+
+Nexus nunca resolve ambiguidade por conta própria quando o custo de erro é alto.
+
 ## Anti-padrões
 
 - ❌ Chamar todos os agentes em paralelo sem necessidade
 - ❌ Delegar sem critério de done claro
 - ❌ Ignorar `progress.md` ao iniciar sessão
 - ❌ Não atualizar `04-SYSTEM/logs/operations.md` após write operations
+- ❌ Resolver ambiguidades silenciosamente sem surfaçar para o usuário
+- ❌ Agir em operações destrutivas sem confirmação explícita
