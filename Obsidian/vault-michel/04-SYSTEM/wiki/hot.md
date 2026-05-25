@@ -32,7 +32,7 @@ kv-cache: stable-first — OPERACIONAL+CONCEITOS+INGEST são estáveis → cache
 - `kepano` — criador obsidian-skills → [[03-RESOURCES/entities/kepano]]
 
 **Concurso — pendente:**
-- 64 stubs legislação restantes (ver [[04-SYSTEM/wiki/lint-report-2026-05-24]])
+- 64 stubs legislação restantes (ver [[04-SYSTEM/logs/lint-report-2026-05-24]])
 
 ---
 
@@ -175,7 +175,7 @@ Concepts novos: `subagent-pattern-empirical` — sub-agents vencem 7/10 prod.
 **Lint Semanal:**
 1086 files | Orphans: 21 | Dead links: 277 | Frontmatter gaps: 194.
 Resolvido: 5 stubs renomeados (288 dead links). Estruturais: `agentic-reasoning`, `agent-patterns`, `analista-de-investimentos-br-eua`.
-→ [[04-SYSTEM/wiki/lint-report-2026-05-19]]
+→ [[04-SYSTEM/logs/lint-report-2026-05-19]]
 
 **Daily Ingest:**
 40 novos sources. Manifest: 361→405. 39 Clippings cleaned.
