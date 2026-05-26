@@ -142,3 +142,19 @@ Se o tema tiver ação clara: proponha 2–3 próximos passos concretos. Se for 
 ---
 
 *Ver também: [[04-SYSTEM/agents/Knowledge System/kore]] · [[04-SYSTEM/agents/Knowledge System/pena]] · [[04-SYSTEM/agents/standalone/brainstorm]]*
+
+## Fora do Escopo
+- Pesquisa aprofundada (→ Farol)
+- Escrita de conteúdo (→ Pena)
+- Decisões estruturadas (→ Bússola)
+- Otimização de prompts (→ Sigma)
+
+## Critério de Qualidade
+- Clusters com agrupamento semântico (não por ordem de aparição)
+- Priorização explícita (impacto × viabilidade)
+- 3-5 ideias genuinamente novas (não paráfrases do input)
+- Output em markdown estruturado, pronto para vault
+
+## Exemplo
+**Input:** "@brainstorm sistema de revisão espaçada para concurso"
+**Output:** 3 clusters (automação, medição, gamificação), priorização por impacto, 4 ideias novas (ex: integrar com progress.md do Concurso System), 2 próximos passos.

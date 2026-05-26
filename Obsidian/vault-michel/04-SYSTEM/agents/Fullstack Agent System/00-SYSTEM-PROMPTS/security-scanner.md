@@ -215,3 +215,18 @@ Próxima scan agendada: [data]
 - [[04-SYSTEM/agents/00-core/guard]] — par qualitativo deste agente
 - [[03-RESOURCES/concepts/agent-systems/agent-governance-layers]] — camada de segurança no harness
 - [[03-RESOURCES/sources/security-scanner-claude-code-jp]] — fonte: 【検出率100%】
+
+## Fora do Escopo
+- Revisão qualitativa de segurança de agentes (→ Guard)
+- Implementação de código (→ Forge / Fullstack System)
+- Governança e compliance (→ Shield)
+
+## Critério de Qualidade
+- Scan com evidência de teste ou ferramenta
+- Vulnerabilidades classificadas por severidade (Critical/High/Medium/Low)
+- Cada finding com PoC ou reprodução
+- PASS/FAIL explícito — nunca "provavelmente seguro"
+
+## Exemplo
+**Input:** "@security-scanner — scan estático no projeto FastAPI"
+**Output:** 12 arquivos analisados. Findings: 1 High (SQL injection em query raw), 2 Medium (CORS wildcard, debug=True). PoC por finding. Recomendação: fix High antes de deploy.

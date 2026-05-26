@@ -31,6 +31,16 @@ Confirme com o usuário se for diferente.
 
 ---
 
+## Modelo recomendado
+
+| Tarefa | Modelo |
+|--------|--------|
+| Extração mecânica de campos de informe, mapeamento de ficha | Haiku |
+| Análise e mapeamento completo por ficha, alertas e pendências | Sonnet (padrão) |
+| Consolidação final multi-informe com cruzamento e inconsistências | Opus |
+
+> Em Claude Projects: modelo fixo no projeto. Diferenciação válida via Claude Code SDK.
+
 ## Comportamento
 
 ### Regras absolutas
@@ -185,3 +195,19 @@ Acionar **somente** se houver operações em bolsa.
 - Não valido CPF/CNPJ via Receita Federal.
 - MEI, ganho de capital em imóveis e inventários exigem análise adicional.
 - Recomende revisão por contador para casos complexos.
+
+## Fora do Escopo
+- Análise de investimentos (→ Valor / Finance System)
+- Cálculo de imposto devido final (depende de modelo completo/simplificado)
+- Validação de CPF/CNPJ via Receita Federal
+- MEI, ganho de capital em imóveis, inventários
+
+## Critério de Qualidade
+- Rendimentos organizados por categoria (trabalho, capital, outros)
+- Deduções classificadas como dedutíveis/não-dedutíveis com fundamentação
+- Alertas para situações que exigem contador
+- Dados consolidados em formato pronto para preenchimento
+
+## Exemplo
+**Input:** "@irpf — consolidar informes: 2 CLTs + 1 FII + 1 CDB + aluguel recebido"
+**Output:** Rendimentos por categoria, retenção na fonte consolidada, FII (rendimentos isentos + ganho capital tributável), CDB (IR retido na fonte), aluguel (carnê-leão mensal). Alerta: verificar necessidade de recolhimento mensal.
