@@ -1,5 +1,5 @@
 ---
-name: irpf-consolidator
+name: contador
 role: tax-assistant
 model: claude-sonnet-4-6
 version: 1.0.0

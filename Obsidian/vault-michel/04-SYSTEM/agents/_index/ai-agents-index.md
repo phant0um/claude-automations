@@ -53,6 +53,18 @@ Biblioteca de 37 agentes Claude organizados em 8 categorias. Prompts otimizados 
 - [[04-SYSTEM/agents/Travel System/rumo|Rumo]] — Criação de itinerário (roteiros diários)
 - [[04-SYSTEM/agents/Travel System/ajuste|Ajuste]] — Refinamento de roteiros já fechados
 
+## Fullstack Agent System (Dev, Infra, Segurança)
+
+**Propósito:** Desenvolvimento fullstack end-to-end — backend, frontend, infra, dados e segurança
+
+- [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Orchestrator|Orchestrator]] — Orquestrador · `@orchestrator`
+- [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Backend-Dev|Backend-Dev]] — APIs, DB, lógica de negócio
+- [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Frontend-Dev|Frontend-Dev]] — UI, componentes, UX
+- [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Infra-Cloud|Infra-Cloud]] — Cloud, IaC, CI/CD
+- [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Data-AI|Data-AI]] — ML, pipelines de dados
+- [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Security|Sentinel]] — Review qualitativo + veto de deploy · `@sentinel` · Opus
+- [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Probe|Probe]] — Testes automatizados de segurança (static/dynamic/harness) · `@probe`
+
 ## Finance System (Investimentos & Mercado)
 
 **Propósito:** Análise de ativos, portfólio, cripto e macro
@@ -63,11 +75,11 @@ Biblioteca de 37 agentes Claude organizados em 8 categorias. Prompts otimizados 
 - [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Macro|Macro]] — Macro, BCB, IBGE, Fed
 - [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Quant|Quant]] — Análise quantitativa
 - [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Cripto|Cripto]] — Criptomoedas e DeFi
+- [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Contador|Contador]] — Extrai informes de rendimento e mapeia fichas IRPF (trigger: `@irpf`)
 
-## Standalone
+## Hobby System
 
-- [[04-SYSTEM/agents/standalone/mtg-arena-coach|MTG Arena Coach]] — Coach de MTG Arena (draft, sealed, constructed)
-- [[04-SYSTEM/agents/standalone/irpf-consolidator|IRPF Consolidador]] — Extrai informes de rendimento e mapeia fichas IRPF (trigger: `@irpf`)
+- [[04-SYSTEM/agents/Hobby System/00-SYSTEM-PROMPTS/mtg-arena-coach|MTG Arena Coach]] — Coach de MTG Arena (draft, sealed, constructed)
 
 ## Institutional (TJAM — Compliance & Governança)
 
