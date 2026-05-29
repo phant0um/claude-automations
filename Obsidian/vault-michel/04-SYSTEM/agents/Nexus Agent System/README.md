@@ -29,7 +29,7 @@ nexus (orchestrator)
 | Nexus   | claude-sonnet-4-6   | Orquestração requer julgamento, não precisa de Opus|
 | Scout   | claude-haiku-4-5    | Pesquisa rápida, output estruturado, baixo custo   |
 | Forge   | claude-sonnet-4-6   | Implementação séria — workhorse tier               |
-| Shield  | claude-opus-4-6     | Segurança e arquitetura crítica — 10% do trabalho  |
+| Shield  | claude-opus-4-7     | Segurança e arquitetura crítica — 10% do trabalho  |
 | Pixel   | claude-sonnet-4-6   | Output visual requer coerência, não custo premium  |
 | Herald  | claude-haiku-4-5    | Síntese e comunicação — tarefas leves              |
 | Ledger  | claude-haiku-4-5    | Logging estruturado — máxima velocidade e economia |

@@ -37,6 +37,13 @@ Livros, papers, vídeos, cursos e artigos referenciados no vault.
 - [[03-RESOURCES/sources/claude-code-rce-deeplink-vulnerability]] — Guru Baran/Joernchen; RCE no Claude Code via deeplink; eagerParseCliFlag context-blind; trust bypass; corrigido v2.1.118
 - [[03-RESOURCES/sources/jacob-harris-why-i-dont-vibe-code]] — Jacob Harris/@dotey; anti-vibe-coding; complexidade essencial vs acidental; fricção como sinal de design; Brooks "No Silver Bullet"
 
+## Fontes Ingeridas em 2026-05-29
+
+- [[03-RESOURCES/sources/pkm-obsidian-second-brain/second-brain-self-maintaining]] — @Axel_bitblaze69; 5 workflows self-maintaining (Ingest/Query/Lint/Hot Cache); hot.md como KV cache 80–90% token economy
+- [[03-RESOURCES/sources/pkm-obsidian-second-brain/obsidian-system-notes-to-use]] — @cyrilXBT; 3 zonas (Capture/Active/Archive) + Output folder; 5 workflows Claude; métrica: taxa de contribuição de notas
+- [[03-RESOURCES/sources/skills-prompting-mcp/brunobertolini-ai-dev-workflow]] — @brunobertolini; pipeline full-stack: /pm /epic /code /distill; GitHub como sistema nervoso; worktrees + PR 6 agentes
+- [[03-RESOURCES/sources/open-source-ecosystems/liteparse-v2-rust-100x-parsing]] — Logan Markewich/LlamaIndex; LiteParse v2.0 Rust; 5–100× speedup; WASM/Node/Python/Rust; 0.777s/457p/100MB
+
 ## Por Tipo
 
 - **Livros**

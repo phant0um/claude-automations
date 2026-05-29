@@ -76,7 +76,11 @@ word_count=$(echo "$snippet" | wc -w)
 - Ativar como pré-filtro antes de qualquer AI call de scoring
 - Resultado: dois grupos — score <5 (rejeitar sem AI), score ≥5 (aprovar ou refinar com AI)
 
-NÃO usar para: arquivos únicos, análise de conteúdo profundo, scoring de papers (esses merecem AI call).
+## Quando NÃO Usar
+- Arquivos únicos (overhead do script não compensa)
+- Análise de conteúdo profundo — heurísticas de título não capturam qualidade
+- Scoring de papers acadêmicos (abstracts densos merecem AI call)
+- Corpus <20 arquivos (triagem manual é mais rápida)
 
 ---
 

@@ -10,6 +10,8 @@ triggers:
   - carteira
   - portfólio
   - mercado financeiro
+  - fatura cartão
+  - análise gastos
 reads:
   - docs/progress.md
   - docs/standards.md
@@ -59,7 +61,27 @@ Michel Csasznik — investidor pessoa física BR, exposto a mercados BR e EUA. P
 | Juros, câmbio, inflação, ciclo econômico, impacto macro em carteira | `macro` |
 | Backtesting, fatores, otimização de portfólio, correlações, Sharpe | `quant` |
 | Bitcoin, altcoin, on-chain, DeFi, tokenomics, tributação crypto | `cripto` |
+| Tributação, IRPF, ganho de capital, DARF, declaração IR | `contador` |
+| Fatura de cartão, análise de gastos, economia pessoal | `fatura` |
 | Dúvida que envolve 2+ agentes | `macro` primeiro → especialista |
+
+## Macro como Layer 0
+
+Para análises de **carteira, portfólio ou alocação multi-ativo**: antes de rotear para especialista, invocar `macro` para classificar regime econômico atual usando `skills/regime-classifier.md`. O output de regime governa premissas dos agentes downstream (Valor, Quant, Desafiante).
+
+Exceção: análise de ativo único sem contexto de portfólio → rotear diretamente.
+
+## Estado Visível de Sessão
+
+A partir do **2º turno**, incluir este bloco no início de toda resposta:
+
+```
+> Sessão Finance:
+> Ativos discutidos: [ticker — veredicto 3 palavras | nenhum]
+> Regime macro: [Expansão | Late-Cycle | Recessão | Recuperação | não classificado]
+> Perfil inferido: [conservador | moderado | arrojado | não declarado]
+> Objetivo declarado: [crescimento | renda | proteção | diversificação | não declarado]
+```
 
 ## Intake mínimo (quando contexto faltar)
 

@@ -28,9 +28,9 @@ NÃO ative para: queries factuais diretas; tarefas de rotina; formatação; perg
 
 | Etapa | Modelo Claude | Parâmetros | Justificativa |
 |-------|--------------|------------|---------------|
-| Parallel Reasoning (K trajetórias) | `claude-sonnet-4-5` | K=4, temp=1.0, top_p=0.95 | Custo razoável, diversidade alta |
-| Sequential Deliberation (síntese) | `claude-opus-4-5` | K1=1, temp=0.3 | Capacidade máxima de síntese |
-| Iterative Deliberation (se necessário) | `claude-opus-4-5` | max N=2 iterações | Refinamento progressivo |
+| Parallel Reasoning (K trajetórias) | `claude-sonnet-4-6` | K=4, temp=1.0, top_p=0.95 | Custo razoável, diversidade alta |
+| Sequential Deliberation (síntese) | `claude-opus-4-7` | K1=1, temp=0.3 | Capacidade máxima de síntese |
+| Iterative Deliberation (se necessário) | `claude-opus-4-7` | max N=2 iterações | Refinamento progressivo |
 
 > **Regra de escalada**: Se o problema for STEM puro com resposta verificável (matemática, código com testes), use K=8 no Sonnet. Se for análise estratégica/design, K=4 é suficiente.
 

@@ -31,8 +31,8 @@ Você é analista quantitativo com 10 anos construindo modelos de fator e otimiz
 
 | Modo / Tarefa | Modelo |
 |---------------|--------|
-| Otimização de portfólio, análise de fatores, backtesting conceitual | Opus |
-| Métricas de risco, educação quant | Sonnet (padrão) |
+| Otimização de portfólio, análise de fatores, backtesting conceitual | Opus 4.7 |
+| Métricas de risco, educação quant | Sonnet 4.6 (padrão) |
 
 > Em Claude Projects: modelo fixo no projeto. Diferenciação válida via Claude Code SDK.
 

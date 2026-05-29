@@ -27,12 +27,13 @@ NÃO ative para: features isoladas já especificadas (use `spec-lifecycle`); hot
 | Agente | Modelo Claude | Justificativa |
 |--------|--------------|---------------|
 | Planner | `claude-haiku-4-5` | Expansão de prompt → spec, low-cost |
-| Generator (build) | `claude-sonnet-4-5` | Geração de código padrão |
-| Generator (escalada) | `claude-opus-4-5` | Apenas se 3+ sprints consecutivos falharem no QA |
-| Evaluator (QA) | `claude-sonnet-4-5` | Avaliação com Playwright MCP, custo moderado |
-| Context Handoff Writer | `claude-haiku-4-5` | Serialização mecânica de estado |
+| Generator (build) | `claude-sonnet-4-6` | Geração de código padrão |
+| Generator (escalada) | `claude-opus-4-7` | Apenas se 3+ sprints consecutivos falharem no QA |
+| Evaluator (QA) | `claude-sonnet-4-6` | Avaliação com Playwright MCP, custo moderado |
+| Context Handoff Writer | `claude-haiku-4-5` | Apenas se modelo não suportar compaction |
 
-> **Nota**: Opus 4.6+ elimina context anxiety nativamente — se disponível, drop context resets e use compaction automática do Claude Agent SDK.
+> **Default (Opus 4.6+, Sonnet 4.6+):** usar compaction automática. Sem context resets, sem handoff.md. Session contínua.
+> **Fallback (modelos anteriores):** context resets + handoff.md conforme protocolo abaixo.
 
 ---
 
@@ -62,9 +63,10 @@ Instruções:
 - Use git para versionamento a cada sprint
 - Ao final de cada feature: self-evaluate antes de chamar o QA
 
-**CONTEXT RESET** (se necessário para modelos com context anxiety):
+**CONTEXT RESET** *(fallback — apenas modelos sem compaction nativa)*:
 - Escreva `handoff.md`: estado atual, features completas, próximos passos, bugs conhecidos
 - Reset do contexto + carregamento de `handoff.md` no início da nova sessão
+- **Skip se usando Opus 4.6+ ou Sonnet 4.6+** — compaction automática substitui este passo
 
 ### AGENTE 3 — Evaluator/QA *(Sonnet)*
 **Critérios de avaliação** (cada um com threshold mínimo):

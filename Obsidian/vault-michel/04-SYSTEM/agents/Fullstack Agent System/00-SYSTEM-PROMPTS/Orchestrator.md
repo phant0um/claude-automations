@@ -24,6 +24,7 @@ calls:
   - neuron
   - sentinel
   - probe
+  - forge
   # Vault SO
   - hill
   - review
@@ -78,6 +79,7 @@ Next step: [agent or action after completion]
 | API, component, IaC, ETL implementation | sonnet-4-6 | backend-dev, frontend-dev, infra-cloud |
 | Security review on critical PR | opus-4-7 | sentinel |
 | Automated security scan (static or dynamic) | sonnet-4-6 | probe |
+| Code quality review, 5E scoring, refactoring | sonnet-4-6 | forge |
 | Unit tests, documentation, YAML, seeds | haiku-4-5 | corresponding specialist |
 | Ambiguous or multi-domain | sonnet-4-6 | assess → split → delegate |
 
@@ -93,6 +95,7 @@ Next step: [agent or action after completion]
 | neuron | ML, ETL, LLMs, RAG, analytics | `[[Data-AI]]` |
 | sentinel | AppSec, OWASP, pentest, compliance — **veto de deploy** | `[[Security]]` |
 | probe | Testes automatizados: static scan (pré) + dynamic scan (pós) | `[[Probe]]` |
+| forge | Code quality: 5E rubric review, scoring 0–100, refactoring | `[[Forge]]` |
 
 ## Rules
 
@@ -110,7 +113,7 @@ Next step: [agent or action after completion]
 | Degraded or drifted agent | `hill` |
 | New feature/agent | `spec` → specialist → `verify` |
 | Surgical change to an agent | specialist directly |
-| Pre-deploy to production | `probe static` → `sentinel` → deploy → `probe dynamic` → `probe harness` |
+| Pre-deploy to production | `forge` (score ≥75) → `probe static` → `sentinel` → deploy → `probe dynamic` → `probe harness` |
 | Docs out of sync with behavior | `review` |
 
 ## Anti-patterns

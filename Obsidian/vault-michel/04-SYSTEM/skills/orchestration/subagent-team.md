@@ -26,11 +26,11 @@ NÃO ative para: tarefas sequenciais estritas; operações que precisam de outpu
 
 | Sub-Agente | Modelo | Especialidade | Quando Convocar |
 |-----------|--------|--------------|----------------|
-| **Researcher** | `claude-sonnet-4-5` + web search MCP | Coleta e síntese de dados, fact-checking | Sempre que houver questões factuais abertas |
+| **Researcher** | `claude-sonnet-4-6` + web search MCP | Coleta e síntese de dados, fact-checking | Sempre que houver questões factuais abertas |
 | **Editor** | `claude-haiku-4-5` | Refinamento de texto, clareza, consistência | Output textual que vai para usuário final |
-| **PM (Product Manager)** | `claude-sonnet-4-5` | Priorização, user stories, OKRs | Decisões de produto/feature |
-| **Analyst** | `claude-sonnet-4-5` | Dados, métricas, padrões quantitativos | Qualquer análise com números |
-| **Critic** | `claude-opus-4-5` | Revisão adversarial, red-team | Antes de decisões críticas irreversíveis |
+| **PM (Product Manager)** | `claude-sonnet-4-6` | Priorização, user stories, OKRs | Decisões de produto/feature |
+| **Analyst** | `claude-sonnet-4-6` | Dados, métricas, padrões quantitativos | Qualquer análise com números |
+| **Critic** | `claude-opus-4-7` | Revisão adversarial, red-team | Antes de decisões críticas irreversíveis |
 | **Ops** | `claude-haiku-4-5` | Tarefas operacionais, scripts, automação | Execução mecânica de procedimentos |
 
 > **Regra de ouro de custo**: Convoque Opus (Critic) apenas quando a decisão for irreversível ou de alto impacto. Para revisões normais, Sonnet é suficiente.
@@ -106,3 +106,5 @@ Se findings BLOQUEANTES: retorne ao agente responsável para revisão.
 - NUNCA use Opus para Researcher, Editor, ou Ops — desperdício claro
 - NUNCA ignore findings BLOQUEANTES do Critic — eles existem para isso
 - Se um sub-agente exceder 2× o tempo estimado: cancele e atribua ao próximo mais capaz
+- **Max spawn depth: 2** (parent → subagent → 1 nível mais). Se subagent precisa de modelo mais capaz → retorna ao parent com contexto, não escala sozinho
+- **Single-threaded writes:** apenas 1 agente escreve por arquivo. Outros contribuem inteligência (review, análise), não ações de escrita concorrentes

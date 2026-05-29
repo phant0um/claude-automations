@@ -28,7 +28,7 @@ NÃO ative durante: implementação ativa de feature (timing errado); emergênci
 | Etapa | Modelo Claude | Justificativa |
 |-------|--------------|---------------|
 | Varredura estrutural do repo | `claude-haiku-4-5` | Leitura mecânica de arquivos |
-| Detecção de drift semântico | `claude-sonnet-4-5` | Comparação de significado, não apenas texto |
+| Detecção de drift semântico | `claude-sonnet-4-6` | Comparação de significado, não apenas texto |
 | Auto-fix de drift mecânico | `claude-haiku-4-5` | Edições simples e verificáveis |
 | Relatório de drift não-automático | `claude-haiku-4-5` | Geração de lista estruturada |
 

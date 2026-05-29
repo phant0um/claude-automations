@@ -28,9 +28,9 @@ NÃO ative para: agentes sem eval suite definida; queries simples sem histórico
 |-------|--------------|---------------|
 | Leitura de INSTRUCTIONS + derivação de probes | `claude-haiku-4-5` | Leitura estruturada, baixo custo |
 | Execução de probes via cURL/API | `claude-haiku-4-5` | Chamadas repetitivas, sem raciocínio profundo |
-| Julgamento PASS/FAIL de cada probe | `claude-sonnet-4-5` | Precisão na avaliação semântica |
-| Diagnóstico de falha + seleção de lever | `claude-sonnet-4-5` | Análise causal moderada |
-| Edição cirúrgica do agente (.py / INSTRUCTIONS) | `claude-sonnet-4-5` | Requer coerência de código |
+| Julgamento PASS/FAIL de cada probe | `claude-sonnet-4-6` | Precisão na avaliação semântica |
+| Diagnóstico de falha + seleção de lever | `claude-sonnet-4-6` | Análise causal moderada |
+| Edição cirúrgica do agente (.py / INSTRUCTIONS) | `claude-sonnet-4-6` | Requer coerência de código |
 | Re-run suite completo final (anti-regressão) | `claude-haiku-4-5` | Verificação mecânica |
 
 ---

@@ -1,38 +1,58 @@
 ---
 title: Hot Cache
 type: hot-cache
-updated: 2026-05-24
+updated: 2026-05-29
 sweep-protocol: mensal — remover entradas > 30 dias não acessadas novamente
 kv-cache: stable-first — OPERACIONAL+CONCEITOS+INGEST são estáveis → cacheados; SESSÕES ao final
+rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 300 lines; overflow → hill sweep"
 ---
 
-> **Sweep Protocol:** Este arquivo deve ser curado mensalmente.
-> Entradas com mais de 30 dias sem referência cruzada nova → mover para `[ARQUIVO]`.
-> Objetivo: hot.md = memória de trabalho ativa, não landfill acumulativo.
+> **Sweep Protocol:** Curado mensalmente. Entradas > 30 dias sem referência nova → `[ARQUIVO]`.
 > Agente responsável: `hill` — trigger: "sweep hot.md" ou rotina mensal (`vault-hot-sweep`).
 >
-> **Estrutura KV-cache-friendly:** seções estáveis primeiro → prompt cache hit na maioria das sessões.
-> [SESSÕES-RECENTES] fica ao final — conteúdo dinâmico não quebra cache do prefixo estável.
+> **Rotation Rules (prevenção compression aging — AgingBench 2026):**
+> - `[SESSÕES-RECENTES]` max **5 entries**. Overflow → comprimir oldest → `[ARQUIVO]` table row
+> - `[ARQUIVO]` max **30 rows** total. Rows > 90 dias → drop
+> - Ceiling: **300 linhas**. Se excedido → sweep imediato antes de appends
+> - Compression format: `| Data | Evento | Resultado |` (1 linha por sessão)
+>
+> **Estrutura KV-cache-friendly:** seções estáveis primeiro → cache hit na maioria das sessões.
+> `[SESSÕES-RECENTES]` ao final — conteúdo dinâmico não quebra cache do prefixo estável.
 
 ---
 
 ## [OPERACIONAL] — Ações Pendentes
 
-**🔴 BLOQUEADOR: Bash allowlist para wiki-ingest subagents**
-- Sem permissão → subagents não executam pdftotext, git, find, etc.
-- Desbloqueia: 9 score-8 + 35 score-6/7 + 64 FIAP PDFs + 55 concurso = **163 ingests pendentes**
-- Fix: adicionar permissões Bash ao `.claude/settings.json` (ou `settings.local.json`) do vault para wiki-ingest agents
+**Finance System — Fatura agent (2026-05-29):**
+- ✅ Agente Fatura criado — [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Fatura]] (Santander, Porto Seguro, Revolut; relatório em 06-GENERATED/faturas/)
+- ✅ Skill fatura-parser criada — [[04-SYSTEM/agents/Finance System/skills/fatura-parser]] (detecção banco, categorias, fallback)
+- Drop zone PDFs: `.raw/faturas/` | Output: `06-GENERATED/faturas/YYYY-MM-banco.md`
 
-**Conceitos a criar:**
-- `llm-evaluation` — 4+ sources convergem (29-llm-eval, agent-eval-framework, AHE, llm-as-a-judge) → [[03-RESOURCES/concepts/agent-systems/llm-evaluation]]
-- `browser-skills-agents` — Browse.sh + macOS dual-cursor → [[03-RESOURCES/concepts/agent-systems/browser-skills-agents]]
+**Vault SO — melhorias pendentes (2026-05-29):**
+- ✅ Forge agent criado — [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Forge]] (5E rubric, score 0–100, refactor) (2026-05-29)
+- ✅ code-optimize skill criada — [[04-SYSTEM/skills/core/code-optimize]] (5 dimensões, modelo por etapa) (2026-05-29)
+- ✅ Maestro routing atualizado — Forge na sequência pre-deploy; v2.1.0 (2026-05-29)
 
-**Entidades a criar:**
-- `Fireworks AI` — fine-tuning agent + inference engines → [[03-RESOURCES/entities/Fireworks-AI]]
-- `kepano` — criador obsidian-skills → [[03-RESOURCES/entities/kepano]]
+**Vault SO — melhorias pendentes (2026-05-28):**
+- ✅ Nexus SOUL.md block adicionado (identity, core truths, worldview, voice, manias, memory policy) — [INVARIANT] protegido (2026-05-28)
+- ✅ Golden cases criados — 20 casos: Nexus(7) + guard(7) + hill(6) → [[04-SYSTEM/wiki/golden-cases]]
+- ✅ Invariant section no CLAUDE.md do vault — `<!-- [INVARIANT] -->` em Principles + Identity (2026-05-28)
+- ✅ Verification skill para ingest — `04-SYSTEM/skills/core/ingest-verify.md` (2026-05-28)
+
+**Conceitos criados (2026-05-28):**
+- ✅ `llm-evaluation` → [[03-RESOURCES/concepts/agent-systems/llm-evaluation]] (taxonomia completa: métricas, LLM-judge, agent eval, estatística)
+- ✅ `browser-skills-agents` → [[03-RESOURCES/concepts/agent-systems/browser-skills-agents]] (Browse.sh, Autobrowse, dual-cursor)
+- ✅ `Fireworks AI` → [[03-RESOURCES/entities/Fireworks-AI]] (fine-tuning agentico, self-improving loop)
+- ✅ `kepano` → [[03-RESOURCES/entities/kepano]] (CEO Obsidian, obsidian-skills)
+
+**Automações criadas (2026-05-28):**
+- ✅ SRS Concurso → [[02-AREAS/concurso/srs-tracker]] + [[07-QUEUE/rotinas/srs-concurso]] (SM2, 16 disciplinas, trigger diário 08h)
+- ✅ Métricas de Ingest → [[07-QUEUE/rotinas/metricas-ingest]] (orphans, volume, hot.md health, trigger domingo 22h)
 
 **Concurso — pendente:**
-- 64 stubs legislação restantes (ver [[04-SYSTEM/logs/lint-report-2026-05-24]])
+- ✅ concurso-legislacao/ 69 stubs: COMPLETO
+- ✅ FIAP PDFs: 64 arquivos ingestados (2026-05-20), source pages existem
+- ✅ Stubs FIAP expandidos (fases 1-6 + projeto-fintech + projeto-careplus): 8–10KB cada (2026-05-28)
 
 ---
 
@@ -40,190 +60,109 @@ kv-cache: stable-first — OPERACIONAL+CONCEITOS+INGEST são estáveis → cache
 
 | Conceito | Status | Próxima ação |
 |---------|--------|-------------|
-| [[03-RESOURCES/concepts/agent-systems/harness-engineering]] | 8+ sources; AHE data adicionado | Link com 9 Clippings score-8 quando ingestados |
+| [[03-RESOURCES/concepts/agent-systems/harness-engineering]] | 11+ sources; Wirth+Belemedath+Srinivasan adicionados | Criar consolidação SDB + 8 pillars + 8 levels |
+| [[03-RESOURCES/concepts/agent-systems/agent-lifespan-engineering]] | Criado 2026-05-28 | Ligar hot.md rotation policy como implementação de prevenção |
+| [[03-RESOURCES/concepts/agent-systems/floor-raising-vs-benchmark-maxing]] | Criado 2026-05-28 | Golden cases como implementação concreta |
+| [[03-RESOURCES/concepts/agent-systems/runtime-architecture-patterns-sdb]] | Criado 2026-05-28 | Link com Srinivasan source page |
+| [[03-RESOURCES/entities/AgingBench]] | Criado 2026-05-28 | Referência para eval framework e vault aging monitor |
 | [[03-RESOURCES/concepts/agent-systems/agent-memory-architecture]] | Memory Lifecycle (Mercury consciente/subconsciente) | Link EvolveMem quando ingestado |
+| [[03-RESOURCES/concepts/agent-systems/agent-memory-four-layers]] | Criado 2026-05-28 (dunik_7) | Relacionar com agent-memory-architecture |
 | [[03-RESOURCES/concepts/agent-systems/agent-security-stack]] | Criado 2026-05-23 | Link Hermes×Bitwarden quando ingestado |
 | [[03-RESOURCES/concepts/llm-ml-foundations/inference-engines-hardware-first]] | Criado 2026-05-23 | Link Inference Engines 2026 quando ingestado |
 | [[03-RESOURCES/concepts/agent-systems/model-bound-vs-harness-bound]] | Criado 2026-05-24 | 4 fontes convergem; expandir |
 | [[03-RESOURCES/concepts/agent-systems/agent-evaluation-production]] | Atualizado 2026-05-18 | +Wolfe patterns; aguarda 29-llm-eval ingest |
-| [[02-AREAS/concurso/concurso-index]] | 63 sources mapeadas | Expandir 64 stubs restantes |
+| [[02-AREAS/concurso/concurso-index]] | 69 legislação stubs expandidos | Expandir stubs FIAP (64 fontes ingestadas) |
 
 ---
 
 ## [INGEST-PENDENTE]
 
-**Status:** bloqueado por Bash allowlist (ver OPERACIONAL). Fix first → wiki-ingest agents desbloqueados.
-
-### Score-8 — 9 Clippings (prioridade máxima)
-
-| Source | Categoria |
-|--------|-----------|
-| 29 LLM Evaluation Concepts Every Engineer Needs to Know | ai-agents-harness |
-| 9 Agentic Patterns, Simply Explained | ai-agents-harness |
-| Give your agents an interpreter | ai-agents-harness |
-| Hermes x Bitward - The Security Stack AI Agents Actually Need | ai-agents-harness |
-| How Claude Code works in large codebases | claude-code-skills |
-| Inference Engines for LLMs & Local AI Hardware (2026 Edition) | ai-agents-harness |
-| The Anatomy of a Claude Skill | claude-code-skills |
-| We Gave an AI Agent a Conscious and Subconscious Mind | ai-agents-harness |
-| kepano/obsidian-skills | claude-code-skills |
-
-### Score-6/7 — 35 Clippings
-
-Ver [[06-GENERATED/triagem/triagem-2026-05-23-v3]] — seção "Aprovados para Ingest".
-
-### FIAP PDFs — 64 arquivos (score 8)
-
-Fases 1–6 completas. Auto-aprovados. Requerem pdftotext + fiap-ingest agent.
-Ver [[06-GENERATED/triagem/triagem-2026-05-23-v3]] — seção "FIAP PDFs — Auto-aprovados".
-
-### Concurso — 55 sources (score 5-7)
-
-Ver [[06-GENERATED/triagem/triagem-2026-05-23-v2]] — seção pendente.
+**Clippings:** pipeline processou 88 (2026-05-28). Readwise adiciona ~10/dia → próximo run capta.
+**Concurso:** 55 sources pendentes → [[06-GENERATED/triagem/triagem-2026-05-23-v2]]
+**Score-8 (2026-05-23 backlog):** verificar se processados em 2026-05-24 batch ou ainda em Clippings/
+- 29 LLM Evaluation Concepts · 9 Agentic Patterns · Give agents interpreter · Hermes×Bitwarden
+- How Claude Code works in large codebases · Inference Engines · Anatomy of Claude Skill
+- We Gave AI Agent Conscious Mind · kepano/obsidian-skills
 
 ---
 
 ## [SESSÕES-RECENTES]
 
+### 2026-05-28
+
+**Pipeline Diário 2026-05-28 — CONCLUÍDO:**
+- **Triagem:** 175 candidatos → 151 aprovados (A=81, B=70), 24 rejeitados (C=20, D=4)
+- **FIAP:** 64 PDFs já tinham source pages (2026-05-20) → manifest atualizado, arquivados
+- **Ingest:** 88 Clippings via 9 agentes paralelos → 65 source pages criadas
+- **Conceitos novos:** 4 (agent-lifespan-engineering, agent-memory-four-layers, floor-raising-vs-benchmark-maxing, runtime-architecture-patterns-sdb)
+- **Entidades novas:** 8 (koylanai, wirthkarl, trq212-tariq, Akshay-Pachaar, AlexFinn, Andrej Karpathy, Nimbalyst, heygurisingh)
+- **Archive:** A=65, B=86, C=+20, D=+4; Manifest: 734 sources
+- **Post-pipeline:** harness-engineering +4 fontes; AgingBench entity criada; floor-raising concept criada
+- **Post-pipeline extra:** hot.md rotation policy (169 linhas, ceiling 300); CLAUDE.md invariant markers; ingest-verify skill v1.0
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-28]] · [[06-GENERATED/triagem/triagem-2026-05-28]]
+
+---
+
+### 2026-05-25
+
+**Archive A Analysis + Vault Upgrades:**
+Model versions: 14 files updated (`sonnet-4-5`→`4-6`, `opus-4-5`→`4-7`). AGENTS.md v1.1: +6 sistemas + 11 rotas (33+ agentes visíveis).
+NEW: `pre-mortem.md` (Gary Klein) · `check-resolvable.md` (agentes fantasma) · `frozen-novice-problem` concept.
+Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harness Stress Test + instruction-following decay data.
+
+**Agent Quality Audit (7-gap item F):**
+77 agentes auditados: +Fora do Escopo, +Critério de Qualidade, +Exemplo.
+10 sistemas; critérios domain-specific; orchestrators: roteamento, nunca execução direta.
+
+---
+
 ### 2026-05-24 (continuação)
 
-**Clippings Archive Reorganization (sessão 4):**
-- Analisados v1/v2/v3 triagems: distribuição scores, overlap detection
-- Estrutura criada: A (score 8-9) | B (score 7) | C (score 6) | D (resto + raw)
-- Raw consolidation: 465 arquivos `.raw/articles/*.md` copiados → D/2026-05-23/
-- Total D agora: 704 files (252 Clippings + 452 raw articles)
-- Limpeza: deletado clippings-ingested/ e triagem-rejeitados/ (stale structures)
-- Estado final: A=1, B=8, C=2, D=704 | Raws centralizados em D
+**Clippings Archive Reorganization:**
+Estrutura: A|B|C|D. Raw consolidation: 465 arquivos → D/2026-05-23/. Total D: 704 files.
+
+---
+
+### 2026-05-28
+
+**Pipeline Diário v2 (scheduled incremental):** Triagem: 9 candidatos → 7 aprovados (A=3, B=4) + 2 rejeitados (C=1, D=1). Ingest: 7 source pages criadas. Manifest: 734→741.
+**Top action:** Enriquecer `context-engineering.md` com framework 5 layers (Identity→Knowledge→Memory→Tool→Conversation).
+**Clusters:** Context Engineering setup (4) · Claude Code engineering (1) · PKM+Obsidian (2).
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-28-v2]] · [[06-GENERATED/triagem/triagem-2026-05-28-v2]]
+
+---
 
 ### 2026-05-24
 
-**Implementações (sessão 3):**
-- **Item 1 (Stop hook quality gate)** — `stop-quality-gate.sh` criado; verifica sources→manifest; wired em Stop hooks
-- **Item 2 (Sprint contract skill)** — `~/.claude/skills/sprint-contract.md` criado (GAN: Planner+Generator+Evaluator; critérios before sprint)
-- **Item 5 (Skill frontmatter audit)** — 4 skills com YAML frontmatter: `token-economy`, `agent-eval`, `caveman-mode`, `kv-cache-explainer` → auto-routing via progressive disclosure
-- **Item 8 (Rotinas remotas)** — `vault-monday-ops` (weekly Mon 16h Manaus: ingest-report+wiki-lint) + `vault-hot-sweep` (mensal 1º 16h); `auto-push.sh` com 4 guards (opt-in sentinel, quality gate re-verify, todo.md check, conflict check)
-- **Item 3 (hot.md restructure)** — KV cache optimization: stable-first structure (OPERACIONAL→CONCEITOS→INGEST→SESSÕES→ARQUIVO)
-
-**Lint + Melhorias (sessão 2–4):**
-- Fix 1 — 16 sources: `concepts/ai-agents/` → `concepts/agent-systems/`
-- Fix 2 — 6 concepts criados: `agentic-patterns`, `claude-skills-architecture`, `self-evolving-systems`, `token-economy`, `workflow-compilation`, `model-bound-vs-harness-bound`
-- Fix 3 — 231 concepts: `status: developing` adicionado via batch
-- Fix 4 — 5 stubs concurso expandidos: CTN, CF88, L7713, RIR/2018, L8112
-- **Sessão 3: tributario/ completo (21/21)**: CSLL, ITR, PIS/COFINS, IOF, IPI, IRPJ, LRF, Simples, sigilo bancário, PAF, IFRS, PIS/COFINS importação, REFIS, CIDE-Tech, CIDE-Comb, transparência, PIS histórico, PASEP, RITR
-- **Sessão 4 (atual): irpf/ (4/4) + irpf/manual-mir/ (10/10)**: PRONAC, deduções incentivadas, IRRF/retenção, L4506; rendimentos trabalho/capital/outros, bens financeiros/imóveis-móveis, despesas dedutíveis/não-dedutíveis/doações-não-dedutíveis, decisão judicial, entrega DAA
-- Pendente: administrativo/ (12), previdenciário/ (6), aduaneiro/ (5), penal/ (3), societário/ (4) → [[04-SYSTEM/wiki/lint-report-2026-05-24]]
-
-**Vault Improvements (sessão 1):**
-- 7 implementações: H4 (protect-sources hook), V1 (frontmatter enforcement+scan), V2 (epistemic-tagging), N2 (vault-graph.md), N3 (skill-memory pattern), N4 (mem0 agents/memory/), N5 (ACP concept page)
-- Artefatos: `protect-sources.sh`, `frontmatter-scan.sh`, `vault-graph.md`, `skill-memory.md`, `agents/memory/`, `epistemic-tagging.md`, `acp-agent-client-protocol.md`
-
-**Ingest Clippings Pendentes:**
-35 fontes criadas (19 score-7 + 16 score-6). Manifest: 570 → 605.
-Destaques: ACP protocol, Browse.sh, Fireworks fine-tuning, CodeGraph, directional-prompting, obra/superpowers, context engineering, vercel knowledge agent, PM Brain OS, dual-cursor.
-
-**kepano/obsidian-skills instalado:**
-5 skills via `skills add` → `defuddle`, `json-canvas`, `obsidian-bases`, `obsidian-cli`, `obsidian-markdown`
+**Implementações:** stop-quality-gate · sprint-contract skill · 4 skills com YAML frontmatter · vault-monday-ops + vault-hot-sweep crons · auto-push.sh (4 guards) · hot.md KV restructure.
+**Lint+Melhorias:** concepts path fix · 6 concepts · 231 status updates. concurso-legislacao/ COMPLETO (69 stubs).
+**Ingest Clippings:** 35 fontes (19 score-7 + 16 score-6). Manifest: 570→605.
 
 ---
 
 ### 2026-05-23
 
-**Pipeline Diário v3 (scheduled):**
-Triagem: 120→108 aprovados, 6 rejeitados. Ingest: 9 score-8 bloqueados (Bash permission). Top action: `harness-engineering` — 8+ sources convergem.
-→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-23]] | [[06-GENERATED/triagem/triagem-2026-05-23-v3]]
+**Pipeline Diário v3 (scheduled):** Triagem: 120→108 aprovados. Ingest: 9 score-8 bloqueados (Bash permission). Top action: `harness-engineering`.
+**Melhorias F3.3:** harness-engineering +5 fontes · agent-memory-architecture +Mercury Lifecycle · agent-security-stack · inference-engines-hardware-first · afrfb-base-legal.
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-23]] · [[06-GENERATED/triagem/triagem-2026-05-23-v3]]
 
-**Melhorias F3.3:**
-Updated: `harness-engineering` +5 fontes | `agent-memory-architecture` +Memory Lifecycle | `llm-as-a-judge` +29 eval concepts
-Created: `agent-security-stack` | `inference-engines-hardware-first` | `afrfb-base-legal`
+### 2026-05-28 (queue-processor)
 
-**Ingest Legislação — Batch Completo:**
-69 novas source pages em `concurso-legislacao/`. Manifest: 493 → 562.
-irpf/(16) + tributario/(22) + administrativo/(13) + previdenciario/(6) + societario/(4) + constitucional/(2) + aduaneiro/(5) + penal/(3)
-→ [[02-AREAS/concurso/concurso-index]]
-
-**Pipeline Diário v2:**
-212 candidatos → 212 aprovados. Ingest: 24 sources. Skipped 7 dups.
-→ [[06-GENERATED/triagem/triagem-2026-05-23-v2]]
-
-**Sources Subfolder Reorganization:**
-580 files → 14 subfolders. 3082 wikilinks updated.
-
----
-
-### 2026-05-20
-
-**Batch Ingest FIAP:**
-60 source stubs (Fases 1–6) + 60 manifest entries. Total FIAP: 75 apostilas.
-Fase 1(10) + Fase 2(9) + Fase 3(9) + Fase 4(12) + Fase 5(12) + Fase 6(12).
-
----
-
-### 2026-05-19
-
-**Relatório Pós-Ingest Semanal:**
-20/224 sources | 7 clusters: Agent OS Multi-Harness, RL Research, Memory & Continuity, Arquitetura Agentes, Token Engineering, Eval & Benchmarks, AI-Native Paradigm.
-Top insight: Multi-harness control plane (Oz) = harness-as-infrastructure. Novo primitivo arquitetural.
-Cross-connections: [agent-performance-model-bound]↔[is-grep-all-you-need] | [activegraph]↔[delta-mem] | [hermes-self-writing]↔[harnessing-agentic-evolution]
-→ [[06-GENERATED/ingest-report/relatorio-pos-ingest-2026-05-19-semanal]]
-
-**Manutenção Vault:**
-Claude Code 2.1.108→2.1.144 (RCE patched). Caveman hook duplicate fixed (-30 tokens/turn).
-MOC Fase 7: 15/15 linkadas. ECC entity → hub 8 cross-links. 175 pages `updated: 2026-05-19`.
-AGENTS.md: sub-agent=compressão (não paralelismo) adicionado. hot.md: 368→220 linhas.
-Concepts novos: `subagent-pattern-empirical` — sub-agents vencem 7/10 prod.
-
-**Lint Semanal:**
-1086 files | Orphans: 21 | Dead links: 277 | Frontmatter gaps: 194.
-Resolvido: 5 stubs renomeados (288 dead links). Estruturais: `agentic-reasoning`, `agent-patterns`, `analista-de-investimentos-br-eua`.
-→ [[04-SYSTEM/logs/lint-report-2026-05-19]]
-
-**Daily Ingest:**
-40 novos sources. Manifest: 361→405. 39 Clippings cleaned.
-→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-19]]
-
----
-
-### 2026-05-18
-
-**Relatório Pós-Ingest Semanal:**
-20/127 sources | 7 clusters: Hermes Agent OS, Arquitetura Agentes, Skills & Harness, Workflow Reliability, Segurança, Auto-melhoria, FIAP Fase 7.
-Top insight: Claude Code RCE deeplink — trust boundary em CLI agents mais frágil que assumido.
-Cross-connections: [hermes-proxy]↔[ecc-v2-proxy] | [sub-agents-isolation]↔[workflow-silent-failure] | [harris-vibe-code]↔[halo-harness]
-→ [[06-GENERATED/ingest-report/relatorio-pos-ingest-2026-05-18-semanal]]
-
-**Concepts + Skills criados:**
-- NEW `kv-cache-llms` — mecanismo Attention(Q,K,V), prompt-caching/hot.md
-- NEW `geo-generative-engine-optimization` — MCP+llms.txt+OAuth AI search
-- UPD `agent-evaluation-production` +Wolfe patterns +ECHO world model
-- NEW skill `agent-eval.md` | NEW skill `kv-cache-explainer.md`
-- NEW agent `security-scanner.md` (3 modos: static/dynamic/harness)
-
-**Daily Ingest:**
-41 sources. Manifest: 320→361. Pages-chave: sub-agents-vs-multi-agents (win 7/10), echo-terminal-agents, 12-factor-agents, claude-code-rce-deeplink, cut-token-bill-87%.
-→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-18]]
-
----
-
-### 2026-05-17
-
-**Relatório Pós-Ingest Semanal:**
-20/147 sources | 6 clusters: Memory Paradox, Harness Engineering, Multi-Agent, ML Research, Skills & Context, Org AI.
-Top insight: Memory Curse — recall expandido erode cooperação em multi-agent. Mais memória ≠ melhor sistema.
-Cross-connections: [memory-curse]↔[delta-mem] | [llms-improving-llms]↔[halo-rlm] | [is-grep-all-you-need]↔[memory-skills-same-harness]
-→ [[06-GENERATED/ingest-report/relatorio-pos-ingest-2026-05-17-semanal]]
-
-**Connections:**
-8 conexões. Top: agent-governance-layers↔SOUL.md → "governed autonomy". Padrão 3+: Harness>modelo.
-→ [[06-GENERATED/connections/connections-2026-05-17]]
-
-**Daily Ingest:**
-43 sources. Triagem: 43 aprovados / 14 rejeitados.
-Pesquisa (9 papers: δ-mem, Memory Curse, LLMs→LLMs, MAS survey, Is-Grep, Geometric, Token Superposition, Lighthouse, Co-mathematician).
-Prático (27: memória, MCP, Hermes, Cowork, frontend toolkit, cybersecurity, local AI).
+**Queue Processor run automatizado:** 0 tasks processadas. 1 arquivo encontrado (`ingest-progress.md`) — status `revisão-manual`, 350/350 fontes completas. Recomendado: arquivar ou deletar.
+→ [[06-GENERATED/queue/process-queue-0-2026-05-28]]
 
 ---
 
 ## [ARQUIVO]
+
+### 2026-05-17 a 2026-05-20
+
+| Data | Evento | Resultado |
+|------|--------|-----------|
+| 2026-05-20 | Batch FIAP ingest | 60 source stubs Fases 1–6; manifest 405→465 |
+| 2026-05-19 | Daily ingest + lint + semanal + manutenção | 40 sources; 1086 files; 21 orphans; 277 dead links; hot.md 368→220 |
+| 2026-05-18 | Daily ingest + concepts/skills + semanal | 41 sources; RCE deeplink; agent-eval skill; kv-cache-explainer; security-scanner |
+| 2026-05-17 | Daily ingest + semanal + connections | 43 sources; Memory Curse insight; 8 cross-connections |
 
 ### 2026-05-13 a 2026-05-16
 
@@ -255,3 +194,12 @@ Prático (27: memória, MCP, Hermes, Cowork, frontend toolkit, cybersecurity, lo
 | 2026-05-01 | Batch Index Enrichment (19 articles) | 10 concepts + 6 entities indexed |
 
 **Arquivo completo:** `03-RESOURCES/log.md`
+
+**Assets — novos (2026-05-29):**
+- ✅ Claude Opus 4.8 launch template → `04-SYSTEM/assets/claude-opus-4.8-launch.html` (responsive HTML)
+
+## Pipeline Diário 2026-05-29
+**Triagem:** 37 candidatos → 26 aprovados (A:10/B:16), 11 rejeitados (C:10/D:1)
+**Ingest:** 26 sources (ai-agents=20, pkm=4, articles=2)
+**Top action:** Criar conceito `interpreter-skills` — TypeScript module embutido em skill, nova extensão do sistema
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-29]]

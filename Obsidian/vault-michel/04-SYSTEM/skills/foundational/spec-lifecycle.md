@@ -27,13 +27,13 @@ NÃO ative para: hotfixes urgentes (<10 linhas); mudanças de configuração pur
 | Etapa | Modelo Claude | Justificativa |
 |-------|--------------|---------------|
 | Constitution (princípios do projeto) | `claude-haiku-4-5` | Template preenchível, baixo julgamento |
-| Specify (requisitos + user stories) | `claude-sonnet-4-5` | Requer compreensão de produto |
+| Specify (requisitos + user stories) | `claude-sonnet-4-6` | Requer compreensão de produto |
 | Clarify (perguntas estruturadas) | `claude-haiku-4-5` | Q&A sequencial simples |
-| Plan (tech stack + arquitetura) | `claude-sonnet-4-5` | Decisões técnicas de médio impacto |
-| Auditoria do plano (blind spots) | `claude-sonnet-4-5` | Análise crítica cruzada |
+| Plan (tech stack + arquitetura) | `claude-sonnet-4-6` | Decisões técnicas de médio impacto |
+| Auditoria do plano (blind spots) | `claude-sonnet-4-6` | Análise crítica cruzada |
 | Tasks (breakdown com dependências) | `claude-haiku-4-5` | Estruturação mecânica |
-| Implement (geração de código) | `claude-sonnet-4-5` | Geração padrão; escale para Opus apenas se >3 rounds falharem |
-| Verify (quality gate pós-impl.) | `claude-sonnet-4-5` | Checagem contra spec |
+| Implement (geração de código) | `claude-sonnet-4-6` | Geração padrão; escale para Opus apenas se >3 rounds falharem |
+| Verify (quality gate pós-impl.) | `claude-sonnet-4-6` | Checagem contra spec |
 
 ---
 
@@ -73,7 +73,7 @@ NÃO ative para: hotfixes urgentes (<10 linhas); mudanças de configuração pur
 - Valide pré-requisitos: constitution ✓, spec ✓, plan ✓, tasks ✓
 - Execute tasks em ordem respeitando dependências
 - Ao final de cada user story: self-evaluate antes de avançar
-- Se uma task falhar 3x consecutivas: escale para `claude-opus-4-5` nessa task específica
+- Se uma task falhar 3x consecutivas: escale para `claude-opus-4-7` nessa task específica
 
 ### FASE 6 — Verify *(Sonnet)*
 - Compare implementação contra spec.md e acceptance criteria

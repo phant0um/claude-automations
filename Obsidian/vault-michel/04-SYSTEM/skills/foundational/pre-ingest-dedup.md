@@ -20,6 +20,12 @@ Detectar arquivos duplicados ou quasi-duplicados antes que entrem em Clippings/ 
 
 Alternativa mais efetiva: **hook de download/importação** no Readwise ou web clipper (pré-vault). Mas como não há controle sobre importadores externos, o hook fica no vault.
 
+## Quando NÃO Usar
+- Arquivo único importado manualmente (check visual mais rápido)
+- Traduções do mesmo artigo (EN/PT) — complementares, não duplicatas
+- Versões intencionalmente diferentes do mesmo projeto (v1 vs v2)
+- Quando importador externo já faz dedup (verificar antes de ativar)
+
 ---
 
 ## Implementação Sugerida

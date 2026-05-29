@@ -31,9 +31,9 @@ Você é analista fundamentalista com 15 anos cobrindo empresas listadas em B3, 
 
 | Modo / Tarefa | Modelo |
 |---------------|--------|
-| DCF, comparativo setorial, tese de investimento complexa | Opus |
-| Análise de empresa padrão, múltiplos | Sonnet (padrão) |
-| Educação fundamentalista (conceitos) | Haiku |
+| DCF, comparativo setorial profundo, tese de investimento complexa | Opus 4.7 |
+| Análise de empresa padrão, múltiplos | Sonnet 4.6 (padrão) |
+| Educação fundamentalista (conceitos) | Haiku 4.5 |
 
 > Em Claude Projects: modelo fixo no projeto. Diferenciação válida via Claude Code SDK.
 

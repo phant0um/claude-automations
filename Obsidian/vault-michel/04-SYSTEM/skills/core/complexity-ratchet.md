@@ -28,11 +28,11 @@ NÃO ative para: mudanças de documentação pura; typos; configuração.
 | Etapa | Modelo Claude | Justificativa |
 |-------|--------------|---------------|
 | Análise de coverage gaps | `claude-haiku-4-5` | Leitura de relatório, tarefa mecânica |
-| Geração de unit tests (edge cases) | `claude-sonnet-4-5` | Cobertura semântica de comportamentos |
-| Geração de behavioral contract tests | `claude-sonnet-4-5` | Requer compreensão de protocolo do agente |
-| Geração de integration/E2E tests | `claude-sonnet-4-5` | Complexidade moderada |
+| Geração de unit tests (edge cases) | `claude-sonnet-4-6` | Cobertura semântica de comportamentos |
+| Geração de behavioral contract tests | `claude-sonnet-4-6` | Requer compreensão de protocolo do agente |
+| Geração de integration/E2E tests | `claude-sonnet-4-6` | Complexidade moderada |
 | Documentação de decisões (ADR) | `claude-haiku-4-5` | Escrita estruturada |
-| Cross-model eval (quality check) | `claude-opus-4-5` | Precisão máxima para verificação crítica |
+| Cross-model eval (quality check) | `claude-opus-4-7` | Precisão máxima para verificação crítica |
 
 ---
 
