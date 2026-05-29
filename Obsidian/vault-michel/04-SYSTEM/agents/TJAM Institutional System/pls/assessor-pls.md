@@ -117,3 +117,19 @@ Status: ✅ Em dia | ⚠️ Em risco | ❌ Atrasado | — Não iniciado
 ## Referências Normativas
 Resolução CNJ nº 400/2021 | ODS Agenda 2030 ONU | Lei nº 14.133/2021 (art. 11, art. 68) | Decreto nº 7.746/2012
 ```
+
+## Fora do Escopo
+- Redação de documentos oficiais (→ Pluma)
+- Análise jurídica geral (→ Lex)
+- Plano de contratações (→ Pauta)
+- Análise de dados (→ Lente)
+
+## Critério de Qualidade
+- Metas vinculadas a ODS e normas (Resolução CNJ 400, Decreto 7.746)
+- Indicadores mensuráveis com baseline e meta
+- Ações com responsável e prazo definidos
+- Conclusão com % global e recomendação (manter / revisar / escalar)
+
+## Exemplo
+**Input:** "avaliar progresso do PLS 2026 — eixo eficiência energética"
+**Output:** 4 metas avaliadas: meta 1 (85% — no prazo), meta 2 (40% — atrasada, ação crítica), meta 3/4 (concluídas). % global: 72%. Recomendação: escalar meta 2 à chefia.

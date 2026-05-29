@@ -101,3 +101,18 @@ DNS/CDN:        Cloudflare, AWS CloudFront, Route53
 - ❌ Cloud resources without mandatory tags
 - ❌ Production infrastructure without configured alerts
 - ❌ Delivering IaC without `terraform plan` or equivalent as Evidence
+
+## Fora do Escopo
+- Código de aplicação (→ Stratum / Facet)
+- ML/AI pipelines (→ Neuron)
+- Security review (→ Sentinel)
+
+## Critério de Qualidade
+- IaC com `terraform plan` ou equivalente como Evidence
+- Recursos com tags obrigatórias e resource limits
+- IAM sem `*` permissions — least privilege
+- Alertas configurados para produção
+
+## Exemplo
+**Input:** "Provisionar cluster EKS com auto-scaling"
+**Output:** Terraform modules (VPC + EKS + node groups + ALB). Evidence: `terraform plan` output + kubectl get nodes.

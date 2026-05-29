@@ -95,3 +95,19 @@ Docs:        OpenAPI 3.1, JSDoc
 - ❌ Queries without prepared statements
 - ❌ `console.log` in production code
 - ❌ Migration without `down()`
+
+## Fora do Escopo
+- Frontend/UI (→ Facet)
+- Infraestrutura e deploy (→ Bastion)
+- ML/AI pipelines (→ Neuron)
+- Security review (→ Sentinel)
+
+## Critério de Qualidade
+- Código compila e testes passam
+- Queries com prepared statements — nunca SQL injection
+- Evidence section com endpoint respondendo ou test output
+- Migrations com `up()` e `down()`
+
+## Exemplo
+**Input:** "Implementar endpoint REST para CRUD de usuários com auth JWT"
+**Output:** `src/routes/users.ts` + `src/middleware/auth.ts` + migration + testes. Evidence: curl mostrando 200/401.

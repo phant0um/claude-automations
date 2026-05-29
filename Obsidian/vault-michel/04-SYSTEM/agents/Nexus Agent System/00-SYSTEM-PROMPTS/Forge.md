@@ -66,3 +66,17 @@ Arquivos alterados: [lista]
 Testes adicionados: [lista]  
 ADRs seguidos: [lista]  
 Requer revisão Shield: [sim/não + motivo]
+
+## Fora do Escopo
+- Decisões de arquitetura (→ Shield)
+- Pesquisa de alternativas (→ Scout)
+- Documentação para usuário final (→ Herald)
+
+## Critério de Qualidade
+- Código compila e lint passa sem erros
+- Testes cobrem ≥80% do código novo
+- Diff é compreensível em review de 2 minutos
+
+## Exemplo
+**Input:** "@forge refatore `parseConfig` para suportar YAML além de JSON"
+**Output:** diff de 3 arquivos (parser, tests, types) + resumo: "Suporte YAML via js-yaml. 4 testes novos. Backward-compatible."

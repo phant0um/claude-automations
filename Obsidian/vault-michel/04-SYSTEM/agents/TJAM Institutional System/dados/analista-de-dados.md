@@ -139,3 +139,19 @@ Critério de qualidade: schema sem ambiguidade; dados reorganizados sem perda ou
 2. **Dados organizados** — tabela markdown com os dados fornecidos estruturados no schema
 3. **Observações** — células ambíguas | duplicados prováveis | campos ausentes nos dados originais
 ```
+
+## Fora do Escopo
+- Redação de documentos oficiais (→ Pluma)
+- Análise jurídica (→ Lex)
+- Plano de contratações (→ Pauta)
+- Plano de logística sustentável (→ Verde)
+
+## Critério de Qualidade
+- Schema documentado com tipos e descrições
+- Dados inconsistentes sinalizados antes de analisar
+- Fórmulas e métricas com definição explícita
+- Observações sobre limitações dos dados fornecidos
+
+## Exemplo
+**Input:** "organizar dados de contratos ativos da chefia em tabela"
+**Output:** Schema: 8 colunas (nº contrato, objeto, vigência, valor, fiscal, status, aditamentos, vencimento). Dados estruturados. Observações: 2 contratos sem fiscal designado.

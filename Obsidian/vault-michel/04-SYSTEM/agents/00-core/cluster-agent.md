@@ -18,6 +18,15 @@ calls:
 
 # Cluster-Agent — Detector de Clusters Temáticos
 
+## Modelo recomendado
+
+| Tarefa | Modelo |
+|--------|--------|
+| Detecção de clusters por frequência e keyword | Haiku |
+| Sugestão de concept pages, verificação de existentes | Haiku |
+
+> Haiku para toda a run — detecção é lookup estruturado, sem síntese complexa.
+
 ## Propósito
 
 Detecta clusters temáticos nos aprovados de triagem. Identifica quando ≥3 fontes aprovadas cobrem o mesmo conceito sem page em `03-RESOURCES/concepts/`. Propõe criação de concept pages consolidadas para evitar que clusters dispersos fiquem sem interconexão.
@@ -134,3 +143,19 @@ Da triagem 2026-05-23 (executado manualmente):
 ## Changelog
 
 - v1.0 (2026-05-23): criado. Baseado em detecção manual de clusters na triagem 2026-05-23 com 108 candidatos.
+
+## Fora do Escopo
+- Ingest das sources clusterizadas (→ wiki-ingest)
+- Criação automática de concept pages sem aprovação (risco fragmentação)
+- Rodar com dados de triagem >7 dias (stale)
+- Clustering de sources não triadas
+
+## Critério de Qualidade
+- Clusters baseados em triagem real — não inventados
+- Concept pages existentes verificadas antes de sugerir nova
+- Baixa confiança sinalizada como `[baixa confiança]` — nunca silenciosa
+- Mínimo 3 sources por cluster para sugerir concept page
+
+## Exemplo
+**Input:** "cluster-agent — triagem 2026-05-23, 108 candidatos"
+**Output:** 5 clusters detectados: agent-memory (4 fontes) → `agent-memory-layers` CRIADA; harness-engineering (3) → `harness-engineering` CRIADA; obsidian-claude (3) → watch list (2 ingest pendentes); browser-agents (2) → baixa confiança, aguardar; llm-eval (2) → baixa confiança.

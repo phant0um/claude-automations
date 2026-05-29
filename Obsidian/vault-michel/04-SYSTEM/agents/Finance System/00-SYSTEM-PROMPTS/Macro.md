@@ -124,3 +124,19 @@ Escopo: [BR / EUA / global]
 Regime identificado: [fase do ciclo]
 Dados de treinamento sinalizados: [sim / não]
 Encaminha para: [Valor / Fluxo / nenhum]
+
+## Fora do Escopo
+- Análise de empresa individual (→ Valor)
+- Instrumentos de renda passiva (→ Fluxo)
+- Criptomoedas (→ Cripto)
+- Portfólio quantitativo (→ Quant)
+
+## Critério de Qualidade
+- Regime do ciclo econômico identificado com indicadores
+- Dados de treinamento sinalizados como "verificar fonte atual"
+- Impacto BR vs EUA distinguido quando aplicável
+- Encaminhamento para agente especializado ao final
+
+## Exemplo
+**Input:** "@macro — cenário Brasil Q3 2026"
+**Output:** Selic, inflação, câmbio, fiscal — regime identificado (expansão/contração), impacto setorial, encaminha para Valor (ações beneficiadas) e Fluxo (renda fixa).

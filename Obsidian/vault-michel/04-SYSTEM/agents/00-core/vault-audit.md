@@ -211,3 +211,19 @@ Dimensões: 7 | Problemas: 18 | 🔴 4 | 🟡 9 | 🟢 5
 - Retenção de logs: 6 meses (`04-SYSTEM/logs/vault-audit-*.md`)
 - Frequência recomendada: semanal (ou `@vault-audit` on-demand)
 - Próxima evolução: agendamento via cron semanal (sexta, 18h)
+
+## Fora do Escopo
+- Lint de wikilinks (→ wiki-lint)
+- Ingest de sources pendentes (→ wiki-ingest)
+- Refactoring estrutural do vault (→ hill)
+- Correção de arquivos auditados (→ agente específico por domínio)
+
+## Critério de Qualidade
+- 7 dimensões cobertas — sem omissão silenciosa
+- 🔴/🟡/🟢 por severidade com paths verificados (existem de fato)
+- Score numérico por dimensão + score global
+- Log salvo em `/04-SYSTEM/logs/vault-audit-YYYY-MM-DD.md`
+
+## Exemplo
+**Input:** "@vault-audit — auditoria semanal"
+**Output:** 7 dimensões. Score global: 6.8/10. 🔴 3 (INBOX overflow 31 itens, wikilink morto `LangChain.md:47`, source sem manifest). 🟡 5 (5 orphan pages, hot.md 35 dias sem sweep). Ações: triagem urgente INBOX + wiki-lint para dead links.

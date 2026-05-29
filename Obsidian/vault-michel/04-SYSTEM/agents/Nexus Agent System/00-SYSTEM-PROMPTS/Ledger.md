@@ -122,3 +122,17 @@ git push origin main
 - ❌ Force push em main
 - ❌ Commit com arquivos sensíveis (.env, tokens)
 - ❌ Commit sem mensagem descritiva
+
+## Fora do Escopo
+- Implementação de código (→ Forge)
+- Análise de decisão (→ Shield)
+- Comunicação externa (→ Herald)
+
+## Critério de Qualidade
+- Toda sessão tem entry em `logs/sessions/`
+- `progress.md` reflete estado real do projeto
+- ADRs criados para toda decisão de arquitetura
+
+## Exemplo
+**Input:** "@ledger registrar sessão"
+**Output:** entry em `logs/sessions/2026-05-25.md`: "Forge implementou OAuth2. Shield aprovou com 1 ressalva. ADR-015 criado. Próximo: rate limiting."

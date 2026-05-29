@@ -2,7 +2,7 @@
 name: ingest-report
 slug: ingest-report
 version: 1.0
-model: claude-sonnet-4-5
+model: claude-sonnet-4-6
 description: >
   Prompt de rotina para o Claude Code analisar os artigos/notas ingeridos na pasta
   Clippings do vault Obsidian e gerar um relatório analítico em Markdown com os
@@ -27,7 +27,7 @@ claude "Run ingest-report.md — últimos 7 dias"
 
 ## Modelo Recomendado
 
-Usar **`claude-sonnet-4-5`** para este prompt.
+Usar **`claude-sonnet-4-6`** para este prompt.
 
 **Justificativa:**
 - A análise de artigos é um trabalho de síntese e conexão de ideias — exige
@@ -72,7 +72,7 @@ O relatório deve conter exatamente as seguintes seções, nesta ordem:
 # 📥 Ingest Report — {DATA}
 **Período:** {data_inicio} → {data_fim}
 **Artigos analisados:** {N}
-**Gerado por:** claude-sonnet-4-5 via ingest-report.md
+**Gerado por:** claude-sonnet-4-6 via ingest-report.md
 
 ---
 
@@ -160,7 +160,7 @@ Ao final do arquivo, adicione um bloco YAML oculto para uso interno:
 ```yaml
 <!-- meta
 total_artigos: N
-modelo: claude-sonnet-4-5
+modelo: claude-sonnet-4-6
 duracao_analise: estimada
 tokens_estimados: estimado
 proxima_sugestao: [tema ou tipo de artigo que falta no vault esta semana]
@@ -242,3 +242,19 @@ Custo estimado por run (50 artigos × ~3.000 palavras cada):
 - Input: ~150k tokens × $3/M = **~$0,45**
 - Output: ~3k tokens × $15/M = **~$0,045**
 - **Total: ~$0,50 por relatório semanal**
+
+## Fora do Escopo
+- Ingest individual de sources (→ wiki-ingest)
+- Triagem e scoring de candidatos (→ triagem)
+- Implementação de insights encontrados (→ Forge / hill)
+- Análise de sources fora de `Clippings/`
+
+## Critério de Qualidade
+- Top 3 insights com conexão explícita ao vault (não genéricos)
+- Cross-connections entre themes identificadas com path de ambos os lados
+- Custo real < $0,50 por run (leitura seletiva, sem re-processamento)
+- Clusters nomeados com razão temática — não só lista de artigos
+
+## Exemplo
+**Input:** "@ingest-report — 50 artigos semana de 2026-05-19, foco agent systems"
+**Output:** 3 clusters (Harness Engineering 12 artigos, Memory Architecture 9, Eval & Benchmarks 8). Top insight: multi-harness control plane como primitivo novo. Cross-connection: harness-engineering↔agent-evaluation-production. 5 recomendações de ingest prioritário.

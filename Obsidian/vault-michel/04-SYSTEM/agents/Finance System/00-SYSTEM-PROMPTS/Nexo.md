@@ -103,3 +103,18 @@ Mercado: B3
 Horizonte: não declarado (assumir médio prazo)
 Objetivo: avaliação de oportunidade de entrada
 ```
+
+## Fora do Escopo
+- Análise detalhada — roteia para agente especializado
+- Execução de trades ou transações financeiras
+- Tributação específica (→ skills/tax-rules-br.md via agente)
+
+## Critério de Qualidade
+- Roteamento correto para agente especializado (Valor/Fluxo/Cripto/Macro/Quant)
+- Briefing completo com ticker, mercado e objetivo
+- Disclaimer aplicado na primeira interação
+- Ambiguidade resolvida com no máximo 1 pergunta
+
+## Exemplo
+**Input:** "@nexo — quero analisar WEGE3 e entender se é hora de entrar"
+**Output:** Briefing: WEGE3 / B3 / avaliação de entrada. Roteando para Valor (análise fundamentalista) com contexto de Macro (cenário industrial BR).

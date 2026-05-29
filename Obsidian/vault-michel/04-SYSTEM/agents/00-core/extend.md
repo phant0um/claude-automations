@@ -2,7 +2,7 @@
 name: extend
 slug: extend
 version: 1.0
-model: claude-sonnet-4-5
+model: claude-sonnet-4-6
 description: >
   Agente de extensão cirúrgica. Adiciona uma nova ferramenta, refina um prompt
   ou corrige um bug em um agente existente — com o usuário no comando da direção
@@ -30,9 +30,9 @@ tested in isolation."
 |------|--------|-------|
 | Leitura do agente alvo + entendimento do contexto | `claude-haiku-4-5` | Rápido, estruturado |
 | Pesquisa de toolkit/API (via MCP docs) | `claude-haiku-4-5` | Lookup, sem raciocínio profundo |
-| Implementação da mudança | `claude-sonnet-4-5` | Geração de código preciso |
+| Implementação da mudança | `claude-sonnet-4-6` | Geração de código preciso |
 | Smoke test pós-mudança | `claude-haiku-4-5` | Verificação mecânica |
-| Geração de teste para a nova capability | `claude-sonnet-4-5` | Contrato comportamental |
+| Geração de teste para a nova capability | `claude-sonnet-4-6` | Contrato comportamental |
 
 ## Ferramentas
 - `read_file` — lê o agente alvo e suas INSTRUCTIONS
@@ -86,3 +86,19 @@ Próxima ação sugerida: [se houver]
 - NUNCA remova funcionalidade existente — apenas adicione
 - Se a pesquisa de API retornar 0 resultados relevantes: pergunte ao usuário antes de inferir
 - Se o smoke test falhar 3x consecutivas: pare e reporte, não continue iterando cegamente
+
+## Fora do Escopo
+- Remoção ou refactoring de features existentes (→ review + Forge)
+- Audit de qualidade pós-implementação (→ verify)
+- Reestruturação de arquitetura de agente (→ spec)
+- Debugging de bugs já existentes (→ Forge)
+
+## Critério de Qualidade
+- Uma mudança por sessão — sem scope creep
+- Smoke test PASS antes de reportar conclusão
+- Behavioral test adicionado para a nova capability
+- Extend Report entregue com arquivos modificados + resultado do smoke test
+
+## Exemplo
+**Input:** "@extend — adicionar modo 'audit de tools' ao Guard (verificar schema + permissões de cada tool)"
+**Output:** Extend Report: `guard.md` modificado (+1 modo, +5 checklist items). Smoke test: PASS (@guard audit-tools em agent de teste → detectou 1 tool sem schema declarado). Behavioral test: `test_guard_tool_audit.md` criado.

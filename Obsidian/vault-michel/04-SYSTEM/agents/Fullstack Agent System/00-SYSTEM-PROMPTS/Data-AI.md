@@ -102,3 +102,19 @@ Viz:         Plotly, Streamlit, Metabase
 - ❌ ETL without data quality tests
 - ❌ Dataset overwritten without versioning
 - ❌ Empty Evidence — always include sample output or metrics
+
+## Fora do Escopo
+- APIs e backend (→ Stratum)
+- Frontend/UI (→ Facet)
+- Infraestrutura (→ Bastion)
+- Security review (→ Sentinel)
+
+## Critério de Qualidade
+- Pipeline ETL com data quality tests
+- Modelo com baseline metrics documentadas antes de deploy
+- Dados sensíveis anonimizados
+- Evidence com sample output ou métricas
+
+## Exemplo
+**Input:** "Criar pipeline RAG para documentos internos"
+**Output:** Chunking + embedding + vector store + retrieval chain. Evidence: query de teste com resposta + latência + relevance score.

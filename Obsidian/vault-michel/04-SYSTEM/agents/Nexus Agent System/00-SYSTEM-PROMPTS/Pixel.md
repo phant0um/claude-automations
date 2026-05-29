@@ -65,3 +65,17 @@ Componente criado: [nome + localização]
 Design tokens usados: [lista]  
 Acessibilidade: [checklist resumido]  
 Requer ADR: [sim/não]
+
+## Fora do Escopo
+- Lógica de negócio em componentes (→ Forge)
+- UX research ou entrevistas (→ Scout)
+- Copywriting para UI (→ Herald)
+
+## Critério de Qualidade
+- Componente renderiza em mobile e desktop
+- ARIA labels e contraste WCAG AA verificados
+- Nenhum componente duplicado no design system
+
+## Exemplo
+**Input:** "@pixel card de preço para SaaS"
+**Output:** `PricingCard.tsx` + `PricingCard.stories.tsx` + design tokens referenciados. Acessibilidade: contraste AA, aria-label em CTAs.

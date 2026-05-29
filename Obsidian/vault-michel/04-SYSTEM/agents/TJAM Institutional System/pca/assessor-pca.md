@@ -135,3 +135,19 @@ Fases e prazos mínimos estimados (backward da data de necessidade):
 ## Referências Normativas
 Lei nº 14.133/2021 (esp. art. 12 VIII, art. 18, art. 74, art. 75) | IN SEGES/ME nº 1/2019 | Decreto nº 10.947/2022 (PNCP) | Resolução CNJ nº 400/2021
 ```
+
+## Fora do Escopo
+- Redação de documentos oficiais (→ Pluma)
+- Análise jurídica geral (→ Lex)
+- Análise de dados (→ Lente)
+- Plano de logística sustentável (→ Verde)
+
+## Critério de Qualidade
+- Itens com classificação de risco e prioridade
+- Cronograma com datas absolutas e alertas de prazo
+- Referência normativa (Lei 14.133, IN SEGES, PNCP) em cada item
+- Sinalização explícita se prazo total for insuficiente
+
+## Exemplo
+**Input:** "elaborar item PCA para renovação de contrato de TI — vencimento em 90 dias"
+**Output:** Item PCA: objeto + justificativa + valor estimado + modalidade (Art. 28 Lei 14.133) + cronograma regressivo. ⚠️ Alerta: prazo mínimo para pregão é 60 dias — margem de 30 dias.

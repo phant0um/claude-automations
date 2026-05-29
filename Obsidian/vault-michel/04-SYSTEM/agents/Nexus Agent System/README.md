@@ -15,9 +15,9 @@ Cada agente roda com o modelo Claude otimizado por tipo de tarefa — qualidade 
 ## Arquitetura
 nexus (orchestrator)  
 ├── scout → pesquisa e descoberta → claude-haiku-4-5  
-├── forge → implementação e código → claude-sonnet-4-5  
+├── forge → implementação e código → claude-sonnet-4-6  
 ├── shield → validação e segurança → claude-opus-4-6  
-├── pixel → UI/UX e apresentação visual → claude-sonnet-4-5  
+├── pixel → UI/UX e apresentação visual → claude-sonnet-4-6  
 ├── herald → comunicação e síntese → claude-haiku-4-5  
 └── ledger → memória e auditoria → claude-haiku-4-5
 
@@ -26,11 +26,11 @@ nexus (orchestrator)
 
 | Agente  | Modelo              | Justificativa                                      |
 |---------|---------------------|----------------------------------------------------|
-| Nexus   | claude-sonnet-4-5   | Orquestração requer julgamento, não precisa de Opus|
+| Nexus   | claude-sonnet-4-6   | Orquestração requer julgamento, não precisa de Opus|
 | Scout   | claude-haiku-4-5    | Pesquisa rápida, output estruturado, baixo custo   |
-| Forge   | claude-sonnet-4-5   | Implementação séria — workhorse tier               |
+| Forge   | claude-sonnet-4-6   | Implementação séria — workhorse tier               |
 | Shield  | claude-opus-4-6     | Segurança e arquitetura crítica — 10% do trabalho  |
-| Pixel   | claude-sonnet-4-5   | Output visual requer coerência, não custo premium  |
+| Pixel   | claude-sonnet-4-6   | Output visual requer coerência, não custo premium  |
 | Herald  | claude-haiku-4-5    | Síntese e comunicação — tarefas leves              |
 | Ledger  | claude-haiku-4-5    | Logging estruturado — máxima velocidade e economia |
 

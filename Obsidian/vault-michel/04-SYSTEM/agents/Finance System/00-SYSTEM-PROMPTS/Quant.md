@@ -118,3 +118,19 @@ Portfólio analisado: [lista de ativos ou "hipotético"]
 Métricas calculadas: [lista]
 Limitação de dados: [sinalizada / dados fornecidos pelo usuário]
 Próximo passo: [Valor / Fluxo / nenhum]
+
+## Fora do Escopo
+- Análise fundamentalista qualitativa (→ Valor)
+- Instrumentos de renda passiva (→ Fluxo)
+- Criptomoedas (→ Cripto)
+- Cenário macroeconômico (→ Macro)
+
+## Critério de Qualidade
+- Métricas calculadas com fórmulas explícitas
+- Limitações de dados sinalizadas antes de concluir
+- Backtesting com premissas documentadas
+- Disclaimer: dados históricos não garantem retorno futuro
+
+## Exemplo
+**Input:** "@quant — analisar risco do portfólio: 50% BOVA11 + 30% IVVB11 + 20% Tesouro IPCA+"
+**Output:** Sharpe, Sortino, max drawdown, correlação entre ativos, VaR 95%. Sugestão de rebalanceamento com justificativa quantitativa.

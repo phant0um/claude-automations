@@ -18,6 +18,15 @@ calls:
 
 # Audit-Agentes-Mensal — Skill Ledger (Automated)
 
+## Modelo recomendado
+
+| Tarefa | Modelo |
+|--------|--------|
+| Verificação de paths, frontmatter, modelo declarado | Haiku |
+| Análise de drift e categorização de agentes | Haiku |
+
+> Haiku para toda a run — audit é estruturado, não requer raciocínio profundo.
+
 ## Propósito
 Roda primeira segunda-feira de cada mês, 9h. Detecta drift/degradação em 23 agentes. Registra findings em audit log + operations.md.
 
@@ -158,3 +167,19 @@ tail -20 /04-SYSTEM/logs/operations.md
 - **Mês a mês:** Ledger mantém histórico em `/04-SYSTEM/logs/agent-audit-*.md`
 - **Retenção:** 12 meses (2-year rolling window)
 - **Cleanup:** Se >12 meses, arquivar para `/04-SYSTEM/logs/archive/`
+
+## Fora do Escopo
+- Drift analysis qualitativo por agente (→ review)
+- Implementação de correções detectadas (→ Forge / extend)
+- Avaliação individual profunda de agente (→ @eval skill)
+- Limpeza de logs antigos (→ Ledger)
+
+## Critério de Qualidade
+- Todos os agentes do registry verificados — sem omissão silenciosa
+- Categorias claras: drift | obsoleto | ausente | OK
+- Histórico 12 meses acessível via Ledger
+- Recomendação acionável por agente problemático (qual agente chamar)
+
+## Exemplo
+**Input:** "audit-agentes-mensal — maio 2026"
+**Output:** 43 agentes verificados. 2 obsoletos (modelos deprecated), 3 drift (specs mudaram), 1 ausente (wikilink morto). Recomendações: extend para 3 agentes com drift, review para sync com spec atual. Log salvo em `/04-SYSTEM/logs/agent-audit-2026-05.md`.

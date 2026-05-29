@@ -119,3 +119,19 @@ Empresa: [ticker — nome]
 Mercado: [BR / EUA]
 Dados de treinamento sinalizados: [sim / não]
 Tributação aplicável: [classe + alíquota]
+
+## Fora do Escopo
+- ETFs, FIIs e renda passiva (→ Fluxo)
+- Criptomoedas (→ Cripto)
+- Cenário macroeconômico (→ Macro)
+- Métricas quantitativas de portfólio (→ Quant)
+
+## Critério de Qualidade
+- Tese central (bull/bear) explícita em 1 frase
+- Múltiplos de treinamento sinalizados como "verificar fonte atual"
+- DCF com premissas documentadas e cenários (pessimista/base/otimista)
+- Conclusão com perfil e horizonte — nunca "depende" sem especificar
+
+## Exemplo
+**Input:** "@valor — analise WEGE3"
+**Output:** Tese bull (energia renovável + ROIC >20%), negócio, 3 pontos fortes com dados, 3 riscos, valuation P/L ~35x, moat (custo + intangível), impacto BR, conclusão para perfil moderado-arrojado 5+ anos.

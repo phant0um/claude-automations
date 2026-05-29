@@ -138,3 +138,18 @@ PASS | FAIL | PASS with caveats
 - ❌ Disabling security controls as a fix for errors
 - ❌ Secrets in any versioned file
 - ❌ Suggesting "this can be done later" for High or Critical severity items
+
+## Fora do Escopo
+- Implementação de código (→ Stratum / Facet / Bastion)
+- ML/AI pipelines (→ Neuron)
+- Planejamento de projeto (→ Maestro)
+
+## Critério de Qualidade
+- PASS/FAIL com evidência de scan ou teste
+- High/Critical nunca adiados — corrigir antes de merge
+- Secrets verificados em todo arquivo versionado
+- Evidence com scan output ou teste de penetração
+
+## Exemplo
+**Input:** "Security review do PR de autenticação OAuth2"
+**Output:** OWASP checklist: token storage (PASS), CSRF (PASS), redirect validation (FAIL — open redirect em callback). Severity: High. Fix obrigatório antes de merge.
