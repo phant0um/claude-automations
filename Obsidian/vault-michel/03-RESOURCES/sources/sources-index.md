@@ -9,6 +9,32 @@ triagem_score: 4
 
 Livros, papers, vídeos, cursos e artigos referenciados no vault.
 
+## Fontes Ingeridas em 2026-05-30
+
+### Artigos / AI-Agents / PKM
+- [[03-RESOURCES/sources/ai-agents-harness/agentic-engineer-world-class]] — @systematicls; CLAUDE.md como diretório; rules/skills; contratos de tarefa; sessão por contrato; less is more
+- [[03-RESOURCES/sources/pkm-obsidian-second-brain/obsidian-claude-knowledge-graph-learning]] — @neil_xbt; active recall + spaced repetition; knowledge graph vs notas lineares; Claude acelera conexões
+
+### Concurso CGE-AM (Auditor de Controle Interno — Amazonas)
+- [[03-RESOURCES/sources/concurso/mcasp-11a-edicao]] — STN; referência normativa oficial; Contabilidade Pública; válido 2025; Partes I-V
+- [[03-RESOURCES/sources/concurso/cgam-contabilidade-geral]] — Luciano Rosa; 29 aulas; CPC 47; princípio da entidade; demonstrações contábeis
+- [[03-RESOURCES/sources/concurso/cgam-analise-demonstracoes-contabeis]] — Júlio Cardozo; 6 aulas; análise vertical/horizontal; liquidez; rentabilidade
+- [[03-RESOURCES/sources/concurso/cgam-direito-constitucional]] — Estratégia Concursos; 16 aulas; CF/88; art. 5º; cláusulas pétreas; LIMPE; EC 111/2023
+- [[03-RESOURCES/sources/concurso/cgam-afo]] — Luciana Marinho; 15 aulas; PPA/LDO/LOA; créditos adicionais; regra de ouro; LRF
+- [[03-RESOURCES/sources/concurso/cgam-direito-administrativo]] — Herbert Almeida; 19 aulas; LIMPE; Lei 14.133/2021; cláusulas exorbitantes; Lei 8.112
+- [[03-RESOURCES/sources/concurso/cgam-auditoria-governamental]] — Guilherme Sant'Anna; 10 aulas; NAT/NAG/NBASP; controle interno; relatórios
+- [[03-RESOURCES/sources/concurso/cgam-contabilidade-publica]] — Gilmar Possati; 24 aulas; PCASP; MCASP; DCASP; DVP; SIAFI; convergência IPSAS
+- [[03-RESOURCES/sources/concurso/cgam-lingua-portuguesa]] — Felipe Luccas; 16 aulas; gramática; morfologia; sintaxe; tipologia textual
+- [[03-RESOURCES/sources/concurso/cgam-lgpd]] — Antonio Daud; 1 aula; Lei 13.709/18; ANPD; dados sensíveis; sanções sem multa para entes públicos
+- [[03-RESOURCES/sources/concurso/cgam-adm-publica-fantini]] — Stefan Fantini; 13 aulas; Administração Pública; governabilidade/governança/accountability; processos participativos
+- [[03-RESOURCES/sources/concurso/cgam-financas-publicas]] — Celso Natale; 3 aulas; atividade financeira; tributos; dívida pública
+- [[03-RESOURCES/sources/concurso/cgam-etica-servico-publico]] — Estratégia Concursos; 3 aulas; Decreto 1.171/94; ética e moral
+
+### FIAP Fase 7 — Integration
+- [[03-RESOURCES/sources/fiap-fase-7-12-analise-metricas]] — KPIs chatbot; UX Writing; VUI; framework avaliação; métricas qualidade/quantidade
+- [[03-RESOURCES/sources/fiap-fase-7-13-nodered-integracoes]] — Node-RED; flow-based programming; integrações (PDF image-based — revisão manual)
+- [[03-RESOURCES/sources/fiap-fase-7-cap6-solucoes-sustentaveis]] — ESG; socioeconomia; governança; B3 case; empreendedorismo ético
+
 ## Fontes Ingeridas em 2026-04-17
 
 - [[03-RESOURCES/sources/cowork-plugin-guide-coreyganim]] — @coreyganim; 11 plugins Anthropic open source; Skills vs Plugins; slash commands; connectors
@@ -43,6 +69,7 @@ Livros, papers, vídeos, cursos e artigos referenciados no vault.
 - [[03-RESOURCES/sources/pkm-obsidian-second-brain/obsidian-system-notes-to-use]] — @cyrilXBT; 3 zonas (Capture/Active/Archive) + Output folder; 5 workflows Claude; métrica: taxa de contribuição de notas
 - [[03-RESOURCES/sources/skills-prompting-mcp/brunobertolini-ai-dev-workflow]] — @brunobertolini; pipeline full-stack: /pm /epic /code /distill; GitHub como sistema nervoso; worktrees + PR 6 agentes
 - [[03-RESOURCES/sources/open-source-ecosystems/liteparse-v2-rust-100x-parsing]] — Logan Markewich/LlamaIndex; LiteParse v2.0 Rust; 5–100× speedup; WASM/Node/Python/Rust; 0.777s/457p/100MB
+- [[03-RESOURCES/sources/skills-prompting-mcp/claude-council-skill-5-advisors]] — Claude Council Skill; 5 advisors em debate; peer review anônimo + shuffled; veredito estruturado; trigger "council this"
 
 ## Por Tipo
 

@@ -1,7 +1,7 @@
 ---
 title: Hot Cache
 type: hot-cache
-updated: 2026-05-29
+updated: 2026-05-30
 sweep-protocol: mensal — remover entradas > 30 dias não acessadas novamente
 kv-cache: stable-first — OPERACIONAL+CONCEITOS+INGEST são estáveis → cacheados; SESSÕES ao final
 rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 300 lines; overflow → hill sweep"
@@ -21,6 +21,23 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 
 ---
 
+## [RETRIEVAL GUIDE]
+
+> Carregue apenas a seção relevante — não leia o arquivo inteiro quando a tarefa exige só um bloco.
+>
+> | Task | Anchor | Linhas típicas |
+> |------|--------|----------------|
+> | Ações pendentes / SO ops | `SECTION:operacional` | ~35 |
+> | Threads de conceito abertas | `SECTION:conceitos-ativos` | ~20 |
+> | O que ingestar a seguir | `SECTION:ingest-pendente` | ~10 |
+> | Contexto da última sessão | `SECTION:sessoes-recentes` | ~65 |
+> | Lookup histórico | `SECTION:arquivo` | ~45 |
+>
+> Uso: `grep -n "SECTION:" 04-SYSTEM/wiki/hot.md` → obter números de linha → `Read` com `offset`+`limit`.
+
+---
+
+<!-- SECTION:operacional -->
 ## [OPERACIONAL] — Ações Pendentes
 
 **Finance System — Fatura agent (2026-05-29):**
@@ -50,12 +67,13 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 - ✅ Métricas de Ingest → [[07-QUEUE/rotinas/metricas-ingest]] (orphans, volume, hot.md health, trigger domingo 22h)
 
 **Concurso — pendente:**
-- ✅ concurso-legislacao/ 69 stubs: COMPLETO
+- ✅ concurso/legislacao/ + concurso/normas_cfc/ consolidados (116 total, 71 legislação + 45 normas): COMPLETO
 - ✅ FIAP PDFs: 64 arquivos ingestados (2026-05-20), source pages existem
 - ✅ Stubs FIAP expandidos (fases 1-6 + projeto-fintech + projeto-careplus): 8–10KB cada (2026-05-28)
 
 ---
 
+<!-- SECTION:conceitos-ativos -->
 ## [CONCEITOS-ATIVOS] — Threads Abertas
 
 | Conceito | Status | Próxima ação |
@@ -75,6 +93,7 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 
 ---
 
+<!-- SECTION:ingest-pendente -->
 ## [INGEST-PENDENTE]
 
 **Clippings:** pipeline processou 88 (2026-05-28). Readwise adiciona ~10/dia → próximo run capta.
@@ -86,7 +105,24 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 
 ---
 
+<!-- SECTION:sessoes-recentes -->
 ## [SESSÕES-RECENTES]
+
+### 2026-05-29
+
+**Pipeline Diário 2026-05-29:**
+**Triagem:** 37 candidatos → 26 aprovados (A:10/B:16), 11 rejeitados (C:10/D:1)
+**Ingest:** 26 sources (ai-agents=20, pkm=4, articles=2)
+**Top action:** Criar conceito `interpreter-skills` — TypeScript module embutido em skill, nova extensão do sistema
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-29]]
+
+**Pipeline Diário 2026-05-29 v2 (batch concurso + ai-agents):**
+**Triagem:** 76 candidatos → 70 aprovados (A:17/B:53), 6 rejeitados (C:3/D:3)
+**Ingest:** 56 sources (ai-agents=10, concurso-auditoria=45, fiap=1 nova + 15 archive-only)
+**Top action:** Criar entity `normas-auditoria-cfc` — index navegável das 45 NBC pages para concurso auditoria
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-29-v2]]
+
+---
 
 ### 2026-05-28
 
@@ -100,6 +136,11 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 - **Post-pipeline:** harness-engineering +4 fontes; AgingBench entity criada; floor-raising concept criada
 - **Post-pipeline extra:** hot.md rotation policy (169 linhas, ceiling 300); CLAUDE.md invariant markers; ingest-verify skill v1.0
 → [[06-GENERATED/ingest-report/ingest-diario-2026-05-28]] · [[06-GENERATED/triagem/triagem-2026-05-28]]
+
+**Pipeline Diário v2 (scheduled incremental):** Triagem: 9 candidatos → 7 aprovados (A=3, B=4) + 2 rejeitados (C=1, D=1). Ingest: 7 source pages criadas. Manifest: 734→741.
+**Top action:** Enriquecer `context-engineering.md` com framework 5 layers (Identity→Knowledge→Memory→Tool→Conversation).
+**Clusters:** Context Engineering setup (4) · Claude Code engineering (1) · PKM+Obsidian (2).
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-28-v2]] · [[06-GENERATED/triagem/triagem-2026-05-28-v2]]
 
 ---
 
@@ -116,40 +157,14 @@ Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harn
 
 ---
 
-### 2026-05-24 (continuação)
-
-**Clippings Archive Reorganization:**
-Estrutura: A|B|C|D. Raw consolidation: 465 arquivos → D/2026-05-23/. Total D: 704 files.
-
----
-
-### 2026-05-28
-
-**Pipeline Diário v2 (scheduled incremental):** Triagem: 9 candidatos → 7 aprovados (A=3, B=4) + 2 rejeitados (C=1, D=1). Ingest: 7 source pages criadas. Manifest: 734→741.
-**Top action:** Enriquecer `context-engineering.md` com framework 5 layers (Identity→Knowledge→Memory→Tool→Conversation).
-**Clusters:** Context Engineering setup (4) · Claude Code engineering (1) · PKM+Obsidian (2).
-→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-28-v2]] · [[06-GENERATED/triagem/triagem-2026-05-28-v2]]
-
----
-
 ### 2026-05-24
 
 **Implementações:** stop-quality-gate · sprint-contract skill · 4 skills com YAML frontmatter · vault-monday-ops + vault-hot-sweep crons · auto-push.sh (4 guards) · hot.md KV restructure.
-**Lint+Melhorias:** concepts path fix · 6 concepts · 231 status updates. concurso-legislacao/ COMPLETO (69 stubs).
+**Lint+Melhorias:** concepts path fix · 6 concepts · 231 status updates. concurso/ merge COMPLETO (116 files).
 **Ingest Clippings:** 35 fontes (19 score-7 + 16 score-6). Manifest: 570→605.
 
----
-
-### 2026-05-23
-
-**Pipeline Diário v3 (scheduled):** Triagem: 120→108 aprovados. Ingest: 9 score-8 bloqueados (Bash permission). Top action: `harness-engineering`.
-**Melhorias F3.3:** harness-engineering +5 fontes · agent-memory-architecture +Mercury Lifecycle · agent-security-stack · inference-engines-hardware-first · afrfb-base-legal.
-→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-23]] · [[06-GENERATED/triagem/triagem-2026-05-23-v3]]
-
-### 2026-05-28 (queue-processor)
-
-**Queue Processor run automatizado:** 0 tasks processadas. 1 arquivo encontrado (`ingest-progress.md`) — status `revisão-manual`, 350/350 fontes completas. Recomendado: arquivar ou deletar.
-→ [[06-GENERATED/queue/process-queue-0-2026-05-28]]
+**Clippings Archive Reorganization:**
+Estrutura: A|B|C|D. Raw consolidation: 465 arquivos → D/2026-05-23/. Total D: 704 files.
 
 ---
 
@@ -157,6 +172,7 @@ Estrutura: A|B|C|D. Raw consolidation: 465 arquivos → D/2026-05-23/. Total D: 
 
 ### 2026-05-17 a 2026-05-20
 
+<!-- SECTION:arquivo -->
 | Data | Evento | Resultado |
 |------|--------|-----------|
 | 2026-05-20 | Batch FIAP ingest | 60 source stubs Fases 1–6; manifest 405→465 |
@@ -198,8 +214,10 @@ Estrutura: A|B|C|D. Raw consolidation: 465 arquivos → D/2026-05-23/. Total D: 
 **Assets — novos (2026-05-29):**
 - ✅ Claude Opus 4.8 launch template → `04-SYSTEM/assets/claude-opus-4.8-launch.html` (responsive HTML)
 
-## Pipeline Diário 2026-05-29
-**Triagem:** 37 candidatos → 26 aprovados (A:10/B:16), 11 rejeitados (C:10/D:1)
-**Ingest:** 26 sources (ai-agents=20, pkm=4, articles=2)
-**Top action:** Criar conceito `interpreter-skills` — TypeScript module embutido em skill, nova extensão do sistema
-→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-29]]
+## Pipeline Diário 2026-05-30
+**Triagem:** 165 candidatos → 161 aprovados (2A, 159B), 4 rejeitados (2C, 2D)
+**Ingest:** 18 source pages — concurso=14 (12×CGE-AM + MCASP), artigos=2 (agentic-eng + obsidian-learning), fiap=3 (métricas, node-red, esg)
+**Estratégia:** 159 aulas CGE-AM → 12 course-level pages (Karpathy Simplicity First)
+**Novo entity:** [[03-RESOURCES/entities/CGE-AM]] — Auditor de Controle Interno, 12 disciplinas mapeadas
+**Top action:** Criar active recall (retrieval practice) por disciplina CGE-AM — material ingestado, gap é prática ativa
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-30]]
