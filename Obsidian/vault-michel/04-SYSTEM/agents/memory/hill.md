@@ -1,5 +1,6 @@
 ---
 agent: hill
+model: claude-haiku-4-5-20251001
 type: agent-memory
 updated: 2026-05-24
 ---

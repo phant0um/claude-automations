@@ -2,7 +2,9 @@
 title: Fontes
 type: index
 created: 2026-04-14
+updated: 2026-05-31
 triagem_score: 4
+tags: [index, sources, vault]
 ---
 
 # Fontes

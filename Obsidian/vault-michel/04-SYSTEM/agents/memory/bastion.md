@@ -1,5 +1,6 @@
 ---
 agent: Bastion
+model: claude-sonnet-4-6
 type: agent-memory
 updated: 2026-05-29
 ---
