@@ -13,6 +13,26 @@ Livros, papers, vídeos, cursos e artigos referenciados no vault.
 
 ## Fontes Ingeridas em 2026-05-31
 
+### Harness Theory / Skill Evolution / Shared Memory / Vault Curation / LLM Efficiency (pipeline v3)
+
+- [[03-RESOURCES/sources/cusp-forecasting-scientific-progress]] — Oxford/Stanford/Allen AI; CUSP benchmark 4760 eventos; LLMs falham em prever progresso científico; overconfidence sistemático; timing de AI > biologia/química em previsibilidade
+- [[03-RESOURCES/sources/life-harness-runtime-adaptation]] — Peking Univ; Life-Harness; 88.5% melhoria média 116/126 configs; harness adaptation sem alterar pesos; transfere cross-model; environment contracts + procedural skills + trajectory regulation
+- [[03-RESOURCES/sources/autoscientists-self-organizing-teams]] — Harvard; AutoScientists; 74.4th percentile BioML-Bench; self-organizing sem orquestrador; shared state + critique gate + failure memory; 1.9× mais rápido em GPT optimization
+- [[03-RESOURCES/sources/harnesses-inference-time-alignment]] — SUSTech; teoria formal de harness; decomposição + guided execution; harnesses parciais > totalmente estruturados; failure modes nomeados (over-decomposition, over-pruning, hallucinated execution)
+- [[03-RESOURCES/sources/skillopt-self-evolving-agent-skills]] — Microsoft/SJTU; SkillOpt; text-space optimizer para skills; add/delete/replace edits bounded; held-out gate; best_skill.md 300-2000 tokens; analogia operacional com backprop
+- [[03-RESOURCES/sources/stop-giving-agents-own-skull]] — @pejmanjohn; "knowledge tax" de skulls isolados; shared memory cross-agent; reasoning não acompanha artefatos; OpenClaw/Codex/Claude Code fragmentação
+- [[03-RESOURCES/sources/efficiency-frontier-llm-context]] — Northwestern/Duke/CMU; Efficiency Frontier framework; deployment-aware optimization; 25% menos tokens mesma performance; amortized cost justifica preprocessing
+- [[03-RESOURCES/sources/ecc-agent-harness-system]] — affaan-m; ECC 182K stars; skills+instincts+memory+security; 10+ meses produção; cross-harness Claude Code/Codex/Cursor/Gemini/Zed
+- [[03-RESOURCES/sources/5-lessons-agent-personality-file]] — @Voxyz_ai; SOUL.md OpenClaw+Hermes; default behavior > adjetivos; opiniões fortes > regras corporativas; memória por relevância
+- [[03-RESOURCES/sources/claude-notebooklm-obsidian-research]] — @monokern; stack 4 layers; NotebookLM como compute offload Google; Obsidian como feedback loop; vault ensina Claude a padrões do usuário
+- [[03-RESOURCES/sources/delete-90-percent-obsidian-notes]] — @DamiDefi; deletou 90% (1890/2100 notas); remover ruído = adicionar sinal; conexões lexicais → semânticas; artigo publicado como resultado
+- [[03-RESOURCES/sources/llm-sleep-offline-recurrence]] — CMU/Maryland; sleep-like consolidation; N offline recurrent passes → fast weight updates em SSM blocks; mais sono = melhor raciocínio profundo; sem impacto em latência wake-time
+- [[03-RESOURCES/sources/hermes-agent-anywhere]] — @tonbistudio; Tailscale+Termius+tmux; acesso remoto a agent local sem expor portas; persistência de sessão via tmux
+- [[03-RESOURCES/sources/ai-productivity-self-improving]] — @mronge; self-improving loop: AI faz tarefa→mede→melhora sistema; velocidade do loop = velocidade de aprendizado; Claude Cowork Mac
+- [[03-RESOURCES/sources/anthropic-knowledge-work-plugins]] — Anthropic; 11 plugins knowledge-work (productivity, sales, support, etc.); padrão plugin = skills+connectors+slash commands+sub-agents; Claude Code + Cowork
+- [[03-RESOURCES/sources/anthropics-skills-repo]] — Anthropic; skills = SKILL.md autocontida; skills de documento production-grade (docx/pdf/pptx/xlsx) como referência; agentskills.io standard
+- [[03-RESOURCES/sources/anthropic-cybersecurity-skills]] — mukul975 (community); 754 skills 26 domínios; MITRE ATT&CK+NIST CSF+ATLAS+D3FEND+NIST AI RMF; MITRE ATLAS = AI-specific threats
+
 ### AI-Agents / Hermes+Obsidian / Personal Automation / Skill Security / LLM Ecosystem / SuperClaude
 
 - [[03-RESOURCES/sources/hermes-agent/hermes-agent-obsidian-vault-integration]] — @DamiDefi; Hermes v0.14 provider Obsidian nativo; SOUL.md como instrução interpretativa; morning brief cross-month; skill files 23 entradas em 6 semanas; Telegram bot vault-aware

@@ -237,6 +237,11 @@ Estrutura: A|B|C|D. Raw consolidation: 465 arquivos → D/2026-05-23/. Total D: 
 **Top action:** Criar concept `skill-optimization-gradient-descent` — 4 sources convergem; fix `created:` em 30+ entities; dead links FIAP
 → [[06-GENERATED/wiki-lint/manutencao-semanal-2026-05-31]]
 
+**Action items executados 2026-05-31:**
+- ✅ `created:` adicionado em 36 entities
+- ✅ Dead FIAP links: falso positivo (fase-1→7 indexes existem)
+- ✅ Concept criado: [[03-RESOURCES/concepts/agent-systems/skill-optimization-gradient-descent]] (score 9, 4 sources, backlinks bidirecionais)
+
 ## Pipeline Diário 2026-05-31 v2 (16h scheduled)
 **Triagem:** 67 candidatos → 0 aprovados, 67 rejeitados (todos C — duplicatas PDF→MD)
 **Causa:** Manifest registrava .pdf; conversor criou .md em Clippings/ — falsos positivos
@@ -244,3 +249,33 @@ Estrutura: A|B|C|D. Raw consolidation: 465 arquivos → D/2026-05-23/. Total D: 
 **Ingest:** 0 sources — pipeline encerrado na triagem
 **Recomendação:** Normalizar manifest check por stem sem extensão
 → [[06-GENERATED/triagem/triagem-2026-05-31-v2]]
+
+**Action items 4-9 executados 2026-05-31:**
+- ✅ Item 4: manifest — 84 orphans marcados como `skipped`
+- ✅ Item 5: project-setup.md criado — Nexus, Concurso Coach, Productivity
+- ✅ Item 6: concept [[03-RESOURCES/concepts/agent-systems/context-budget-constraint]] (score 8)
+- ✅ Item 7: concept [[03-RESOURCES/concepts/agent-systems/agent-abstraction-layers]] (score 7)
+- ✅ Item 8: [[03-RESOURCES/concepts/agent-systems/agent-security-stack]] — Layer 3 skill-security adicionada
+- ✅ Item 9: [[03-RESOURCES/concepts/agent-systems/agent-model-routing]] — OptILM + context-budget adicionados
+
+**Action items 10-12 executados 2026-05-31:**
+- ✅ Item 10: orphan scan completo (3.632 arquivos) → 363 orphans; 4 concepts acionados; relatório: [[06-GENERATED/wiki-lint/orphan-scan-2026-05-31]]
+- ✅ Item 11: [[tasks/lessons.md]] criado — 14 lições operacionais
+- ✅ Item 12: tags: adicionadas em sources-index, concepts/_index, entities-index
+  — 4 orphan concepts resolvidos: acp-protocol, interpreter-skills, binary-quantization, epistemic-tagging
+
+- ✅ Concurso orphans: 8 entry points linkados em concurso-index (150 aulas brutas, pdf2md — pendente wiki-ingest por disciplina)
+
+## Revisão Semanal 2026-05-31
+**System:** stale=0 drift=1 (memory agents sem model: frontmatter)
+**Lint:** orphans=363(processados) dead=? dups=1(manifest) frontmatter-gaps=1234 hot.md=267L
+**Conexões:** 7 encontradas, 3 wikilinks adicionados → [[06-GENERATED/connections/connections-2026-05-31]]
+**Meta-coaching:** top waste: same-day duplicate pipeline (manifest hash não normalizado por stem)
+**Top fix:** stem-normalization no manifest + FIAP/concurso absence flag no pipeline
+→ [[06-GENERATED/revisao-semanal/revisao-semanal-2026-05-31]]
+
+## Pipeline Diário 2026-05-31 v3 (16h scheduled)
+**Triagem:** 24 candidatos → 17 aprovados, 7 rejeitados (5C + 2D)
+**Ingest:** 17 sources (ai-agents=11, articles=6, fiap=0)
+**Top action:** criar conceito [[03-RESOURCES/concepts/agent-systems/harness-adaptation]] — 5 sources convergem (Life-Harness, Harnesses-for-Alignment, ECC, SkillOpt, Hermes)
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-31-v3]]
