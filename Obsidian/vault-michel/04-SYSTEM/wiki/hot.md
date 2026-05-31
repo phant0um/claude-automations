@@ -221,3 +221,18 @@ Estrutura: A|B|C|D. Raw consolidation: 465 arquivos → D/2026-05-23/. Total D: 
 **Novo entity:** [[03-RESOURCES/entities/CGE-AM]] — Auditor de Controle Interno, 12 disciplinas mapeadas
 **Top action:** Criar active recall (retrieval practice) por disciplina CGE-AM — material ingestado, gap é prática ativa
 → [[06-GENERATED/ingest-report/ingest-diario-2026-05-30]]
+
+**Queue 2026-05-31 (scheduled):** 1 task em `07-QUEUE/`, 0 processadas — `ingest-progress.md` já `revisão-manual` (tracker 350/350 completo, aguarda arquivamento manual)
+→ [[06-GENERATED/queue/process-queue-0-2026-05-31]]
+
+## Pipeline Diário 2026-05-31
+**Triagem:** 62 candidatos → 36 aprovados (8A + 28B), 26 rejeitados (20C + 6D)
+**Ingest:** 34 source pages — ai-agents-harness=8, claude-code-ecosystem=7, hermes-agent=3, memory-context-rag=3, pkm-obsidian=2, open-source=5, outros=6
+**Top action:** Aplicar SkillOpt nas 3 skills mais usadas do vault (wiki-ingest, pipeline-diario, relatorio-artigos) — +59.7pp benchmarks reportados com 920 tokens ótimos, sem alterar pesos
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-31]]
+
+## Manutenção Semanal 2026-05-31
+**Lint:** dead-links=25+ orphans-manifest=20 frontmatter-gaps=582 hot-lines=226 agent-sem-project-setup=10
+**Conexões:** 7 encontradas (padrões-3+=2, pergunta-resposta=1, cross-domain=4), 3 wikilinks adicionados
+**Top action:** Criar concept `skill-optimization-gradient-descent` — 4 sources convergem; fix `created:` em 30+ entities; dead links FIAP
+→ [[06-GENERATED/wiki-lint/manutencao-semanal-2026-05-31]]

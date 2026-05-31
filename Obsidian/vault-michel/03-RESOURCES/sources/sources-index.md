@@ -9,6 +9,39 @@ triagem_score: 4
 
 Livros, papers, vídeos, cursos e artigos referenciados no vault.
 
+## Fontes Ingeridas em 2026-05-31
+
+### AI-Agents / Hermes+Obsidian / Personal Automation / Skill Security / LLM Ecosystem / SuperClaude
+
+- [[03-RESOURCES/sources/hermes-agent/hermes-agent-obsidian-vault-integration]] — @DamiDefi; Hermes v0.14 provider Obsidian nativo; SOUL.md como instrução interpretativa; morning brief cross-month; skill files 23 entradas em 6 semanas; Telegram bot vault-aware
+- [[03-RESOURCES/sources/ai-agents-harness/my-agent-stack-personal-life-nicbstme]] — @nicbstme; Codex sobre vida pessoal real; gogcli+wacli+imsg+Browser Use; Google Drive como fonte de verdade agent-readable; skills como gosto operacional acumulado; approval gates como produto
+- [[03-RESOURCES/sources/claude-code-skills/skillspector-nvidia-security-scanner]] — NVIDIA; SkillSpector open-source; 26,1% skills vulneráveis em 42k analisados; 64 padrões 16 categorias; static+LLM pipeline; SARIF output; Apache-2.0
+- [[03-RESOURCES/sources/open-source-ecosystems/awesome-llm-apps-shubhamsaboo]] — Shubham Saboo; 100+ templates AI agents+RAG prontos; 13 categorias; 19 agent skills; Toonify/Headroom optimization; provider-agnostic; Apache-2.0
+- [[03-RESOURCES/sources/claude-code-cowork/superclaude-framework]] — SuperClaude-Org (community, non-Anthropic); 30 slash commands `/sc:*`; 20 agentes; 7 modos; 8 MCP servers; deep research multi-hop 5 iterações; 2-3× mais rápido com MCPs
+
+### LLM Internals / PKM / Rust / Memory for Agents / Model Selection / Agentic Verification
+- [[03-RESOURCES/sources/memory-context-rag/anatomy-of-llm-interactive-visual-guide]] — Roy van Rijn; pipeline completo LLM (tokenização→embedding→attention→KV cache→quantização); guia visual interativo
+- [[03-RESOURCES/sources/pkm-obsidian-second-brain/obsidian-vault-500-software-stack-cyrilxbt]] — @cyrilXBT; vault 4 pastas + 5 plugins + 3 workflows substituindo $500/mês em apps
+- [[03-RESOURCES/sources/claude-code-cowork/claude-opus-sonnet-haiku-real-difference]] — @0xMortyx; framework de seleção; Haiku=volume, Sonnet=default, Opus=high-stakes
+- [[03-RESOURCES/sources/ml-research-papers/the-rust-programming-language-book]] — Rust Foundation; Rust 2024 Edition; ownership, borrow checker, zero-cost abstractions
+- [[03-RESOURCES/sources/memory-context-rag/tsinghua-awesome-memory-agents-paper-list]] — TsinghuaC3I; 150+ papers em memória para agentes; Dakera/Omnigraph Rust; MCP como interface
+- [[03-RESOURCES/sources/ai-agents-harness/verifying-agentic-development-at-scale-devin]] — @ido_pesok (Cognition); Devin autonomous testing; test plan grounded em source, testing skills, model routing
+
+### AI-Agents / Skills / Sandbox Orchestration / SkillOpt / Cybersecurity Skills / MML Book / Claude Opus 4.8
+- [[03-RESOURCES/sources/claude-code-cowork/awesome-llm-apps-shubhamsaboo]] — Shubham Saboo; 100+ templates RAG/agents/MCP/voice; 19 agent skills prontas; self-improving skills; Toonify/Headroom optimization tools
+- [[03-RESOURCES/sources/ai-agents-harness/sandcastle-mattpocock-typescript-sandbox-orchestration]] — mattpocock; TypeScript; sandcastle.run(); Docker/Podman/Vercel; branch strategies; session capture/resume/fork; structured output; parallel-planner template
+- [[03-RESOURCES/sources/claude-code-skills/microsoft-skillopt-github-repo]] — Microsoft; SkillOpt; text-space optimizer; frozen LLM; validation gate; best_skill.md; 6 benchmarks; epochs/batch/lr para skills
+- [[03-RESOURCES/sources/ml-research-papers/mml-book-mathematics-for-machine-learning]] — Deisenroth/Faisal/Ong; Cambridge; Linear Algebra; Probability; SVD; PCA; Regression; SVM; fundamentos matemáticos para ML; gratuito em mml-book.com
+- [[03-RESOURCES/sources/claude-code-skills/anthropic-cybersecurity-skills-mukul975]] — mukul975; 754 skills; 26 domínios; 5 frameworks (ATT&CK/NIST CSF/ATLAS/D3FEND/AI RMF); agentskills.io; progressive disclosure; Claude Code + 26 plataformas
+- [[03-RESOURCES/sources/claude-code-cowork/claude-opus-48-beginner-tutorial-japanese-makeai]] — @MakeAI_CEO; tutorial japonês; Opus 4.8 (2026-05-28); dynamic workflows; effort control; Claude Design; "AI 7割・人間3割"
+
+### AI-Agents / LLM Fundamentals / Hermes Kanban / Skills / Multi-Agent Pipeline
+- [[03-RESOURCES/sources/memory-context-rag/how-llms-actually-work-beginners-guide]] — @hrswatigupta; LLM como autocomplete; tokens; 3 estágios de treino; parâmetros como dials; hallucination como feature
+- [[03-RESOURCES/sources/hermes-agent/hermes-kanban-field-manual-tonysimons]] — @tonysimons_; Hermes Kanban como durable coordination; receipts > vibes; stale locks; Triage/Blocked/Scheduled/Running distinção
+- [[03-RESOURCES/sources/pkm-obsidian-second-brain/ai-second-brain-claude-obsidian-full-course-khairallah]] — @eng_khairallah1; Obsidian+Claude como AI second brain; PARA method; MCP options; AI-first note design; Claude como vault maintainer
+- [[03-RESOURCES/sources/claude-code-skills/claude-skills-field-guide-product-managers-nurijanian]] — @nurijanian; skill description como trigger crítico; progressive disclosure 3 camadas; testes antes de escrever; skill-creator com Executor/Grader/Comparator
+- [[03-RESOURCES/sources/ai-agents-harness/4-agent-pipeline-planner-coder-tester-reviewer-zodchiii]] — @zodchiii; pipeline Planner(opus)→Coder(sonnet)→Tester(sonnet)→Reviewer(opus); handoff files .pipeline/; /ship command
+
 ## Fontes Ingeridas em 2026-05-30
 
 ### Artigos / AI-Agents / PKM
@@ -17,18 +50,18 @@ Livros, papers, vídeos, cursos e artigos referenciados no vault.
 
 ### Concurso CGE-AM (Auditor de Controle Interno — Amazonas)
 - [[03-RESOURCES/sources/concurso/mcasp-11a-edicao]] — STN; referência normativa oficial; Contabilidade Pública; válido 2025; Partes I-V
-- [[03-RESOURCES/sources/concurso/cgam-contabilidade-geral]] — Luciano Rosa; 29 aulas; CPC 47; princípio da entidade; demonstrações contábeis
-- [[03-RESOURCES/sources/concurso/cgam-analise-demonstracoes-contabeis]] — Júlio Cardozo; 6 aulas; análise vertical/horizontal; liquidez; rentabilidade
-- [[03-RESOURCES/sources/concurso/cgam-direito-constitucional]] — Estratégia Concursos; 16 aulas; CF/88; art. 5º; cláusulas pétreas; LIMPE; EC 111/2023
-- [[03-RESOURCES/sources/concurso/cgam-afo]] — Luciana Marinho; 15 aulas; PPA/LDO/LOA; créditos adicionais; regra de ouro; LRF
-- [[03-RESOURCES/sources/concurso/cgam-direito-administrativo]] — Herbert Almeida; 19 aulas; LIMPE; Lei 14.133/2021; cláusulas exorbitantes; Lei 8.112
-- [[03-RESOURCES/sources/concurso/cgam-auditoria-governamental]] — Guilherme Sant'Anna; 10 aulas; NAT/NAG/NBASP; controle interno; relatórios
-- [[03-RESOURCES/sources/concurso/cgam-contabilidade-publica]] — Gilmar Possati; 24 aulas; PCASP; MCASP; DCASP; DVP; SIAFI; convergência IPSAS
-- [[03-RESOURCES/sources/concurso/cgam-lingua-portuguesa]] — Felipe Luccas; 16 aulas; gramática; morfologia; sintaxe; tipologia textual
-- [[03-RESOURCES/sources/concurso/cgam-lgpd]] — Antonio Daud; 1 aula; Lei 13.709/18; ANPD; dados sensíveis; sanções sem multa para entes públicos
-- [[03-RESOURCES/sources/concurso/cgam-adm-publica-fantini]] — Stefan Fantini; 13 aulas; Administração Pública; governabilidade/governança/accountability; processos participativos
-- [[03-RESOURCES/sources/concurso/cgam-financas-publicas]] — Celso Natale; 3 aulas; atividade financeira; tributos; dívida pública
-- [[03-RESOURCES/sources/concurso/cgam-etica-servico-publico]] — Estratégia Concursos; 3 aulas; Decreto 1.171/94; ética e moral
+- [[03-RESOURCES/sources/concurso/contabilidade-geral]] — Luciano Rosa; 29 aulas; CPC 47; princípio da entidade; demonstrações contábeis
+- [[03-RESOURCES/sources/concurso/analise-demonstracoes-contabeis]] — Júlio Cardozo; 6 aulas; análise vertical/horizontal; liquidez; rentabilidade
+- [[03-RESOURCES/sources/concurso/direito-constitucional]] — Estratégia Concursos; 16 aulas; CF/88; art. 5º; cláusulas pétreas; LIMPE; EC 111/2023
+- [[03-RESOURCES/sources/concurso/afo]] — Luciana Marinho; 15 aulas; PPA/LDO/LOA; créditos adicionais; regra de ouro; LRF
+- [[03-RESOURCES/sources/concurso/direito-administrativo]] — Herbert Almeida; 19 aulas; LIMPE; Lei 14.133/2021; cláusulas exorbitantes; Lei 8.112
+- [[03-RESOURCES/sources/concurso/auditoria-governamental]] — Guilherme Sant'Anna; 10 aulas; NAT/NAG/NBASP; controle interno; relatórios
+- [[03-RESOURCES/sources/concurso/contabilidade-publica]] — Gilmar Possati; 24 aulas; PCASP; MCASP; DCASP; DVP; SIAFI; convergência IPSAS
+- [[03-RESOURCES/sources/concurso/lingua-portuguesa]] — Felipe Luccas; 16 aulas; gramática; morfologia; sintaxe; tipologia textual
+- [[03-RESOURCES/sources/concurso/lgpd]] — Antonio Daud; 1 aula; Lei 13.709/18; ANPD; dados sensíveis; sanções sem multa para entes públicos
+- [[03-RESOURCES/sources/concurso/adm-publica-fantini]] — Stefan Fantini; 13 aulas; Administração Pública; governabilidade/governança/accountability; processos participativos
+- [[03-RESOURCES/sources/concurso/financas-publicas]] — Celso Natale; 3 aulas; atividade financeira; tributos; dívida pública
+- [[03-RESOURCES/sources/concurso/etica-servico-publico]] — Estratégia Concursos; 3 aulas; Decreto 1.171/94; ética e moral
 
 ### FIAP Fase 7 — Integration
 - [[03-RESOURCES/sources/fiap-fase-7-12-analise-metricas]] — KPIs chatbot; UX Writing; VUI; framework avaliação; métricas qualidade/quantidade

@@ -105,6 +105,9 @@ Ao ser ativado com `@guard <alvo>`:
 Baseado em "Skills as Verifiable Artifacts" (Metere, 2026). Aplicar quando auditando skills ou agentes de terceiros.
 
 ```
+□ PRÉ-LOAD — Discovery: registry não foi manipulado para promover skills maliciosas?
+□ PRÉ-LOAD — Seleção: skill selecionada por critérios objetivos, não por auto-afirmação no SKILL.md?
+□ PRÉ-LOAD — Revisão: conteúdo completo do SKILL.md revisado antes de execução?
 □ Origem: skill veio de fonte conhecida? (repo oficial, author verificável)
 □ Capabilities declaradas: skill declara M.caps (o que faz/acessa)?
 □ Escopo mínimo: capabilities declaradas ≤ necessárias para a tarefa?
@@ -124,6 +127,8 @@ Baseado em "Skills as Verifiable Artifacts" (Metere, 2026). Aplicar quando audit
 | **formal** | Prova machine-checkable | Igual a tested; trust é offline |
 
 > **Regra:** Verificação é definida no bootstrap. Nunca elevada durante sessão.
+
+> **Superfície pré-load:** Saha et al. (arXiv 2605.11418) demonstram 86% de taxa de recuperação e 77.6% de seleção para skills maliciosas via manipulação do SKILL.md — antes de qualquer verificação pós-load. Os três itens PRÉ-LOAD acima cobrem essa superfície. Ver [[03-RESOURCES/concepts/claude-code-tooling/skill-trust-schema]] seção "Lacuna: Fase Pré-Carregamento".
 
 ## Taxonomia de Severidade
 
