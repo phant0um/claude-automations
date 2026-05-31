@@ -236,3 +236,11 @@ Estrutura: A|B|C|D. Raw consolidation: 465 arquivos → D/2026-05-23/. Total D: 
 **Conexões:** 7 encontradas (padrões-3+=2, pergunta-resposta=1, cross-domain=4), 3 wikilinks adicionados
 **Top action:** Criar concept `skill-optimization-gradient-descent` — 4 sources convergem; fix `created:` em 30+ entities; dead links FIAP
 → [[06-GENERATED/wiki-lint/manutencao-semanal-2026-05-31]]
+
+## Pipeline Diário 2026-05-31 v2 (16h scheduled)
+**Triagem:** 67 candidatos → 0 aprovados, 67 rejeitados (todos C — duplicatas PDF→MD)
+**Causa:** Manifest registrava .pdf; conversor criou .md em Clippings/ — falsos positivos
+**Fix aplicado:** +67 entradas no manifest (basenames .md, status:duplicate)
+**Ingest:** 0 sources — pipeline encerrado na triagem
+**Recomendação:** Normalizar manifest check por stem sem extensão
+→ [[06-GENERATED/triagem/triagem-2026-05-31-v2]]
