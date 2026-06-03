@@ -1,7 +1,7 @@
 ---
 title: Hot Cache
 type: hot-cache
-updated: 2026-05-30
+updated: 2026-06-01
 sweep-protocol: mensal — remover entradas > 30 dias não acessadas novamente
 kv-cache: stable-first — OPERACIONAL+CONCEITOS+INGEST são estáveis → cacheados; SESSÕES ao final
 rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 300 lines; overflow → hill sweep"
@@ -40,10 +40,27 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 <!-- SECTION:operacional -->
 ## [OPERACIONAL] — Ações Pendentes
 
+**Fintech FIAP — docs vault sincronizados (2026-06-01):**
+- ✅ `overview.md`: stack corrigida (HTML→React 18+Vite), endpoints REST, rotas frontend, repo structure
+- ✅ `progress.md`: Fase 2+3 marcadas ✅; Fase 4 🔄; bloqueios VPN Oracle + 5 entidades sem REST
+- ✅ `README.md`: comandos corrigidos (`exec:java`→`spring-boot:run`; `open index.html`→`npm run dev`)
+- ✅ `changelog.md`: entradas adicionadas para backend JPA + frontend React
+- Ref: [[01-PROJECTS/Fintech/overview]]
+
 **Finance System — Fatura agent (2026-05-29):**
 - ✅ Agente Fatura criado — [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Fatura]] (Santander, Porto Seguro, Revolut; relatório em 06-GENERATED/faturas/)
 - ✅ Skill fatura-parser criada — [[04-SYSTEM/agents/Finance System/skills/fatura-parser]] (detecção banco, categorias, fallback)
 - Drop zone PDFs: `.raw/faturas/` | Output: `06-GENERATED/faturas/YYYY-MM-banco.md`
+
+**Vault SO — ECC patterns implementados (2026-05-31):**
+- ✅ Constrained tools + model_tier formal em guard/hill/verify/extend/review (frontmatter estruturado)
+- ✅ Nexus v2.0 — tabela de roteamento + skill injection protocol ao delegar
+- ✅ Skill `/evolve` criada — [[04-SYSTEM/skills/core/evolve]] (extrai padrões da sessão → nova skill)
+- ✅ Guard adversarial mode — `@guard --adversarial` (attacker + defender + auditor em paralelo)
+- ✅ 5 novas skills: `/probe` `/debate` `/trace` `/brief` `/score-drift` (reasoning/ + orchestration/ + core/)
+- ✅ 4 skills tier-1 das sources A/B: `/council` `/adversarial-gate` `/decisions` `/meta-learn`
+- ✅ `04-SYSTEM/wiki/decisions.md` criado — 2 entradas iniciais desta sessão
+- ✅ Melhorias: subagent-team (skill injection no briefing), heavy-think (vs debate), codex-retrospective (link evolve)
 
 **Vault SO — melhorias pendentes (2026-05-29):**
 - ✅ Forge agent criado — [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Forge]] (5E rubric, score 0–100, refactor) (2026-05-29)
@@ -107,6 +124,18 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 
 <!-- SECTION:sessoes-recentes -->
 ## [SESSÕES-RECENTES]
+
+### 2026-06-01
+
+**Stub Fill — 03-RESOURCES completo:**
+- **206 stubs preenchidos** (203 conteúdo real + 3 placeholders deletados)
+- **127 concepts:** FIAP/OOP (encapsulamento/herança/polimorfismo/MVC/DAO/Collections), LLM/ML foundations, agent systems, Claude/tools, RAG patterns, finance-trading, misc
+- **79 entities:** modelos (Claude family, GPT, Gemini, Llama), tools (MCP, GitHub, LangChain, Mem0), orgs (Microsoft, Meta, Google DeepMind), pessoas (heynavtoor, kidpakerot, nateherk, etc.)
+- **3 templates criados:** `04-SYSTEM/wiki/templates/` (concept/source/entity)
+- **Método:** 8 agentes paralelos (2 sessões, session limit hit na 1ª)
+→ Zero stubs restantes em `03-RESOURCES/`
+
+---
 
 ### 2026-05-29
 
@@ -260,7 +289,7 @@ Estrutura: A|B|C|D. Raw consolidation: 465 arquivos → D/2026-05-23/. Total D: 
 
 **Action items 10-12 executados 2026-05-31:**
 - ✅ Item 10: orphan scan completo (3.632 arquivos) → 363 orphans; 4 concepts acionados; relatório: [[06-GENERATED/wiki-lint/orphan-scan-2026-05-31]]
-- ✅ Item 11: [[tasks/lessons.md]] criado — 14 lições operacionais
+- ✅ Item 11: [[06-GENERATED/tasks/lessons]] criado — 14 lições operacionais
 - ✅ Item 12: tags: adicionadas em sources-index, concepts/_index, entities-index
   — 4 orphan concepts resolvidos: acp-protocol, interpreter-skills, binary-quantization, epistemic-tagging
 
@@ -279,3 +308,16 @@ Estrutura: A|B|C|D. Raw consolidation: 465 arquivos → D/2026-05-23/. Total D: 
 **Ingest:** 17 sources (ai-agents=11, articles=6, fiap=0)
 **Top action:** criar conceito [[03-RESOURCES/concepts/agent-systems/harness-adaptation]] — 5 sources convergem (Life-Harness, Harnesses-for-Alignment, ECC, SkillOpt, Hermes)
 → [[06-GENERATED/ingest-report/ingest-diario-2026-05-31-v3]]
+
+## Pipeline Diário 2026-06-02
+**Triagem:** 9 candidatos → 7 aprovados (4A + 3B), 2 rejeitados (2C)
+**Ingest:** 7 sources (ai-agents=7, fiap=0, concurso=0)
+**Top action:** criar conceito [[03-RESOURCES/concepts/agent-systems/hermes-agent-architecture]] — 3 sources convergem (memory-os, complete-guide, 6-workflows)
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-06-02]]
+
+## Melhorias pós-pipeline 2026-06-02
+- ✅ Conceito [[03-RESOURCES/concepts/agent-systems/hermes-agent-architecture]] criado (7-layer memory + self-improvement + Kanban)
+- ✅ Conceito [[03-RESOURCES/concepts/agent-systems/enterprise-context-layer]] criado (Knowledge/Expertise/Norms framework)
+- ✅ Entidade [[03-RESOURCES/entities/cisco-ai-defense]] criada (skill-scanner + AITech taxonomy)
+- ✅ [[03-RESOURCES/concepts/agent-systems/agent-abstraction-layers]] — decision framework ask→Skill→Subagent→Workflow adicionado
+- ✅ [[03-RESOURCES/entities/hermes]] — memory-os 7 layers + lições 60 dias adicionadas
