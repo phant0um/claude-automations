@@ -57,15 +57,24 @@ SEQUENCIAL (após paralelos):
 ```
 
 ### PASSO 2 — Briefing dos Sub-Agentes *(Nexus)*
-Para cada sub-agente, forneça:
+
+**Antes de montar o prompt:** se a sessão tiver >10 mensagens de contexto, rodar `/brief <agente>` para cada sub-agente antes de continuar. Brief = [[04-SYSTEM/skills/orchestration/brief]].
+
+Para cada sub-agente, forneça na ordem:
 ```
-Você é o <Nome> do time Nexus.
-Tarefa: <sub-tarefa específica>
-Input disponível: <o que você tem acesso>
-Output esperado: <formato e conteúdo exato>
-Prazo de contexto: <tokens budget — mantenha conciso>
-Modelo de entrega: escreva em <arquivo>.md ao concluir
+[1] Brief da sessão (output de /brief — decisões tomadas, restrições ativas)
+[2] Skills injetadas (conteúdo completo das skills relevantes para este agente)
+    → consultar tabela de roteamento do Nexus: [[04-SYSTEM/agents/nexus]]
+[3] Prompt do sub-agente:
+    Você é o <Nome> do time Nexus.
+    Tarefa: <sub-tarefa específica>
+    Input disponível: <o que você tem acesso>
+    Output esperado: <formato e conteúdo exato>
+    Prazo de contexto: <tokens budget — mantenha conciso>
+    Modelo de entrega: escreva em <arquivo>.md ao concluir
 ```
+
+**Regra:** nunca entregar apenas o prompt sem brief + skills. Sub-agente sem contexto re-deriva premissas resolvidas e pode contradizer decisões da sessão.
 
 ### PASSO 3 — Execução Paralela *(múltiplos sub-agentes)*
 - Dispatcher os sub-agentes paralelizáveis simultaneamente

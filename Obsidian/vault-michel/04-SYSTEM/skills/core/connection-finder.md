@@ -109,7 +109,7 @@ Append to `04-SYSTEM/wiki/hot.md`:
 ```
 ## Connections YYYY-MM-DD | N connections found
 **Top:** [most valuable connection in 1 line]
--> [[06-GENERATED/connections/connections-YYYY-MM-DD]]
+-> `[[06-GENERATED/connections/connections-YYYY-MM-DD]]`
 ```
 
 ### 8. Apply wikilinks

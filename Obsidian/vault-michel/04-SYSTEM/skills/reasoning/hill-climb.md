@@ -40,9 +40,12 @@ NÃO ative para: agentes sem eval suite definida; queries simples sem histórico
 ### Round de Avaliação (máx. 5 rounds, para mais cedo se tudo passar)
 
 **PASSO 1 — Derivar Probes** *(Haiku)*
-- Leia `agents/<slug>.py` e o campo `INSTRUCTIONS`
-- Derive 8–12 probes cobrindo: golden-path, edge cases, tool-selection, adversariais (prompt injection, input malformado, desvio de propósito)
+- Verificar se existe `06-GENERATED/probe/<slug>-probe-*.md` (output de `/probe`):
+  - SIM → carregar suite existente como base, complementar se necessário
+  - NÃO → derivar probes a partir de `agents/<slug>.md` (identidade + restrições + fora do escopo)
+- Target: 8–12 probes cobrindo: golden-path, edge cases, tool-selection, adversariais (prompt injection, input malformado, desvio de propósito)
 - Salve em `evals/cases_<slug>.py` no formato `{input, rubric, expected_tool}` (AgentAsJudgeEval + ReliabilityEval)
+- Referência: [[04-SYSTEM/skills/reasoning/probe]] para geração de suite adversarial completa
 
 **PASSO 2 — Executar Probes** *(Haiku)*
 - Para cada probe, dispare via `cURL` contra o container local
@@ -50,6 +53,8 @@ NÃO ative para: agentes sem eval suite definida; queries simples sem histórico
 - Registre: `probe_id | status(PASS/FAIL) | resposta | tool_calls_reais | tool_calls_esperados`
 
 **PASSO 3 — Julgar Falhas** *(Sonnet)*
+- Se `/score-drift` foi rodado antes: usar o relatório como pré-classificação das dimensões com drift
+- Se falha é ambígua (não encaixa claramente em nenhum tipo): rodar `/trace <slug> <comportamento>` antes de diagnosticar
 - Para cada FAIL: classifique o tipo de falha segundo a taxonomia:
   - `MISSING_RULE` → regra ausente nas INSTRUCTIONS
   - `WRONG_TOOL` → ferramenta errada disparada

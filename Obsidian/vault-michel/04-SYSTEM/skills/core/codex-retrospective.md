@@ -76,7 +76,8 @@ Mudanças em `04-SYSTEM/skills/` podem ser aplicadas autonomamente se escopo for
 
 ## Relacionado
 
+- [[04-SYSTEM/skills/core/evolve]] — complementar: retrospective = olha N dias para trás; evolve = captura padrões da sessão ATUAL antes que sumam do contexto. Usar evolve ao fim de sessão intensa, retrospective como manutenção periódica.
 - [[04-SYSTEM/skills/reasoning/hill-climb]] — melhoria de agente específico (hill tem escopo, retrospective tem perspectiva temporal)
-- [[04-SYSTEM/agents/00-core/hill.md]] — agente que implementa as mudanças propostas
-- [[04-SYSTEM/wiki/errors.md]] — log de erros que alimenta esta skill
+- [[04-SYSTEM/agents/00-core/hill]] — agente que implementa as mudanças propostas
+- [[04-SYSTEM/wiki/errors]] — log de erros que alimenta esta skill
 - [[03-RESOURCES/sources/skills-prompting-mcp/claude-arsenal-codex-retrospective-skill]] — inspiração original

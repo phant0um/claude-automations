@@ -97,7 +97,7 @@ Trigger manually via `@` mention or `/skill` + `@ingest-report` for automation.
 
 | Issue | Fix |
 |-------|-----|
-| Wikilinks 404 | Check `ai-agents-index.md` path format: `[[04-SYSTEM/agents/category/filename]]` |
+| Wikilinks 404 | Check `ai-agents-index.md` path format: ``[[04-SYSTEM/agents/category/filename]]`` |
 | Triggers broken | Test via `@nexus [agent]` — firmware in AGENTS.md controls routing |
 | Skills not found | Check `04-SYSTEM/skills/{core,reasoning,orchestration,foundational}/` |
 | Missing subcategory | Contact maintainer; new domains go in `02-domain-experts/` |
@@ -107,10 +107,10 @@ Trigger manually via `@` mention or `/skill` + `@ingest-report` for automation.
 ## Key References
 
 - `[[03-RESOURCES/wiki-index]]` — Vault home
-- `[[04-SYSTEM/wiki/hot.md]]` — Hot cache (frequently accessed)
-- `[[04-SYSTEM/AGENTS.md]]` — System firmware & Nexus orchestration
-- `[[04-SYSTEM/agents/_index/ai-agents-index.md]]` — Master agent registry
-- `[[04-SYSTEM/skills/foundational/spec-lifecycle.md]]` — Spec-driven philosophy
+- `[[04-SYSTEM/wiki/hot]]` — Hot cache (frequently accessed)
+- `[[04-SYSTEM/AGENTS]]` — System firmware & Nexus orchestration
+- `[[04-SYSTEM/agents/_index/ai-agents-index]]` — Master agent registry
+- `[[04-SYSTEM/skills/foundational/spec-lifecycle]]` — Spec-driven philosophy
 
 ---
 

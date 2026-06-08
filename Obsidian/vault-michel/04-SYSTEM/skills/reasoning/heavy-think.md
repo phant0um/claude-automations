@@ -20,7 +20,11 @@ Ative esta skill quando a tarefa envolver:
 - Análise estratégica com múltiplos cenários futuros
 - Qualquer pergunta onde "errar caro muito" (segurança, dados críticos)
 
-NÃO ative para: queries factuais diretas; tarefas de rotina; formatação; perguntas conversacionais.
+NÃO ative para: queries factuais diretas; tarefas de rotina; formatação; perguntas conversacionais; escolhas entre duas opções com trade-off real (→ use [[04-SYSTEM/skills/reasoning/debate]] em vez disso).
+
+**Heavy-think vs Debate:**
+- `heavy-think` = problema bem definido, precisa de múltiplas trajetórias para chegar à solução certa
+- `debate` = decisão entre A vs B com trade-off real, precisa de confronto estruturado
 
 ---
 

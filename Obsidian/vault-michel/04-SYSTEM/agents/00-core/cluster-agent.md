@@ -93,7 +93,7 @@ Output: `06-GENERATED/triagem/clusters-YYYY-MM-DD.md`
 
 ### [nome-do-cluster] (N fontes)
 - Fontes: arquivo1, arquivo2
-- Concept page existente: [[03-RESOURCES/concepts/X]]
+- Concept page existente: `[[03-RESOURCES/concepts/domain/slug]]`
 - Ação: adicionar wikilink nas fontes
 
 ## Watch List (2 fontes — monitorar)
@@ -106,7 +106,7 @@ Output: `06-GENERATED/triagem/clusters-YYYY-MM-DD.md`
 Append em `04-SYSTEM/wiki/hot.md`:
 ```
 ## Clusters [DATA]
-N clusters detectados. Ver [[06-GENERATED/triagem/clusters-DATA]]
+N clusters detectados. Ver `[[06-GENERATED/triagem/clusters-DATA]]`
 Aguardando aprovação: [lista de concepts sugeridos]
 ```
 

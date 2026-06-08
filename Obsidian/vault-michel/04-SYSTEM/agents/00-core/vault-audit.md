@@ -1,8 +1,26 @@
 ---
 name: vault-audit
 slug: vault-audit
-version: 1.0
+version: 1.1
 model: claude-haiku-4-5
+model_tier:
+  haiku: varredura estrutural, links, frontmatter, inbox (padrão)
+  sonnet: análise de knowledge gaps, conexões semânticas, priorização
+  opus: null
+  escalation_trigger: sobe para Sonnet na fase de análise e priorização final
+tools:
+  - read_file
+  - list_files
+  - bash
+  - write_file
+skills_used:
+  - check-resolvable.md      # valida wikilinks antes de reportar orphans
+  - score-drift.md           # mede drift de agentes críticos durante audit
+  - probe.md                 # gera suite se agente crítico sem teste
+  - connection-finder.md     # surfar conexões na fase de knowledge gaps
+  - contradiction-sweep.md   # detectar contradições entre sources durante audit
+  - governance-audit.md      # auditar layers de governança em agentes com ops destrutivas
+  - 12-factor-check.md       # verificar confiabilidade arquitetural de agentes críticos
 description: >
   Agente de auditoria do vault completo. Escaneia todas as dimensões de saúde
   (estrutura, inbox, sources, knowledge gaps, hot cache, agentes, áreas ativas)
@@ -101,13 +119,14 @@ Ao ser ativado com `@vault-audit`:
 □ Hot cache vazio ou com <5 entradas (subdimensionado)
 ```
 
-### D6 — Agentes (Haiku)
+### D6 — Agentes (Haiku) — escopo: estrutural/binário apenas
 ```
 □ Arquivos em 04-SYSTEM/agents/ com "reads:" ou "writes:" apontando paths inexistentes
 □ Skills referenciadas em frontmatter "skills_used:" sem arquivo em skills/ ou .claude/skills/
 □ Agentes com "triggers:" duplicados (mesmo trigger em 2+ agentes)
 □ Agentes sem frontmatter válido (name, model, triggers obrigatórios)
 ```
+> Scoring semântico de qualidade (propósito, critério done, roteamento) → audit-agentes-mensal. D6 responde só "existe/não existe" — não avalia conteúdo.
 
 ### D7 — Áreas ativas (Sonnet)
 ```

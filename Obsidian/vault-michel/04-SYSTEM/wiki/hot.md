@@ -1,7 +1,7 @@
 ---
 title: Hot Cache
 type: hot-cache
-updated: 2026-06-01
+updated: 2026-06-07
 sweep-protocol: mensal — remover entradas > 30 dias não acessadas novamente
 kv-cache: stable-first — OPERACIONAL+CONCEITOS+INGEST são estáveis → cacheados; SESSÕES ao final
 rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 300 lines; overflow → hill sweep"
@@ -125,6 +125,20 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 <!-- SECTION:sessoes-recentes -->
 ## [SESSÕES-RECENTES]
 
+### 2026-06-07
+
+**Hill-climbing audit 2026-06 — drift cleanup (9 itens):**
+- Nexus gates completados: `x-thread-weekly` v2 (único sem gate), `metricas-ingest` v2 (gate incompleto)
+- Arquivados: `manutencao-semanal`/`meta-coaching-semanal` → `08-ARCHIVE/rotinas/`; `kore.md`/`brainstorm.md` (stubs duplicados de agentes reais) → `08-ARCHIVE/agent-stubs-duplicados/`
+- Skills órfãs Von-Neumann + Fat-Skill-Thin-Harness → linkadas em `principles.md` §VII
+- **Correção de metodologia:** "8/9 agentes sem Layer 1" era falso positivo (grep de string literal vs. seções equivalentes) — guard/hill/extend/review/spec/verify/vault-audit já cumprem via Identidade+Restrições+Fora do Escopo. `rotina-audit-mensal` v7 corrigida pra checar seção, não string
+- Tier de complexidade adicionado ao rubric token-economy (rotinas leves avaliam 5/8 camadas)
+- **Probe suites geradas** (6): guard/hill/verify/extend/review/nexus → `06-GENERATED/probe/*-probe-2026-06-07.md` (~16-18 vetores cada, 7 categorias) — desbloqueia score-drift (6.6)
+- Rotinas remote deletadas (`07-QUEUE/rotinas/remote/`); `vault-hot-sweep` migrada e agendada (mensal, dia 1, 3h)
+→ [[06-GENERATED/audits/rotina-audit-2026-06]]
+
+---
+
 ### 2026-06-01
 
 **Stub Fill — 03-RESOURCES completo:**
@@ -186,24 +200,14 @@ Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harn
 
 ---
 
-### 2026-05-24
-
-**Implementações:** stop-quality-gate · sprint-contract skill · 4 skills com YAML frontmatter · vault-monday-ops + vault-hot-sweep crons · auto-push.sh (4 guards) · hot.md KV restructure.
-**Lint+Melhorias:** concepts path fix · 6 concepts · 231 status updates. concurso/ merge COMPLETO (116 files).
-**Ingest Clippings:** 35 fontes (19 score-7 + 16 score-6). Manifest: 570→605.
-
-**Clippings Archive Reorganization:**
-Estrutura: A|B|C|D. Raw consolidation: 465 arquivos → D/2026-05-23/. Total D: 704 files.
-
----
-
 ## [ARQUIVO]
 
-### 2026-05-17 a 2026-05-20
+### 2026-05-24 a 2026-05-20
 
 <!-- SECTION:arquivo -->
 | Data | Evento | Resultado |
 |------|--------|-----------|
+| 2026-05-24 | Implementações + lint + ingest Clippings | stop-quality-gate, sprint-contract, 4 skills YAML, hot.md KV restructure; 231 status updates, concurso merge 116 files; 35 fontes ingest, manifest 570→605; Clippings reorg A|B|C|D, D total 704 files |
 | 2026-05-20 | Batch FIAP ingest | 60 source stubs Fases 1–6; manifest 405→465 |
 | 2026-05-19 | Daily ingest + lint + semanal + manutenção | 40 sources; 1086 files; 21 orphans; 277 dead links; hot.md 368→220 |
 | 2026-05-18 | Daily ingest + concepts/skills + semanal | 41 sources; RCE deeplink; agent-eval skill; kv-cache-explainer; security-scanner |
@@ -321,3 +325,50 @@ Estrutura: A|B|C|D. Raw consolidation: 465 arquivos → D/2026-05-23/. Total D: 
 - ✅ Entidade [[03-RESOURCES/entities/cisco-ai-defense]] criada (skill-scanner + AITech taxonomy)
 - ✅ [[03-RESOURCES/concepts/agent-systems/agent-abstraction-layers]] — decision framework ask→Skill→Subagent→Workflow adicionado
 - ✅ [[03-RESOURCES/entities/hermes]] — memory-os 7 layers + lições 60 dias adicionadas
+⚠️ FIAP/concurso: 0 commits em 7d — considerar priorização de estudo
+
+## Pipeline Diário 2026-06-06
+**Triagem:** 69 candidatos → 58 aprovados (22A + 36B), 11 rejeitados (9C + 2D)
+**Ingest:** 58 sources (ai-agents=54, articles=4, fiap=0, concurso=0)
+**Top action:** criar conceito [[03-RESOURCES/concepts/ai-agents/context-engineering]] — 8 sources convergem
+**⚠️ Alerta segurança:** Zero-Trust eBook — auditar API keys em config/agents vs static-key policy
+**Validações externas:** hot.md=Layer3-memory ✓ | Haiku→Sonnet routing ✓ | Nexus=Opus-orchestrator ✓
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-06-06]]
+
+## Melhorias pós-pipeline 2026-06-06
+- ✅ Conceito [[03-RESOURCES/concepts/llm-ml-foundations/token-compression]] criado (RTK+Headroom stack completo)
+- ✅ Conceito [[03-RESOURCES/concepts/agent-systems/agent-observability]] expandido (harness-observed paradigma + adversarial 2-níveis)
+- ✅ Conceito [[03-RESOURCES/concepts/llm-ml-foundations/context-engineering]] expandido (5 padrões Claude Code + context>model evidence)
+- ✅ Conceito [[03-RESOURCES/concepts/agent-security]] expandido (Zero-Trust framework + audit checklist)
+- ✅ Conceito [[03-RESOURCES/concepts/agent-systems/harness-adaptation]] expandido (portabilidade multi-provider + omarsar0 case)
+- ✅ [[04-SYSTEM/wiki/adr.md]] criado (6 ADRs arquiteturais do vault)
+- ✅ Entidade [[03-RESOURCES/entities/omarsar0]] criada (Elvis Saravia / DAIR.AI)
+- ✅ Auditoria Zero-Trust concluída: PASS — zero static keys (settings, agents, MCP). Detalhe em [[03-RESOURCES/concepts/agent-security]]
+
+## Pipeline Diário 2026-06-06 (2ª execução)
+**Triagem:** 46 candidatos → 40 aprovados (7A + 33B), 5 rejeitados (5C) + 1 duplicata removida pré-ingest
+**Ingest:** 40 sources (ai-agents=40 — majoritariamente docs oficiais Claude Managed Agents API beta managed-agents-2026-04-01)
+**Top action:** avaliar risco "memória envenenada via prompt injection" no modelo hot.md/MEMORY.md — [[03-RESOURCES/sources/using-agent-memory]] documenta o mesmo vetor de ataque na API oficial
+**⚠️ Bug detectado:** F1.0b new-candidate match falha em apóstrofo curvo (’) vs reto (') — causou falsa detecção de "novo" para source já ingerido na 1ª execução; corrigido manualmente, normalizar unicode no matching
+**Manifest:** +40 (1179→1219) | **Links:** 639 verificados, 0 quebrados (3 corrigidos in-place)
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-06-06-v2]]
+
+## Monthly Audit 2026-06-06 | Rotinas
+**Score:** 74/100 (9 rotinas ativas)
+**Drift:** 6 rotinas (daily-brief, process-queue, ingest-fiap-batch, metricas-ingest, srs-concurso, x-thread-weekly) — 4 são estruturalmente leves, drift parcial falso-positivo
+**Quick wins:** (1) atualizar lista de rotinas em rotina-audit-mensal.md — auto-drift, lista 7 rotinas mas vault tem 11; (2) Layer 1 Intent Boundary em 8/9 agentes core com bash/write_file; (3) adicionar Nexus gate em x-thread-weekly (único sem)
+**Next focus:** rotina-audit-mensal.md — corrigir self-reference antes do próximo ciclo
+→ [[06-GENERATED/audits/rotina-audit-2026-06]]
+
+## F3.3 Vault Impact — execução 2026-06-07
+**Disparo:** "executar melhorias do F3.3 Vault impact" (continuação autônoma do pipeline-diario 2026-06-06 v2)
+**8/8 itens concluídos:** [[03-RESOURCES/concepts/agent-systems/managed-agents-harness]] · [[03-RESOURCES/concepts/agent-systems/skill-authoring]] · [[04-SYSTEM/logs/skill-audit-2026-06-effective-skills]] · risco "memória envenenada" avaliado em [[03-RESOURCES/concepts/agent-security]] · [[03-RESOURCES/concepts/agent-systems/compound-engineering]] · [[03-RESOURCES/concepts/agent-systems/orchestration-mode-pattern]] · fix unicode F1.0b (pipeline-diario.md) · [[04-SYSTEM/skills/core/managed-agents-quickref]]
+**Achado lateral (auditoria skills):** 8 stubs órfãos no root de `04-SYSTEM/skills/` duplicando nomes de skills reais em subpastas — candidatos a limpeza (reportado, não removido)
+→ status detalhado na tabela F3.3 de [[06-GENERATED/ingest-report/ingest-diario-2026-06-06-v2]]
+
+## Revisão Semanal 2026-06-07
+**System:** stale=0 drift=1 (AGENTS.md "40+ agentes" vs 170 .md/91 specs reais)
+**Lint:** orphans=397 dead=373(real) dups-manifest=17 dup-concepts=6 | manifest tem 1 entrada corrompida
+**Conexões:** 4 encontradas (0 alta-confiança → 0 wikilinks aplicados)
+**Meta-coaching:** top waste: WP2 — 18 arquivos/+346 linhas não commitados (risco perda); WP1 — 2ª semana sem atividade FIAP/concurso
+→ [[06-GENERATED/revisao-semanal/revisao-semanal-2026-06-07]]

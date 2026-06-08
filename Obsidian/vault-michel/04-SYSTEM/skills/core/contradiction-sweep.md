@@ -100,7 +100,7 @@ created: YYYY-MM-DD
 If pending_human > 0, append to `04-SYSTEM/wiki/hot.md`:
 ```
 ## Contradictions YYYY-MM-DD | N pending human decision
--> [[06-GENERATED/reports/contradiction-sweep-YYYY-MM-DD]]
+-> `[[06-GENERATED/reports/contradiction-sweep-YYYY-MM-DD]]`
 ```
 
 ---
