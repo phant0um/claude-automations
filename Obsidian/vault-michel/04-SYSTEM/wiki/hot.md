@@ -8,6 +8,14 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 ---
 
 > **Sweep Protocol:** Curado mensalmente. Entradas > 30 dias sem referência nova → `[ARQUIVO]`.
+
+## Automação Pipeline
+
+- launchd: 16h diário (Manaus UTC-4 = 20h UTC)
+- Script: `04-SYSTEM/scripts/pipeline-diario.sh`
+- Modelos: Ollama Cloud (F1–F3.3) + Claude Pro (F3.5)
+- Config: `04-SYSTEM/config/com.michel.pipeline-diario.plist`
+- Controle: [[04-SYSTEM/wiki/controle-pipeline]]
 > Agente responsável: `hill` — trigger: "sweep hot.md" ou rotina mensal (`vault-hot-sweep`).
 >
 > **Rotation Rules (prevenção compression aging — AgingBench 2026):**
@@ -372,3 +380,29 @@ Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harn
 **Conexões:** 4 encontradas (0 alta-confiança → 0 wikilinks aplicados)
 **Meta-coaching:** top waste: WP2 — 18 arquivos/+346 linhas não commitados (risco perda); WP1 — 2ª semana sem atividade FIAP/concurso
 → [[06-GENERATED/revisao-semanal/revisao-semanal-2026-06-07]]
+
+## Pipeline Diário 2026-06-08
+**Triagem:** 139 candidatos → 0 aprovados, 139 rejeitados
+**Ingest:** 0 sources (artigos=0, fiap=0, clips=0)
+**Top action:** revisar sources criadas hoje
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-06-08]]
+⚠️ FIAP/concurso: 0 commits em 7d — considerar priorização de estudo
+⚠️ FIAP/concurso: 0 commits em 7d — considerar priorização de estudo
+⚠️ FIAP/concurso: 0 commits em 7d — considerar priorização de estudo
+⚠️ FIAP/concurso: 0 commits em 7d — considerar priorização de estudo
+
+## Nexus v2 → v3 — Model Router Layer + 4 Agentes Vault-Nativos
+**Data:** 2026-06-09
+**Status:** PIPELINE OK
+**Mudanças:**
+- `00-SYSTEM-PROMPTS/model-router.md` — Model Router Layer (Claude vs Ollama)
+- `triagem-agent` — F1 scoring A–D via minimax-m3:cloud
+- `ingest-agent` — F2 vault builder via minimax-m3 / kimi-k2.6 (FIAP)
+- `report-agent` — F3 relatório via deepseek-v4-pro / nemotron-3-ultra
+- `vault-reconcile` — auditoria semanal via nemotron-3-ultra (1M ctx)
+- `docs/adr/ADR-001-ollama-model-router.md` — decisão de roteamento
+- `docs/adr/ADR-002-vault-reconcile-agent.md` — decisão de reconciliação
+- README v1.0.0 → v3.0.0 · 7 → 11 agentes
+**Guardrails preservados:** SOUL, Shield (Opus), Ledger (git) intocados
+**Decisão:** pipeline `pipeline-diario.md` v3.5 mantido como referência — agents vault-nativos operam por cima
+**Top action:** testar `@triagem-agent` em próximo batch real (validar modelo Ollama em produção)

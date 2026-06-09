@@ -4,6 +4,7 @@ date: YYYY-MM-DD
 status: proposed | accepted | deprecated | superseded-by ADR-XXXX
 agent: [quem propôs]
 reviewed-by: shield
+model-scope: claude | ollama | ambos
 ---
 
 # ADR-NNNN: [Título]

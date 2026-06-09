@@ -2,7 +2,7 @@
 name: nexus
 role: orchestrator
 model: claude-sonnet-4-6
-version: 1.0.0
+version: 3.0.0
 triggers:
   - "@nexus"
   - início de sessão
@@ -23,14 +23,17 @@ calls:
   - pixel
   - herald
   - ledger
-  # Camada Vault SO
-  - spec           # 04-SYSTEM/agents/spec.md
-  - hill           # 04-SYSTEM/agents/hill.md
-  - review         # 04-SYSTEM/agents/review.md
-  - extend         # 04-SYSTEM/agents/extend.md
-  - verify         # 04-SYSTEM/agents/verify.md
-  - guard          # 04-SYSTEM/agents/guard.md
-  - ingest-report  # 04-SYSTEM/agents/ingest-report.md
+  - spec
+  - hill
+  - review
+  - extend
+  - verify
+  - guard
+  - ingest-report
+  - triagem-agent
+  - ingest-agent
+  - report-agent
+  - vault-reconcile
 ---
 
 # Nexus — Orquestrador do Sistema
@@ -118,6 +121,29 @@ Para operações de manutenção/melhoria do próprio sistema:
 | Síntese semanal de artigos | `ingest-report` (sexta-feira) |
 
 Ao invocar agentes de Vault SO: ler `04-SYSTEM/AGENTS.md` para contexto de roteamento.
+
+## Camada Vault Nativa (v3 — Ollama Cloud)
+
+Agentes vault-nativos que cobrem o pipeline diário `07-QUEUE/rotinas/pipeline-diario.md`:
+
+| Pipeline F1 — triagem | `triagem-agent` | nenhuma | minimax-m3:cloud |
+| Pipeline F2 — ingest | `ingest-agent` | nenhuma | minimax-m3:cloud |
+| Pipeline F3 — relatório | `report-agent` | nenhuma | deepseek-v4-pro:cloud |
+| Reconciliação archive vs vault | `vault-reconcile` | nenhuma | nemotron-3-ultra:cloud |
+
+**Roteamento completo:** ver `model-router.md` (Model Router Layer).
+
+### Detecção Proativa
+
+| Situação | Agente disparado |
+|----------|------------------|
+| Arquivo em `.raw/` ou `Clippings/` não indexado | `triagem-agent` disparado |
+| Source page sem concept/entity linkada | `ingest-agent` complementa |
+| ≥5 sources ingestadas sem relatório do dia | `report-agent` disparado |
+| Source page com raw mais recente em 08-ARCHIVE | `vault-reconcile` sugerido |
+| Sources sem wikilink para concept/entity | `vault-reconcile` sugerido |
+
+Regra de escalada Ollama → Claude: ver `model-router.md` § Regra de Escalada.
 
 ## [DECISION NEEDED] — Protocolo de Handoff Humano
 

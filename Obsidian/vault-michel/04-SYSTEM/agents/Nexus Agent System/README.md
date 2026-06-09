@@ -1,45 +1,65 @@
 ---
 title: "Nexus Agent System"
 description: "Sistema de agentes especializados para desenvolvimento fullstack orquestrado pelo Nexus"
-version: "1.0.0"
-updated: 2026-05-12
+version: "3.0.0"
+updated: 2026-06-09
 status: active
-tags: [agents, fullstack, claude, orchestration]
+tags: [agents, fullstack, claude, ollama, orchestration]
 ---
 
 # 🧠 Nexus Agent System
 
-Sistema de 7 agentes especializados para desenvolvimento fullstack, orquestrado pelo **Nexus**.
-Cada agente roda com o modelo Claude otimizado por tipo de tarefa — qualidade máxima, custo mínimo.
+Sistema de 11 agentes especializados para desenvolvimento fullstack e manutenção
+de vault, orquestrado pelo **Nexus**. Cada agente roda com o modelo otimizado
+por tipo de tarefa — qualidade máxima, custo mínimo. Camada v3 introduz Ollama
+Cloud para tarefas operacionais via Model Router Layer.
 
 ## Arquitetura
-nexus (orchestrator)  
-├── scout → pesquisa e descoberta → claude-haiku-4-5  
-├── forge → implementação e código → claude-sonnet-4-6  
-├── shield → validação e segurança → claude-opus-4-6  
-├── pixel → UI/UX e apresentação visual → claude-sonnet-4-6  
-├── herald → comunicação e síntese → claude-haiku-4-5  
-└── ledger → memória e auditoria → claude-haiku-4-5
+nexus (orchestrator)
+├── scout → pesquisa e descoberta → claude-haiku-4-5
+├── forge → implementação e código → claude-sonnet-4-6
+├── shield → validação e segurança → claude-opus-4-7
+├── pixel → UI/UX e apresentação visual → claude-sonnet-4-6
+├── herald → comunicação e síntese → claude-haiku-4-5
+├── ledger → memória e auditoria → claude-haiku-4-5
+│
+│ Camada Vault Nativa (v3 — Ollama Cloud)
+├── triagem-agent → scoring A–D → minimax-m3:cloud
+├── ingest-agent → vault builder → minimax-m3:cloud / kimi-k2.6:cloud
+├── report-agent → relatório diário → deepseek-v4-pro:cloud / nemotron-3-ultra:cloud
+└── vault-reconcile → auditoria semanal → nemotron-3-ultra:cloud
 
 
 ## Roteamento de Modelos
 
-| Agente  | Modelo              | Justificativa                                      |
-|---------|---------------------|----------------------------------------------------|
-| Nexus   | claude-sonnet-4-6   | Orquestração requer julgamento, não precisa de Opus|
-| Scout   | claude-haiku-4-5    | Pesquisa rápida, output estruturado, baixo custo   |
-| Forge   | claude-sonnet-4-6   | Implementação séria — workhorse tier               |
-| Shield  | claude-opus-4-7     | Segurança e arquitetura crítica — 10% do trabalho  |
-| Pixel   | claude-sonnet-4-6   | Output visual requer coerência, não custo premium  |
-| Herald  | claude-haiku-4-5    | Síntese e comunicação — tarefas leves              |
-| Ledger  | claude-haiku-4-5    | Logging estruturado — máxima velocidade e economia |
+| Agente | Claude | Ollama Cloud | Quando Ollama |
+|--------|--------|-------------|--------------|
+| Nexus | claude-sonnet-4-6 | — | nunca |
+| Scout | claude-haiku-4-5 | minimax-m3:cloud | volume alto |
+| Forge | claude-sonnet-4-6 | kimi-k2.6:cloud | tarefas repetitivas |
+| Shield | claude-opus-4-7 | — | nunca |
+| Pixel | claude-sonnet-4-6 | nemotron-3-ultra:cloud | protótipos |
+| Herald | claude-haiku-4-5 | minimax-m3:cloud | lote |
+| Ledger | claude-haiku-4-5 | minimax-m3:cloud | logs simples |
+| triagem-agent | — | minimax-m3:cloud | sempre |
+| ingest-agent | — | minimax-m3:cloud / kimi-k2.6:cloud | sempre |
+| report-agent | — | deepseek-v4-pro:cloud / nemotron-3-ultra:cloud | sempre |
+| vault-reconcile | — | nemotron-3-ultra:cloud | sempre |
+
+> Detalhes completos de roteamento: `00-SYSTEM-PROMPTS/model-router.md`
+> Regra de escalada Ollama → Claude: ver `model-router.md` § Regra de Escalada.
 
 ## Ciclo de Vida
-[Scout descobre] → [Nexus decide] → [Forge constrói]  
-↑ ↓  
-[Ledger memoriza] ← [Herald comunica] ← [Shield valida]  
-↓  
+[Scout descobre] → [Nexus decide] → [Forge constrói]
+↑ ↓
+[Ledger memoriza] ← [Herald comunica] ← [Shield valida]
+↓
 [Pixel apresenta]
+
+## Pipeline Diário (Camada Vault Nativa)
+[triagem-agent] → [ingest-agent] → [report-agent]
+                     ↓
+              [vault-reconcile] (semanal, independente)
 
 
 ## Docs do Sistema
@@ -51,6 +71,9 @@ nexus (orchestrator)
 | `docs/adr/`              | Decisões arquiteturais com contexto        |
 | `docs/standards.md`      | Critérios de qualidade e anti-padrões      |
 | `docs/constitution.md`   | Princípios e limites do sistema            |
+| `00-SYSTEM-PROMPTS/model-router.md` | Tabela de roteamento Claude vs Ollama |
+| `docs/adr/ADR-001-ollama-model-router.md` | Decisão: Ollama Cloud como Model Router |
+| `docs/adr/ADR-002-vault-reconcile-agent.md` | Decisão: agente de reconciliação |
 
 ## Como Invocar
 
@@ -60,6 +83,9 @@ e delega com contexto mínimo necessário.
 Prompt inicial padrão:
 > "@nexus — [descrição da tarefa]. Contexto: [link/arquivo relevante]."
 
+Invocação direta de agente vault-nativo:
+> "@triagem-agent — 47 candidatos em `.raw/articles/`"
+
 ## Regras do Sistema
 
 1. Nenhum agente acessa mais contexto do que o necessário para sua tarefa
@@ -67,3 +93,5 @@ Prompt inicial padrão:
 3. Shield é obrigatório antes de qualquer deploy ou mudança crítica
 4. `progress.md` é atualizado a cada sessão pelo Nexus
 5. ADRs são criados para toda decisão que afeta arquitetura ou padrões
+6. **Tarefas operacionais** (triagem/ingest/report/reconcile) → Ollama Cloud
+7. **Tarefas de julgamento** (orquestração, segurança, decisões destrutivas) → Claude

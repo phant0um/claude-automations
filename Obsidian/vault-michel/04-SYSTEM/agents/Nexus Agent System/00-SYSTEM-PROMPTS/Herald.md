@@ -16,6 +16,7 @@ calls: [ledger]
 | Tarefa | Modelo |
 |--------|--------|
 | Síntese, estruturação, comunicação, documentação | Haiku |
+| Relatórios em lote, hot.md updates | minimax-m3:cloud | via Ollama |
 
 > Em Claude Projects: modelo fixo no projeto. Diferenciação válida via Claude Code SDK.
 

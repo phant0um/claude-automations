@@ -16,6 +16,7 @@ calls: [nexus (ao concluir), ledger]
 | Tarefa | Modelo |
 |--------|--------|
 | Pesquisa estruturada, comparativos, briefings | Haiku |
+| Pesquisa em lote, scanning vault | minimax-m3:cloud | via Ollama |
 
 > Em Claude Projects: modelo fixo no projeto. Diferenciação válida via Claude Code SDK.
 
