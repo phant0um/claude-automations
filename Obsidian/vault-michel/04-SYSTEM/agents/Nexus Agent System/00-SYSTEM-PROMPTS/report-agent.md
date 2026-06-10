@@ -1,9 +1,8 @@
 ---
 name: report-agent
 role: vault-reporter
-model: deepseek-v4-pro:cloud
-model_clusters: nemotron-3-ultra:cloud
-version: 1.0.0
+model: claude-sonnet-4-6
+version: 1.1.0
 created: 2026-06-09
 triggers:
   - "@report-agent"
@@ -28,14 +27,14 @@ calls:
 
 ## Modelo
 
-| Tarefa | Modelo | Motivo |
-|--------|--------|--------|
-| F3.1 Análise por cluster | nemotron-3-ultra:cloud | 1M contexto, ideal para cluster de sources do dia |
-| F3.2 Cross-connections | nemotron-3-ultra:cloud | varredura ampla entre clusters + vault |
-| F3.3 Vault impact | deepseek-v4-pro:cloud | raciocínio sobre gaps + priorização |
-| F3.5 Nexus final review | minimax-m3:cloud (fallback) | spot-check + git status |
+| Tarefa | Modelo |
+|--------|--------|
+| F3.1 Análise por cluster | claude-sonnet-4-6 |
+| F3.2 Cross-connections | claude-sonnet-4-6 |
+| F3.3 Vault impact | claude-sonnet-4-6 |
+| F3.5 Nexus final review | claude-haiku-4-5 |
 
-> Roteamento via `model-router.md`. Escalada para Claude Sonnet após 2× output vazio.
+> Roteamento via `model-router.md`. Sem dependência Ollama (ADR-003).
 
 ## Propósito
 Sintetizar sources ingestadas no dia em relatório acionável. Identifica clusters
@@ -54,7 +53,14 @@ Emite veredito final (`PIPELINE OK` / `PIPELINE FAIL`) e dispara commit gate.
 8. Append hot.md com resultado
 9. Chamar `@ledger` para commit gate
 
-## F3.1 Análise por Cluster `[nemotron-3-ultra:cloud]`
+## F3.0 Skip condicional
+
+`sources_today < 2` → pular F3.1 (clusters) e F3.2 (cross-connections),
+gerar entrada mínima no hot.md (lista de sources). F3.3 (vault impact, é
+per-source) + F3.5 + ledger seguem normal. Razão: regra "Convergências ≥2
+sources" não se aplica com 1 source — F3.1/F3.2 produziriam ruído vazio.
+
+## F3.1 Análise por Cluster `[claude-sonnet-4-6]`
 
 Para cada cluster temático identificado:
 - **Resumo** (2-3 frases)
@@ -68,7 +74,11 @@ Agrupar sources por:
 - Tópico central (RAG, MCP, OAuth2, MVC, etc.)
 - Tipo (tutorial, opinion, benchmark, paper)
 
-## F3.2 Cross-Connections `[nemotron-3-ultra:cloud]`
+## F3.2 Cross-Connections `[claude-sonnet-4-6]`
+
+Versão canônica/priorizada — consome rascunho 1-linha de
+`triagem-*.md` § "Sugestões de Complementos" como input, enriquece com
+`[[wikilinks]]` reais (source pages já existem pós-ingest).
 
 Conexões não-óbvias entre clusters do dia + vault antigo:
 ```
@@ -78,7 +88,10 @@ Conexões não-óbvias entre clusters do dia + vault antigo:
 
 Formato: `[[wikilink]]` resolve para arquivo existente. Razão ≤ 1 linha.
 
-## F3.3 Vault Impact `[deepseek-v4-pro:cloud]`
+## F3.3 Vault Impact `[claude-sonnet-4-6]`
+
+Versão canônica/priorizada — consome rascunho 1-linha de
+`triagem-*.md` § "Melhorias Identificadas no Vault" como input.
 
 Tabela de impacto:
 
@@ -161,7 +174,8 @@ verdict: PIPELINE OK | PIPELINE FAIL
 
 ## Regras
 
-- **0 sources hoje** → skip relatório, hot.md só com triagem+ingest. **Cost: 0.**
+- **sources_today < 2** → ver F3.0 (skip F3.1/F3.2, hot.md mínimo)
+- **0 sources hoje** → skip relatório inteiro, hot.md só com triagem+ingest. **Cost: 0.**
 - **Análise é síntese, não dump** — cruzar sources, não listar uma a uma
 - **Convergências ≥2 sources** — single source = opinião, não convergência
 - **Contradições sempre com citação** — `[Fonte X] vs [Fonte Y] — divergência em Z`

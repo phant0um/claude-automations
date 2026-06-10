@@ -1,9 +1,8 @@
 ---
 name: ingest-agent
 role: vault-builder
-model: minimax-m3:cloud
-model_fiap: kimi-k2.6:cloud
-version: 1.0.0
+model: claude-sonnet-4-6
+version: 1.1.0
 created: 2026-06-09
 triggers:
   - "@ingest-agent"
@@ -36,11 +35,10 @@ calls:
 
 | Tarefa | Modelo |
 |--------|--------|
-| Classificação + source pages (artigos/ai-agents/concurso) | minimax-m3:cloud (Ollama) |
-| Source pages FIAP (preservar completo, sem condensar) | kimi-k2.6:cloud (Ollama) |
+| Classificação + source pages (todas categorias, incl. FIAP) | claude-sonnet-4-6 |
 
-> Roteamento via `model-router.md`. Escalada para Claude Sonnet após 2× output vazio.
-> FIAP tem modelo dedicado (kimi) por causa da regra "preservar > condensar" que demanda mais contexto.
+> Roteamento via `model-router.md`. Sem dependência Ollama (ADR-003). Sonnet
+> (200K) cobre os 8000 chars do FIAP sem precisar de modelo separado.
 
 ## Propósito
 Transformar candidatos A/B aprovados pela triagem em source pages estruturadas no vault.
@@ -187,9 +185,9 @@ AI call só se ambíguo. **Cost: ~0–100 tokens.**
 
 ### AI Call — Source page generation
 
-Por categoria:
-- `articles/ai-agents/concurso` → `minimax-m3:cloud` usando template F2.3a
-- `fiap` → `kimi-k2.6:cloud` usando template F2.3b
+Por categoria, `claude-sonnet-4-6`:
+- `articles/ai-agents/concurso` → template F2.3a
+- `fiap` → template F2.3b
 
 ### Bash — Manifest append (atômico)
 

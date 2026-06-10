@@ -406,3 +406,16 @@ Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harn
 **Guardrails preservados:** SOUL, Shield (Opus), Ledger (git) intocados
 **Decisão:** pipeline `pipeline-diario.md` v3.5 mantido como referência — agents vault-nativos operam por cima
 **Top action:** testar `@triagem-agent` em próximo batch real (validar modelo Ollama em produção)
+
+## pipeline-diario v4.1 — reverte Ollama, Claude-only
+**Data:** 2026-06-09
+- F1-F3: Ollama→Claude (Haiku/Sonnet). 3 agentes mantidos, só modelo trocado. ADR-003 supersede parcial ADR-001.
+- Motivo: usuário não paga licença Ollama + scoring minimax≠Haiku (F1=scoring)
+- triagem-agent v1.1: heurística bash (triagem-scoring, ≥60% sem AI) + batch Haiku borderline (era loop, abaixo cache floor 4096) + cap Clippings 8000
+- ingest-agent v1.1: Sonnet único (remove split kimi/FIAP)
+- report-agent v1.1: Sonnet+Haiku(F3.5) + F3.0 skip se sources<2
+- triagem §Sugestões/Melhorias → ultra (rascunho); F3.2/F3.3=canônico
+- guardrail cache: zero data/timestamp vivo em prosa agent-spec/CLAUDE.md
+- redução honesta ~35-45% (não 70-80%)
+- vault-reconcile NÃO afetado (nemotron 1M ctx, follow-up redesenho)
+**Top action:** próximo run real validar `triagem-<data>.md` mostra `motivo: heurística (score X)`

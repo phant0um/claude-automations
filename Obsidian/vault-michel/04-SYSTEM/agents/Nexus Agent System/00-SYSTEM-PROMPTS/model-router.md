@@ -20,6 +20,11 @@ calls: []
 Camada de roteamento de modelos. O Nexus injeta este contexto antes de delegar
 qualquer tarefa. Define qual modelo Claude vs Ollama Cloud usar por agente/tarefa.
 
+> **Nota (2026-06-09)**: Ollama Cloud não adotado para `triagem-agent`,
+> `ingest-agent`, `report-agent` — custo de licença + scoring do minimax
+> diverge do Haiku (F1 é justamente scoring). Ver ADR-003. Pré-filtro
+> heurístico bash (`triagem-scoring`) substitui parte do ganho prometido.
+
 ## Princípio
 - **Tarefas operacionais rotineiras** (triagem, ingest, relatórios, reconciliação) → Ollama Cloud.
 - **Tarefas de julgamento crítico** (orquestração, segurança, decisões destrutivas) → Claude.
@@ -36,10 +41,10 @@ qualquer tarefa. Define qual modelo Claude vs Ollama Cloud usar por agente/taref
 | ledger | auditoria/git | claude-haiku-4-5 | minimax-m3:cloud | logs e ADRs simples |
 | shield | segurança | claude-opus-4-7 | — | nunca |
 | pixel | UI/design | claude-sonnet-4-6 | nemotron-3-ultra:cloud | protótipos rápidos |
-| triagem-agent | scoring A–D | — | minimax-m3:cloud | sempre |
-| ingest-agent | vault builder | — | minimax-m3:cloud / kimi-k2.6:cloud | sempre |
-| report-agent | F3.1–F3.5 | — | deepseek-v4-pro:cloud / nemotron-3-ultra:cloud | sempre |
-| vault-reconcile | archive vs vault | — | nemotron-3-ultra:cloud | sempre |
+| triagem-agent | scoring A–D | claude-haiku-4-5 (borderline) | — | (deferido — ver ADR-003) |
+| ingest-agent | vault builder | claude-sonnet-4-6 | — | (deferido — ver ADR-003) |
+| report-agent | F3.1–F3.5 | claude-sonnet-4-6 / claude-haiku-4-5 (F3.5) | — | (deferido — ver ADR-003) |
+| vault-reconcile | archive vs vault | — | nemotron-3-ultra:cloud | sempre (depende de 1M ctx — redesenho necessário p/ Claude-only, fora deste pass) |
 
 ## Variáveis de Ambiente Ollama Cloud
 

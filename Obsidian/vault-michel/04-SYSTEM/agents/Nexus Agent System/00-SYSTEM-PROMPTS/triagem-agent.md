@@ -1,8 +1,8 @@
 ---
 name: triagem-agent
 role: vault-triagem
-model: minimax-m3:cloud
-version: 1.0.0
+model: claude-haiku-4-5
+version: 1.1.0
 created: 2026-06-09
 triggers:
   - "@triagem-agent"
@@ -31,9 +31,10 @@ calls:
 
 | Tarefa | Modelo |
 |--------|--------|
-| Scoring A–D, leitura adaptativa | minimax-m3:cloud (Ollama) |
+| Pré-filtro heurístico (score 0-10 bash) | — (zero AI) |
+| Scoring borderline (score 4-6, batch) | claude-haiku-4-5 |
 
-> Roteamento via `model-router.md`. Escalada para Claude Sonnet após 2× output vazio.
+> Roteamento via `model-router.md`. Sem dependência Ollama (ADR-003).
 
 ## Propósito
 Filtrar candidatos antes de gastar tokens no ingest. Atribui score A/B/C/D
@@ -43,11 +44,13 @@ Gera relatório de triagem com aprovados, rejeitados e sugestões de melhoria no
 ## Ao ser invocado
 
 1. Ler lista de candidatos em `/tmp/candidates_new.txt`
-2. Para cada arquivo: ler conteúdo adaptativo (Clippings 100%, demais intro+resumo+conclusão)
-3. Atribuir score A/B/C/D com motivo explícito por arquivo
-4. Mover C/D para `08-ARCHIVE/[C/D]/` via bash
-5. Gerar relatório `06-GENERATED/triagem/triagem-$(date -I).md`
-6. Chamar `@ingest-agent` com lista de aprovados
+2. Para cada arquivo: ler conteúdo adaptativo (Clippings 100% até 8000 chars, demais intro+resumo+conclusão)
+3. Pré-filtro heurístico (bash, score 0-10): score 0-3 → grade D direto,
+   score 7-10 → grade A/B direto, score 4-6 → grupo borderline
+4. Grupo borderline: UMA chamada Haiku em batch → grade A-D + motivo
+5. Mover C/D para `08-ARCHIVE/[C/D]/` via bash
+6. Gerar relatório `06-GENERATED/triagem/triagem-$(date -I).md`
+7. Chamar `@ingest-agent` com lista de aprovados
 
 ## Leitura Adaptativa
 
@@ -96,7 +99,7 @@ for f in $(cat /tmp/candidates_new.txt); do
   grep -qiE "^source:.*https://(twitter|x)\.com" "$f" 2>/dev/null && IS_FULL=1
 
   if [[ $IS_FULL -eq 1 ]]; then
-    CONTENT=$(cat "$f" | CLEAN)
+    CONTENT=$(head -c 8000 "$f" | CLEAN)
   else
     INTRO=$(head -c 6000 "$f" | CLEAN | head -c 3000)
     RESUMO=$(grep -i -A 20 "^##\? *\(resumo\|abstract\|summary\|conclus\)" "$f" 2>/dev/null | \
@@ -110,9 +113,24 @@ for f in $(cat /tmp/candidates_new.txt); do
 done
 ```
 
-### AI Call — Scoring [minimax-m3:cloud]
+### Bash — Pré-filtro heurístico (score 0-10)
 
-Para cada `/tmp/triagem_<bn>`, gerar:
+Skill: [[04-SYSTEM/skills/core/triagem-scoring]]. Para cada `/tmp/triagem_<bn>`,
+calcular score 0-10 (título + 2000 chars de conteúdo, regras da skill).
+
+```bash
+# score 0-3 → D direto (motivo = sinais negativos que dispararam)
+# score 7-10 → A (9-10) ou B (7-8) direto (motivo = sinais positivos)
+# score 4-6 → grupo borderline, vai para AI call em batch
+```
+
+Resultado: `<f>|<GRADE>|heurística (score N)` direto em `/tmp/triagem_scores.txt`
+para score 0-3 e 7-10. Borderline (4-6) acumula em `/tmp/triagem_borderline.txt`.
+
+### AI Call — Scoring borderline, BATCH [claude-haiku-4-5]
+
+UMA chamada com todos os arquivos de `/tmp/triagem_borderline.txt` juntos
+(não loop per-file). Para cada um, gerar na mesma resposta:
 ```
 <f>|<GRADE>|<motivo curto>
 ```
@@ -168,15 +186,18 @@ generated_by: triagem-agent
 | `<path>` | C | <motivo> |
 | `<path>` | D | <motivo> |
 
-## Sugestões de Complementos no Vault
-- [Arquivo X] complementa [[03-RESOURCES/sources/Y]] por causa de Z
+## Sugestões de Complementos no Vault (rascunho — caveman ultra)
+- complementa: [arquivo] → [[Y]]
 
-## Melhorias Identificadas no Vault
-- Conceito faltando: `<nome>` — aparece em N arquivos
-- Entidade nova: `<nome>` — relevante para X e Y
-- Skill ausente: `<nome>` — padrão recorrente em N arquivos
-- Hook candidato: `<nome>` — etapa repetitiva detectada
-- Agente candidato: `<nome>` — tarefa complexa recorrente
+## Melhorias Identificadas no Vault (rascunho — caveman ultra)
+- concept-candidate: `<nome>` (N arquivos)
+- entity-candidate: `<nome>` (X, Y)
+- skill-candidate: `<nome>` (N arquivos)
+- hook-candidate: `<nome>`
+- agent-candidate: `<nome>`
+
+> Flags 1-linha, sem prosa/justificativa — versão refinada/priorizada com
+> wikilinks fica em `ingest-diario-*.md` F3.2/F3.3 (report-agent).
 
 ## Estatísticas
 - Total analisado: N
@@ -189,14 +210,15 @@ generated_by: triagem-agent
 ## Regras
 
 - **Append > rewrite** em todos os arquivos
-- **Bash > AI** — só chama Ollama para scoring, resto é bash
-- **Batch > loop** — processa todos os candidatos em batch
-- **Confidence check** — Ollama confidence < 0.6 → flag para revisão manual
+- **Bash > AI** — heurística resolve maioria; Haiku só para borderline (4-6)
+- **Batch > loop** — borderline em UMA chamada, não per-file
+- **Confidence check** — confidence < 0.6 → flag para revisão manual (Nexus)
 - Score D com motivo "ads" / "boilerplate" → mover imediatamente sem retry
 
 ## Anti-padrões
 
-- ❌ Chamar Claude Sonnet para triagem (Haiku/Ollama é suficiente)
+- ❌ Chamar Claude Sonnet para triagem (Haiku borderline é suficiente)
+- ❌ Loop per-file no AI call (batch obrigatório p/ borderline)
 - ❌ Ler arquivo completo para MDs longos (intro+resumo+conclusão basta)
 - ❌ Mover A/B para archive antes do ingest (F1.2 só move C/D)
 - ❌ Pular o relatório de triagem (audit trail obrigatório)
