@@ -11,6 +11,51 @@ tags: [index, sources, vault]
 
 Livros, papers, vídeos, cursos e artigos referenciados no vault.
 
+## Fontes Ingeridas em 2026-06-10
+
+### Pipeline v4.3 — AI-Agents / Harness Engineering / Claude Code / Hermes
+
+- [[03-RESOURCES/sources/leap-formal-mathematics-agentic-framework]] — LLMs generalistas (não especializados) conseguem alcançar performance state-of-the-art em prova formal de teoremas (Lean) — sem nenhum fine-tuning especializado — desde que estruturados por framework agêntico (LEAP, DAG hierárquico + feedback do compilador)
+- [[03-RESOURCES/sources/anthropic-ant-cli-managed-agents-guide]] — Anthropic lançou `ant` CLI (Go, MIT, open source) — cliente típado completo para Claude API: mensagens, modelos, arquivos, batch jobs, agentes, sessões, ambientes, skills
+- [[03-RESOURCES/sources/autoloops-spark-domain-chips]] — Loop que melhora ≠ loop que repete (do→check→retry); diferença crítica é comparar tentativas e saber qual é melhor — Spark Domain Chips como mecanismo
+- [[03-RESOURCES/sources/ai-skills-testing-process-pinterest]] — Taxa de invocação de skills custom (62-73% baseline) inaceitável para workflows críticos; tratar invocação como métrica testável (metodologia Pinterest)
+- [[03-RESOURCES/sources/rlm-agents-structured-outputs-subagents]] — Recursive Language Models (RLMs): agentes tratam prompt como variável num REPL Python, geram sub-agentes recursivamente; sub-agentes devem responder em outputs estruturados
+- [[03-RESOURCES/sources/claude-subagents-smart-boss-cheap-workers]] — Subagents Claude Code = markdown+YAML, contexto isolado/fresco; mental model "boss inteligente (Opus) delega a workers baratos"
+- [[03-RESOURCES/sources/loop-engineering-14-step-roadmap]] — Alavanca de produtividade migrou de "prompts melhores" para "desenhar o loop" — sistema que encontra trabalho, entrega, verifica, registra; roadmap 14 passos prompter→loop designer
+- [[03-RESOURCES/sources/capacity-efficiency-meta-unified-ai-agents]] — Meta: plataforma unificada de agentes codifica expertise de eng. sênior de eficiência em "skills" reutilizáveis sobre camada de "tools" (MCP padronizadas)
+- [[03-RESOURCES/sources/gbrain-shared-second-brain-hermes-openclaw]] — Múltiplos agent runtimes (Hermes+OpenClaw) com memórias separadas = "duas pessoas com diários separados"; second brain compartilhado resolve divergência
+- [[03-RESOURCES/sources/categorical-framework-self-revising-discovery-systems]] — Descoberta científica = revisão do regime representacional (evidência/artefatos/operações/verificadores tipados); framework categórico para AI agêntica em ciência
+- [[03-RESOURCES/sources/llm-evals-funnel-not-fork]] — LLM evals e A/B tests medem coisas diferentes; devem ser combinados como funil (eval filtra candidatos, A/B confirma), não alternativas
+- [[03-RESOURCES/sources/memory-architecture-github-copilot]] — GitHub Copilot reporta resultado de produção (não só benchmark): memória habilitada elevou merge rate de PRs de 83%→90%+
+- [[03-RESOURCES/sources/streamlining-security-investigations-with-agents]] — Slack: serviço de investigação de segurança agêntico, times de agentes investigam alertas colaborativamente — 7.500+ investigações, 500k+ tool calls/trimestre
+- [[03-RESOURCES/sources/designing-loops-with-fable-5]] — Modelos "Mythos" (Claude Fable 5) fortes em self-correction loops (rodar→feedback→autocorrigir até critério) e memória
+- [[03-RESOURCES/sources/claude-code-self-check-protocol]] — Claude Code entrega "done" sem rodar testes por padrão — problema é o pipeline; CLAUDE.md + hooks definem "done" e forçam auto-revisão
+- [[03-RESOURCES/sources/claude-code-honesty-setup-4-layers]] — Claude Code "mente" (fabrica funções/imports/resultados) por ser preditor de texto; setup de 4 camadas reduz fabricação quando não sabe
+- [[03-RESOURCES/sources/agent-harness-self-repair-opik]] — Observabilidade de agentes hoje só dá trace; diagnóstico/correção/prevenção ficam manuais — harness deveria se auto-reparar (Opik)
+- [[03-RESOURCES/sources/how-ai-agents-reshape-knowledge-work]] — Estudo Perplexity+Harvard sobre Computer (agent orchestrator, fev/2026): agentes vs assistentes conversacionais mudam trabalho de conhecimento
+- [[03-RESOURCES/sources/agent-driven-development-copilot]] — Tratar coding agents (Copilot CLI, Opus 4.6) como engenheiros juniores — contexto rico + guardrails + repo "agent-first" desbloqueia velocidade
+- [[03-RESOURCES/sources/evaluating-netflix-show-synopses-llm-judge]] — Netflix: LLM-as-a-Judge avalia sinopses de shows em escala, 85%+ concordância com escritores humanos
+- [[03-RESOURCES/sources/claude-artifacts-9-steps-app]] — Painel de Artifacts é ambiente de build ao vivo (React real), não só leitor — guia 9 passos ideia→app shareável sem código
+- [[03-RESOURCES/sources/how-to-build-10-ai-agents-and-use-them-right]] — Distingue "agente" (rota dinâmica) de "workflow" (cadeia fixa); 10 padrões de agente com prompts de produção testados
+- [[03-RESOURCES/sources/agents-in-biology-deterministic-retrieval]] — Infraestrutura de dados biológicos precisa redesign agent-first ("cidade antiga antes dos carros") para agentes úteis em descoberta científica
+- [[03-RESOURCES/sources/text-optimization-update-time-compute]] — Contra a visão "real learning happens in the weights": camada de texto mutável em runtime (prompts/memória) é alvo de otimização legítimo
+- [[03-RESOURCES/sources/mcp-core-architecture-explained]] — MCP é padrão de design de sistema (não só formato de conector): hosts descobrem/acessam/orquestram capacidades externas (tools/resources/prompts)
+- [[03-RESOURCES/sources/learn-from-latents-not-tokens-sample-complexity]] — Auto-supervisão preditiva sobre representações próprias (latentes) como alternativa de menor sample-complexity a LLMs/difusão treinados em tokens
+- [[03-RESOURCES/sources/mythos-fable-big-model-smell]] — Relato em primeira pessoa: Mythos/Fable tem "big model smell" — raciocínio surpreendente, sensação de modelo genuinamente diferente
+- [[03-RESOURCES/sources/spotify-multi-agent-advertising-architecture]] — Spotify Ads: substituiu workflows fragmentados (por canal/superfície) por camada multi-agente unificada de planejamento de mídia
+- [[03-RESOURCES/sources/filesystem-is-the-agent]] — Filesystem deixa de ser storage passivo e vira serviço central que o agente consome via APIs (getFile/writeFile/searchFiles/runContainer)
+- [[03-RESOURCES/sources/ai-gtm-brain-claude-code]] — "GTM brain": sistema agentic substitui julgamento humano (quem/quando/o quê) do envio em massa — loop de 5 partes via Claude Code
+- [[03-RESOURCES/sources/pm-os-v2-memory-loop]] — PM OS v1-1.8 produz artefatos mas perde contexto pós-reunião; v2 fecha o loop de memória entre sessões de IA
+- [[03-RESOURCES/sources/smaller-models-structurally-excluded]] — Modelos pequenos não são "subtreinados" — há porção da distribuição de treino que jamais aprendem, exclusão estrutural não escalável por dados
+- [[03-RESOURCES/sources/why-human-developers-still-bottleneck-ai-coding]] — MIT/Wharton + telemetria Microsoft (>100k devs): IA gera código em volume recorde, mas software *entregue* não acompanha — humano ainda é gargalo
+- [[03-RESOURCES/sources/17-prompts-hermes-run-while-you-sleep]] — Hermes recém-instalado é runtime ocioso; valor vem de prompts curados que viram jobs com gatilho+corpo+saída — 17 exemplos copy-paste
+- [[03-RESOURCES/sources/backpressure-loop-coding-agents]] — Coding agents aceleraram geração mas não validação — validação é o gargalo real; backpressure loop pattern fecha o feedback
+
+### Concurso (Direito Administrativo / Controle 3.0)
+
+- [[03-RESOURCES/sources/resumo-jurisprudencia-direito-administrativo]] — Compêndio de jurisprudência dominante STF/STJ em Direito Administrativo para concursos fiscais (AFRFB/ATRFB), material bônus Guia Controle 3.0
+- [[03-RESOURCES/sources/guia-estudo-controle-3-p1-2]] — Aprovação em concursos fiscais/controle = volume+qualidade de questões por Blocos de Assuntos + ciclos de revisão estruturados (Partes 1-2)
+
 ## Fontes Ingeridas em 2026-05-31
 
 ### Harness Theory / Skill Evolution / Shared Memory / Vault Curation / LLM Efficiency (pipeline v3)

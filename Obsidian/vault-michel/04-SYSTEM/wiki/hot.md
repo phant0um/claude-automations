@@ -419,3 +419,46 @@ Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harn
 - redução honesta ~35-45% (não 70-80%)
 - vault-reconcile NÃO afetado (nemotron 1M ctx, follow-up redesenho)
 **Top action:** próximo run real validar `triagem-<data>.md` mostra `motivo: heurística (score X)`
+
+## pipeline v4.2 — 2 levers (varredura 13 sources token-economy)
+**Data:** 2026-06-09
+- retry cap: máx 3/chamada, 10/fase → abortar+logar, não travar (v4.1 tirou Ollama, ficou sem cap)
+- handoff trim: report lê só Aprovados+flags do triagem, não tabela Score Individual inteira
+- 3 agentes → v1.2.0
+- resto das sources já coberto (model routing=advisor, CLEAN=log filter, SKILL.md=fat-skill) ou harness-level
+- zero contradição c/ v4.1
+⚠️ FIAP/concurso: 0 commits em 7d — considerar priorização de estudo
+
+## pipeline-diario 2026-06-09 — F1 triagem completa, F2/F3 PAUSADO
+**Data:** 2026-06-09
+- 59 candidatos novos (Clippings/, backlog acumulado — normal é poucos/dia)
+- Heurística bash: 40/59 resolvidos sem AI (68%). Borderline: 19 → batch Haiku
+- Resultado: 21 A, 36 B, 2 C (archive), 0 D
+- Aprovados: 57 arquivos → excede limiar de 50 (confirm-before-large-restructure, CLAUDE.md)
+- ⚠️ PAUSADO antes de F2 (ingest). Relatório: `06-GENERATED/triagem/triagem-2026-06-09.md`
+- Top action: usuário decidir — ingest completo (57 source pages, custo alto) vs
+  processar em lotes (ex: 10-15/dia) vs dispatch `claude-obsidian:wiki-ingest` paralelo
+
+## pipeline-diario v4.3 — fix dedup bug + cleanup stubs
+**Data:** 2026-06-10
+- F1.0b: grep não batia chave manifest c/ prefixo (`Clippings/x.md`) → re-triagem de já-ingeridos
+- Fix: checa caminho completo + `/basename"` além do formato antigo
+- 9 source pages corrompidas (texto "API Error...") apagadas em 03-RESOURCES/sources/
+- F2 (53 pendentes) ainda não processado — sessão anterior estourou limite, 0 escrita
+- Top action: rodar F2 em lotes pequenos (1-2 fontes/lote) ao longo de várias sessões
+
+## pipeline-diario v4.3 — F2 completo: 53/53 ingeridos
+**Data:** 2026-06-10
+- 53 pendentes processados em 5 rounds (2 agentes/round, evita session limit)
+- ~41 source pages novas em `03-RESOURCES/sources/` (categoria predominante: ai-agents)
+- 12 dedup-skips (já existiam pages cobrindo conteúdo — não duplicadas)
+- 1 consolidação (3 guias-de-estudo concurso → 1 página, Karpathy: 1 page > fragmentos)
+- Manifest atualizado: 1233→1280 entries (+47, jq atômico)
+- Concepts/entities enriquecidos via append: hermes, agent-shared-memory, agent-memory-architecture,
+  multi-agent-orchestration, model-routing, agent-vfs-pattern, agentic-sdlc, mythos-moment-ai, etc.
+- Concept novo: `ai-skills-testing-process.md` (metodologia Pinterest)
+- Todos originais arquivados em `08-ARCHIVE/A` ou `08-ARCHIVE/B`
+- Top action: F3 report (cluster analysis) + atualizar `triagem-2026-06-09.md` (53 vs 57)
+- ⚠️ dedup-gap pattern: ~12 arquivos do batch já tinham source equivalente não detectada
+  pela triagem original (slugs divergentes) — considerar wiki-lint pra achar mais casos
+⚠️ FIAP/concurso: 0 commits em 7d — considerar priorização de estudo

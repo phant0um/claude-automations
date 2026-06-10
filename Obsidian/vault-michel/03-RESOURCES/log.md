@@ -1,3 +1,40 @@
+- 2026-06-10 | ingest | leap-formal-mathematics-agentic-framework | LEAP framework (paper)
+- 2026-06-10 | ingest | anthropic-ant-cli-managed-agents-guide | Anthropic
+- 2026-06-10 | ingest | autoloops-spark-domain-chips | Autoloops/Spark
+- 2026-06-10 | ingest | ai-skills-testing-process-pinterest | Pinterest engineering
+- 2026-06-10 | ingest | rlm-agents-structured-outputs-subagents | RLM agents (paper)
+- 2026-06-10 | ingest | claude-subagents-smart-boss-cheap-workers | Claude Code subagents guide
+- 2026-06-10 | ingest | loop-engineering-14-step-roadmap | Loop Engineering roadmap
+- 2026-06-10 | ingest | capacity-efficiency-meta-unified-ai-agents | Meta engineering
+- 2026-06-10 | ingest | gbrain-shared-second-brain-hermes-openclaw | Hermes/OpenClaw guide
+- 2026-06-10 | ingest | categorical-framework-self-revising-discovery-systems | paper — agentic science
+- 2026-06-10 | ingest | llm-evals-funnel-not-fork | LLM evals essay
+- 2026-06-10 | ingest | memory-architecture-github-copilot | GitHub Copilot memory
+- 2026-06-10 | ingest | streamlining-security-investigations-with-agents | Dominic Marks (Slack Security)
+- 2026-06-10 | ingest | designing-loops-with-fable-5 | Claude Fable 5 guide
+- 2026-06-10 | ingest | claude-code-self-check-protocol | @0x_rody
+- 2026-06-10 | ingest | claude-code-honesty-setup-4-layers | Claude Code honesty setup
+- 2026-06-10 | ingest | agent-harness-self-repair-opik | Akshay Pachaar (@akshay_pachaar)
+- 2026-06-10 | ingest | how-ai-agents-reshape-knowledge-work | Perplexity/Harvard Business School
+- 2026-06-10 | ingest | resumo-jurisprudencia-direito-administrativo | Guia Controle 3.0 (vinteumconcursos)
+- 2026-06-10 | ingest | agent-driven-development-copilot | Copilot Applied Science
+- 2026-06-10 | ingest | evaluating-netflix-show-synopses-llm-judge | Netflix
+- 2026-06-10 | ingest | claude-artifacts-9-steps-app | Claude Artifacts guide
+- 2026-06-10 | ingest | how-to-build-10-ai-agents-and-use-them-right | AI agents patterns guide
+- 2026-06-10 | ingest | agents-in-biology-deterministic-retrieval | Anthropic — agents in biology
+- 2026-06-10 | ingest | text-optimization-update-time-compute | Yoonho Lee (@yoonholeee)
+- 2026-06-10 | ingest | mcp-core-architecture-explained | MCP architecture guide
+- 2026-06-10 | ingest | learn-from-latents-not-tokens-sample-complexity | paper — sample-complexity
+- 2026-06-10 | ingest | mythos-fable-big-model-smell | @seejayhess
+- 2026-06-10 | ingest | spotify-multi-agent-advertising-architecture | Spotify engineering
+- 2026-06-10 | ingest | filesystem-is-the-agent | essay — agent filesystems
+- 2026-06-10 | ingest | ai-gtm-brain-claude-code | GTM brain guide
+- 2026-06-10 | ingest | pm-os-v2-memory-loop | @nurijanian (PM OS v2)
+- 2026-06-10 | ingest | smaller-models-structurally-excluded | essay — model scaling
+- 2026-06-10 | ingest | why-human-developers-still-bottleneck-ai-coding | MIT/Wharton + Microsoft telemetry
+- 2026-06-10 | ingest | 17-prompts-hermes-run-while-you-sleep | Hermes prompts guide
+- 2026-06-10 | ingest | backpressure-loop-coding-agents | bibryam
+- 2026-06-10 | ingest | guia-estudo-controle-3-p1-2 | Andrety Bruno (Guia Controle 3.0)
 - 2026-05-14 | ingest | conductor-rl-orchestration-sakana | Stefan Nielsen, Edoardo Cetin, Peter Schwendeman, Qi Sun, Jinglue Xu, Yujin Tang (Sakana AI)
 - 2026-05-14 | ingest | synthetic-computers-at-scale-microsoft | Tao Ge, Baolin Peng, Hao Cheng, Jianfeng Gao (Microsoft)
 - 2026-05-09 | ingest | first-principles-thinking-see-what-everyone-misses | @jaynitx
