@@ -122,6 +122,60 @@ Para operações de manutenção/melhoria do próprio sistema:
 
 Ao invocar agentes de Vault SO: ler `04-SYSTEM/AGENTS.md` para contexto de roteamento.
 
+### Skill Injection — Roteamento Detalhado (agentes core)
+
+Ao delegar para agente core, **injetar as skills listadas** no prompt (conteúdo completo, não só referência):
+
+| Tarefa | Agente | Skills a injetar | Modelo inicial |
+|--------|--------|-----------------|----------------|
+| Segurança, audit, OWASP | `guard` | nenhuma (autossuficiente) | Opus |
+| Melhoria de agente existente | `hill` | `hill-climb.md` | Haiku → Sonnet |
+| Quality gate pós-implementação | `verify` | `complexity-ratchet.md` | Sonnet |
+| Extensão cirúrgica de agente | `extend` | `spec-lifecycle.md`, `complexity-ratchet.md` | Haiku → Sonnet |
+| Drift de docs/config | `review` | `drift-review.md` | Haiku |
+| Spec de nova feature | `spec` | `spec-lifecycle.md` | Sonnet |
+| Spec arquitetural (A vs B) | `spec` | `spec-lifecycle.md`, `debate.md` | Sonnet → Opus |
+| Decisão multi-dimensional (não A vs B) | `spec` | `spec-lifecycle.md`, `council.md` | Sonnet → Opus |
+| Mudança arquitetural concluída | — | `decisions.md` | Haiku |
+| Ingestão de fontes | `wiki-ingest` | nenhuma (skill própria) | Haiku |
+| Auditoria do vault | `vault-audit` | `drift-review.md` | Haiku |
+| Clusters temáticos | `cluster-agent` | nenhuma | Haiku |
+
+**Regra:** nunca delegue para agente core sem injetar as skills da tabela.
+
+### Workflows pré-delegação
+
+```
+Drift suspeito:        /score-drift <slug> → /probe <slug> → /trace se score<6 → @hill <slug>
+Spec arquitetural:     /debate "A vs B?" → @spec [feature] com veredicto do debate
+Spec multi-dimensional: /council [questão] → @spec [feature] com veredicto do council
+Pós-mudança arquitetural: /decisions → registra em 04-SYSTEM/wiki/decisions.md
+```
+
+### Escalada de Modelo (geral)
+
+```
+Tarefa simples (1 agente, escopo claro)         → Sonnet
+Tarefa multi-agente (2+ agentes em paralelo)    → Sonnet + monitor
+Conflito de veredicto entre agentes             → Opus para arbitragem
+Operação destrutiva (delete, force-push, >50 files) → Opus + confirmação
+```
+
+### Detecção Proativa (agentes core)
+
+| Sinal | Agente disparado |
+|-------|-----------------|
+| Arquivo `.py`/`.ts` com autenticação ou criptografia | `guard` automaticamente sugerido |
+| `@hill` + nome de agente | `hill` com `hill-climb.md` injetado |
+| "valida", "verifica", "passou" pós-implementação | `verify` sugerido |
+| "adicionar", "nova ferramenta" + nome de agente | `extend` sugerido |
+| Wikilinks quebrados detectados | `review` sugerido |
+| ≥3 fontes sobre mesmo tema sem concept page | `cluster-agent` sugerido |
+
+**Regras adicionais:**
+- Conflito: se `guard` BLOQUEIA e `verify` PASS → `guard` prevalece sempre
+- Não usar `extend` quando `hill` é mais apropriado (extend = cirúrgico; hill = melhoria contínua)
+
 ## Camada Vault Nativa (v3 — Ollama Cloud)
 
 Agentes vault-nativos que cobrem o pipeline diário `07-QUEUE/rotinas/pipeline-diario.md`:

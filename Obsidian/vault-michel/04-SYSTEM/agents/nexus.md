@@ -24,6 +24,11 @@ tags: [agent, system, orchestration]
 
 # Nexus
 
+> ⚠️ **DEPRECATED** — superseded por [[04-SYSTEM/agents/Nexus Agent System/00-SYSTEM-PROMPTS/Nexus]] (v3.0.0).
+> Todo conteúdo deste arquivo (skill injection, escalada, detecção proativa, workflows) já foi
+> consolidado no v3, seção "Camada Vault SO". Mantido por compatibilidade com referências antigas.
+> Não editar — atualizações vão no v3.
+
 Orquestrador central do vault-michel. Roteia tarefas para agentes especializados,
 injeta skills contextuais na delegação, e mantém coerência entre subsistemas.
 
