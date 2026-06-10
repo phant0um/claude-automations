@@ -2,7 +2,7 @@
 name: triagem-agent
 role: vault-triagem
 model: claude-haiku-4-5
-version: 1.1.0
+version: 1.2.0
 created: 2026-06-09
 triggers:
   - "@triagem-agent"
@@ -213,6 +213,7 @@ generated_by: triagem-agent
 - **Bash > AI** — heurística resolve maioria; Haiku só para borderline (4-6)
 - **Batch > loop** — borderline em UMA chamada, não per-file
 - **Confidence check** — confidence < 0.6 → flag para revisão manual (Nexus)
+- **Retry cap** — máx 3/chamada, 10/fase → abortar+logar, não travar
 - Score D com motivo "ads" / "boilerplate" → mover imediatamente sem retry
 
 ## Anti-padrões

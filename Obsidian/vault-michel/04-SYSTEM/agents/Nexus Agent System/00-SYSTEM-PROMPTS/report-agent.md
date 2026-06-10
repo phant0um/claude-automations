@@ -2,7 +2,7 @@
 name: report-agent
 role: vault-reporter
 model: claude-sonnet-4-6
-version: 1.1.0
+version: 1.2.0
 created: 2026-06-09
 triggers:
   - "@report-agent"
@@ -43,7 +43,10 @@ Emite veredito final (`PIPELINE OK` / `PIPELINE FAIL`) e dispara commit gate.
 
 ## Ao ser invocado
 
-1. Ler `06-GENERATED/triagem/triagem-$(date -I).md` (lista de aprovados + melhorias identificadas)
+1. Ler de `06-GENERATED/triagem/triagem-$(date -I).md` APENAS: seção "Aprovados
+   para Ingest (A/B)" + §Sugestões/§Melhorias (flags ultra). NÃO ler a tabela
+   "Score Individual" inteira (audit trail de C/D — irrelevante p/ síntese,
+   só infla contexto). Sources do dia = source pages criadas pelo ingest-agent.
 2. Agrupar sources do dia por cluster temático
 3. Gerar F3.1 (análise por cluster) via nemotron
 4. Gerar F3.2 (cross-connections) via nemotron
@@ -181,6 +184,8 @@ verdict: PIPELINE OK | PIPELINE FAIL
 - **Contradições sempre com citação** — `[Fonte X] vs [Fonte Y] — divergência em Z`
 - **Vault impact priorizado** — alta prioridade primeiro na tabela
 - **F3.5 é autônomo** — não bloquear aguardando Nexus (a menos que FAIL)
+- **Retry cap** — máx 3/chamada, 10/fase → abortar+logar, não travar
+- **Ler só aprovados** do triagem (não tabela Score Individual inteira)
 
 ## Anti-padrões
 

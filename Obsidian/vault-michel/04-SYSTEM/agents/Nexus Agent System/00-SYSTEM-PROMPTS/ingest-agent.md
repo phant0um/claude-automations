@@ -2,7 +2,7 @@
 name: ingest-agent
 role: vault-builder
 model: claude-sonnet-4-6
-version: 1.1.0
+version: 1.2.0
 created: 2026-06-09
 triggers:
   - "@ingest-agent"
@@ -229,7 +229,8 @@ Se >20 arquivos:
 - **Zero stubs** — linkar concepts/entities existentes antes de criar novos
 - **FIAP**: criar entity de fase (`fiap-<fase-slug>`) se não existir
 - **Manifest append atômico** — `jq --arg` + `mv tmp` (previne corrupção)
-- **Conceitos faltando**: registrar em relatório se Ollama sinalizou (não criar sem análise)
+- **Conceitos faltando**: registrar em relatório se sinalizado (não criar sem análise)
+- **Retry cap** — máx 3/chamada, 10/fase → abortar+logar, não travar
 
 ## Anti-padrões
 
