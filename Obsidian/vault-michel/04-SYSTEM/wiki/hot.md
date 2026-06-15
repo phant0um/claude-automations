@@ -551,3 +551,107 @@ Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harn
   sobre (1) decisão Hermes consolidação 2026-06-13 e (2) os 247 arquivos
   uncommitted (commit separado? revert? trabalho em andamento?).
 - FIAP/concurso: 0 commits em 7d (flag já registrada novamente acima).
+
+## pipeline-diario v4.3 — 2026-06-14 (16h, retomada pós-bloqueio): F2/F3 — 99 sources
+**Data:** 2026-06-14
+- Retomado backlog de 2026-06-13 (99 aprovados, 5A/94B), sem nova rodada F1
+  (mesmo backlog, nada movido desde então — F1.0 reaproveitado).
+- **Cluster 1 — Hermes Agent docs oficiais (61 arquivos → 5 pages novas)**:
+  `hermes-agent-docs-features-2.md` (17, memory providers/plugins/kanban/LSP/ACP),
+  `-cli-config.md` (16), `-messaging.md` (5, Discord/Telegram/SMS/Email/Nous Portal),
+  `-guides-1.md` (12), `-guides-2.md` (10) + user-stories→append onboarding.md.
+  `hermes.md` entity +5 seções "Docs Oficiais". Vault agora tem 9 pages
+  oficiais Hermes + 52 community (overlap-risk 06-10 ainda não resolvido —
+  consolidação dos 52 community fica pra outra rodada).
+- **Cluster 2 — mattpocockskills + Claude/Fable5 guides (23 arquivos)**: 100%
+  já ingeridos em sessão anterior 06-13 (`mattpocock-additional-skills-2026-06.md`,
+  `claude-cowork-fable5-practical-guides-2026-06.md`, `agent-design-essays-2026-06.md`)
+  — manifest não tinha esses entries (gap no F1.0 dedup), agora corrigido.
+- **Cluster 3 — misc agent tools/finance/produto (15 arquivos)**: 12 já
+  cobertos (`5-agent-tools-skills-2026-06.md`, `quant-trading-signal-frameworks-2026-06.md`,
+  `agent-design-essays-2026-06.md`), 3 novos → 2 pages novas
+  (`product-growth-essays-2026-06.md`, `nessie-context-layer-2026-06.md`).
+- **Manifest**: +99 entries (5 pages_created reais [Hermes] + 2 pages_created
+  [cluster 3] + 92 pages_updated apontando pra pages já existentes).
+- **Archive**: 99 Clippings → `08-ARCHIVE/[A|B]/2026-06-14/` (5A/94B).
+- F2.8 spot-check (3 amostras: features-2, messaging, product-growth-essays):
+  tese central OK, profundidade preservada (54KB/14KB/8KB), wikilinks resolvem.
+- F3 cross-conn: Hermes features-2 ↔ features.md (memory continuum), ↔
+  integrations.md (messaging gateway geral vs setup por canal); nessie-context-layer
+  = nova entity candidata (ferramenta de contexto, ainda sem entity própria).
+- **F3.5 veredito: PIPELINE OK** (com 2 follow-ups, não bloqueantes):
+  (1) ~~consolidar 52 sources Hermes community~~ — ✅ feito 2026-06-14: 37
+  fontes consolidadas em 3 pages temáticas (`hermes-community-onboarding`,
+  `-integrations`, `-multiagent-usecases`) em `ai-agents-harness/`, cross-link
+  na entity [[03-RESOURCES/entities/hermes]] seção "Comunidade";
+  (2) considerar criar `[[03-RESOURCES/entities/Nessie]]` (ferramenta nova,
+  2 sources já cobrem).
+- `sources-index.md` regenerado 2026-06-14 a partir de `.raw/.manifest.json`
+  (920 pages, 13 categorias).
+- FIAP/concurso: 0 commits 7d (flag mantida).
+
+## 2026-06-15 — Pipeline BLOQUEADO (anomalia Nexus Gate)
+
+- F1.0b scan: 800 candidatos novos (normal: 30-100/dia).
+- 790/800 = `Clippings/curso-XXXXXX-aulaXX-*-completo.md` (Receita Federal —
+  AFRFB/ATRFB, Português/Legislação), convertidos PDF→MD em 2026-06-14,
+  ~200KB/644 linhas cada, nunca passaram por manifest/triagem.
+- Outros 10 novos: 5 artigos AI/agents + 5 concurso (cns101/102/201/202,
+  serfb-01-gabaritos).
+- **Decisão**: pipeline diário bloqueado para o lote de 790 aulas — custo
+  estimado (triagem+ingest 790 source pages) excede budget normal em ~10-20x
+  e provavelmente precisa estratégia diferente (consolidação por curso/disciplina,
+  não 1 page por aula). Aguardando instrução do usuário sobre tratamento
+  (batch dedicado vs pipeline normal vs consolidação).
+- Os 10 candidatos restantes (5 AI/agents + 5 concurso pequenos) podem seguir
+  fluxo normal numa rodada separada se autorizado.
+- FIAP/concurso: 24 commits 7d (flag anterior "0 commits" removida — falso,
+  havia atividade git fora do escopo de Clippings).
+
+## 2026-06-15 — Pipeline retomado (10 aprovados, rodada manual)
+
+Lote dos 790 aulas RFB segue bloqueado (ver entrada acima). Os 10 restantes
+processados manualmente (corpus <20, sem heurística/batch — triagem direta):
+
+**5 AI/agents (Clippings, todos A/B, sem condensação)**:
+- "9 Things My Obsidian Vault Does While I Sleep" (@DamiDefi, A) → append
+  `pkm-obsidian-second-brain/obsidian-vault-smarter-every-day-automation.md`
+  (9 specs N8N node-a-node, complementa arquitetura 4-camadas existente)
+- "Autonomous Long-Running Coding Agents" (@omarsar0, A) → novo ensaio #9 em
+  `ai-agents-harness/agent-design-essays-2026-06.md` (goal/evaluator/verifier/loop,
+  formaliza os 3 gates Sonnet do pipeline)
+- "claude code-maxxing: project loop" (@Voxyz_ai, A) → ensaio #10 mesma page
+  (CLAUDE.md/.claude/rules/hooks como memória de projeto — confirma
+  hot.md/memory/handoff pattern já em uso)
+- "The 7-day Hermes setup" (@zaimiri, B) → append
+  `ai-agents-harness/hermes-agent-complete-guide.md` (sequência de
+  implementação Identity→Memory→Skills→Tools→Telegram→Crons→Profiles)
+- "A frontier without an ecosystem is not stable" (@satyanadella, B) →
+  ensaio #11 mesma page agent-design-essays (capital humano/token capital,
+  valida tese "conhecimento em arquivos = sovereignty")
+
+**5 concurso RFB (todos preservados integrais, sem condensação)**:
+- 4 provas AFRFB/ATRFB (manhã/tarde, TIPO 1 BRANCA) → nova pasta
+  `02-AREAS/concurso/provas/rfb-afrfb-atrfb-2026/` + index.md
+- gabarito preliminar edital 01/2022 (prova 2023-03-19) →
+  `02-AREAS/concurso/provas/rfb-edital-01-2022/`
+
+**Manifest**: +10 entries (0 pages_created novos de fato — todos appends/moves
+para pages/pastas existentes ou novas mas dentro de estrutura existente).
+**Archive**: 5 Clippings AI/agents → `08-ARCHIVE/[A|B]/2026-06-15/` (3A/2B).
+5 concurso movidos diretamente (sem archive — pattern "reorganized" igual
+aulas, arquivo permanece no destino final).
+
+Spot-check: wikilinks `[[prova-*]]` resolvem (mesma pasta), seções novas
+renderizam (14 `##` em agent-design-essays, +1 Complemento em cada page
+pkm/hermes).
+
+**F3.5 veredito: PIPELINE OK** (rodada parcial — 10/800).
+**Commit gate**: só 2 arquivos rastreados por git mudaram (hot.md,
+code-optimize.md pré-existente) — abaixo do threshold (>3), sem commit
+automático.
+
+**Top action / pendências**:
+1. Decisão sobre lote 790 aulas RFB (ver entrada anterior) — ainda em aberto.
+2. Considerar criar entity `Receita Federal do Brasil` (AFRFB/ATRFB) —
+   155 curso/aula entries + agora +5 provas, sem entity própria.
