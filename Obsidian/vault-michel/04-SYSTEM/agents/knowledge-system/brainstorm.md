@@ -141,7 +141,7 @@ Se o tema tiver ação clara: proponha 2–3 próximos passos concretos. Se for 
 
 ---
 
-*Ver também: [[04-SYSTEM/agents/Knowledge System/kore]] · [[04-SYSTEM/agents/Knowledge System/pena]] · [[04-SYSTEM/agents/standalone/brainstorm]]*
+*Ver também: [[04-SYSTEM/agents/knowledge-system/kore]] · [[04-SYSTEM/agents/knowledge-system/pena]] · [[04-SYSTEM/agents/standalone/brainstorm]]*
 
 ## Fora do Escopo
 - Pesquisa aprofundada (→ Farol)

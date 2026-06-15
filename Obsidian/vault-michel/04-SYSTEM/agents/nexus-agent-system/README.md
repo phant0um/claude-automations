@@ -68,12 +68,10 @@ nexus (orchestrator)
 |--------------------------|--------------------------------------------|
 | `docs/improve-agent.md`  | Loop de melhoria contínua (lifecycle loop) |
 | `docs/progress.md`       | Estado atual — tarefas, bloqueios, próximos|
-| `docs/adr/`              | Decisões arquiteturais com contexto        |
 | `docs/standards.md`      | Critérios de qualidade e anti-padrões      |
 | `docs/constitution.md`   | Princípios e limites do sistema            |
 | `00-SYSTEM-PROMPTS/model-router.md` | Tabela de roteamento Claude vs Ollama |
-| `docs/adr/ADR-001-ollama-model-router.md` | Decisão: Ollama Cloud como Model Router |
-| `docs/adr/ADR-002-vault-reconcile-agent.md` | Decisão: agente de reconciliação |
+| `04-SYSTEM/wiki/adr/`    | Decisões arquiteturais (ADR-NX-001..003)   |
 
 ## Como Invocar
 

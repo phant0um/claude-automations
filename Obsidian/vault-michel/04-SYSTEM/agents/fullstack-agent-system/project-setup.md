@@ -32,5 +32,5 @@ Usar `00-SYSTEM-PROMPTS/Orchestrator.md` para sessões completas. Para trabalho 
 
 ## Refs
 
-- Sistema completo: [[04-SYSTEM/agents/Fullstack Agent System/README]]
+- Sistema completo: [[04-SYSTEM/agents/fullstack-agent-system/README]]
 - Memory agents: [[04-SYSTEM/agents/memory/maestro]], [[04-SYSTEM/agents/memory/stratum]], [[04-SYSTEM/agents/memory/facet]]

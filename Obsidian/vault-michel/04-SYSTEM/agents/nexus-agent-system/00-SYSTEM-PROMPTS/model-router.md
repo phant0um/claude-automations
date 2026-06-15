@@ -102,4 +102,4 @@ unset ANTHROPIC_AUTH_TOKEN
 
 **Status:** active desde 2026-06-09
 **Owner:** Nexus
-**Decisão:** ADR-001-ollama-model-router.md
+**Decisão:** ADR-NX-001-ollama-model-router.md

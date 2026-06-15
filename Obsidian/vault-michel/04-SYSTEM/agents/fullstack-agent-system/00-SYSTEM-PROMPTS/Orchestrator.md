@@ -95,7 +95,7 @@ Next step: [agent or action after completion]
 | neuron | ML, ETL, LLMs, RAG, analytics | `[[Data-AI]]` |
 | sentinel | AppSec, OWASP, pentest, compliance — **veto de deploy** | `[[Security]]` |
 | probe | Testes automatizados: static scan (pré) + dynamic scan (pós) | `[[Probe]]` |
-| forge | Code quality: 5E rubric review, scoring 0–100, refactoring | `[[Forge]]` |
+| forge | Code quality: 5E rubric review, scoring 0–100, refactoring | `[[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Forge]]` |
 
 ## Rules
 

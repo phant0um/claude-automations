@@ -2,7 +2,7 @@
 name: ingest-agent
 role: vault-builder
 model: claude-sonnet-4-6
-version: 1.2.0
+version: 1.3.0
 created: 2026-06-09
 triggers:
   - "@ingest-agent"
@@ -14,11 +14,19 @@ reads:
   - 03-RESOURCES/concepts/
   - 03-RESOURCES/entities/
   - 03-RESOURCES/sources/
+  - 02-AREAS/fiap/sources/
+  - 02-AREAS/fiap/entities/
+  - 02-AREAS/concurso/sources/
+  - 02-AREAS/concurso/entities/
   - .raw/.manifest.json
 writes:
   - 03-RESOURCES/sources/
   - 03-RESOURCES/concepts/
   - 03-RESOURCES/entities/
+  - 02-AREAS/fiap/sources/
+  - 02-AREAS/fiap/entities/
+  - 02-AREAS/concurso/sources/
+  - 02-AREAS/concurso/entities/
   - 04-SYSTEM/skills/
   - 04-SYSTEM/agents/
   - 04-SYSTEM/hooks/
@@ -51,9 +59,15 @@ após ingest completo.
 1. Ler `/tmp/candidates_aprovados.txt` (gerado pelo triagem-agent)
 2. Para cada arquivo aprovado:
    - Classificar: artigo, ai-agents, concurso ou fiap
-   - Gerar source page em `03-RESOURCES/sources/<slug>.md`
+   - Gerar source page:
+     - `articles/ai-agents` → `03-RESOURCES/sources/<slug>.md`
+     - `fiap` → `02-AREAS/fiap/sources/<slug>.md`
+     - `concurso` → `02-AREAS/concurso/sources/<slug>.md`
    - Se faltar concept relacionado → criar `03-RESOURCES/concepts/<nome>.md`
-   - Se faltar entity relacionada → criar `03-RESOURCES/entities/<nome>.md`
+   - Se faltar entity relacionada:
+     - `fiap` → `02-AREAS/fiap/entities/<nome>.md`
+     - `concurso` → `02-AREAS/concurso/entities/<nome>.md`
+     - demais → `03-RESOURCES/entities/<nome>.md`
    - Se detectar skill reutilizável → criar `04-SYSTEM/skills/<nome>.md`
    - Se detectar padrão de agente → criar draft em `04-SYSTEM/agents/<nome>.md`
    - Se detectar hook recorrente → registrar em `04-SYSTEM/hooks/<nome>.md`
@@ -64,6 +78,9 @@ após ingest completo.
 ## Templates
 
 ### F2.3a — Artigos / ai-agents / concurso
+
+`concurso`: source page em `02-AREAS/concurso/sources/<slug>.md`, link entity em
+`02-AREAS/concurso/entities/<entity>.md` (concepts seguem em `03-RESOURCES/concepts/`).
 
 Referência: `pipeline-diario.md` § F2.3a.
 
@@ -94,12 +111,15 @@ tags: [<category>]
 
 ## Links
 - [[03-RESOURCES/concepts/<kw>]]
-- [[03-RESOURCES/entities/<entity>]]
+- [[03-RESOURCES/entities/<entity>]] (ou `02-AREAS/concurso/entities/<entity>` se categoria=concurso)
 ```
 
 ### F2.3b — FIAP (material de estudo)
 
 Referência: `pipeline-diario.md` § F2.3b.
+
+Source page em `02-AREAS/fiap/sources/<slug>.md`, entity de fase em
+`02-AREAS/fiap/entities/fiap-<fase-slug>.md`.
 
 **Princípio**: preservar completamente — é material de estudo, condensar = perda.
 Ler snippet completo (8000 chars). Incluir todos os conceitos. Não limitar a 5.
@@ -137,7 +157,7 @@ fiap_fase: <Fase N — Nome>
 
 ## Links
 - [[03-RESOURCES/concepts/<kw>]]
-- [[03-RESOURCES/entities/fiap-<fase-slug>]]
+- [[02-AREAS/fiap/entities/fiap-<fase-slug>]]
 ```
 
 ## Comandos de Execução
@@ -195,8 +215,13 @@ Por categoria, `claude-sonnet-4-6`:
 while IFS='|' read -r f slug category; do
   bn=$(basename "$f")
   _hash=$(md5 -q "$f" 2>/dev/null || md5sum "$f" | cut -d' ' -f1)
+  case "$category" in
+    fiap) _dir="02-AREAS/fiap/sources" ;;
+    concurso) _dir="02-AREAS/concurso/sources" ;;
+    *) _dir="03-RESOURCES/sources" ;;
+  esac
   jq --arg k "$bn" --arg h "$_hash" --arg d "$(date -I)" \
-     --arg c "$category" --arg p "03-RESOURCES/sources/$slug.md" \
+     --arg c "$category" --arg p "$_dir/$slug.md" \
      '.sources[$k] = {hash: $h, ingested_at: $d, category: $c, pages_created: [$p]}' \
      .raw/.manifest.json > /tmp/manifest.tmp && mv /tmp/manifest.tmp .raw/.manifest.json
 done < /tmp/classify.txt
@@ -248,7 +273,8 @@ Se >20 arquivos:
 - Decisão de manter/rejeitar source page (→ Nexus review)
 
 ## Critério de Qualidade (Critério de Done)
-- [ ] Todas as source pages criadas em `03-RESOURCES/sources/`
+- [ ] Source pages criadas em `03-RESOURCES/sources/` (artigos/ai-agents),
+  `02-AREAS/fiap/sources/` (fiap) ou `02-AREAS/concurso/sources/` (concurso)
 - [ ] Concepts/entities complementados (ou flagged se ambíguo)
 - [ ] `.raw/.manifest.json` atualizado atomicamente
 - [ ] A/B movidos para `08-ARCHIVE/[A|B]/`
@@ -260,6 +286,11 @@ Se >20 arquivos:
 **Output:** "Ingest completo. 20 sources criadas: 14 artigos, 4 ai-agents, 2 concurso. 3 concepts novos + 1 entity nova complementados. Manifest atualizado. 8 A + 12 B arquivados. → report-agent."
 
 ---
+
+**v1.3.0 (2026-06-14):** FIAP/concurso source pages + entities movidos de
+`03-RESOURCES/` para `02-AREAS/fiap/` e `02-AREAS/concurso/` (respectivos
+`sources/` e `entities/`). Concepts continuam compartilhados em
+`03-RESOURCES/concepts/`. Manifest `pages_created` aponta para novo path.
 
 **Status:** active desde 2026-06-09
 **Pipeline integration:** substitui F2.0–F2.7 + F2.9 do `pipeline-diario.md`

@@ -22,4 +22,4 @@ Setup detalhado: `mtg-arena-coach-project-setup.md`.
 
 ## Refs
 
-- MTG setup: [[04-SYSTEM/agents/Hobby System/mtg-arena-coach-project-setup]]
+- MTG setup: [[04-SYSTEM/agents/hobby-system/mtg-arena-coach-project-setup]]

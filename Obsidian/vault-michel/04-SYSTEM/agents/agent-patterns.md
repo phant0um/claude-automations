@@ -61,5 +61,5 @@ Ganho principal não é paralelismo — é context compression. Sub-agent proces
 - [[03-RESOURCES/concepts/agent-systems/agentic-patterns]] — conceito detalhado
 - [[03-RESOURCES/concepts/agent-systems/agent-architecture]] — arquitetura por camadas
 - [[03-RESOURCES/concepts/agent-systems/agent-harness]] — thin harness pattern
-- [[04-SYSTEM/agents/agentic-reasoning]] — como agentes raciocinam
+- [[03-RESOURCES/concepts/agent-systems/agentic-reasoning]] — como agentes raciocinam
 - [[04-SYSTEM/AGENTS]] — aplicação concreta no vault

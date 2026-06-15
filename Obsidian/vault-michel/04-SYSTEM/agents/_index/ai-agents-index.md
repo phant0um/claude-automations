@@ -26,70 +26,70 @@ Biblioteca de 37 agentes Claude organizados em 8 categorias. Prompts otimizados 
 
 **Propósito:** Pesquisa aprofundada, produção de texto, decisões complexas e otimização de prompts
 
-- [[04-SYSTEM/agents/Knowledge System/kore|Kore]] — Orquestrador · `@kore`
-- [[04-SYSTEM/agents/Knowledge System/farol|Farol]] — Pesquisa e aprendizado
-- [[04-SYSTEM/agents/Knowledge System/pena|Pena]] — Escrita e clarificação
-- [[04-SYSTEM/agents/Knowledge System/bussola|Bussola]] — Decisões e projetos complexos
-- [[04-SYSTEM/agents/Knowledge System/sigma|Sigma]] — Otimização de prompts
+- [[04-SYSTEM/agents/knowledge-system/kore|Kore]] — Orquestrador · `@kore`
+- [[04-SYSTEM/agents/knowledge-system/farol|Farol]] — Pesquisa e aprendizado
+- [[04-SYSTEM/agents/knowledge-system/pena|Pena]] — Escrita e clarificação
+- [[04-SYSTEM/agents/knowledge-system/bussola|Bussola]] — Decisões e projetos complexos
+- [[04-SYSTEM/agents/knowledge-system/sigma|Sigma]] — Otimização de prompts
 
 ## Edu System (Concurso, Idiomas, TI & Carreira)
 
 **Propósito:** Estudos para concurso público, idiomas, formação em TI e desenvolvimento de carreira
 
-- [[04-SYSTEM/agents/Edu System/00-SYSTEM-PROMPTS/Mestre|Mestre]] — Orquestrador · `@mestre`
-- [[04-SYSTEM/agents/Edu System/00-SYSTEM-PROMPTS/Banca|Banca]] — Concurso público (aulas, questões, plano por banca)
-- [[04-SYSTEM/agents/Edu System/00-SYSTEM-PROMPTS/Babel|Babel]] — Idiomas para viajantes (4 modos: situacional, conversação, técnico)
-- [[04-SYSTEM/agents/Edu System/00-SYSTEM-PROMPTS/Stack|Stack]] — TI, ADS e carreira tech (tutor adaptativo, projeto guiado, entrevista)
-- [[04-SYSTEM/agents/Edu System/00-SYSTEM-PROMPTS/Sintese|Sintese]] — Resumos Obsidian, flashcards Anki, questões, mapa mental
-- [[04-SYSTEM/agents/Edu System/00-SYSTEM-PROMPTS/Trilha|Trilha]] — CV PT-BR + EN, otimização ATS, LinkedIn, estágios
-- [[04-SYSTEM/agents/Edu System/00-SYSTEM-PROMPTS/Tutor|Tutor]] — Tutor adaptativo geral
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Mestre|Mestre]] — Orquestrador · `@mestre`
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Banca|Banca]] — Concurso público (aulas, questões, plano por banca)
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Babel|Babel]] — Idiomas para viajantes (4 modos: situacional, conversação, técnico)
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Stack|Stack]] — TI, ADS e carreira tech (tutor adaptativo, projeto guiado, entrevista)
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Sintese|Sintese]] — Resumos Obsidian, flashcards Anki, questões, mapa mental
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Trilha|Trilha]] — CV PT-BR + EN, otimização ATS, LinkedIn, estágios
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Tutor|Tutor]] — Tutor adaptativo geral
 
 ## Travel System (Viagens end-to-end)
 
 **Propósito:** Busca de voos/hotéis, criação e refinamento de itinerários
 
-- [[04-SYSTEM/agents/Travel System/rota|Rota]] — Orquestrador · `@rota`
-- [[04-SYSTEM/agents/Travel System/00-SYSTEM-PROMPTS/Caca|Caça]] — Busca estratégica de voos, hotéis e carros
-- [[04-SYSTEM/agents/Travel System/rumo|Rumo]] — Criação de itinerário (roteiros diários)
-- [[04-SYSTEM/agents/Travel System/ajuste|Ajuste]] — Refinamento de roteiros já fechados
+- [[04-SYSTEM/agents/travel-system/rota|Rota]] — Orquestrador · `@rota`
+- [[04-SYSTEM/agents/travel-system/00-SYSTEM-PROMPTS/Caca|Caça]] — Busca estratégica de voos, hotéis e carros
+- [[04-SYSTEM/agents/travel-system/rumo|Rumo]] — Criação de itinerário (roteiros diários)
+- [[04-SYSTEM/agents/travel-system/ajuste|Ajuste]] — Refinamento de roteiros já fechados
 
 ## Fullstack Agent System (Dev, Infra, Segurança)
 
 **Propósito:** Desenvolvimento fullstack end-to-end — backend, frontend, infra, dados e segurança
 
-- [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Orchestrator|Orchestrator]] — Orquestrador · `@orchestrator`
-- [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Backend-Dev|Backend-Dev]] — APIs, DB, lógica de negócio
-- [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Frontend-Dev|Frontend-Dev]] — UI, componentes, UX
-- [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Infra-Cloud|Infra-Cloud]] — Cloud, IaC, CI/CD
-- [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Data-AI|Data-AI]] — ML, pipelines de dados
-- [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Security|Sentinel]] — Review qualitativo + veto de deploy · `@sentinel` · Opus
-- [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Probe|Probe]] — Testes automatizados de segurança (static/dynamic/harness) · `@probe`
+- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Orchestrator|Orchestrator]] — Orquestrador · `@orchestrator`
+- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Backend-Dev|Backend-Dev]] — APIs, DB, lógica de negócio
+- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Frontend-Dev|Frontend-Dev]] — UI, componentes, UX
+- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Infra-Cloud|Infra-Cloud]] — Cloud, IaC, CI/CD
+- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Data-AI|Data-AI]] — ML, pipelines de dados
+- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Security|Sentinel]] — Review qualitativo + veto de deploy · `@sentinel` · Opus
+- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Probe|Probe]] — Testes automatizados de segurança (static/dynamic/harness) · `@probe`
 
 ## Finance System (Investimentos & Mercado)
 
 **Propósito:** Análise de ativos, portfólio, cripto e macro
 
-- [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Nexo|Nexo]] — Orquestrador · `@nexo`
-- [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Valor|Valor]] — Fundamentalista (ações BR/EUA)
-- [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Fluxo|Fluxo]] — ETF e FII
-- [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Macro|Macro]] — Macro, BCB, IBGE, Fed
-- [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Quant|Quant]] — Análise quantitativa
-- [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Cripto|Cripto]] — Criptomoedas e DeFi
-- [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Contador|Contador]] — Extrai informes de rendimento e mapeia fichas IRPF (trigger: `@irpf`)
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Nexo|Nexo]] — Orquestrador · `@nexo`
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Valor|Valor]] — Fundamentalista (ações BR/EUA)
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Fluxo|Fluxo]] — ETF e FII
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Macro|Macro]] — Macro, BCB, IBGE, Fed
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Quant|Quant]] — Análise quantitativa
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Cripto|Cripto]] — Criptomoedas e DeFi
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Contador|Contador]] — Extrai informes de rendimento e mapeia fichas IRPF (trigger: `@irpf`)
 
 ## Hobby System
 
-- [[04-SYSTEM/agents/Hobby System/00-SYSTEM-PROMPTS/mtg-arena-coach|MTG Arena Coach]] — Coach de MTG Arena (draft, sealed, constructed)
+- [[04-SYSTEM/agents/hobby-system/00-SYSTEM-PROMPTS/mtg-arena-coach|MTG Arena Coach]] — Coach de MTG Arena (draft, sealed, constructed)
 
 ## Institutional (TJAM — Compliance & Governança)
 
 **Propósito:** Agentes role-based para fluxos institucionais do TJAM
 
-- [[04-SYSTEM/agents/TJAM Institutional System/chefia/assistente-de-chefia|Assistente de Chefia]] — suporte à chefia, despachos, comunicações internas
-- [[04-SYSTEM/agents/TJAM Institutional System/dados/analista-de-dados|Analista de Dados]] — análise institucional, Google Sheets ETL
-- [[04-SYSTEM/agents/TJAM Institutional System/juridico/assessor-juridico-administrativo|Assessor Jurídico Administrativo]] — minutas, pareceres, direito administrativo
-- [[04-SYSTEM/agents/TJAM Institutional System/pca/assessor-pca|Assessor PCA]] — Plano de Contratações Anuais, normativas
-- [[04-SYSTEM/agents/TJAM Institutional System/pls/assessor-pls|Assessor PLS]] — Plano de Logística Sustentável, CNJ 400/2021
+- [[04-SYSTEM/agents/tjam-institutional-system/chefia/assistente-de-chefia|Assistente de Chefia]] — suporte à chefia, despachos, comunicações internas
+- [[04-SYSTEM/agents/tjam-institutional-system/dados/analista-de-dados|Analista de Dados]] — análise institucional, Google Sheets ETL
+- [[04-SYSTEM/agents/tjam-institutional-system/juridico/assessor-juridico-administrativo|Assessor Jurídico Administrativo]] — minutas, pareceres, direito administrativo
+- [[04-SYSTEM/agents/tjam-institutional-system/pca/assessor-pca|Assessor PCA]] — Plano de Contratações Anuais, normativas
+- [[04-SYSTEM/agents/tjam-institutional-system/pls/assessor-pls|Assessor PLS]] — Plano de Logística Sustentável, CNJ 400/2021
 
 ## Infrastructure (Proxies, Integrations)
 

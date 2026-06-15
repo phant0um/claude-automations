@@ -432,8 +432,8 @@ Histórico de todas as ingestões e operações do vault. Entradas mais recentes
 ## 2026-04-18 ingest | Normalização de Banco de Dados — Overview consolidado
 
 - **Fonte:** `.raw/normalizacao-banco-dados-2026-04-18.md` (texto direto, consolidado)
-- **Resumo:** [[03-RESOURCES/sources/fiap-academic/normalizacao-banco-dados-overview]]
-- **Páginas criadas:** [[03-RESOURCES/sources/fiap-academic/normalizacao-banco-dados-overview]]
+- **Resumo:** [[02-AREAS/fiap/sources/normalizacao-banco-dados-overview]]
+- **Páginas criadas:** [[02-AREAS/fiap/sources/normalizacao-banco-dados-overview]]
 - **Páginas atualizadas:** [[03-RESOURCES/concepts/dev-foundations/normalizacao]] (adicionado link de fonte) · [[04-SYSTEM/wiki/hot]] · [[03-RESOURCES/log]]
 - **Key insight:** Reforço dos três pilares de normalização (1FN = atomicity, 2FN = primary key dependence, 3FN = no transitive deps). Cada informação exatamente uma vez. Elimina anomalias de dados por design.
 
@@ -512,8 +512,8 @@ Histórico de todas as ingestões e operações do vault. Entradas mais recentes
 ## 2026-04-16 batch ingest | 2 PDFs — Skills Guide (Anthropic) + Data Science (Luiza Reixach Castro)
 
 - **Fontes:** `.raw/ebooks/The-Complete-Guide-to-Building-Skill-for-Claude.pdf` · `.raw/ebooks/PDF CIENCIA DE DADOS -  LUIZA REIXACH CASTRO.pdf`
-- **Resumos:** [[03-RESOURCES/sources/claude-code-skills/complete-guide-building-skills-claude]] · [[03-RESOURCES/sources/fiap-academic/ciencia-de-dados-luiza-reixach-castro]]
-- **Páginas criadas:** [[03-RESOURCES/sources/claude-code-skills/complete-guide-building-skills-claude]] · [[03-RESOURCES/sources/fiap-academic/ciencia-de-dados-luiza-reixach-castro]] · [[03-RESOURCES/entities/Luiza-Reixach-Castro]] · [[03-RESOURCES/concepts/dev-foundations/ciencia-de-dados]]
+- **Resumos:** [[03-RESOURCES/sources/claude-code-skills/complete-guide-building-skills-claude]] · [[02-AREAS/fiap/sources/ciencia-de-dados-luiza-reixach-castro]]
+- **Páginas criadas:** [[03-RESOURCES/sources/claude-code-skills/complete-guide-building-skills-claude]] · [[02-AREAS/fiap/sources/ciencia-de-dados-luiza-reixach-castro]] · [[03-RESOURCES/entities/Luiza-Reixach-Castro]] · [[03-RESOURCES/concepts/dev-foundations/ciencia-de-dados]]
 - **Páginas atualizadas:** [[03-RESOURCES/concepts/claude-code-tooling/claude-skills]] (expandido com anatomia oficial SKILL.md + 5 padrões + troubleshooting) · [[03-RESOURCES/wiki-index]] · [[04-SYSTEM/wiki/hot]] · [[03-RESOURCES/log]]
 - **Key insight:** O campo `description` do SKILL.md é o mais crítico — sem triggers específicas a skill nunca carrega automaticamente. Para DS: `class_weight='balanced'` resolve desbalanceamento sem perda de dados.
 
@@ -589,7 +589,7 @@ Histórico de todas as ingestões e operações do vault. Entradas mais recentes
   - [[03-RESOURCES/concepts/dev-foundations/orientacao-a-objetos]] · [[03-RESOURCES/concepts/dev-foundations/modelo-entidade-relacionamento]]
   - [[03-RESOURCES/concepts/dev-foundations/sql]] · [[03-RESOURCES/concepts/dev-foundations/jdbc]]
   - [[03-RESOURCES/entities/Python]] · [[03-RESOURCES/entities/Java]] · [[03-RESOURCES/entities/Oracle-SQL]]
-  - [[03-RESOURCES/entities/FIAP]] · [[03-RESOURCES/entities/Projeto-Fintech]]
+  - [[02-AREAS/fiap/entities/FIAP]] · [[03-RESOURCES/entities/Projeto-Fintech]]
 - **Páginas atualizadas:** `fiap/fiap-index.md`, `03-RESOURCES/wiki-index.md`, `04-SYSTEM/wiki/hot.md`
 - **Insight:** Estrutura completa do curso ADS mapeada; conteúdo das apostilas pendente de poppler. Projeto central = Fintech (RM567709), fio condutor das 6 fases.
 
@@ -1082,13 +1082,13 @@ Histórico de todas as ingestões e operações do vault. Entradas mais recentes
 
 **Páginas atualizadas:** `04-SYSTEM/wiki/hot` · `03-RESOURCES/log` · `03-RESOURCES/wiki-index`
 
-**Conexão com vault:** Reforça [[04-SYSTEM/agents/Claude Code]] (implementação prática do dia-a-dia). Skills recém-criadas exemplificam Tier 3. Sugere próximos passos: Tier 4 (MCP para vault automation) e Tier 5 (Subagentes para batch operations).
+**Conexão com vault:** Reforça [[04-SYSTEM/agents/claude-code-agent]] (implementação prática do dia-a-dia). Skills recém-criadas exemplificam Tier 3. Sugere próximos passos: Tier 4 (MCP para vault automation) e Tier 5 (Subagentes para batch operations).
 
 ---
 
 ## Última ingestão anterior — 2026-04-18 (Normalização de Banco de Dados — Overview consolidado)
 
-**Fonte:** `.raw/normalizacao-banco-dados-2026-04-18.md` → [[03-RESOURCES/sources/fiap-academic/normalizacao-banco-dados-overview]]
+**Fonte:** `.raw/normalizacao-banco-dados-2026-04-18.md` → [[02-AREAS/fiap/sources/normalizacao-banco-dados-overview]]
 
 **Insight chave:** Reforço dos três conceitos nucleares de normalização já documentados em [[03-RESOURCES/concepts/dev-foundations/normalizacao]] (FIAP Fase 3): **atomicity** (1FN — valores indivisíveis), **primary key dependence** (2FN — dependências totais, não parciais), **transitive dependence** (3FN — nenhum atributo não-chave depende de outro não-chave). A redundância é o inimigo; cada informação deve existir exatamente uma vez. Complementa a documentação existente com exemplos novos (coluna "Hobbies" multi-valor) e reforça anomalias de dados como motivação prática.
 
@@ -1118,7 +1118,7 @@ Histórico de todas as ingestões e operações do vault. Entradas mais recentes
 
 **Páginas atualizadas:** `fiap/fiap-index.md` · `03-RESOURCES/wiki-index` · `04-SYSTEM/wiki/hot` · `03-RESOURCES/log` · `.raw/.manifest.json`
 
-**Conexão com vault:** [[03-RESOURCES/entities/FIAP]] + [[03-RESOURCES/entities/Projeto-Fintech]]; reforça [[03-RESOURCES/concepts/dev-foundations/orientacao-a-objetos]], [[03-RESOURCES/concepts/dev-foundations/sql]], [[03-RESOURCES/concepts/mvc-architecture]]; complementa conteúdo sobre [[03-RESOURCES/entities/Java]], [[03-RESOURCES/entities/JavaScript]], [[03-RESOURCES/entities/Oracle-SQL]].
+**Conexão com vault:** [[02-AREAS/fiap/entities/FIAP]] + [[03-RESOURCES/entities/Projeto-Fintech]]; reforça [[03-RESOURCES/concepts/dev-foundations/orientacao-a-objetos]], [[03-RESOURCES/concepts/dev-foundations/sql]], [[03-RESOURCES/concepts/mvc-architecture]]; complementa conteúdo sobre [[03-RESOURCES/entities/Java]], [[03-RESOURCES/entities/JavaScript]], [[03-RESOURCES/entities/Oracle-SQL]].
 
 ---
 
@@ -1253,7 +1253,7 @@ Histórico de todas as ingestões e operações do vault. Entradas mais recentes
 
 **Fontes:**
 - `.raw/ebooks/The-Complete-Guide-to-Building-Skill-for-Claude.pdf` → [[03-RESOURCES/sources/claude-code-skills/complete-guide-building-skills-claude]]
-- `.raw/ebooks/PDF CIENCIA DE DADOS -  LUIZA REIXACH CASTRO.pdf` → [[03-RESOURCES/sources/fiap-academic/ciencia-de-dados-luiza-reixach-castro]]
+- `.raw/ebooks/PDF CIENCIA DE DADOS -  LUIZA REIXACH CASTRO.pdf` → [[02-AREAS/fiap/sources/ciencia-de-dados-luiza-reixach-castro]]
 
 **Insight chave Skills guide:** `description` field é o componente mais crítico de uma skill — define quando ela carrega. Sem triggers = nunca carrega. SKILL.md case-sensitive (SKILL.MD falha). Manter <5.000 palavras. 5 padrões arquiteturais. Open standard desde jan/2026.
 

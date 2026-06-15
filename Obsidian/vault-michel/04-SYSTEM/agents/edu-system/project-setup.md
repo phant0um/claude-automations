@@ -30,5 +30,5 @@ Usar `00-SYSTEM-PROMPTS/Mestre.md` como system prompt padrão. Para sessões foc
 
 ## Refs
 
-- Sistema completo: [[04-SYSTEM/agents/Edu System/README]]
+- Sistema completo: [[04-SYSTEM/agents/edu-system/README]]
 - Nexus: [[04-SYSTEM/agents/nexus]]

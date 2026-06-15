@@ -48,6 +48,14 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 <!-- SECTION:operacional -->
 ## [OPERACIONAL] — Ações Pendentes
 
+**Sources Reorganização (2026-06-10):**
+- ✅ 230 arquivos soltos `03-RESOURCES/sources/` → distribuídos em 14 categorias temáticas
+- ✅ 185 arquivos merged com pastas existentes (agents→ai-agents-harness +101, claude-api→claude-code-skills +39, skills→skills-prompting-mcp +21, memory→memory-context-rag +11, pkm→pkm-obsidian-second-brain +5, guides→guides-courses-howtos +8)
+- ✅ 39 arquivos em novas categorias (llm-theory +11, deployment +2, architecture-design +6, research +4, security +1, metadata +4, mcp +2, specialized +9)
+- ⚠️ Estrutura anterior: 858 files em 16 pastas + 1192 files únicos em `08-ARCHIVE/` (A:323, B:702, C:311, D:191)
+- Top action: Auditoria de duplicatas (119 entre current e Archive-B); trazer 1TDS-FIAP (78 files) de archive pra fiap-academic
+- Ref: [[03-RESOURCES/sources/]] | Manifest: 1280 entries
+
 **Fintech FIAP — docs vault sincronizados (2026-06-01):**
 - ✅ `overview.md`: stack corrigida (HTML→React 18+Vite), endpoints REST, rotas frontend, repo structure
 - ✅ `progress.md`: Fase 2+3 marcadas ✅; Fase 4 🔄; bloqueios VPN Oracle + 5 entidades sem REST
@@ -56,8 +64,8 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 - Ref: [[01-PROJECTS/Fintech/overview]]
 
 **Finance System — Fatura agent (2026-05-29):**
-- ✅ Agente Fatura criado — [[04-SYSTEM/agents/Finance System/00-SYSTEM-PROMPTS/Fatura]] (Santander, Porto Seguro, Revolut; relatório em 06-GENERATED/faturas/)
-- ✅ Skill fatura-parser criada — [[04-SYSTEM/agents/Finance System/skills/fatura-parser]] (detecção banco, categorias, fallback)
+- ✅ Agente Fatura criado — [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Fatura]] (Santander, Porto Seguro, Revolut; relatório em 06-GENERATED/faturas/)
+- ✅ Skill fatura-parser criada — [[04-SYSTEM/agents/finance-system/skills/fatura-parser]] (detecção banco, categorias, fallback)
 - Drop zone PDFs: `.raw/faturas/` | Output: `06-GENERATED/faturas/YYYY-MM-banco.md`
 
 **Vault SO — ECC patterns implementados (2026-05-31):**
@@ -71,7 +79,7 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 - ✅ Melhorias: subagent-team (skill injection no briefing), heavy-think (vs debate), codex-retrospective (link evolve)
 
 **Vault SO — melhorias pendentes (2026-05-29):**
-- ✅ Forge agent criado — [[04-SYSTEM/agents/Fullstack Agent System/00-SYSTEM-PROMPTS/Forge]] (5E rubric, score 0–100, refactor) (2026-05-29)
+- ✅ Forge agent criado — [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Forge]] (5E rubric, score 0–100, refactor) (2026-05-29)
 - ✅ code-optimize skill criada — [[04-SYSTEM/skills/core/code-optimize]] (5 dimensões, modelo por etapa) (2026-05-29)
 - ✅ Maestro routing atualizado — Forge na sequência pre-deploy; v2.1.0 (2026-05-29)
 
@@ -132,6 +140,37 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 
 <!-- SECTION:sessoes-recentes -->
 ## [SESSÕES-RECENTES]
+
+### 2026-06-10
+
+**Stub cleanup fase 2 — 03-RESOURCES/sources:**
+- 39 stubs duplicados deletados (3 lotes — dup do reorg fase 1)
+- 5 ghost stubs deletados (sem fonte, aprovado pelo user)
+- 4 stubs preenchidos via 08-ARCHIVE/A+B (company-brain pt1/pt3, horizon-length paper, multi-agent coordination paper)
+- 5 stubs preenchidos via WebSearch (match forte): ahe-paper-fudan-nexau, lessons-building-claude-code-skills, post-0x_kaize-token-savings, post-dr-cintas→kepano-obsidian-skills, understanding-hermes-samyak
+- 6 stubs preenchidos via WebSearch (match fraco/aproximado, c/ caveat): kloss-goal-23-usecases, garrytan-gbrain, security-scanner-jp, explorax-video-skill, llms-improving-llms, nicos-worktrees
+- 1 stub sem match (`fseixas-super-geo-agent-readiness`) → marcado `review-needed`, deleção pendente confirmação
+- 132 stubs concurso/legislação → RESOLVIDO 2026-06-10: todos dup órfãos (filename corrompido espaço/cedilha) de conteúdo já completo em legislacao/+normas_cfc/+dirs limpos. Deletados 132 (66 legislação/ + 39 no rmas_cfc/ + 27 top-level), 0 conteúdo perdido. Vault: 416→284 .md em concurso/
+- **Folder consolidation:** sources/ 24→15 subfolders (9 small folders merged into ai-agents-harness, skills-prompting-mcp, misc-low-confidence); concepts/ 10→11 subfolders (98 loose .md files distributed into existing folders + 1 new: accessibility; _index.md portal stays in root)
+
+**pipeline-diario v4.3 — 2ª run (16h): manifest path-bug fix + audit archive**
+- 42 Clippings/ marcados "ghost ingest" (manifest aponta `pages_created` flat path
+  inexistente) → todos Case A: source page real existe em subpasta categorizada
+  (causado pelo reorg sources/ 24→15 acima). 6 agentes wiki-ingest paralelos
+  corrigiram manifest (`path_corrected_at`) + moveram originais →
+  `08-ARCHIVE/B/2026-06-10/`. 0 páginas novas, 0 perda de conteúdo.
+- Auditoria 08-ARCHIVE/A+B (1061 arquivos): sem ghost real em clippings/FIAP
+  (13 `pages_created:[]` já têm página real; 4 docx FIAP Fase 7 cobertos por
+  CONTENT.md consolidado).
+- ✅ 155 aulas CGAM (12 cursos): falso positivo (path bug igual aos 42
+  Clippings) — os 12 cursos já estavam 100% consolidados em
+  `concurso/<disciplina>/index.md`+`aula-NN.md`. Manifest corrigido
+  (`path_corrected_at`), 0 trabalho de consolidação necessário.
+- ⚠️ Novo: ~20 arquivos "Hermes Agent *" caíram em Clippings/ às 21:53 (sync
+  durante a sessão) — não processados, próximo F1 pega.
+- Detalhe: [[06-GENERATED/triagem/triagem-2026-06-10]]
+
+---
 
 ### 2026-06-07
 
@@ -333,7 +372,6 @@ Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harn
 - ✅ Entidade [[03-RESOURCES/entities/cisco-ai-defense]] criada (skill-scanner + AITech taxonomy)
 - ✅ [[03-RESOURCES/concepts/agent-systems/agent-abstraction-layers]] — decision framework ask→Skill→Subagent→Workflow adicionado
 - ✅ [[03-RESOURCES/entities/hermes]] — memory-os 7 layers + lições 60 dias adicionadas
-⚠️ FIAP/concurso: 0 commits em 7d — considerar priorização de estudo
 
 ## Pipeline Diário 2026-06-06
 **Triagem:** 69 candidatos → 58 aprovados (22A + 36B), 11 rejeitados (9C + 2D)
@@ -386,10 +424,6 @@ Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harn
 **Ingest:** 0 sources (artigos=0, fiap=0, clips=0)
 **Top action:** revisar sources criadas hoje
 → [[06-GENERATED/ingest-report/ingest-diario-2026-06-08]]
-⚠️ FIAP/concurso: 0 commits em 7d — considerar priorização de estudo
-⚠️ FIAP/concurso: 0 commits em 7d — considerar priorização de estudo
-⚠️ FIAP/concurso: 0 commits em 7d — considerar priorização de estudo
-⚠️ FIAP/concurso: 0 commits em 7d — considerar priorização de estudo
 
 ## Nexus v2 → v3 — Model Router Layer + 4 Agentes Vault-Nativos
 **Data:** 2026-06-09
@@ -400,8 +434,8 @@ Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harn
 - `ingest-agent` — F2 vault builder via minimax-m3 / kimi-k2.6 (FIAP)
 - `report-agent` — F3 relatório via deepseek-v4-pro / nemotron-3-ultra
 - `vault-reconcile` — auditoria semanal via nemotron-3-ultra (1M ctx)
-- `docs/adr/ADR-001-ollama-model-router.md` — decisão de roteamento
-- `docs/adr/ADR-002-vault-reconcile-agent.md` — decisão de reconciliação
+- `wiki/adr/ADR-NX-001-ollama-model-router.md` — decisão de roteamento
+- `wiki/adr/ADR-NX-002-vault-reconcile-agent.md` — decisão de reconciliação
 - README v1.0.0 → v3.0.0 · 7 → 11 agentes
 **Guardrails preservados:** SOUL, Shield (Opus), Ledger (git) intocados
 **Decisão:** pipeline `pipeline-diario.md` v3.5 mantido como referência — agents vault-nativos operam por cima
@@ -427,7 +461,6 @@ Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harn
 - 3 agentes → v1.2.0
 - resto das sources já coberto (model routing=advisor, CLEAN=log filter, SKILL.md=fat-skill) ou harness-level
 - zero contradição c/ v4.1
-⚠️ FIAP/concurso: 0 commits em 7d — considerar priorização de estudo
 
 ## pipeline-diario 2026-06-09 — F1 triagem completa, F2/F3 PAUSADO
 **Data:** 2026-06-09
@@ -462,3 +495,59 @@ Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harn
 - ⚠️ dedup-gap pattern: ~12 arquivos do batch já tinham source equivalente não detectada
   pela triagem original (slugs divergentes) — considerar wiki-lint pra achar mais casos
 ⚠️ FIAP/concurso: 0 commits em 7d — considerar priorização de estudo
+
+## pipeline-diario v4.3 — 2026-06-10 (2ª run, 16h)
+**Data:** 2026-06-10
+- F1.0: 0 dups. F1.0b: 0 candidatos novos → pipeline encerrado, cost 0
+- Brief vazio: `06-GENERATED/triagem/triagem-2026-06-10.md`
+- Backlog do dia (53 sources, F2 completo) já reportado na entrada anterior
+- Top action: revisar entrada anterior (F3 report pendente) + FIAP/concurso ainda 0 commits 7d
+
+## pipeline-diario v4.3 — 2026-06-10 (3a run, 16h): 19 docs oficiais Hermes
+**Data:** 2026-06-10
+- F1: 19 candidatos (Clippings, hermes-agent.nousresearch.com/docs/), heurística 100% (0 AI), 19/19 A/B aprovados
+- F2: consolidado 19→4 source pages (vs 19 fragmentos) — 4 wiki-ingest agents paralelos
+  - `hermes-agent-docs-onboarding.md`, `-features.md`, `-integrations.md`, `-reference.md`
+  - todas em `03-RESOURCES/sources/ai-agents-harness/`
+- `hermes.md` (entity) +4 seções "Docs Oficiais" linkando as novas pages
+- 19 Clippings arquivados: 8→`08-ARCHIVE/A/`, 11→`08-ARCHIVE/B/`. Manifest +19 entries
+- F2.8 spot-check: 2 link issues fix (broken `[[tool-gateway]]`, `[[as_document]]`/`[[audio_as_voice]]` falsos wikilinks)
+- ⚠️ overlap-risk: vault já tinha 52 sources community Hermes — estes 4 são docs oficiais (canônicos), complementares
+- F3: cluster único (ai-agents/Hermes). Cross-conn: paralelos diretos c/ Claude Code memory/CLAUDE.md/skills (Persistent Memory, Context Files), MCP setup do vault, `[[04-SYSTEM/agents/00-core/guard]]` (security)
+- F3.5 veredito: PIPELINE OK
+- Top action: considerar consolidar os 52 sources community Hermes existentes (muita fragmentação) + FIAP/concurso ainda 0 commits 7d
+
+## pipeline-diario v4.3 — 2026-06-13 (16h): PAUSADO pré-F2 (anomalia volume)
+**Data:** 2026-06-13
+- F1.0: 0 dups (stem dup = .manifest.json.bak, ignorado)
+- F1.0b: 105 candidatos novos (recorde — máx anterior 53)
+- F1: heurística 90/105, batch borderline 15/105. 99 aprovados (5A/94B), 6 arquivados (1D/5C)
+- Relatório: `06-GENERATED/triagem/triagem-2026-06-13.md`
+- ⚠️ ANOMALIA: 99 aprovados = ~2x volume típico. 36/99 são docs oficiais Hermes
+  Agent (vault já tem 52 community + 4 official pages 18-31KB, overlap-risk
+  flagado 2026-06-10 sem resolução). 9/99 = série mattpocockskills 1-9.
+- **Pipeline PAUSADO antes de F2** — aguardando revisão humana. Aprovados
+  permanecem em `Clippings/` (não movidos). F3 skipped (0 sources ingeridos).
+- Top action: revisar triagem-2026-06-13.md, decidir estratégia de
+  consolidação (Hermes append vs novo cluster) antes de liberar F2 +
+  considerar consolidar 52 sources Hermes community pendente (flag 2026-06-10)
+- FIAP/concurso ainda 0 commits 7d (flag já registrada)
+
+## pipeline-diario v4.3 — 2026-06-14 (16h): BLOQUEADO no NEXUS GATE
+**Data:** 2026-06-14
+- Nexus gate: decisão pendente de 2026-06-13 (consolidação Hermes 99
+  aprovados / overlap 52 community + 4 official) ainda não resolvida —
+  Clippings/ ainda com backlog (918 .md), sem evidência de decisão tomada.
+- Re-rodar F1 hoje re-detectaria o mesmo backlog (99 aprovados não movidos,
+  manifest não atualizado) — repetiria a mesma pausa, gastando tokens à toa.
+- ⚠️ NOVO ACHADO (fora do scope do pipeline): 247 arquivos com mudanças
+  uncommitted fora de 07-QUEUE/06-GENERATED/Clippings/.raw/sources/AREAS —
+  deleções inteiras de agent systems (Concurso Coach/Edu/Finance/etc, ~`git
+  status` 248 total). Risco: F3 commit gate (`@ledger`, threshold >3 arquivos)
+  rodaria sobre este diff gigante e não-relacionado se disparado — bloqueado
+  preventivamente até revisão humana.
+- **Pipeline BLOQUEADO no Nexus Gate inicial** — nenhuma fase executada
+  (F1/F2/F3 skip, cost: ~150 tokens só o gate). Aguardando instrução humana
+  sobre (1) decisão Hermes consolidação 2026-06-13 e (2) os 247 arquivos
+  uncommitted (commit separado? revert? trabalho em andamento?).
+- FIAP/concurso: 0 commits em 7d (flag já registrada novamente acima).
