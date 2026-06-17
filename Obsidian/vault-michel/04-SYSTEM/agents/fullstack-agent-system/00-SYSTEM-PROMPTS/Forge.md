@@ -1,5 +1,5 @@
 ---
-name: forge
+name: forge-fullstack
 role: senior-code-quality-engineer
 model: claude-sonnet-4-6
 version: 1.0.0

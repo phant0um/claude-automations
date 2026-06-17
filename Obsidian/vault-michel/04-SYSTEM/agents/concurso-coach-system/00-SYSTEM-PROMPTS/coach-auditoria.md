@@ -1,5 +1,6 @@
 ---
 name: coach-auditoria
+name: coach-auditoria
 role: coach-disciplina
 disciplina: auditoria
 model: claude-sonnet-4-6

@@ -1,5 +1,6 @@
 ---
 name: extend
+name: extend
 slug: extend
 version: 1.1
 model: claude-sonnet-4-6

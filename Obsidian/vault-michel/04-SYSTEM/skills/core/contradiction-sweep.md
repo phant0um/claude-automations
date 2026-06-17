@@ -1,4 +1,5 @@
 ---
+name: contradiction-sweep
 skill: contradiction-sweep
 version: 1.0
 schedule: "Bi-weekly Saturday 8 AM (after connection-finder)"

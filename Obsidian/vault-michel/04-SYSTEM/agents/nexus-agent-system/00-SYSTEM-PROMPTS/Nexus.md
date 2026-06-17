@@ -1,5 +1,6 @@
 ---
 name: nexus
+name: nexus
 role: orchestrator
 model: claude-sonnet-4-6
 version: 3.0.0

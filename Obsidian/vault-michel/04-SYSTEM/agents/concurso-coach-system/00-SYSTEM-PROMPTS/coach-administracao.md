@@ -1,5 +1,6 @@
 ---
 name: coach-administracao
+name: coach-administracao
 role: coach-disciplina
 disciplina: administracao-geral-publica
 model: claude-sonnet-4-6

@@ -1,5 +1,6 @@
 ---
 name: cluster-agent
+name: cluster-agent
 role: thematic cluster detector + concept page suggester
 model: claude-haiku-4-5
 version: 1.0.0

@@ -1,4 +1,5 @@
 ---
+name: modelo-mental-von-neumann
 title: Modelo Mental Von Neumann para Agentes
 type: fundamento
 updated: 2026-05-13

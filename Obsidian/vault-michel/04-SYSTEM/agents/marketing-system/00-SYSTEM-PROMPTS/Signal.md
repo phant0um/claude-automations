@@ -1,5 +1,6 @@
 ---
 name: signal
+name: signal
 role: orchestrator
 model: claude-sonnet-4-6
 version: 1.0.0

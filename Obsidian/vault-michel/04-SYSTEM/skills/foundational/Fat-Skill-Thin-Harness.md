@@ -1,4 +1,5 @@
 ---
+name: fat-skill-thin-harness
 title: Fat Skill, Thin Harness
 type: fundamento
 updated: 2026-05-13

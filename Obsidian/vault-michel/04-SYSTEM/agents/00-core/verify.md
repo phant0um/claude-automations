@@ -1,5 +1,6 @@
 ---
 name: verify
+name: verify
 slug: verify
 version: 1.1
 model: claude-sonnet-4-6

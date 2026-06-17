@@ -1,5 +1,6 @@
 ---
 name: hill
+name: hill
 slug: hill
 version: 1.2
 model: claude-haiku-4-5

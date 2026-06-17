@@ -1,4 +1,5 @@
 ---
+name: daily-brief
 skill: daily-brief
 version: 2.0
 schedule: "Mon-Fri 11 PM"

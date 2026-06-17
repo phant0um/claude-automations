@@ -1,5 +1,6 @@
 ---
 name: coach-economia-financas-publicas
+name: coach-economia-financas-publicas
 role: coach-disciplina
 disciplina: economia-financas-publicas
 model: claude-sonnet-4-6

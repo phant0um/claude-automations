@@ -655,3 +655,57 @@ automático.
 1. Decisão sobre lote 790 aulas RFB (ver entrada anterior) — ainda em aberto.
 2. Considerar criar entity `Receita Federal do Brasil` (AFRFB/ATRFB) —
    155 curso/aula entries + agora +5 provas, sem entity própria.
+
+## 2026-06-15 — Entities criadas + manifest dedup bug corrigido (lote 789)
+
+**Entities**: `02-AREAS/concurso/entities/receita-federal-do-brasil.md` criada
+(cargos AFRFB/ATRFB, legislação carreira, links provas/materias). Nessie já
+existia — confirmado, nenhuma ação. Link-back em `concurso-index.md`.
+
+**Lote 789 RFB — causa raiz identificada**: não é conteúdo novo não-processado
+— é **manifest dedup bug** (v4.3 changelog). 581/789 arquivos `curso-*-completo.md`
+em Clippings/ já foram consumidos em `02-AREAS/concurso/materias/*/aula-NN.md`
+(source frontmatter confere 1:1), só faltava registro no manifest →
+F1.0b os reapresentava como "candidatos novos" a cada rodada.
+
+**Fix aplicado**: 581 entries registradas retroativamente em
+`.raw/.manifest.json` (`hash: batch-moved`, `category: concurso`,
+`pages_created` apontando pro aula-NN.md/-questoes.md correspondente,
+`note: "registro retroativo (manifest dedup bug v4.3, lote 789)"`).
+Manifest: 1408 → **1989 entries**.
+
+**Restante genuinamente novo**: 208 arquivos, ~12 cursos
+(244682/244684/244688/244689/244692/249584/249588/249600/249602/249605/
+249609/249617/249622/315533/315541/344665) + simulados/gabaritos/conteúdo
+extra — decisão de ingest ainda em aberto (escopo menor, ~25% do lote
+original).
+
+**Próxima rodada F1.0b**: deve cair de ~800 candidatos pra ~208 + diários.
+
+## 2026-06-15 — Mapa old↔new (10 disciplinas concurso, via Concurso Coach System)
+
+Aulas "old" (sem `curso:`, visão geral/multi-tema) vs "new" (lote AFRFB 06-14,
+deep-dive por tema) não são duplicatas — granularidades diferentes. Em vez de
+substituir/mesclar conteúdo (custo alto), adicionada seção "## Mapa old↔new
+(visão geral vs deep-dive AFRFB)" nos `index.md` de 10 disciplinas — tabela
+old aula → subtemas → aulas new relacionadas (navegação, zero rewrite):
+
+| Disciplina | Linhas tabela | Old sem match |
+|---|---|---|
+| direito-constitucional | 16 | 1 (aula-07) |
+| lingua-portuguesa | 16 | 3 (aula-08/09/10) |
+| direito-administrativo | 19 | 1 (aula-09) |
+| analise-demonstracoes-contabeis | 6 | 1 (aula-04) |
+| contabilidade-geral | 27 | 1 (aula-26) |
+| financas-publicas | 3 | 1 (aula-03) |
+| contabilidade-publica | 24 | 7 |
+| afo | 15 | 6 |
+| adm-publica | 21 | 1 (aula-12) |
+| auditoria-governamental | 14 | 0 |
+
+9 disciplinas (direito-previdenciario, direito-tributario, discursivas-rfb,
+estatistica, fluencia-dados, legislacao-aduaneira, legislacao-tributaria,
+lingua-inglesa, logica) não têm aulas old — 100% lote AFRFB, sem mapa
+necessário.
+
+Commit pendente (10 index.md alterados, abaixo/no threshold — verificar).

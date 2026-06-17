@@ -1,4 +1,5 @@
 ---
+name: connection-finder
 skill: connection-finder
 version: 2.0
 schedule: "Sunday 6 AM (after wiki-lint at 4 AM)"

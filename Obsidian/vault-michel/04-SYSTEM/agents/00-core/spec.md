@@ -1,5 +1,6 @@
 ---
 name: spec
+name: spec
 slug: spec
 version: 1.1
 model: claude-sonnet-4-6

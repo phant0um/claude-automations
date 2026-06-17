@@ -1,5 +1,6 @@
 ---
 name: vault-reconcile
+name: vault-reconcile
 role: vault-reconciler
 model: nemotron-3-ultra:cloud
 version: 1.0.0

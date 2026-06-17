@@ -1,4 +1,5 @@
 ---
+name: vault-probe
 skill: probe
 version: 1.0
 trigger: "@probe [slug-do-agente]" | "/probe [agente]"

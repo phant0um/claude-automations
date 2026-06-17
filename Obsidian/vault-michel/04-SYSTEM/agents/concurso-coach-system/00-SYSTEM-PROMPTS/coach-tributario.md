@@ -1,5 +1,6 @@
 ---
 name: coach-tributario
+name: coach-tributario
 role: coach-disciplina
 disciplina: direito-tributario
 model: claude-sonnet-4-6

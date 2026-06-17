@@ -1,5 +1,6 @@
 ---
 name: vault-audit
+name: vault-audit
 slug: vault-audit
 version: 1.1
 model: claude-haiku-4-5

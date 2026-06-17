@@ -1,5 +1,6 @@
 ---
 name: coach-contabilidade
+name: coach-contabilidade
 role: coach-disciplina
 disciplina: contabilidade-geral-publica
 model: claude-sonnet-4-6

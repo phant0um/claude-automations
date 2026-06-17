@@ -1,5 +1,6 @@
 ---
 name: review
+name: review
 slug: review
 version: 1.2
 model: claude-haiku-4-5

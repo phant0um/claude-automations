@@ -1,5 +1,6 @@
 ---
 name: ingest-agent
+name: ingest-agent
 role: vault-builder
 model: claude-sonnet-4-6
 version: 1.3.0

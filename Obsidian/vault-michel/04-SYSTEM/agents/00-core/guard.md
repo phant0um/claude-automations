@@ -1,5 +1,6 @@
 ---
 name: guard
+name: guard
 slug: guard
 version: 1.1
 model: claude-opus-4-7
