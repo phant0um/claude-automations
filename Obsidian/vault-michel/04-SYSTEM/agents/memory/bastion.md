@@ -57,4 +57,4 @@ Memória persistente cross-session. Padrão [[_template|agent-memory]].
 - Projeto-fonte das lições: pdf2md (macOS, Python+SwiftUI). Ver
   [[retrospectiva-pdf2md]].
 - Pendência: adicionar o catálogo subprocess-path + idioma hdiutil em
-  `docs/Standards-Anti-Patterns.md`.
+  `docs/standards-anti-patterns.md`.

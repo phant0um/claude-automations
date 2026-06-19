@@ -156,6 +156,50 @@ Heuristica bash captura ~60-80% dos casos. O resto precisa de julgamento Nexus
 
 ---
 
+## File Evaporation Pattern (2026-06-16)
+
+**Problema recorrente:** `find` escaneia Clippings/ no inicio do pipeline e
+gera candidates_all.txt. Mas entre o scan e o processamento (segundos a
+minutos depois), arquivos somem do disco. Causas:
+
+1. Readwise sync limpa/substitui arquivos durante o cycle
+2. Pipeline anterior moveu arquivos para 08-ARCHIVE/ mas não atualizou manifest
+3. Obsidian sync (iCloud/Dropbox) remove arquivos temporariamente
+
+**Sintoma:** `[ -f "$f" ]` retorna false para caminhos em candidates_new.txt.
+`cp` falha silenciosamente. Pipeline reporta "0 files ingested" mesmo com
+N candidatos aprovados.
+
+**Diagnóstico rápido:**
+
+```bash
+EXISTING=0; MISSING=0
+while IFS= read -r f; do
+  [ -f "$f" ] && EXISTING=$((EXISTING+1)) || MISSING=$((MISSING+1))
+done < /tmp/candidates_new.txt
+echo "Existing: $EXISTING, Missing: $MISSING"
+```
+
+Se MISSING > 0, arquivos evaporaram. Verificar 08-ARCHIVE/ para confirmar
+que ja foram processados:
+
+```bash
+while IFS= read -r f; do
+  [ -f "$f" ] && continue
+  bn=$(basename "$f")
+  found=$(find 08-ARCHIVE/ -name "$bn" 2>/dev/null | head -1)
+  [ -n "$found" ] && echo "ALREADY ARCHIVED: $bn -> $found"
+done < /tmp/candidates_new.txt
+```
+
+**Mitigação:** Nao tratar file evaporation como erro — tratar como sinal de
+que processamento retroativo e necessario (manifest entry + source page check).
+O pipeline-diario deve ter um passo de "retroactive manifest reconciliation"
+apos detectar file evaporation. Ver [[04-SYSTEM/skills/foundational/pre-ingest-dedup]]
+para o formato de retroactive manifest entry.
+
+---
+
 ## Condicoes de Ativacao
 
 - Ativar quando: triagem manual tiver >20 arquivos candidatos
@@ -202,6 +246,12 @@ done
 
 ## Changelog
 
+- v1.2 (2026-06-16): + File Evaporation Pattern (arquivos somem do Clippings/
+  entre find e processamento — Readwise/Obsidian sync, pipeline anterior).
+  + Nexus Manual Override expandido (heurística não conta multi-match do mesmo
+  domínio — "loop engineering" pode ter score 4 mas ser core A).
+  Achado: pipeline-diario 2026-06-16, 248 candidatos, 100% já ingeridos mas
+  file evaporation causou debugging até confirmar source pages existiam.
 - v1.1 (2026-06-16): + macOS Compatibility Pitfalls section (grep -P -> sed/grep -oE,
   aula number extraction, curso-ID extraction). + Grade Mapping A-D (v4.1+).
   + Nexus Manual Override (heuristica nao conta multi-match do mesmo dominio).

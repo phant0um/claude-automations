@@ -199,6 +199,77 @@ quebram `cp` mesmo quando o path vem de `find`. Workarounds:
 - Ou usar `while IFS= read -r f; do cp "$f" dest/; done < <(find ...)`
 - NUNCA usar `for f in $(find ...)` — quebra em espaços e chars especiais
 
+### Slug-Normalization Layer (2026-06-16 fix aplicado ao pipeline-diario.md)
+
+**Problema:** F1.0b normaliza aspas curvas→retas (`norm()`) mas não normaliza
+outros caracteres que divergem entre filename original e chave do manifest.
+Arquivos com `$15,000` vs `15000`, `Cómo` vs `Como`, aspas duplas `"company brain"`
+vs sem aspas, acentos — tudo gera falso "novo" no manifest check.
+
+**Fix aplicado:** Adicionada função `slug()` no F1.0b do pipeline-diario.md v4.3
+como última camada de verificação:
+
+```bash
+# slug normalizado: lowercase, remove tudo exceto alnum, colapsa hífens
+slug() { python3 -c "import sys,re;d=sys.stdin.read().strip();d=re.sub(r'[^a-z0-9]','-',d.lower());d=re.sub(r'-+','-',d).strip('-');print(d,end='')"; }
+
+# No loop de candidatos:
+slug_stem=$(echo "$stem" | slug)
+# ... após todos os outros checks falharem:
+grep -qF "$slug_stem" /tmp/manifest_norm.json 2>/dev/null || echo "$f"
+```
+
+Isto pega casos onde o manifest guarda `clippings/karpathy-s-4-claude-md-rules-cut-claude-mistakes`
+mas o find retorna `Karpathy's 4 CLAUDE.md rules cut Claude mistakes from 41% to 11%.md`.
+O slug de ambos colapsa para o mesmo padrão alnum-hifen.
+
+**Limitação:** slug matching é greedy — pode gerar falsos negativos (arquivo
+realmente novo com slug coincidente a entry existente). Mitigação: slug é
+última camada, após todas as outras checks mais precisas falharem.
+
+---
+
+### File Evaporation Pattern (2026-06-16)
+
+**Problema recorrente:** `find` escaneia Clippings/ no início do pipeline e
+gera `candidates_all.txt`. Mas entre o scan e o processamento (segundos a
+minutos depois), arquivos somem do disco. Causas:
+
+1. **Readwise sync** limpa/substitui arquivos durante o cycle
+2. **Pipeline anterior** moveu arquivos para 08-ARCHIVE/ mas não atualizou manifest
+3. **Obsidian sync** (iCloud/Dropbox) remove arquivos temporariamente
+
+**Sintoma:** `[ -f "$f" ]` retorna false para caminhos em candidates_new.txt.
+`cp` falha silenciosamente. Pipeline reporta "0 files ingested" mesmo com
+N candidatos aprovados.
+
+**Diagnóstico rápido:**
+
+```bash
+EXISTING=0; MISSING=0
+while IFS= read -r f; do
+  [ -f "$f" ] && EXISTING=$((EXISTING+1)) || MISSING=$((MISSING+1))
+done < /tmp/candidates_concurso.txt
+echo "Existing: $EXISTING, Missing: $MISSING"
+```
+
+Se MISSING > 0, arquivos evaporaram. Verificar 08-ARCHIVE/ para confirmar
+que já foram processados:
+
+```bash
+# Para cada arquivo "missing", checar se está no archive
+while IFS= read -r f; do
+  [ -f "$f" ] && continue
+  bn=$(basename "$f")
+  find 08-ARCHIVE/ -name "$bn" 2>/dev/null | head -1
+done < /tmp/candidates_new.txt
+```
+
+**Mitigação:** Não tratar file evaporation como erro — tratar como sinal de
+que processamento retroativo é necessário (manifest entry + source page check).
+O pipeline-diario deve ter um passo de "retroactive manifest reconciliation"
+após detectar file evaporation.
+
 ---
 
 ## Integração com triagem-clipping
@@ -207,8 +278,45 @@ O hook reduz o custo da triagem manual: duplicatas óbvias não chegam nem ao ca
 
 ---
 
+### Manifest Key Dual-Registration (2026-06-18 fix)
+
+**Problema:** F1.0b grep testa múltiplos formatos de key (`"basename.md"`,
+`/basename"`, `"stem"`, `slug_stem`) mas o manifest-write registrava só
+uma key (basename com extensão). Se o grep procurava sem extensão, não batia.
+Triagem 2026-06-17: 19/19 falsos positivos por mismatch.
+
+**Fix:** registrar AMBAS as variantes de key (com e sem extensão) no
+manifest-write:
+
+```bash
+bn=$(basename "$f")          # "The Log Is the Agent.md"
+bn_noext="${bn%.*}"           # "The Log Is the Agent"
+jq --arg k "$bn" --arg k2 "$bn_noext" --arg h "$_hash" --arg d "$(date -I)" \
+   --arg c "$category" --arg p "$_page" \
+   '.sources[$k] = {hash: $h, ingested_at: $d, category: $c, pages_created: [$p]}
+  | .sources[$k2] = {hash: $h, ingested_at: $d, category: $c, pages_created: [$p], alias_of: $k}' \
+   .raw/.manifest.json > /tmp/manifest.tmp && mv /tmp/manifest.tmp .raw/.manifest.json
+```
+
+O `alias_of` field marca a secondary key como espelho, não duplicata real.
+Isso alinha com F1.0b que testa ambos formatos via grep -F.
+
+**Quando aplicar:** todo manifest-write pós-ingest (ingest-agent F2.6).
+**Quando NÃO aplicar:** retroactive entries onde só uma variante é conhecida.
+
+---
+
 ## Changelog
 
+- v1.3 (2026-06-18): + Manifest Key Dual-Registration pattern (alias_of) —
+  fix para triagem-2026-06-17 (19/19 falsos positivos por mismatch de key
+  com/sem extensão). Aplicado ao ingest-agent v1.4.0 manifest-write.
+- v1.2 (2026-06-16): + Slug-Normalization Layer (fix aplicado ao pipeline-diario.md
+  F1.0b — função slug() como última camada de check, pega $/acentos/aspas).
+  + File Evaporation Pattern (arquivos somem do Clippings/ entre find e
+  processamento — Readwise sync, Obsidian sync, pipeline anterior).
+  Achado: 248 candidatos, 100% já ingeridos, mas file evaporation causou
+  debugging desnecessário até confirmar que source pages já existiam.
 - v1.1 (2026-06-16): + Dedup-Gap Pattern section (second-pass source-page check,
   retroactive manifest format, concurso-specific dedup, macOS filename quirks).
   Achado: 248 candidatos marcados como "novo" mas 100% já ingeridos (source pages

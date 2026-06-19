@@ -35,32 +35,32 @@ updated: 2026-05-14
 > Sistema completo de marca pessoal, conteúdo e distribuição. Invoke via `@signal` ou direto por agente.
 
 - [[04-SYSTEM/agents/marketing-system/README]] — README do sistema
-- [[04-SYSTEM/agents/marketing-system/00-SYSTEM-PROMPTS/Signal]] — **Signal** · Orquestrador
-- [[04-SYSTEM/agents/marketing-system/00-SYSTEM-PROMPTS/Anchor]] — **Anchor** · Estratégia de marca, posicionamento, calendário, monetização, performance
-- [[04-SYSTEM/agents/marketing-system/00-SYSTEM-PROMPTS/Vox]] — **Vox** · Posts, threads, roteiros e engajamento (X + IG + YouTube)
-- [[04-SYSTEM/agents/marketing-system/00-SYSTEM-PROMPTS/Prism]] — **Prism** · Edição de fotos (Lightroom) + direção de vídeo (DJI/iPhone)
-- [[04-SYSTEM/agents/marketing-system/00-SYSTEM-PROMPTS/Canvas]] — **Canvas** · Site planning, copy, identidade visual, SEO on-page, UX audit
-- [[04-SYSTEM/agents/marketing-system/00-SYSTEM-PROMPTS/Lens]] — **Lens** · Prompts DALL-E 3 (marca pessoal, capas, séries visuais)
-- [[04-SYSTEM/agents/marketing-system/00-SYSTEM-PROMPTS/Folio]] — **Folio** · Documentos HTML on-demand (one-pager, newsletter, landing page, slides)
+- [[04-SYSTEM/agents/marketing-system/00-SYSTEM-PROMPTS/signal]] — **Signal** · Orquestrador
+- [[04-SYSTEM/agents/marketing-system/00-SYSTEM-PROMPTS/anchor]] — **Anchor** · Estratégia de marca, posicionamento, calendário, monetização, performance
+- [[04-SYSTEM/agents/marketing-system/00-SYSTEM-PROMPTS/vox]] — **Vox** · Posts, threads, roteiros e engajamento (X + IG + YouTube)
+- [[04-SYSTEM/agents/marketing-system/00-SYSTEM-PROMPTS/prism]] — **Prism** · Edição de fotos (Lightroom) + direção de vídeo (DJI/iPhone)
+- [[04-SYSTEM/agents/marketing-system/00-SYSTEM-PROMPTS/canvas]] — **Canvas** · Site planning, copy, identidade visual, SEO on-page, UX audit
+- [[04-SYSTEM/agents/marketing-system/00-SYSTEM-PROMPTS/lens]] — **Lens** · Prompts DALL-E 3 (marca pessoal, capas, séries visuais)
+- [[04-SYSTEM/agents/marketing-system/00-SYSTEM-PROMPTS/folio]] — **Folio** · Documentos HTML on-demand (one-pager, newsletter, landing page, slides)
 
 ## Edu System
 
 > Concurso público, idiomas, TI e carreira tech. Invoke via `@mestre` ou por especialista.
 
-- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Mestre|Mestre]] — Orquestrador
-- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Banca|Banca]] — Concurso público (aulas, questões, plano por banca)
-- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Babel|Babel]] — Idiomas para viajantes
-- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Stack|Stack]] — TI, ADS e carreira tech
-- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Sintese|Sintese]] — Resumos de estudo e flashcards
-- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Trilha|Trilha]] — CV, LinkedIn e estágios TI
-- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Tutor|Tutor]] — Tutor adaptativo
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/mestre|mestre]] — Orquestrador
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/banca|banca]] — Concurso público (aulas, questões, plano por banca)
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/babel|babel]] — Idiomas para viajantes
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/stack|stack]] — TI, ADS e carreira tech
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/sintese|sintese]] — Resumos de estudo e flashcards
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/trilha|trilha]] — CV, LinkedIn e estágios TI
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/tutor|tutor]] — Tutor adaptativo
 
 ## Travel System
 
 > Planejamento de viagens: busca, roteiros e ajustes. Invoke via `@rota` ou por especialista.
 
 - [[04-SYSTEM/agents/travel-system/rota|Rota]] — Orquestrador
-- [[04-SYSTEM/agents/travel-system/00-SYSTEM-PROMPTS/Caca|Caça]] — Busca de voos, hotéis e carros
+- [[04-SYSTEM/agents/travel-system/00-SYSTEM-PROMPTS/caca|Caça]] — Busca de voos, hotéis e carros
 - [[04-SYSTEM/agents/travel-system/rumo|Rumo]] — Criação de itinerário
 - [[04-SYSTEM/agents/travel-system/ajuste|Ajuste]] — Refinamento de roteiros
 
@@ -68,12 +68,12 @@ updated: 2026-05-14
 
 > Análise de ativos, portfólio, cripto e macro. Invoke via `@nexo` ou por especialista.
 
-- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Nexo|Nexo]] — Orquestrador
-- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Valor|Valor]] — Fundamentalista (ações)
-- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Fluxo|Fluxo]] — ETF e FII
-- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Macro|Macro]] — Macro e economia
-- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Quant|Quant]] — Quantitativo
-- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Cripto|Cripto]] — Criptomoedas
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/nexo|nexo]] — Orquestrador
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/valor|valor]] — Fundamentalista (ações)
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/fluxo|fluxo]] — ETF e FII
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/macro|macro]] — Macro e economia
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/quant|quant]] — Quantitativo
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/cripto|cripto]] — Criptomoedas
 
 ## Standalone
 
@@ -93,13 +93,13 @@ updated: 2026-05-14
 
 ## Nexus Agent System
 
-- [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/Nexus]] — Orquestrador
-- [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/Scout]] — Pesquisa
-- [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/Forge]] — Implementação
-- [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/Shield]] — Segurança/Arquitetura
-- [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/Pixel]] — UI/UX
-- [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/Herald]] — Comunicação
-- [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/Ledger]] — Memória
+- [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/nexus]] — Orquestrador
+- [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/scout]] — Pesquisa
+- [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/forge]] — Implementação
+- [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/shield]] — Segurança/Arquitetura
+- [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/pixel]] — UI/UX
+- [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/herald]] — Comunicação
+- [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/ledger]] — Memória
 
 ---
 

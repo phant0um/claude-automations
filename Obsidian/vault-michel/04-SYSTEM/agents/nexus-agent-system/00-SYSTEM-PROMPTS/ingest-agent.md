@@ -3,7 +3,7 @@ name: ingest-agent
 name: ingest-agent
 role: vault-builder
 model: claude-sonnet-4-6
-version: 1.3.0
+version: 1.4.0
 created: 2026-06-09
 triggers:
   - "@ingest-agent"
@@ -64,7 +64,12 @@ após ingest completo.
      - `articles/ai-agents` → `03-RESOURCES/sources/<slug>.md`
      - `fiap` → `02-AREAS/fiap/sources/<slug>.md`
      - `concurso` → `02-AREAS/concurso/sources/<slug>.md`
-   - Se faltar concept relacionado → criar `03-RESOURCES/concepts/<nome>.md`
+   - **F2.5 Concept Absorption**: para cada wikilink `[[concepts/X]]` na source page,
+     se `X` já existe → append nova evidência/perspectiva na seção `## Evidências`
+     do concept. Se não existe → criar concept (fluxo normal).
+     Ver [[#F2.5 Concept Absorption]] abaixo.
+   - **F2.9 Personal Reflection** (só Score A): adicionar seção `## Minha Síntese`
+     na source page. Ver [[#F2.9 Personal Reflection]] abaixo.
    - Se faltar entity relacionada:
      - `fiap` → `02-AREAS/fiap/entities/<nome>.md`
      - `concurso` → `02-AREAS/concurso/entities/<nome>.md`
@@ -83,7 +88,7 @@ após ingest completo.
 `concurso`: source page em `02-AREAS/concurso/sources/<slug>.md`, link entity em
 `02-AREAS/concurso/entities/<entity>.md` (concepts seguem em `03-RESOURCES/concepts/`).
 
-Referência: `pipeline-diario.md` § F2.3a.
+Referência: `pipeline-semanal.md` § F2.3a.
 
 ```markdown
 ---
@@ -117,7 +122,7 @@ tags: [<category>]
 
 ### F2.3b — FIAP (material de estudo)
 
-Referência: `pipeline-diario.md` § F2.3b.
+Referência: `pipeline-semanal.md` § F2.3b.
 
 Source page em `02-AREAS/fiap/sources/<slug>.md`, entity de fase em
 `02-AREAS/fiap/entities/fiap-<fase-slug>.md`.
@@ -160,6 +165,111 @@ fiap_fase: <Fase N — Nome>
 - [[03-RESOURCES/concepts/<kw>]]
 - [[02-AREAS/fiap/entities/fiap-<fase-slug>]]
 ```
+
+## F2.5 Concept Absorption
+
+**Princípio**: knowledge compounding — cada source page não apenas linka
+concepts, mas **atualiza** o concept com nova evidência, perspetiva ou contradição.
+Sem isto, concepts são write-once e não accumulam.
+
+### Fluxo
+
+1. Após gerar source page, extrair lista de `[[concepts/X]]` wikilinks da page
+2. Para cada concept linkado:
+   - **Existe** (`03-RESOURCES/concepts/<X>.md`):
+     - Ler seção `## Evidências` (criar se não existir)
+     - Append entrada: `- **[<data>]** <tese da source em 1 linha> — [[source-page-slug]]`
+     - Se a source contradiz algo no concept → append também em `## Tensões`
+       seção dentro do concept
+   - **Não existe** → criar concept (fluxo normal, template padrão)
+3. Para Score A sources: além de evidência, adicionar à seção
+   `## Perspectivas` do concept (insight não-óbvio que a source traz)
+
+### Bash — Concept lookup + absorption
+
+```bash
+# Extrai wikilinks de concepts da source page recém-criada
+SOURCE_PAGE="$1"  # path da source page criada
+CONCEPT_LINKS=$(grep -oE '\[\[03-RESOURCES/concepts/[^]|]+\]\]' "$SOURCE_PAGE" | \
+  sed 's/\[\[03-RESOURCES\/concepts\///;s/\]\]//' | sort -u)
+
+for concept in $CONCEPT_LINKS; do
+  CONCEPT_FILE="03-RESOURCES/concepts/${concept}.md"
+  if [[ -f "$CONCEPT_FILE" ]]; then
+    # Concept existe — append evidência
+    SOURCE_SLUG=$(basename "$SOURCE_PAGE" .md)
+    TODAY=$(date -I)
+    EVIDENCE_LINE="- **[${TODAY}]** <1-line thesis from source> — [[${SOURCE_SLUG}]]"
+
+    # Verifica se seção Evidências existe
+    if grep -q "^## Evidências" "$CONCEPT_FILE"; then
+      # Append após última linha da seção Evidências (antes da próxima ##)
+      sed -i '' "/^## Evidências/,/^## /{ /^## /!{ \$a\\
+${EVIDENCE_LINE}
+} }" "$CONCEPT_FILE" 2>/dev/null || \
+      echo "$EVIDENCE_LINE" >> "$CONCEPT_FILE"
+    else
+      # Cria seção Evidências antes de ## Links
+      sed -i '' "/^## Links/i\\
+## Evidências\\
+\\
+${EVIDENCE_LINE}\\
+" "$CONCEPT_FILE" 2>/dev/null || \
+      printf "\n## Evidências\n%s\n" "$EVIDENCE_LINE" >> "$CONCEPT_FILE"
+    fi
+    echo "absorbed: $concept ← $SOURCE_SLUG"
+  else
+    echo "new: $concept (criar via fluxo normal)"
+  fi
+done
+```
+
+### Regra
+
+- **Append > rewrite** — nunca reescrever concept existente, só agregar
+- **1 linha por evidência** — síntese da contribuição, não copy-paste
+- **Tensões vão em seção separada** — contradições não se misturam com evidências
+- **Score A = Perspectivas** — insights não-óbvios ganham destaque próprio
+
+---
+
+## F2.9 Personal Reflection (Score A only)
+
+**Princípio**: informação → conhecimento exige um passo de síntese pessoal.
+Source pages Score A são densas o suficiente para justificar reflexão ativa.
+
+### Quando ativar
+
+- **Só Score A** (não B) — Score B é conteúdo sólido mas não exigem reflexão
+- **Só artigos/ai-agents** — FIAP é material de estudo (preservar, não refletir)
+- Máximo 3 reflections por run (evitar fadiga)
+
+### Template — seção adicionada ao final da source page
+
+```markdown
+## Minha Síntese
+
+**O que muda:** <1-2 frases: como isto altera o que eu penso ou faço>
+
+**Conexão pessoal:** <1 frase: como isto conecta com projeto/estudo/trabalho atual>
+
+**Próximo passo:** <1 flag: ação concreta — ler X, testar Y, criar Z>
+```
+
+### Execução
+
+Após gerar source page Score A, AI call adicional (mesmo Sonnet, no mesmo
+contexto da source page) gera a seção `## Minha Síntese`. **Sem bash** — é
+síntese, não extração. Custo marginal: ~100 tokens/source (embed na mesma
+chamada que gera a source page).
+
+### Guardrails
+
+- Não inventar ação se não há uma clara → "Nenhum próximo passo imediato"
+- Conexão pessoal pode ser "sem conexão direta no momento"
+- **Não condensar** — 3 campos obrigatórios, mesmo se curtos
+
+---
 
 ## Comandos de Execução
 
@@ -212,18 +322,30 @@ Por categoria, `claude-sonnet-4-6`:
 
 ### Bash — Manifest append (atômico)
 
+**Dedup-gap fix (v1.4.0):** manifest key DEVE ser o basename exato do arquivo
+em Clippings/ (com extensão `.md`). Isto alinha com F1.0b scan que procura por
+`"basename"` (com aspas coladas). Antes usava `jq --arg k "$bn"` onde `$bn`
+vinha de `basename "$f"` (com extensão) mas F1.0b grep procurava sem extensão
+— mismatch causava falsos positivos (19/19 em 2026-06-17).
+
 ```bash
 while IFS='|' read -r f slug category; do
-  bn=$(basename "$f")
+  bn=$(basename "$f")  # EX: "The Log Is the Agent.md" — COM extensão
+  bn_noext="${bn%.*}"   # "The Log Is the Agent" — sem extensão (fallback)
   _hash=$(md5 -q "$f" 2>/dev/null || md5sum "$f" | cut -d' ' -f1)
   case "$category" in
     fiap) _dir="02-AREAS/fiap/sources" ;;
     concurso) _dir="02-AREAS/concurso/sources" ;;
     *) _dir="03-RESOURCES/sources" ;;
   esac
-  jq --arg k "$bn" --arg h "$_hash" --arg d "$(date -I)" \
-     --arg c "$category" --arg p "$_dir/$slug.md" \
-     '.sources[$k] = {hash: $h, ingested_at: $d, category: $c, pages_created: [$p]}' \
+  _page="${_dir}/${slug}.md"
+
+  # Registra AMBAS as variantes de key (com e sem extensão) para máxima
+  # compatibilidade com F1.0b grep (que testa múltiplos formatos)
+  jq --arg k "$bn" --arg k2 "$bn_noext" --arg h "$_hash" --arg d "$(date -I)" \
+     --arg c "$category" --arg p "$_page" \
+     '.sources[$k] = {hash: $h, ingested_at: $d, category: $c, pages_created: [$p]}
+    | .sources[$k2] = {hash: $h, ingested_at: $d, category: $c, pages_created: [$p], alias_of: $k}' \
      .raw/.manifest.json > /tmp/manifest.tmp && mv /tmp/manifest.tmp .raw/.manifest.json
 done < /tmp/classify.txt
 ```
@@ -288,12 +410,20 @@ Se >20 arquivos:
 
 ---
 
+**v1.4.0 (2026-06-18):** +F2.5 Concept Absorption (concepts deixam de ser
+write-once: cada source page appenda evidência nos concepts linkados).
++F2.9 Personal Reflection (Score A sources ganham seção "Minha Síntese"
+com 3 campos: o que muda, conexão pessoal, próximo passo). Dedup-gap fix:
+manifest agora registra key com e sem extensão (alias_of) — alinha com
+F1.0b grep que testa ambos formatos. Fixes triagem-2026-06-17 (19/19 falsos
+positivos por mismatch de key).
+
 **v1.3.0 (2026-06-14):** FIAP/concurso source pages + entities movidos de
 `03-RESOURCES/` para `02-AREAS/fiap/` e `02-AREAS/concurso/` (respectivos
 `sources/` e `entities/`). Concepts continuam compartilhados em
 `03-RESOURCES/concepts/`. Manifest `pages_created` aponta para novo path.
 
 **Status:** active desde 2026-06-09
-**Pipeline integration:** substitui F2.0–F2.7 + F2.9 do `pipeline-diario.md`
+**Pipeline integration:** substitui F2.0–F2.7 + F2.9 do `pipeline-semanal.md`
 **Templates:** F2.3a + F2.3b (referência externa, não duplicar)
 **Próximo na cadeia:** `@report-agent` recebe lista de sources criadas

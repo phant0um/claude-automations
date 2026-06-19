@@ -1,10 +1,10 @@
 ---
-title: "Standards & Anti-Patterns"
+title: "standards-anti-patterns"
 version: 2.1.0
 updated: 2026-05-30
 ---
 
-# Standards & Anti-Patterns — Fullstack Agent System
+# standards-anti-patterns — Fullstack Agent System
 
 ## Universal standards (all agents)
 

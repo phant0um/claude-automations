@@ -246,5 +246,5 @@ audit_scope: A/ + B/
 
 **Status:** active desde 2026-06-09
 **Pipeline integration:** auditoria semanal independente (não roda no pipeline diário)
-**Decisão:** ADR-NX-002-vault-reconcile-agent.md
+**Decisão:** adr-nx-002-vault-reconcile-agent.md
 **Schedule:** sexta à noite (sugestão) · manual `@vault-reconcile` quando necessário

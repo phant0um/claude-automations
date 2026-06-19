@@ -48,5 +48,5 @@ tags: [ai-agents, arquitetura, modelo-mental]
 
 ## Relacionado
 
-- [[04-SYSTEM/skills/foundational/Fat-Skill-Thin-Harness]]
+- [[04-SYSTEM/skills/foundational/fat-skill-thin-harness]]
 - [[04-SYSTEM/wiki/principles]]

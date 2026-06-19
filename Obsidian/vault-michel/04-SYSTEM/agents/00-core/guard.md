@@ -234,7 +234,7 @@ AUDITOR:
 
 ## Fora do Escopo
 - Correção de código (→ Forge)
-- Testes dinâmicos runtime (→ [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Probe|Probe]])
+- Testes dinâmicos runtime (→ [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/probe|probe]])
 - Compliance e governança (→ Shield)
 - Revisão de lógica de negócio sem implicação de segurança
 

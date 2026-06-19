@@ -36,20 +36,20 @@ Biblioteca de 37 agentes Claude organizados em 8 categorias. Prompts otimizados 
 
 **Propósito:** Estudos para concurso público, idiomas, formação em TI e desenvolvimento de carreira
 
-- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Mestre|Mestre]] — Orquestrador · `@mestre`
-- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Banca|Banca]] — Concurso público (aulas, questões, plano por banca)
-- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Babel|Babel]] — Idiomas para viajantes (4 modos: situacional, conversação, técnico)
-- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Stack|Stack]] — TI, ADS e carreira tech (tutor adaptativo, projeto guiado, entrevista)
-- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Sintese|Sintese]] — Resumos Obsidian, flashcards Anki, questões, mapa mental
-- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Trilha|Trilha]] — CV PT-BR + EN, otimização ATS, LinkedIn, estágios
-- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/Tutor|Tutor]] — Tutor adaptativo geral
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/mestre|mestre]] — Orquestrador · `@mestre`
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/banca|banca]] — Concurso público (aulas, questões, plano por banca)
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/babel|babel]] — Idiomas para viajantes (4 modos: situacional, conversação, técnico)
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/stack|stack]] — TI, ADS e carreira tech (tutor adaptativo, projeto guiado, entrevista)
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/sintese|sintese]] — Resumos Obsidian, flashcards Anki, questões, mapa mental
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/trilha|trilha]] — CV PT-BR + EN, otimização ATS, LinkedIn, estágios
+- [[04-SYSTEM/agents/edu-system/00-SYSTEM-PROMPTS/tutor|tutor]] — Tutor adaptativo geral
 
 ## Travel System (Viagens end-to-end)
 
 **Propósito:** Busca de voos/hotéis, criação e refinamento de itinerários
 
 - [[04-SYSTEM/agents/travel-system/rota|Rota]] — Orquestrador · `@rota`
-- [[04-SYSTEM/agents/travel-system/00-SYSTEM-PROMPTS/Caca|Caça]] — Busca estratégica de voos, hotéis e carros
+- [[04-SYSTEM/agents/travel-system/00-SYSTEM-PROMPTS/caca|Caça]] — Busca estratégica de voos, hotéis e carros
 - [[04-SYSTEM/agents/travel-system/rumo|Rumo]] — Criação de itinerário (roteiros diários)
 - [[04-SYSTEM/agents/travel-system/ajuste|Ajuste]] — Refinamento de roteiros já fechados
 
@@ -57,25 +57,25 @@ Biblioteca de 37 agentes Claude organizados em 8 categorias. Prompts otimizados 
 
 **Propósito:** Desenvolvimento fullstack end-to-end — backend, frontend, infra, dados e segurança
 
-- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Orchestrator|Orchestrator]] — Orquestrador · `@orchestrator`
-- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Backend-Dev|Backend-Dev]] — APIs, DB, lógica de negócio
-- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Frontend-Dev|Frontend-Dev]] — UI, componentes, UX
-- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Infra-Cloud|Infra-Cloud]] — Cloud, IaC, CI/CD
-- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Data-AI|Data-AI]] — ML, pipelines de dados
-- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Security|Sentinel]] — Review qualitativo + veto de deploy · `@sentinel` · Opus
-- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Probe|Probe]] — Testes automatizados de segurança (static/dynamic/harness) · `@probe`
+- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/orchestrator|orchestrator]] — Orquestrador · `@orchestrator`
+- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/backend-dev|backend-dev]] — APIs, DB, lógica de negócio
+- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/frontend-dev|frontend-dev]] — UI, componentes, UX
+- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/infra-cloud|infra-cloud]] — Cloud, IaC, CI/CD
+- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/data-ai|data-ai]] — ML, pipelines de dados
+- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/security|Sentinel]] — Review qualitativo + veto de deploy · `@sentinel` · Opus
+- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/probe|probe]] — Testes automatizados de segurança (static/dynamic/harness) · `@probe`
 
 ## Finance System (Investimentos & Mercado)
 
 **Propósito:** Análise de ativos, portfólio, cripto e macro
 
-- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Nexo|Nexo]] — Orquestrador · `@nexo`
-- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Valor|Valor]] — Fundamentalista (ações BR/EUA)
-- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Fluxo|Fluxo]] — ETF e FII
-- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Macro|Macro]] — Macro, BCB, IBGE, Fed
-- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Quant|Quant]] — Análise quantitativa
-- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Cripto|Cripto]] — Criptomoedas e DeFi
-- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Contador|Contador]] — Extrai informes de rendimento e mapeia fichas IRPF (trigger: `@irpf`)
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/nexo|nexo]] — Orquestrador · `@nexo`
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/valor|valor]] — Fundamentalista (ações BR/EUA)
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/fluxo|fluxo]] — ETF e FII
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/macro|macro]] — Macro, BCB, IBGE, Fed
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/quant|quant]] — Análise quantitativa
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/cripto|cripto]] — Criptomoedas e DeFi
+- [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/contador|contador]] — Extrai informes de rendimento e mapeia fichas IRPF (trigger: `@irpf`)
 
 ## Hobby System
 

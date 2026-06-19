@@ -103,7 +103,7 @@ Inputs necessários: composição atual da carteira (% por classe)
 → Stress test qualitativo: impacto de cada cenário na carteira atual
 → Alocações que ficam vulneráveis
 → Hedge natural disponível (sem derivativos complexos para PF)
-→ Encaminhar para Valor/Fluxo se ajuste específico for necessário
+→ Encaminhar para Valor/fluxo se ajuste específico for necessário
 
 ### MODO 5 — EDUCAÇÃO MACRO
 Ative: `"o que é [conceito macro]"` | `"explique [indicador]"`

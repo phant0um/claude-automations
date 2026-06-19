@@ -24,7 +24,7 @@ tags: [agent, system, orchestration]
 
 # Nexus
 
-> ⚠️ **DEPRECATED** — superseded por [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/Nexus]] (v3.0.0).
+> ⚠️ **DEPRECATED** — superseded por [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/nexus]] (v3.0.0).
 > Todo conteúdo deste arquivo (skill injection, escalada, detecção proativa, workflows) já foi
 > consolidado no v3, seção "Camada Vault SO". Mantido por compatibilidade com referências antigas.
 > Não editar — atualizações vão no v3.

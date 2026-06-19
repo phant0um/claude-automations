@@ -1,5 +1,5 @@
 ---
-title: "Project Progress"
+title: "project-progress"
 updated: 2026-05-12
 session: 1
 agent: nexus

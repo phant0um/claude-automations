@@ -179,7 +179,7 @@ Operação destrutiva (delete, force-push, >50 files) → Opus + confirmação
 
 ## Camada Vault Nativa (v3 — Ollama Cloud)
 
-Agentes vault-nativos que cobrem o pipeline diário `07-QUEUE/rotinas/pipeline-diario.md`:
+Agentes vault-nativos que cobrem o pipeline semanal `07-QUEUE/rotinas/pipeline-semanal.md`:
 
 | Pipeline F1 — triagem | `triagem-agent` | nenhuma | minimax-m3:cloud |
 | Pipeline F2 — ingest | `ingest-agent` | nenhuma | minimax-m3:cloud |

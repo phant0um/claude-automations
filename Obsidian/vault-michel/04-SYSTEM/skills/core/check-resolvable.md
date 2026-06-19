@@ -47,7 +47,7 @@ Ative esta skill quando:
 find 04-SYSTEM/agents/ -name "*.md" \
   -not -path "*/docs/*" -not -path "*/skills/*" \
   -not -path "*/memory/*" -not -path "*/_index/*" \
-  -not -path "*/00-MOCs/*" -not -path "*/adr/*" \
+  -not -path "*/00-mocs/*" -not -path "*/adr/*" \
   -not -name "README.md" -not -name "progress.md" \
   -not -name "standards.md" -not -name "project-setup.md" \
   -not -name "_template.md" \

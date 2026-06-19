@@ -89,13 +89,13 @@ Next step: [agent or action after completion]
 
 | Agent | Domain | File |
 |---|---|---|
-| stratum | APIs, DB, microservices, auth | `[[Backend-Dev]]` |
-| facet | UI/UX, React/Vue, a11y, performance | `[[Frontend-Dev]]` |
-| bastion | AWS, Terraform, CI/CD, Kubernetes | `[[Infra-Cloud]]` |
-| neuron | ML, ETL, LLMs, RAG, analytics | `[[Data-AI]]` |
-| sentinel | AppSec, OWASP, pentest, compliance — **veto de deploy** | `[[Security]]` |
-| probe | Testes automatizados: static scan (pré) + dynamic scan (pós) | `[[Probe]]` |
-| forge | Code quality: 5E rubric review, scoring 0–100, refactoring | `[[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Forge]]` |
+| stratum | APIs, DB, microservices, auth | `[[backend-dev]]` |
+| facet | UI/UX, React/Vue, a11y, performance | `[[frontend-dev]]` |
+| bastion | AWS, Terraform, CI/CD, Kubernetes | `[[infra-cloud]]` |
+| neuron | ML, ETL, LLMs, RAG, analytics | `[[data-ai]]` |
+| sentinel | AppSec, OWASP, pentest, compliance — **veto de deploy** | `[[security]]` |
+| probe | Testes automatizados: static scan (pré) + dynamic scan (pós) | `[[probe]]` |
+| forge | Code quality: 5E rubric review, scoring 0–100, refactoring | `[[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/forge]]` |
 
 ## Rules
 

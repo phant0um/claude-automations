@@ -80,7 +80,7 @@ unset ANTHROPIC_AUTH_TOKEN
 
 ## Anti-padrões
 
-- ❌ Usar Ollama para Nexus/Orchestrator (decisor sempre Claude)
+- ❌ Usar Ollama para Nexus/orchestrator (decisor sempre Claude)
 - ❌ Usar Ollama para Shield (segurança sempre Claude Opus)
 - ❌ Escalar para Claude sem tentar Ollama 2× primeiro (gastar tokens premium em tarefas operacionais)
 - ❌ Esquecer de reverter `ANTHROPIC_BASE_URL` após tarefa (vazamento para tarefas seguintes)
@@ -102,4 +102,4 @@ unset ANTHROPIC_AUTH_TOKEN
 
 **Status:** active desde 2026-06-09
 **Owner:** Nexus
-**Decisão:** ADR-NX-001-ollama-model-router.md
+**Decisão:** adr-nx-001-ollama-model-router.md

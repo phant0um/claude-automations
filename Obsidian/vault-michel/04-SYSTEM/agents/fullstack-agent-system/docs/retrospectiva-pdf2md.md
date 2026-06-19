@@ -107,7 +107,7 @@ como faxina posterior.
 ## Ações de propagação (próximo hill-climb)
 
 - [x] Append das entradas acima em `memory/bastion.md`, `memory/stratum.md`, `memory/facet.md`, `memory/sentinel.md`, `memory/neuron.md`, `memory/maestro.md` (criados 2026-05-29 a partir de [[_template]]).
-- [ ] Adicionar a `docs/Standards-Anti-Patterns.md`: o catálogo **subprocess-de-binário-de-sistema → resolução de path** e o **idioma hdiutil** (RW explícito + device-node detach).
+- [ ] Adicionar a `docs/standards-anti-patterns.md`: o catálogo **subprocess-de-binário-de-sistema → resolução de path** e o **idioma hdiutil** (RW explícito + device-node detach).
 - [ ] Adicionar ao checklist do Maestro: "nova dep externa via subprocess → grep + catálogo de fixes" e "gate com evidência, não estimativa".
 - [ ] Promover o code-review max-effort a etapa fixa do pipeline de release.
 

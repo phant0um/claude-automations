@@ -18,7 +18,7 @@ A senior engineering team composed of 6 specialized agents, orchestrated by a ce
 ## Structure
 
 ```
-Fullstack Agent System/
+fullstack-agent-system/
 ├── 00-SYSTEM-PROMPTS/
 │   ├── Orchestrator.md     ← Maestro: central planner (opus-4-7)
 │   ├── Backend-Dev.md      ← Stratum: APIs, DB, microservices (sonnet-4-6)
@@ -29,8 +29,8 @@ Fullstack Agent System/
 │   └── Forge.md            ← Forge: 5E code quality, scoring, refactoring (sonnet-4-6)
 ├── docs/
 │   ├── Constitution.md     ← 6 principles that govern all agents
-│   ├── Agent-Model-Map.md  ← Routing: activity → model → agent
-│   ├── Standards-Anti-Patterns.md
+│   ├── agent-model-map.md  ← Routing: activity → model → agent
+│   ├── standards-anti-patterns.md
 │   └── progress.md         ← System state (File-as-Bus)
 └── adr/
     └── 0000-template.md    ← Template for Architecture Decision Records

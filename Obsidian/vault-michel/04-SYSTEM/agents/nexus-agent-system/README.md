@@ -71,7 +71,7 @@ nexus (orchestrator)
 | `docs/standards.md`      | Critérios de qualidade e anti-padrões      |
 | `docs/constitution.md`   | Princípios e limites do sistema            |
 | `00-SYSTEM-PROMPTS/model-router.md` | Tabela de roteamento Claude vs Ollama |
-| `04-SYSTEM/wiki/adr/`    | Decisões arquiteturais (ADR-NX-001..003)   |
+| `04-SYSTEM/wiki/adr/`    | Decisões arquiteturais (adr-nx-001..003)   |
 
 ## Como Invocar
 

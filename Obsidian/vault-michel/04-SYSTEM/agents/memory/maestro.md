@@ -54,4 +54,4 @@ Memória persistente cross-session. Padrão [[_template|agent-memory]].
 - Memórias dos especialistas: [[bastion]] · [[stratum]] · [[facet]] ·
   [[sentinel]] · [[neuron]].
 - Pendência: promover o code-review max-effort a etapa fixa do pipeline e
-  registrar o catálogo subprocess-path em `docs/Standards-Anti-Patterns.md`.
+  registrar o catálogo subprocess-path em `docs/standards-anti-patterns.md`.

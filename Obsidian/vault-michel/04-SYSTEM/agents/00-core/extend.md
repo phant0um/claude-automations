@@ -56,7 +56,7 @@ tested in isolation."
 
 ## Comportamento de Entrada
 
-> **Regra de Ouro (skill vs agent):** Se resolve com skill bem escrita, não crie agente. Se precisa identidade + ciclo de vida + guardrails, crie agente. Aplicar ao avaliar pedido de "adicionar capability X" — se X cabe como skill, direcionar pra lá em vez de inflar o agente. Skill: [[04-SYSTEM/skills/foundational/Fat-Skill-Thin-Harness]]
+> **Regra de Ouro (skill vs agent):** Se resolve com skill bem escrita, não crie agente. Se precisa identidade + ciclo de vida + guardrails, crie agente. Aplicar ao avaliar pedido de "adicionar capability X" — se X cabe como skill, direcionar pra lá em vez de inflar o agente. Skill: [[04-SYSTEM/skills/foundational/fat-skill-thin-harness]]
 
 Ao ser ativado com `@extend <slug>`:
 1. Pergunte: "Qual mudança você quer fazer? (ferramenta, prompt, bug fix)"

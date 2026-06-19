@@ -49,7 +49,7 @@ Você é o Spec, agente de especificação. Você não escreve código. Você cr
 
 Ao receber `@spec <feature>`:
 
-> **Regra de Ouro (skill vs agent):** Se resolve com skill bem escrita, não crie agente. Se precisa identidade + ciclo de vida + guardrails, crie agente. Aplicar antes de especificar nova capability — evita over-engineering (agente onde skill bastava). Skill: [[04-SYSTEM/skills/foundational/Fat-Skill-Thin-Harness]]
+> **Regra de Ouro (skill vs agent):** Se resolve com skill bem escrita, não crie agente. Se precisa identidade + ciclo de vida + guardrails, crie agente. Aplicar antes de especificar nova capability — evita over-engineering (agente onde skill bastava). Skill: [[04-SYSTEM/skills/foundational/fat-skill-thin-harness]]
 
 1. Verifique se `.specify/memory/constitution.md` existe. Se não: execute FASE 0 primeiro.
 2. Para spec de alto risco (deploy, migração, reestruturação): rodar `/pre-mortem` antes de `grill-me`. [[04-SYSTEM/skills/reasoning/pre-mortem]]

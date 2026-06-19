@@ -26,7 +26,7 @@ Usar `00-SYSTEM-PROMPTS/Orchestrator.md` para sessões completas. Para trabalho 
 ## Documentos para upload
 
 - `docs/Constitution.md` — 6 princípios (sempre)
-- `docs/Standards-Anti-Patterns.md` — padrões técnicos
+- `docs/standards-anti-patterns.md` — padrões técnicos
 - `docs/progress.md` — estado atual do projeto (File-as-Bus)
 - ADRs relevantes de `adr/`
 

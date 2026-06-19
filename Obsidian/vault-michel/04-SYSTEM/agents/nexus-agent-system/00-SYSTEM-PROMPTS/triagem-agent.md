@@ -246,5 +246,5 @@ generated_by: triagem-agent
 ---
 
 **Status:** active desde 2026-06-09
-**Pipeline integration:** substitui F1.1 + F1.2 + F1.3 do `pipeline-diario.md`
+**Pipeline integration:** substitui F1.1 + F1.2 + F1.3 do `pipeline-semanal.md`
 **Próximo na cadeia:** `@ingest-agent` recebe `/tmp/candidates_aprovados.txt`

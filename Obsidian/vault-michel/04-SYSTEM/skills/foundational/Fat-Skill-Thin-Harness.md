@@ -43,5 +43,5 @@ Com harness = $200 success. O modelo não mudou. O harness mudou.
 ## Relacionado
 
 - [[04-SYSTEM/wiki/principles]]
-- [[04-SYSTEM/agents/00-MOCs/MOC-Skills]]
-- [[04-SYSTEM/agents/00-MOCs/MOC-Agentes]]
+- [[04-SYSTEM/agents/00-mocs/moc-skills]]
+- [[04-SYSTEM/agents/00-mocs/moc-agentes]]

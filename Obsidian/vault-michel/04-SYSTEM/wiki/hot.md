@@ -11,10 +11,11 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 
 ## Automação Pipeline
 
-- launchd: 16h diário (Manaus UTC-4 = 20h UTC)
-- Script: `04-SYSTEM/scripts/pipeline-diario.sh`
-- Modelos: Ollama Cloud (F1–F3.3) + Claude Pro (F3.5)
-- Config: `04-SYSTEM/config/com.michel.pipeline-diario.plist`
+- launchd: domingo 22h (Manaus UTC-4 = seg 02h UTC) — pipeline semanal
+- Daily scan: 16h diário (bash-only, zero AI cost)
+- Script: `04-SYSTEM/scripts/pipeline-semanal.sh`
+- Modelos: Claude Haiku/Sonnet (F1–F3) + Claude Pro (F3.5 Nexus review)
+- Config: `04-SYSTEM/config/com.michel.pipeline-semanal.plist`
 - Controle: [[04-SYSTEM/wiki/controle-pipeline]]
 > Agente responsável: `hill` — trigger: "sweep hot.md" ou rotina mensal (`vault-hot-sweep`).
 >
@@ -64,7 +65,7 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 - Ref: [[01-PROJECTS/Fintech/overview]]
 
 **Finance System — Fatura agent (2026-05-29):**
-- ✅ Agente Fatura criado — [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/Fatura]] (Santander, Porto Seguro, Revolut; relatório em 06-GENERATED/faturas/)
+- ✅ Agente Fatura criado — [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/fatura]] (Santander, Porto Seguro, Revolut; relatório em 06-GENERATED/faturas/)
 - ✅ Skill fatura-parser criada — [[04-SYSTEM/agents/finance-system/skills/fatura-parser]] (detecção banco, categorias, fallback)
 - Drop zone PDFs: `.raw/faturas/` | Output: `06-GENERATED/faturas/YYYY-MM-banco.md`
 
@@ -79,7 +80,7 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 - ✅ Melhorias: subagent-team (skill injection no briefing), heavy-think (vs debate), codex-retrospective (link evolve)
 
 **Vault SO — melhorias pendentes (2026-05-29):**
-- ✅ Forge agent criado — [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/Forge]] (5E rubric, score 0–100, refactor) (2026-05-29)
+- ✅ Forge agent criado — [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/forge]] (5E rubric, score 0–100, refactor) (2026-05-29)
 - ✅ code-optimize skill criada — [[04-SYSTEM/skills/core/code-optimize]] (5 dimensões, modelo por etapa) (2026-05-29)
 - ✅ Maestro routing atualizado — Forge na sequência pre-deploy; v2.1.0 (2026-05-29)
 
@@ -177,7 +178,7 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 **Hill-climbing audit 2026-06 — drift cleanup (9 itens):**
 - Nexus gates completados: `x-thread-weekly` v2 (único sem gate), `metricas-ingest` v2 (gate incompleto)
 - Arquivados: `manutencao-semanal`/`meta-coaching-semanal` → `08-ARCHIVE/rotinas/`; `kore.md`/`brainstorm.md` (stubs duplicados de agentes reais) → `08-ARCHIVE/agent-stubs-duplicados/`
-- Skills órfãs Von-Neumann + Fat-Skill-Thin-Harness → linkadas em `principles.md` §VII
+- Skills órfãs Von-Neumann + fat-skill-thin-harness → linkadas em `principles.md` §VII
 - **Correção de metodologia:** "8/9 agentes sem Layer 1" era falso positivo (grep de string literal vs. seções equivalentes) — guard/hill/extend/review/spec/verify/vault-audit já cumprem via Identidade+Restrições+Fora do Escopo. `rotina-audit-mensal` v7 corrigida pra checar seção, não string
 - Tier de complexidade adicionado ao rubric token-economy (rotinas leves avaliam 5/8 camadas)
 - **Probe suites geradas** (6): guard/hill/verify/extend/review/nexus → `06-GENERATED/probe/*-probe-2026-06-07.md` (~16-18 vetores cada, 7 categorias) — desbloqueia score-drift (6.6)
@@ -434,8 +435,8 @@ Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harn
 - `ingest-agent` — F2 vault builder via minimax-m3 / kimi-k2.6 (FIAP)
 - `report-agent` — F3 relatório via deepseek-v4-pro / nemotron-3-ultra
 - `vault-reconcile` — auditoria semanal via nemotron-3-ultra (1M ctx)
-- `wiki/adr/ADR-NX-001-ollama-model-router.md` — decisão de roteamento
-- `wiki/adr/ADR-NX-002-vault-reconcile-agent.md` — decisão de reconciliação
+- `wiki/adr/adr-nx-001-ollama-model-router.md` — decisão de roteamento
+- `wiki/adr/adr-nx-002-vault-reconcile-agent.md` — decisão de reconciliação
 - README v1.0.0 → v3.0.0 · 7 → 11 agentes
 **Guardrails preservados:** SOUL, Shield (Opus), Ledger (git) intocados
 **Decisão:** pipeline `pipeline-diario.md` v3.5 mantido como referência — agents vault-nativos operam por cima
@@ -709,3 +710,46 @@ lingua-inglesa, logica) não têm aulas old — 100% lote AFRFB, sem mapa
 necessário.
 
 Commit pendente (10 index.md alterados, abaixo/no threshold — verificar).
+
+## Pipeline Diário 2026-06-16
+**Triagem:** 248 candidatos → 234 aprovados (A:230, B:4), 14 rejeitados (C:12, D:2)
+**Ingest:** 156 pe-aula files (concurso PE, 9 disciplinas) copiadas 08-ARCHIVE/A→materias/ + 21 articles retroativo
+**Manifest:** 1989→2211 (+222: 201 concurso + 21 articles)
+**Clusters:** Loop engineering (7 fonts) · Self-improving agents (4) · Concurso PE (8 cursos, 156 aulas) · PKM+Obsidian (2)
+**Top action:** Dedup-gap fix — slug-normalization no F1.0b + criar conceito `loop-engineering-patterns`
+**Veredito:** PIPELINE OK · 0 AI calls scoring (heurística bash 100%)
+→ [[06-GENERATED/triagem/triagem-2026-06-16]] · [[06-GENERATED/ingest-report/ingest-diario-2026-06-16]]
+
+## Pipeline Diário 2026-06-17
+**Triagem:** 19 candidatos → 0 aprovados, 19 rejeitados (todos C — dedup-gap generalizado)
+**Ingest:** 0 sources (todas já ingeridas em sessões 06-14/15/16, manifest gap)
+**Fix:** +19 entries retroativas no manifest (995→1014). Regression test F1.0b: 0 novos após fix
+**Archive:** 19 arquivos → 08-ARCHIVE/C/2026-06-17/. Clippings/ 31→12 arquivos
+**Veredito:** PIPELINE OK · 0 AI calls (heurística 100%, cost ~150 tokens Nexus gate)
+**Top action:** dedup-gap estrutural recorrente (lotes 789+19) — F2 manifest-write bug. Considerar F2.6 audit automático pós-batch
+→ [[06-GENERATED/triagem/triagem-2026-06-17]] · [[06-GENERATED/ingest-report/ingest-diario-2026-06-17]]
+
+## Pipeline Semanal 2026-06-19
+**Triagem:** 53 candidatos → 46 aprovados (27 A, 19 B), 7 rejeitados (3 C, 4 D — inclui 1 duplicata exata)
+**Ingest:** 46 source pages criadas (03-RESOURCES/sources/), tema dominante loop engineering/agent harness (35/46)
+**Manifest:** 1014→1106 (+92: 46 sources + 46 aliases sem extensão) — fix manual (subagent não persistiu, sessão expirou antes do F2.6)
+**Clusters:** Loop engineering (8) · Agent harness/frameworks (5) · Hermes ecosystem (3) · Second brain/PKM (3) · Modelos Fable/GLM/Kimi (5) · Articles diversos (19)
+**Kanban:** +1 item alta (compressão tool-output → token-economy)
+**Top action:** appendar técnica de compressão de tool-output (PR Hermes) ao concept de token-economy existente
+**Veredito:** PIPELINE OK (ressalva: manifest gap do subagent corrigido manualmente)
+→ [[06-GENERATED/triagem/triagem-2026-06-19]] · [[06-GENERATED/ingest-report/ingest-diario-2026-06-19]]
+
+## Pipeline Semanal 2026-06-19b (regression test + segundo lote)
+**Regression test:** F1.0b rodado de novo pós-fix manifest — 29 Clippings restantes → só 13 novos (16 já reconhecidos corretamente). Dedup-gap recorrente (06-15/06-16/06-17) confirmado resolvido.
+**Triagem:** 13 candidatos → 10 aprovados (6 A, 4 B), 3 rejeitados (3 C)
+**Ingest:** 10 source pages criadas, manifest 1106→1126 (+20: 10 sources + 10 aliases)
+**Achado notável:** fonte "Inspect at Scale" (Ramp) documenta caso real de RTK em produção (150k sessões) onde economia teórica de US$1M virou líquido questionável por retrabalho — relevante porque este vault usa RTK ativamente. Kanban +1 item (auditar `rtk gain --history`).
+**Melhorias implementadas (sessão anterior, F3.3):** entity Eve criada, evidência cross-ref em token-economy
+**Veredito:** PIPELINE OK
+→ [[06-GENERATED/triagem/triagem-2026-06-19b]]
+
+## Restructure: split 8 batch source pages (2026-06-19c)
+**Motivo:** usuário pediu reprocesso de ingests 06-06→06-14 (excl. fiap/concurso). 191 entries no manifest; 168 já eram 1:1 e profundas (53-559 linhas) — sem ação. 8 páginas-batch (consolidavam 45 fontes em "## N." numeradas) quebravam o padrão atual 1-fonte-1-página.
+**Ação:** 8 agents paralelos splitaram cada batch em página individual, preservando profundidade + síntese cross-source (distribuída como "Ver também" nas novas páginas).
+**Resultado:** 45 novas source pages (`03-RESOURCES/sources/`), manifest +45/-8 keys, sources-index.md atualizado (8 linhas→45), 8 páginas antigas movidas para `08-ARCHIVE/superseded/batch-pages-split-2026-06-19/` (preservadas, não deletadas), ~20 backlinks corrigidos em arquivos que referenciavam as páginas antigas.
+**Achado:** 1 wikilink pré-existente quebrado (`04-SYSTEM/wiki/model-routing`, não existe) — descoberto durante split, não inventado link substituto.
