@@ -11,7 +11,7 @@ updated: 2026-05-31
 
 ## System prompt
 
-Usar `00-SYSTEM-PROMPTS/Rota.md` para intake geral. Para sessões focadas:
+Usar `Rota.md` para intake geral. Para sessões focadas:
 
 | Sessão | Arquivo | Trigger |
 |--------|---------|---------|

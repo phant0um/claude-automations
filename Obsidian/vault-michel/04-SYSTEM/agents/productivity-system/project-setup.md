@@ -13,17 +13,17 @@
 
 ## System prompt principal
 
-Copiar conteúdo de `00-SYSTEM-PROMPTS/Pulso.md`.
+Copiar conteúdo de `Pulso.md`.
 
 Para sessão focada: usar agente diretamente (Eixo, Norte ou Eco).
 
 ## Documentos para upload
 
 ```
-00-SYSTEM-PROMPTS/Pulso.md
-00-SYSTEM-PROMPTS/Eixo.md
-00-SYSTEM-PROMPTS/Norte.md
-00-SYSTEM-PROMPTS/Eco.md
+Pulso.md
+Eixo.md
+Norte.md
+Eco.md
 skills/gtd-horizons.md
 skills/okr-format.md
 docs/progress.md          ← atualizar após weekly review e check-in OKR

@@ -1,117 +1,66 @@
-# Agents Navigation Guide
+# Agents — Guia de Navegação
 
-## Quick Reference: 8 Categories
+> Estrutura **flat** (achatada 2026-06-20). Agentes vivem na **raiz** de cada `*-system/` ou em `core/` — sem categorias numeradas (`00-core`/`02-domain-experts`/`04-infrastructure`) e sem wrappers `00-SYSTEM-PROMPTS/`.
+>
+> **Resolver canônico de roteamento = [[04-SYSTEM/AGENTS]].** Este guia diz *onde as coisas ficam*; o roster roteável e os triggers vivem em AGENTS.md.
 
-| Folder | Purpose | Files | Depends On |
-|--------|---------|-------|-----------|
-| `00-core/` | Quality gates, security, health + spec→impl→verify | 8 | None |
-| `02-domain-experts/` | Functional agents by domain | 21 | varies |
-| `TJAM Institutional System/` | TJAM compliance & governance | 5 | varies |
-| `04-infrastructure/` | Proxies, system integrations | 1 | None |
-| `_index/` | Documentation & references | 5 | - |
-
-**Total: 37 agents + 5 reference files**
-
----
-
-## Dependency Flow
+## Estrutura
 
 ```
-00-core (no deps)
-    ↓
-02-domain-experts (mostly independent)
-    ├ escrita-conteudo/ (4 agents)
-    ├ tech-dev/ (5 agents)
-    ├ design-visual/ (2 agents)
-    ├ content-personal-brand/ (2 agents)
-    ├ educacao/ (5 agents)
-    ├ travel/ (2 agents)
-    └ legal-gov/ (1 agent)
-    
-TJAM Institutional System (independent, governance)
-    ├ chefia/
-    ├ dados/
-    ├ juridico/
-    ├ pca/
-    └ pls/
-    
-04-infrastructure (system-level)
-    └ claude-hermes-proxy.md
+04-SYSTEM/
+├── AGENTS.md              ← resolver/firmware (no diretório pai, não em agents/)
+└── agents/
+    ├── core/              ← firmware do vault SO (quality gates, segurança, infra)
+    ├── _index/            ← navegação: este README, ai-agents-index, moc-*
+    ├── memory/            ← memória cross-session por agente
+    ├── <11 *-system/>     ← times de domínio (prompts na raiz)
+    └── *.md (raiz)        ← docs de referência (agent-patterns, agentic-reasoning, …) + nexus
 ```
 
----
+### Infraestrutura
 
-## How to Trigger Agents
+| Pasta | Conteúdo |
+|-------|----------|
+| `core/` | Firmware: `guard` `hill` `review` `spec` `extend` `verify` `ingest-report` + `audit-agentes-mensal` `cluster-agent` `vault-audit` + `claude-hermes-proxy` (proxy HTTP) |
+| `_index/` | `ai-agents-index` (registro mestre) · `moc-agentes` · `moc-skills` · este README |
+| `memory/` | 1 arquivo por agente (`nexus`, `hill`, `maestro`, `stratum`, …) + `_template` |
 
-**System firmware agentes** (core):
-```bash
-@guard [code]          # Security audit (Guard)
-@verify                # Post-impl QA (Verify)
-@review                # Repo hygiene (Review)
-@spec [feature]        # Spec-driven dev (Spec)
-@extend [agent]        # Agent extension (Extend)
-@hill [agent]          # Hill-climbing (Hill)
-```
+### Times de domínio (`*-system/`, prompts na raiz)
 
-**Domain experts & functional agents:**
-Trigger manually via `@` mention or `/skill` + `@ingest-report` for automation.
+| Time | Foco |
+|------|------|
+| `nexus-agent-system/` | Orquestração central — Nexus (entry) + Scout/Forge/Shield/Pixel/Herald/Ledger + ingest/triagem/report/reconcile |
+| `fullstack-agent-system/` | Engenharia sênior — orchestrator + backend/frontend/infra/data-ai/security/probe/forge |
+| `knowledge-system/` | Conhecimento — kore, sigma, farol, pena, bussola, brainstorm |
+| `edu-system/` | Educação — mestre, tutor, stack, trilha, sintese, babel, banca |
+| `concurso-coach-system/` | Prep fiscal — tutor-mor + simulador + corretor-redacao + 15 coaches por disciplina |
+| `finance-system/` | Finanças — nexo, fluxo, valor, macro, quant, cripto, contador, desafiante, … |
+| `marketing-system/` | Marca pessoal — signal, frame, folio, lens, vox, anchor, canvas, prism |
+| `productivity-system/` | GTD/produtividade — pulso, eixo, norte, eco |
+| `travel-system/` | Viagem — caca, rota, rumo, ajuste |
+| `tjam-institutional-system/` | Institucional TJAM — assistente-de-chefia, analista-de-dados + 3 assessores (jurídico, PCA, PLS) |
+| `hobby-system/` | Hobby — mtg-arena-coach |
 
-**Infrastructure:**
-`claude-hermes-proxy` starts automatically at 127.0.0.1:8080 for OpenAI-compat access.
+Cada `*-system/` pode ter `docs/` (constitution, standards, progress) e `skills/` — **não contam como agentes**.
 
----
+## Como acionar
 
-## Adding New Agents
+- Tudo começa por `@nexus`. O roteamento canônico (trigger → agente) está em [[04-SYSTEM/AGENTS]] §Regras de Roteamento.
+- Firmware: `@guard` `@verify` `@review` `@spec [feature]` `@extend [slug]` `@hill [slug]`.
+- `claude-hermes-proxy` sobe sozinho em `127.0.0.1:8080` (OpenAI-compat).
 
-1. **Determine category** by function/domain
-2. **Create file** in appropriate subfolder (e.g., `02-domain-experts/tech-dev/new-agent.md`)
-3. **Update** `ai-agents-index.md` with wikilink under that category
-4. **Test** trigger syntax in a Nexus call
+## Adicionar agente
 
-**Example:** New writing agent → `02-domain-experts/escrita-conteudo/novo-agente.md`
+1. Criar `.md` (kebab-case) na **raiz** do `*-system/` correto — ou em `core/` se for firmware. Sem subpasta de categoria.
+2. Registrar no resolver: [[04-SYSTEM/AGENTS]] (tabela do time + Regras de Roteamento) e em `ai-agents-index`.
+3. Validar: skill `check-resolvable` (detecta agente fantasma / dead link / trigger órfão).
 
----
+## Referências
 
-## Migration Status
-
-- ✓ Phase 1: Folder structure created (2026-05-14)
-- ✓ Phase 2: All 37 agents moved to categories (2026-05-14)
-- ✓ Phase 2b: All 8 skills moved to type-based folders (2026-05-14)
-- ✓ Phase 3: ai-agents-index.md remapped + reorganized (2026-05-14)
-- ✓ Phase 4: README.md navigation guide created (2026-05-14)
-- Pending: Phase 5 — Full verification (AGENTS.md test, wikilink validation)
-
----
-
-## Files in This Folder (_index/)
-
-- `ai-agents-index.md` — Master index (categorized, remapped)
-- `README.md` — This file
-- `AI agents.md` — Legacy artifact (reference)
-- `AGENTS.md` — System firmware (in parent dir, not moved)
-- `prompt-review-2026-05-09.md` — Timestamped review artifact
+- [[04-SYSTEM/AGENTS]] — resolver/firmware
+- [[04-SYSTEM/agents/_index/ai-agents-index]] — índice mestre
+- [[04-SYSTEM/wiki/hot]] — hot cache
+- [[03-RESOURCES/wiki-index]] — home do vault
 
 ---
-
-## Gotchas & Fixes
-
-| Issue | Fix |
-|-------|-----|
-| Wikilinks 404 | Check `ai-agents-index.md` path format: ``[[04-SYSTEM/agents/category/filename]]`` |
-| Triggers broken | Test via `@nexus [agent]` — firmware in AGENTS.md controls routing |
-| Skills not found | Check `04-SYSTEM/skills/{core,reasoning,orchestration,foundational}/` |
-| Missing subcategory | Contact maintainer; new domains go in `02-domain-experts/` |
-
----
-
-## Key References
-
-- `[[03-RESOURCES/wiki-index]]` — Vault home
-- `[[04-SYSTEM/wiki/hot]]` — Hot cache (frequently accessed)
-- `[[04-SYSTEM/AGENTS]]` — System firmware & Nexus orchestration
-- `[[04-SYSTEM/agents/_index/ai-agents-index]]` — Master agent registry
-- `[[04-SYSTEM/skills/foundational/spec-lifecycle]]` — Spec-driven philosophy
-
----
-
-**Last updated:** 2026-05-14 · **Migration:** Complete · **Ready for 12+ agent expansion**
+**Achatado em 2026-06-20** (era: `00-core` / `00-mocs` / `02-domain-experts` / `04-infrastructure` + 11× `00-SYSTEM-PROMPTS/`). Histórico do flatten: [[04-SYSTEM/wiki/errors]].

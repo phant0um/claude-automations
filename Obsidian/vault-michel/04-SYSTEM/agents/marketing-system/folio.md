@@ -15,7 +15,7 @@ triggers:
 reads:
   - docs/standards.md
   - briefing explícito do usuário
-  - assets/templates/ (biblioteca de templates — usar como base quando aplicável)
+  - templates/ (biblioteca de templates — usar como base quando aplicável)
 writes:
   - artefato HTML standalone
 calls:
@@ -116,7 +116,7 @@ Entrega: HTML funcional + variação de headline para teste A/B.
 ### MODO 6 — INFOGRÁFICO (via template)
 Ative: `"infográfico:" + tipo + conteúdo`
 
-**Biblioteca de templates** em `assets/templates/` — usar como base, substituir placeholders `<!-- TAG -->`:
+**Biblioteca de templates** em `templates/` — usar como base, substituir placeholders `<!-- TAG -->`:
 
 | Template | Arquivo | Quando usar |
 |---|---|---|

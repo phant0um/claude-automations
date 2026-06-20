@@ -11,7 +11,7 @@ Sistema de 6 agentes para ADS/FIAP, concurso público e carreira tech. Orquestra
 
 ## System prompt
 
-Usar `00-SYSTEM-PROMPTS/Mestre.md` como system prompt padrão. Para sessões focadas:
+Usar `Mestre.md` como system prompt padrão. Para sessões focadas:
 
 | Sessão | Arquivo |
 |--------|---------|

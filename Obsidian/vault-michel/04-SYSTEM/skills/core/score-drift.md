@@ -57,7 +57,7 @@ Score cada dimensão de 0–10 (0 = sem drift, 10 = completamente drifted):
 
 ### 1. Ler Agent File *(Haiku)*
 
-Ler `04-SYSTEM/agents/00-core/<slug>.md`. Extrair:
+Ler `04-SYSTEM/agents/core/<slug>.md`. Extrair:
 - Identidade declarada (seção "Identidade")
 - Restrições explícitas
 - Fora do escopo
@@ -153,6 +153,6 @@ Dimensões críticas: [D* list] → "@hill <slug>"
 
 ## Relacionado
 
-- [[04-SYSTEM/agents/00-core/hill]] — consome este score como input inicial
+- [[04-SYSTEM/agents/core/hill]] — consome este score como input inicial
 - [[04-SYSTEM/skills/reasoning/trace]] — investiga causas específicas quando score-drift identifica dimensão crítica
 - [[04-SYSTEM/skills/core/drift-review]] — drift de docs/repo (diferente de drift de comportamento de agente)

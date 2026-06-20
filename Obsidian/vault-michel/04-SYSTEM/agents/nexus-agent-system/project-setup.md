@@ -12,7 +12,7 @@
 
 ## System prompt principal
 
-Copiar conteúdo de `00-SYSTEM-PROMPTS/Nexus.md`.
+Copiar conteúdo de `Nexus.md`.
 
 Para sessões especializadas sem orquestração:
 - Implementação: `Forge.md`

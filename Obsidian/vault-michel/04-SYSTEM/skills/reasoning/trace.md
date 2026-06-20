@@ -56,7 +56,7 @@ Se faltarem informações: fazer 1 pergunta por lacuna. Não prosseguir sem outp
 
 ### 2. Ler Agent File *(Sonnet)*
 
-Ler `04-SYSTEM/agents/00-core/<slug>.md` completo. Mapear:
+Ler `04-SYSTEM/agents/core/<slug>.md` completo. Mapear:
 - Identidade declarada (o que o agente diz que é)
 - Restrições explícitas (seção "Restrições")
 - Tools declaradas (frontmatter `tools`)
@@ -102,7 +102,7 @@ CAUSAS SECUNDÁRIAS (se houver):
   [lista]
 
 CORREÇÃO SUGERIDA:
-  Arquivo: 04-SYSTEM/agents/00-core/<slug>.md
+  Arquivo: 04-SYSTEM/agents/core/<slug>.md
   Seção: <nome da seção>
   Mudança: [texto exato a adicionar/modificar — mínimo necessário]
   Justificativa: [por que essa mudança específica resolve sem efeitos colaterais]
@@ -123,7 +123,7 @@ PRÓXIMO PASSO: "@hill <slug>" com esta análise como contexto inicial
 
 ## Relacionado
 
-- [[04-SYSTEM/agents/00-core/hill]] — consome o diagnóstico do trace para aplicar correção
-- [[04-SYSTEM/agents/00-core/guard]] — security traces seguem caminho diferente (OWASP LLM checklist)
+- [[04-SYSTEM/agents/core/hill]] — consome o diagnóstico do trace para aplicar correção
+- [[04-SYSTEM/agents/core/guard]] — security traces seguem caminho diferente (OWASP LLM checklist)
 - [[04-SYSTEM/skills/reasoning/probe]] — probe gera casos, trace investiga casos que já falharam
 - [[04-SYSTEM/skills/reasoning/diagnose]] — trace é para agentes (reverse-engineer do agent file); diagnose é para código/sistema geral (debugging loop disciplinado)

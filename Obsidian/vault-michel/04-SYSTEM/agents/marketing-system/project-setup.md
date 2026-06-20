@@ -1,7 +1,7 @@
 # Marketing System — Claude Project Setup
 
 ## System prompt
-Copiar `00-SYSTEM-PROMPTS/Signal.md` como system prompt padrão.
+Copiar `Signal.md` como system prompt padrão.
 
 Signal roteia para o especialista correto. Para sessões dedicadas:
 

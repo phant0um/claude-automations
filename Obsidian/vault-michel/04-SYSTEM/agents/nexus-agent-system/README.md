@@ -46,7 +46,7 @@ nexus (orchestrator)
 | report-agent | — | deepseek-v4-pro:cloud / nemotron-3-ultra:cloud | sempre |
 | vault-reconcile | — | nemotron-3-ultra:cloud | sempre |
 
-> Detalhes completos de roteamento: `00-SYSTEM-PROMPTS/model-router.md`
+> Detalhes completos de roteamento: `model-router.md`
 > Regra de escalada Ollama → Claude: ver `model-router.md` § Regra de Escalada.
 
 ## Ciclo de Vida
@@ -70,7 +70,7 @@ nexus (orchestrator)
 | `docs/progress.md`       | Estado atual — tarefas, bloqueios, próximos|
 | `docs/standards.md`      | Critérios de qualidade e anti-padrões      |
 | `docs/constitution.md`   | Princípios e limites do sistema            |
-| `00-SYSTEM-PROMPTS/model-router.md` | Tabela de roteamento Claude vs Ollama |
+| `model-router.md` | Tabela de roteamento Claude vs Ollama |
 | `04-SYSTEM/wiki/adr/`    | Decisões arquiteturais (adr-nx-001..003)   |
 
 ## Como Invocar

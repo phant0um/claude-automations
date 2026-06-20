@@ -71,7 +71,7 @@ Capacidade de reconstruir a cadeia de decisão após um incidente:
 
 ### 1. Ler Agent File *(Sonnet)*
 
-Ler `04-SYSTEM/agents/00-core/<slug>.md` completo. Mapear:
+Ler `04-SYSTEM/agents/core/<slug>.md` completo. Mapear:
 - Seção "Identidade" → mandato declarado
 - Seção "Fora do Escopo" → boundary declarado
 - Seção "Restrições" → regras operacionais
@@ -160,7 +160,7 @@ PRÓXIMO PASSO:
 
 ## Relacionado
 
-- [[04-SYSTEM/agents/00-core/guard]] — segurança técnica (OWASP); governance-audit = autoridade e accountability
+- [[04-SYSTEM/agents/core/guard]] — segurança técnica (OWASP); governance-audit = autoridade e accountability
 - [[04-SYSTEM/skills/core/12-factor-check]] — arquitetura de confiabilidade; governance-audit = controle de autoridade
-- [[04-SYSTEM/agents/00-core/extend]] — aplica as correções identificadas pelo governance-audit
-- [[04-SYSTEM/agents/00-core/vault-audit]] — inclui governance-audit no scan mensal de agentes críticos
+- [[04-SYSTEM/agents/core/extend]] — aplica as correções identificadas pelo governance-audit
+- [[04-SYSTEM/agents/core/vault-audit]] — inclui governance-audit no scan mensal de agentes críticos

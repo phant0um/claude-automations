@@ -45,7 +45,7 @@ NÃO ative para: auditorias de segurança (→ guard); melhoria de agente sem te
 
 ### 1. Coletar Perfil do Agente *(Haiku)*
 
-Ler do arquivo `04-SYSTEM/agents/00-core/<slug>.md`:
+Ler do arquivo `04-SYSTEM/agents/core/<slug>.md`:
 - Identidade e propósito declarado
 - Restrições explícitas (seção "Restrições")
 - Fora do escopo (seção "Fora do Escopo")
@@ -115,6 +115,6 @@ uso_sugerido: "@hill <slug>" com esta suite como input
 
 ## Relacionado
 
-- [[04-SYSTEM/agents/00-core/hill]] — consome esta suite para medir melhoria
-- [[04-SYSTEM/agents/00-core/guard]] — usa vetores de categoria "identidade" para audit de segurança
-- [[04-SYSTEM/agents/00-core/verify]] — behavioral contracts são subconjunto dos probes
+- [[04-SYSTEM/agents/core/hill]] — consome esta suite para medir melhoria
+- [[04-SYSTEM/agents/core/guard]] — usa vetores de categoria "identidade" para audit de segurança
+- [[04-SYSTEM/agents/core/verify]] — behavioral contracts são subconjunto dos probes

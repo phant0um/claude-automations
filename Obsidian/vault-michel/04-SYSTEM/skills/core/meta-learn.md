@@ -68,7 +68,7 @@ Outros contextos onde esse padrão aparece: [lista]
 
 ### Step 4 — Verificar contra princípios existentes
 ```bash
-grep -i "[palavra-chave do padrão]" 04-SYSTEM/agents/00-core/*.md 2>/dev/null | head -10
+grep -i "[palavra-chave do padrão]" 04-SYSTEM/agents/core/*.md 2>/dev/null | head -10
 grep -i "[palavra-chave]" CLAUDE.md | head -5
 ```
 
@@ -90,7 +90,7 @@ porque [mecanismo que explica por que isso funciona]."
 
 | Destino | Quando |
 |---------|--------|
-| `04-SYSTEM/agents/00-core/<slug>.md` seção Restrições | Princípio específico de um agente |
+| `04-SYSTEM/agents/core/<slug>.md` seção Restrições | Princípio específico de um agente |
 | `CLAUDE.md` — seção Identity ou Preferences | Princípio de comportamento geral do vault |
 | `04-SYSTEM/skills/core/<skill>.md` | Princípio de execução de uma skill |
 | `04-SYSTEM/wiki/errors.md` | Erro pontual sem princípio generalizável |
@@ -146,6 +146,6 @@ PRÓXIMO PASSO:
 ## Relacionado
 
 - [[04-SYSTEM/skills/core/evolve]] — captura padrões bem-sucedidos da sessão; meta-learn captura gaps de correção
-- [[04-SYSTEM/agents/00-core/hill]] — recebe princípios do meta-learn como levers para aplicar
+- [[04-SYSTEM/agents/core/hill]] — recebe princípios do meta-learn como levers para aplicar
 - [[04-SYSTEM/skills/core/codex-retrospective]] — retrospective temporal; meta-learn é imediato (por correção)
 - [[04-SYSTEM/wiki/errors]] — erros pontuais sem padrão vão aqui, não viram princípios

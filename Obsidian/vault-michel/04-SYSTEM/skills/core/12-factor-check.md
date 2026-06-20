@@ -58,7 +58,7 @@ Haiku — checklist estruturado, sem raciocínio profundo.
 
 ### 1. Ler Agent File *(Haiku)*
 
-Ler `04-SYSTEM/agents/00-core/<slug>.md` completo.
+Ler `04-SYSTEM/agents/core/<slug>.md` completo.
 
 ### 2. Score por Fator
 
@@ -123,7 +123,7 @@ RECOMENDAÇÃO:
 
 ## Relacionado
 
-- [[04-SYSTEM/agents/00-core/guard]] — F7 (HITL) intersecta com LLM08 (Excessive Agency); guard complementa mas não substitui
+- [[04-SYSTEM/agents/core/guard]] — F7 (HITL) intersecta com LLM08 (Excessive Agency); guard complementa mas não substitui
 - [[04-SYSTEM/skills/core/governance-audit]] — governa *mandato e escopo*; 12-factor-check governa *arquitetura de confiabilidade*
-- [[04-SYSTEM/agents/00-core/hill]] — recebe failing factors como levers específicos para corrigir
+- [[04-SYSTEM/agents/core/hill]] — recebe failing factors como levers específicos para corrigir
 - [[04-SYSTEM/skills/reasoning/score-drift]] — score-drift mede drift de comportamento; 12-factor-check mede qualidade arquitetural

@@ -221,7 +221,7 @@ Dimensões: 7 | Problemas: 18 | 🔴 4 | 🟡 9 | 🟢 5
 🔴 .raw/artigo-importado.md: não está no .manifest.json → source perdida
 🔴 00-INBOX/: 31 itens (overflow) → triagem urgente
 🔴 03-RESOURCES/entities/LangChain.md: link para [[concepts/LLM-Routing]] inexistente
-🔴 04-SYSTEM/agents/00-core/review.md: reads "04-SYSTEM/logs/agent-audit-*.md" — path existe?
+🔴 04-SYSTEM/agents/core/review.md: reads "04-SYSTEM/logs/agent-audit-*.md" — path existe?
 
 🟡 [...]
 ```

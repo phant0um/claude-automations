@@ -30,7 +30,7 @@ Rotina roda SEM intervenção humana. Alertas são registrados apenas em `operat
 
 ```
 baseline_anterior = ler('/04-SYSTEM/logs/agent-audit-YYYY-MM-01.md')
-agentes_lista = scan('/04-SYSTEM/agents/02-domain-experts/*') 
+agentes_lista = scan('/04-SYSTEM/agents/finance-system/*') 
                 + scan('/04-SYSTEM/agents/03-institutional/*')
 ```
 

@@ -124,6 +124,6 @@ Veredicto: PASS | BLOCK
 
 ## Relacionado
 
-- [[04-SYSTEM/agents/00-core/verify]] — quality gate no fim do sprint; adversarial-gate é durante
+- [[04-SYSTEM/agents/core/verify]] — quality gate no fim do sprint; adversarial-gate é durante
 - [[04-SYSTEM/skills/reasoning/probe]] — gera casos de teste; adversarial-gate usa subagente em tempo real
 - [[04-SYSTEM/skills/orchestration/subagent-team]] — orquestração de subagentes; adversarial-gate é subagente especializado em revisão

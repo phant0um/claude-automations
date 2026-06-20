@@ -23,7 +23,7 @@ version: 1.1.0
 trigger: "@scheduled agent-audit-monthly"
 schedule: cron "0 9 1 * *"
 reads:
-  - 04-SYSTEM/agents/02-domain-experts
+  - 04-SYSTEM/agents/finance-system
   - 04-SYSTEM/agents/03-institutional
   - 04-SYSTEM/logs/agent-audit-*
 writes:

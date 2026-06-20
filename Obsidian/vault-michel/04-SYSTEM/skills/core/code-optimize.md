@@ -134,7 +134,7 @@ Escreva resultado em `docs/logs/quality.md` (append, não overwrite).
 
 ## Relacionado
 
-- [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/forge]]
+- [[04-SYSTEM/agents/fullstack-agent-system/forge]]
 - [[04-SYSTEM/skills/core/complexity-ratchet]]
 - [[03-RESOURCES/concepts/agent-systems/parallel-agent-code-review]]
 - `engineering:code-review` skill (Claude Code built-in)

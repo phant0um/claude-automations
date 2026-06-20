@@ -24,7 +24,7 @@ tags: [agent, system, orchestration]
 
 # Nexus
 
-> ⚠️ **DEPRECATED** — superseded por [[04-SYSTEM/agents/nexus-agent-system/00-SYSTEM-PROMPTS/nexus]] (v3.0.0).
+> ⚠️ **DEPRECATED** — superseded por [[04-SYSTEM/agents/nexus-agent-system/nexus]] (v3.0.0).
 > Todo conteúdo deste arquivo (skill injection, escalada, detecção proativa, workflows) já foi
 > consolidado no v3, seção "Camada Vault SO". Mantido por compatibilidade com referências antigas.
 > Não editar — atualizações vão no v3.
@@ -134,11 +134,11 @@ Nexus detecta o agente correto sem precisar ser explicitado:
 
 ## Agentes do Sistema
 
-- [[04-SYSTEM/agents/00-core/guard]] — segurança & guardrails (Opus)
-- [[04-SYSTEM/agents/00-core/hill]] — melhoria contínua (Haiku→Sonnet)
-- [[04-SYSTEM/agents/00-core/review]] — drift detection (Haiku)
-- [[04-SYSTEM/agents/00-core/spec]] — spec-driven ops (Sonnet)
-- [[04-SYSTEM/agents/00-core/extend]] — extensão cirúrgica (Haiku→Sonnet)
-- [[04-SYSTEM/agents/00-core/verify]] — quality gates (Sonnet)
-- [[04-SYSTEM/agents/00-core/vault-audit]] — auditoria vault (Haiku)
-- [[04-SYSTEM/agents/00-core/cluster-agent]] — clusters temáticos (Haiku)
+- [[04-SYSTEM/agents/core/guard]] — segurança & guardrails (Opus)
+- [[04-SYSTEM/agents/core/hill]] — melhoria contínua (Haiku→Sonnet)
+- [[04-SYSTEM/agents/core/review]] — drift detection (Haiku)
+- [[04-SYSTEM/agents/core/spec]] — spec-driven ops (Sonnet)
+- [[04-SYSTEM/agents/core/extend]] — extensão cirúrgica (Haiku→Sonnet)
+- [[04-SYSTEM/agents/core/verify]] — quality gates (Sonnet)
+- [[04-SYSTEM/agents/core/vault-audit]] — auditoria vault (Haiku)
+- [[04-SYSTEM/agents/core/cluster-agent]] — clusters temáticos (Haiku)

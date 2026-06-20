@@ -13,7 +13,7 @@
 
 ## System prompt principal
 
-`00-SYSTEM-PROMPTS/tutor-mor.md` — sessões gerais.
+`tutor-mor.md` — sessões gerais.
 
 15 coaches disponíveis:
 `coach-portugues`, `coach-logica`, `coach-tributario`, `coach-contabilidade`, `coach-auditoria`, `coach-administracao`, `coach-direito`, `coach-economia-financas-publicas`, `coach-previdenciario`, `coach-aduaneiro`, `coach-legislacao-estadual-municipal`, `coach-estatistica`, `coach-informatica-dados`, `coach-ingles`, `coach-redacao`

@@ -136,4 +136,4 @@ Condição de revisão: [quando mudar de ideia]
 
 - [[04-SYSTEM/skills/reasoning/heavy-think]] — multi-trajetória para resolver um problema (não escolher entre opções)
 - [[04-SYSTEM/skills/reasoning/pre-mortem]] — analisa riscos de falha de um plano já escolhido
-- [[04-SYSTEM/agents/00-core/guard]] — usa adversarial mode similar (attacker + defender + auditor)
+- [[04-SYSTEM/agents/core/guard]] — usa adversarial mode similar (attacker + defender + auditor)

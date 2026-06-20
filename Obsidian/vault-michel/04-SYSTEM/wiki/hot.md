@@ -65,7 +65,7 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 - Ref: [[01-PROJECTS/Fintech/overview]]
 
 **Finance System — Fatura agent (2026-05-29):**
-- ✅ Agente Fatura criado — [[04-SYSTEM/agents/finance-system/00-SYSTEM-PROMPTS/fatura]] (Santander, Porto Seguro, Revolut; relatório em 06-GENERATED/faturas/)
+- ✅ Agente Fatura criado — [[04-SYSTEM/agents/finance-system/fatura]] (Santander, Porto Seguro, Revolut; relatório em 06-GENERATED/faturas/)
 - ✅ Skill fatura-parser criada — [[04-SYSTEM/agents/finance-system/skills/fatura-parser]] (detecção banco, categorias, fallback)
 - Drop zone PDFs: `.raw/faturas/` | Output: `06-GENERATED/faturas/YYYY-MM-banco.md`
 
@@ -80,7 +80,7 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 - ✅ Melhorias: subagent-team (skill injection no briefing), heavy-think (vs debate), codex-retrospective (link evolve)
 
 **Vault SO — melhorias pendentes (2026-05-29):**
-- ✅ Forge agent criado — [[04-SYSTEM/agents/fullstack-agent-system/00-SYSTEM-PROMPTS/forge]] (5E rubric, score 0–100, refactor) (2026-05-29)
+- ✅ Forge agent criado — [[04-SYSTEM/agents/fullstack-agent-system/forge]] (5E rubric, score 0–100, refactor) (2026-05-29)
 - ✅ code-optimize skill criada — [[04-SYSTEM/skills/core/code-optimize]] (5 dimensões, modelo por etapa) (2026-05-29)
 - ✅ Maestro routing atualizado — Forge na sequência pre-deploy; v2.1.0 (2026-05-29)
 
@@ -193,7 +193,7 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 - **206 stubs preenchidos** (203 conteúdo real + 3 placeholders deletados)
 - **127 concepts:** FIAP/OOP (encapsulamento/herança/polimorfismo/MVC/DAO/Collections), LLM/ML foundations, agent systems, Claude/tools, RAG patterns, finance-trading, misc
 - **79 entities:** modelos (Claude family, GPT, Gemini, Llama), tools (MCP, GitHub, LangChain, Mem0), orgs (Microsoft, Meta, Google DeepMind), pessoas (heynavtoor, kidpakerot, nateherk, etc.)
-- **3 templates criados:** `04-SYSTEM/wiki/templates/` (concept/source/entity)
+- **3 templates criados:** `04-SYSTEM/templates/` (concept/source/entity)
 - **Método:** 8 agentes paralelos (2 sessões, session limit hit na 1ª)
 → Zero stubs restantes em `03-RESOURCES/`
 

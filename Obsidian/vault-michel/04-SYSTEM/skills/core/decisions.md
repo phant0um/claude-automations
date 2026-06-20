@@ -119,5 +119,5 @@ Depois: append da entrada formatada.
 
 - [[04-SYSTEM/wiki/decisions]] — o arquivo que esta skill mantém
 - [[04-SYSTEM/skills/core/codex-retrospective]] — retrospective lê decisions.md para entender por que o vault está como está
-- [[04-SYSTEM/agents/00-core/spec]] — spec usa decisions.md como contexto antes de especificar
+- [[04-SYSTEM/agents/core/spec]] — spec usa decisions.md como contexto antes de especificar
 - [[04-SYSTEM/agents/nexus]] — Nexus chama decisions ao fim de qualquer mudança de roteamento

@@ -13,11 +13,11 @@ Agentes para hobbies e entretenimento.
 
 | Agente | System prompt | Domínio |
 |--------|---------------|---------|
-| MTG Arena Coach | `00-SYSTEM-PROMPTS/mtg-arena-coach.md` | Magic: The Gathering Arena — drafts, builds, meta |
+| MTG Arena Coach | `mtg-arena-coach.md` | Magic: The Gathering Arena — drafts, builds, meta |
 
 ## System prompt
 
-Para MTG Arena: usar `00-SYSTEM-PROMPTS/mtg-arena-coach.md`.
+Para MTG Arena: usar `mtg-arena-coach.md`.
 Setup detalhado: `mtg-arena-coach-project-setup.md`.
 
 ## Refs

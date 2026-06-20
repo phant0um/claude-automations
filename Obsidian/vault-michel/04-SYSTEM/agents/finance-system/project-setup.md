@@ -12,7 +12,7 @@ Dois projetos recomendados:
 > Alternativa: um único Project com `Nexo.md` como system prompt e os 5 agentes especialistas como docs — Nexo instrui a atuar como o especialista correto conforme o roteamento.
 
 ## System prompt principal
-Copiar o conteúdo de `00-SYSTEM-PROMPTS/Nexo.md`.
+Copiar o conteúdo de `Nexo.md`.
 
 Para sessões especializadas, substituir pelo agente específico:
 - Fundamentalista: `Valor.md`

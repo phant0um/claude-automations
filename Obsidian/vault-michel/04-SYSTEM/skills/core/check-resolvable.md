@@ -43,11 +43,11 @@ Ative esta skill quando:
 
 ### PASSO 1 — Scan Filesystem *(bash, 0 tokens)*
 ```bash
-# Agentes: todos os .md em 00-SYSTEM-PROMPTS/ ou raiz de sistema
+# Agentes: todos os .md na raiz de cada sistema + core/ (flatten 2026-06; sem 00-SYSTEM-PROMPTS/)
 find 04-SYSTEM/agents/ -name "*.md" \
   -not -path "*/docs/*" -not -path "*/skills/*" \
   -not -path "*/memory/*" -not -path "*/_index/*" \
-  -not -path "*/00-mocs/*" -not -path "*/adr/*" \
+  -not -path "*/adr/*" \
   -not -name "README.md" -not -name "progress.md" \
   -not -name "standards.md" -not -name "project-setup.md" \
   -not -name "_template.md" \
@@ -102,5 +102,5 @@ AÇÃO SUGERIDA:
 
 ## Restrições
 - NUNCA modificar AGENTS.md automaticamente — apenas reportar
-- NUNCA ignorar agentes em subpastas (00-SYSTEM-PROMPTS/ conta como agente)
+- Agentes ficam na raiz de cada *-system/ + core/ (flatten 2026-06; não há mais subpasta 00-SYSTEM-PROMPTS/)
 - Rodar depois de drift-review (drift-review audita docs vs código; check-resolvable audita resolver vs filesystem)

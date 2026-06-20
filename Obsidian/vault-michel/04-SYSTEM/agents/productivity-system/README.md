@@ -71,10 +71,10 @@ System prompt: `"Leia o documento Pulso.md e opere conforme as instruções nele
 
 Upload:
 ```
-00-SYSTEM-PROMPTS/Pulso.md
-00-SYSTEM-PROMPTS/Eixo.md
-00-SYSTEM-PROMPTS/Norte.md
-00-SYSTEM-PROMPTS/Eco.md
+Pulso.md
+Eixo.md
+Norte.md
+Eco.md
 skills/gtd-horizons.md
 skills/okr-format.md
 docs/progress.md        ← atualizar após cada weekly review e check-in OKR

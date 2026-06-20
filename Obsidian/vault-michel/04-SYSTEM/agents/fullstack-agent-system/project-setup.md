@@ -11,7 +11,7 @@ Time de engenharia sênior. 6 agentes especializados + Orchestrator. Código com
 
 ## System prompt
 
-Usar `00-SYSTEM-PROMPTS/Orchestrator.md` para sessões completas. Para trabalho focado:
+Usar `Orchestrator.md` para sessões completas. Para trabalho focado:
 
 | Sessão | Arquivo | Modelo |
 |--------|---------|--------|
