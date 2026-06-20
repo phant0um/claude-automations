@@ -49,7 +49,7 @@ find 04-SYSTEM/agents/ -name "*.md" \
   -not -path "*/memory/*" -not -path "*/_index/*" \
   -not -path "*/adr/*" \
   -not -name "README.md" -not -name "progress.md" \
-  -not -name "standards.md" -not -name "project-setup.md" \
+  -not -name "standards.md" -not -name "project-setup.md" -not -name "*-project-setup.md" \
   -not -name "_template.md" \
   | sort > /tmp/agents-fs.txt
 

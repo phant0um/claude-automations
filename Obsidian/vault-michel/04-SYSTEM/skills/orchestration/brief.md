@@ -124,5 +124,5 @@ Ordem no prompt do subagente:
 
 ## Relacionado
 
-- [[04-SYSTEM/agents/nexus]] — Nexus chama esta skill antes de cada delegação não-trivial
+- [[04-SYSTEM/agents/nexus-agent-system/nexus]] — Nexus chama esta skill antes de cada delegação não-trivial
 - [[04-SYSTEM/skills/orchestration/subagent-team]] — subagent-team usa brief no PASSO 2 de briefing

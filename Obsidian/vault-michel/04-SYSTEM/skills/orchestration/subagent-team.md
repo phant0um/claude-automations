@@ -64,7 +64,7 @@ Para cada sub-agente, forneça na ordem:
 ```
 [1] Brief da sessão (output de /brief — decisões tomadas, restrições ativas)
 [2] Skills injetadas (conteúdo completo das skills relevantes para este agente)
-    → consultar tabela de roteamento do Nexus: [[04-SYSTEM/agents/nexus]]
+    → consultar tabela de roteamento do Nexus: [[04-SYSTEM/agents/nexus-agent-system/nexus]]
 [3] Prompt do sub-agente:
     Você é o <Nome> do time Nexus.
     Tarefa: <sub-tarefa específica>

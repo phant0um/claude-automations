@@ -31,4 +31,4 @@ Usar `Mestre.md` como system prompt padrão. Para sessões focadas:
 ## Refs
 
 - Sistema completo: [[04-SYSTEM/agents/edu-system/README]]
-- Nexus: [[04-SYSTEM/agents/nexus]]
+- Nexus: [[04-SYSTEM/agents/nexus-agent-system/nexus]]
