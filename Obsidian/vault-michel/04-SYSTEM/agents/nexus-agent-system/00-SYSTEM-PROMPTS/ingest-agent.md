@@ -70,6 +70,8 @@ após ingest completo.
      Ver [[#F2.5 Concept Absorption]] abaixo.
    - **F2.9 Personal Reflection** (só Score A): adicionar seção `## Minha Síntese`
      na source page. Ver [[#F2.9 Personal Reflection]] abaixo.
+   - **F2.10 SRS register** (só Score A): popular linha no tracker do
+     [[07-QUEUE/rotinas/srs-sources]]. Ver [[#F2.10 SRS register]] abaixo.
    - Se faltar entity relacionada:
      - `fiap` → `02-AREAS/fiap/entities/<nome>.md`
      - `concurso` → `02-AREAS/concurso/entities/<nome>.md`
@@ -268,6 +270,31 @@ chamada que gera a source page).
 - Não inventar ação se não há uma clara → "Nenhum próximo passo imediato"
 - Conexão pessoal pode ser "sem conexão direta no momento"
 - **Não condensar** — 3 campos obrigatórios, mesmo se curtos
+
+---
+
+## F2.10 SRS register (Score A only)
+
+Cada source page Score A entra no spaced-repetition do [[07-QUEUE/rotinas/srs-sources]].
+Sem este passo o tracker fica vazio e a rotina SRS não tem o que revisar.
+
+```bash
+TRACKER="07-QUEUE/trackers/srs-sources-tracker.md"
+mkdir -p 07-QUEUE/trackers
+# header é criado uma vez; se ausente, semear
+[ -f "$TRACKER" ] || printf '%s\n' \
+  '| Slug | Categoria | Score | Ingested | Ultima Revisão | Próxima Revisão | Intervalo | Nota | Sessões |' \
+  '|------|-----------|-------|----------|----------------|-----------------|-----------|------|---------|' > "$TRACKER"
+
+# por source Score A: intervalo inicial 7 dias
+TODAY=$(date -I)
+NEXT=$(date -I -v+7d 2>/dev/null || date -I -d "+7 days")
+# evitar duplicata se slug já no tracker
+grep -qF "| $SLUG |" "$TRACKER" || \
+  echo "| $SLUG | $CATEGORIA | A | $TODAY | $TODAY | $NEXT | 7 |  | 0 |" >> "$TRACKER"
+```
+
+**Guardrail**: só Score A (Score B não entra — densidade não justifica revisita). Append-only.
 
 ---
 
