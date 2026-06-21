@@ -101,7 +101,6 @@ Biblioteca de agentes Claude com wikilinks por categoria. Prompts otimizados com
 
 ## Referências
 
-- [[03-RESOURCES/concepts/prompt-engineering|Prompt Engineering]] — princípios e técnicas
-- [[03-RESOURCES/concepts/llm-ml-foundations/prompt-engineering-patterns|Prompt Engineering Patterns]] — 10 padrões
+- [[03-RESOURCES/concepts/llm-ml-foundations/prompt-engineering-patterns|Prompt Engineering]] — princípios, técnicas + 10 padrões
 - [[03-RESOURCES/concepts/agent-systems/agentic-agents|Agentic Agents]] — agentes IA
 - [[03-RESOURCES/entities/anthropic|Anthropic]] — empresa por trás do Claude

@@ -1,7 +1,7 @@
 ---
 title: Hot Cache
 type: hot-cache
-updated: 2026-06-20
+updated: 2026-06-21
 sweep-protocol: mensal — remover entradas > 30 dias não acessadas novamente
 kv-cache: stable-first — OPERACIONAL+CONCEITOS+INGEST são estáveis → cacheados; SESSÕES ao final
 rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 300 lines; overflow → hill sweep"
@@ -49,6 +49,13 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 <!-- SECTION:operacional -->
 ## [OPERACIONAL] — Ações Pendentes
 
+**Agents flatten + resolver reconcile (2026-06-20):**
+- ✅ Estrutura flat (commit 4c97666): numbered dirs + 00-SYSTEM-PROMPTS/ removidos
+- ✅ AGENTS.md v1.4: 11 agentes fantasma + 22 skills registrados → fs 94 = resolver (drift 0)
+- ✅ Raiz agents/ limpa: 3 ref-docs → [[03-RESOURCES/concepts/agent-systems/]]; agentic-reasoning merged; nexus.md v2.0 stale removido → canônico [[04-SYSTEM/agents/nexus-agent-system/nexus]] v3.0.1 (4 inbound repointados)
+- ✅ check-resolvable filtro exclui `*-project-setup.md` (commit 977b88d)
+- Disk-only: AGENTS.md + 03-RESOURCES gitignored (igual flatten)
+
 **Sources Reorganização (2026-06-10):**
 - ✅ 230 arquivos soltos `03-RESOURCES/sources/` → distribuídos em 14 categorias temáticas
 - ✅ 185 arquivos merged com pastas existentes (agents→ai-agents-harness +101, claude-api→claude-code-skills +39, skills→skills-prompting-mcp +21, memory→memory-context-rag +11, pkm→pkm-obsidian-second-brain +5, guides→guides-courses-howtos +8)
@@ -79,16 +86,7 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 - ✅ `04-SYSTEM/wiki/decisions.md` criado — 2 entradas iniciais desta sessão
 - ✅ Melhorias: subagent-team (skill injection no briefing), heavy-think (vs debate), codex-retrospective (link evolve)
 
-**Vault SO — melhorias pendentes (2026-05-29):**
-- ✅ Forge agent criado — [[04-SYSTEM/agents/fullstack-agent-system/forge]] (5E rubric, score 0–100, refactor) (2026-05-29)
-- ✅ code-optimize skill criada — [[04-SYSTEM/skills/core/code-optimize]] (5 dimensões, modelo por etapa) (2026-05-29)
-- ✅ Maestro routing atualizado — Forge na sequência pre-deploy; v2.1.0 (2026-05-29)
-
-**Vault SO — melhorias pendentes (2026-05-28):**
-- ✅ Nexus SOUL.md block adicionado (identity, core truths, worldview, voice, manias, memory policy) — [INVARIANT] protegido (2026-05-28)
-- ✅ Golden cases criados — 20 casos: Nexus(7) + guard(7) + hill(6) → [[04-SYSTEM/wiki/golden-cases]]
-- ✅ Invariant section no CLAUDE.md do vault — `<!-- [INVARIANT] -->` em Principles + Identity (2026-05-28)
-- ✅ Verification skill para ingest — `04-SYSTEM/skills/core/ingest-verify.md` (2026-05-28)
+**Vault SO — melhorias 2026-05-28/29 (✅ arquivado):** Forge agent + code-optimize skill + Maestro v2.1.0; Nexus SOUL [INVARIANT]; golden-cases (20: Nexus/guard/hill) [[04-SYSTEM/wiki/golden-cases]]; CLAUDE.md invariant markers; ingest-verify v1.0.
 
 **Conceitos criados (2026-05-28):**
 - ✅ `llm-evaluation` → [[03-RESOURCES/concepts/agent-systems/llm-evaluation]] (taxonomia completa: métricas, LLM-judge, agent eval, estatística)
@@ -187,67 +185,6 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 
 ---
 
-### 2026-06-01
-
-**Stub Fill — 03-RESOURCES completo:**
-- **206 stubs preenchidos** (203 conteúdo real + 3 placeholders deletados)
-- **127 concepts:** FIAP/OOP (encapsulamento/herança/polimorfismo/MVC/DAO/Collections), LLM/ML foundations, agent systems, Claude/tools, RAG patterns, finance-trading, misc
-- **79 entities:** modelos (Claude family, GPT, Gemini, Llama), tools (MCP, GitHub, LangChain, Mem0), orgs (Microsoft, Meta, Google DeepMind), pessoas (heynavtoor, kidpakerot, nateherk, etc.)
-- **3 templates criados:** `04-SYSTEM/templates/` (concept/source/entity)
-- **Método:** 8 agentes paralelos (2 sessões, session limit hit na 1ª)
-→ Zero stubs restantes em `03-RESOURCES/`
-
----
-
-### 2026-05-29
-
-**Pipeline Diário 2026-05-29:**
-**Triagem:** 37 candidatos → 26 aprovados (A:10/B:16), 11 rejeitados (C:10/D:1)
-**Ingest:** 26 sources (ai-agents=20, pkm=4, articles=2)
-**Top action:** Criar conceito `interpreter-skills` — TypeScript module embutido em skill, nova extensão do sistema
-→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-29]]
-
-**Pipeline Diário 2026-05-29 v2 (batch concurso + ai-agents):**
-**Triagem:** 76 candidatos → 70 aprovados (A:17/B:53), 6 rejeitados (C:3/D:3)
-**Ingest:** 56 sources (ai-agents=10, concurso-auditoria=45, fiap=1 nova + 15 archive-only)
-**Top action:** Criar entity `normas-auditoria-cfc` — index navegável das 45 NBC pages para concurso auditoria
-→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-29-v2]]
-
----
-
-### 2026-05-28
-
-**Pipeline Diário 2026-05-28 — CONCLUÍDO:**
-- **Triagem:** 175 candidatos → 151 aprovados (A=81, B=70), 24 rejeitados (C=20, D=4)
-- **FIAP:** 64 PDFs já tinham source pages (2026-05-20) → manifest atualizado, arquivados
-- **Ingest:** 88 Clippings via 9 agentes paralelos → 65 source pages criadas
-- **Conceitos novos:** 4 (agent-lifespan-engineering, agent-memory-four-layers, floor-raising-vs-benchmark-maxing, runtime-architecture-patterns-sdb)
-- **Entidades novas:** 8 (koylanai, wirthkarl, trq212-tariq, Akshay-Pachaar, AlexFinn, Andrej Karpathy, Nimbalyst, heygurisingh)
-- **Archive:** A=65, B=86, C=+20, D=+4; Manifest: 734 sources
-- **Post-pipeline:** harness-engineering +4 fontes; AgingBench entity criada; floor-raising concept criada
-- **Post-pipeline extra:** hot.md rotation policy (169 linhas, ceiling 300); CLAUDE.md invariant markers; ingest-verify skill v1.0
-→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-28]] · [[06-GENERATED/triagem/triagem-2026-05-28]]
-
-**Pipeline Diário v2 (scheduled incremental):** Triagem: 9 candidatos → 7 aprovados (A=3, B=4) + 2 rejeitados (C=1, D=1). Ingest: 7 source pages criadas. Manifest: 734→741.
-**Top action:** Enriquecer `context-engineering.md` com framework 5 layers (Identity→Knowledge→Memory→Tool→Conversation).
-**Clusters:** Context Engineering setup (4) · Claude Code engineering (1) · PKM+Obsidian (2).
-→ [[06-GENERATED/ingest-report/ingest-diario-2026-05-28-v2]] · [[06-GENERATED/triagem/triagem-2026-05-28-v2]]
-
----
-
-### 2026-05-25
-
-**Archive A Analysis + Vault Upgrades:**
-Model versions: 14 files updated (`sonnet-4-5`→`4-6`, `opus-4-5`→`4-7`). AGENTS.md v1.1: +6 sistemas + 11 rotas (33+ agentes visíveis).
-NEW: `pre-mortem.md` (Gary Klein) · `check-resolvable.md` (agentes fantasma) · `frozen-novice-problem` concept.
-Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harness Stress Test + instruction-following decay data.
-
-**Agent Quality Audit (7-gap item F):**
-77 agentes auditados: +Fora do Escopo, +Critério de Qualidade, +Exemplo.
-10 sistemas; critérios domain-specific; orchestrators: roteamento, nunca execução direta.
-
----
-
 ## [ARQUIVO]
 
 ### 2026-05-24 a 2026-05-20
@@ -255,6 +192,10 @@ Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harn
 <!-- SECTION:arquivo -->
 | Data | Evento | Resultado |
 |------|--------|-----------|
+| 2026-06-01 | Stub Fill 03-RESOURCES | 206 stubs preenchidos; zero restantes |
+| 2026-05-29 | Pipeline Diário (2 runs) | 82 sources; `interpreter-skills` + `normas-auditoria-cfc` |
+| 2026-05-28 | Pipeline Diário + v2 | 95 sources; 4 concepts + 8 entities; manifest→741 |
+| 2026-05-25 | Archive A Analysis + Vault Upgrades | 77 agentes auditados; pre-mortem+check-resolvable criados |
 | 2026-05-24 | Implementações + lint + ingest Clippings | stop-quality-gate, sprint-contract, 4 skills YAML, hot.md KV restructure; 231 status updates, concurso merge 116 files; 35 fontes ingest, manifest 570→605; Clippings reorg A|B|C|D, D total 704 files |
 | 2026-05-20 | Batch FIAP ingest | 60 source stubs Fases 1–6; manifest 405→465 |
 | 2026-05-19 | Daily ingest + lint + semanal + manutenção | 40 sources; 1086 files; 21 orphans; 277 dead links; hot.md 368→220 |
@@ -298,3 +239,11 @@ Guard: +Skill Trust Checklist. Principles.md v2–v4: Resolver Discipline + Harn
 ## Pipeline Log
 
 Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline-log.md` em 2026-06-20 (hill sweep, ceiling 300). Histórico antigo condensado em `[ARQUIVO]` acima.
+
+## Sessão 2026-06-20 — wiki/ staleness fix
+- **Causa raiz:** revisao-semanal F0 media staleness por mtime (reset em checkout/sync) + seed/fecho CLAUDE.md não alcançava 6 governance files → buraco.
+- **Rotina:** F0 v7 — scan de `04-SYSTEM/wiki/*.md` por frontmatter `updated:` (não mtime) + flag `NO-UPDATED`.
+- **Refresh 6:** vault-structure-map (rewrite: estrutura real + 169 agents/13 sistemas), vault-graph (counts 230→405/222→318/605→1163), conventions (rotinas reais + flag prefixo×sufixo), memory (stub superseded→log.md), skill-memory (adoção real 2/43), golden-cases (links revalidados).
+- **Naming RESOLVIDO (b):** prefixo = canônico (decisão Michel, "Forward + grandfather"). conventions.md reescrito (nomes reais `process-queue`/`x-thread-weekly`, grandfather 54 antigos); x-thread `_index` wikilink quebrado corrigido (`ai-weekly-{data}`→`{data}-ai-weekly`); labels pipeline/weekly-ops/rotina-audit→prefixo. Re-scan: 0 rotina emite sufixo p/ novos (3 hits = leituras de arquivos antigos = grandfather).
+- **#2 RESOLVIDO:** prompt-engineering/ colapsado — dir+_index removido (7 dead links eliminados); conteúdo já vive em llm-ml-foundations/prompt-engineering-patterns + context-engineering; inbound repointado (ai-agents-index); row removida do vault-graph (12→11 domínios).
+- **#3 RESOLVIDO:** Learned Patterns mandato universal RETIRADO (2/43 em 1 mês = disciplina manual não escala, mesmo modo de falha do wiki-stale); mantido padrão estreito + append automático; scaffold gotchas-log central descartado.
