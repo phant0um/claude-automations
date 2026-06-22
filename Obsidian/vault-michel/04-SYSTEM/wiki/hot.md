@@ -140,6 +140,16 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 <!-- SECTION:sessoes-recentes -->
 ## [SESSÕES-RECENTES]
 
+### 2026-06-21
+
+**Agentes/skills — sweep de melhorias pós-aprendizados (3 ondas, 11 itens):**
+- Onda 1: AGENTS.md tabela memory 3→9 (paths mortos corrigidos, codenomes fullstack documentados); equivalência `description`≈SDD registrada em `conventions.md`; 36ª skill (`managed-agents-quickref`) auditada — sem gap real
+- Onda 2: `check-resolvable` rodado — **94/94 agentes + 36/36 skills disco↔AGENTS.md, 0 fantasmas, 0 dead links** (fecha split-brain de 2026-06-20); `agent-registry.md` convertido a ponteiro puro (tabelas stale 2026-05-16 removidas); `ai-agents-index.md` mantém wikilinks de navegação mas perde anotações de modelo/trigger duplicadas (causa raiz do split-brain)
+- Onda 3: refresh `opus-4-7`→`opus-4-8` em 28 arquivos de config viva (frontmatter `model:` + tabelas de roteamento), verificado via contagem independente (61 ocorrências, 0 resíduo); 4 citações históricas (`Opus 4.5` em principles.md/fat-skill-thin-harness, changelog progress.md, draft x-thread) preservadas intactas — não são config; `audit-agentes-mensal` ganhou passo 11 (firmware-freshness check mensal, evita recorrência do split-brain)
+- Não-ação reportada (fora do escopo, não corrigido): 4 skills com `created: YYYY-MM-DD` placeholder vazio; `ai-agents-index.md` sem 4 sistemas (marketing/nexus/productivity/concurso-coach); `audit-agentes-mensal.md` tem staleness própria maior (23 agentes, paths `/02-domain-experts/` mortos, `name:` duplicado no frontmatter)
+
+---
+
 ### 2026-06-10
 
 **Stub cleanup fase 2 — 03-RESOURCES/sources:**
@@ -247,3 +257,31 @@ Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline
 - **Naming RESOLVIDO (b):** prefixo = canônico (decisão Michel, "Forward + grandfather"). conventions.md reescrito (nomes reais `process-queue`/`x-thread-weekly`, grandfather 54 antigos); x-thread `_index` wikilink quebrado corrigido (`ai-weekly-{data}`→`{data}-ai-weekly`); labels pipeline/weekly-ops/rotina-audit→prefixo. Re-scan: 0 rotina emite sufixo p/ novos (3 hits = leituras de arquivos antigos = grandfather).
 - **#2 RESOLVIDO:** prompt-engineering/ colapsado — dir+_index removido (7 dead links eliminados); conteúdo já vive em llm-ml-foundations/prompt-engineering-patterns + context-engineering; inbound repointado (ai-agents-index); row removida do vault-graph (12→11 domínios).
 - **#3 RESOLVIDO:** Learned Patterns mandato universal RETIRADO (2/43 em 1 mês = disciplina manual não escala, mesmo modo de falha do wiki-stale); mantido padrão estreito + append automático; scaffold gotchas-log central descartado.
+
+## Revisão Semanal 2026-06-21
+**System:** stale=0 drift=0 (fecho CLAUDE.md 14 arquivos, 100% fresh) | frontmatter sem `model:`=6
+**Lint:** orphans=1 dead=0 dups=0 (manifest) | hot.md 306→249 linhas
+**Conexões:** 1 encontrada (Hermes Dreaming ↔ Fable-5, self-improvement via notas), 1 wikilink adicionado
+**Meta-coaching:** top waste: structural thrashing em `04-SYSTEM/agents/` (3 reorgs/7d) — fix: congelar até 2026-07-05
+→ [[06-GENERATED/revisao-semanal/2026-06-21-revisao-semanal]]
+- 💾 vault-backup 2026-06-21:  91M, 11122 arquivos — /Users/michelcsasznik/vault-backups
+- ⚠️ daily-scan: 125 candidatos ≥ threshold (30) — considerar rodar pipeline-semanal — 2026-06-21
+- 🔄 process-queue 2026-06-21: 1 task na fila, 0 processadas, 1 skip (revisão-manual — `execucao: manual` explícita no frontmatter) — [[06-GENERATED/queue/2026-06-21-process-queue-0]]
+- 🩺 weekly-ops 2026-06-22: 0 issues scheduler (process-queue corrigido, vault-hot-sweep falso-positivo), +12 tickets kanban, 0 runtime-unverified — [[06-GENERATED/weekly-ops/2026-06-22-weekly-ops]]
+
+## Pipeline Semanal 2026-06-21
+**Veredito:** PIPELINE OK
+**Triagem:** 125 candidatos → 65 aprovados (14 A, 51 B) → 60 rejeitados
+**Ingest:** 64 source pages únicas; F2.5 concept absorption 94 edições (82 evidências + 12 perspectivas); F2.10 SRS +14 rows; F2.9 reflections: 0 novas (cap 3 já satisfeito)
+**Top action:** verifier-independence-check (5 sources convergentes — separação execução/verificação) → kanban alta-prioridade
+**F3.7:** orphan 14.1% (9/64), avg backlinks 1.3, concept coverage 87.5%
+→ [[06-GENERATED/relatorios/2026-06-21-relatorio-semanal]]
+
+## Pipeline Semanal 2026-06-22
+**Veredito:** PIPELINE OK
+**Triagem:** 20 candidatos → 6 novos → 5 aprovados (2A, 3B) → 1 rejeitado (C)
+**Ingest:** 5 source pages (3 ai-agents, 2 articles); F2.5 concept absorption 5 evidências em 5 concepts; F2.9 reflections: 2 Score A
+**F3.4:** 1 contradição nova (scale vs efficiency paradigm)
+**F3.7:** orphan 0% (resolvido), avg backlinks 1.2
+**Top action:** criar golden examples para ingest-agent few-shot → kanban alta
+→ [[06-GENERATED/relatorios/2026-06-22-relatorio-semanal]]
