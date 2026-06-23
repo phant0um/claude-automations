@@ -8,6 +8,7 @@
 /04-SYSTEM/*
 !/04-SYSTEM/agents/
 !/04-SYSTEM/skills/
+!/04-SYSTEM/specs/
 
 # Binários e OS dentro dos paths permitidos
 04-SYSTEM/**/.DS_Store
