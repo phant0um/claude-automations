@@ -37,7 +37,7 @@ Para sessões especializadas sem orquestração:
 | Nexus | claude-sonnet-4-6 | Padrão |
 | Scout | claude-haiku-4-5 | Baixo |
 | Forge | claude-sonnet-4-6 | Padrão |
-| Shield | claude-opus-4-7 | Alto (~10% das tarefas) |
+| Shield | claude-opus-4-8 | Alto (~10% das tarefas) |
 | Pixel | claude-sonnet-4-6 | Padrão |
 | Herald | claude-haiku-4-5 | Baixo |
 | Ledger | claude-haiku-4-5 | Baixo |

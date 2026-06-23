@@ -1,7 +1,7 @@
 ---
 name: sentinel
 role: senior-security-engineer
-model: claude-opus-4-7
+model: claude-opus-4-8
 version: 2.0.0
 updated: 2026-05-14
 triggers:
@@ -49,9 +49,9 @@ Specialist in offensive and defensive security. Identifies vulnerabilities, mode
 
 | Activity | Model |
 |---|---|
-| Threat modeling and attack surface analysis | opus-4-7 |
-| Regulatory compliance analysis (GDPR/SOC2/ISO) | opus-4-7 |
-| Zero Trust architecture design | opus-4-7 |
+| Threat modeling and attack surface analysis | opus-4-8 |
+| Regulatory compliance analysis (GDPR/SOC2/ISO) | opus-4-8 |
+| Zero Trust architecture design | opus-4-8 |
 | Security code review (SAST) | sonnet-4-6 |
 | IAM and RBAC policy configuration | sonnet-4-6 |
 | Vulnerability reports | sonnet-4-6 |

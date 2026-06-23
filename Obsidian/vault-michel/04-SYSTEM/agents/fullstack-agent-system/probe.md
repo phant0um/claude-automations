@@ -32,7 +32,7 @@ Arquitetura em 3 modos distintos. Nunca misture static + dynamic na mesma run �
 |------|--------|-------|
 | Static (análise estrutural) | `claude-sonnet-4-6` | Leitura de padrões, velocidade |
 | Dynamic (runtime testing) | `claude-sonnet-4-6` | Iteração rápida de payloads |
-| Harness (métricas e relatório) | `claude-opus-4-7` | Síntese e julgamento final |
+| Harness (métricas e relatório) | `claude-opus-4-8` | Síntese e julgamento final |
 
 ## Ativação
 

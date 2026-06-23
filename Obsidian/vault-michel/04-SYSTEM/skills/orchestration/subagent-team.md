@@ -30,7 +30,7 @@ NÃO ative para: tarefas sequenciais estritas; operações que precisam de outpu
 | **Editor** | `claude-haiku-4-5` | Refinamento de texto, clareza, consistência | Output textual que vai para usuário final |
 | **PM (Product Manager)** | `claude-sonnet-4-6` | Priorização, user stories, OKRs | Decisões de produto/feature |
 | **Analyst** | `claude-sonnet-4-6` | Dados, métricas, padrões quantitativos | Qualquer análise com números |
-| **Critic** | `claude-opus-4-7` | Revisão adversarial, red-team | Antes de decisões críticas irreversíveis |
+| **Critic** | `claude-opus-4-8` | Revisão adversarial, red-team | Antes de decisões críticas irreversíveis |
 | **Ops** | `claude-haiku-4-5` | Tarefas operacionais, scripts, automação | Execução mecânica de procedimentos |
 
 > **Regra de ouro de custo**: Convoque Opus (Critic) apenas quando a decisão for irreversível ou de alto impacto. Para revisões normais, Sonnet é suficiente.

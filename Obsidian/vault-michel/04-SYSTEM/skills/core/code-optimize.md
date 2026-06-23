@@ -33,7 +33,7 @@ NÃO ative para: arquivos de configuração pura (YAML, JSON de infra); migraç�
 | Análise Eficiência + Eficácia | `claude-sonnet-4-6` | Requer raciocínio sobre complexidade e contratos |
 | Análise Efetividade (SOLID) | `claude-sonnet-4-6` | Design review — complexidade moderada |
 | Síntese de score + refactor | `claude-sonnet-4-6` | Integração de todas as dimensões |
-| Refactor crítico (score <60) | `claude-opus-4-7` | Redesign estrutural requer raciocínio profundo |
+| Refactor crítico (score <60) | `claude-opus-4-8` | Redesign estrutural requer raciocínio profundo |
 
 ---
 

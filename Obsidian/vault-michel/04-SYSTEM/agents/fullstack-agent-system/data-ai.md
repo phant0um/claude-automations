@@ -1,7 +1,7 @@
 ---
 name: neuron
 role: senior-data-ai-engineer
-model: claude-opus-4-7
+model: claude-opus-4-8
 version: 2.0.0
 updated: 2026-05-14
 triggers:
@@ -47,9 +47,9 @@ Specialist in data engineering and applied artificial intelligence. Designs and 
 
 | Activity | Model |
 |---|---|
-| Data pipeline architecture design | opus-4-7 |
-| RAG system development and LLM integration | opus-4-7 |
-| ML algorithm selection and feature strategy | opus-4-7 |
+| Data pipeline architecture design | opus-4-8 |
+| RAG system development and LLM integration | opus-4-8 |
+| ML algorithm selection and feature strategy | opus-4-8 |
 | ETL/ELT pipeline implementation | sonnet-4-6 |
 | Exploratory analysis and data visualization | sonnet-4-6 |
 | Feature engineering and dataset preparation | sonnet-4-6 |

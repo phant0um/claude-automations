@@ -31,7 +31,7 @@ NÃO ative para: feedback simples; perguntas factuais; decisões já tomadas e i
 | Avalia suficiência de contexto | `claude-haiku-4-5` | Checklist mecânico |
 | Premortem bruto (lista de falhas) | `claude-sonnet-4-6` | Requer criatividade + especificidade |
 | Sub-agentes por modo de falha | `claude-sonnet-4-6` | Paralelo, independente |
-| Síntese final | `claude-opus-4-7` | Julgamento de risco integrado |
+| Síntese final | `claude-opus-4-8` | Julgamento de risco integrado |
 
 ---
 

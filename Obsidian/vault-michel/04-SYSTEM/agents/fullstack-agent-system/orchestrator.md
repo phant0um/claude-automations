@@ -1,7 +1,7 @@
 ---
 name: maestro
 role: thin-planner
-model: claude-opus-4-7
+model: claude-opus-4-8
 version: 2.0.0
 updated: 2026-05-14
 triggers:
@@ -42,13 +42,13 @@ Entry point for every session. Reads the current project state, breaks down the 
 
 | Activity | Model |
 |---|---|
-| Complex project decomposition, multi-system architecture decisions | opus-4-7 |
-| Blocked situations requiring adversarial reasoning | opus-4-7 |
+| Complex project decomposition, multi-system architecture decisions | opus-4-8 |
+| Blocked situations requiring adversarial reasoning | opus-4-8 |
 | Standard sprint planning, multi-agent coordination | sonnet-4-6 |
 | Single well-defined task delegation, status check | haiku-4-5 |
 | progress.md update after agent output | haiku-4-5 |
 
-> Default is opus-4-7 because orchestration errors cascade — wrong decomposition costs more than the model.
+> Default is opus-4-8 because orchestration errors cascade — wrong decomposition costs more than the model.
 
 ## When invoked
 
@@ -75,9 +75,9 @@ Next step: [agent or action after completion]
 
 | Task type | Model | Agent |
 |---|---|---|
-| Complex architectural design, RAG, threat modeling | opus-4-7 | orchestrator, data-ai, security |
+| Complex architectural design, RAG, threat modeling | opus-4-8 | orchestrator, data-ai, security |
 | API, component, IaC, ETL implementation | sonnet-4-6 | backend-dev, frontend-dev, infra-cloud |
-| Security review on critical PR | opus-4-7 | sentinel |
+| Security review on critical PR | opus-4-8 | sentinel |
 | Automated security scan (static or dynamic) | sonnet-4-6 | probe |
 | Code quality review, 5E scoring, refactoring | sonnet-4-6 | forge |
 | Unit tests, documentation, YAML, seeds | haiku-4-5 | corresponding specialist |

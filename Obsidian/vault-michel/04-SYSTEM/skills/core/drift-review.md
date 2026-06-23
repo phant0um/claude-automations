@@ -1,6 +1,8 @@
 ---
+name: drift-review
+description: "Use when auditing docs vs code/config inconsistencies, before releases, after >500-line refactors, or weekly on Fridays. Scans for broken references, stale config, orphan agents — auto-fixes mechanical drift, flags semantic drift for human decision."
 skill: drift-review
-version: 1.0
+version: 1.1
 author: Nexus Agent System
 tags: [review, drift, sync, docs, config, maintenance]
 ---

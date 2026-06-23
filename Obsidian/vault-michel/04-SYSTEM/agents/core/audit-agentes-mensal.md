@@ -69,6 +69,7 @@ Roda primeira segunda-feira de cada mês, 9h. Avalia **qualidade semântica** de
 8. Para agentes críticos (guard/nexus/verify) sem suite de probe: rodar `/probe <slug>`
 9. Para agentes com ops destrutivas (write/bash/delete): rodar `/governance-audit <slug>` se Layer 1 ausente
 10. Se anomalias: registrar "Nexus: chama `hill` ou `review`"
+11. **Firmware-freshness check:** rodar skill `check-resolvable` e comparar resultado vs claim no cabeçalho de `[[04-SYSTEM/AGENTS]]` §Inventário de Agentes (contagem de agentes + skills, "verificado em" date). Se divergir (contagem errada, agente fantasma, dead link, ou claim sem data de verificação há >30 dias): registrar 🔴 crítico + recomendar `review` para sync. Lição de origem: split-brain 2026-06-20 (`[[04-SYSTEM/wiki/errors]]`) — AGENTS.md é o resolver único (V.1) e não pode ficar com claim não-verificado por mais de 1 ciclo mensal.
 
 ## Regras
 
@@ -210,6 +211,7 @@ tail -20 /04-SYSTEM/logs/operations.md
 - Categorias claras: drift | obsoleto | ausente | OK
 - Histórico 12 meses acessível via Ledger
 - Recomendação acionável por agente problemático (qual agente chamar)
+- Firmware-freshness check (passo 11) executado e resultado registrado — AGENTS.md não fica >1 ciclo sem recount verificado
 
 ## Exemplo
 **Input:** "audit-agentes-mensal — maio 2026"

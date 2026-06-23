@@ -1,7 +1,9 @@
 ---
+name: score-drift
+description: "Use when an agent's behavior seems inconsistent with its declared identity, before running @hill, or for periodic maintenance on critical agents. Measures quantitative drift (0-10) across 5 dimensions and feeds hill with precise diagnostics."
 skill: score-drift
-version: 1.0
-trigger: "/score-drift [slug]" | "@score-drift [agente]"
+version: 1.1
+trigger: "/score-drift [slug] or @score-drift [agente]"
 model: claude-haiku-4-5
 tags: [quality, drift, agents, monitoring, quantitative]
 ---

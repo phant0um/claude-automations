@@ -28,7 +28,7 @@ NÃO ative para: workflows únicos; tarefas não-repetíveis; operações de eme
 |-------|--------------|---------------|
 | Extração de padrão do workflow | `claude-sonnet-4-6` | Compreensão de padrão semi-complexo |
 | Escrita da skill file (draft) | `claude-sonnet-4-6` | Geração estruturada |
-| Cross-modal eval da skill | `claude-opus-4-7` | Verificação de completude e edge cases |
+| Cross-modal eval da skill | `claude-opus-4-8` | Verificação de completude e edge cases |
 | Registro no resolver | `claude-haiku-4-5` | Tarefa mecânica de atualização de config |
 
 ---

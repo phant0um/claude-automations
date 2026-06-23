@@ -1,6 +1,7 @@
 ---
 title: "Assessor de Plano de Contratações Anual"
 name: Pauta
+model: claude-sonnet-4-6
 type: agent
 platform: claude-chat
 created: 2026-05-15

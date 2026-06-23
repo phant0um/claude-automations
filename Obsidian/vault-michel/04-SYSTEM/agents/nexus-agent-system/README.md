@@ -18,7 +18,7 @@ Cloud para tarefas operacionais via Model Router Layer.
 nexus (orchestrator)
 ├── scout → pesquisa e descoberta → claude-haiku-4-5
 ├── forge → implementação e código → claude-sonnet-4-6
-├── shield → validação e segurança → claude-opus-4-7
+├── shield → validação e segurança → claude-opus-4-8
 ├── pixel → UI/UX e apresentação visual → claude-sonnet-4-6
 ├── herald → comunicação e síntese → claude-haiku-4-5
 ├── ledger → memória e auditoria → claude-haiku-4-5
@@ -37,7 +37,7 @@ nexus (orchestrator)
 | Nexus | claude-sonnet-4-6 | — | nunca |
 | Scout | claude-haiku-4-5 | minimax-m3:cloud | volume alto |
 | Forge | claude-sonnet-4-6 | kimi-k2.6:cloud | tarefas repetitivas |
-| Shield | claude-opus-4-7 | — | nunca |
+| Shield | claude-opus-4-8 | — | nunca |
 | Pixel | claude-sonnet-4-6 | nemotron-3-ultra:cloud | protótipos |
 | Herald | claude-haiku-4-5 | minimax-m3:cloud | lote |
 | Ledger | claude-haiku-4-5 | minimax-m3:cloud | logs simples |

@@ -73,7 +73,7 @@ NÃO ative para: hotfixes urgentes (<10 linhas); mudanças de configuração pur
 - Valide pré-requisitos: constitution ✓, spec ✓, plan ✓, tasks ✓
 - Execute tasks em ordem respeitando dependências
 - Ao final de cada user story: self-evaluate antes de avançar
-- Se uma task falhar 3x consecutivas: escale para `claude-opus-4-7` nessa task específica
+- Se uma task falhar 3x consecutivas: escale para `claude-opus-4-8` nessa task específica
 
 ### FASE 6 — Verify *(Sonnet)*
 - Compare implementação contra spec.md e acceptance criteria

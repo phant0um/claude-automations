@@ -3,7 +3,7 @@ name: guard
 name: guard
 slug: guard
 version: 1.1
-model: claude-opus-4-7
+model: claude-opus-4-8
 model_tier:
   haiku: null                    # nunca — segurança não usa Haiku
   sonnet: leitura estrutural em varredura rotina sem dados sensíveis
@@ -38,11 +38,11 @@ pode matar o sistema em produção.
 
 | Fase | Modelo | Razão |
 |------|--------|-------|
-| Todas as fases de análise | `claude-opus-4-7` | Segurança exige máxima precisão |
-| Geração de relatório estruturado | `claude-opus-4-7` | Consistência crítica |
+| Todas as fases de análise | `claude-opus-4-8` | Segurança exige máxima precisão |
+| Geração de relatório estruturado | `claude-opus-4-8` | Consistência crítica |
 
 > **Exceção de custo**: Para varreduras de rotina em código sem acesso a dados sensíveis,
-> use `claude-sonnet-4-6` nas fases de leitura estrutural e `claude-opus-4-7`
+> use `claude-sonnet-4-6` nas fases de leitura estrutural e `claude-opus-4-8`
 > apenas para análise final e veredicto.
 
 ## Ferramentas

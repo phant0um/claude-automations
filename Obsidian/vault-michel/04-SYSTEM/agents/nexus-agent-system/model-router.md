@@ -39,7 +39,7 @@ qualquer tarefa. Define qual modelo Claude vs Ollama Cloud usar por agente/taref
 | forge | implementação | claude-sonnet-4-6 | kimi-k2.6:cloud | tarefas repetitivas |
 | herald | síntese/docs | claude-haiku-4-5 | minimax-m3:cloud | relatórios em lote |
 | ledger | auditoria/git | claude-haiku-4-5 | minimax-m3:cloud | logs e ADRs simples |
-| shield | segurança | claude-opus-4-7 | — | nunca |
+| shield | segurança | claude-opus-4-8 | — | nunca |
 | pixel | UI/design | claude-sonnet-4-6 | nemotron-3-ultra:cloud | protótipos rápidos |
 | triagem-agent | scoring A–D | claude-haiku-4-5 (borderline) | — | (deferido — ver ADR-003) |
 | ingest-agent | vault builder | claude-sonnet-4-6 | — | (deferido — ver ADR-003) |

@@ -44,7 +44,7 @@ para esse viés. Você não elogia. Você audita.
 | Validação funcional (lógica, APIs, DB) | `claude-sonnet-4-6` | Julgamento técnico |
 | Validação de UI (via Playwright MCP) | `claude-sonnet-4-6` | Navegação e interação |
 | Behavioral contract tests | `claude-sonnet-4-6` | Protocolo de agente |
-| Cross-model eval (outputs críticos) | `claude-opus-4-7` | Precisão máxima |
+| Cross-model eval (outputs críticos) | `claude-opus-4-8` | Precisão máxima |
 | Geração de relatório e verdict | `claude-haiku-4-5` | Estruturação |
 
 ## Ferramentas

@@ -28,7 +28,7 @@ NÃO ative para: features isoladas já especificadas (use `spec-lifecycle`); hot
 |--------|--------------|---------------|
 | Planner | `claude-haiku-4-5` | Expansão de prompt → spec, low-cost |
 | Generator (build) | `claude-sonnet-4-6` | Geração de código padrão |
-| Generator (escalada) | `claude-opus-4-7` | Apenas se 3+ sprints consecutivos falharem no QA |
+| Generator (escalada) | `claude-opus-4-8` | Apenas se 3+ sprints consecutivos falharem no QA |
 | Evaluator (QA) | `claude-sonnet-4-6` | Avaliação com Playwright MCP, custo moderado |
 | Context Handoff Writer | `claude-haiku-4-5` | Apenas se modelo não suportar compaction |
 

@@ -1,7 +1,9 @@
 ---
+name: adversarial-gate
+description: "Use when running long multi-task plans (>5 tasks, >30min) or implementing critical agents. Injects an adversarial subagent that validates each task before marking done — eliminates confirmation bias during execution."
 skill: adversarial-gate
-version: 1.0
-trigger: "@adversarial-gate [plano]" | "/adversarial-gate" | "inject adversarial gate"
+version: 1.1
+trigger: "@adversarial-gate [plano] or /adversarial-gate"
 model: claude-sonnet-4-6
 tags: [quality-gate, adversarial, planning, subagents, review, in-flight]
 source: "[[03-RESOURCES/sources/skills-prompting-mcp/blader-adversarial-subagent-review-gate]]"

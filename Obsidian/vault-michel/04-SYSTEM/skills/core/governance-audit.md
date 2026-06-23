@@ -1,7 +1,9 @@
 ---
+name: governance-audit
+description: "Use when auditing agent authority boundaries, after new agent creation with destructive ops, or when agents act outside expected scope. Evaluates Intent Boundary, Policy Layer, and Audit Layer — not security (guard) or architecture (12-factor)."
 skill: governance-audit
-version: 1.0
-trigger: "@governance [slug]" | "/governance-audit [agente]"
+version: 1.1
+trigger: "@governance [slug] or /governance-audit [agente]"
 model: claude-sonnet-4-6
 tags: [audit, governance, intent-boundary, policy, audit-layer, agents]
 source: "[[03-RESOURCES/sources/ai-agents-harness/agent-governance-layers]]"

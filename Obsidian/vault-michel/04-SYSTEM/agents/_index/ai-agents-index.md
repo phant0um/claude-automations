@@ -3,12 +3,12 @@ title: Agentes de IA
 type: index
 space: ai-agents
 created: 2026-04-14
-updated: 2026-06-20
+updated: 2026-06-21
 ---
 
 # Agentes de IA — Prompts & Workflows
 
-> ⚠️ **Índice de navegação — não-canônico como fonte de roteamento.** Fonte canônica = `[[04-SYSTEM/AGENTS]]` (V.1 "AGENTS.md é o resolver"). Este índice mantém wikilinks por agente para navegação; contagem/rosters podem divergir do disco (recount via `@review` + `check-resolvable`).
+> ⚠️ **Índice de navegação — não-canônico como fonte de roteamento.** Fonte canônica = `[[04-SYSTEM/AGENTS]]` (V.1 "AGENTS.md é o resolver"; modelo/trigger por agente vivem só lá, **não duplicados aqui** — duplicação foi causa raiz do split-brain de 2026-06-20, ver `[[04-SYSTEM/wiki/errors]]`). Este índice mantém só wikilinks + função por agente, para navegação temática. Recount disco↔AGENTS.md confirmado **94/94 limpo** via `check-resolvable` em 2026-06-21.
 
 Biblioteca de agentes Claude com wikilinks por categoria. Prompts otimizados com Claude Sonnet / Opus.
 
@@ -16,13 +16,13 @@ Biblioteca de agentes Claude com wikilinks por categoria. Prompts otimizados com
 
 **Propósito:** Gates contínuos de qualidade, validação de segurança, saúde do repositório e pipeline de desenvolvimento
 
-- [[04-SYSTEM/agents/core/guard|Guard]] — Security auditor (OWASP LLM Top 10) · `@guard` · Opus
-- [[04-SYSTEM/agents/core/verify|Verify]] — Post-impl QA gate · `@verify` · Opus
-- [[04-SYSTEM/agents/core/review|Review]] — Drift review docs↔code↔config · `@review` · Sonnet
-- [[04-SYSTEM/agents/core/ingest-report|Ingest Report]] — Relatório semanal Clippings/ · Manual/cron · Haiku
-- [[04-SYSTEM/agents/core/spec|Spec]] — Spec-Driven Development · `@spec` · Haiku
-- [[04-SYSTEM/agents/core/extend|Extend]] — Extensão cirúrgica de agentes · `@extend` · Sonnet
-- [[04-SYSTEM/agents/core/hill|Hill]] — Hill-climbing: eval→diagnose→fix · `@hill` · Haiku
+- [[04-SYSTEM/agents/core/guard|Guard]] — Security auditor (OWASP LLM Top 10) · `@guard`
+- [[04-SYSTEM/agents/core/verify|Verify]] — Post-impl QA gate · `@verify`
+- [[04-SYSTEM/agents/core/review|Review]] — Drift review docs↔code↔config · `@review`
+- [[04-SYSTEM/agents/core/ingest-report|Ingest Report]] — Relatório semanal Clippings/ · Manual/cron
+- [[04-SYSTEM/agents/core/spec|Spec]] — Spec-Driven Development · `@spec`
+- [[04-SYSTEM/agents/core/extend|Extend]] — Extensão cirúrgica de agentes · `@extend`
+- [[04-SYSTEM/agents/core/hill|Hill]] — Hill-climbing: eval→diagnose→fix · `@hill`
 
 ## Knowledge System (Pesquisa, Escrita, Decisões)
 
@@ -64,7 +64,7 @@ Biblioteca de agentes Claude com wikilinks por categoria. Prompts otimizados com
 - [[04-SYSTEM/agents/fullstack-agent-system/frontend-dev|frontend-dev]] — UI, componentes, UX
 - [[04-SYSTEM/agents/fullstack-agent-system/infra-cloud|infra-cloud]] — Cloud, IaC, CI/CD
 - [[04-SYSTEM/agents/fullstack-agent-system/data-ai|data-ai]] — ML, pipelines de dados
-- [[04-SYSTEM/agents/fullstack-agent-system/security|Sentinel]] — Review qualitativo + veto de deploy · `@sentinel` · Opus
+- [[04-SYSTEM/agents/fullstack-agent-system/security|Sentinel]] — Review qualitativo + veto de deploy · `@sentinel`
 - [[04-SYSTEM/agents/fullstack-agent-system/probe|probe]] — Testes automatizados de segurança (static/dynamic/harness) · `@probe`
 
 ## Finance System (Investimentos & Mercado)

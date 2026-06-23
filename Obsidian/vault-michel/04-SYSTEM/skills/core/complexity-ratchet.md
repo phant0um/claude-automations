@@ -32,7 +32,7 @@ NÃO ative para: mudanças de documentação pura; typos; configuração.
 | Geração de behavioral contract tests | `claude-sonnet-4-6` | Requer compreensão de protocolo do agente |
 | Geração de integration/E2E tests | `claude-sonnet-4-6` | Complexidade moderada |
 | Documentação de decisões (ADR) | `claude-haiku-4-5` | Escrita estruturada |
-| Cross-model eval (quality check) | `claude-opus-4-7` | Precisão máxima para verificação crítica |
+| Cross-model eval (quality check) | `claude-opus-4-8` | Precisão máxima para verificação crítica |
 
 ---
 

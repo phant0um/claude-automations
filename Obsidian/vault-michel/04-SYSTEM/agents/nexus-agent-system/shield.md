@@ -1,7 +1,7 @@
 ---
 name: shield
 role: validator-security
-model: claude-opus-4-7
+model: claude-opus-4-8
 version: 1.0.0
 triggers:
   - "@shield"

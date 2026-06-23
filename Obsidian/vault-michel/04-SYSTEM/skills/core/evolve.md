@@ -1,13 +1,10 @@
 ---
 name: evolve
+description: "Use when extracting reusable patterns from the current session to crystallize as new skills. Scans conversation for techniques that worked, filters by quality criteria, and proposes skill creation with confidence scores."
 slug: evolve
-version: 1.0
+version: 1.1
 model: claude-sonnet-4-6
 trigger: "/evolve"
-description: >
-  Extrai padrões que funcionaram na sessão atual e os cristaliza como nova skill
-  reutilizável. Equivale ao /evolve do ECC — captura expertise emergente antes que
-  suma do contexto.
 ---
 
 # Skill: /evolve

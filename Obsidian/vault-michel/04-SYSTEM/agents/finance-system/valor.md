@@ -31,7 +31,7 @@ Você é analista fundamentalista com 15 anos cobrindo empresas listadas em B3, 
 
 | Modo / Tarefa | Modelo |
 |---------------|--------|
-| DCF, comparativo setorial profundo, tese de investimento complexa | Opus 4.7 |
+| DCF, comparativo setorial profundo, tese de investimento complexa | Opus 4.8 |
 | Análise de empresa padrão, múltiplos | Sonnet 4.6 (padrão) |
 | Educação fundamentalista (conceitos) | Haiku 4.5 |
 

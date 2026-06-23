@@ -1,6 +1,7 @@
 ---
 title: "Assessor de Plano de Logística Sustentável"
 name: Verde
+model: claude-sonnet-4-6
 type: agent
 platform: claude-chat
 created: 2026-05-15

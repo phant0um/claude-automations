@@ -1,7 +1,7 @@
 ---
 title: Hot Cache
 type: hot-cache
-updated: 2026-06-21
+updated: 2026-06-22
 sweep-protocol: mensal — remover entradas > 30 dias não acessadas novamente
 kv-cache: stable-first — OPERACIONAL+CONCEITOS+INGEST são estáveis → cacheados; SESSÕES ao final
 rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 300 lines; overflow → hill sweep"
@@ -140,6 +140,16 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 <!-- SECTION:sessoes-recentes -->
 ## [SESSÕES-RECENTES]
 
+### 2026-06-22
+
+**Plano de ações revisão 2026-06-21 — 3 itens executados:**
+- Item 1 (frontmatter): 5 agentes TJAM com `model:` adicionado (Fase 2); `claude-hermes-proxy.md` movido de `agents/core/` para `specs/` (não é agente, é spec); exceção `platform: claude-chat` documentada em `conventions.md`
+- Item 2 (freeze): registrado em `decisions.md` — sem reorgs estruturais em `04-SYSTEM/agents/` até 2026-07-05
+- Item 3 (coverage): 242 sources ingeridas 2026-06-14→21, 188/242 (78%) com concept link, 54 sem link, 110 concepts únicos linkados — **0 concepts/7d = reuso saudável de concepts maduros**, não backlog
+- Item 4 (duplicatas): já executado na Fase 2 — 335 duplicatas = lineage (versões originais no archive vs processadas em sources/), não drift
+
+---
+
 ### 2026-06-21
 
 **Agentes/skills — sweep de melhorias pós-aprendizados (3 ondas, 11 itens):**
@@ -152,46 +162,12 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 
 ### 2026-06-10
 
-**Stub cleanup fase 2 — 03-RESOURCES/sources:**
-- 39 stubs duplicados deletados (3 lotes — dup do reorg fase 1)
-- 5 ghost stubs deletados (sem fonte, aprovado pelo user)
-- 4 stubs preenchidos via 08-ARCHIVE/A+B (company-brain pt1/pt3, horizon-length paper, multi-agent coordination paper)
-- 5 stubs preenchidos via WebSearch (match forte): ahe-paper-fudan-nexau, lessons-building-claude-code-skills, post-0x_kaize-token-savings, post-dr-cintas→kepano-obsidian-skills, understanding-hermes-samyak
-- 6 stubs preenchidos via WebSearch (match fraco/aproximado, c/ caveat): kloss-goal-23-usecases, garrytan-gbrain, security-scanner-jp, explorax-video-skill, llms-improving-llms, nicos-worktrees
-- 1 stub sem match (`fseixas-super-geo-agent-readiness`) → marcado `review-needed`, deleção pendente confirmação
-- 132 stubs concurso/legislação → RESOLVIDO 2026-06-10: todos dup órfãos (filename corrompido espaço/cedilha) de conteúdo já completo em legislacao/+normas_cfc/+dirs limpos. Deletados 132 (66 legislação/ + 39 no rmas_cfc/ + 27 top-level), 0 conteúdo perdido. Vault: 416→284 .md em concurso/
-- **Folder consolidation:** sources/ 24→15 subfolders (9 small folders merged into ai-agents-harness, skills-prompting-mcp, misc-low-confidence); concepts/ 10→11 subfolders (98 loose .md files distributed into existing folders + 1 new: accessibility; _index.md portal stays in root)
+**Stub cleanup + pipeline-diario v4.3:**
+- 39 stubs dup deletados, 5 ghost stubs, 9 preenchidos (archive+web); 132 stubs concurso deletados (dup órfãos)
+- sources/ 24→15 subfolders; concepts/ 10→11; 42 Clippings ghost ingest corrigidos
+→ [[06-GENERATED/triagem/triagem-2026-06-10]]
 
-**pipeline-diario v4.3 — 2ª run (16h): manifest path-bug fix + audit archive**
-- 42 Clippings/ marcados "ghost ingest" (manifest aponta `pages_created` flat path
-  inexistente) → todos Case A: source page real existe em subpasta categorizada
-  (causado pelo reorg sources/ 24→15 acima). 6 agentes wiki-ingest paralelos
-  corrigiram manifest (`path_corrected_at`) + moveram originais →
-  `08-ARCHIVE/B/2026-06-10/`. 0 páginas novas, 0 perda de conteúdo.
-- Auditoria 08-ARCHIVE/A+B (1061 arquivos): sem ghost real em clippings/FIAP
-  (13 `pages_created:[]` já têm página real; 4 docx FIAP Fase 7 cobertos por
-  CONTENT.md consolidado).
-- ✅ 155 aulas CGAM (12 cursos): falso positivo (path bug igual aos 42
-  Clippings) — os 12 cursos já estavam 100% consolidados em
-  `concurso/<disciplina>/index.md`+`aula-NN.md`. Manifest corrigido
-  (`path_corrected_at`), 0 trabalho de consolidação necessário.
-- ⚠️ Novo: ~20 arquivos "Hermes Agent *" caíram em Clippings/ às 21:53 (sync
-  durante a sessão) — não processados, próximo F1 pega.
-- Detalhe: [[06-GENERATED/triagem/triagem-2026-06-10]]
-
----
-
-### 2026-06-07
-
-**Hill-climbing audit 2026-06 — drift cleanup (9 itens):**
-- Nexus gates completados: `x-thread-weekly` v2 (único sem gate), `metricas-ingest` v2 (gate incompleto)
-- Arquivados: `manutencao-semanal`/`meta-coaching-semanal` → `08-ARCHIVE/rotinas/`; `kore.md`/`brainstorm.md` (stubs duplicados de agentes reais) → `08-ARCHIVE/agent-stubs-duplicados/`
-- Skills órfãs Von-Neumann + fat-skill-thin-harness → linkadas em `principles.md` §VII
-- **Correção de metodologia:** "8/9 agentes sem Layer 1" era falso positivo (grep de string literal vs. seções equivalentes) — guard/hill/extend/review/spec/verify/vault-audit já cumprem via Identidade+Restrições+Fora do Escopo. `rotina-audit-mensal` v7 corrigida pra checar seção, não string
-- Tier de complexidade adicionado ao rubric token-economy (rotinas leves avaliam 5/8 camadas)
-- **Probe suites geradas** (6): guard/hill/verify/extend/review/nexus → `06-GENERATED/probe/*-probe-2026-06-07.md` (~16-18 vetores cada, 7 categorias) — desbloqueia score-drift (6.6)
-- Rotinas remote deletadas (`07-QUEUE/rotinas/remote/`); `vault-hot-sweep` migrada e agendada (mensal, dia 1, 3h)
-→ [[06-GENERATED/audits/rotina-audit-2026-06]]
+→ Arquivado 2026-06-22 (revisão-semanal F1.3) — ver `03-RESOURCES/log.md`
 
 ---
 
@@ -250,38 +226,29 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 
 Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline-log.md` em 2026-06-20 (hill sweep, ceiling 300). Histórico antigo condensado em `[ARQUIVO]` acima.
 
-## Sessão 2026-06-20 — wiki/ staleness fix
-- **Causa raiz:** revisao-semanal F0 media staleness por mtime (reset em checkout/sync) + seed/fecho CLAUDE.md não alcançava 6 governance files → buraco.
-- **Rotina:** F0 v7 — scan de `04-SYSTEM/wiki/*.md` por frontmatter `updated:` (não mtime) + flag `NO-UPDATED`.
-- **Refresh 6:** vault-structure-map (rewrite: estrutura real + 169 agents/13 sistemas), vault-graph (counts 230→405/222→318/605→1163), conventions (rotinas reais + flag prefixo×sufixo), memory (stub superseded→log.md), skill-memory (adoção real 2/43), golden-cases (links revalidados).
-- **Naming RESOLVIDO (b):** prefixo = canônico (decisão Michel, "Forward + grandfather"). conventions.md reescrito (nomes reais `process-queue`/`x-thread-weekly`, grandfather 54 antigos); x-thread `_index` wikilink quebrado corrigido (`ai-weekly-{data}`→`{data}-ai-weekly`); labels pipeline/weekly-ops/rotina-audit→prefixo. Re-scan: 0 rotina emite sufixo p/ novos (3 hits = leituras de arquivos antigos = grandfather).
-- **#2 RESOLVIDO:** prompt-engineering/ colapsado — dir+_index removido (7 dead links eliminados); conteúdo já vive em llm-ml-foundations/prompt-engineering-patterns + context-engineering; inbound repointado (ai-agents-index); row removida do vault-graph (12→11 domínios).
-- **#3 RESOLVIDO:** Learned Patterns mandato universal RETIRADO (2/43 em 1 mês = disciplina manual não escala, mesmo modo de falha do wiki-stale); mantido padrão estreito + append automático; scaffold gotchas-log central descartado.
-
-## Revisão Semanal 2026-06-21
-**System:** stale=0 drift=0 (fecho CLAUDE.md 14 arquivos, 100% fresh) | frontmatter sem `model:`=6
-**Lint:** orphans=1 dead=0 dups=0 (manifest) | hot.md 306→249 linhas
-**Conexões:** 1 encontrada (Hermes Dreaming ↔ Fable-5, self-improvement via notas), 1 wikilink adicionado
-**Meta-coaching:** top waste: structural thrashing em `04-SYSTEM/agents/` (3 reorgs/7d) — fix: congelar até 2026-07-05
-→ [[06-GENERATED/revisao-semanal/2026-06-21-revisao-semanal]]
-- 💾 vault-backup 2026-06-21:  91M, 11122 arquivos — /Users/michelcsasznik/vault-backups
-- ⚠️ daily-scan: 125 candidatos ≥ threshold (30) — considerar rodar pipeline-semanal — 2026-06-21
-- 🔄 process-queue 2026-06-21: 1 task na fila, 0 processadas, 1 skip (revisão-manual — `execucao: manual` explícita no frontmatter) — [[06-GENERATED/queue/2026-06-21-process-queue-0]]
-- 🩺 weekly-ops 2026-06-22: 0 issues scheduler (process-queue corrigido, vault-hot-sweep falso-positivo), +12 tickets kanban, 0 runtime-unverified — [[06-GENERATED/weekly-ops/2026-06-22-weekly-ops]]
+→ Arquivado 2026-06-22 (revisão-semanal F1.3) — ver `03-RESOURCES/log.md`
 
 ## Pipeline Semanal 2026-06-21
-**Veredito:** PIPELINE OK
-**Triagem:** 125 candidatos → 65 aprovados (14 A, 51 B) → 60 rejeitados
-**Ingest:** 64 source pages únicas; F2.5 concept absorption 94 edições (82 evidências + 12 perspectivas); F2.10 SRS +14 rows; F2.9 reflections: 0 novas (cap 3 já satisfeito)
-**Top action:** verifier-independence-check (5 sources convergentes — separação execução/verificação) → kanban alta-prioridade
-**F3.7:** orphan 14.1% (9/64), avg backlinks 1.3, concept coverage 87.5%
+**Veredito:** PIPELINE OK | 125→65 aprovados; 64 sources; orphan 14.1%
 → [[06-GENERATED/relatorios/2026-06-21-relatorio-semanal]]
 
 ## Pipeline Semanal 2026-06-22
 **Veredito:** PIPELINE OK
-**Triagem:** 20 candidatos → 6 novos → 5 aprovados (2A, 3B) → 1 rejeitado (C)
-**Ingest:** 5 source pages (3 ai-agents, 2 articles); F2.5 concept absorption 5 evidências em 5 concepts; F2.9 reflections: 2 Score A
-**F3.4:** 1 contradição nova (scale vs efficiency paradigm)
-**F3.7:** orphan 0% (resolvido), avg backlinks 1.2
-**Top action:** criar golden examples para ingest-agent few-shot → kanban alta
+**Correção:** versão anterior desta entrada cobria só 5/50 sources (subagente rodou F3 prematuro no próprio batch) — corrigida para refletir run completo (6 batches)
+**Triagem:** 76 candidatos → 50 aprovados (14 A, 36 B) → 26 rejeitados
+**Ingest:** 50 source pages; F2.5 concept absorption ~16 evidências em concepts existentes + 1 concept novo (diffusion-language-models); F2.9 reflections: 6 Score A (cap spec=3 — overage auto-flagado)
+**F3.4:** 1 contradição (scale vs efficiency, carry-over)
+**F3.6 top insight:** "loop engineering" como sucessor de "prompt engineering" — 8 sources independentes convergem na mesma semana
+**F3.7:** orphan 0% (0/50), avg backlinks 4.26
+**Top action:** revisar loop-engineering-patterns contra framing "sucessor do prompt engineering" → kanban alta
+**Process gap auto-flagado:** F2.9 cap overage (6 vs 3) por falta de contador global entre dispatches paralelos; off-by-one em triagem (51→50, dedup manual pós-triagem)
 → [[06-GENERATED/relatorios/2026-06-22-relatorio-semanal]]
+- ⚠️ daily-scan: 75 candidatos ≥ threshold (30) — considerar rodar pipeline-semanal — 2026-06-22
+- 🔄 process-queue 2026-06-22: 1 task na fila, 0 processadas, 1 skip (revisão-manual — `execucao: manual` explícita, aguardando Michel) — [[06-GENERATED/queue/2026-06-22-process-queue-0]]
+
+## Revisão Semanal 2026-06-22
+**System:** stale=0 drift=0 (fecho CLAUDE.md 375 arquivos, 100% fresh) | log.md NO-UPDATED
+**Lint:** orphans=n/a dead=0 (15 amostra, todos bash false-positive) dups=59 (manifest) | hot.md 247 linhas
+**Conexões:** 3 encontradas (1 cross-domain HMM↔algo-trading wikilink aplicado, 1 padrão-3+ já doc, 1 evolução média), 2 wikilinks adicionados
+**Meta-coaching:** top waste: structural thrashing 04-SYSTEM/agents/ (3 reorgs/7d, freeze chegou tarde) | WP2 recorrência: 130 arquivos não commitados
+→ [[06-GENERATED/revisao-semanal/2026-06-22-revisao-semanal]]

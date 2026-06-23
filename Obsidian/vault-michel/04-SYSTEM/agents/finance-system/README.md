@@ -30,14 +30,14 @@ Nexo (orchestrator + estado de sessão)
 | Agente | Papel | Trigger | Modelo |
 |--------|-------|---------|--------|
 | Nexo | Orchestrator + estado de sessão | `@nexo`, investimento, carteira | Sonnet 4.6 |
-| Valor | Fundamentalista | `@valor`, análise empresa, DCF, múltiplos | Opus 4.7 (DCF) / Sonnet 4.6 |
+| Valor | Fundamentalista | `@valor`, análise empresa, DCF, múltiplos | Opus 4.8 (DCF) / Sonnet 4.6 |
 | Fluxo | Renda passiva | `@fluxo`, ETF, FII, dividendos, BDR | Sonnet 4.6 |
 | Macro | Macroeconomia + regime [Layer 0] | `@macro`, Selic, câmbio, Fed, ciclo | Sonnet 4.6 |
-| Quant | Quantitativo | `@quant`, Sharpe, fator, backtesting | Opus 4.7 (otimiz.) / Sonnet 4.6 |
+| Quant | Quantitativo | `@quant`, Sharpe, fator, backtesting | Opus 4.8 (otimiz.) / Sonnet 4.6 |
 | Cripto | Criptoativos | `@cripto`, Bitcoin, DeFi, on-chain | Sonnet 4.6 |
 | Contador | IRPF e tributação | `@irpf`, ganho de capital, DARF, IR | Sonnet 4.6 |
 | Fatura | Faturas de cartão | `@fatura`, fatura cartão, análise gastos | Sonnet 4.6 |
-| Desafiante | Adversarial challenger | `@desafiante`, revise análise | Opus 4.7 |
+| Desafiante | Adversarial challenger | `@desafiante`, revise análise | Opus 4.8 |
 
 ## Quando usar qual
 

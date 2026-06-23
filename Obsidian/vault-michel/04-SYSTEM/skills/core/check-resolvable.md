@@ -1,6 +1,8 @@
 ---
+name: check-resolvable
+description: "Use when auditing resolver vs filesystem drift, after renames, or weekly on Fridays. Detects ghost agents, dead links, orphan triggers, and unregistered skills in AGENTS.md."
 skill: check-resolvable
-version: 1.0
+version: 1.1
 author: Nexus Agent System
 schedule: semanal (sexta-feira, pós-review)
 tags: [audit, resolver, drift, maintenance, governance]
@@ -18,6 +20,7 @@ Ative esta skill quando:
 - Semanalmente (sexta-feira, após drift-review)
 - Após instalação de novo agente ou skill
 - Após remoção/reorganização de `04-SYSTEM/agents/`
+- **Após qualquer rename de arquivo/diretório no vault** (quick-check mode — ver § Rename Guard)
 - Usuário solicitar `@check-resolvable` ou "auditoria de resolver"
 
 ## Quando NÃO Usar
@@ -104,3 +107,28 @@ AÇÃO SUGERIDA:
 - NUNCA modificar AGENTS.md automaticamente — apenas reportar
 - Agentes ficam na raiz de cada *-system/ + core/ (flatten 2026-06; não há mais subpasta 00-SYSTEM-PROMPTS/)
 - Rodar depois de drift-review (drift-review audita docs vs código; check-resolvable audita resolver vs filesystem)
+
+---
+
+## Rename Guard (Quick-Check Mode)
+
+**Quando rodar:** Ao final de qualquer sessão que envolveu rename de arquivos/diretórios no vault. Não esperar o pipeline-diario ou a auditoria semanal — drift de wikilinks é mais barato de fixar na hora que dias depois.
+
+### Protocolo Quick-Check
+
+1. **Identificar renames da sessão** — listar arquivos/dirs renomeados
+2. **Buscar wikilinks quebrados** — para cada rename, buscar `[[old-path]]` em todo o vault
+3. **Reportar** — lista de arquivos com wikilinks apontando para o path antigo
+4. **Fix ou reportar** — se poucos (<10), patchear; se muitos, logar em `04-SYSTEM/wiki/errors.md` para batch fix
+
+### Comando rápido
+
+```bash
+# Para cada arquivo renomeado de old-name para new-name:
+grep -r "old-name" --include="*.md" . | grep "\[\["
+```
+
+### Critério de conclusão
+
+- [ ] Zero wikilinks apontando para paths renomeados nesta sessão
+- [ ] Ou: wikilinks quebrados logados em errors.md com contagem
