@@ -149,6 +149,34 @@ subagents complete.
 - 3 concurrent subagents × 30-35 files each = optimal for 90-100 total
 - >35 files per subagent → context window pressure → thin source pages
 - Monitor: if source page avg size < 1500 bytes, subagent is skimming
+- **Timeout risk:** 3/3 subagents timed out at 600s (10min) with 32 files each.
+  They completed 16-26 API calls before timeout — creating source pages but not
+  completing archive moves or manifest updates. **Recommendation: batch size
+  15-20 files per subagent** to finish within 600s, or request higher timeout.
+
+### Thin source page detection (post-batch)
+
+Some subagents produce minimal source pages (19 lines for a 48K-char Clipping).
+**Detection:** post-batch, check `wc -l` on new source pages. Pages < 30 lines
+for files > 10K chars are flagged for expansion. The orchestrator should
+re-read the original Clipping and expand the thin page with full content.
+
+### Post-subagent cleanup checklist
+
+After all ingest subagents complete (or timeout), the parent orchestrator MUST:
+
+1. **Dedup check:** find source pages with same basename in root and category
+   dirs → remove root-level, keep categorized
+2. **Root-only relocation:** find source pages in `03-RESOURCES/sources/` root
+   → move to appropriate category subdir
+3. **Archive moves:** check which Clippings still exist → move to
+   `08-ARCHIVE/[A|B]/YYYY-MM-DD/`
+4. **Manifest update:** single atomic `jq` write for all new entries (dual-key:
+   with and without extension, `alias_of` field for secondary key)
+5. **Thin page detection:** `find 03-RESOURCES/sources/ -name "*.md" -newer
+   $MARKER -type f -exec wc -l {} \;` → flag pages < 30 lines
+6. **F2.8 spot-check:** read 3 random source pages — check tese central,
+   link resolution, info preservation
 
 ---
 

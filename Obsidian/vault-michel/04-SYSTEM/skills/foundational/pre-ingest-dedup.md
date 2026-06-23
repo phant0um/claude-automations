@@ -342,9 +342,111 @@ como dedup natural.
 
 ---
 
+### Slug Prefix Length Tuning (2026-06-22 achado)
+
+**Problema:** O second-pass source-page check usa `slug:0:30` (primeiros 30 chars)
+como prefix de busca. Para vaults com filenames longos (40-80 chars), 30 chars
+é insuficiente — gera 0 matches mesmo quando source page existe.
+
+**Exemplo real:** filename `Claude Code Skills The Hidden System Prompt Layer That Turns Claude Into a Senior Engineer.md`
+→ slug = `claude-code-skills-the-hidden-system-prompt-layer...` (70+ chars)
+→ source page: `claude-code-skills-the-hidden-system-prompt-layer-that-turns-claude-into-a-senior-engineer.md`
+→ prefix 30 = `claude-code-skills-the-hidden-sy` — matcha, mas só por sorte.
+
+Para `Sparser, Faster, Lighter Transformer Language Models`:
+→ slug = `sparser-faster-lighter-transformer-language-models`
+→ prefix 30 = `sparser-faster-lighter-transfor` — não matcha o full slug.
+
+**Fix:** usar prefix 40-50 chars ou, melhor, buscar pelo slug completo:
+
+```bash
+# ANTES (30 chars — muito curto):
+found=$(find 03-RESOURCES/sources/ -iname "*${slug:0:30}*" -type f 2>/dev/null | head -1)
+
+# DEPOIS (50 chars — cobre maioria dos filenames):
+found=$(find 03-RESOURCES/sources/ -iname "*${slug:0:50}*" -type f 2>/dev/null | head -1)
+
+# MELHOR (slug completo + fallback first-30):
+found=$(find 03-RESOURCES/sources/ -iname "*${slug}*" -type f 2>/dev/null | head -1)
+[ -z "$found" ] && found=$(find 03-RESOURCES/sources/ -iname "*${slug:0:30}*" -type f 2>/dev/null | head -1)
+```
+
+**Trade-off:** prefix mais longo = menos falsos negativos, mais falsos positivos
+(2 arquivos com mesmo prefix de 50 chars = raro mas possível). Para vault com
+1200+ source pages, 50 chars é o sweet spot.
+
+---
+
+### F1.0 Pre-dedup False Positives — Hidden/System Files (2026-06-23 achado)
+
+**Problema:** O F1.0 stem-dedup (`find ... | sed 's/\.[^.]*$//' | sort | uniq -d`)
+detecta falso positivo em arquivos de sistema como `.manifest.json.bak` — o stem
+`.manifest.json` existe tanto em `.raw/` quanto em `Clippings/`, mas são arquivos
+de infraestrutura (backup, metadata), não duplicatas de conteúdo.
+
+**Sintoma:** `uniq -d` reporta `.raw/.manifest.json.bak` como duplicata, mas não
+há par real — é o backup do manifest aparecendo ao lado do original.
+
+**Fix:** Filtrar hidden files e arquivos de metadata antes do stem comparison:
+
+```bash
+# ANTES (gera falsos positivos):
+find .raw/ Clippings/ -type f | sed 's/\.[^.]*$//' | sort | uniq -d
+
+# DEPOIS (exclui hidden files e metadata):
+find .raw/ Clippings/ -type f \
+  ! -name ".*" ! -name "*.json" ! -name "*.jsonl" ! -name "*.txt" \
+  | sed 's/\.[^.]*$//' | sort | uniq -d
+```
+
+**Quando aplicar:** sempre que F1.0 rodar em diretórios que contêm arquivos de
+metadata/manifest/backup alongside conteúdo real.
+
+---
+
+### Shell Variable Persistence Across terminal() Calls (2026-06-23 achado)
+
+**Problema:** Quando a rotina daily-scan é executada via Hermes `terminal()` tool,
+variáveis de shell (`NEW_COUNT`, etc.) **não persistem** entre chamadas separadas
+de `terminal()`. Cada call inicia um shell fresh. O F1.0c e o Volume threshold flag
+rodam em calls separadas — `NEW_COUNT` chega vazia no threshold check.
+
+**Sintoma:** `daily-scan:  candidatos (abaixo de threshold 30)` — string vazia
+onde deveria estar o número. O `-ge` comparison falha ou avalia incorretamente.
+
+**Fix:** Recalcular `NEW_COUNT` do arquivo de output no início de cada call que
+precisa do valor:
+
+```bash
+# No início do threshold check call:
+NEW_COUNT=$(wc -l < /tmp/candidates_new.txt | tr -d ' ')
+THRESHOLD=30
+# ...então usar $NEW_COUNT normalmente
+```
+
+Alternativamente, executar F1.0b + F1.0c + threshold em uma única `terminal()`
+call (um bloco bash contínuo), garantindo que todas as variáveis estejam no
+mesmo escopo de shell.
+
+**Quando aplicar:** qualquer rotina vault que use `terminal()` em múltiplas
+chamadas e dependa de variáveis calculadas em calls anteriores. Verificar
+sempre com `echo "NEW_COUNT=$NEW_COUNT"` antes do uso.
+
+---
+
 ## Changelog
 
-- v1.4 (2026-06-22): + Slug Prefix Length Tuning — slug[:30] muito curto para
+- v1.5 (2026-06-23): + Shell Variable Persistence pitfall — terminal() calls
+  não compartilham estado de shell. Variáveis calculadas em uma call (NEW_COUNT)
+  chegam vazias na próxima. Recalcular do arquivo ou unir em única call.
+  Achado: daily-scan run, threshold flag outputou string vazia.
+  + F1.0 False Positive — hidden/system files (.manifest.json.bak) detectados
+  como duplicatas por stem. Fix: excluir .* e *.json/*.jsonl do find.
+- v1.4 (2026-06-22): + Slug Prefix Length Tuning — 30 chars insuficiente para
+  filenames longos (40-80 chars), gera 0 matches no second-pass. Fix: 50 chars
+  ou slug completo com fallback. Achado: pipeline-semanal 2026-06-22 run 2,
+  157 candidatos, 0 retro matches (esperado ~10-20%).
+- v1.3 (2026-06-18): + Manifest Key Dual-Registration pattern
   filenames longos, second-pass não encontra pages existentes. Fix: usar 40+
   chars ou fuzzy match (SequenceMatcher > 0.6). Achado: pipeline-semanal
   2026-06-22, 157 candidatos, 0 retro encontrados (esperado ~10-20).

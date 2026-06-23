@@ -333,9 +333,109 @@ focus energy on the A/B files that survived.
 
 ---
 
+## Extended Title Patterns (2026-06-22 batch, 157 candidates)
+
+The base rules above cover ~60% of cases. For large weekly batches (100+),
+extend with these domain-specific patterns discovered in pipeline-semanal runs:
+
+### POSITIVE — AI Agent / Loop Engineering (+1 to +3)
+
+```bash
+[[ "$title" =~ "loop engineering|autonomous loop|agent loop" ]] && ((score+=2))
+[[ "$title" =~ "hermes|telegram.*agent" ]] && ((score+=1))
+[[ "$title" =~ "agent.*design.*pattern|agent.*stack|agent.*optimization" ]] && ((score+=2))
+[[ "$title" =~ "skill.*steroid|skill.*claude|skill.*pydantic" ]] && ((score+=1))
+[[ "$title" =~ "self-improv|recursive.*self|RSI" ]] && ((score+=2))
+[[ "$title" =~ "agent.*oversight|oversight.*layer|OpenSigil" ]] && ((score+=2))
+[[ "$title" =~ "information-flow|IFC.*agent|secure.*autonomous" ]] && ((score+=2))
+[[ "$title" =~ "agent.*rereading|world model.*agent" ]] && ((score+=2))
+[[ "$title" =~ "agentic.*resource.*discovery" ]] && ((score+=2))
+[[ "$title" =~ "subagents.*web search|subagent.*claude code" ]] && ((score+=1))
+[[ "$title" =~ "benchmarking.*open.*model|agentic.*enough" ]] && ((score+=2))
+[[ "$title" =~ "REVIEWS.md|Memory.md.*code review" ]] && ((score+=2))
+```
+
+### POSITIVE — LLM Theory / Training (+1 to +3)
+
+```bash
+[[ "$title" =~ "diffusion|transformer|matmul|triton|kernel|LoRA|fine-tun" ]] && ((score+=2))
+[[ "$title" =~ "sparser|sparse.*inference|TwELL" ]] && ((score+=2))
+[[ "$title" =~ "Doc-to-LoRA|Text-to-LoRA|instant.*LLM" ]] && ((score+=2))
+[[ "$title" =~ "Natural Language.*Autoencoder|Trinity.*Coordinator" ]] && ((score+=2))
+[[ "$title" =~ "positional.*embedding|extending.*context.*dropping" ]] && ((score+=2))
+[[ "$title" =~ "String Seed.*Thought|distribution-faithful" ]] && ((score+=2))
+[[ "$title" =~ "GGUF|MLX.*Apple Silicon|Ollama.*performance" ]] && ((score+=1))
+[[ "$title" =~ "decentralized.*inference" ]] && ((score+=1))
+```
+
+### POSITIVE — Financial / Trading Agents (+1 to +3)
+
+```bash
+[[ "$title" =~ "polymarket|trading.*agent|quant.*framework|markov.*trade" ]] && ((score+=2))
+[[ "$title" =~ "IC3.*paper|on-chain.*trading|autonomous.*trading" ]] && ((score+=1))
+```
+
+### POSITIVE — Hermes / Vault-relevant (+2 to +3)
+
+```bash
+[[ "$title" =~ "Hindsight.*Memory.*Provider|Hermes.*Flightplan" ]] && ((score+=3))
+[[ "$title" =~ "Hermes.*Telegram|Hermes.*agent" ]] && ((score+=2))
+[[ "$title" =~ "Claude Code Skills|system prompt layer|senior engineer" ]] && ((score+=2))
+[[ "$title" =~ "How to Build.*Claude Skill|build.*claude.*skill" ]] && ((score+=1))
+[[ "$title" =~ "agent.*decides.*where|tools.*actually.*run" ]] && ((score+=1))
+[[ "$title" =~ "durable asset.*loop.*own|OpenEnv.*protocol" ]] && ((score+=1))
+[[ "$title" =~ "first AI loop.*for yourself" ]] && ((score+=1))
+[[ "$title" =~ "Teaching Claude.*why" ]] && ((score+=1))
+[[ "$title" =~ "token.*theft|supply chain.*npm" ]] && ((score+=1))
+```
+
+### NEGATIVE — Clickbait / Marketing / Off-topic (-1 to -4)
+
+```bash
+[[ "$title" =~ "cheat code|millionaire|10.000.*month|10X|escape wage|mass replacement" ]] && ((score-=3))
+[[ "$title" =~ "cold email|cold outreach|B2B.*lead|qualify.*B2B" ]] && ((score-=2))
+[[ "$title" =~ "social worker|healthier|happiness" ]] && ((score-=2))
+[[ "$title" =~ "writer.*\\\$10|writing.*income|faster.*master.*5.*skill" ]] && ((score-=3))
+[[ "$title" =~ "content.*overrated|SaaS.*marketing" ]] && ((score-=2))
+[[ "$title" =~ "money does buy|tribute system|new world order" ]] && ((score-=2))
+[[ "$title" =~ "open loops|elite clarity" ]] && ((score-=2))
+[[ "$title" =~ "149-person|rise of.*company" ]] && ((score-=1))
+[[ "$title" =~ "AI needs more than intelligence.*needs humanity" ]] && ((score-=2))
+[[ "$title" =~ "AI amplifies creativity" ]] && ((score-=1))
+[[ "$title" =~ "How.*survive AI|YOU ARE NOT USING.*TRAINING" ]] && ((score-=3))
+[[ "$title" =~ "VPS.*private.*node|零成本|不花一分钱" ]] && ((score-=3))
+[[ "$title" =~ "What Is Git.*Beginner|What Is OAuth.*Explained" ]] && ((score-=2))
+[[ "$title" =~ "reimagining trade finance|collaborative proof" ]] && ((score-=2))
+[[ "$title" =~ "insurance company.*data hub|secure data hub" ]] && ((score-=2))
+[[ "$title" =~ "Frontier Transformation" ]] && ! [[ "$title" =~ "agent|AI.*agent" ]] && ((score-=1))
+```
+
+### NEGATIVE — IDE Release Notes (low vault value)
+
+```bash
+[[ "$title" =~ "JetBrains|DBeaver|DataGrip|PyCharm|CLion|YouTrack|Mellum" ]] && ((score-=1))
+# Only bump back up if the IDE article is specifically about agent integration:
+[[ "$title" =~ "JetBrains Central|sistema aberto.*agentes" ]] && ((score+=1))
+```
+
+### Pitfall: Heurística não conta multi-match do mesmo domínio
+
+A skill v1.2 já documenta isso no Nexus Manual Override, mas vale reforçar:
+artigos sobre "loop engineering" podem matchar só uma vez ("loop") e pontuar 4-6
+quando deveriam ser Score A. **Solução**: para core obsessions do vault
+(agent loops, Hermes, Claude Skills, LLM training), aplicar bump manual de +2
+após scoring automatizado se o título claramente cobre o domínio.
+
+---
+
 ## Changelog
 
-- v1.3 (2026-06-22): + Expanded Heuristics for Large Batches (50+ vault-specific
+- v1.3 (2026-06-22): + Extended Title Patterns section — 50+ new regex patterns
+  for large weekly batches (157 candidates, pipeline-semanal run). Domains: loop
+  engineering, LLM theory, trading agents, Hermes/Claude, clickbait marketing,
+  IDE release notes. Pitfall reforçado: multi-match counting for core obsessions.
+  Achado: pipeline-semanal 2026-06-22 run 2, 157 candidatos.
+- v1.2 (2026-06-16): + File Evaporation Pattern
   regex patterns: loop engineering, Hermes, Polymarket, agent security, LLM theory,
   Codex, Ollama). + Python scoring > bash for >50 files. + macOS `shuf` pitfall
   (use python3 random.sample). + File Evaporation Selectivity observation

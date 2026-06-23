@@ -263,3 +263,20 @@ Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline
 **Top action:** atualizar loop-engineering-patterns concept com 12 novas sources
 **Process gap:** 3/3 subagentes timaram (600s) — cleanup manual. Considerar batch size 32→15.
 → [[06-GENERATED/relatorios/2026-06-22-relatorio-semanal-run2]]
+
+## Connections 2026-06-22 (run 2) | 8 connections found
+**Top:** "Process > output" meta-pattern — 5 independent sources converge: agent value is in verifiable process steps, not confident answers
+→ [[06-GENERATED/connections/connections-2026-06-22-run2]]
+
+## Pipeline Semanal 2026-06-23
+**Veredito:** PIPELINE OK
+**Triagem:** 129 candidatos → 57 novos (apos dedup) → 18 aprovados (5 A, 13 B) → 39 C/D arquivados
+**Ingest:** 18 source pages criadas; manifest +54 keys (18 entries x 3); 18 Clippings arquivados (5 A, 13 B)
+**Dedup:** 1 duplicata exata ("By 2027 AI Fluency") arquivada; 1 arquivo fantasma limpo
+**F2.8:** 3 spot-checked — teses validadas, informacao preservada, frontmatter correto
+**F3.7:** orphan 50% (40/80 links unresolved — concepts/entities a criar), avg backlinks 4.44 → flag connection-finder
+**F3.6 top insight:** "Beautiful Nonsense" — 3 sources independentes (@ItsRoboki, @DamiDefi, @s4yonnara) convergem no mesmo padrao: agent loops sem validador externo geram output convincente mas invalido. Validador = CI server pattern.
+**Top action:** criar concepts agent-loop-pattern, beautiful-nonsense, prompt-debt (40 links unresolved pointing to estes)
+**Process gap:** candidates_aprovados.txt foi corrompido por rescore script (pipe-delimited grade appended) — fix aplicado, mas recomendo add validation no F1.0b
+→ [[06-GENERATED/relatorios/2026-06-23-relatorio-semanal]]
+- [ALERT] daily-scan: 58 candidatos >= threshold (30) - considerar rodar pipeline-semanal -- 2026-06-23
