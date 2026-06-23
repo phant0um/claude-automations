@@ -306,8 +306,48 @@ Isso alinha com F1.0b que testa ambos formatos via grep -F.
 
 ---
 
+### Slug Prefix Length Tuning (2026-06-22 achado)
+
+O second-pass check usa `slug[:30]` como prefix de busca. Para filenames longos
+(títulos de blog posts com 60+ chars), 30 chars não é suficiente para match
+único — retorna 0 encontrados mesmo quando source page existe.
+
+**Sintoma:** `TRULY_NEW=0, RETRO=0` para todos os 157 candidatos, mas source
+pages claramente existem no vault (1243+ pages). Second-pass não reduziu
+falsos positivos.
+
+**Fix:** Para batches grandes (>50 arquivos), aumentar prefix para 40-50 chars
+ou usar match fuzzy (Levenshtein distance < 5):
+
+```python
+# Instead of: found = find(... -iname "*slug[:30]*" ...)
+# Use longer prefix or fuzzy match:
+from difflib import SequenceMatcher
+def slug_match(s1, s2, threshold=0.6):
+    return SequenceMatcher(None, s1, s2).ratio() > threshold
+
+# For each candidate slug, compare against all source page stems
+for page_stem in all_page_stems:
+    if slug_match(candidate_slug, page_stem, 0.6):
+        # Found existing source page — retroactive manifest entry
+```
+
+**Trade-off:** prefix mais longo = menos falsos negativos mas mais falsos
+positivos. Para batches pequenos (<20), 30 chars é adequado. Para >50, usar
+fuzzy match ou 40+ chars.
+
+**Quando NÃO otimizar:** se file evaporation já removeu os C/D files (como
+observado em 2026-06-22), o second-pass é menos crítico — evaporation age
+como dedup natural.
+
+---
+
 ## Changelog
 
+- v1.4 (2026-06-22): + Slug Prefix Length Tuning — slug[:30] muito curto para
+  filenames longos, second-pass não encontra pages existentes. Fix: usar 40+
+  chars ou fuzzy match (SequenceMatcher > 0.6). Achado: pipeline-semanal
+  2026-06-22, 157 candidatos, 0 retro encontrados (esperado ~10-20).
 - v1.3 (2026-06-18): + Manifest Key Dual-Registration pattern (alias_of) —
   fix para triagem-2026-06-17 (19/19 falsos positivos por mismatch de key
   com/sem extensão). Aplicado ao ingest-agent v1.4.0 manifest-write.

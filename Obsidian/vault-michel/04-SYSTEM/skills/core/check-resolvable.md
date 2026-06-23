@@ -132,3 +132,11 @@ grep -r "old-name" --include="*.md" . | grep "\[\["
 
 - [ ] Zero wikilinks apontando para paths renomeados nesta sessão
 - [ ] Ou: wikilinks quebrados logados em errors.md com contagem
+
+---
+
+## Pitfalls
+
+1. **Ref-graph walk false positives de code blocks:** A função `refs_of()` que extrai paths de backtick-delimited code blocks (ex: `02-AREAS/fiap/fase-1/CONTENT\.md`) gera DEAD-REFs que não existem — são placeholders/exemplos em documentação, não refs reais. Antes de reportar dead-refs de um ref-graph walk, filtrar code blocks ou verificar se o path contém caracteres de escape (`\.`), placeholders (`YYYY`, `NN`, `$file`, `...`), ou segments de exemplo (`path/to`). Achado 2026-06-22: 375 arquivos no fecho CLAUDE.md prof.2, ~40 DEAD-REFs reportados, 0 reais após filtragem.
+
+2. **Bare-name wikilinks resolvem no Obsidian:** Um wikilink `[[ai-agents]]` sem path resolve no Obsidian por fuzzy match de filename — mas um scanner que só conta path-style links (`[[path/to/file]]`) como inbound vai superestimar orphans. Para orphan scanning acurado, resolver bare names por filename lookup (single-match = inbound; multi-match = ambiguous = skip).

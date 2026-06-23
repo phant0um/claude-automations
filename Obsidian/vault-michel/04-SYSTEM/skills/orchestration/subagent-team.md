@@ -1,6 +1,8 @@
 ---
 skill: subagent-team
-version: 1.0
+name: subagent-team
+description: "Orquestrar um time de sub-agentes especializados para tarefas que requerem múltiplas perspectivas simultâneas — substituindo workflows seriais por execução paralela coordenada."
+version: 1.1
 author: Nexus Agent System
 tags: [orchestration, parallel, team, researcher, editor, pm, analyst]
 ---
@@ -107,6 +109,46 @@ Se findings BLOQUEANTES: retorne ao agente responsável para revisão.
 - `team/<agente>-output.md` — saídas individuais
 - `team/consolidated.md` — versão integrada
 - `team/critic-review.md` — se revisão adversarial foi executada
+
+---
+
+## Pitfalls: Parallel Ingest Subagents (2026-06-22)
+
+When dispatching multiple subagents to ingest Clippings in parallel (>20 files):
+
+### Incomplete task execution
+
+Subagents created source pages but **did not**:
+- Move original Clippings to `08-ARCHIVE/[A|B]/`
+- Update `.raw/.manifest.json` with dual-key entries
+- Move root-level source pages to category subdirectories
+
+**Fix:** The orchestrator (parent) must do a post-subagent cleanup pass:
+1. Check which Clippings still exist → move to archive
+2. Check manifest entry count vs source page count → add missing entries
+3. Check for root-level source pages → move to category dirs
+
+### Duplicate source pages (root + category)
+
+Different subagents may create the same source page at different paths:
+- Subagent 1: `03-RESOURCES/sources/the-agent-stack.md` (root)
+- Subagent 2: `03-RESOURCES/sources/ai-agents/the-agent-stack.md` (category)
+
+**Fix:** Post-batch dedup — find files with same basename in root and category,
+remove root-level copy (keep categorized version).
+
+### Manifest concurrency
+
+Multiple subagents writing to `.raw/.manifest.json` simultaneously can corrupt
+the file. **Fix:** Subagents should NOT write to manifest — only create source
+pages. Parent orchestrator does a single atomic manifest update after all
+subagents complete.
+
+### Batch size for parallel ingest
+
+- 3 concurrent subagents × 30-35 files each = optimal for 90-100 total
+- >35 files per subagent → context window pressure → thin source pages
+- Monitor: if source page avg size < 1500 bytes, subagent is skimming
 
 ---
 

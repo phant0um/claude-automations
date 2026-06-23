@@ -156,12 +156,67 @@ VEREDICTO: APROVADO | AVISO (X avisos) | REJEITAR (Y erros)
 
 ---
 
+### C8 — Wikilink points to directory, not file `[bash]`
+
+**Princípio**: `[[03-RESOURCES/concepts/llm-ml-foundations]]` pode apontar para
+um diretório (que existe) mas não para um arquivo `.md` (que não existe).
+Obsidian resolve `dir` → `dir/_index.md` ou `dir.md`, mas wikilink checker
+deve validar que o alvo é um arquivo ou um `_index.md`.
+
+```bash
+for link in $(grep -oE '\[\[[^]]+\]\]' "$arquivo" | sed 's/\[\[//;s/\]\]//;s/|.*//'); do
+  # Check: is it a file?
+  if [[ -f "$VAULT/${link}.md" ]]; then continue; fi
+  # Check: is it a directory with _index.md?
+  if [[ -f "$VAULT/${link}/_index.md" ]]; then continue; fi
+  # Check: does the file exist with different case?
+  found=$(find "$VAULT" -iname "$(basename "$link")*.md" -type f 2>/dev/null | head -1)
+  if [[ -z "$found" ]]; then
+    echo "C8 WARN: wikilink '$link' resolves to neither file nor _index.md"
+  fi
+done
+echo "C8 OK"
+```
+
+**Veredicto:** OK / WARN: N links apontam para diretórios sem _index.md.
+
+### C9 — Source page depth vs original clipping `[bash]`
+
+**Princípio**: source page deve preservar informação relevante do clipping
+original — não condensar artificialmente. Guardrail "profundidade > brevidade".
+
+```bash
+ORIGINAL_SIZE=$(wc -c < "$original_clipping" 2>/dev/null || echo 0)
+PAGE_SIZE=$(wc -c < "$arquivo" 2>/dev/null || echo 0)
+
+# Ratio: if page < 5% of original, likely a stub
+if [[ "$ORIGINAL_SIZE" -gt 0 ]]; then
+  RATIO=$(python3 -c "print(f'{$PAGE_SIZE/$ORIGINAL_SIZE*100:.1f}')")
+  if (( $(python3 -c "print(1 if $PAGE_SIZE/$ORIGINAL_SIZE < 0.05 else 0)") )); then
+    echo "C9 WARN: source page is ${RATIO}% of original (${PAGE_SIZE}b vs ${ORIGINAL_SIZE}b) — possible thin page"
+  else
+    echo "C9 OK: ${RATIO}% of original"
+  fi
+fi
+```
+
+**Veredicto:** OK / WARN: page < 5% do original. Não é FAIL — alguns clippings
+são 90% boilerplate/menus. Mas < 5% com conteúdo técnico no original é suspeito.
+
+**Achado**: pipeline-semanal 2026-06-22 spot-check encontrou page de 739 bytes
+vs clipping original de 8660 bytes (8.5%) — era um stub real, expandido para
+7020 bytes (81%) após correção.
+
+---
+
 ## Restrições
 
 - NUNCA modificar arquivo verificado — apenas reportar
 - C3 stub: WARN, nunca FAIL — stub pode ser intencional
 - C6: não flag para sources pré-2026-06-18 (antes do F2.5)
 - C7: SKIP para FIAP e Score B
+- C8: _index.md é resolvível no Obsidian — só WARN se nem arquivo nem _index existem
+- C9: < 5% ratio é WARN, não FAIL — boilerplate varia
 
 ## Ver Também
 
@@ -172,6 +227,11 @@ VEREDICTO: APROVADO | AVISO (X avisos) | REJEITAR (Y erros)
 
 ## Changelog
 
+- v1.2 (2026-06-22): +C8 Wikilink-to-directory check (links que apontam para
+  diretórios sem _index.md). +C9 Source page depth vs original clipping (ratio
+  < 5% = WARN — possible thin page/stub). Achado: pipeline-semanal 2026-06-22
+  spot-check: page 739b vs clipping 8660b (8.5%) = stub real; link
+  `[[llm-ml-foundations]]` apontava para diretório. Ambos corrigidos.
 - v1.1 (2026-06-18): +C6 Concept Absorption (F2.5 — concepts absorveram
   evidência). +C7 Personal Reflection (F2.9 — Score A tem Minha Síntese).
   Fix YAML trigger quoting. C6/C7 no PASSO 1 (bash, zero tokens).

@@ -252,3 +252,14 @@ Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline
 **Conexões:** 3 encontradas (1 cross-domain HMM↔algo-trading wikilink aplicado, 1 padrão-3+ já doc, 1 evolução média), 2 wikilinks adicionados
 **Meta-coaching:** top waste: structural thrashing 04-SYSTEM/agents/ (3 reorgs/7d, freeze chegou tarde) | WP2 recorrência: 130 arquivos não commitados
 → [[06-GENERATED/revisao-semanal/2026-06-22-revisao-semanal]]
+
+## Pipeline Semanal 2026-06-22 (Run 2)
+**Veredito:** PIPELINE OK
+**Triagem:** 227 candidatos → 157 novos → 64 evaporados → 93 existentes → 93 aprovados (63 A, 30 B)
+**Ingest:** 97 source pages; manifest +186 entries; 93 Clippings arquivados (63 A, 30 B)
+**F2.8:** 3 spot-checked — 1 link corrigido, 1 page thin expandida
+**F3.6 top insight:** Loop engineering amadureceu de conceito para framework — 20 sources em 2 runs, com implementações reais (Foundry, OpenEnv, Pi LoopFlows)
+**F3.7:** orphan 68% (esperado para novas pages), avg backlinks 0.40 → flag connection-finder
+**Top action:** atualizar loop-engineering-patterns concept com 12 novas sources
+**Process gap:** 3/3 subagentes timaram (600s) — cleanup manual. Considerar batch size 32→15.
+→ [[06-GENERATED/relatorios/2026-06-22-relatorio-semanal-run2]]

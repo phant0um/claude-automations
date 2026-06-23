@@ -2,7 +2,7 @@
 name: connection-finder
 description: "Scan sources from last 7 days vs entire vault. Surface non-obvious cross-domain connections, contradictions, and converging patterns. Apply high-confidence wikilinks bidirectionally."
 skill: connection-finder
-version: 2.1
+version: 2.2
 schedule: "Sunday 6 AM (after wiki-lint at 4 AM)"
 tags: [routine, connections, cross-link, compounding]
 sources:
@@ -73,12 +73,21 @@ For each recent source, find 2-3 older items with:
 - Same entity referenced in different context
 - Same numerical claim with different magnitude
 
-**Theme clustering shortcut:** Extract all tags from recent sources, count frequency, and focus analysis on the top 3-5 tag clusters. A cluster with 3+ sources converging on the same insight = Pattern 3+ candidate. This is far more efficient than reading every source individually when the recent set is large (>50).
+**Theme clustering shortcut:** Extract all tags from recent sources, count frequency, and focus analysis on the top 3-5 tag clusters. A cluster with 3+ sources converging on the same insight = Pattern 3+ candidate. This is far more efficient than reading every source individually when the recent set is large (>50). With 276 recent sources (2026-06-22), theme clustering identified `loop-engineering` (17 sources) as the dominant pattern in seconds — individual reading would have missed the convergence.
 
 ```bash
 grep -h "^tags:" $(cat /tmp/recent_sources.txt) 2>/dev/null | \
   sed 's/tags: *\[//;s/\]//' | tr ',' '\n' | \
   sed 's/^ *//;s/ *$//' | sort | uniq -c | sort -rn | head -20
+```
+
+**Tese extraction for top clusters:** For each top cluster, extract the `## Tese central` line from 10-15 sources to identify convergence/contradiction patterns:
+
+```bash
+grep -l "TAG_NAME" $(cat /tmp/recent_sources.txt) | while read f; do
+  echo "=== $(basename $f) ==="
+  grep -A2 "^## Tese" "$f" | head -3
+done
 ```
 
 ### 5. Classify connections
@@ -167,6 +176,7 @@ Before finalizing report:
 
 ## Changelog
 
+- v2.2 (2026-06-22): Added tese extraction snippet for top clusters — grep `## Tese central` from cluster sources to identify convergence/contradiction without reading every file. Validated with 276 recent sources: theme clustering identified loop-engineering (17 sources) as dominant pattern in seconds.
 - v2.1 (2026-06-22): Backported portability fixes from revisao-semanal v3/v7: `ingested:` frontmatter instead of `mtime -7` (mtime resets on git checkout/sync); `gshuf||shuf||sort -R` fallback (shuf absent on macOS). Added theme clustering shortcut for large recent-source sets. Added missing `description:` frontmatter.
 - v2.0 (2026-05-25): Formalized from archive B draft. Added quality gate, post-ingest trigger, confidence-based wikilink rules.
 - v1.0 (2026-05-09): Created. Inspired by CyrilXBT + DamiDefi.

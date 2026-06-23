@@ -90,3 +90,7 @@ Para cada item que requer decisão humana:
 2. **Agent files são `.md` não `.py`:** Em vault-michel, agentes são markdown em `04-SYSTEM/agents/`, não Python. Adaptar paths do PASSO 1 conforme projeto. Filtrar templates/READMEs/project-setup/docs — não são agentes reais.
 
 3. **Ref-graph walk para fecho transitivo:** Para cobertura dinâmica de drift em docs estruturais, não depender só de lista hardcoded. Walk CLAUDE.md → refs → refs-das-refs (prof. 2) descobre referências novas automaticamente. Dead-refs do walk → rodar `check-resolvable` antes de reportar (distingue quebrado real de capitalização/archive).
+
+4. **Orphan scan precisa bare-name resolution:** Scanner que só conta path-style wikilinks (`[[path/to/file]]`) como inbound superestima orphans — bare-name links (`[[filename]]`) também são inbound válido no Obsidian. Resolver bare names por filename lookup (single-match = inbound). Sem isso, orphan count inflaciona (ex: 67 reportados vs 64 reais, 2026-06-22).
+
+5. **Wiki-index como remediação de orphans:** Quando orphan concepts forem altos (>50), adicionar path-style wikilinks de `03-RESOURCES/wiki-index.md` para os concepts centrais é a forma mais eficiente de reduzir orphans num único arquivo — 16 links adicionados reduziram 64→48 (25%) em 2026-06-22. Priorizar concepts de agent-systems e learning-cognition (centrais ao vault) sobre dev-foundations FIAP (folhas legítimas).
