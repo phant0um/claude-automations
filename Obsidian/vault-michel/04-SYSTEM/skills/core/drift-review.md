@@ -40,11 +40,12 @@ NÃO ative durante: implementação ativa de feature (timing errado); emergênci
 
 ### PASSO 1 — Varredura Estrutural *(Haiku)*
 Verifique mecanicamente:
-- Todos os arquivos `agents/*.py` estão registrados em `app/main.py`?
+- Todos os arquivos `agents/*.md` estão registrados em `AGENTS.md` (ou `04-SYSTEM/agents/` para vault-michel)?
 - Todas as env vars lidas no código estão em `example.env` e `AGENTS.md`?
 - Todos os paths referenciados em `.md` ainda existem no filesystem?
 - Todos os scripts em `/scripts` fazem o que a docstring afirma?
 - Todos os agents em `AGENTS.md` têm arquivo correspondente em `agents/`?
+- **Staleness por frontmatter `updated:`, não mtime** — mtime reseta em git checkout/sync e mascara staleness real. Ler `updated:` do frontmatter YAML. Arquivos sem `updated:` → flag `NO-UPDATED`.
 
 ### PASSO 2 — Detecção de Drift Semântico *(Sonnet)*
 Para cada agente, compare:
@@ -81,3 +82,11 @@ Para cada item que requer decisão humana:
 - NUNCA auto-fix em lógica de agente (INSTRUCTIONS) — apenas estrutura/config
 - NUNCA delete arquivos durante o drift review — apenas sinaliza
 - Se >20 items de drift forem encontrados: alerte antes de auto-fix (pode indicar problema maior)
+
+## Pitfalls
+
+1. **mtime menta para staleness:** `stat -f %m` (mtime) reseta em git checkout/sync e mostra arquivos stale como fresh. Sempre medir staleness por frontmatter `updated:` campo. Achado 2026-06-20: 6 governance files com `updated:` >30d apareciam fresh por mtime.
+
+2. **Agent files são `.md` não `.py`:** Em vault-michel, agentes são markdown em `04-SYSTEM/agents/`, não Python. Adaptar paths do PASSO 1 conforme projeto. Filtrar templates/READMEs/project-setup/docs — não são agentes reais.
+
+3. **Ref-graph walk para fecho transitivo:** Para cobertura dinâmica de drift em docs estruturais, não depender só de lista hardcoded. Walk CLAUDE.md → refs → refs-das-refs (prof. 2) descobre referências novas automaticamente. Dead-refs do walk → rodar `check-resolvable` antes de reportar (distingue quebrado real de capitalização/archive).

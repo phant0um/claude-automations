@@ -1336,3 +1336,25 @@ Histórico de todas as ingestões e operações do vault. Entradas mais recentes
 ## Contexto do vault
 
 Vault pessoal de Michel Csasznik — segundo cérebro com 4 espaços: `concurso/`, `fiap/`, `ai-agents/`, `articles/`. Inicializado em 2026-04-14.
+
+---
+
+## Arquivo hot.md — sweep 2026-06-21 (entries >14d)
+
+| Data | Evento | Resultado |
+|------|--------|-----------|
+| 2026-06-01 | Stub Fill — 03-RESOURCES completo | 206 stubs preenchidos (127 concepts + 79 entities); 3 templates criados; zero stubs restantes |
+| 2026-05-29 | Pipeline Diário (2 runs) | 37→26 + 76→70 aprovados; 82 sources ingest; concepts `interpreter-skills`, entity `normas-auditoria-cfc` |
+| 2026-05-28 | Pipeline Diário + v2 | 175→151 + 9→7 aprovados; 95 sources; 4 concepts + 8 entities novas; manifest→741 |
+| 2026-05-25 | Archive A Analysis + Vault Upgrades | Model versions atualizadas (14 files); AGENTS.md v1.1; pre-mortem+check-resolvable+frozen-novice-problem criados; 77 agentes auditados |
+
+---
+
+## Arquivo hot.md — sweep 2026-06-22 (revisão-semanal F1.3, entries >14d + loose)
+
+| Data | Evento | Resultado |
+|------|--------|-----------|
+| 2026-06-07 | Hill-climbing audit | 9 drift items; Nexus gates completados; 6 probe suites geradas; rotinas remote deletadas |
+| 2026-06-20 | wiki/ staleness fix | F0 v7: scan por frontmatter updated: (não mtime); 6 governance files refreshed; prompt-engineering/ colapsado |
+| 2026-06-21 | Revisão Semanal | stale=0 drift=0; orphans=1 dead=0; hot.md 306→249; 1 conexão (Hermes Dreaming ↔ Fable-5) |
+| 2026-06-21 | Pipeline Semanal | 125→65 aprovados; 64 sources; concept absorption 94 edições; orphan 14.1% |

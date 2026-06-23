@@ -1,7 +1,8 @@
 ---
 name: connection-finder
+description: "Scan sources from last 7 days vs entire vault. Surface non-obvious cross-domain connections, contradictions, and converging patterns. Apply high-confidence wikilinks bidirectionally."
 skill: connection-finder
-version: 2.0
+version: 2.1
 schedule: "Sunday 6 AM (after wiki-lint at 4 AM)"
 tags: [routine, connections, cross-link, compounding]
 sources:
@@ -28,9 +29,18 @@ Scan sources from last 7 days vs entire vault. Surface connections humans wouldn
 
 ### 1. Collect recent sources
 
+Prefer `ingested:` frontmatter field over `mtime -7` — mtime resets on git checkout/sync and produces false positives/negatives.
+
 ```bash
 cd $VAULT_DIR
-find 03-RESOURCES/sources/ -name "*.md" -mtime -7 -type f 2>/dev/null
+SEVEN_DAYS_AGO=$(date -v-7d -I 2>/dev/null || date -d '7 days ago' -I 2>/dev/null)
+grep -rl "^ingested:" 03-RESOURCES/sources/ 2>/dev/null | while read f; do
+  date=$(grep "^ingested:" "$f" | head -1 | sed 's/ingested: *//')
+  if [[ "$date" > "$SEVEN_DAYS_AGO" ]]; then
+    echo "$f"
+  fi
+done > /tmp/recent_sources.txt
+RECENT_COUNT=$(wc -l < /tmp/recent_sources.txt | tr -d ' ')
 ```
 
 0 sources -> stop. Report "No new sources this week."
@@ -38,10 +48,14 @@ find 03-RESOURCES/sources/ -name "*.md" -mtime -7 -type f 2>/dev/null
 ### 2. Collect older vault content
 
 ```bash
-# Random sample of older sources (avoid recency bias)
-find 03-RESOURCES/sources/ -name "*.md" -mtime +7 | shuf | head -50
+# Portable random sample (gshuf > shuf > sort -R — shuf absent on macOS, L05)
+rnd() { if command -v gshuf >/dev/null 2>&1; then gshuf; elif command -v shuf >/dev/null 2>&1; then shuf; else sort -R; fi; }
+
+# Older sources excluding recent ones
+find 03-RESOURCES/sources/ -name "*.md" | \
+  grep -vF -f /tmp/recent_sources.txt | rnd | head -50 > /tmp/old_sources.txt
 # All concepts (small corpus, high value for cross-linking)
-find 03-RESOURCES/concepts/ -name "*.md"
+find 03-RESOURCES/concepts/ -name "*.md" | rnd | head -30 >> /tmp/old_sources.txt
 ```
 
 ### 3. Extract themes from each recent source
@@ -58,6 +72,14 @@ For each recent source, find 2-3 older items with:
 - Complementary or contradictory thesis
 - Same entity referenced in different context
 - Same numerical claim with different magnitude
+
+**Theme clustering shortcut:** Extract all tags from recent sources, count frequency, and focus analysis on the top 3-5 tag clusters. A cluster with 3+ sources converging on the same insight = Pattern 3+ candidate. This is far more efficient than reading every source individually when the recent set is large (>50).
+
+```bash
+grep -h "^tags:" $(cat /tmp/recent_sources.txt) 2>/dev/null | \
+  sed 's/tags: *\[//;s/\]//' | tr ',' '\n' | \
+  sed 's/^ *//;s/ *$//' | sort | uniq -c | sort -rn | head -20
+```
 
 ### 5. Classify connections
 
@@ -145,5 +167,6 @@ Before finalizing report:
 
 ## Changelog
 
+- v2.1 (2026-06-22): Backported portability fixes from revisao-semanal v3/v7: `ingested:` frontmatter instead of `mtime -7` (mtime resets on git checkout/sync); `gshuf||shuf||sort -R` fallback (shuf absent on macOS). Added theme clustering shortcut for large recent-source sets. Added missing `description:` frontmatter.
 - v2.0 (2026-05-25): Formalized from archive B draft. Added quality gate, post-ingest trigger, confidence-based wikilink rules.
 - v1.0 (2026-05-09): Created. Inspired by CyrilXBT + DamiDefi.
