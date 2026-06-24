@@ -280,14 +280,33 @@ Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline
 **Process gap:** candidates_aprovados.txt foi corrompido por rescore script (pipe-delimited grade appended) — fix aplicado, mas recomendo add validation no F1.0b
 → [[06-GENERATED/relatorios/2026-06-23-relatorio-semanal]]
 - [ALERT] daily-scan: 58 candidatos >= threshold (30) - considerar rodar pipeline-semanal -- 2026-06-23
+- ✅ process-queue 2026-06-23: 1 task na fila, 0 processadas, 1 arquivada (plano-acoes-revisao-2026-06-21 já executada manualmente 2026-06-22) — [[06-GENERATED/queue/2026-06-23-process-queue-1]]
 
 ## Pipeline Semanal 2026-06-23 (Run 2)
 **Veredito:** PIPELINE OK
-**Triagem:** 237 candidatos → 230 aprovados (97%) → 7 C/D rejeitados. Alta taxa = batch majoritariamente papers AI/agents (core obsession)
-**Ingest:** 230 source pages; manifest +460 entries (aliases); 230 Clippings arquivados (187 A, 43 B)
-**F2.8:** 3/3 spot-checked — APROVADO (1 minor frontmatter bleed em Clipping JP)
-**F3.6 top insight:** Agent runtime é o novo attack surface — 8+ sources mapeando vetores distintos (skill poisoning, memory contagion, tool poisoning, runtime audit)
-**F3.7:** orphan ~90% (esperado para batch fresco), manifest 2065 entries → flag connection-finder
-**Top action:** criar concepts agent-runtime-security, loop-engineering-maturity, speculative-decoding-patterns
-**Process gap:** F2.5 Concept Absorption pendente (concepts não atualizados com evidências). F2.10 SRS tracker pendente. Recommend: batch concept absorption em próximo run.
+**Triagem:** 237 candidatos → 230 aprovados (97%) → 7 C/D rejeitados
+**Ingest:** 230 source pages; manifest +460 entries; 230 Clippings arquivados (187 A, 43 B)
+**F2.8:** 3/3 spot-checked — APROVADO
+**F2.5:** 222 evidence entries appended em 14+ concepts/entities (3 subagentes paralelos)
+**F2.9:** 99 Minha Síntese escritas (placeholders substituídos por reflexões reais)
+**Link repair:** 51 concept/entity stubs criados, 1215/1215 wikilinks resolvem (100%)
+**F3.6 top insight:** Agent runtime é o novo attack surface — 8+ sources, vetores distintos (skill poisoning, memory contagion, tool poisoning, runtime audit)
+**F3.6 insight 2:** Loop engineering consolidado — 6+ sources convergem: loop > agent como unidade de valor
+**F3.6 insight 3:** Formal methods atingiu tipping point — 5+ papers aplicando verificação em agent code
+**Padrões detectados:** 24 recorrentes (agent harness 11+, security 10+, skills 5+, multi-agent 6+)
+**Commits:** 0cd48ef (pipeline), 95966bd (deep analysis + link repair)
+**Top action:** Preencher 51 stubs com definições reais. Recategorizar 74 "concurso" → articles/ai-agents.
+**Pendências:** F2.10 SRS tracker (166 Score A). Connection-finder (orphan rate). Recategorização.
 → [[06-GENERATED/relatorios/2026-06-23-relatorio-semanal-run2]]
+
+## Pipeline Semanal 2026-06-23 (Run 3)
+**Veredito:** PIPELINE OK
+**Triagem:** 237 candidatos (batch 1) → 100% evaporation (Readwise sync) → re-scan 39 → 38 aprovados (32 A, 7 B) → 1 dedup
+**Ingest:** 38 source pages (35 ai-agents, 3 finance); manifest +76 entries; 38 Clippings arquivados (32 A, 7 B)
+**F2.8:** 3 spot-checked — teses validadas, informação preservada, frontmatter correto
+**F3.6 top insight:** Loop engineering amadureceu de conceito para disciplina — "delegar julgamento, não código". O gate (humano/CI) é o ponto crítico, não o agent.
+**F3.7:** orphan 100% (38/38 new pages sem backlinks) — subagentes não linkaram concepts/entities. Flag connection-finder.
+**Top action:** atualizar loop-engineering-patterns concept com 5 novas sources + criar entity GLM-5.2 e concept multi-model-fusion
+**Process gap:** File evaporation 237→39 (100% batch 1). Subagentes sem vault context = zero wikilinks. Próxima run: passar concepts/entities como contexto.
+→ [[06-GENERATED/relatorios/2026-06-23-relatorio-semanal]]
+⚠️ commit pendente — vault-michel não tem .git próprio (git root = ~/). Arquivos rastreados: .raw/.manifest.json, hot.md, relatorio. Considerar init git repo no vault.
