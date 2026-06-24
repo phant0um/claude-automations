@@ -280,3 +280,14 @@ Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline
 **Process gap:** candidates_aprovados.txt foi corrompido por rescore script (pipe-delimited grade appended) — fix aplicado, mas recomendo add validation no F1.0b
 → [[06-GENERATED/relatorios/2026-06-23-relatorio-semanal]]
 - [ALERT] daily-scan: 58 candidatos >= threshold (30) - considerar rodar pipeline-semanal -- 2026-06-23
+
+## Pipeline Semanal 2026-06-23 (Run 2)
+**Veredito:** PIPELINE OK
+**Triagem:** 237 candidatos → 230 aprovados (97%) → 7 C/D rejeitados. Alta taxa = batch majoritariamente papers AI/agents (core obsession)
+**Ingest:** 230 source pages; manifest +460 entries (aliases); 230 Clippings arquivados (187 A, 43 B)
+**F2.8:** 3/3 spot-checked — APROVADO (1 minor frontmatter bleed em Clipping JP)
+**F3.6 top insight:** Agent runtime é o novo attack surface — 8+ sources mapeando vetores distintos (skill poisoning, memory contagion, tool poisoning, runtime audit)
+**F3.7:** orphan ~90% (esperado para batch fresco), manifest 2065 entries → flag connection-finder
+**Top action:** criar concepts agent-runtime-security, loop-engineering-maturity, speculative-decoding-patterns
+**Process gap:** F2.5 Concept Absorption pendente (concepts não atualizados com evidências). F2.10 SRS tracker pendente. Recommend: batch concept absorption em próximo run.
+→ [[06-GENERATED/relatorios/2026-06-23-relatorio-semanal-run2]]

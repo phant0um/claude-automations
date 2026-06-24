@@ -1,0 +1,126 @@
+---
+title: "AutoPass: Evidence-Guided LLM Agents for Compiler Performance Tuning"
+type: source
+source: "Clippings/AutoPass Evidence-Guided LLM Agents for Compiler Performance Tuning.md"
+created: 2026-06-23
+ingested: 2026-06-23
+score: A
+tags: [ai-agents, source-page]
+---
+
+## Tese central
+---
+title: "AutoPass: Evidence-Guided LLM Agents for Compiler Performance Tuning"
+source: "
+author:
+published: 2009-06-04
+created: 2026-06-23
+description:
+tags:
+  - "clippings"
+---
+Zepeng Li Shaanxi Normal UniversityChina, Jie Ren Shaanxi Normal UniversityChina [renjie@snnu.edu.cn](), Zhanyong Tang Northwest UniversityChina, Jie Zheng Northwest UniversityChina and Zheng Wang University of LeedsUnited Kingdom
+
+###### Abstract. Large Language Models (LLMs) show promise for code compilation tasks, 
+
+## Argumentos principais
+### 1\. Introduction
+Compiler optimization is critical for unlocking software performance on modern systems [^4] [^11]. Production compilers such as LLVM [^28] and GCC [^41] provide a large set of optimization passes [^13] that implement program analyses and transformations, such as loop unrolling, instruction scheduling, and register allocation. In practice, developers rely on predefined optimization levels (e.g., -O3, -Oz), which apply fixed pass sequences and parameter settings. However, no single pipeline configuration performs well across programs [^6]. As a result, improving compiler performance requires identifying an effective *pass sequence* (known as the phase ordering problem [^3]) and suitable *parameter settings* for individual passes (e.g., the unrolling factor for the loop unroll pass).
+The main barrier for compiler tuning is the scale and structure of the optimization space. Modern compilers include hundreds of passes, yielding a combinatorially large space of possible pass sequences and parameter settings. Effective configurations are often sparse and highly program-dependent [^6]. Search-based autotuning is a common solution [^1] [^3] [^13] for the problem, as it can explore arbitrary pass combinations without requiring prior training. However, it is computationally expensive. Predictive modeling [^44] [^3] offers a complementary approach, but it typically requires large training datasets and generalizes poorly across programs, passes, and hardware architectures.
+Recent work on large language models (LLMs) offers a new possibility for compiler tuning: generating optimization decisions (e.g., the compiler pass sequence to be used for a given program) directly from program context [^12]. However, existing approaches largely focus on static, deterministic objectives, such as code size [^11] [^29], where compiler outcomes are deterministic and directly observable from the code. In contrast, optimizing runtime performance is fundamentally harder. Performance depends on complex microarchitectural interactions, target-specific behavior, and runtime measurements that are often noisy [^15] [^8]. As a result, code-level reasoning alone is insufficient: LLM-generated optimizations may appear reasonable but still yield poor performance on the underlying hardware. The key limitation is the lack of grounded feedback - without compiler-internal signals or runtime evidence, the model cannot reliably evaluate its own decisions.
+
+### 2.1. Compiler Optimization
+Compiler pass management. Modern compilers, such as LLVM [^28], apply optimizations through a pass manager that schedules a sequence of modular analyses and transformations (e.g., inlining, loop unrolling, and vectorization). Performance depends on both *which* passes run and *how* they are ordered, as well as pass-specific parameters (e.g., unroll factors). These choices interact: applying unrolling before vectorization can expose different IR patterns than doing the reverse, and different parameter settings can change downstream profitability. As architectures diversify and workloads vary, a fixed default pipeline is often not ideal for every program and target, and the resulting search space over pass orderings and configurations grows quickly [^40].
+Profile-guided optimization. PGO is widely used to incorporate runtime behavior into compilation. Common implementations include instrumentation-based PGO [^45], which collects explicit edge counts, and sampling-based variants such as AutoFDO [^7] and CSSPGO [^23]. In practice, two issues often limit the gains. First, PGO is sensitive to profile representativeness; when the profiling inputs or environment differ from production, the resulting decisions can overfit and occasionally regress. Second, most deployments keep the overall optimization pipeline largely fixed (e.g., the default -O3 structure) and use profiles mainly to steer heuristic decisions and parameters. This leaves less room to explore improvements that require changing the pipeline itself, such as pass reordering or restructuring.
+
+### 2.2. Compiler AutoTuning
+Iterative autotuning frameworks [^1] [^38] can improve runtime performance, but they often require many compile-and-run evaluations to discover a strong configuration [^47]. This cost is driven by the size of the optimization space: modern compilers expose many transformations (e.g., LLVM 17 offers over 100 transformation passes) and analysis passes, and the number of candidate phase orderings grows rapidly even before pass parameters are taken into account. To reduce this search burden, prior work has incorporated machine learning [^44] [^35] into compiler optimization, including learned cost models and policy-based selection of optimization sequences. Reinforcement-learning formulations further cast optimization as sequential decision making, and systems such as Autophase [^26], CompilerGym [^13] and Compiler-R1 [^34] provide standardized feature interfaces and training environments for learning compiler policies. Despite these advances, such approaches are not directly aligned with practical deployment constraints in our setting. Performance-oriented rewards depend on noisy, hardware- and input-dependent measurements, and optimization benefits often come from interactions among passes, making them difficult to predict from a fixed feature representation. In addition, learned policies can be hard to interpret and debug, which complicates regression diagnosis under tight evaluation budgets. These factors limit robustness when transferring across workloads, microarchitectures, and compiler versions, where distribution shift is common and retraining or extensive re-tuning is often infeasible.
+Table 1. Typical two benchmarks used for motivation.
+| Benchmark | Description |
+
+### 3\. Motivation
+As a motivating example, consider pass tuning in LLVM (v17.0.6) to optimize QuickSort (termed as QSort) and BitCount on Intel Core i9 CPU and ARM Cortex-A76. Table 1 lists the benchmarks.
+Setup. We conduct the experiments on two hardware platforms: an Intel Core i9 server (x86-64) and a Cortex-A76 embedded device (ARM64). The full platform details are listed in Table 3. All experiments use Clang/LLVM 17.0.6 [^32]. We consider all the individual passes enabled by the LLVM -O3 option. We compare AutoPass against four baselines: instrumentation-based PGO, AutoFDO, CSSPGO (on x86-64), and a autotuning framework OpenTuner [^1]. For OpenTuner, we report the best configuration found within three search iterations (same optimization budget as our approach AutoPass), and its search space is initialized from the default -O3 pass pipeline. Each configuration is measured five times, and we report geometric-mean speedup relative to -O3. AutoPass uses DeepSeek-V3.2 [^14] as the LLM backend.
+Algorithm 1 Qsort: a control-flow-heavy motivating example
+
+### 4\. Our Approach
+Figure 2. Overview of AutoPass, a four-agent LLM-driven LLVM passes generator for performance speedup.
+AutoPass is a multi-agent framework for compiler phase ordering that treats pass-pipeline construction as a guided reasoning process. The goal of AutoPass is to identify optimization pipelines that improve runtime performance under a practical optimization budget. As shown in Figure 2, AutoPass analyzes optimization-relevant program semantics, interprets intermediate compiler artifacts, and iteratively refines pass-pipeline decisions using limited runtime profiling feedback.
+
+### 4.1. Score Agent: Hotspot Identification
+To address the context-window limitations of LLMs (e.g., 128K tokens for DeepSeek V3.2), the Score Agent first identifies optimization-critical program regions before invoking downstream Analysis agents. Rather than processing the full raw code directly, it scans the source directory to recover the project hierarchy and runs a custom LLVM analysis pass to construct an inter-procedural call graph. It also extracts compact IR-native features, such as basic-block counts and loop counts (Table 2), without placing the full module into the LLM context. Based on this structural information, the agent assigns each function a priority score and filters out trivial or I/O-bound routines, allowing subsequent agents to focus on high-impact kernels. For selected functions whose IR fits within the context budget, AutoPass then provides the full raw LLVM IR for detailed downstream tasks.
+
+### 4.2. Analysis Agent: Feature Extraction and Initial Diagnosis
+The Analysis Agent translates raw LLVM IR into a structured, optimization-relevant state for the Reasoning Agent. It performs two analyses. First, it conducts semantic hint inference by examining symbol names and available metadata to extract high-level cues about the computation, such as whether a function resembles a sorting kernel or a stencil-style loop nest. These cues provide supplementary context that is not directly encoded in standard compiler cost models. Second, it performs remark-guided structural analysis by examining the IR together with compiler diagnostic remarks produced under the baseline -O3 pipeline (via -Rpass, -Rpass-missed, and -Rpass-analysis), including signals such as missed vectorization and inlining opportunities. The agent then emits a normalized JSON summary containing (i) semantic hints and (ii) categorized compiler remarks. This structured representation provides an explicit, compiler-grounded basis for downstream policy generation.
+Table 2. Static features used for function prioritization
+| Feature | Description |
+
+### 4.3. Reasoning Agent: Core Optimization Decision-Making
+The Reasoning Agent selects and updates the optimization pass pipeline based on compiler evidence and measured runtime behavior. It operates in two stages: an initial proposal step followed by a small number of feedback rounds. In the first iteration, the agent combines target-specific constraints with the summary produced by the Analysis Agent, and identifies concrete issues such as missed vectorization opportunities or spill-heavy loops. Its goal is to improve runtime performance while avoiding obvious regressions such as increased instruction-cache pressure. Starting from the standard -O3 pipeline as a reference, the agent proposes a modified pipeline by selecting, reordering, and parameterizing passes that directly address the identified issues. In subsequent iterations, the agent incorporates runtime feedback from the previous build-and-run. It compares the new runtime profile with the prior iteration, associates observed latency changes with the corresponding pipeline edits, prunes ineffective transformations, adjusts key parameters (e.g., unroll factors or inlining thresholds), and targets remaining bottlenecks suggested by updated remarks and profiles. After the final round, the system returns the best validated LLVM pass sequence together with a short justification linking major edits to compiler evidence and observed performance changes.
+A candidate pipeline produced by the Reasoning Agent is not executed directly. Instead, it is first passed through a deterministic repair-and-validation stage. In our setting, generation errors mainly fall into two categories: malformed pipeline syntax (e.g., missing parentheses, loop-unroll¡unroll-count=4,inline, where the closing ¿ is missing) and hallucinated pass names (e.g.,slp-vector, which is not a valid LLVM pass name, the right name is slp-vectorizer). We address the former with a script-based syntax checker that detects and completes unmatched parentheses, and the latter by mapping an invalid pass token to the most similar valid pass in the allowed pass set extracted from the initial -O3 pipeline. The repaired candidate is then validated by checking: (1) schema correctness of the agent output; (2) membership of all edited passes in the initial -O3 pass set; (3) validity of parameter ranges; and (4) successful LLVM compilation and verification. Candidates that still fail any check are rejected before runtime measurement and returned as failed attempts for the next iteration.
+
+### 4.4. Evaluation Agent: Performance Evaluation and Feedback Loop
+The Evaluation Agent validates each candidate pipeline through compilation, verification, and runtime profiling. At each iteration, it collects execution time, hardware-counter measurements, and updated compiler remarks, and compares the resulting behavior against both the static -O3 baseline and the best valid pipeline found so far. Based on these comparisons, it determines whether the candidate improves performance, exposes remaining optimization opportunities, or causes regressions such as increased cache pressure. When a candidate is suboptimal but still informative, the agent summarizes the observed differences and returns them as feedback for the next reasoning round. The loop continues until the iteration budget is exhausted.
+Let $t(P)$ denote the mean runtime of pipeline $P$ over three executions, and let $P^{\star}$ denote the best valid pipeline found so far. For a candidate pipeline $P^{(t)}$, the Evaluation Agent first checks whether it compiles and passes verification. Invalid candidates are rejected immediately, and $P^{\star}$ is retained. Otherwise, the agent executes the candidate pipeline three times, uses the mean runtime as its measured result, and accepts the candidate only if $t(P^{(t)})<t(P^{\star})$, in which case $P^{\star}\leftarrow P^{(t)}$. If not, the candidate is rejected and the system rolls back to $P^{\star}$ for the next iteration. Here, -O3 serves as the fixed global reference for reporting speedup, while $P^{\star}$ serves as the local acceptance reference during iterative search. After the final round, the framework returns $P^{\star}$ only if it outperforms -O3; otherwise, it falls back to the original -O3 pipeline.
+Table 3. Evaluation platforms
+
+### 5.1. Research Questions
+To evaluate the effectiveness of AutoPass, we conduct experiments to answer the following research questions (RQs):
+- RQ1: Under a strictly constrained budget of target-side executions, can AutoPass deliver greater and more stable execution speedups than established traditional and search-based compiler tuning baselines?
+- RQ2: How much does iterative feedback contribute beyond one-shot optimization?
+
+### 5.2. Experimental Setup
+Hardware and Software. We evaluate AutoPass on two hardware architectures: a server-grade x86-64 workstation (Intel Core i9-11900K) and an embedded ARM64 edge device (Raspberry Pi 5, Cortex-A76), as detailed in Table 3. The systems run Ubuntu 20.04 LTS To ensure stable timing, we disable dynamic frequency scaling (Turbo Boost) on the server platform. AutoPass is built as a multi-agent workflow using CrewAI [^10], with DeepSeek-V3.2 as the main reasoning backend (other LLM backends are evaluated in Section 7).
+Compiler and passes. All experiments are conducted using LLVM/Clang 17.0.6 [^32] with the New Pass Manager. Our evaluation considers 74 LLVM optimization passes and allows compiler sequences of up to 107 passes.
+Baselines. We compare AutoPass against four baselines: Instrumented PGO, CSSPGO (x86 only), AutoFDO, and the representative search-based autotuner OpenTuner. To ensure a fair comparison, OpenTuner is assigned the same optimization budget as AutoPass, i.e., three iterations, and its search is initialized from the default -O3 pass pipeline. To meet the practical deployment requirement, we employ a Rollback Mechanism for all methods. If we detect a speedup ratio $<1.0$ (performance degradation), the system automatically discards the candidate and reverts to the -O3 baseline.
+
+### 6.1. Overall Results (RQ1)
+Table 5 reports the speedup of AutoPass and several representative baselines over -O3 on five benchmark suites across x86-64 and ARM64. Overall, AutoPass (R3) achieves the strongest performance in 9 out of 10 platform–suite settings, indicating that the proposed grounded multi-agent workflow is effective across both server-class and embedded targets. On x86-64, AutoPass (R3) delivers strong improvements on CoreMark ($1.137\times$) and LULESH ($1.102\times$). On ARM64, AutoPass (R3) delivers an average speedup of $1.117\times$ over -O3.
+Compared to PGO-based methods, AutoPass is more consistent across workloads. Instr.PGO, CSSPGO, and AutoFDO provide moderate improvements in selected cases, but their gains are often close to parity with -O3 and vary substantially across suites. For example, Instr.PGO performs well on LULESH, but is much less effective on CoreMark and PolyBench. This suggests that profile-guided methods remain conservative in their optimization choices and heavily depend on the quality of the collected profiling data. In contrast, AutoPass adapts the pass pipeline using compiler diagnostics and measured runtime behavior, which allows it to make optimization decisions from richer evidence than profile-guided methods alone. OpenTuner, as a representative autotuning method, is less stable under a limited search budget. By contrast, AutoPass starts from the compiler-supported -O3 pipeline, performs constrained edits, and refines them using execution feedback, enabling it to discover stronger pipelines with fewer attempts. From a deployment perspective, AutoPass is also more practical. Unlike instrumented PGO, which inserts profiling instructions and perturbs runtime behavior during data collection, and unlike AutoFDO, which still requires substantial profiling effort, AutoPass can keep all agent reasoning in the cloud and requires only compiler artifacts and runtime measurements from the target platform. This reduces on-device overhead and makes the framework more suitable for deployment-constrained environments.
+Table 6. Performance comparison without rollback policy on the cBench dataset. Speedups are reported relative to -O3.
+
+### 6.2. Performance Without Roll-Back Policy (RQ2)
+Table 6 reports the performance of different approaches without the “Safe Rollback” policy on the cBench dataset.
+#### 6.2.1. Performance without roll-back policy
+The results show that AutoPass consistently outperforms all baselines across both platforms. On the server platform (x86-64), it achieves a geometric mean speedup of 1.040x (Max 1.366x) with only 6 regressions (details of the failure cases are available at [)), outperforming all three PGO baselines (Instrumented, CSSPGO, AutoFDO), which yield a geometric mean speedup below 1.0 $\times$, with severe degradation in worst-case scenarios (Min $0.454\times$). This confirms that rigid heuristic-based profiling may misalign with runtime behavior, causing regressions that blind application of PGO cannot prevent. On ARM64, AutoPass delivers a geometric mean of 1.109 $\times$ and a peak speedup of 2.040 $\times$. The greater improvement on ARM64 highlights that AutoPass is able to exploit the conservative nature of LLVM’s default pipeline on the embedded platform (ARM64). While standard -O3 heuristics often avoid aggressive unrolling or vectorization to strictly manage code size, AutoPass leverages its hybrid reasoning to safely deploy these optimizations and bridges the gap between conservative defaults and hardware capability. For OpenTuner (best in 3 iterations), it proves effective on ARM64 (Mean $1.079\times$), its performance is characterized by extreme volatility. It achieves the highest single-benchmark ($2.622\times$) but also suffers from deep regressions (Min $0.769\times$), typical of blind evolutionary search. We additionally report OpenTuner with 500 iterations as a high-budget search reference. Although this setting achieves the highest average speedup, it still incurs more failure cases than AutoPass, suggesting that a higher search budget improves peak optimization quality but does not guarantee the same level of robustness.
+
+### 6.3. Architecture-Aware Optimization Behavior (RQ3)
+#### 6.3.1. Analysis of Optimization Coverage
+To diagnose performance divergence, we quantify the optimization coverage of five key compiler passes relative to the -O3 baseline. For each benchmark, we count how many times a given pass is reported as effective in the compiler optimization remarks, and use this count as a proxy for how many optimization opportunities that pass actually affects. A benchmark is then classified as *Increased*, *Decreased*, or *Unchanged* depending on whether the pass is effective more often, less often, or equally often as under -O3. Figure 4 summarizes the resulting distribution across the cBench suite.
+Consistent Expansion of Instruction-Level Parallelism (ILP) in AutoPass. Across both architectures, AutoPass adopts a unified strategy of expanding instruction-level parallelism. It increases loop-unrolling coverage in 90.3% of x86-64 and 93.5% of ARM64 benchmarks, indicating that the agent frequently identifies more loop regions as worth unrolling than the default LLVM cost model does. This increase is accompanied by higher LICM coverage in 55–61% of programs. Together, these patterns suggest a compensatory strategy: when more loops are unrolled, AutoPass also increases the amount of loop-invariant code hoisted out of those loops, reducing repeated work and mitigating the additional pressure introduced by larger loop bodies.
+
+### 6.4. The Impact of Score Agent (RQ4)
+To study the impact of the Score Agent, we compare two function-selection strategies under different Top- $k$ settings: instrumented PGO-based hot-function selection and Score-Agent-guided function selection. As a full-program reference, we also report OpenTuner (500 iter.) as an approximate upper bound, since it searches over the entire program rather than selecting hot functions. Table 8 summarizes the average speedup and the average overlap between the functions selected by PGO and by the Score Agent. We can see that the Score Agent consistently improves over or matches PGO-based selection, and its best result appears in the Top-10 setting. This result suggests that accurate ranking of a modest number of optimization-critical functions is sufficient to recover nearly all the achievable benefit without paying the cost of exhaustive full-program search. Moreover, the overlap ratio indicates that the Score Agent does not simply reproduce the PGO hot-function set. Instead, it re-ranks optimization candidates according to their actual contribution to end-to-end speedup.
+Table 9. Agent ablation analysis.
+| Configuration | Round 1 | Round 2 | Round 3 |
+
+
+## Key insights
+- A multi-agent framework that integrates LLMs with compiler-internal signals and runtime feedback for performance optimization.
+- A feedback-driven optimization loop that combines structured pipeline editing, validation, and iterative refinement to improve reliability and efficiency.
+- Empirical results show that inference-only LLMs-based agents can effectively support compiler tuning tasks, including pass ordering and parameter selection.
+- RQ1: Under a strictly constrained budget of target-side executions, can AutoPass deliver greater and more stable execution speedups than established traditional and search-based compiler tuning baselines?
+- RQ2: How much does iterative feedback contribute beyond one-shot optimization?
+- RQ3: Does AutoPass adapt its optimization behavior across architectures instead of using a one-size-fits-all policy?
+- RQ4: Can the Score Agent identify optimization-critical functions more effectively than standard PGO-based hot-function selection?
+- RQ5: Which components of the multi-agent design are most critical for effectiveness and robustness?
+- RQ6: How does grounding help make AutoPass’s optimization decisions interpretable and diagnosable?
+
+## Exemplos e evidências
+See original source at `Clippings/AutoPass Evidence-Guided LLM Agents for Compiler Performance Tuning.md` for detailed examples, data, and benchmarks.
+
+## Implicações para o vault
+Links to existing concepts in vault.
+
+## Links
+- [[03-RESOURCES/concepts/ai-agents/agent]]
+- [[03-RESOURCES/concepts/llm-ml-foundations/llm]]
+- [[03-RESOURCES/concepts/software-engineering/verification]]
+- [[03-RESOURCES/entities/Gemini]]
+
+## Minha Síntese
+**O que muda:** A ser analisado em revisão manual.
+
+**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+
+**Próximo passo:** Nenhum próximo passo imediato.

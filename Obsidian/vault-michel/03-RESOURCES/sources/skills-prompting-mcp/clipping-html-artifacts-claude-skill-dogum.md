@@ -1,0 +1,126 @@
+---
+title: "html-artifacts: Claude Skill for Self-Contained HTML Artifacts"
+type: source
+source_file: "Clippings/A Claude skill for producing self-contained HTML artifacts instead of markdown when the task warrants it..md"
+author: dogum
+source_url: https://github.com/dogum/html-artifacts
+published:
+ingested: 2026-05-09
+tags: [claude-skills, html, artifacts, markdown, output-format, claude-code]
+triagem_score: 8
+---
+
+# html-artifacts — Claude Skill for Self-Contained HTML Artifacts
+
+GitHub repo by [[03-RESOURCES/entities/dogum]] that operationalizes [[03-RESOURCES/entities/trq212-tariq]]'s "Unreasonable Effectiveness of HTML" post into a Claude skill (`.skill` file / Claude Code skill folder).
+
+## Core Thesis
+
+The skill addresses the recognition problem: not "always answer in HTML" but "when does HTML structurally beat markdown for this specific task type?" It identifies nine categories where HTML wins and provides per-category reference patterns.
+
+## Skill Structure
+
+```
+skill/
+├── SKILL.md                        # recognition heuristic, universal rules, carve-outs
+└── references/
+    ├── exploration-and-planning.md
+    ├── code-review-and-pr.md
+    ├── design-and-prototypes.md
+    ├── diagrams-and-illustrations.md
+    ├── reports-and-research.md
+    ├── decks.md
+    ├── custom-editors.md
+    └── matching-your-style.md
+```
+
+`SKILL.md` is always in context when the skill triggers. Reference files are pulled in only when relevant — lazy loading per task category.
+
+## Recognition Heuristic
+
+HTML is triggered for: comparisons, plans, code reviews, explainers, status reports, custom editors, decks, diagrams with SVG, design prototypes.
+
+Explicit carve-outs (use markdown instead): short conversational replies, code-only outputs, terminal-style answers, content that is genuinely a few sentences.
+
+## Anti-Aesthetic Design
+
+The skill actively prevents the "default AI aesthetic" (gradients, four shades of indigo, emoji-decorated headers, glass morphism). `references/matching-your-style.md` includes patterns to avoid and a baseline typographic CSS. Also includes the design-system-from-codebase trick from Thariq's FAQ.
+
+## Install Methods
+
+- **Claude.ai**: upload `.skill` file via Settings → Capabilities → Skills
+- **Claude Code**: clone repo, copy `skill/` into `~/.claude/skills/html-artifacts`
+- **Anthropic API**: organization-wide deployment via upload endpoint
+
+## Examples Produced
+
+| Pattern | Prompt |
+|---|---|
+| Side-by-side comparison | SSE streaming comparison in Hono backend |
+| Concept explainer + live demo | Quarter-car IRI explainer with interactive simulation |
+| Custom editor with export | Ticket triage Kanban → copy-as-markdown |
+| Weekly status report | Platform team status |
+| Annotated flowchart | Deploy pipeline with failure paths |
+| Slide deck | Case for HTML over markdown |
+
+## Conexões
+
+- [[03-RESOURCES/concepts/dev-foundations/html-as-llm-artifact]] — the concept this skill operationalizes
+- [[03-RESOURCES/concepts/dev-foundations/single-file-html-pattern]] — one of the patterns taught by the skill
+- [[03-RESOURCES/concepts/claude-code-tooling/claude-skills]] — belongs to the Claude skills ecosystem
+- [[03-RESOURCES/entities/dogum]] — author
+- [[03-RESOURCES/entities/trq212-tariq]] — intellectual source (Unreasonable Effectiveness of HTML)
+- [[03-RESOURCES/sources/skills-prompting-mcp/claude-code-unreasonable-effectiveness-of-html]] — original source this skill responds to
+
+## Why HTML Beats Markdown for Specific Output Types
+
+The recognition heuristic at the core of this skill exists because the question "should I use HTML or markdown?" has a non-obvious answer that depends on task type, not on complexity or length.
+
+**Markdown wins when:** the output is consumed by a renderer that will apply its own styling (GitHub, Obsidian, a documentation site). The content is genuinely sequential prose. The reader is a developer who will read raw source. The output feeds into another tool as input.
+
+**HTML wins when:** the output is the final artifact — meant to be opened in a browser, shared as a link, or sent as a file. The content has spatial relationships (comparisons, side-by-side layouts, interactive elements) that markdown cannot express. The output benefits from custom interactivity (live demos, calculators, kanban boards). The format needs to be self-contained for offline use or archival.
+
+The insight from Thariq's original post: HTML files are browser-native, zero-dependency, instantly shareable, and infinitely styleable — properties that make them better artifacts than markdown for anything that will be read by a human rather than processed by a machine.
+
+## The Anti-Aesthetic Design Principle in Practice
+
+The "default AI aesthetic" problem is specific and recognizable: four shades of indigo gradient background, glass morphism cards, every section header preceded by an emoji, excessive rounded corners, multiple animation effects on a static report. This aesthetic signals "generated by AI" immediately and undermines credibility in professional contexts.
+
+The skill's `references/matching-your-style.md` addresses this with two components:
+
+1. **Avoidance patterns:** explicit list of CSS properties that trigger AI aesthetic (specific gradient combinations, backdrop-filter, glass morphism effects). The skill instructs Claude not to use these unless explicitly requested.
+
+2. **Baseline typographic CSS:** minimal reset + readable font stack + sensible spacing. This produces clean, professional output that looks like a designer made intentional choices rather than a model applied default patterns.
+
+The design-system-from-codebase trick: if the project has an existing CSS file, the skill instructs Claude to extract color variables, font choices, and spacing units from it and apply them to the HTML artifact. The output matches the project's visual language automatically.
+
+## Lazy-Loading Reference Files — Token Efficiency
+
+The `SKILL.md` / `references/` split is the progressive disclosure pattern applied to skill design:
+
+- `SKILL.md` (~150-200 lines): recognition heuristic, carve-outs, universal rules. Always in context when the skill activates.
+- `references/*.md` (~500-1000 lines each): per-category patterns, examples, anti-examples. Only pulled when the task matches that category.
+
+A task asking for a code review gets `SKILL.md` + `references/code-review-and-pr.md`. A task asking for a status report gets `SKILL.md` + `references/reports-and-research.md`. Neither activates `references/decks.md` or `references/custom-editors.md`.
+
+Result: the average task in this skill costs ~400 tokens of skill context instead of 5,000+. The full reference library is available but not always paid for.
+
+## Practical Examples Analysis
+
+The six examples in the skill's README reveal the categories where HTML artifacts create the most value:
+
+**Side-by-side comparison (SSE streaming comparison):** markdown tables are limited to text. HTML enables animated diffs, color-coded cells, interactive toggles between options. Comparisons with more than 3 dimensions benefit substantially.
+
+**Concept explainer + live demo (quarter-car IRI):** markdown can explain a physics concept; HTML can include an interactive simulation running the actual physics. The reader tests the concept directly rather than imagining it.
+
+**Custom editor with export (Ticket triage Kanban):** a self-contained tool that works without backend, servers, or installation. The user opens the file, drags cards, and exports to markdown. This is impossible in markdown.
+
+**Annotated flowchart (deploy pipeline):** SVG-embedded in HTML allows annotations, hover states, and failure-path highlighting that static images cannot support.
+
+## Integration with vault-michel
+
+For vault-michel, the primary use case for this skill is reporting and analysis output: weekly source digests, concept maps, agent performance reports, and research summaries where spatial layout or interactivity would add genuine value.
+
+The carve-out is equally important: daily notes, source stubs, concept pages, and entity pages should remain plain markdown. They are consumed by Obsidian's renderer and other agents — HTML would break wikilink resolution and Dataview queries.
+
+Decision rule for vault outputs: if the output is for human reading and benefits from layout, use HTML. If the output is for Obsidian consumption or feeds another agent, use markdown.
