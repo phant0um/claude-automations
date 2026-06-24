@@ -460,6 +460,34 @@ for f in Path("03-RESOURCES/concepts/").rglob("*.md"):
 **Prevenção**: após gerar todas as source pages, rodar link resolution check
 (ver ingest-verify C2). Se >5% links quebrados, abortar e reparar antes do commit.
 
+## Pitfall: Subagent manifest update failure — 2026-06-24
+
+**Sintoma**: subagente reportou "manifest updated with 80 entries" mas verificação
+mostrou 0 entries novas para aquele batch.
+
+**Causa**: subagente pode ter falhado ao executar jq/Python sem reportar erro,
+ou usado campo de data diferente (`ingested` vs `ingested_at`).
+
+**Fix**: orquestrador deve validar manifest após cada subagente completar:
+```python
+today_count = sum(1 for k,v in manifest['sources'].items()
+                  if isinstance(v,dict) and v.get('ingested_at') == TODAY)
+if today_count < expected:
+    # Run fix script to add missing entries
+```
+
+**Prevenção**: instructions do subagente devem incluir: (1) usar `ingested_at` como
+field name, (2) key = basename only (não path), (3) ambos variantes com e sem .md.
+
+## Pitfall: Manifest key format divergence — 2026-06-24
+
+**Sintoma**: 168 entries com path completo (`Clippings/filename.md`) ao invés de
+basename only (`filename.md`). F1.0b grep testa `"basename"` que não matcha path.
+
+**Fix**: normalizar post-ingest — converter path keys para basename keys.
+
+**Prevenção**: subagente instructions devem incluir exemplo explícito da key format.
+
 ## Anti-padrões
 
 - ❌ Condensar source pages artificialmente (perda de informação)

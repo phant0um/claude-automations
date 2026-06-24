@@ -69,3 +69,6 @@ The data era "great unbundling" — separate tools for ingestion, orchestration,
 - **[2026-06-24]** Eve é framework open-source da Vercel onde agent = diretório. Production built-in: durable execution, sandbox, HITL... — [[introducing-eve-vercel]]
 - **[2026-06-24]** withEve() wrap Next.js config para rodar agente + app como 1 projeto — same-origin, sem CORS, cookie auth automática,... — [[next-js-eve-integration]]
 - **[2026-06-24]** 3 peças para deploy eve agent: React UI (useEveAgent), channel auth (replace placeholderAuth), deploy Vercel. Web... — [[ship-it-eve-deploy]]
+- **[2026-06-24]** eve/client TypeScript SDK: client tipado para HTTP API com health check, session protocol e NDJSON stream loop — [[typescript-sdk-overview]]
+- **[2026-06-24]** eveSvelteKit() Vite plugin unifica SvelteKit + eve agent em um dev server e deploy, sem CORS ou env vars — [[sveltekit]]
+- **[2026-06-24]** eve/nuxt module: Nuxt + eve agent em um projeto, useEveAgent auto-imported, sem CORS ou env vars — [[nuxt]]

@@ -21256,7 +21256,7 @@
       "path": "02-AREAS/finance/sources/varos-relatorio-1-cobertura.md",
       "ingested": "2026-06-23"
     },
-    "Clippings/Loops are Dead and TypeScript Sucks.md": {
+    "Loops are Dead and TypeScript Sucks.md": {
       "hash": "84b4a812be62a821f63911afa852c6a2",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21264,15 +21264,16 @@
         "03-RESOURCES/sources/loops-are-dead-and-typescript-sucks.md"
       ]
     },
-    "Clippings/Loops are Dead and TypeScript Sucks": {
+    "Loops are Dead and TypeScript Sucks": {
       "hash": "84b4a812be62a821f63911afa852c6a2",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/loops-are-dead-and-typescript-sucks.md"
-      ]
+      ],
+      "alias_of": "Loops are Dead and TypeScript Sucks.md"
     },
-    "Clippings/agent.ts.md": {
+    "agent.ts.md": {
       "hash": "30d80f9513e2e980ceec8a1445c82cc3",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21280,15 +21281,25 @@
         "03-RESOURCES/sources/agent-ts.md"
       ]
     },
-    "Clippings/agent.ts": {
+    "agent.ts": {
       "hash": "30d80f9513e2e980ceec8a1445c82cc3",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/agent-ts.md"
-      ]
+      ],
+      "alias_of": "agent.ts.md"
     },
-    "Clippings/skillsskillsin-progressloop-meSKILL.md at main 1.md": {
+    "agent": {
+      "hash": "30d80f9513e2e980ceec8a1445c82cc3",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/agent-ts.md"
+      ],
+      "alias_of": "agent.ts"
+    },
+    "skillsskillsin-progressloop-meSKILL.md at main 1.md": {
       "hash": "b7716bb08ca6637b62df276321a84b97",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21296,7 +21307,16 @@
         "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-1.md"
       ]
     },
-    "Clippings/skillsskillsin-progressloop-meSKILL at main 1": {
+    "skillsskillsin-progressloop-meSKILL.md at main 1": {
+      "hash": "b7716bb08ca6637b62df276321a84b97",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-1.md"
+      ],
+      "alias_of": "skillsskillsin-progressloop-meSKILL.md at main 1.md"
+    },
+    "skillsskillsin-progressloop-meSKILL at main 1": {
       "hash": "b7716bb08ca6637b62df276321a84b97",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21304,7 +21324,7 @@
         "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-1.md"
       ]
     },
-    "Clippings/skillsskillsin-progressloop-meSKILL.md at main 2.md": {
+    "skillsskillsin-progressloop-meSKILL.md at main 2.md": {
       "hash": "bbf98dd517206e31345755263ed7273b",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21312,7 +21332,16 @@
         "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-2.md"
       ]
     },
-    "Clippings/skillsskillsin-progressloop-meSKILL at main 2": {
+    "skillsskillsin-progressloop-meSKILL.md at main 2": {
+      "hash": "bbf98dd517206e31345755263ed7273b",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-2.md"
+      ],
+      "alias_of": "skillsskillsin-progressloop-meSKILL.md at main 2.md"
+    },
+    "skillsskillsin-progressloop-meSKILL at main 2": {
       "hash": "bbf98dd517206e31345755263ed7273b",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21320,7 +21349,7 @@
         "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-2.md"
       ]
     },
-    "Clippings/skillsskillsin-progressloop-meSKILL.md at main 3.md": {
+    "skillsskillsin-progressloop-meSKILL.md at main 3.md": {
       "hash": "e36de0005812247f970d6ab6f7aa5d26",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21328,7 +21357,16 @@
         "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-3.md"
       ]
     },
-    "Clippings/skillsskillsin-progressloop-meSKILL at main 3": {
+    "skillsskillsin-progressloop-meSKILL.md at main 3": {
+      "hash": "e36de0005812247f970d6ab6f7aa5d26",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-3.md"
+      ],
+      "alias_of": "skillsskillsin-progressloop-meSKILL.md at main 3.md"
+    },
+    "skillsskillsin-progressloop-meSKILL at main 3": {
       "hash": "e36de0005812247f970d6ab6f7aa5d26",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21336,7 +21374,7 @@
         "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-3.md"
       ]
     },
-    "Clippings/skillsskillsin-progressloop-meSKILL.md at main 4.md": {
+    "skillsskillsin-progressloop-meSKILL.md at main 4.md": {
       "hash": "08148c2e68754588c7d4729484763d8f",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21344,7 +21382,16 @@
         "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-4.md"
       ]
     },
-    "Clippings/skillsskillsin-progressloop-meSKILL at main 4": {
+    "skillsskillsin-progressloop-meSKILL.md at main 4": {
+      "hash": "08148c2e68754588c7d4729484763d8f",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-4.md"
+      ],
+      "alias_of": "skillsskillsin-progressloop-meSKILL.md at main 4.md"
+    },
+    "skillsskillsin-progressloop-meSKILL at main 4": {
       "hash": "08148c2e68754588c7d4729484763d8f",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21352,7 +21399,7 @@
         "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-4.md"
       ]
     },
-    "Clippings/Autonomous AI research for nanogpt speedrun.md": {
+    "Autonomous AI research for nanogpt speedrun.md": {
       "hash": "1d791163e264a67467a90a28ff15f9fa",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21360,15 +21407,16 @@
         "03-RESOURCES/sources/autonomous-ai-research-for-nanogpt-speedrun.md"
       ]
     },
-    "Clippings/Autonomous AI research for nanogpt speedrun": {
+    "Autonomous AI research for nanogpt speedrun": {
       "hash": "1d791163e264a67467a90a28ff15f9fa",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/autonomous-ai-research-for-nanogpt-speedrun.md"
-      ]
+      ],
+      "alias_of": "Autonomous AI research for nanogpt speedrun.md"
     },
-    "Clippings/Governed Shared Memory for Multi-Agent LLM Systems.md": {
+    "Governed Shared Memory for Multi-Agent LLM Systems.md": {
       "hash": "417ea9d4563f9684a7c4d0d6db4f47a1",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21376,15 +21424,16 @@
         "03-RESOURCES/sources/governed-shared-memory-for-multi-agent-llm-systems.md"
       ]
     },
-    "Clippings/Governed Shared Memory for Multi-Agent LLM Systems": {
+    "Governed Shared Memory for Multi-Agent LLM Systems": {
       "hash": "417ea9d4563f9684a7c4d0d6db4f47a1",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/governed-shared-memory-for-multi-agent-llm-systems.md"
-      ]
+      ],
+      "alias_of": "Governed Shared Memory for Multi-Agent LLM Systems.md"
     },
-    "Clippings/为什么说 Wiki 和 Reflection 对 Agent Memory 很重要？.md": {
+    "为什么说 Wiki 和 Reflection 对 Agent Memory 很重要？.md": {
       "hash": "dd7e330313fb30487e5e20e70f56ea99",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21392,15 +21441,16 @@
         "03-RESOURCES/sources/wiki-reflection-agent-memory.md"
       ]
     },
-    "Clippings/为什么说 Wiki 和 Reflection 对 Agent Memory 很重要？": {
+    "为什么说 Wiki 和 Reflection 对 Agent Memory 很重要？": {
       "hash": "dd7e330313fb30487e5e20e70f56ea99",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/wiki-reflection-agent-memory.md"
-      ]
+      ],
+      "alias_of": "为什么说 Wiki 和 Reflection 对 Agent Memory 很重要？.md"
     },
-    "Clippings/Claude Code Hooks What Nobody Tells You Until Step 20 Breaks Everything.md": {
+    "Claude Code Hooks What Nobody Tells You Until Step 20 Breaks Everything.md": {
       "hash": "97613b76287f7a20f928faaba56daead",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21408,15 +21458,16 @@
         "03-RESOURCES/sources/claude-code-hooks-what-nobody-tells-you-until-step-20-breaks-everything.md"
       ]
     },
-    "Clippings/Claude Code Hooks What Nobody Tells You Until Step 20 Breaks Everything": {
+    "Claude Code Hooks What Nobody Tells You Until Step 20 Breaks Everything": {
       "hash": "97613b76287f7a20f928faaba56daead",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/claude-code-hooks-what-nobody-tells-you-until-step-20-breaks-everything.md"
-      ]
+      ],
+      "alias_of": "Claude Code Hooks What Nobody Tells You Until Step 20 Breaks Everything.md"
     },
-    "Clippings/Claude Desktop on AWS, Google Cloud, and Microsoft Foundry.md": {
+    "Claude Desktop on AWS, Google Cloud, and Microsoft Foundry.md": {
       "hash": "9eb0cfc7174f336f6eda8fb8a61870e1",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21424,15 +21475,16 @@
         "03-RESOURCES/sources/claude-desktop-on-aws-google-cloud-and-microsoft-foundry.md"
       ]
     },
-    "Clippings/Claude Desktop on AWS, Google Cloud, and Microsoft Foundry": {
+    "Claude Desktop on AWS, Google Cloud, and Microsoft Foundry": {
       "hash": "9eb0cfc7174f336f6eda8fb8a61870e1",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/claude-desktop-on-aws-google-cloud-and-microsoft-foundry.md"
-      ]
+      ],
+      "alias_of": "Claude Desktop on AWS, Google Cloud, and Microsoft Foundry.md"
     },
-    "Clippings/Edge-to-Cloud Architecture for Real-Time Surgical Intelligence with AWS and NVIDIA.md": {
+    "Edge-to-Cloud Architecture for Real-Time Surgical Intelligence with AWS and NVIDIA.md": {
       "hash": "59cbdd77777a8b8609d36b6b53b76e32",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21440,15 +21492,16 @@
         "03-RESOURCES/sources/edge-to-cloud-architecture-for-real-time-surgical-intelligence-with-aws-and-nvidia.md"
       ]
     },
-    "Clippings/Edge-to-Cloud Architecture for Real-Time Surgical Intelligence with AWS and NVIDIA": {
+    "Edge-to-Cloud Architecture for Real-Time Surgical Intelligence with AWS and NVIDIA": {
       "hash": "59cbdd77777a8b8609d36b6b53b76e32",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/edge-to-cloud-architecture-for-real-time-surgical-intelligence-with-aws-and-nvidia.md"
-      ]
+      ],
+      "alias_of": "Edge-to-Cloud Architecture for Real-Time Surgical Intelligence with AWS and NVIDIA.md"
     },
-    "Clippings/How NTU FRESH is using AWS to build predictive food safety at scale.md": {
+    "How NTU FRESH is using AWS to build predictive food safety at scale.md": {
       "hash": "0aa51b08fee2d0aff41f1cf5c63c4c6c",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21456,15 +21509,16 @@
         "03-RESOURCES/sources/how-ntu-fresh-is-using-aws-to-build-predictive-food-safety-at-scale.md"
       ]
     },
-    "Clippings/How NTU FRESH is using AWS to build predictive food safety at scale": {
+    "How NTU FRESH is using AWS to build predictive food safety at scale": {
       "hash": "0aa51b08fee2d0aff41f1cf5c63c4c6c",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/how-ntu-fresh-is-using-aws-to-build-predictive-food-safety-at-scale.md"
-      ]
+      ],
+      "alias_of": "How NTU FRESH is using AWS to build predictive food safety at scale.md"
     },
-    "Clippings/Lessons from Anthropic on building effective human-agent teams.md": {
+    "Lessons from Anthropic on building effective human-agent teams.md": {
       "hash": "1a782aecd521317ac1fa5e5a276bfe4d",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21472,15 +21526,16 @@
         "03-RESOURCES/sources/lessons-from-anthropic-on-building-effective-human-agent-teams.md"
       ]
     },
-    "Clippings/Lessons from Anthropic on building effective human-agent teams": {
+    "Lessons from Anthropic on building effective human-agent teams": {
       "hash": "1a782aecd521317ac1fa5e5a276bfe4d",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/lessons-from-anthropic-on-building-effective-human-agent-teams.md"
-      ]
+      ],
+      "alias_of": "Lessons from Anthropic on building effective human-agent teams.md"
     },
-    "Clippings/Our AI Agent now costs more than human junior bankers.md": {
+    "Our AI Agent now costs more than human junior bankers.md": {
       "hash": "f6f9ff67907aefc95610151d1c9e0e38",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21488,15 +21543,16 @@
         "03-RESOURCES/sources/our-ai-agent-now-costs-more-than-human-junior-bankers.md"
       ]
     },
-    "Clippings/Our AI Agent now costs more than human junior bankers": {
+    "Our AI Agent now costs more than human junior bankers": {
       "hash": "f6f9ff67907aefc95610151d1c9e0e38",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/our-ai-agent-now-costs-more-than-human-junior-bankers.md"
-      ]
+      ],
+      "alias_of": "Our AI Agent now costs more than human junior bankers.md"
     },
-    "Clippings/Probing the Misaligned Thinking Process of Language Models.md": {
+    "Probing the Misaligned Thinking Process of Language Models.md": {
       "hash": "cf7f3e7c33b4fc7c3c3af12ee1c0c1e3",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21504,15 +21560,16 @@
         "03-RESOURCES/sources/probing-the-misaligned-thinking-process-of-language-models.md"
       ]
     },
-    "Clippings/Probing the Misaligned Thinking Process of Language Models": {
+    "Probing the Misaligned Thinking Process of Language Models": {
       "hash": "cf7f3e7c33b4fc7c3c3af12ee1c0c1e3",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/probing-the-misaligned-thinking-process-of-language-models.md"
-      ]
+      ],
+      "alias_of": "Probing the Misaligned Thinking Process of Language Models.md"
     },
-    "Clippings/Reimagining B-Pillar DFMEA Why Ontology-Grounded AI Is the Future of Automotive Engineering.md": {
+    "Reimagining B-Pillar DFMEA Why Ontology-Grounded AI Is the Future of Automotive Engineering.md": {
       "hash": "2be05cdb055fd934e77d2a448070a833",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21520,15 +21577,16 @@
         "03-RESOURCES/sources/reimagining-b-pillar-dfmea-why-ontology-grounded-ai-is-the-future-of-automotive-engineering.md"
       ]
     },
-    "Clippings/Reimagining B-Pillar DFMEA Why Ontology-Grounded AI Is the Future of Automotive Engineering": {
+    "Reimagining B-Pillar DFMEA Why Ontology-Grounded AI Is the Future of Automotive Engineering": {
       "hash": "2be05cdb055fd934e77d2a448070a833",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/reimagining-b-pillar-dfmea-why-ontology-grounded-ai-is-the-future-of-automotive-engineering.md"
-      ]
+      ],
+      "alias_of": "Reimagining B-Pillar DFMEA Why Ontology-Grounded AI Is the Future of Automotive Engineering.md"
     },
-    "Clippings/Sessions, Runs & Streaming.md": {
+    "Sessions, Runs & Streaming.md": {
       "hash": "b95eb8613cdcf6dfdecfc1de68924413",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21536,15 +21594,16 @@
         "03-RESOURCES/sources/sessions-runs-streaming.md"
       ]
     },
-    "Clippings/Sessions, Runs & Streaming": {
+    "Sessions, Runs & Streaming": {
       "hash": "b95eb8613cdcf6dfdecfc1de68924413",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/sessions-runs-streaming.md"
-      ]
+      ],
+      "alias_of": "Sessions, Runs & Streaming.md"
     },
-    "Clippings/The Feynman Method Why You Forget 90% of What You Read (And the 4 Prompts That Fix It).md": {
+    "The Feynman Method Why You Forget 90% of What You Read (And the 4 Prompts That Fix It).md": {
       "hash": "49ce39a2f58f74740058d54551af70f0",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21552,15 +21611,16 @@
         "03-RESOURCES/sources/the-feynman-method-why-you-forget-90-of-what-you-read-and-the-4-prompts-that-fix-it.md"
       ]
     },
-    "Clippings/The Feynman Method Why You Forget 90% of What You Read (And the 4 Prompts That Fix It)": {
+    "The Feynman Method Why You Forget 90% of What You Read (And the 4 Prompts That Fix It)": {
       "hash": "49ce39a2f58f74740058d54551af70f0",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/the-feynman-method-why-you-forget-90-of-what-you-read-and-the-4-prompts-that-fix-it.md"
-      ]
+      ],
+      "alias_of": "The Feynman Method Why You Forget 90% of What You Read (And the 4 Prompts That Fix It).md"
     },
-    "Clippings/Token Capital Efficiency.md": {
+    "Token Capital Efficiency.md": {
       "hash": "53de01df12c5bf16762c5fc6f8a93c85",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21568,15 +21628,16 @@
         "03-RESOURCES/sources/token-capital-efficiency.md"
       ]
     },
-    "Clippings/Token Capital Efficiency": {
+    "Token Capital Efficiency": {
       "hash": "53de01df12c5bf16762c5fc6f8a93c85",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/token-capital-efficiency.md"
-      ]
+      ],
+      "alias_of": "Token Capital Efficiency.md"
     },
-    "Clippings/When the model has never seen your code.md": {
+    "When the model has never seen your code.md": {
       "hash": "73d952ce350568ab007e88d6feecd221",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21584,15 +21645,16 @@
         "03-RESOURCES/sources/when-the-model-has-never-seen-your-code.md"
       ]
     },
-    "Clippings/When the model has never seen your code": {
+    "When the model has never seen your code": {
       "hash": "73d952ce350568ab007e88d6feecd221",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/when-the-model-has-never-seen-your-code.md"
-      ]
+      ],
+      "alias_of": "When the model has never seen your code.md"
     },
-    "Clippings/Why Most Dependency Alerts Don’t Matter.md": {
+    "Why Most Dependency Alerts Don’t Matter.md": {
       "hash": "6429841559521e0666c59d3d47dab12a",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21600,15 +21662,16 @@
         "03-RESOURCES/sources/why-most-dependency-alerts-don-t-matter.md"
       ]
     },
-    "Clippings/Why Most Dependency Alerts Don’t Matter": {
+    "Why Most Dependency Alerts Don’t Matter": {
       "hash": "6429841559521e0666c59d3d47dab12a",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/why-most-dependency-alerts-don-t-matter.md"
-      ]
+      ],
+      "alias_of": "Why Most Dependency Alerts Don’t Matter.md"
     },
-    "Clippings/useEveAgent (Svelte).md": {
+    "useEveAgent (Svelte).md": {
       "hash": "3e7fe2d786e25f74a44d9f96b177270f",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21616,15 +21679,16 @@
         "03-RESOURCES/sources/useeveagent-svelte.md"
       ]
     },
-    "Clippings/useEveAgent (Svelte)": {
+    "useEveAgent (Svelte)": {
       "hash": "3e7fe2d786e25f74a44d9f96b177270f",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/useeveagent-svelte.md"
-      ]
+      ],
+      "alias_of": "useEveAgent (Svelte).md"
     },
-    "Clippings/useEveAgent (Vue).md": {
+    "useEveAgent (Vue).md": {
       "hash": "6f061dee1dff3ba6723cb575941179f6",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21632,15 +21696,16 @@
         "03-RESOURCES/sources/useeveagent-vue.md"
       ]
     },
-    "Clippings/useEveAgent (Vue)": {
+    "useEveAgent (Vue)": {
       "hash": "6f061dee1dff3ba6723cb575941179f6",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/useeveagent-vue.md"
-      ]
+      ],
+      "alias_of": "useEveAgent (Vue).md"
     },
-    "Clippings/10 Developer Tools You Probably Aren't Using (But Should Be).md": {
+    "10 Developer Tools You Probably Aren't Using (But Should Be).md": {
       "hash": "fa019c97e97054d4d81d9eadf0dff3fd",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21648,15 +21713,16 @@
         "03-RESOURCES/sources/10-developer-tools-you-probably-aren-t-using-but-should-be.md"
       ]
     },
-    "Clippings/10 Developer Tools You Probably Aren't Using (But Should Be)": {
+    "10 Developer Tools You Probably Aren't Using (But Should Be)": {
       "hash": "fa019c97e97054d4d81d9eadf0dff3fd",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/10-developer-tools-you-probably-aren-t-using-but-should-be.md"
-      ]
+      ],
+      "alias_of": "10 Developer Tools You Probably Aren't Using (But Should Be).md"
     },
-    "Clippings/ASALT Adaptive State Alignment for Lateral Transfer in Multi-agent Reinforcement Learning.md": {
+    "ASALT Adaptive State Alignment for Lateral Transfer in Multi-agent Reinforcement Learning.md": {
       "hash": "1e5773bd45f082beaec4fd7ab56d8acd",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21664,15 +21730,16 @@
         "03-RESOURCES/sources/asalt-adaptive-state-alignment-for-lateral-transfer-in-multi-agent-reinforcement-learning.md"
       ]
     },
-    "Clippings/ASALT Adaptive State Alignment for Lateral Transfer in Multi-agent Reinforcement Learning": {
+    "ASALT Adaptive State Alignment for Lateral Transfer in Multi-agent Reinforcement Learning": {
       "hash": "1e5773bd45f082beaec4fd7ab56d8acd",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/asalt-adaptive-state-alignment-for-lateral-transfer-in-multi-agent-reinforcement-learning.md"
-      ]
+      ],
+      "alias_of": "ASALT Adaptive State Alignment for Lateral Transfer in Multi-agent Reinforcement Learning.md"
     },
-    "Clippings/Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel.md": {
+    "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel.md": {
       "hash": "5fb7918363440d291a30cbba98bd0493",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21680,15 +21747,16 @@
         "03-RESOURCES/sources/accelerating-transformers-fine-tuning-with-nvidia-nemo-automodel.md"
       ]
     },
-    "Clippings/Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel": {
+    "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel": {
       "hash": "5fb7918363440d291a30cbba98bd0493",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/accelerating-transformers-fine-tuning-with-nvidia-nemo-automodel.md"
-      ]
+      ],
+      "alias_of": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel.md"
     },
-    "Clippings/Accuracy and Satisfaction in Multi-Turn LLM Dialogues for NFR Assessment.md": {
+    "Accuracy and Satisfaction in Multi-Turn LLM Dialogues for NFR Assessment.md": {
       "hash": "e005c4ef85d31cd3217e6656e4ce79c7",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21696,15 +21764,16 @@
         "03-RESOURCES/sources/accuracy-and-satisfaction-in-multi-turn-llm-dialogues-for-nfr-assessment.md"
       ]
     },
-    "Clippings/Accuracy and Satisfaction in Multi-Turn LLM Dialogues for NFR Assessment": {
+    "Accuracy and Satisfaction in Multi-Turn LLM Dialogues for NFR Assessment": {
       "hash": "e005c4ef85d31cd3217e6656e4ce79c7",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/accuracy-and-satisfaction-in-multi-turn-llm-dialogues-for-nfr-assessment.md"
-      ]
+      ],
+      "alias_of": "Accuracy and Satisfaction in Multi-Turn LLM Dialogues for NFR Assessment.md"
     },
-    "Clippings/Bayesian Control for Coding Agents.md": {
+    "Bayesian Control for Coding Agents.md": {
       "hash": "ef645b901303291c15410342c4de732b",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21712,15 +21781,16 @@
         "03-RESOURCES/sources/bayesian-control-for-coding-agents.md"
       ]
     },
-    "Clippings/Bayesian Control for Coding Agents": {
+    "Bayesian Control for Coding Agents": {
       "hash": "ef645b901303291c15410342c4de732b",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/bayesian-control-for-coding-agents.md"
-      ]
+      ],
+      "alias_of": "Bayesian Control for Coding Agents.md"
     },
-    "Clippings/CompressKV Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference.md": {
+    "CompressKV Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference.md": {
       "hash": "6407abea26bfc2eee89de5f855e82ae0",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21728,15 +21798,16 @@
         "03-RESOURCES/sources/compresskv-semantic-retrieval-guided-kv-cache-compression-for-resource-efficient-long-context-llm-inference.md"
       ]
     },
-    "Clippings/CompressKV Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference": {
+    "CompressKV Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference": {
       "hash": "6407abea26bfc2eee89de5f855e82ae0",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/compresskv-semantic-retrieval-guided-kv-cache-compression-for-resource-efficient-long-context-llm-inference.md"
-      ]
+      ],
+      "alias_of": "CompressKV Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference.md"
     },
-    "Clippings/Data Recipes for Agentic Models.md": {
+    "Data Recipes for Agentic Models.md": {
       "hash": "d03fb7e727bab98825403042c9a120b1",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21744,15 +21815,16 @@
         "03-RESOURCES/sources/data-recipes-for-agentic-models.md"
       ]
     },
-    "Clippings/Data Recipes for Agentic Models": {
+    "Data Recipes for Agentic Models": {
       "hash": "d03fb7e727bab98825403042c9a120b1",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/data-recipes-for-agentic-models.md"
-      ]
+      ],
+      "alias_of": "Data Recipes for Agentic Models.md"
     },
-    "Clippings/Grading the Grader Lessons from Evaluating an Agentic Data Analysis SystemCode and data available at GitHub httpsgithub.comTZstats-ColumbiaSTAI-X-Grade-The-Grader..md": {
+    "Grading the Grader Lessons from Evaluating an Agentic Data Analysis SystemCode and data available at GitHub httpsgithub.comTZstats-ColumbiaSTAI-X-Grade-The-Grader..md": {
       "hash": "f927084993d64ef08ee43c4895e7a9c2",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21760,15 +21832,25 @@
         "03-RESOURCES/sources/grading-the-grader-lessons-from-evaluating-an-agentic-data-analysis-systemcode-and-data-available-at-github-httpsgithub-comtzstats-columbiastai-x-grade-the-grader.md"
       ]
     },
-    "Clippings/Grading the Grader Lessons from Evaluating an Agentic Data Analysis SystemCode and data available at GitHub httpsgithub.comTZstats-ColumbiaSTAI-X-Grade-The-Grader.": {
+    "Grading the Grader Lessons from Evaluating an Agentic Data Analysis SystemCode and data available at GitHub httpsgithub.comTZstats-ColumbiaSTAI-X-Grade-The-Grader.": {
       "hash": "f927084993d64ef08ee43c4895e7a9c2",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/grading-the-grader-lessons-from-evaluating-an-agentic-data-analysis-systemcode-and-data-available-at-github-httpsgithub-comtzstats-columbiastai-x-grade-the-grader.md"
-      ]
+      ],
+      "alias_of": "Grading the Grader Lessons from Evaluating an Agentic Data Analysis SystemCode and data available at GitHub httpsgithub.comTZstats-ColumbiaSTAI-X-Grade-The-Grader..md"
     },
-    "Clippings/How to Build a Business Intelligence System With Hermes and Claude That Learns Your Industry..md": {
+    "Grading the Grader Lessons from Evaluating an Agentic Data Analysis SystemCode and data available at GitHub httpsgithub.comTZstats-ColumbiaSTAI-X-Grade-The-Grader": {
+      "hash": "f927084993d64ef08ee43c4895e7a9c2",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/grading-the-grader-lessons-from-evaluating-an-agentic-data-analysis-systemcode-and-data-available-at-github-httpsgithub-comtzstats-columbiastai-x-grade-the-grader.md"
+      ],
+      "alias_of": "Grading the Grader Lessons from Evaluating an Agentic Data Analysis SystemCode and data available at GitHub httpsgithub.comTZstats-ColumbiaSTAI-X-Grade-The-Grader."
+    },
+    "How to Build a Business Intelligence System With Hermes and Claude That Learns Your Industry..md": {
       "hash": "9fc8fc590134f3a10a0dd559bcec9eec",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21776,15 +21858,25 @@
         "03-RESOURCES/sources/how-to-build-a-business-intelligence-system-with-hermes-and-claude-that-learns-your-industry.md"
       ]
     },
-    "Clippings/How to Build a Business Intelligence System With Hermes and Claude That Learns Your Industry.": {
+    "How to Build a Business Intelligence System With Hermes and Claude That Learns Your Industry.": {
       "hash": "9fc8fc590134f3a10a0dd559bcec9eec",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/how-to-build-a-business-intelligence-system-with-hermes-and-claude-that-learns-your-industry.md"
-      ]
+      ],
+      "alias_of": "How to Build a Business Intelligence System With Hermes and Claude That Learns Your Industry..md"
     },
-    "Clippings/How to Build a Claude Code Agent That Learns From Each Loop (Exact Setup Inside).md": {
+    "How to Build a Business Intelligence System With Hermes and Claude That Learns Your Industry": {
+      "hash": "9fc8fc590134f3a10a0dd559bcec9eec",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/how-to-build-a-business-intelligence-system-with-hermes-and-claude-that-learns-your-industry.md"
+      ],
+      "alias_of": "How to Build a Business Intelligence System With Hermes and Claude That Learns Your Industry."
+    },
+    "How to Build a Claude Code Agent That Learns From Each Loop (Exact Setup Inside).md": {
       "hash": "ef5c63cf0993c539823dbb6e4a31c40b",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21792,15 +21884,16 @@
         "03-RESOURCES/sources/how-to-build-a-claude-code-agent-that-learns-from-each-loop-exact-setup-inside.md"
       ]
     },
-    "Clippings/How to Build a Claude Code Agent That Learns From Each Loop (Exact Setup Inside)": {
+    "How to Build a Claude Code Agent That Learns From Each Loop (Exact Setup Inside)": {
       "hash": "ef5c63cf0993c539823dbb6e4a31c40b",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/how-to-build-a-claude-code-agent-that-learns-from-each-loop-exact-setup-inside.md"
-      ]
+      ],
+      "alias_of": "How to Build a Claude Code Agent That Learns From Each Loop (Exact Setup Inside).md"
     },
-    "Clippings/Reinforcement Learning for Computer-Use Agents with Autonomous EvaluationAccepted to the 4th International Workshop on Generalizing from Limited Resources in the Open World (GLOW @ IJCAI 2026) httpsglow-ijcai-2026.github.ioglow-ijcai-2026..md": {
+    "Reinforcement Learning for Computer-Use Agents with Autonomous EvaluationAccepted to the 4th International Workshop on Generalizing from Limited Resources in the Open World (GLOW @ IJCAI 2026) httpsglow-ijcai-2026.github.ioglow-ijcai-2026..md": {
       "hash": "84856f75f93f61a5a8253e98f1e8f1d6",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21808,15 +21901,25 @@
         "03-RESOURCES/sources/reinforcement-learning-for-computer-use-agents-with-autonomous-evaluationaccepted-to-the-4th-international-workshop-on-generalizing-from-limited-resources-in-the-open-world-glow-ijcai-2026-httpsglow-ijcai-2026-github-ioglow-ijcai-2026.md"
       ]
     },
-    "Clippings/Reinforcement Learning for Computer-Use Agents with Autonomous EvaluationAccepted to the 4th International Workshop on Generalizing from Limited Resources in the Open World (GLOW @ IJCAI 2026) httpsglow-ijcai-2026.github.ioglow-ijcai-2026.": {
+    "Reinforcement Learning for Computer-Use Agents with Autonomous EvaluationAccepted to the 4th International Workshop on Generalizing from Limited Resources in the Open World (GLOW @ IJCAI 2026) httpsglow-ijcai-2026.github.ioglow-ijcai-2026.": {
       "hash": "84856f75f93f61a5a8253e98f1e8f1d6",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/reinforcement-learning-for-computer-use-agents-with-autonomous-evaluationaccepted-to-the-4th-international-workshop-on-generalizing-from-limited-resources-in-the-open-world-glow-ijcai-2026-httpsglow-ijcai-2026-github-ioglow-ijcai-2026.md"
-      ]
+      ],
+      "alias_of": "Reinforcement Learning for Computer-Use Agents with Autonomous EvaluationAccepted to the 4th International Workshop on Generalizing from Limited Resources in the Open World (GLOW @ IJCAI 2026) httpsglow-ijcai-2026.github.ioglow-ijcai-2026..md"
     },
-    "Clippings/The Latent Bridge A Continuous Slow–Fast Channel for Real-Time Game Agents.md": {
+    "Reinforcement Learning for Computer-Use Agents with Autonomous EvaluationAccepted to the 4th International Workshop on Generalizing from Limited Resources in the Open World (GLOW @ IJCAI 2026) httpsglow-ijcai-2026.github.ioglow-ijcai-2026": {
+      "hash": "84856f75f93f61a5a8253e98f1e8f1d6",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/reinforcement-learning-for-computer-use-agents-with-autonomous-evaluationaccepted-to-the-4th-international-workshop-on-generalizing-from-limited-resources-in-the-open-world-glow-ijcai-2026-httpsglow-ijcai-2026-github-ioglow-ijcai-2026.md"
+      ],
+      "alias_of": "Reinforcement Learning for Computer-Use Agents with Autonomous EvaluationAccepted to the 4th International Workshop on Generalizing from Limited Resources in the Open World (GLOW @ IJCAI 2026) httpsglow-ijcai-2026.github.ioglow-ijcai-2026."
+    },
+    "The Latent Bridge A Continuous Slow–Fast Channel for Real-Time Game Agents.md": {
       "hash": "3d56aa00b1f6f2b670a992ba2678bb15",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21824,15 +21927,16 @@
         "03-RESOURCES/sources/the-latent-bridge-a-continuous-slow-fast-channel-for-real-time-game-agents.md"
       ]
     },
-    "Clippings/The Latent Bridge A Continuous Slow–Fast Channel for Real-Time Game Agents": {
+    "The Latent Bridge A Continuous Slow–Fast Channel for Real-Time Game Agents": {
       "hash": "3d56aa00b1f6f2b670a992ba2678bb15",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/the-latent-bridge-a-continuous-slow-fast-channel-for-real-time-game-agents.md"
-      ]
+      ],
+      "alias_of": "The Latent Bridge A Continuous Slow–Fast Channel for Real-Time Game Agents.md"
     },
-    "Clippings/We are now factory engineers, not product engineers.md": {
+    "We are now factory engineers, not product engineers.md": {
       "hash": "8562e92e78990e4aaa199dc5543f8889",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21840,15 +21944,16 @@
         "03-RESOURCES/sources/we-are-now-factory-engineers-not-product-engineers.md"
       ]
     },
-    "Clippings/We are now factory engineers, not product engineers": {
+    "We are now factory engineers, not product engineers": {
       "hash": "8562e92e78990e4aaa199dc5543f8889",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/we-are-now-factory-engineers-not-product-engineers.md"
-      ]
+      ],
+      "alias_of": "We are now factory engineers, not product engineers.md"
     },
-    "Clippings/World Models in Pieces Structural Certification for General Agents.md": {
+    "World Models in Pieces Structural Certification for General Agents.md": {
       "hash": "4605777e6d8aa882975d6ae126ffae4d",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21856,15 +21961,16 @@
         "03-RESOURCES/sources/world-models-in-pieces-structural-certification-for-general-agents.md"
       ]
     },
-    "Clippings/World Models in Pieces Structural Certification for General Agents": {
+    "World Models in Pieces Structural Certification for General Agents": {
       "hash": "4605777e6d8aa882975d6ae126ffae4d",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/world-models-in-pieces-structural-certification-for-general-agents.md"
-      ]
+      ],
+      "alias_of": "World Models in Pieces Structural Certification for General Agents.md"
     },
-    "Clippings/你以为在买搜索引擎，实际在买一个专家团.md": {
+    "你以为在买搜索引擎，实际在买一个专家团.md": {
       "hash": "88a0120709a4e572e40e917e937fb2f4",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21872,15 +21978,16 @@
         "03-RESOURCES/sources/ni-yi-wei-zai-mai-sou-suo-yin-qing-shi-ji-zai-mai-yi-ge-zhuan-jia-tuan.md"
       ]
     },
-    "Clippings/你以为在买搜索引擎，实际在买一个专家团": {
+    "你以为在买搜索引擎，实际在买一个专家团": {
       "hash": "88a0120709a4e572e40e917e937fb2f4",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/ni-yi-wei-zai-mai-sou-suo-yin-qing-shi-ji-zai-mai-yi-ge-zhuan-jia-tuan.md"
-      ]
+      ],
+      "alias_of": "你以为在买搜索引擎，实际在买一个专家团.md"
     },
-    "Clippings/Accelerating migration assessments and planning with AWS Transform.md": {
+    "Accelerating migration assessments and planning with AWS Transform.md": {
       "hash": "22effe5a05103befa506d2fe547f0dda",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21888,15 +21995,16 @@
         "03-RESOURCES/sources/accelerating-migration-assessments-and-planning-with-aws-transform.md"
       ]
     },
-    "Clippings/Accelerating migration assessments and planning with AWS Transform": {
+    "Accelerating migration assessments and planning with AWS Transform": {
       "hash": "22effe5a05103befa506d2fe547f0dda",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/accelerating-migration-assessments-and-planning-with-aws-transform.md"
-      ]
+      ],
+      "alias_of": "Accelerating migration assessments and planning with AWS Transform.md"
     },
-    "Clippings/Apache Iceberg 1.11 Features REST Catalog & Encryption.md": {
+    "Apache Iceberg 1.11 Features REST Catalog & Encryption.md": {
       "hash": "2d2de0c59ac1dfc5e3561f08b284a93d",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21904,15 +22012,25 @@
         "03-RESOURCES/sources/apache-iceberg-1-11-features-rest-catalog-encryption.md"
       ]
     },
-    "Clippings/Apache Iceberg 1.11 Features REST Catalog & Encryption": {
+    "Apache Iceberg 1.11 Features REST Catalog & Encryption": {
       "hash": "2d2de0c59ac1dfc5e3561f08b284a93d",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/apache-iceberg-1-11-features-rest-catalog-encryption.md"
-      ]
+      ],
+      "alias_of": "Apache Iceberg 1.11 Features REST Catalog & Encryption.md"
     },
-    "Clippings/Connect a Warehouse.md": {
+    "Apache Iceberg 1": {
+      "hash": "2d2de0c59ac1dfc5e3561f08b284a93d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/apache-iceberg-1-11-features-rest-catalog-encryption.md"
+      ],
+      "alias_of": "Apache Iceberg 1.11 Features REST Catalog & Encryption"
+    },
+    "Connect a Warehouse.md": {
       "hash": "4aea8fc92497cd85f3eddd6150127c14",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
@@ -21920,15 +22038,16 @@
         "03-RESOURCES/sources/connect-a-warehouse.md"
       ]
     },
-    "Clippings/Connect a Warehouse": {
+    "Connect a Warehouse": {
       "hash": "4aea8fc92497cd85f3eddd6150127c14",
       "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
         "03-RESOURCES/sources/connect-a-warehouse.md"
-      ]
+      ],
+      "alias_of": "Connect a Warehouse.md"
     },
-    "Clippings/Modernizing Lambda + S3 workloads with Amazon S3 Files.md": {
+    "Modernizing Lambda + S3 workloads with Amazon S3 Files.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -21938,7 +22057,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Modernizing Lambda + S3 workloads with Amazon S3 Files": {
+    "Modernizing Lambda + S3 workloads with Amazon S3 Files": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -21946,9 +22065,10 @@
       "pages_created": [
         "03-RESOURCES/sources/modernizing-lambda-s3-workloads-with-amazon-s3-files.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Modernizing Lambda + S3 workloads with Amazon S3 Files.md"
     },
-    "Clippings/Overview 1.md": {
+    "Overview 1.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -21958,7 +22078,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Overview 1": {
+    "Overview 1": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -21966,9 +22086,10 @@
       "pages_created": [
         "03-RESOURCES/sources/overview-1.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Overview 1.md"
     },
-    "Clippings/Query Sample Data.md": {
+    "Query Sample Data.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -21978,7 +22099,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Query Sample Data": {
+    "Query Sample Data": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -21986,9 +22107,10 @@
       "pages_created": [
         "03-RESOURCES/sources/query-sample-data.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Query Sample Data.md"
     },
-    "Clippings/Snowflake AIM Migration Agent Automating Enterprise Migrations.md": {
+    "Snowflake AIM Migration Agent Automating Enterprise Migrations.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -21998,7 +22120,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Snowflake AIM Migration Agent Automating Enterprise Migrations": {
+    "Snowflake AIM Migration Agent Automating Enterprise Migrations": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22006,9 +22128,10 @@
       "pages_created": [
         "03-RESOURCES/sources/snowflake-aim-migration-agent-automating-enterprise-migrations.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Snowflake AIM Migration Agent Automating Enterprise Migrations.md"
     },
-    "Clippings/The Agent Is Not the Product.md": {
+    "The Agent Is Not the Product.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22018,7 +22141,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/The Agent Is Not the Product": {
+    "The Agent Is Not the Product": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22026,9 +22149,10 @@
       "pages_created": [
         "03-RESOURCES/sources/the-agent-is-not-the-product.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "The Agent Is Not the Product.md"
     },
-    "Clippings/Unlocking the Cloudflare app ecosystem with OAuth for all.md": {
+    "Unlocking the Cloudflare app ecosystem with OAuth for all.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22038,7 +22162,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Unlocking the Cloudflare app ecosystem with OAuth for all": {
+    "Unlocking the Cloudflare app ecosystem with OAuth for all": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22046,9 +22170,10 @@
       "pages_created": [
         "03-RESOURCES/sources/unlocking-the-cloudflare-app-ecosystem-with-oauth-for-all.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Unlocking the Cloudflare app ecosystem with OAuth for all.md"
     },
-    "Clippings/AI-powered BI with Snowflake and Amazon Quick.md": {
+    "AI-powered BI with Snowflake and Amazon Quick.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22058,7 +22183,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/AI-powered BI with Snowflake and Amazon Quick": {
+    "AI-powered BI with Snowflake and Amazon Quick": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22066,9 +22191,10 @@
       "pages_created": [
         "03-RESOURCES/sources/ai-powered-bi-with-snowflake-and-amazon-quick.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "AI-powered BI with Snowflake and Amazon Quick.md"
     },
-    "Clippings/Automating cross-account refresh for Amazon RDS Multi-AZ DB clusters.md": {
+    "Automating cross-account refresh for Amazon RDS Multi-AZ DB clusters.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22078,7 +22204,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Automating cross-account refresh for Amazon RDS Multi-AZ DB clusters": {
+    "Automating cross-account refresh for Amazon RDS Multi-AZ DB clusters": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22086,9 +22212,10 @@
       "pages_created": [
         "03-RESOURCES/sources/automating-cross-account-refresh-for-amazon-rds-multi-az-db-clusters.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Automating cross-account refresh for Amazon RDS Multi-AZ DB clusters.md"
     },
-    "Clippings/Bringing Polygres to San Francisco..md": {
+    "Bringing Polygres to San Francisco..md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22098,7 +22225,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Bringing Polygres to San Francisco.": {
+    "Bringing Polygres to San Francisco.": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22106,9 +22233,21 @@
       "pages_created": [
         "03-RESOURCES/sources/bringing-polygres-to-san-francisco.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Bringing Polygres to San Francisco..md"
     },
-    "Clippings/Build a Spring Boot REST API with Amazon Aurora DSQL.md": {
+    "Bringing Polygres to San Francisco": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/bringing-polygres-to-san-francisco.md"
+      ],
+      "pages_updated": [],
+      "alias_of": "Bringing Polygres to San Francisco."
+    },
+    "Build a Spring Boot REST API with Amazon Aurora DSQL.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22118,7 +22257,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Build a Spring Boot REST API with Amazon Aurora DSQL": {
+    "Build a Spring Boot REST API with Amazon Aurora DSQL": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22126,9 +22265,10 @@
       "pages_created": [
         "03-RESOURCES/sources/build-a-spring-boot-rest-api-with-amazon-aurora-dsql.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Build a Spring Boot REST API with Amazon Aurora DSQL.md"
     },
-    "Clippings/Building beautiful web apps with GLM 5.2 fast, cheap, and polished.md": {
+    "Building beautiful web apps with GLM 5.2 fast, cheap, and polished.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22138,7 +22278,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Building beautiful web apps with GLM 5.2 fast, cheap, and polished": {
+    "Building beautiful web apps with GLM 5.2 fast, cheap, and polished": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22146,9 +22286,21 @@
       "pages_created": [
         "03-RESOURCES/sources/building-beautiful-web-apps-with-glm-5-2-fast-cheap-and-polished.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Building beautiful web apps with GLM 5.2 fast, cheap, and polished.md"
     },
-    "Clippings/Cultural Awareness in Global AI.md": {
+    "Building beautiful web apps with GLM 5": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/building-beautiful-web-apps-with-glm-5-2-fast-cheap-and-polished.md"
+      ],
+      "pages_updated": [],
+      "alias_of": "Building beautiful web apps with GLM 5.2 fast, cheap, and polished"
+    },
+    "Cultural Awareness in Global AI.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22158,7 +22310,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Cultural Awareness in Global AI": {
+    "Cultural Awareness in Global AI": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22166,9 +22318,10 @@
       "pages_created": [
         "03-RESOURCES/sources/cultural-awareness-in-global-ai.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Cultural Awareness in Global AI.md"
     },
-    "Clippings/Guard the Spend.md": {
+    "Guard the Spend.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22178,7 +22331,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Guard the Spend": {
+    "Guard the Spend": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22186,9 +22339,10 @@
       "pages_created": [
         "03-RESOURCES/sources/guard-the-spend.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Guard the Spend.md"
     },
-    "Clippings/Here's how 196 YC P26 startups sell the same thing.md": {
+    "Here's how 196 YC P26 startups sell the same thing.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22198,7 +22352,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Here's how 196 YC P26 startups sell the same thing": {
+    "Here's how 196 YC P26 startups sell the same thing": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22206,9 +22360,10 @@
       "pages_created": [
         "03-RESOURCES/sources/here-s-how-196-yc-p26-startups-sell-the-same-thing.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Here's how 196 YC P26 startups sell the same thing.md"
     },
-    "Clippings/Remember Definitions.md": {
+    "Remember Definitions.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22218,7 +22373,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Remember Definitions": {
+    "Remember Definitions": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22226,9 +22381,10 @@
       "pages_created": [
         "03-RESOURCES/sources/remember-definitions.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Remember Definitions.md"
     },
-    "Clippings/Run Analysis.md": {
+    "Run Analysis.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22238,7 +22394,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Run Analysis": {
+    "Run Analysis": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22246,9 +22402,10 @@
       "pages_created": [
         "03-RESOURCES/sources/run-analysis.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Run Analysis.md"
     },
-    "Clippings/Team Playbooks.md": {
+    "Team Playbooks.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22258,7 +22415,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Team Playbooks": {
+    "Team Playbooks": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22266,9 +22423,10 @@
       "pages_created": [
         "03-RESOURCES/sources/team-playbooks.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Team Playbooks.md"
     },
-    "Clippings/TypeScript SDK Overview.md": {
+    "TypeScript SDK Overview.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22278,7 +22436,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/TypeScript SDK Overview": {
+    "TypeScript SDK Overview": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22286,9 +22444,10 @@
       "pages_created": [
         "03-RESOURCES/sources/typescript-sdk-overview.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "TypeScript SDK Overview.md"
     },
-    "Clippings/how to build a 100M+ warm lead database with an ai coding agent.md": {
+    "how to build a 100M+ warm lead database with an ai coding agent.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22298,7 +22457,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/how to build a 100M+ warm lead database with an ai coding agent": {
+    "how to build a 100M+ warm lead database with an ai coding agent": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22306,9 +22465,10 @@
       "pages_created": [
         "03-RESOURCES/sources/how-to-build-a-100m-warm-lead-database-with-an-ai-coding-agent.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "how to build a 100M+ warm lead database with an ai coding agent.md"
     },
-    "Clippings/最大規模のオープン基盤モデルを各国仕様へ適応させる事後学習技術を開発.md": {
+    "最大規模のオープン基盤モデルを各国仕様へ適応させる事後学習技術を開発.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22318,7 +22478,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/最大規模のオープン基盤モデルを各国仕様へ適応させる事後学習技術を開発": {
+    "最大規模のオープン基盤モデルを各国仕様へ適応させる事後学習技術を開発": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22326,9 +22486,10 @@
       "pages_created": [
         "03-RESOURCES/sources/sakana-namazu-cultural-adaptation.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "最大規模のオープン基盤モデルを各国仕様へ適応させる事後学習技術を開発.md"
     },
-    "Clippings/How It Runs.md": {
+    "How It Runs.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22338,7 +22499,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/How It Runs": {
+    "How It Runs": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22346,9 +22507,10 @@
       "pages_created": [
         "03-RESOURCES/sources/how-it-runs.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "How It Runs.md"
     },
-    "Clippings/Nuxt.md": {
+    "Nuxt.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22358,7 +22520,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Nuxt": {
+    "Nuxt": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22366,9 +22528,10 @@
       "pages_created": [
         "03-RESOURCES/sources/nuxt.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Nuxt.md"
     },
-    "Clippings/SvelteKit.md": {
+    "SvelteKit.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22378,7 +22541,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/SvelteKit": {
+    "SvelteKit": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "ai-agents",
@@ -22386,9 +22549,10 @@
       "pages_created": [
         "03-RESOURCES/sources/sveltekit.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "SvelteKit.md"
     },
-    "Clippings/Cost-Optimal Decision Diagrams for Stochastic Boolean Function Evaluation.md": {
+    "Cost-Optimal Decision Diagrams for Stochastic Boolean Function Evaluation.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22398,7 +22562,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Cost-Optimal Decision Diagrams for Stochastic Boolean Function Evaluation": {
+    "Cost-Optimal Decision Diagrams for Stochastic Boolean Function Evaluation": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22406,9 +22570,10 @@
       "pages_created": [
         "03-RESOURCES/sources/cost-optimal-decision-diagrams-for-stochastic-boolean-function-evaluation.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Cost-Optimal Decision Diagrams for Stochastic Boolean Function Evaluation.md"
     },
-    "Clippings/How the University of São Paulo is transforming how researchers access greenhouse gas data for the Amazon rainforest with AWS.md": {
+    "How the University of São Paulo is transforming how researchers access greenhouse gas data for the Amazon rainforest with AWS.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22418,7 +22583,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/How the University of São Paulo is transforming how researchers access greenhouse gas data for the Amazon rainforest with AWS": {
+    "How the University of São Paulo is transforming how researchers access greenhouse gas data for the Amazon rainforest with AWS": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22426,9 +22591,10 @@
       "pages_created": [
         "03-RESOURCES/sources/how-the-university-of-s-o-paulo-is-transforming-how-researchers-access-greenhouse-gas-data-for-the-amazon-rainforest-with-aws.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "How the University of São Paulo is transforming how researchers access greenhouse gas data for the Amazon rainforest with AWS.md"
     },
-    "Clippings/Accelerating BEV Pooling on NVIDIA GPUs for Physical AI Applications.md": {
+    "Accelerating BEV Pooling on NVIDIA GPUs for Physical AI Applications.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22438,7 +22604,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Accelerating BEV Pooling on NVIDIA GPUs for Physical AI Applications": {
+    "Accelerating BEV Pooling on NVIDIA GPUs for Physical AI Applications": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22446,9 +22612,10 @@
       "pages_created": [
         "03-RESOURCES/sources/accelerating-bev-pooling-on-nvidia-gpus-for-physical-ai-applications.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Accelerating BEV Pooling on NVIDIA GPUs for Physical AI Applications.md"
     },
-    "Clippings/Can virtual cell models beat a line of code?.md": {
+    "Can virtual cell models beat a line of code?.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22458,7 +22625,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Can virtual cell models beat a line of code?": {
+    "Can virtual cell models beat a line of code?": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22466,9 +22633,10 @@
       "pages_created": [
         "03-RESOURCES/sources/can-virtual-cell-models-beat-a-line-of-code.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Can virtual cell models beat a line of code?.md"
     },
-    "Clippings/Obsidian Is Not a Note-Taking App. Here Is What It Actually Is..md": {
+    "Obsidian Is Not a Note-Taking App. Here Is What It Actually Is..md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22478,7 +22646,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Obsidian Is Not a Note-Taking App. Here Is What It Actually Is.": {
+    "Obsidian Is Not a Note-Taking App. Here Is What It Actually Is.": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22486,9 +22654,21 @@
       "pages_created": [
         "03-RESOURCES/sources/obsidian-is-not-a-note-taking-app-here-is-what-it-actually-is.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Obsidian Is Not a Note-Taking App. Here Is What It Actually Is..md"
     },
-    "Clippings/外注費ゼロでスライド量産の方法を公開.md": {
+    "Obsidian Is Not a Note-Taking App. Here Is What It Actually Is": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/obsidian-is-not-a-note-taking-app-here-is-what-it-actually-is.md"
+      ],
+      "pages_updated": [],
+      "alias_of": "Obsidian Is Not a Note-Taking App. Here Is What It Actually Is."
+    },
+    "外注費ゼロでスライド量産の方法を公開.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22498,7 +22678,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/外注費ゼロでスライド量産の方法を公開": {
+    "外注費ゼロでスライド量産の方法を公開": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22506,9 +22686,10 @@
       "pages_created": [
         "03-RESOURCES/sources/slide-mass-production-zero-outsourcing.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "外注費ゼロでスライド量産の方法を公開.md"
     },
-    "Clippings/Global SMS strategy for gaming Lessons from migrating 2FA across 100+ countries.md": {
+    "Global SMS strategy for gaming Lessons from migrating 2FA across 100+ countries.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22518,7 +22699,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Global SMS strategy for gaming Lessons from migrating 2FA across 100+ countries": {
+    "Global SMS strategy for gaming Lessons from migrating 2FA across 100+ countries": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22526,9 +22707,10 @@
       "pages_created": [
         "03-RESOURCES/sources/global-sms-strategy-for-gaming-lessons-from-migrating-2fa-across-100-countries.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Global SMS strategy for gaming Lessons from migrating 2FA across 100+ countries.md"
     },
-    "Clippings/Huntington Bank Redacting sensitive data from 400M+ documents with AWS.md": {
+    "Huntington Bank Redacting sensitive data from 400M+ documents with AWS.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22538,7 +22720,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Huntington Bank Redacting sensitive data from 400M+ documents with AWS": {
+    "Huntington Bank Redacting sensitive data from 400M+ documents with AWS": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22546,9 +22728,10 @@
       "pages_created": [
         "03-RESOURCES/sources/huntington-bank-redacting-sensitive-data-from-400m-documents-with-aws.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Huntington Bank Redacting sensitive data from 400M+ documents with AWS.md"
     },
-    "Clippings/Programmatic Savings Plans Management with AWS CLI and SDK.md": {
+    "Programmatic Savings Plans Management with AWS CLI and SDK.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22558,7 +22741,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Programmatic Savings Plans Management with AWS CLI and SDK": {
+    "Programmatic Savings Plans Management with AWS CLI and SDK": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22566,9 +22749,10 @@
       "pages_created": [
         "03-RESOURCES/sources/programmatic-savings-plans-management-with-aws-cli-and-sdk.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Programmatic Savings Plans Management with AWS CLI and SDK.md"
     },
-    "Clippings/Automated Schema Evolution in Pinterest’s Next-Generation DB Ingestion Framework.md": {
+    "Automated Schema Evolution in Pinterest’s Next-Generation DB Ingestion Framework.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22578,7 +22762,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Automated Schema Evolution in Pinterest’s Next-Generation DB Ingestion Framework": {
+    "Automated Schema Evolution in Pinterest’s Next-Generation DB Ingestion Framework": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22586,9 +22770,10 @@
       "pages_created": [
         "03-RESOURCES/sources/automated-schema-evolution-in-pinterest-s-next-generation-db-ingestion-framework.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Automated Schema Evolution in Pinterest’s Next-Generation DB Ingestion Framework.md"
     },
-    "Clippings/From Resilience to Innovation Ukraine’s Digital Transformation.md": {
+    "From Resilience to Innovation Ukraine’s Digital Transformation.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22598,7 +22783,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/From Resilience to Innovation Ukraine’s Digital Transformation": {
+    "From Resilience to Innovation Ukraine’s Digital Transformation": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22606,9 +22791,10 @@
       "pages_created": [
         "03-RESOURCES/sources/from-resilience-to-innovation-ukraine-s-digital-transformation.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "From Resilience to Innovation Ukraine’s Digital Transformation.md"
     },
-    "Clippings/Introducing AWS IoT Core’s Direct Messaging Lower-cost server-to-device communication with better observability.md": {
+    "Introducing AWS IoT Core’s Direct Messaging Lower-cost server-to-device communication with better observability.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22618,7 +22804,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Introducing AWS IoT Core’s Direct Messaging Lower-cost server-to-device communication with better observability": {
+    "Introducing AWS IoT Core’s Direct Messaging Lower-cost server-to-device communication with better observability": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22626,9 +22812,10 @@
       "pages_created": [
         "03-RESOURCES/sources/introducing-aws-iot-core-s-direct-messaging-lower-cost-server-to-device-communication-with-better-observability.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Introducing AWS IoT Core’s Direct Messaging Lower-cost server-to-device communication with better observability.md"
     },
-    "Clippings/Speed to Value Why Migrate-First Still Wins at Scale.md": {
+    "Speed to Value Why Migrate-First Still Wins at Scale.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22638,7 +22825,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Speed to Value Why Migrate-First Still Wins at Scale": {
+    "Speed to Value Why Migrate-First Still Wins at Scale": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22646,9 +22833,10 @@
       "pages_created": [
         "03-RESOURCES/sources/speed-to-value-why-migrate-first-still-wins-at-scale.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Speed to Value Why Migrate-First Still Wins at Scale.md"
     },
-    "Clippings/Cloudflare on X \"Self-Managed OAuth is now available to all developers on Cloudflare. Here's how we executed a zero-downtime migration of our core OAuth engine to make it happen. httpst.cotoDIp6nQj4\".md": {
+    "Cloudflare on X \"Self-Managed OAuth is now available to all developers on Cloudflare. Here's how we executed a zero-downtime migration of our core OAuth engine to make it happen. httpst.cotoDIp6nQj4\".md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22658,7 +22846,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Cloudflare on X \"Self-Managed OAuth is now available to all developers on Cloudflare. Here's how we executed a zero-downtime migration of our core OAuth engine to make it happen. httpst.cotoDIp6nQj4\"": {
+    "Cloudflare on X \"Self-Managed OAuth is now available to all developers on Cloudflare. Here's how we executed a zero-downtime migration of our core OAuth engine to make it happen. httpst.cotoDIp6nQj4\"": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22666,9 +22854,21 @@
       "pages_created": [
         "03-RESOURCES/sources/cloudflare-on-x-self-managed-oauth-is-now-available-to-all-developers-on-cloudflare-here-s-how-we-executed-a-zero-downtime-migration-of-our-core-oauth-engine-to-make-it-happen-httpst-cotodip6nqj4.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Cloudflare on X \"Self-Managed OAuth is now available to all developers on Cloudflare. Here's how we executed a zero-downtime migration of our core OAuth engine to make it happen. httpst.cotoDIp6nQj4\".md"
     },
-    "Clippings/Implement multi-tenant search with Amazon OpenSearch Serverless next generation.md": {
+    "Cloudflare on X \"Self-Managed OAuth is now available to all developers on Cloudflare. Here's how we executed a zero-downtime migration of our core OAuth engine to make it happen. httpst": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/cloudflare-on-x-self-managed-oauth-is-now-available-to-all-developers-on-cloudflare-here-s-how-we-executed-a-zero-downtime-migration-of-our-core-oauth-engine-to-make-it-happen-httpst-cotodip6nqj4.md"
+      ],
+      "pages_updated": [],
+      "alias_of": "Cloudflare on X \"Self-Managed OAuth is now available to all developers on Cloudflare. Here's how we executed a zero-downtime migration of our core OAuth engine to make it happen. httpst.cotoDIp6nQj4\""
+    },
+    "Implement multi-tenant search with Amazon OpenSearch Serverless next generation.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22678,7 +22878,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/Implement multi-tenant search with Amazon OpenSearch Serverless next generation": {
+    "Implement multi-tenant search with Amazon OpenSearch Serverless next generation": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "articles",
@@ -22686,9 +22886,10 @@
       "pages_created": [
         "03-RESOURCES/sources/implement-multi-tenant-search-with-amazon-opensearch-serverless-next-generation.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "Implement multi-tenant search with Amazon OpenSearch Serverless next generation.md"
     },
-    "Clippings/🤖 Who Holds AI's Off Switch?.md": {
+    "🤖 Who Holds AI's Off Switch?.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "fiap",
@@ -22698,7 +22899,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/🤖 Who Holds AI's Off Switch?": {
+    "🤖 Who Holds AI's Off Switch?": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "fiap",
@@ -22706,9 +22907,10 @@
       "pages_created": [
         "02-AREAS/fiap/sources/who-holds-ai-s-off-switch.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "🤖 Who Holds AI's Off Switch?.md"
     },
-    "Clippings/🧠 AI's Cost Crisis How Fintech Could Save Billions.md": {
+    "🧠 AI's Cost Crisis How Fintech Could Save Billions.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "fiap",
@@ -22718,7 +22920,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/🧠 AI's Cost Crisis How Fintech Could Save Billions": {
+    "🧠 AI's Cost Crisis How Fintech Could Save Billions": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "fiap",
@@ -22726,9 +22928,10 @@
       "pages_created": [
         "02-AREAS/fiap/sources/ai-s-cost-crisis-how-fintech-could-save-billions.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "🧠 AI's Cost Crisis How Fintech Could Save Billions.md"
     },
-    "Clippings/🧠 The Token Economy pt2 The Intelligence Company Gets Built.md": {
+    "🧠 The Token Economy pt2 The Intelligence Company Gets Built.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "fiap",
@@ -22738,7 +22941,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/🧠 The Token Economy pt2 The Intelligence Company Gets Built": {
+    "🧠 The Token Economy pt2 The Intelligence Company Gets Built": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "fiap",
@@ -22746,9 +22949,10 @@
       "pages_created": [
         "02-AREAS/fiap/sources/the-token-economy-pt2-the-intelligence-company-gets-built.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "🧠 The Token Economy pt2 The Intelligence Company Gets Built.md"
     },
-    "Clippings/🧠 How Commerce is Being Reinvented for Agentic AI.md": {
+    "🧠 How Commerce is Being Reinvented for Agentic AI.md": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "fiap",
@@ -22758,7 +22962,7 @@
       ],
       "pages_updated": []
     },
-    "Clippings/🧠 How Commerce is Being Reinvented for Agentic AI": {
+    "🧠 How Commerce is Being Reinvented for Agentic AI": {
       "ingested_at": "2026-06-24",
       "tool": "ingest-agent batch-3",
       "category": "fiap",
@@ -22766,7 +22970,8 @@
       "pages_created": [
         "02-AREAS/fiap/sources/how-commerce-is-being-reinvented-for-agentic-ai.md"
       ],
-      "pages_updated": []
+      "pages_updated": [],
+      "alias_of": "🧠 How Commerce is Being Reinvented for Agentic AI.md"
     },
     "17 prompts that make Hermes run while you sleep (copy-paste inside).md": {
       "hash": "3ba2f3347d09adecd8816b2088fb305a",

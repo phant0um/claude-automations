@@ -133,10 +133,21 @@ created: YYYY-MM-DD
 - Create [[concept-X]] — N sources converge
 - Consolidate [[source-A]] + [[source-B]]
 
-### 7. Link Repair (NEW — added 2026-06-23)
+### 7. Link Repair (added 2026-06-23)
 
 **Princípio**: conexões novas são valiosas mas links quebrados são dívida.
 Antes de sugerir novas conexões, reparar links quebrados existentes.
+
+**Script reutilizável**: `scripts/repair_links.py` — scan de source pages,
+basename matching contra filesystem, criação de stubs, verificação de
+resolução. Rodar após ingest batches para garantir 100% link resolution.
+
+```bash
+python3 scripts/repair_links.py
+# Output: /tmp/link_repair_summary.md com links reparados, stubs criados, % resolução
+```
+
+Para batches pequenos ou verificação inline, usar o snippet bash abaixo:
 
 ```bash
 # Scan all source pages for broken concept/entity links
@@ -217,6 +228,13 @@ Before finalizing report:
 
 ## Changelog
 
+- v2.3 (2026-06-23 run 2): +Step 7 Link Repair — scan source pages for broken
+  concept/entity wikilinks, basename match against filesystem, create stubs for
+  gaps. Reusable script: `scripts/repair_links.py`. Validated with 230 source
+  pages: 224/1215 broken (18%) → 1215/1215 resolved (100%) after repair + stub
+  creation. Pitfall: create stubs at the EXACT path the wikilink references, not
+  at the path the script thinks is "correct" — CATEGORY_MAP mismatch caused
+  stubs to be created in wrong subdirs.
 - v2.2 (2026-06-22): Added tese extraction snippet for top clusters — grep `## Tese central` from cluster sources to identify convergence/contradiction without reading every file. Validated with 276 recent sources: theme clustering identified loop-engineering (17 sources) as dominant pattern in seconds.
 - v2.1 (2026-06-22): Backported portability fixes from revisao-semanal v3/v7: `ingested:` frontmatter instead of `mtime -7` (mtime resets on git checkout/sync); `gshuf||shuf||sort -R` fallback (shuf absent on macOS). Added theme clustering shortcut for large recent-source sets. Added missing `description:` frontmatter.
 - v2.0 (2026-05-25): Formalized from archive B draft. Added quality gate, post-ingest trigger, confidence-based wikilink rules.

@@ -67,6 +67,24 @@ ingest script gerou paths que não existem no filesystem. O check C2 deve:
 3. Se >5% links quebrados → FAIL (não PASS com warning). Abortar batch e reparar.
 4. Reportar lista de links quebrados para reparo imediato
 
+**Pitfall (2026-06-24):** Spot-check com `os.path.isfile()` reportou "6/6 broken"
+mas verificação completa do batch com stem/basename matching mostrou 0 broken.
+Causa: wikilinks gerados com paths como `[[03-RESOURCES/concepts/agent-systems/agent]]`
+não existem como path exato, mas o arquivo `concepts/ai-agents/agent.md` existe
+e o Obsidian resolve por basename (não por path completo). O check C2 deve
+sempre fazer fallback por basename (stem lookup) antes de reportar "broken":
+```python
+# 1. Try exact path
+if os.path.isfile(f"{vault}/{link}.md"): continue
+# 2. Try basename fallback
+stem = link.rsplit('/', 1)[-1]
+for root, _, files in os.walk("03-RESOURCES/concepts/"):
+    if f"{stem}.md" in files: break  # resolves via Obsidian basename
+else:
+    broken.append(link)  # truly broken
+```
+Isto evita falsos positivos de "broken" que disparam repair desnecessário.
+
 **Implementation bash:**
 ```bash
 BROKEN=0
@@ -410,6 +428,16 @@ Verificar sempre com: `python3 -c "target = VAULT / f'{link}.md'; print(target.e
 
 ## Changelog
 
+- v1.7 (2026-06-24): +C2 basename fallback pitfall — spot-check com os.path.isfile()
+  reportou 6/6 broken mas batch completo com stem lookup mostrou 0 broken. Obsidian
+  resolve wikilinks por basename, não por path completo. C2 deve fazer fallback por
+  stem antes de reportar broken. Evita repair desnecessário.
+- v1.6 (2026-06-23 run 2): +Closed-loop requirement — after executing F3.3 vault
+  impact items from a relatório, the relatório MUST be updated to reflect new
+  status. Without this, the next reader sees stale "pendente" and may re-execute.
+  See vault-impact-execution pitfall #9. +Golden examples file reference —
+  04-SYSTEM/agents/nexus-agent-system/golden-examples-ingest.md has 2 annotated
+  examples + quality checklist for use as few-shot reference.
 - v1.5 (2026-06-23 run 2): +C10 Categoria correta check — detecta source pages
   em 02-AREAS/concurso/sources/ sem keywords de concurso (CESPE, CEBRASPE, etc.).
   74/230 miscategorizadas no pipeline-semanal 2026-06-23 run 2 por false positive

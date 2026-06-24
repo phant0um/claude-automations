@@ -65,3 +65,4 @@ Markdown limita a capacidade expressiva do modelo: força fallbacks como diagram
 
 ## Evidências
 - **[2026-06-19]** Tendência de output de agente migrando de Markdown para HTML interativo: skill /pr-walkthrough gera visualização D3 navegável (4 ângulos) de uma PR em vez de descrição estática — caso onde HTML rico se justifica mesmo no framework de 3 votos (público humano, uso pontual) — [[generate-interactive-pr-walkthroughs-with-a-single-skill]]
+- **[2026-06-24]** GLM 5.2 atinge #1 Design Arena em single-turn HTML generation — drum machine, menus, jogos a 8 cents por app — [[building-beautiful-web-apps-with-glm-5-2-fast-cheap-and-polished]]

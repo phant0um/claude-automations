@@ -56,3 +56,9 @@ In practice: network partitions happen → choose CP (banks, transactions) or AP
 
 - **[2026-06-24]** Most developers don't have a coding problem.They have a workflow problem.A lot of time gets wasted doing things that are — [[10-developer-tools-you-probably-aren-t-using-but-should-be]]
 - **[2026-06-24]** tags: — [[accuracy-and-satisfaction-in-multi-turn-llm-dialogues-for-nfr-assessment]]
+- **[2026-06-24]** Resource sharing via AWS RAM elimina re-registration para migração SMS global em 100+ países — [[global-sms-strategy-for-gaming-lessons-from-migrating-2fa-across-100-countries]]
+- **[2026-06-24]** Three-phase workflow (Planning → Execution → Monitoring) para Savings Plans programático via CLI/SDK escala melhor que console em multi-account — [[programmatic-savings-plans-management-with-aws-cli-and-sdk]]
+- **[2026-06-24]** Sequência Migrate → Optimize → Modernize respeita organizational capacity e compõe valor ao longo do tempo — [[speed-to-value-why-migrate-first-still-wins-at-scale]]
+- **[2026-06-24]** Ucrânia: 15PB+ dados governamentais na nuvem, multi-region DR como resposta a ameaça física — crise como catalisador de transformação digital — [[from-resilience-to-innovation-ukraine-s-digital-transformation]]
+- **[2026-06-24]** IoT Direct Messaging: point-to-point > Pub-Sub para one-to-one, device-level ACK e immediate offline feedback — [[introducing-aws-iot-core-s-direct-messaging-lower-cost-server-to-device-communication-with-better-observability]]
+- **[2026-06-24]** Pipeline serverless cross-account para RDS Multi-AZ: snapshot → instance intermediária → share → restore, EventBridge handoff — [[automating-cross-account-refresh-for-amazon-rds-multi-az-db-clusters]]

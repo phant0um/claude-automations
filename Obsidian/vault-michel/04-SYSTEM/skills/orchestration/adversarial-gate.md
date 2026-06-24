@@ -2,7 +2,7 @@
 name: adversarial-gate
 description: "Use when running long multi-task plans (>5 tasks, >30min) or implementing critical agents. Injects an adversarial subagent that validates each task before marking done — eliminates confirmation bias during execution."
 skill: adversarial-gate
-version: 1.1
+version: 1.2
 trigger: "@adversarial-gate [plano] or /adversarial-gate"
 model: claude-sonnet-4-6
 tags: [quality-gate, adversarial, planning, subagents, review, in-flight]
@@ -30,6 +30,7 @@ Ative quando:
 - Plano com tarefas sequencialmente dependentes (erro em T1 propaga para T5)
 - Implementação de agente crítico (guard, nexus, verify)
 - Usuário quer "meta runs" de alta qualidade
+- **Batch ingest >20 source pages** (pipeline-semanal) — modo batch, ver §Modo Batch Ingest abaixo
 
 NÃO ative para: tarefas únicas isoladas; runs < 3 tarefas; operações mecânicas sem julgamento (bash scripts, manifest updates).
 
@@ -112,6 +113,41 @@ Veredicto: PASS | BLOCK
 ```
 
 **Regra de bloqueio:** qualquer issue que afete a próxima tarefa dependente = BLOCK automático.
+
+---
+
+## Modo Batch Ingest (added 2026-06-23)
+
+Para batches de ingest >20 source pages no pipeline-semanal, o gate opera em
+modo batch (diferente do modo tarefa-a-tarefa padrão). Em vez de validar cada
+source page individualmente, valida o batch inteiro em 5 dimensões:
+
+### Dimensões
+
+1. **Link Integrity**: quantos wikilinks nas sample pages resolvem? >5% quebrados → FAIL
+2. **Categorização**: pages no diretório correto? (ai-agents → 03-RESOURCES/sources/,
+   concurso → 02-AREAS/concurso/sources/). >1 errada → FAIL
+3. **Placeholders**: Score A pages com "A ser analisado" em Minha Síntese? → FAIL
+4. **Concept Absorption**: concepts linkados têm seção ## Evidências? >50% sem → WARN
+5. **Tese Quality**: cada page tem ao menos 1 parágrafo capturando o argumento? <1 frase → WARN
+
+### Protocolo batch
+
+1. Coletar amostra: 3 pages aleatórias + 3 maior score + 3 menor score (9 total)
+2. Subagente isolado avalia as 5 dimensões
+3. Veredito: PASS | FAIL
+4. Se FAIL: executar repair (link repair script, recategorização, reflections reais)
+5. Re-rodar Fase 2. 3× FAIL consecutivo → escalar para usuário
+
+### Anti-padrões do batch (observados em 2026-06-23 run 2)
+
+| Padrão | Sintoma | Dimensão |
+|--------|---------|----------|
+| Wikilink path mismatch | 18% links quebrados | Link Integrity |
+| Concurso false-positive | 32% miscategorizados | Categorização |
+| Placeholder Minha Síntese | 100 "A ser analisado" | Placeholders |
+| F2.5 skipped | 0 concept absorptions | Concept Absorption |
+| Frontmatter bleeding | tese central = YAML | Tese Quality |
 
 ---
 

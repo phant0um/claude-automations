@@ -42,3 +42,6 @@ Desenvolvedores que sabem modernizar legacy são mais valiosos que os que só co
 
 ## Related
 - [[03-RESOURCES/concepts/dev-foundations/_index]]
+
+## Evidências
+- **[2026-06-24]** Migrate-First (lift-and-shift) vence em escala: 35-50% rehost, 20% replatform, 10% refactor — modernize-everything-at-once estalla — [[speed-to-value-why-migrate-first-still-wins-at-scale]]

@@ -47,8 +47,9 @@ find .raw/articles/ .raw/fiap/ .raw/ebooks/ .raw/images/ Clippings/ \
 norm() { python3 -c "import sys;d=sys.stdin.read();print(d.replace(''',chr(39)).replace(''',chr(39)).replace('"',chr(34)).replace('"',chr(34)),end='')"; }
 norm < .raw/.manifest.json > /tmp/manifest_norm.json
 
-# slug normalizado
-slug() { python3 -c "import sys,re;d=sys.stdin.read().strip();d=re.sub(r'[^a-z0-9]','-',d.lower());d=re.sub(r'-+','-',d).strip('-');print(d,end='')"; }
+# slug normalizado — usar arquivo externo ao invés de inline python3 -c (bash 3.x quoting bug)
+# Pitfall (2026-06-24): inline python3 -c com regex + parênteses quebra no macOS bash 3.x
+slug() { python3 04-SYSTEM/scripts/slug_fn.py; }
 
 while IFS= read -r f; do
   fn=$(echo "$f" | norm)
@@ -170,6 +171,10 @@ antes do domingo.
 
 ## Changelog
 
+- v2.1 (2026-06-24): fix slug() inline python3 -c quoting bug no macOS bash 3.x — extraído para
+  04-SYSTEM/scripts/slug_fn.py. Pitfall: inline python3 -c com regex + parênteses quebra
+  silenciosamente no bash 3.x (macOS). Resultado: slug vazio → grep -qF "" retorna true
+  para qualquer input → falsos negativos na dedup (3 arquivos perdidos em run 2026-06-24).
 - v2 (2026-06-19): + F1.0c cross-check do campo `source:` das source pages existentes —
   pega slug temático divergente que F1.0b (basename×manifest) deixava passar
   (errors 2026-06-10, 6 pares duplicados).

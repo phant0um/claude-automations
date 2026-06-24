@@ -161,7 +161,49 @@ Some subagents produce minimal source pages (19 lines for a 48K-char Clipping).
 for files > 10K chars are flagged for expansion. The orchestrator should
 re-read the original Clipping and expand the thin page with full content.
 
-### Post-subagent cleanup checklist
+### Deep Analysis Delegation — 2026-06-23 (Run 2)
+
+When the pipeline produces >100 source pages, the mechanical batch ingest
+creates pages but skips the analytical layers (F2.5 Concept Absorption, F2.9
+Personal Reflection, skill/agent/hook detection). Delegating deep analysis to
+3 parallel subagents worked well but has key learnings:
+
+**What worked:**
+- 3 batches of ~62 files each, 8min total (484s aggregate, parallel)
+- Each subagent: read source page → check wikilinks → append evidence to
+  existing concepts → write reflections for Score A → detect patterns
+- 222 evidence entries appended, 99 reflections written, 24 patterns detected
+
+**What failed:**
+- **Link path mismatch**: subagents found wikilinks pointing to non-existent
+  paths. Batch 1 resolved via basename matching (entity files happened to
+  match). Batch 2 found 0 matching concepts (0 absorptions). Batch 3 found
+  only 2 exact matches. This is a systematic issue — the batch_ingest script
+  generates links with paths that don't match vault structure.
+- **Inconsistent resolution strategies**: each subagent invented its own
+  approach to resolve broken links. Batch 1 did basename→entity matching.
+  Batch 2 reported them as "concepts to create" without absorbing. Batch 3
+  only checked exact path matches. This variance means quality is unpredictable.
+
+**Fix for future runs:**
+1. **Pre-delegation**: run link repair BEFORE deep analysis. Fix all broken
+   wikilinks so subagents don't waste time on path resolution.
+2. **Standardize instructions**: tell subagents explicitly: "For each wikilink,
+   check if the file exists at the exact path. If not, check by basename
+   across concepts/ and entities/ directories. If found, append evidence there."
+3. **Post-delegation cleanup**: after all subagents complete, run a parent-level
+   link resolution check + create missing stubs. This catches what subagents
+   missed.
+4. **Batch size**: 62 files per subagent is fine for deep analysis (reading +
+   writing), but each subagent took different time (139s vs 484s vs 198s).
+   The 484s one was slower due to more file reads. 50 files per batch is safer.
+
+**Key insight**: deep analysis subagents should NOT be responsible for link
+repair. They should absorb evidence into existing files and write reflections.
+Link repair + stub creation is a parent-level concern that should happen
+before (to maximize absorption) or after (to catch gaps) — not during.
+
+### Post-subagent cleanup checklist (updated 2026-06-23 run 2)
 
 After all ingest subagents complete (or timeout), the parent orchestrator MUST:
 
@@ -177,6 +219,15 @@ After all ingest subagents complete (or timeout), the parent orchestrator MUST:
    $MARKER -type f -exec wc -l {} \;` → flag pages < 30 lines
 6. **F2.8 spot-check:** read 3 random source pages — check tese central,
    link resolution, info preservation
+7. **Link repair (NEW):** run wikilink resolution check across all new source
+   pages. Repair broken links via basename matching. Create missing concept/
+   entity stubs at exact link paths. Target: 100% resolution.
+8. **Deep analysis delegation (NEW):** if >50 source pages, dispatch 3 parallel
+   subagents for F2.5 Concept Absorption + F2.9 Personal Reflection + pattern
+   detection. Run link repair BEFORE delegation for maximum absorption.
+9. **Reflection verification (NEW):** after subagents complete, verify that
+   placeholder "A ser analisado" text was replaced. `grep -r "A ser analisado"
+   03-RESOURCES/sources/ | wc -l` should be near 0.
 
 ---
 

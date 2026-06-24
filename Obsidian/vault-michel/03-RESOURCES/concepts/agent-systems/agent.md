@@ -54,5 +54,8 @@ A ser preenchido.
 
 - **[2026-06-24]** 所有人都在比谁的 Deep Research AI 找得更多、更快、更全。但 2026 年的 benchmark 数据告诉你一件令人意外的事：头部产品在“找信息”上已经几乎打平，真正把系统拉开的，是另一件事：谁能在推理过程中，不积累错误。一 — [[ni-yi-wei-zai-mai-sou-suo-yin-qing-shi-ji-zai-mai-yi-ge-zhuan-jia-tuan]]
 - [[03-RESOURCES/sources/snowflake-aim-migration-agent-automating-enterprise-migrations]] — Agent orchestration com engine determinístico + IA para enterprise migrations, knowledge propagation de fixes
+- **[2026-06-24]** eve Client encapsula session protocol entre frontend hooks (useEveAgent) e raw HTTP para integração programática — [[typescript-sdk-overview]]
+- **[2026-06-24]** SvelteKit + eve agent como projeto único com useEveAgent auto-discovering rotas montadas — [[sveltekit]]
+- **[2026-06-24]** Nuxt + eve agent como projeto único com auto-imported useEveAgent composable — [[nuxt]]
 
 ## Links
