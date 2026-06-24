@@ -100,13 +100,13 @@ IC3 paper: a maioria das plataformas de AI agents não tem evidência de trading
 
 | Item | Tipo | Prioridade | Esforço | Status |
 |------|------|-----------|---------|--------|
-| Atualizar [[03-RESOURCES/concepts/agent-systems/loop-engineering-patterns]] com 4+ novas sources (Foundry, OpenEnv, Pi LoopFlows) | Concept enrichment | alta | horas | pendente — 23+ sources acumuladas, criado `loop-engineering-maturity` complementar em 2026-06-23 run2 mas concept original ainda não atualizado |
-| `agent-oversight-layers` — novo concept unindo OpenSigil, IFC, MosaicLeaks | Concept creation | alta | horas | pendente — parcialmente coberto por `agent-runtime-security` criado em 2026-06-23 run2 (6 camadas de ameaça) |
-| `sparse-inference-optimization` — novo concept unindo TwELL, GGUF, MLX, diffusion-based | Concept creation | média | horas | pendente |
-| `bruno-api-tooling` — entity para Bruno (7 sources nesta run) | Entity creation | média | meia | pendente — existe `brunobertolini` (pessoa) mas não `bruno-api-tooling` (ferramenta) |
-| Auditar Hermes Skills por trigger quality — "How to Build a Claude Skill" recomenda checar descriptions vagas | Skill audit | média | dias | pendente |
-| `agent-benchmarking-frameworks` — concept unindo "is it agentic enough", Terminal Bench, LifeSciBench | Concept creation | baixa | horas | pendente |
-| Orphan rate 68% nos novos — acionar [[04-SYSTEM/skills/vault-michel/connection-finder]] | Connection repair | alta | dias | parcialmente done — link repair em 2026-06-23 run2 resolveu 1215/1215 wikilinks, mas backlinks incoming ainda ~90% |
+| Atualizar [[03-RESOURCES/concepts/agent-systems/loop-engineering-patterns]] com 4+ novas sources (Foundry, OpenEnv, Pi LoopFlows) | Concept enrichment | alta | horas | done — 12 new evidence entries appended em 2026-06-23 (Foundry, OpenEnv, judgment delegation, 6 estágios, RAC, Google PDF) |
+| `agent-oversight-layers` — novo concept unindo OpenSigil, IFC, MosaicLeaks | Concept creation | alta | horas | done — criado em agent-systems/agent-oversight-layers.md. Parcialmente sobreposto com agent-runtime-security |
+| `sparse-inference-optimization` — novo concept unindo TwELL, GGUF, MLX, diffusion-based | Concept creation | média | horas | done — criado em llm-ml-foundations/sparse-inference-optimization.md |
+| `bruno-api-tooling` — entity para Bruno (7 sources nesta run) | Entity creation | média | meia | done — criado em entities/Bruno-API.md |
+| Auditar Hermes Skills por trigger quality — "How to Build a Claude Skill" recomenda checar descriptions vagas | Skill audit | média | dias | done — audit em /tmp/skills-audit-results.md. 15/36 skills missing trigger field |
+| `agent-benchmarking-frameworks` — concept unindo "is it agentic enough", Terminal Bench, LifeSciBench | Concept creation | baixa | horas | done — criado em agent-systems/agent-benchmarking-frameworks.md |
+| Orphan rate 68% nos novos — acionar [[04-SYSTEM/skills/vault-michel/connection-finder]] | Connection repair | alta | dias | parcialmente done — link repair resolveu 1215/1215 wikilinks. F2.5 Evidências sections servem como backlinks. Backlinks report em /tmp/backlinks-results.md. Recommend: F3.7 contar Evidências como backlinks |
 
 ---
 

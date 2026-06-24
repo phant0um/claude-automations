@@ -122,16 +122,16 @@ Pipeline semanal executado em 2026-06-23. File evaporation massiva (237→39, 10
 
 | Item                                    | Prioridade | Status    | Action                                                                         |
 | --------------------------------------- | ---------- | --------- | ------------------------------------------------------------------------------ |
-| Criar concept `multi-model-fusion`      | alta       | pendente  | 2+ sources convergem (ai-next-era + glm-52) — existe `multi-model-orchestration` mas desatualizado (2026-04-24) — atualizar |
-| Criar concept `agent-memory-bottleneck` | alta       | pendente  | 3 sources (how-much-memory + engram + 30-min-agent) — HBM como novo bottleneck |
-| Criar concept `vibe-coding-security`    | média      | pendente  | 2 sources (vibe-coding-bomb + self-cleaning-codebase)                          |
-| Atualizar `loop-engineering-patterns`   | alta       | pendente  | 5 sources nesta run + 12 run 2026-06-22 + 6 run 2026-06-23 run2 = 23+ sources — concept precisa refletir maturidade. Criado `loop-engineering-maturity` complementar em 2026-06-23 run2 |
-| Criar entity `GLM-5.2`                  | alta       | pendente  | 3 sources referenciam — modelo frontier open-source                            |
-| Criar entity `DuckDB`                   | média      | pendente  | 1 source mas ferramenta relevante                                              |
-| Criar entity `Engram`                   | média      | pendente  | 1 source — memory architecture                                                 |
-| Criar entity `Nord Research`            | alta       | pendente  | 2 sources — fonte recorrente de análise BR                                     |
-| Atualizar `token-economy` concept       | média      | pendente  | 1 source nova (token-economy-technical-guide) — concept updated 2026-06-22 |
-| Criar concept `config-engineering`      | média      | pendente  | 3 sources (30-concepts + stop-claude-md + 30-skills)                           |
+| Criar concept `multi-model-fusion`      | alta       | done      | Criado em agent-systems/multi-model-fusion.md — atualizar multi-model-orchestration (legacy) |
+| Criar concept `agent-memory-bottleneck` | alta       | done      | Criado em agent-systems/agent-memory-bottleneck.md |
+| Criar concept `vibe-coding-security`    | média      | done      | Criado em agent-systems/vibe-coding-security.md |
+| Atualizar `loop-engineering-patterns`   | alta       | done      | 12 new evidence entries appended (run2 Foundry + run1 judgment delegation + run2 6 estágios) |
+| Criar entity `GLM-5.2`                  | alta       | done      | Criado em entities/GLM-5.2.md |
+| Criar entity `DuckDB`                   | média      | done      | Criado em entities/DuckDB.md |
+| Criar entity `Engram`                   | média      | done      | Criado em entities/Engram.md |
+| Criar entity `Nord Research`            | alta       | done      | Criado em entities/Nord-Research.md |
+| Atualizar `token-economy` concept       | média      | done      | 4 new evidence entries appended (token-economy-technical-guide + copilot + github workflows + marginal token allocators) |
+| Criar concept `config-engineering`      | média      | done      | Criado em agent-systems/config-engineering.md |
 
 ---
 

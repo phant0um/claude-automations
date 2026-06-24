@@ -68,8 +68,8 @@ Reforça [[03-RESOURCES/concepts/agent-systems/agent-security]].
 
 | Item | Impacto | Status | Action |
 |------|---------|--------|--------|
-| Concept "Loop Engineering" dedicado | alta | parcialmente done | 8 sources convergem — vault tem [[03-RESOURCES/concepts/agent-systems/loop-engineering-patterns]] (updated 2026-06-22) + `loop-engineering-maturity` criado em 2026-06-23 run2 com 6 estágios. Concept original ainda precisa update com 23+ sources acumuladas |
-| Golden examples para ingest-agent few-shot | alta | pendente | Criar 2-3 examples de Score A source pages — ainda não feito (carry-over desde 06-21) |
+| Concept "Loop Engineering" dedicado | alta | done | 8 sources convergem — vault tem [[03-RESOURCES/concepts/agent-systems/loop-engineering-patterns]] (updated 2026-06-23 com 12 new evidence entries) + `loop-engineering-maturity` criado em 2026-06-23 run2 com 6 estágios |
+| Golden examples para ingest-agent few-shot | alta | done | Criado em 04-SYSTEM/agents/nexus-agent-system/golden-examples-ingest.md — 2 exemplos anotados + checklist de qualidade |
 | Personal Reflection cap overage | média | done | Resolvido — patch aplicado no ingest-agent.md marcando F2.9 como obrigatório com 3 campos. C9 placeholder detection adicionado ao ingest-verify |
 | Triagem off-by-one (51→50) | baixa | done | Não recorreu no run 2026-06-23 run2 (230 aprovados, contagem correta) |
 | Manifest backfill (50 entries) | resolvido | done | `.raw/.manifest.json` corrigido — dual-key com/sem extensão, `alias_of` |
