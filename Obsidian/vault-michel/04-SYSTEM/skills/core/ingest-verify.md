@@ -2,11 +2,11 @@
 name: ingest-verify
 description: Valida completeness de source pages recém-ingestadas — frontmatter, wikilinks, manifest, tese central, seções, concept absorption (F2.5) e personal reflection (F2.9).
 skill: ingest-verify
-version: 1.1
+version: 1.5
 type: verification
 author: Nexus Agent System
 created: 2026-05-28
-updated: 2026-06-18
+updated: 2026-06-23
 trigger: "@ingest-verify [path] or post-pipeline gate or verify agent"
 tags: [verification, ingest, quality-gate, completeness, post-ingest]
 ---
@@ -142,6 +142,71 @@ fi
 
 **Veredicto:** OK / WARN / FAIL / SKIP. Só artigos/ai-agents (não FIAP).
 
+### C8 — Batch Link Integrity (pós-batch) `[bash]`
+
+**Princípio**: C2 verifica por arquivo. C8 verifica o batch inteiro. Links quebrados
+são visíveis no agregado, não por arquivo. Se >5% dos links do batch não resolvem,
+algo sistêmico está errado (ex: ingest script gerou paths inválidos).
+
+**Pitfall (2026-06-23 run 2):** 224/1215 links (18%) quebrados passaram pelo C2
+individual porque C2 só reporta WARN (não FAIL). C8 foi adicionado para catchar
+o problema no nível do batch.
+
+```bash
+# Rodar APÓS processar todos os arquivos do batch
+BROKEN=0
+TOTAL=0
+for f in $BATCH_SOURCES; do
+  links=$(grep -oE '\[\[03-RESOURCES/(concepts|entities)/[^\]]+\]\]' "$f" 2>/dev/null)
+  for link in $links; do
+    TOTAL=$((TOTAL+1))
+    path=$(echo "$link" | sed 's/\[\[//;s/\]\]//')
+    [[ -f "$VAULT/$path.md" || -f "$VAULT/$path" ]] || BROKEN=$((BROKEN+1))
+  done
+done
+if [[ $TOTAL -gt 0 ]]; then
+  PCT=$((BROKEN*100/TOTAL))
+  [[ $PCT -gt 5 ]] && echo "C8 FAIL: $BROKEN/$TOTAL links broken ($PCT%) — batch link integrity compromised" || echo "C8 OK: $BROKEN/$TOTAL broken ($PCT%)"
+else
+  echo "C8 SKIP: no concept/entity links in batch"
+fi
+```
+
+**Veredicto:** OK / FAIL. Se FAIL, abortar pipeline e reparar links antes do commit.
+
+### C9 — Placeholder Detection `[bash]`
+
+**Princípio**: F2.9 Personal Reflection deve ter conteúdo real, não placeholders.
+C7 verifica se a seção existe mas não detecta conteúdo placeholder como
+"A ser analisado em revisão manual" ou "A ser conectado com projetos".
+
+**Pitfall (2026-06-23 run 2):** 100 source pages com `## Minha Síntese` contendo
+apenas "A ser analisado em revisão manual" passaram pelo C7.
+
+```bash
+GRADE="${2:-}"
+if [[ "$GRADE" == "A" ]]; then
+  if grep -q "^## Minha Síntese" "$arquivo"; then
+    # Detectar placeholders
+    if grep -qE "(A ser analisado|A ser conectado|placeholder|TODO|TBD|Nenhum próximo passo imediato.*revisão)" "$arquivo" | grep -A5 "## Minha Síntese"; then
+      echo "C9 WARN: Minha Síntese contém placeholder"
+    fi
+    # Verificar se os 3 campos têm conteúdo real (não apenas label)
+    OQM=$(grep -A1 "^\*\*O que muda" "$arquivo" | tail -1 | wc -w)
+    CP=$(grep -A1 "^\*\*Conexão pessoal" "$arquivo" | tail -1 | wc -w)
+    PP=$(grep -A1 "^\*\*Próximo passo" "$arquivo" | tail -1 | wc -w)
+    [[ $OQM -lt 3 || $CP -lt 3 || $PP -lt 3 ]] && echo "C9 WARN: Minha Síntese campos curtos demais (OQM=$OQM CP=$CP PP=$PP)"
+    echo "C9 OK"
+  else
+    echo "C9 FAIL: Score A sem seção Minha Síntese"
+  fi
+else
+  echo "C9 SKIP: não é Score A"
+fi
+```
+
+**Veredicto:** OK / WARN / FAIL / SKIP.
+
 ---
 
 ## Protocolo de Execução
@@ -230,6 +295,35 @@ são 90% boilerplate/menus. Mas < 5% com conteúdo técnico no original é suspe
 vs clipping original de 8660 bytes (8.5%) — era um stub real, expandido para
 7020 bytes (81%) após correção.
 
+### C10 — Categoria correta `[bash]`
+
+**Princípio**: source pages devem estar no diretório correto conforme categoria.
+Papers acadêmicos sobre "fiscal policy" ou "tributação de algoritmos" não são
+"concurso" — são articles ou ai-agents.
+
+**Pitfall (2026-06-23 run 2):** 74/230 source pages miscategorizadas como
+"concurso" porque a função `categorize()` do batch_ingest.py matchava
+`fiscal` e `tribut` isoladamente. Isto moveu papers para
+`02-AREAS/concurso/sources/` incorretamente.
+
+```bash
+# Check: se source page está em 02-AREAS/concurso/sources/ mas não contém
+# keywords de concurso (CESPE, CEBRASPE, FGV, FCC, SEFAZ, servidor público)
+CONCURSO_KEYWORDS="CESPE|CEBRASPE|FGV|FCC|SEFAZ|servidor público|carreira pública|concurso"
+CATEGORY_DIR=$(echo "$arquivo" | grep -oE '02-AREAS/concurso/sources/')
+if [[ -n "$CATEGORY_DIR" ]]; then
+  if ! grep -qiE "$CONCURSO_KEYWORDS" "$arquivo"; then
+    echo "C10 WARN: source page in concurso/ but no concurso keywords found — possible miscategorization"
+  else
+    echo "C10 OK"
+  fi
+else
+  echo "C10 SKIP: not in concurso dir"
+fi
+```
+
+**Veredicto:** OK / WARN: possível miscategorização / SKIP: não é concurso.
+
 ---
 
 ## Restrições
@@ -316,6 +410,10 @@ Verificar sempre com: `python3 -c "target = VAULT / f'{link}.md'; print(target.e
 
 ## Changelog
 
+- v1.5 (2026-06-23 run 2): +C10 Categoria correta check — detecta source pages
+  em 02-AREAS/concurso/sources/ sem keywords de concurso (CESPE, CEBRASPE, etc.).
+  74/230 miscategorizadas no pipeline-semanal 2026-06-23 run 2 por false positive
+  de "fiscal"/"tribut" em papers de computational finance.
 - v1.4 (2026-06-23 run 2): +Batch ingest link path mismatch pitfall — script de
   ingest gera wikilinks com paths que não correspondem à estrutura real do vault
   (441 concepts em 16 subdirs, 323 entities). Fix: post-ingest repair com basename

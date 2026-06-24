@@ -132,6 +132,47 @@ created: YYYY-MM-DD
 ## Suggestions
 - Create [[concept-X]] — N sources converge
 - Consolidate [[source-A]] + [[source-B]]
+
+### 7. Link Repair (NEW — added 2026-06-23)
+
+**Princípio**: conexões novas são valiosas mas links quebrados são dívida.
+Antes de sugerir novas conexões, reparar links quebrados existentes.
+
+```bash
+# Scan all source pages for broken concept/entity links
+BROKEN_LINKS="/tmp/broken_links.txt"
+> "$BROKEN_LINKS"
+for f in $(cat /tmp/recent_sources.txt); do
+  links=$(grep -oE '\[\[03-RESOURCES/(concepts|entities)/[^\]]+\]\]' "$f" 2>/dev/null)
+  for link in $links; do
+    path=$(echo "$link" | sed 's/\[\[//;s/\]\]//')
+    [[ -f "$VAULT/$path.md" || -f "$VAULT/$path" ]] || echo "$f|$link" >> "$BROKEN_LINKS"
+  done
+done
+
+BROKEN_COUNT=$(wc -l < "$BROKEN_LINKS" | tr -d ' ')
+if [[ $BROKEN_COUNT -gt 0 ]]; then
+  echo "## Broken Links Repaired"
+  echo "| Source | Broken Link | Action |"
+  echo "|--------|-------------|--------|"
+  while IFS='|' read -r src link; do
+    # Try basename match against existing files
+    basename=$(echo "$link" | sed 's/.*\///;s/\]\]//')
+    match=$(find "$VAULT/03-RESOURCES/concepts/" "$VAULT/03-RESOURCES/entities/" \
+      -name "${basename}.md" -print -quit 2>/dev/null)
+    if [[ -n "$match" ]]; then
+      correct_path="${match#$VAULT/}"
+      correct_path="${correct_path%.md}"
+      sed -i '' "s|$link|[[${correct_path}]]|g" "$src"
+      echo "| $(basename $src) | $link → [[${correct_path}]] | redirected |"
+    else
+      echo "| $(basename $src) | $link | create stub |"
+    fi
+  done < "$BROKEN_LINKS"
+fi
+```
+
+### 8. Generate output
 - Investigate contradiction X vs Y
 ```
 
