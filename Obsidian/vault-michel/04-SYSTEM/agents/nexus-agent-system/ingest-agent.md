@@ -68,8 +68,15 @@ após ingest completo.
      se `X` já existe → append nova evidência/perspectiva na seção `## Evidências`
      do concept. Se não existe → criar concept (fluxo normal).
      Ver [[#F2.5 Concept Absorption]] abaixo.
+     **OBRIGATÓRIO no pipeline — não é pós-pipeline.** Se F2.5 não executa,
+     o pipeline está incompleto. Em batches >20, delegar para subagentes
+     paralelos (1 subagente por ~60 sources).
    - **F2.9 Personal Reflection** (só Score A): adicionar seção `## Minha Síntese`
      na source page. Ver [[#F2.9 Personal Reflection]] abaixo.
+     **OBRIGATÓRIO no pipeline para Score A + ai-agents/articles.** Não usar
+     placeholders ("A ser analisado em revisão manual"). Se não há reflexão
+     clara, escrever "Nenhum próximo passo imediato" — mas os 3 campos
+     (o que muda, conexão pessoal, próximo passo) são obrigatórios.
    - **F2.10 SRS register** (só Score A): popular linha no tracker do
      [[07-QUEUE/rotinas/srs-sources]]. Ver [[#F2.10 SRS register]] abaixo.
    - Se faltar entity relacionada:
@@ -407,6 +414,52 @@ Se >20 arquivos:
 - **Conceitos faltando**: registrar em relatório se sinalizado (não criar sem análise)
 - **Retry cap** — máx 3/chamada, 10/fase → abortar+logar, não travar
 
+## Pitfall: Categorização false-positive "concurso" — 2026-06-23 (Run 2)
+
+**Sintoma**: 74 de 230 source pages categorizadas como "concurso" incorretamente.
+Papers acadêmicos sobre tributação de algoritmos, fiscal policy modeling, etc. foram
+miscategorizados porque a função `categorize()` faz keyword matching fraco
+(`concurso|legisla|CESPE|CEBRASPE|FGV|FCC|receita federal|SEFAZ|tribut|fiscal` no
+snippet). "fiscal" e "tribut" aparecem em papers de computational finance, não concurso.
+
+**Causa**: keyword matching sem context awareness. "fiscal" em "fiscal policy" ≠
+"fiscal" em "auditor fiscal". "tribut" em "tributação de algoritmos" ≠ "tributação" em
+"direito tributário".
+
+**Fix**: categorização concurso deve requerer 2+ keywords do conjunto
+{concurso, CESPE, CEBRASPE, FGV, FCC, SEFAZ, receita federal, servidor público,
+carreira pública}, OU a palavra "concurso" literal no título/filename. Uma
+keyword isolada (fiscal, tribut) não é suficiente.
+
+**Prevenção**: após categorização, sempre validar distribuição. Se >30% do batch
+é "concurso" e não há arquivos .raw/concurso/ ou aulas no input, algo está errado.
+
+## Pitfall: Wikilink path mismatch — 2026-06-23 (Run 2)
+
+**Sintoma**: 224/1215 wikilinks (18%) quebrados. Source pages geradas com links como
+`[[03-RESOURCES/concepts/ai-agents/agent]]` mas vault tem
+`03-RESOURCES/concepts/agent-systems/ai-agents.md` e
+`03-RESOURCES/entities/agent.md`.
+
+**Causa**: o script de ingest gera wikilinks por keyword matching simples
+(concept_map[kw] = 'ai-agents') sem verificar se o path resultante existe no
+filesystem. O vault tem subdirs históricos (`agent-systems/`, `memory-context-rag/`)
+que não correspondem aos labels do concept_map.
+
+**Fix**: antes de escrever wikilinks na source page, mapear contra filesystem real:
+```python
+# 1. Scan existing concept files
+concept_files = {}
+for f in Path("03-RESOURCES/concepts/").rglob("*.md"):
+    basename = f.stem
+    concept_files[basename] = str(f)
+# 2. Para cada keyword match, usar o path real do filesystem
+# 3. Se não existe, criar stub no path referenciado (não em path alternativo)
+```
+
+**Prevenção**: após gerar todas as source pages, rodar link resolution check
+(ver ingest-verify C2). Se >5% links quebrados, abortar e reparar antes do commit.
+
 ## Anti-padrões
 
 - ❌ Condensar source pages artificialmente (perda de informação)
@@ -416,6 +469,8 @@ Se >20 arquivos:
 - ❌ Manifest write não-atômico (corromper JSON)
 - ❌ Misturar template F2.3a com F2.3b (FIAP exige preservação)
 - ❌ Dispatch paralelo sem adversarial gate (qualidade diverge)
+- ❌ Gerar wikilinks sem mapear contra filesystem real (path mismatch)
+- ❌ Categorizar como "concurso" com keyword isolada (fiscal/tribut sem contexto)
 
 ## Fora do Escopo
 - Triagem / scoring (→ triagem-agent)

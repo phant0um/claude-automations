@@ -60,6 +60,29 @@ Campos obrigatórios: `title`, `type`, `created`, `updated`, `tags`.
 
 Extrair todos `[[link]]` do arquivo. Verificar existência no vault.
 
+**Pitfall (2026-06-23 run 2):** 224/1215 wikilinks (18%) não resolviam porque o
+ingest script gerou paths que não existem no filesystem. O check C2 deve:
+1. Extrair todos `[[link]]` que apontam para `03-RESOURCES/concepts/` ou `03-RESOURCES/entities/`
+2. Para cada link, verificar se `vault_path/link.md` existe
+3. Se >5% links quebrados → FAIL (não PASS com warning). Abortar batch e reparar.
+4. Reportar lista de links quebrados para reparo imediato
+
+**Implementation bash:**
+```bash
+BROKEN=0
+TOTAL=0
+for f in "$SOURCES_DIR"/*.md; do
+  links=$(grep -oE '\[\[03-RESOURCES/(concepts|entities)/[^\]]+\]\]' "$f")
+  for link in $links; do
+    TOTAL=$((TOTAL+1))
+    path=$(echo "$link" | sed 's/\[\[//;s/\]\]//')
+    [[ -f "$VAULT/$path.md" || -f "$VAULT/$path" ]] || BROKEN=$((BROKEN+1))
+  done
+done
+PCT=$((BROKEN*100/TOTAL))
+[[ $PCT -gt 5 ]] && echo "FAIL: $BROKEN/$TOTAL links broken ($PCT%)" || echo "OK: $BROKEN/$TOTAL broken ($PCT%)"
+```
+
 ### C3 — Tese central presente
 
 Source page deve conter ao menos um parágrafo explicando o que a fonte afirma.
@@ -225,8 +248,84 @@ vs clipping original de 8660 bytes (8.5%) — era um stub real, expandido para
 
 ---
 
+## Concept Creation Resolution Pattern — 2026-06-23
+
+When a batch ingest produces source pages with many unresolved wikilinks pointing
+to non-existent concepts/entities, the fix is NOT to remove the links — it's to
+CREATE the missing concepts/entities. This is the primary mechanism by which the
+vault knowledge graph grows.
+
+**Pattern**:
+1. After ingest, run wikilink resolution check (C2) across all new source pages
+2. Collect all unresolved links, grouped by target path
+3. Sort by frequency (concepts linked by 3+ sources = high priority)
+4. Create each missing concept/entity with:
+   - Frontmatter (title, type, created, updated, tags)
+   - Definition (1-2 sentences)
+   - Key points or patterns
+   - `## Evidências` section linking back to source pages
+   - `## Links` section with cross-references
+5. Re-run resolution check — should be near 100%
+
+**Session result**: 18 source pages → 80 wikilinks → 40 unresolved (50%) →
+created 24 concepts/entities → 134/134 resolved (100%).
+
+**Pitfall**: don't create stub concepts with only a definition and no evidence.
+Each concept should link back to at least 1 source page that provides evidence.
+A concept with zero backlinks is an orphan — it exists but has no foundation.
+
+## Pitfall: Batch ingest link path mismatch — 2026-06-23 (Run 2)
+
+**Sintoma**: 230 source pages criadas por script Python batch. Wikilinks gerados
+por keyword matching apontam para paths como `[[03-RESOURCES/concepts/ai-agents/agent]]`
+que não existem no vault. O vault tem `concepts/agent-systems/ai-agents.md` e
+`entities/agent.md` — paths e estruturas diferentes.
+
+**Causa**: O script de ingest gera wikilinks com paths pré-determinados
+(`concept_map = {'agent': 'ai-agents', ...}`) que não correspondem à estrutura
+real de subdiretórios do vault. O vault evoluiu organicamente com subdirs
+como `agent-systems/`, `llm-ml-foundations/`, `memory-context-rag/` mas o
+script assume `ai-agents/` como subdir.
+
+**Impacto**: 
+- Batch 1 subagent resolveu via basename matching (216 absorções em entities)
+- Batch 2 subagent não resolveu nenhum (0 absorções — paths não bateram)
+- Batch 3 só achou 2 que batiam exatamente
+- 224/1215 wikilinks unresolved (18%) antes do repair
+
+**Fix aplicado**: 
+1. Script de repair mapeia broken links → existing files por basename
+2. Concepts/entities faltantes criados como stubs NO PATH EXATO que o link
+   referencia (não no path que o script acha "correto")
+3. Verificação: 1215/1215 links resolvem (100%) após repair + stub creation
+
+**Lição**: quando gerar wikilinks programaticamente, SEMPRE verificar contra
+a estrutura real do vault antes de escrever. O vault tem 441 concepts em 16
+subdirs e 323 entities — paths não são previsíveis. Duas opções:
+1. **Pre-generation scan**: ler estrutura de subdirs antes de gerar links
+2. **Post-generation repair**: gerar com paths plausíveis, depois reparar
+   com script que faz basename matching + cria stubs nos gaps
+
+A opção 2 é mais pragmática (não exige refatorar o script de ingest) mas
+sempre executar o repair como passo obrigatório pós-ingest, não opcional.
+
+**Pitfall secundário**: `CATEGORY_MAP = {'ai-agents': 'agent-systems'}` no script
+de repair tentou criar stubs em `agent-systems/` mas os links apontam para
+`ai-agents/`. O repair deve criar no path DO LINK, não no path "correto".
+Verificar sempre com: `python3 -c "target = VAULT / f'{link}.md'; print(target.exists())"`
+
 ## Changelog
 
+- v1.4 (2026-06-23 run 2): +Batch ingest link path mismatch pitfall — script de
+  ingest gera wikilinks com paths que não correspondem à estrutura real do vault
+  (441 concepts em 16 subdirs, 323 entities). Fix: post-ingest repair com basename
+  matching + stub creation no path exato do link. 224/1215 unresolved → 1215/1215
+  (100%). Lição: repair é passo obrigatório, não opcional. + CATEGORY_MAP pitfall:
+  criar stubs no path do link, não no path "correto".
+- v1.3 (2026-06-23): +Concept Creation Resolution Pattern — when wikilinks
+  point to non-existent concepts, create them (don't remove links). 24 concepts
+  created from 40 unresolved links in pipeline-semanal 2026-06-23 (50% → 100%
+  resolution). Pitfall: don't create stubs without evidence backlinks.
 - v1.2 (2026-06-22): +C8 Wikilink-to-directory check (links que apontam para
   diretórios sem _index.md). +C9 Source page depth vs original clipping (ratio
   < 5% = WARN — possible thin page/stub). Achado: pipeline-semanal 2026-06-22
