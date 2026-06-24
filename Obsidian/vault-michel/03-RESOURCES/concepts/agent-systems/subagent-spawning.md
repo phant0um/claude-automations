@@ -130,3 +130,5 @@ Todo sub-agent spawna com **~20.000 tokens de overhead** antes de executar qualq
 - [[03-RESOURCES/sources/ai-agents-harness/claude-code-linkedin-playbook]] — reliability math; 3 LinkedIn batching patterns
 - [[03-RESOURCES/sources/ai-agents-harness/14-claude-code-sub-agents]] — ~20K token overhead empírico
 - **[2026-06-19]** Progressão de 3 níveis (copy-paste role → Skill → sub-agent) descreve quando vale a pena promover um role a sub-agent isolado — [[03-RESOURCES/sources/how-to-run-claude-as-a-team-not-a-tool]]
+- **[2026-06-24]** SNS não cresce por falta de sistema, não de talento. Claude Code + 3 materiais (口調/型/ネタ) = pipeline de conteúdo... — [[claude-code-sns-auto-operation]]
+- **[2026-06-24]** Subagents = child agents para subtask focada. 2 tipos: built-in agent tool (cópia do agente, shared sandbox) e declared... — [[subagents-eve]]

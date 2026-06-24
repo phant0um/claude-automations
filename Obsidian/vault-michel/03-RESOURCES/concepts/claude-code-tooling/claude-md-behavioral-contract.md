@@ -47,3 +47,6 @@ Um arquivo Markdown carregado automaticamente pelo Claude Code em cada sessão, 
 - [[03-RESOURCES/concepts/claude-code-tooling/claude-hooks]]
 - [[03-RESOURCES/concepts/claude-code-plugin-system]]
 - [[03-RESOURCES/concepts/self-rewrite-hooks]]
+- **[2026-06-24]** Agent Memory evoluiu de 'guardar chat' para uma arquitetura de 5 camadas: regras (constituição),画像 (常驻), histórico... — [[agent-memory-architecture-panorama]]
+- **[2026-06-24]** Claude é uma workbench de longo prazo, não search box. 10 passos: Project → identity → Instructions → Memory →... — [[claude-zero-base-workbench-guide]]
+- **[2026-06-24]** Instructions são system prompt always-on (identidade permanente), vs skills (on-demand). Eve prepende instructions a... — [[instructions-eve-docs]]

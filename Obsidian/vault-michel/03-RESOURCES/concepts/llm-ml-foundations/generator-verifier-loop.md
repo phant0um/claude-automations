@@ -114,3 +114,7 @@ Ver [[03-RESOURCES/sources/primer-post-training-reasoning-data]].
 - [[03-RESOURCES/sources/ai-agents-harness/multi-agents-whats-actually-working]] — fonte primária (Walden Yan, Cognition)
 - [[03-RESOURCES/sources/ml-research-papers/academic-research-skills-integrity-gates-146k-citations]] — caso de produção de blocking gates em pipeline acadêmico
 - **[2026-06-22]** Google TF→JAX: verificação dual — quantitative (gradient ascent para max error entre TF/JAX layers) + qualitative (blind-audit LLM Judge com architectural checklist). Verifier é separado do generator (Coder agent) — [[03-RESOURCES/sources/ai-agents/6x-faster-migration-tensorflow-to-jax]]
+- **[2026-06-24]** SNS não cresce por falta de sistema, não de talento. Claude Code + 3 materiais (口調/型/ネタ) = pipeline de conteúdo... — [[claude-code-sns-auto-operation]]
+- **[2026-06-24]** Agent loops (/loop, /goal) sem external validator geram 'Beautiful Nonsense' — output que passa toda validação interna... — [[the-missing-piece-in-every-agent-loop]]
+- **[2026-06-24]** Deep Research fracassa porque gera, não verifica. Próxima etapa = Discoverative Intelligence: agent team com roles... — [[from-generate-to-verify-ai]]
+- **[2026-06-24]** Agent Loops = reason→act→observe→repeat com goal+action+stop. 7 cenários mais utilizáveis: research→artifact, creative... — [[agent-loops-most-usable-scenarios]]

@@ -169,3 +169,6 @@ Matched-budget intervention: mesmo orçamento bruto, qualidade diferente → suc
   - [[03-RESOURCES/sources/ml-research-papers/harness-1-rl-search-agents]] — Harness-1: evidência empírica de state externalization via RL (UIUC 2026; 20B supera modelos 6× maiores)
   - [[03-RESOURCES/sources/harnessx-composable-adaptive-evolvable-agent-harness]] — HarnessX: ModelConfig/HarnessConfig separados, loop AEGIS (compose/adapt/evolve), +14.5pts médio sem tocar no modelo
   - [[03-RESOURCES/sources/automating-skill-md-generation-via-trajectory-mining]] — contraponto: skill library minerada automaticamente de trajetórias é legível mas não supera baseline trivial de frequência em transferência
+- **[2026-06-24]** Agent = Modelo + Harness. O harness (ferramentas, memória, sandbox, guardrails, loops de feedback) é o que transforma... — [[ai-agent-harness-databricks]]
+- **[2026-06-24]** Eve é framework open-source da Vercel onde agent = diretório. Production built-in: durable execution, sandbox, HITL... — [[introducing-eve-vercel]]
+- **[2026-06-24]** Default harness = agent loop + built-in tools (bash, read_file, write_file, glob, grep, web_fetch, web_search, todo,... — [[the-harness-eve-default]]

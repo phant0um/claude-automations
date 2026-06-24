@@ -322,3 +322,12 @@ Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline
 **Clusters:** Loop Engineering (23), Agent Architecture (20), Inference/Token (15), RAG (15), Coding Agents (12)
 **Top action:** Rodar connection-finder nos 11 orphans
 → [[06-GENERATED/relatorios/2026-06-24-relatorio-semanal]]
+
+## Pipeline Semanal 2026-06-24 (Incremental — 41 Clippings restantes)
+**Veredito:** PIPELINE OK
+**Triagem:** 41 candidatos → 40 aprovados → 1 D rejeitado
+**Ingest:** 40 source pages (35 ai-agents, 5 articles); manifest +80 entries; 40 Clippings arquivados (15 A, 25 B)
+**F2.5:** 138 evidence entries appended
+**F2.9:** 3 reflections (NVIDIA BioNeMo, metacognição Claude Code, agent loops scenarios)
+**Clippings/:** 0 arquivos remanescentes
+**Total dia:** 166 source pages, 625 evidence appends, 6 reflections

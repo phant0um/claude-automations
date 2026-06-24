@@ -36,3 +36,4 @@ Patterns para construir agents que sobrevivem trabalho real: long tasks, weird i
 - [[03-RESOURCES/concepts/ai-agents/agent-loop-pattern]]
 - [[03-RESOURCES/concepts/ai-agents/beautiful-nonsense]]
 - [[04-SYSTEM/agents/core/verify]]
+- **[2026-06-24]** 4 paradigms shifts em 10 anos de TiDB: técnico→produto, software→serviço, humano→AI-assistido,... — [[distributed-db-paradigm-migration]]

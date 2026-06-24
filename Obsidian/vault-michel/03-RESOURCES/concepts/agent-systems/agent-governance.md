@@ -47,3 +47,4 @@ The vault CLAUDE.md encodes a governance model explicitly: destructive ops and v
 - [[03-RESOURCES/concepts/agent-systems/_index]]
 - [[03-RESOURCES/concepts/agentic-execution]]
 - [[03-RESOURCES/concepts/ai-agents]]
+- **[2026-06-24]** Agent Memory evoluiu de 'guardar chat' para uma arquitetura de 5 camadas: regras (constituição),画像 (常驻), histórico... — [[agent-memory-architecture-panorama]]

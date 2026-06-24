@@ -46,3 +46,6 @@ A ser preenchido.
 - [[03-RESOURCES/sources/team-playbooks]] — Dynamic skills keyed on principal: defineDynamic resolver carrega playbook correto por team em runtime
 
 ## Links
+- **[2026-06-24]** Hermes é um runtime persistente, não um workflow — os prompts que você dá no dia 1 é que transformam o repo em... — [[17-prompts-that-make-hermes-run-while-you-sleep-copy-paste-inside]]
+- **[2026-06-24]** Skills são camada operacional (routing + progressive disclosure + curation), não upgrade de modelo — não criam precisão... — [[benchmarking-nvidia-bionemo-agent-toolkit-skills-for-nim-microservices-2]]
+- **[2026-06-24]** Subagents = child agents para subtask focada. 2 tipos: built-in agent tool (cópia do agente, shared sandbox) e declared... — [[subagents-eve]]

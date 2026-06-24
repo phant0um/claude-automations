@@ -39,3 +39,5 @@ A ser preenchido.
 - [[03-RESOURCES/sources/can-virtual-cell-models-beat-a-line-of-code]] — VCBench: 5 virtual cell models × 5 tasks com baselines unificados; baselines simples match/beat em 4/5 tasks
 
 ## Links
+- **[2026-06-24]** As regras clássicas de value investing de Benjamin Graham funcionam como um filtro passa-baixa matemático que previne... — [[1-introduction-2]]
+- **[2026-06-24]** Skills são camada operacional (routing + progressive disclosure + curation), não upgrade de modelo — não criam precisão... — [[benchmarking-nvidia-bionemo-agent-toolkit-skills-for-nim-microservices-2]]

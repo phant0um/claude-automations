@@ -19,3 +19,6 @@ Personal knowledge management system that externalizes memory and cognitive load
 - **[2026-06-19]** Template "Personal Agent" (Vercel Labs) implementa a mesma memória compartilhada entre web chat, Slack e iMessage, com gravações de fato exigindo aprovação explícita do usuário (`save_memory`) — [[03-RESOURCES/sources/vercel-labs-personal-agent-template]]
 - **[2026-06-19]** Distinção second brain vs. second self: segundo cérebro armazena info, segundo self age — proposta de arquitetura de 5 pastas (vs. estrutura atual do vault) reforça gap entre "guardar" e "operar" — [[03-RESOURCES/sources/everyone-second-brain-winners-second-self]]
 - [[03-RESOURCES/sources/obsidian-is-not-a-note-taking-app-here-is-what-it-actually-is]] — Category error: Obsidian não é note-taking app, é reasoning substrate; file format > note-taking features
+- **[2026-06-24]** Obsidian bidirectional links falham porque: linkam palavras não problemas, páginas ficam vazias, só usam forward links.... — [[obsidian-bidirectional-links-mastery]]
+- **[2026-06-24]** Sistema AI pessoal = 'thinking OS' que maximiza AI mas mantém humano como sujeito. Princípios: solução para dor real,... — [[personal-ai-system-philosophy]]
+- **[2026-06-24]** claude-obsidian implementa LLM Wiki de Karpathy: raw (生肉) + wiki (熟肉, AI-maintained) com bidirectional links. 15... — [[claude-obsidian-second-brain]]

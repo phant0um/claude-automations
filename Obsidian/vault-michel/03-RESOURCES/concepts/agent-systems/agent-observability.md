@@ -85,3 +85,6 @@ Documentação oficial mostra um padrão complementar à SSE event stream: **web
 - [[03-RESOURCES/concepts/observability-driven-evolution]]
 - [[03-RESOURCES/sources/stop-asking-whether-the-agent-worked-ask-what-the-harness-observed]]
 - [[03-RESOURCES/sources/feedback-loops-help-claude-code-complete-ambitious-tasks-with-less-babysitting]]
+
+## Evidências
+- **[2026-06-24]** Agent = Modelo + Harness. O harness (ferramentas, memória, sandbox, guardrails, loops de feedback) é o que transforma... — [[ai-agent-harness-databricks]]

@@ -139,3 +139,4 @@ At company-brain scale, the same mechanism operates across the entire agent flee
 ## Evidências
 - **[2026-06-19]** Loop externo lê comentário de correção humana (ex.: "reclassificado porque havia ambiguidade") como sinal de treino direto para gerar diff de melhoria — [[03-RESOURCES/sources/how-to-build-a-self-improvement-loop-for-skills]]
 - **[2026-06-19]** Prompt como "apprentice" que se reescreve a cada lote de ~100 decisões humanas (não a cada ação — 1 decisão é ruído); 2 camadas: evaluator barato em todo input + apprentice caro só no lote — [[03-RESOURCES/sources/how-to-make-claudes-prompt-update-itself-after-100-decisions]]
+- **[2026-06-24]** Implementando camada de metacognição (reflection/) em Claude Code: decisions-log.md... — [[metacognition-claude-code-reflection]]

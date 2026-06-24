@@ -26,3 +26,5 @@ Cognição e aprendizagem: como humanos e sistemas de IA adquirem, retêm e tran
 - **[2026-06-24]** You finish a great book. Two weeks later you cannot remember a single chapter. Not because you are dumb. Because nobody — [[the-feynman-method-why-you-forget-90-of-what-you-read-and-the-4-prompts-that-fix-it]]
 - **[2026-06-24]** Most looping agents have amnesia. Each cycle starts fresh, so they retry the same failed fix three times because nothing — [[how-to-build-a-claude-code-agent-that-learns-from-each-loop-exact-setup-inside]]
 - **[2026-06-24]** tags: — [[world-models-in-pieces-structural-certification-for-general-agents]]
+- **[2026-06-24]** Implementando camada de metacognição (reflection/) em Claude Code: decisions-log.md... — [[metacognition-claude-code-reflection]]
+- **[2026-06-24]** 3-step reading method: screen sources (accuracy×comprehensibility) → NotebookLM pre-read → translation tool deep read.... — [[ai-accelerated-reading-learning]]

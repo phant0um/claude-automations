@@ -21,3 +21,9 @@ A ser preenchido.
 - [[03-RESOURCES/sources/cost-optimal-decision-diagrams-for-stochastic-boolean-function-evaluation]] — Branch-and-bound com pruning e caching para verificação ótima de decision diagrams; problema #P-hard
 
 ## Links
+- **[2026-06-24]** As regras clássicas de value investing de Benjamin Graham funcionam como um filtro passa-baixa matemático que previne... — [[1-introduction-2]]
+- **[2026-06-24]** Agent loops (/loop, /goal) sem external validator geram 'Beautiful Nonsense' — output que passa toda validação interna... — [[the-missing-piece-in-every-agent-loop]]
+- **[2026-06-24]** Deep Research fracassa porque gera, não verifica. Próxima etapa = Discoverative Intelligence: agent team com roles... — [[from-generate-to-verify-ai]]
+- **[2026-06-24]** 4 paradigms shifts em 10 anos de TiDB: técnico→produto, software→serviço, humano→AI-assistido,... — [[distributed-db-paradigm-migration]]
+- **[2026-06-24]** 10 usos não-óbvios de AI que valem mais que 100 prompts: AI pergunta primeiro, preferences em memory, workspace por... — [[ai-10-hidden-uses-for-efficiency]]
+- **[2026-06-24]** Agent Loops = reason→act→observe→repeat com goal+action+stop. 7 cenários mais utilizáveis: research→artifact, creative... — [[agent-loops-most-usable-scenarios]]

@@ -124,3 +124,8 @@ Resultado: todos os evals melhoram. Agents com world model interno agem melhor p
 - [[03-RESOURCES/sources/ai-agents-harness/evaluating-agents-in-production-alphaeval]] — paper completo
 - [[03-RESOURCES/sources/agent-evaluation-wolfe]] — guia detalhado (Cameron Wolfe PhD)
 - [[03-RESOURCES/sources/ai-agents-harness/echo-terminal-agents-world-models]] — ECHO paper (world model)
+- **[2026-06-24]** Eve define evals como uma única função async test(t) que dirige o agente e asserta inline — mesma shape para... — [[cases]]
+- **[2026-06-24]** t.judge.autoevals são assertions model-backed com judge model separado do agente sob teste — 4 graders (factuality,... — [[judge-eve-llm-judge]]
+- **[2026-06-24]** Eve evals = scored checks que rodam agente contra sessions reais via HTTP surface, capturando regressões em prompt/tool... — [[overview-eve-evals]]
+- **[2026-06-24]** Agent loops (/loop, /goal) sem external validator geram 'Beautiful Nonsense' — output que passa toda validação interna... — [[the-missing-piece-in-every-agent-loop]]
+- **[2026-06-24]** Deep Research fracassa porque gera, não verifica. Próxima etapa = Discoverative Intelligence: agent team com roles... — [[from-generate-to-verify-ai]]

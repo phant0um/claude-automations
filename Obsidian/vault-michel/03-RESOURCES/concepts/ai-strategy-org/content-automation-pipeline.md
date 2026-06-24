@@ -62,3 +62,4 @@ Sources:
 ## Evidências
 - [[03-RESOURCES/sources/slide-mass-production-zero-outsourcing]] — GPTs e Gems distribuídos como produto para slide mass production zero outsourcing
 - [[03-RESOURCES/sources/how-to-build-a-100m-warm-lead-database-with-an-ai-coding-agent]] — AI coding agent automatiza discovery de intent signals em escala para lead generation
+- **[2026-06-24]** SNS não cresce por falta de sistema, não de talento. Claude Code + 3 materiais (口調/型/ネタ) = pipeline de conteúdo... — [[claude-code-sns-auto-operation]]

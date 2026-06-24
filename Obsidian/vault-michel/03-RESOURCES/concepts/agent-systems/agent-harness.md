@@ -199,4 +199,4 @@ The harness prevents reward hacking by isolating the evaluator: agents can submi
 - `Clippings/A Closer Look at Harness Engineering from Top AI Companies.md`
 - Thin harness philosophy: "thin conductor principle"
 - **[2026-06-22]** CLI-Anything (HKUDS): harness pattern comercializado — wrapper CLI expõe software via comandos sem modificar original. SKILL.md auto-gerado torna cada harness descobrível por agents. 258 commands em FreeCAD, 48 unit + 7 E2E tests em Obsidian CLI — [[03-RESOURCES/sources/ai-agents/cli-anything-agent-native-software]]
-
+- **[2026-06-24]** Default harness = agent loop + built-in tools (bash, read_file, write_file, glob, grep, web_fetch, web_search, todo,... — [[the-harness-eve-default]]

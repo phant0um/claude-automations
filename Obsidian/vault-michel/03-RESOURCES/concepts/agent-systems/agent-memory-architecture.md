@@ -234,3 +234,5 @@ Long-Term Memory
 ## Perspectivas
 
 - **[2026-06-21]** Paralelismo e memória persistente são tratados como a segunda fase (não a primeira) na progressão de maturidade de um agente — vem depois da fundação, antes da autonomia plena. — [[15-levels-of-hermes-agent-from-chatbot-to-247-autonomous-system]]
+- **[2026-06-24]** Agent Memory evoluiu de 'guardar chat' para uma arquitetura de 5 camadas: regras (constituição),画像 (常驻), histórico... — [[agent-memory-architecture-panorama]]
+- **[2026-06-24]** Implementando camada de metacognição (reflection/) em Claude Code: decisions-log.md... — [[metacognition-claude-code-reflection]]

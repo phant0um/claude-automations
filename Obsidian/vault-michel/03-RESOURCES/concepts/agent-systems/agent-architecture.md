@@ -69,3 +69,10 @@ Routes tasks to the right model: reasoning model for complex planning, fast mode
 ## Evidências
 - **[2026-06-19]** Capacidade de agente com ferramentas é limitada por como tools são compostas, não por quais tools existem — interface de ação é o gargalo — [[03-RESOURCES/sources/spatialclaw-rethinking-action-interface]]
 - [[03-RESOURCES/sources/how-it-runs]] — Session/turn/step model: session durável span dias, turn = mensagem + work, step = checkpoint durável
+- **[2026-06-24]** Agent = Modelo + Harness. O harness (ferramentas, memória, sandbox, guardrails, loops de feedback) é o que transforma... — [[ai-agent-harness-databricks]]
+- **[2026-06-24]** Eve é framework open-source da Vercel onde agent = diretório. Production built-in: durable execution, sandbox, HITL... — [[introducing-eve-vercel]]
+- **[2026-06-24]** ClientSession envia 1 turno por vez; send() aceita texto, payload completo (clientContext), attachments (AI SDK... — [[messages-eve-client]]
+- **[2026-06-24]** Fault tolerance extrema = Isolation + Redundancy + Static Stability. PlanetScale: control plane (mais dependências) vs... — [[the-principles-of-extreme-fault-tolerance]]
+- **[2026-06-24]** Tutorial eve: scaffold → set model → analyst persona → run. npx eve init cria agente com dev server, agent.ts define... — [[your-first-agent-eve]]
+- **[2026-06-24]** 4 paradigms shifts em 10 anos de TiDB: técnico→produto, software→serviço, humano→AI-assistido,... — [[distributed-db-paradigm-migration]]
+- **[2026-06-24]** Não persiga tools — construa AI Infra pessoal em 6 layers: 大脑(执行中枢), 采集(输入), 知识(re-callable), 集成(tool connection),... — [[personal-ai-infra-6-layers]]

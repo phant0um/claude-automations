@@ -77,3 +77,7 @@ Projects de escala organizacional. Ver [[03-RESOURCES/concepts/claude-enterprise
 
 - [[03-RESOURCES/sources/guides-courses-howtos/claude-101-anthropic-course]]
 - [[03-RESOURCES/concepts/claude-code-tooling/claude-skills]] — o complemento procedimental
+
+## Evidências
+- **[2026-06-24]** Claude é uma workbench de longo prazo, não search box. 10 passos: Project → identity → Instructions → Memory →... — [[claude-zero-base-workbench-guide]]
+- **[2026-06-24]** Tutorial eve: scaffold → set model → analyst persona → run. npx eve init cria agente com dev server, agent.ts define... — [[your-first-agent-eve]]

@@ -56,3 +56,4 @@ Every Claude Code session is agentic execution. Understanding the loop helps dia
 - **[2026-06-24]** tags: — [[grading-the-grader-lessons-from-evaluating-an-agentic-data-analysis-systemcode-and-data-available-at-github-httpsgithub-comtzstats-columbiastai-x-grade-the-grader]]
 - **[2026-06-24]** tags: — [[the-latent-bridge-a-continuous-slow-fast-channel-for-real-time-game-agents]]
 - **[2026-06-24]** Introduction Migration assessment and planning is rarely a single-pass exercise. Inventory data is incomplete; assumptio — [[accelerating-migration-assessments-and-planning-with-aws-transform]]
+- **[2026-06-24]** 4 paradigms shifts em 10 anos de TiDB: técnico→produto, software→serviço, humano→AI-assistido,... — [[distributed-db-paradigm-migration]]

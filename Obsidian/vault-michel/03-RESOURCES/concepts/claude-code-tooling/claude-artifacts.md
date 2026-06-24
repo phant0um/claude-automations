@@ -75,3 +75,7 @@ Para usuários não-técnicos: escolher app pequeno (1 screen, 1 job) → escrev
 - [[03-RESOURCES/sources/guides-courses-howtos/ultimate-guide-master-claude-tools]] — casos de uso avançados com artifacts
 - [[03-RESOURCES/sources/skills-prompting-mcp/claude-code-unreasonable-effectiveness-of-html]] — tese HTML > Markdown; use cases detalhados
 - [[03-RESOURCES/sources/claude-artifacts-9-steps-app]] — guia 9-passos para usuários consumer (no-code)
+
+## Evidências
+- **[2026-06-24]** Artifacts é prototipagem rápida visível/tocável, não app de produção. Ideal para: screenshot → mockup, ferramentas... — [[claude-artifacts-practical-guide]]
+- **[2026-06-24]** Wireframe prompt como skill registrada no Claude: layout+design+writing rules em 1 prompt → zip → save → reusável com 1... — [[wireframe-prompt-claude-skill]]

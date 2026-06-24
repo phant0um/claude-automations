@@ -124,3 +124,4 @@ Cada subagent tem seu próprio context window independente. O agente pai recebe 
 
 - **[2026-06-24]** Set the agent's runtime config in agent.ts with defineAgent, including the model and compaction. — [[agent-ts]]
 - **[2026-06-24]** This is the fifth article in a series about Agent Experience (AX): the practice of making AI coding agents work correctl — [[when-the-model-has-never-seen-your-code]]
+- **[2026-06-24]** NotebookLM 2026 é outra ferramenta — 100万 tokens, 50 sources, 4 audio patterns, Veo 3 video. 3 usos: multi-source... — [[notebooklm-3-secret-uses]]

@@ -175,3 +175,6 @@ Benefícios: naming de variáveis/funções/arquivos consistente; codebase mais 
 ## Evidências
 - **[2026-06-19]** SKILL.md bem curado é o que fecha a lacuna de performance entre modelo aberto barato (MiniMax) e modelo de fronteira (Fable) — não o modelo em si — [[how-i-turned-minimax-into-fable-5-97-percent-cheaper]]
 - **[2026-06-19]** Skill `/pr-walkthrough` (warpdotdev/common-skills) gera site interativo D3 a partir de link de PR, instalável via `npx skills add` — exemplo de skill empacotável cobrindo migração de output de agente de Markdown para HTML rico — [[generate-interactive-pr-walkthroughs-with-a-single-skill]]
+- **[2026-06-24]** Skills são camada operacional (routing + progressive disclosure + curation), não upgrade de modelo — não criam precisão... — [[benchmarking-nvidia-bionemo-agent-toolkit-skills-for-nim-microservices-2]]
+- **[2026-06-24]** Instructions são system prompt always-on (identidade permanente), vs skills (on-demand). Eve prepende instructions a... — [[instructions-eve-docs]]
+- **[2026-06-24]** Wireframe prompt como skill registrada no Claude: layout+design+writing rules em 1 prompt → zip → save → reusável com 1... — [[wireframe-prompt-claude-skill]]

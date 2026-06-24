@@ -50,3 +50,4 @@ Agent loop sem validador = echo chamber. O agente valida seu próprio output e s
 - [[03-RESOURCES/concepts/software-engineering/verification]]
 - [[03-RESOURCES/concepts/ai-agents/loop-engineering-maturity]]
 - [[04-SYSTEM/skills/orchestration/adversarial-gate]]
+- **[2026-06-24]** Agent loops (/loop, /goal) sem external validator geram 'Beautiful Nonsense' — output que passa toda validação interna... — [[the-missing-piece-in-every-agent-loop]]

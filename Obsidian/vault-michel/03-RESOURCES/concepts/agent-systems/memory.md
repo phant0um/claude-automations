@@ -36,3 +36,4 @@ A ser preenchido.
 - [[03-RESOURCES/sources/remember-definitions]] — defineState cria slot tipado que persiste glossário de métricas através de steps e turns numa sessão
 
 ## Links
+- **[2026-06-24]** Agent Memory evoluiu de 'guardar chat' para uma arquitetura de 5 camadas: regras (constituição),画像 (常驻), histórico... — [[agent-memory-architecture-panorama]]

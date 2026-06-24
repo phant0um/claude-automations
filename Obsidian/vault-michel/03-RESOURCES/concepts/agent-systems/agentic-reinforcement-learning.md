@@ -73,3 +73,4 @@ Understanding agentic RL helps Michel evaluate claims about agent capability imp
 ## Perspectivas
 
 - **[2026-06-21]** Desacoplar 'unidade de transição' (passo) de 'estratégia de otimização' (token vs passo) é o insight arquitetural reaproveitável fora do paper Agent-R1 — separa modelagem de algoritmo. — [[agent-r1-a-unified-and-modular-framework-for-agentic-reinforcement-learning]]
+- **[2026-06-24]** Ambiente sintético auto-evolutivo de 2 jogadores (Synthesizer + Solver) gera corpus de 4,504 tasks em 1,040 domínios... — [[general-agent-self-evolving-synthetic-environment]]

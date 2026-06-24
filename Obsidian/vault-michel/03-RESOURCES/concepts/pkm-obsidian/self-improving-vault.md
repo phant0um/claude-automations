@@ -56,3 +56,6 @@ Um vault-filing-cabinet aceita input e nada mais. O self-improving vault tem **o
 - [[03-RESOURCES/concepts/claude-code-tooling/claudemd-self-improvement-loop]] — auto-melhoria via CLAUDE.md
 - [[03-RESOURCES/concepts/llm-ml-foundations/context-engineering]] — CLAUDE.md como núcleo
 - **[2026-06-19]** Workflow de conexão de 4 passos (achar conexões não-óbvias, explicar o insight, identificar a próxima nota a escrever, flagar clusters) é candidato a rotina automatizada de auto-melhoria do vault — [[03-RESOURCES/sources/how-to-build-a-knowledge-graph-in-obsidian]]
+- **[2026-06-24]** Obsidian bidirectional links falham porque: linkam palavras não problemas, páginas ficam vazias, só usam forward links.... — [[obsidian-bidirectional-links-mastery]]
+- **[2026-06-24]** Sistema AI pessoal = 'thinking OS' que maximiza AI mas mantém humano como sujeito. Princípios: solução para dor real,... — [[personal-ai-system-philosophy]]
+- **[2026-06-24]** Não persiga tools — construa AI Infra pessoal em 6 layers: 大脑(执行中枢), 采集(输入), 知识(re-callable), 集成(tool connection),... — [[personal-ai-infra-6-layers]]

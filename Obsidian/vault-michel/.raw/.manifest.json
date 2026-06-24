@@ -16398,9 +16398,13 @@
       "source_page": true
     },
     "The Missing Piece in Every Agent Loop": {
-      "ingested_at": "2026-06-23",
-      "pipeline": "pipeline-semanal-v5.1",
-      "source_page": true
+      "hash": "3ea4b60645094f11e821cef3589de232",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/the-missing-piece-in-every-agent-loop.md"
+      ],
+      "alias_of": "The Missing Piece in Every Agent Loop.md"
     },
     "Clippings/Amazon S3 annotations attach rich, queryable context directly to your objects.md|B|7": {
       "ingested_at": "2026-06-23",
@@ -19134,19 +19138,19 @@
       "alias_of": "Reimagining LinkedIn’s search tech stack.md"
     },
     "The principles of extreme fault tolerance.md": {
-      "hash": "b4c5b82bfbf1aaa8f87ce35ae39b12b4",
-      "ingested_at": "2026-06-23",
-      "category": "concurso",
+      "hash": "330709bf6157fcb7730cc6716cf93d99",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
       "pages_created": [
-        "02-AREAS/concurso/sources/the-principles-of-extreme-fault-tolerance.md"
+        "03-RESOURCES/sources/the-principles-of-extreme-fault-tolerance.md"
       ]
     },
     "The principles of extreme fault tolerance": {
-      "hash": "b4c5b82bfbf1aaa8f87ce35ae39b12b4",
-      "ingested_at": "2026-06-23",
-      "category": "concurso",
+      "hash": "330709bf6157fcb7730cc6716cf93d99",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
       "pages_created": [
-        "02-AREAS/concurso/sources/the-principles-of-extreme-fault-tolerance.md"
+        "03-RESOURCES/sources/the-principles-of-extreme-fault-tolerance.md"
       ],
       "alias_of": "The principles of extreme fault tolerance.md"
     },
@@ -19168,19 +19172,19 @@
       "alias_of": "Vercel Flags Platform-native feature flags.md"
     },
     "1 Introduction.md": {
-      "hash": "1ecb83b783db7f9c4653283e9779835e",
-      "ingested_at": "2026-06-23",
+      "hash": "54e20b79bd1dff27eb481f84d68ffe0c",
+      "ingested_at": "2026-06-24",
       "category": "articles",
       "pages_created": [
-        "03-RESOURCES/sources/1-introduction.md"
+        "03-RESOURCES/sources/1-introduction-2.md"
       ]
     },
     "1 Introduction": {
-      "hash": "1ecb83b783db7f9c4653283e9779835e",
-      "ingested_at": "2026-06-23",
+      "hash": "54e20b79bd1dff27eb481f84d68ffe0c",
+      "ingested_at": "2026-06-24",
       "category": "articles",
       "pages_created": [
-        "03-RESOURCES/sources/1-introduction.md"
+        "03-RESOURCES/sources/1-introduction-2.md"
       ],
       "alias_of": "1 Introduction.md"
     },
@@ -19270,19 +19274,19 @@
       "alias_of": "AI-driven Optimisation of Quality of Recovery (QoR) in Remote Patient MonitoringAccepted as a poster at AI in Medicine 2026 (Polish Institute for Evidence Based Medicine), a non-archival venue; the accepted abstract is available online 13. This.md"
     },
     "Benchmarking NVIDIA BioNeMo Agent Toolkit Skills for NIM microservices.md": {
-      "hash": "e02fd2d01b65f72cbccd1545415ba013",
-      "ingested_at": "2026-06-23",
+      "hash": "a338ba41e7186798a1c95d9a2658a45b",
+      "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
-        "03-RESOURCES/sources/benchmarking-nvidia-bionemo-agent-toolkit-skills-for-nim-microservices.md"
+        "03-RESOURCES/sources/benchmarking-nvidia-bionemo-agent-toolkit-skills-for-nim-microservices-2.md"
       ]
     },
     "Benchmarking NVIDIA BioNeMo Agent Toolkit Skills for NIM microservices": {
-      "hash": "e02fd2d01b65f72cbccd1545415ba013",
-      "ingested_at": "2026-06-23",
+      "hash": "a338ba41e7186798a1c95d9a2658a45b",
+      "ingested_at": "2026-06-24",
       "category": "ai-agents",
       "pages_created": [
-        "03-RESOURCES/sources/benchmarking-nvidia-bionemo-agent-toolkit-skills-for-nim-microservices.md"
+        "03-RESOURCES/sources/benchmarking-nvidia-bionemo-agent-toolkit-skills-for-nim-microservices-2.md"
       ],
       "alias_of": "Benchmarking NVIDIA BioNeMo Agent Toolkit Skills for NIM microservices.md"
     },
@@ -22763,6 +22767,626 @@
         "02-AREAS/fiap/sources/how-commerce-is-being-reinvented-for-agentic-ai.md"
       ],
       "pages_updated": []
+    },
+    "17 prompts that make Hermes run while you sleep (copy-paste inside).md": {
+      "hash": "3ba2f3347d09adecd8816b2088fb305a",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/17-prompts-that-make-hermes-run-while-you-sleep-copy-paste-inside.md"
+      ]
+    },
+    "17 prompts that make Hermes run while you sleep (copy-paste inside)": {
+      "hash": "3ba2f3347d09adecd8816b2088fb305a",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/17-prompts-that-make-hermes-run-while-you-sleep-copy-paste-inside.md"
+      ],
+      "alias_of": "17 prompts that make Hermes run while you sleep (copy-paste inside).md"
+    },
+    "AIエージェントハーネスとは何ですか？.md": {
+      "hash": "d13c0ce9ea6dd449a82fd8cd26ef6136",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai.md"
+      ]
+    },
+    "AIエージェントハーネスとは何ですか？": {
+      "hash": "d13c0ce9ea6dd449a82fd8cd26ef6136",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai.md"
+      ],
+      "alias_of": "AIエージェントハーネスとは何ですか？.md"
+    },
+    "AI用得好不好，跟你会不会管人，我觉得越来越是同一件事。.md": {
+      "hash": "c7c6813ae61f61bd3e6e8911976e906c",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai.md"
+      ]
+    },
+    "AI用得好不好，跟你会不会管人，我觉得越来越是同一件事。": {
+      "hash": "c7c6813ae61f61bd3e6e8911976e906c",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai.md"
+      ],
+      "alias_of": "AI用得好不好，跟你会不会管人，我觉得越来越是同一件事。.md"
+    },
+    "Agent Memory 架构全景：从规则文件、会话检索到反思与技能沉淀.md": {
+      "hash": "511255813672a295e2078ba46b8c7df8",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/agent-memory.md"
+      ]
+    },
+    "Agent Memory 架构全景：从规则文件、会话检索到反思与技能沉淀": {
+      "hash": "511255813672a295e2078ba46b8c7df8",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/agent-memory.md"
+      ],
+      "alias_of": "Agent Memory 架构全景：从规则文件、会话检索到反思与技能沉淀.md"
+    },
+    "Cases.md": {
+      "hash": "c42f0dfa2955039a8ac0468a267cc205",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/cases.md"
+      ]
+    },
+    "Cases": {
+      "hash": "c42f0dfa2955039a8ac0468a267cc205",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/cases.md"
+      ],
+      "alias_of": "Cases.md"
+    },
+    "Claude Codeで𝕏・スレッズを自動運用する方法.md": {
+      "hash": "9b7827f0aaac8f3fa12ed69aebba0f9b",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-code.md"
+      ]
+    },
+    "Claude Codeで𝕏・スレッズを自動運用する方法": {
+      "hash": "9b7827f0aaac8f3fa12ed69aebba0f9b",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-code.md"
+      ],
+      "alias_of": "Claude Codeで𝕏・スレッズを自動運用する方法.md"
+    },
+    "Claude 零基础使用指南：别再把它当搜索框，先搭一个会记住你的工作台.md": {
+      "hash": "12ad23ff792bd669650d293a510e4628",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude.md"
+      ]
+    },
+    "Claude 零基础使用指南：别再把它当搜索框，先搭一个会记住你的工作台": {
+      "hash": "12ad23ff792bd669650d293a510e4628",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude.md"
+      ],
+      "alias_of": "Claude 零基础使用指南：别再把它当搜索框，先搭一个会记住你的工作台.md"
+    },
+    "Claudeのアーティファクトって何？正直ナメてたけど、これは便利です.md": {
+      "hash": "52f695279a6ae6d89903fc8b9a83a50c",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude.md"
+      ]
+    },
+    "Claudeのアーティファクトって何？正直ナメてたけど、これは便利です": {
+      "hash": "52f695279a6ae6d89903fc8b9a83a50c",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude.md"
+      ],
+      "alias_of": "Claudeのアーティファクトって何？正直ナメてたけど、これは便利です.md"
+    },
+    "Cloudflare“赛博菩萨”的免费额度，白嫖了一整套互联网基础设施.md": {
+      "hash": "3196dc9793dae1e463880446f68b01ee",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "pages_created": [
+        "03-RESOURCES/sources/cloudflare.md"
+      ]
+    },
+    "Cloudflare“赛博菩萨”的免费额度，白嫖了一整套互联网基础设施": {
+      "hash": "3196dc9793dae1e463880446f68b01ee",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "pages_created": [
+        "03-RESOURCES/sources/cloudflare.md"
+      ],
+      "alias_of": "Cloudflare“赛博菩萨”的免费额度，白嫖了一整套互联网基础设施.md"
+    },
+    "General Agent A Self-Evolving, Synthetic Agent Environment.md": {
+      "hash": "84750f48386ddfbc2b447b8355ad8443",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/general-agent-a-self-evolving-synthetic-agent-environment.md"
+      ]
+    },
+    "General Agent A Self-Evolving, Synthetic Agent Environment": {
+      "hash": "84750f48386ddfbc2b447b8355ad8443",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/general-agent-a-self-evolving-synthetic-agent-environment.md"
+      ],
+      "alias_of": "General Agent A Self-Evolving, Synthetic Agent Environment.md"
+    },
+    "Instructions.md": {
+      "hash": "184a454dfc4f92e8214563853857d223",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/instructions.md"
+      ]
+    },
+    "Instructions": {
+      "hash": "184a454dfc4f92e8214563853857d223",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/instructions.md"
+      ],
+      "alias_of": "Instructions.md"
+    },
+    "Introducing eve.md": {
+      "hash": "9b8442a5842dc210be22f449f1647260",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/introducing-eve.md"
+      ]
+    },
+    "Introducing eve": {
+      "hash": "9b8442a5842dc210be22f449f1647260",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/introducing-eve.md"
+      ],
+      "alias_of": "Introducing eve.md"
+    },
+    "Judge.md": {
+      "hash": "4b37cbef1b309a64ec17612104768fa6",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/judge.md"
+      ]
+    },
+    "Judge": {
+      "hash": "4b37cbef1b309a64ec17612104768fa6",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/judge.md"
+      ],
+      "alias_of": "Judge.md"
+    },
+    "Messages.md": {
+      "hash": "684715a291abc07aff4dbddd0e66bba8",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/messages.md"
+      ]
+    },
+    "Messages": {
+      "hash": "684715a291abc07aff4dbddd0e66bba8",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/messages.md"
+      ],
+      "alias_of": "Messages.md"
+    },
+    "Next.js.md": {
+      "hash": "7fcaa4f11cb1dc7e8aa6ec1efba645e1",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/next-js.md"
+      ]
+    },
+    "Next.js": {
+      "hash": "7fcaa4f11cb1dc7e8aa6ec1efba645e1",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/next-js.md"
+      ],
+      "alias_of": "Next.js.md"
+    },
+    "NotebookLMのマインドマップ機能のすべてを、本気で全部書く。.md": {
+      "hash": "b57d890b1298edfb2b6821d2d3468cc0",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/notebooklm.md"
+      ]
+    },
+    "NotebookLMのマインドマップ機能のすべてを、本気で全部書く。": {
+      "hash": "b57d890b1298edfb2b6821d2d3468cc0",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/notebooklm.md"
+      ],
+      "alias_of": "NotebookLMのマインドマップ機能のすべてを、本気で全部書く。.md"
+    },
+    "NotebookLM知ってる？ 　今すぐ上級者になれる 秘密の使い方　３選.md": {
+      "hash": "e3d923f8e47cbcf32ced96af63ec2a26",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/notebooklm.md"
+      ]
+    },
+    "NotebookLM知ってる？ 　今すぐ上級者になれる 秘密の使い方　３選": {
+      "hash": "e3d923f8e47cbcf32ced96af63ec2a26",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/notebooklm.md"
+      ],
+      "alias_of": "NotebookLM知ってる？ 　今すぐ上級者になれる 秘密の使い方　３選.md"
+    },
+    "Overview.md": {
+      "hash": "28d8d0ce5e23ff7058f62fd9440ab6f3",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/overview.md"
+      ]
+    },
+    "Overview": {
+      "hash": "28d8d0ce5e23ff7058f62fd9440ab6f3",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/overview.md"
+      ],
+      "alias_of": "Overview.md"
+    },
+    "Security Model.md": {
+      "hash": "9ade99afcfd00da4e5951afc3a8dd350",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/security-model.md"
+      ]
+    },
+    "Security Model": {
+      "hash": "9ade99afcfd00da4e5951afc3a8dd350",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/security-model.md"
+      ],
+      "alias_of": "Security Model.md"
+    },
+    "Ship It.md": {
+      "hash": "288dc4a53e8ee89419db36041d78f6f4",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ship-it.md"
+      ]
+    },
+    "Ship It": {
+      "hash": "288dc4a53e8ee89419db36041d78f6f4",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ship-it.md"
+      ],
+      "alias_of": "Ship It.md"
+    },
+    "Subagents.md": {
+      "hash": "5d067901c6f5e028a3021a7362a477e2",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/subagents.md"
+      ]
+    },
+    "Subagents": {
+      "hash": "5d067901c6f5e028a3021a7362a477e2",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/subagents.md"
+      ],
+      "alias_of": "Subagents.md"
+    },
+    "The Harness.md": {
+      "hash": "ebffbeda3197a706147ce0ab1fad8307",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/the-harness.md"
+      ]
+    },
+    "The Harness": {
+      "hash": "ebffbeda3197a706147ce0ab1fad8307",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/the-harness.md"
+      ],
+      "alias_of": "The Harness.md"
+    },
+    "The Missing Piece in Every Agent Loop.md": {
+      "hash": "3ea4b60645094f11e821cef3589de232",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/the-missing-piece-in-every-agent-loop.md"
+      ]
+    },
+    "Your First Agent.md": {
+      "hash": "e16c79746005b3eec53cc74fa3b81315",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/your-first-agent.md"
+      ]
+    },
+    "Your First Agent": {
+      "hash": "e16c79746005b3eec53cc74fa3b81315",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/your-first-agent.md"
+      ],
+      "alias_of": "Your First Agent.md"
+    },
+    "loop自動生成コマンドの裏側.md": {
+      "hash": "01911c5915a8619cb2b91015c6be7c27",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/loop.md"
+      ]
+    },
+    "loop自動生成コマンドの裏側": {
+      "hash": "01911c5915a8619cb2b91015c6be7c27",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/loop.md"
+      ],
+      "alias_of": "loop自動生成コマンドの裏側.md"
+    },
+    "メタ認知のフレームで、Claude Codeに「省察」を実装する.md": {
+      "hash": "1fb0b916c4ee40a21c10d4860ea9153d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-code.md"
+      ]
+    },
+    "メタ認知のフレームで、Claude Codeに「省察」を実装する": {
+      "hash": "1fb0b916c4ee40a21c10d4860ea9153d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-code.md"
+      ],
+      "alias_of": "メタ認知のフレームで、Claude Codeに「省察」を実装する.md"
+    },
+    "ワイヤーフレームプロンプト【コピペ用】｜ Claudeに「ルール」をおぼえさせる指示つき.md": {
+      "hash": "564c107eead6ec84bbfe1d825033c601",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude.md"
+      ]
+    },
+    "ワイヤーフレームプロンプト【コピペ用】｜ Claudeに「ルール」をおぼえさせる指示つき": {
+      "hash": "564c107eead6ec84bbfe1d825033c601",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude.md"
+      ],
+      "alias_of": "ワイヤーフレームプロンプト【コピペ用】｜ Claudeに「ルール」をおぼえさせる指示つき.md"
+    },
+    "一份普通人也能用起来的 AI 生存指南.md": {
+      "hash": "6a93d2cff322c115fb873f71b9d026fe",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai.md"
+      ]
+    },
+    "一份普通人也能用起来的 AI 生存指南": {
+      "hash": "6a93d2cff322c115fb873f71b9d026fe",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai.md"
+      ],
+      "alias_of": "一份普通人也能用起来的 AI 生存指南.md"
+    },
+    "从“生成答案”到“验证答案”，这才是AI差的那口气！.md": {
+      "hash": "5850537447fac6360d15659245629d7d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai.md"
+      ]
+    },
+    "从“生成答案”到“验证答案”，这才是AI差的那口气！": {
+      "hash": "5850537447fac6360d15659245629d7d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai.md"
+      ],
+      "alias_of": "从“生成答案”到“验证答案”，这才是AI差的那口气！.md"
+    },
+    "做了 10 多年分布式数据库，我的思维范式迁移之旅.md": {
+      "hash": "aa5074da31beeeefc547a7f5991a72aa",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "pages_created": [
+        "03-RESOURCES/sources/10.md"
+      ]
+    },
+    "做了 10 多年分布式数据库，我的思维范式迁移之旅": {
+      "hash": "aa5074da31beeeefc547a7f5991a72aa",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "pages_created": [
+        "03-RESOURCES/sources/10.md"
+      ],
+      "alias_of": "做了 10 多年分布式数据库，我的思维范式迁移之旅.md"
+    },
+    "别再只会问 AI 了：这 10 个隐藏用法，才是真正提效的地方.md": {
+      "hash": "ed8ddc85b7e6483a63c7443452f480bf",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-10.md"
+      ]
+    },
+    "别再只会问 AI 了：这 10 个隐藏用法，才是真正提效的地方": {
+      "hash": "ed8ddc85b7e6483a63c7443452f480bf",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-10.md"
+      ],
+      "alias_of": "别再只会问 AI 了：这 10 个隐藏用法，才是真正提效的地方.md"
+    },
+    "双链才是 Obsidian 的神｜一个技巧构建最佳本地知识库.md": {
+      "hash": "ed707f0e90d269668ec495f51798d16c",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/obsidian.md"
+      ]
+    },
+    "双链才是 Obsidian 的神｜一个技巧构建最佳本地知识库": {
+      "hash": "ed707f0e90d269668ec495f51798d16c",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/obsidian.md"
+      ],
+      "alias_of": "双链才是 Obsidian 的神｜一个技巧构建最佳本地知识库.md"
+    },
+    "如何用AI加速阅读学习？以便惊艳所有人.md": {
+      "hash": "94c467ffed8d1f79727009074cd4fdc7",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai.md"
+      ]
+    },
+    "如何用AI加速阅读学习？以便惊艳所有人": {
+      "hash": "94c467ffed8d1f79727009074cd4fdc7",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai.md"
+      ],
+      "alias_of": "如何用AI加速阅读学习？以便惊艳所有人.md"
+    },
+    "思考、体验了两天 Agent Loops，我们发现下面这几个场景是最高可用的。.md": {
+      "hash": "df06f2f5893f213bc65b51ee05ffe7e8",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/agent-loops.md"
+      ]
+    },
+    "思考、体验了两天 Agent Loops，我们发现下面这几个场景是最高可用的。": {
+      "hash": "df06f2f5893f213bc65b51ee05ffe7e8",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/agent-loops.md"
+      ],
+      "alias_of": "思考、体验了两天 Agent Loops，我们发现下面这几个场景是最高可用的。.md"
+    },
+    "我打造的个人AI系统：哲学基础.md": {
+      "hash": "053007b573cd73eae4c0dfa00bbf8b90",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "pages_created": [
+        "03-RESOURCES/sources/ai.md"
+      ]
+    },
+    "我打造的个人AI系统：哲学基础": {
+      "hash": "053007b573cd73eae4c0dfa00bbf8b90",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "pages_created": [
+        "03-RESOURCES/sources/ai.md"
+      ],
+      "alias_of": "我打造的个人AI系统：哲学基础.md"
+    },
+    "这个宝藏开源项目，让 Claude code 拥有了第二大脑，再也不会失忆.md": {
+      "hash": "c4c0bf87851e2af9066c78a18969d552",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-code.md"
+      ]
+    },
+    "这个宝藏开源项目，让 Claude code 拥有了第二大脑，再也不会失忆": {
+      "hash": "c4c0bf87851e2af9066c78a18969d552",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-code.md"
+      ],
+      "alias_of": "这个宝藏开源项目，让 Claude code 拥有了第二大脑，再也不会失忆.md"
+    },
+    "追工具没用，普通人真正要搭的是自己的 AI Infra.md": {
+      "hash": "0db3ccb89d784f571e03afb30dec20fd",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-infra.md"
+      ]
+    },
+    "追工具没用，普通人真正要搭的是自己的 AI Infra": {
+      "hash": "0db3ccb89d784f571e03afb30dec20fd",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-infra.md"
+      ],
+      "alias_of": "追工具没用，普通人真正要搭的是自己的 AI Infra.md"
     }
   },
   "Themis An explainable AI-enabled framework for Reinforcement Learning with Human Feedback.md": {
@@ -23436,5 +24060,727 @@
     "pages_created": [
       "03-RESOURCES/sources/install-a-skill-once-use-it-everywhere.md"
     ]
+  },
+  "clippings": {
+    "1 Introduction.md": {
+      "hash": "54e20b79bd1dff27eb481f84d68ffe0c",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/1-introduction-2.md"
+      ]
+    },
+    "1 Introduction": {
+      "hash": "54e20b79bd1dff27eb481f84d68ffe0c",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/1-introduction-2.md"
+      ]
+    },
+    "17 prompts that make Hermes run while you sleep (copy-paste inside).md": {
+      "hash": "3ba2f3347d09adecd8816b2088fb305a",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/17-prompts-that-make-hermes-run-while-you-sleep-copy-paste-inside.md"
+      ]
+    },
+    "17 prompts that make Hermes run while you sleep (copy-paste inside)": {
+      "hash": "3ba2f3347d09adecd8816b2088fb305a",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/17-prompts-that-make-hermes-run-while-you-sleep-copy-paste-inside.md"
+      ]
+    },
+    "AIエージェントハーネスとは何ですか？.md": {
+      "hash": "d13c0ce9ea6dd449a82fd8cd26ef6136",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agent-harness-databricks.md"
+      ]
+    },
+    "AIエージェントハーネスとは何ですか？": {
+      "hash": "d13c0ce9ea6dd449a82fd8cd26ef6136",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agent-harness-databricks.md"
+      ]
+    },
+    "AI用得好不好，跟你会不会管人，我觉得越来越是同一件事。.md": {
+      "hash": "c7c6813ae61f61bd3e6e8911976e906c",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-management-like-managing-people.md"
+      ]
+    },
+    "AI用得好不好，跟你会不会管人，我觉得越来越是同一件事。": {
+      "hash": "c7c6813ae61f61bd3e6e8911976e906c",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-management-like-managing-people.md"
+      ]
+    },
+    "Agent Memory 架构全景：从规则文件、会话检索到反思与技能沉淀.md": {
+      "hash": "511255813672a295e2078ba46b8c7df8",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/agent-memory-architecture-panorama.md"
+      ]
+    },
+    "Agent Memory 架构全景：从规则文件、会话检索到反思与技能沉淀": {
+      "hash": "511255813672a295e2078ba46b8c7df8",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/agent-memory-architecture-panorama.md"
+      ]
+    },
+    "Benchmarking NVIDIA BioNeMo Agent Toolkit Skills for NIM microservices.md": {
+      "hash": "a338ba41e7186798a1c95d9a2658a45b",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/benchmarking-nvidia-bionemo-agent-toolkit-skills-for-nim-microservices-2.md"
+      ]
+    },
+    "Benchmarking NVIDIA BioNeMo Agent Toolkit Skills for NIM microservices": {
+      "hash": "a338ba41e7186798a1c95d9a2658a45b",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/benchmarking-nvidia-bionemo-agent-toolkit-skills-for-nim-microservices-2.md"
+      ]
+    },
+    "Cases.md": {
+      "hash": "c42f0dfa2955039a8ac0468a267cc205",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/cases.md"
+      ]
+    },
+    "Cases": {
+      "hash": "c42f0dfa2955039a8ac0468a267cc205",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/cases.md"
+      ]
+    },
+    "Claude Codeで𝕏・スレッズを自動運用する方法.md": {
+      "hash": "9b7827f0aaac8f3fa12ed69aebba0f9b",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-code-sns-auto-operation.md"
+      ]
+    },
+    "Claude Codeで𝕏・スレッズを自動運用する方法": {
+      "hash": "9b7827f0aaac8f3fa12ed69aebba0f9b",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-code-sns-auto-operation.md"
+      ]
+    },
+    "Claude 零基础使用指南：别再把它当搜索框，先搭一个会记住你的工作台.md": {
+      "hash": "12ad23ff792bd669650d293a510e4628",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-zero-base-workbench-guide.md"
+      ]
+    },
+    "Claude 零基础使用指南：别再把它当搜索框，先搭一个会记住你的工作台": {
+      "hash": "12ad23ff792bd669650d293a510e4628",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-zero-base-workbench-guide.md"
+      ]
+    },
+    "Claudeのアーティファクトって何？正直ナメてたけど、これは便利です.md": {
+      "hash": "52f695279a6ae6d89903fc8b9a83a50c",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-artifacts-practical-guide.md"
+      ]
+    },
+    "Claudeのアーティファクトって何？正直ナメてたけど、これは便利です": {
+      "hash": "52f695279a6ae6d89903fc8b9a83a50c",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-artifacts-practical-guide.md"
+      ]
+    },
+    "Cloudflare“赛博菩萨”的免费额度，白嫖了一整套互联网基础设施.md": {
+      "hash": "3196dc9793dae1e463880446f68b01ee",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/cloudflare-cyber-bodhisattva-free-tier.md"
+      ]
+    },
+    "Cloudflare“赛博菩萨”的免费额度，白嫖了一整套互联网基础设施": {
+      "hash": "3196dc9793dae1e463880446f68b01ee",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/cloudflare-cyber-bodhisattva-free-tier.md"
+      ]
+    },
+    "General Agent A Self-Evolving, Synthetic Agent Environment.md": {
+      "hash": "84750f48386ddfbc2b447b8355ad8443",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/general-agent-self-evolving-synthetic-environment.md"
+      ]
+    },
+    "General Agent A Self-Evolving, Synthetic Agent Environment": {
+      "hash": "84750f48386ddfbc2b447b8355ad8443",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/general-agent-self-evolving-synthetic-environment.md"
+      ]
+    },
+    "Instructions.md": {
+      "hash": "184a454dfc4f92e8214563853857d223",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/instructions-eve-docs.md"
+      ]
+    },
+    "Instructions": {
+      "hash": "184a454dfc4f92e8214563853857d223",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/instructions-eve-docs.md"
+      ]
+    },
+    "Introducing eve.md": {
+      "hash": "9b8442a5842dc210be22f449f1647260",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/introducing-eve-vercel.md"
+      ]
+    },
+    "Introducing eve": {
+      "hash": "9b8442a5842dc210be22f449f1647260",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/introducing-eve-vercel.md"
+      ]
+    },
+    "Judge.md": {
+      "hash": "4b37cbef1b309a64ec17612104768fa6",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/judge-eve-llm-judge.md"
+      ]
+    },
+    "Judge": {
+      "hash": "4b37cbef1b309a64ec17612104768fa6",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/judge-eve-llm-judge.md"
+      ]
+    },
+    "Messages.md": {
+      "hash": "684715a291abc07aff4dbddd0e66bba8",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/messages-eve-client.md"
+      ]
+    },
+    "Messages": {
+      "hash": "684715a291abc07aff4dbddd0e66bba8",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/messages-eve-client.md"
+      ]
+    },
+    "Next.js.md": {
+      "hash": "7fcaa4f11cb1dc7e8aa6ec1efba645e1",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/next-js-eve-integration.md"
+      ]
+    },
+    "Next.js": {
+      "hash": "7fcaa4f11cb1dc7e8aa6ec1efba645e1",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/next-js-eve-integration.md"
+      ]
+    },
+    "NotebookLMのマインドマップ機能のすべてを、本気で全部書く。.md": {
+      "hash": "b57d890b1298edfb2b6821d2d3468cc0",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/notebooklm-mindmap-custom-prompt.md"
+      ]
+    },
+    "NotebookLMのマインドマップ機能のすべてを、本気で全部書く。": {
+      "hash": "b57d890b1298edfb2b6821d2d3468cc0",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/notebooklm-mindmap-custom-prompt.md"
+      ]
+    },
+    "NotebookLM知ってる？ 　今すぐ上級者になれる 秘密の使い方　３選.md": {
+      "hash": "e3d923f8e47cbcf32ced96af63ec2a26",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/notebooklm-3-secret-uses.md"
+      ]
+    },
+    "NotebookLM知ってる？ 　今すぐ上級者になれる 秘密の使い方　３選": {
+      "hash": "e3d923f8e47cbcf32ced96af63ec2a26",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/notebooklm-3-secret-uses.md"
+      ]
+    },
+    "Overview.md": {
+      "hash": "28d8d0ce5e23ff7058f62fd9440ab6f3",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/overview-eve-evals.md"
+      ]
+    },
+    "Overview": {
+      "hash": "28d8d0ce5e23ff7058f62fd9440ab6f3",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/overview-eve-evals.md"
+      ]
+    },
+    "Security Model.md": {
+      "hash": "9ade99afcfd00da4e5951afc3a8dd350",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/security-model-eve.md"
+      ]
+    },
+    "Security Model": {
+      "hash": "9ade99afcfd00da4e5951afc3a8dd350",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/security-model-eve.md"
+      ]
+    },
+    "Ship It.md": {
+      "hash": "288dc4a53e8ee89419db36041d78f6f4",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/ship-it-eve-deploy.md"
+      ]
+    },
+    "Ship It": {
+      "hash": "288dc4a53e8ee89419db36041d78f6f4",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/ship-it-eve-deploy.md"
+      ]
+    },
+    "Subagents.md": {
+      "hash": "5d067901c6f5e028a3021a7362a477e2",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/subagents-eve.md"
+      ]
+    },
+    "Subagents": {
+      "hash": "5d067901c6f5e028a3021a7362a477e2",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/subagents-eve.md"
+      ]
+    },
+    "The Harness.md": {
+      "hash": "ebffbeda3197a706147ce0ab1fad8307",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/the-harness-eve-default.md"
+      ]
+    },
+    "The Harness": {
+      "hash": "ebffbeda3197a706147ce0ab1fad8307",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/the-harness-eve-default.md"
+      ]
+    },
+    "The Missing Piece in Every Agent Loop.md": {
+      "hash": "3ea4b60645094f11e821cef3589de232",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/the-missing-piece-in-every-agent-loop.md"
+      ]
+    },
+    "The Missing Piece in Every Agent Loop": {
+      "hash": "3ea4b60645094f11e821cef3589de232",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/the-missing-piece-in-every-agent-loop.md"
+      ]
+    },
+    "The principles of extreme fault tolerance.md": {
+      "hash": "330709bf6157fcb7730cc6716cf93d99",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/the-principles-of-extreme-fault-tolerance.md"
+      ]
+    },
+    "The principles of extreme fault tolerance": {
+      "hash": "330709bf6157fcb7730cc6716cf93d99",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/the-principles-of-extreme-fault-tolerance.md"
+      ]
+    },
+    "Your First Agent.md": {
+      "hash": "e16c79746005b3eec53cc74fa3b81315",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/your-first-agent-eve.md"
+      ]
+    },
+    "Your First Agent": {
+      "hash": "e16c79746005b3eec53cc74fa3b81315",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/your-first-agent-eve.md"
+      ]
+    },
+    "loop自動生成コマンドの裏側.md": {
+      "hash": "01911c5915a8619cb2b91015c6be7c27",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/loop-makeloop-internals.md"
+      ]
+    },
+    "loop自動生成コマンドの裏側": {
+      "hash": "01911c5915a8619cb2b91015c6be7c27",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/loop-makeloop-internals.md"
+      ]
+    },
+    "メタ認知のフレームで、Claude Codeに「省察」を実装する.md": {
+      "hash": "1fb0b916c4ee40a21c10d4860ea9153d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/metacognition-claude-code-reflection.md"
+      ]
+    },
+    "メタ認知のフレームで、Claude Codeに「省察」を実装する": {
+      "hash": "1fb0b916c4ee40a21c10d4860ea9153d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/metacognition-claude-code-reflection.md"
+      ]
+    },
+    "ワイヤーフレームプロンプト【コピペ用】｜ Claudeに「ルール」をおぼえさせる指示つき.md": {
+      "hash": "564c107eead6ec84bbfe1d825033c601",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/wireframe-prompt-claude-skill.md"
+      ]
+    },
+    "ワイヤーフレームプロンプト【コピペ用】｜ Claudeに「ルール」をおぼえさせる指示つき": {
+      "hash": "564c107eead6ec84bbfe1d825033c601",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/wireframe-prompt-claude-skill.md"
+      ]
+    },
+    "一份普通人也能用起来的 AI 生存指南.md": {
+      "hash": "6a93d2cff322c115fb873f71b9d026fe",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-survival-guide-normal-people.md"
+      ]
+    },
+    "一份普通人也能用起来的 AI 生存指南": {
+      "hash": "6a93d2cff322c115fb873f71b9d026fe",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-survival-guide-normal-people.md"
+      ]
+    },
+    "从“生成答案”到“验证答案”，这才是AI差的那口气！.md": {
+      "hash": "5850537447fac6360d15659245629d7d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/from-generate-to-verify-ai.md"
+      ]
+    },
+    "从“生成答案”到“验证答案”，这才是AI差的那口气！": {
+      "hash": "5850537447fac6360d15659245629d7d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/from-generate-to-verify-ai.md"
+      ]
+    },
+    "做了 10 多年分布式数据库，我的思维范式迁移之旅.md": {
+      "hash": "aa5074da31beeeefc547a7f5991a72aa",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/distributed-db-paradigm-migration.md"
+      ]
+    },
+    "做了 10 多年分布式数据库，我的思维范式迁移之旅": {
+      "hash": "aa5074da31beeeefc547a7f5991a72aa",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/distributed-db-paradigm-migration.md"
+      ]
+    },
+    "别再只会问 AI 了：这 10 个隐藏用法，才是真正提效的地方.md": {
+      "hash": "ed8ddc85b7e6483a63c7443452f480bf",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-10-hidden-uses-for-efficiency.md"
+      ]
+    },
+    "别再只会问 AI 了：这 10 个隐藏用法，才是真正提效的地方": {
+      "hash": "ed8ddc85b7e6483a63c7443452f480bf",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-10-hidden-uses-for-efficiency.md"
+      ]
+    },
+    "双链才是 Obsidian 的神｜一个技巧构建最佳本地知识库.md": {
+      "hash": "ed707f0e90d269668ec495f51798d16c",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/obsidian-bidirectional-links-mastery.md"
+      ]
+    },
+    "双链才是 Obsidian 的神｜一个技巧构建最佳本地知识库": {
+      "hash": "ed707f0e90d269668ec495f51798d16c",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/obsidian-bidirectional-links-mastery.md"
+      ]
+    },
+    "如何用AI加速阅读学习？以便惊艳所有人.md": {
+      "hash": "94c467ffed8d1f79727009074cd4fdc7",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-accelerated-reading-learning.md"
+      ]
+    },
+    "如何用AI加速阅读学习？以便惊艳所有人": {
+      "hash": "94c467ffed8d1f79727009074cd4fdc7",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-accelerated-reading-learning.md"
+      ]
+    },
+    "思考、体验了两天 Agent Loops，我们发现下面这几个场景是最高可用的。.md": {
+      "hash": "df06f2f5893f213bc65b51ee05ffe7e8",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/agent-loops-most-usable-scenarios.md"
+      ]
+    },
+    "思考、体验了两天 Agent Loops，我们发现下面这几个场景是最高可用的。": {
+      "hash": "df06f2f5893f213bc65b51ee05ffe7e8",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/agent-loops-most-usable-scenarios.md"
+      ]
+    },
+    "我打造的个人AI系统：哲学基础.md": {
+      "hash": "053007b573cd73eae4c0dfa00bbf8b90",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/personal-ai-system-philosophy.md"
+      ]
+    },
+    "我打造的个人AI系统：哲学基础": {
+      "hash": "053007b573cd73eae4c0dfa00bbf8b90",
+      "ingested_at": "2026-06-24",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/personal-ai-system-philosophy.md"
+      ]
+    },
+    "这个宝藏开源项目，让 Claude code 拥有了第二大脑，再也不会失忆.md": {
+      "hash": "c4c0bf87851e2af9066c78a18969d552",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-obsidian-second-brain.md"
+      ]
+    },
+    "这个宝藏开源项目，让 Claude code 拥有了第二大脑，再也不会失忆": {
+      "hash": "c4c0bf87851e2af9066c78a18969d552",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-obsidian-second-brain.md"
+      ]
+    },
+    "追工具没用，普通人真正要搭的是自己的 AI Infra.md": {
+      "hash": "0db3ccb89d784f571e03afb30dec20fd",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/personal-ai-infra-6-layers.md"
+      ]
+    },
+    "追工具没用，普通人真正要搭的是自己的 AI Infra": {
+      "hash": "0db3ccb89d784f571e03afb30dec20fd",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/personal-ai-infra-6-layers.md"
+      ]
+    }
   }
 }

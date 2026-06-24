@@ -152,3 +152,4 @@ Ingere transcritos de vídeos financeiros do YouTube no NotebookLM, depois consu
 ## Evidências
 
 - **[2026-06-21]** A progressão da IA é chatbot (2023) → copiloto (2024) → agente (2025) → infraestrutura pessoal (2026). Personal AI Infrastructure (PAI) — life OS construído sobre Claude Code, com 12.100 stars/1.700 forks — exemplifica essa última camada... — [[a-developer-built-an-operating-system-for-his-life-on-top-of-claude-it-saves-him]]
+- **[2026-06-24]** Sistema AI pessoal = 'thinking OS' que maximiza AI mas mantém humano como sujeito. Princípios: solução para dor real,... — [[personal-ai-system-philosophy]]

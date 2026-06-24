@@ -275,3 +275,5 @@ Loop engineering é a busca pelo verificador que um tipo de trabalho nunca veio 
 - **[2026-06-23 run2]** Robust Agent Compensation (RAC): agentes aprendem a compensar limitações dentro do loop — [[robust-agent-compensation-rac-teaching-ai-agents-to-compensate]]
 - **[2026-06-23 run2]** Google engineer 19-page PDF formalizing Loop Engineering (Act→Observe→Learn→Repeat) — [[movez-on-x-a-senior-google-engineer-just-dropped-a-19-page-pdf-on-loop-engineeri]]
 - **[2026-06-23 run2]** Ver [[03-RESOURCES/concepts/ai-agents/loop-engineering-maturity]] para 6 estágios de maturidade (pattern → architecture → skill → routing → governance → compensation)
+- **[2026-06-24]** /makeloop gera loop prompts lendo conversation + codebase. Separa closed loop (goal+verify+stop) de open loop... — [[loop-makeloop-internals]]
+- **[2026-06-24]** Agent Loops = reason→act→observe→repeat com goal+action+stop. 7 cenários mais utilizáveis: research→artifact, creative... — [[agent-loops-most-usable-scenarios]]

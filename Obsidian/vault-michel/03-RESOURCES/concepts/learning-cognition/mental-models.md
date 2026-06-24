@@ -45,3 +45,4 @@ The goal is to hold more fundamental models, especially for high-stakes decision
 
 ## Evidências
 - **[2026-06-24]** This is the fifth article in a series about Agent Experience (AX): the practice of making AI coding agents work correctl — [[when-the-model-has-never-seen-your-code]]
+- **[2026-06-24]** Implementando camada de metacognição (reflection/) em Claude Code: decisions-log.md... — [[metacognition-claude-code-reflection]]

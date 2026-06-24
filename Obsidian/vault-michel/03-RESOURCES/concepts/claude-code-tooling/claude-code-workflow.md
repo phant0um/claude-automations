@@ -177,3 +177,7 @@ Fonte completa: [[03-RESOURCES/sources/35-claude-code-commands-tricks-workflows]
 - [[03-RESOURCES/sources/35-claude-code-commands-tricks-workflows]] — 35 técnicas avançadas (tabelas completas)
 - [[03-RESOURCES/sources/skills-prompting-mcp/clipping-claudemd-senior-engineer-srishticodes]] — workflows de [[03-RESOURCES/entities/Boris-Cherny]]; self-improvement loop; autonomous bug fixing como extensão do EPCC
 - [[03-RESOURCES/sources/skills-prompting-mcp/boris-cherny-claude-md-anatomy]] — 13 princípios numerados de Cherny; tabela verbatim → significado prático; adiciona Minimal Impact como regra explícita (#13)
+
+## Evidências
+- **[2026-06-24]** SNS não cresce por falta de sistema, não de talento. Claude Code + 3 materiais (口調/型/ネタ) = pipeline de conteúdo... — [[claude-code-sns-auto-operation]]
+- **[2026-06-24]** Artifacts é prototipagem rápida visível/tocável, não app de produção. Ideal para: screenshot → mockup, ferramentas... — [[claude-artifacts-practical-guide]]

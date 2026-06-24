@@ -111,3 +111,9 @@ Stages 1–3 são "old hat" na terminologia de @trashpandaemoji. Stage 5 é o qu
 
 - **[2026-06-24]** This post is about Loops. And TypeScript. In fact, it covers a few things:A bad pattern I found in our codebaseWhy the p — [[loops-are-dead-and-typescript-sucks]]
 - [[03-RESOURCES/sources/how-it-runs]] — eve modela turn como durable workflow com steps; completed steps never re-run, eve replays recorded result
+- **[2026-06-24]** Hermes é um runtime persistente, não um workflow — os prompts que você dá no dia 1 é que transformam o repo em... — [[17-prompts-that-make-hermes-run-while-you-sleep-copy-paste-inside]]
+- **[2026-06-24]** Agent = Modelo + Harness. O harness (ferramentas, memória, sandbox, guardrails, loops de feedback) é o que transforma... — [[ai-agent-harness-databricks]]
+- **[2026-06-24]** Default harness = agent loop + built-in tools (bash, read_file, write_file, glob, grep, web_fetch, web_search, todo,... — [[the-harness-eve-default]]
+- **[2026-06-24]** Agent loops (/loop, /goal) sem external validator geram 'Beautiful Nonsense' — output que passa toda validação interna... — [[the-missing-piece-in-every-agent-loop]]
+- **[2026-06-24]** /makeloop gera loop prompts lendo conversation + codebase. Separa closed loop (goal+verify+stop) de open loop... — [[loop-makeloop-internals]]
+- **[2026-06-24]** Agent Loops = reason→act→observe→repeat com goal+action+stop. 7 cenários mais utilizáveis: research→artifact, creative... — [[agent-loops-most-usable-scenarios]]

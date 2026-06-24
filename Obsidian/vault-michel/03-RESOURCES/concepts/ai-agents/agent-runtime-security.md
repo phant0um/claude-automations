@@ -62,3 +62,5 @@ O runtime de agentes autônomos (harness, tool execution layer, memory subsystem
 - [[03-RESOURCES/concepts/ai-agents/security]]
 - [[03-RESOURCES/concepts/ai-agents/skill]]
 - [[03-RESOURCES/concepts/ai-agents/memory]]
+- **[2026-06-24]** Eve separa app runtime (trusted, secrets, Node.js) de sandbox (isolated, no secrets, /workspace). Auth fails closed.... — [[security-model-eve]]
+- **[2026-06-24]** Fault tolerance extrema = Isolation + Redundancy + Static Stability. PlanetScale: control plane (mais dependências) vs... — [[the-principles-of-extreme-fault-tolerance]]

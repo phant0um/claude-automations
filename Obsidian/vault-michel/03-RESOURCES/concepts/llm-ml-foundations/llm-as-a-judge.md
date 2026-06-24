@@ -76,3 +76,5 @@ LLM-as-a-Judge é 1 de 29 conceitos no framework completo de eval para engineers
 - **[2026-06-22]** Modelo A descobre vulnerabilidade, modelo B (diferente provedor) valida — força avaliação por pesos lógicos/dados de treino distintos, evitando que o modelo "grade sua própria homework". — [[03-RESOURCES/sources/build-your-own-vulnerability-harness]]
 - **[2026-06-24]** Scaling adversarial evaluation of large language models requires two things at once: a way to genera — [[adversabench-automated-llm-red-teaming]]
 - **[2026-06-24]** Loka transformed customer voice interactions by building a conversational AI agent with Amazon Nova  — [[how-loka-built-a-natural-low-latency-voice-agent-with-amazon-nova-2-sonic]]
+- **[2026-06-24]** t.judge.autoevals são assertions model-backed com judge model separado do agente sob teste — 4 graders (factuality,... — [[judge-eve-llm-judge]]
+- **[2026-06-24]** Eve evals = scored checks que rodam agente contra sessions reais via HTTP surface, capturando regressões em prompt/tool... — [[overview-eve-evals]]

@@ -54,3 +54,5 @@ Michel's vault uses orchestration daily: Nexus dispatches ingest jobs to subagen
 
 - **[2026-06-24]** This two-part series explores how ontology-grounded agentic AI transforms Design Failure Mode and Effects Analysis (DFME — [[reimagining-b-pillar-dfmea-why-ontology-grounded-ai-is-the-future-of-automotive-engineering]]
 - [[03-RESOURCES/sources/snowflake-aim-migration-agent-automating-enterprise-migrations]] — Orquestração de migração enterprise com estado persistente, deployment waves por dependências
+- **[2026-06-24]** Subagents = child agents para subtask focada. 2 tipos: built-in agent tool (cópia do agente, shared sandbox) e declared... — [[subagents-eve]]
+- **[2026-06-24]** Deep Research fracassa porque gera, não verifica. Próxima etapa = Discoverative Intelligence: agent team com roles... — [[from-generate-to-verify-ai]]

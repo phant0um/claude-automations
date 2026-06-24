@@ -43,3 +43,12 @@ Todo skill do vault-michel é prompt engineering aplicado: o bloco de instruçõ
 - [[03-RESOURCES/concepts/claude-code-tooling/_index]]
 - [[03-RESOURCES/concepts/claude-code-tooling/skills-system]]
 - [[03-RESOURCES/concepts/claude-md-behavioral-contract]]
+
+## Evidências
+- **[2026-06-24]** Gerenciar AI de diferentes níveis de capacidade requer o mesmo skill que gerenciar pessoas de diferentes níveis —... — [[ai-management-like-managing-people]]
+- **[2026-06-24]** Claude é uma workbench de longo prazo, não search box. 10 passos: Project → identity → Instructions → Memory →... — [[claude-zero-base-workbench-guide]]
+- **[2026-06-24]** Instructions são system prompt always-on (identidade permanente), vs skills (on-demand). Eve prepende instructions a... — [[instructions-eve-docs]]
+- **[2026-06-24]** Tutorial eve: scaffold → set model → analyst persona → run. npx eve init cria agente com dev server, agent.ts define... — [[your-first-agent-eve]]
+- **[2026-06-24]** Wireframe prompt como skill registrada no Claude: layout+design+writing rules em 1 prompt → zip → save → reusável com 1... — [[wireframe-prompt-claude-skill]]
+- **[2026-06-24]** AI é difícil porque você não começou. 4 levels: deixe AI perguntar → use voz → gere arquivos → conecte ferramentas (com... — [[ai-survival-guide-normal-people]]
+- **[2026-06-24]** 10 usos não-óbvios de AI que valem mais que 100 prompts: AI pergunta primeiro, preferences em memory, workspace por... — [[ai-10-hidden-uses-for-efficiency]]

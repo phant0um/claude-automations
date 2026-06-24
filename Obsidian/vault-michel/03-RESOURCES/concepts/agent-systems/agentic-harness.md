@@ -51,3 +51,4 @@ Fewer moving parts = more predictable behavior. Each added layer (hook, permissi
 - [[03-RESOURCES/concepts/agent-systems/agent-governance-layers]]
 - [[03-RESOURCES/concepts/agent-systems/context-management]]
 - [[03-RESOURCES/concepts/agent-systems/_index]]
+- **[2026-06-24]** Default harness = agent loop + built-in tools (bash, read_file, write_file, glob, grep, web_fetch, web_search, todo,... — [[the-harness-eve-default]]

@@ -40,3 +40,4 @@ Isolar tool calls do agent loop. O agent (LLM + loop) roda em infraestrutura do 
 
 - [[03-RESOURCES/concepts/ai-agents/agent-loop-pattern]]
 - [[04-SYSTEM/agents/core/guard]]
+- **[2026-06-24]** Eve separa app runtime (trusted, secrets, Node.js) de sandbox (isolated, no secrets, /workspace). Auth fails closed.... — [[security-model-eve]]

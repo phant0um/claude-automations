@@ -89,3 +89,4 @@ Personas existem em **escala de bilhões** → metodologia pode escalar para mil
 ## Perspectivas
 
 - **[2026-06-21]** Geração de ambiente via grafo de dependências generaliza out-of-domain (não overfita ao benchmark de treino) — relevante se o Nexus explorar simulação de testes para os próprios agentes. — [[autoforge-automated-environment-synthesis-for-agentic-reinforcement-learning]]
+- **[2026-06-24]** Ambiente sintético auto-evolutivo de 2 jogadores (Synthesizer + Solver) gera corpus de 4,504 tasks em 1,040 domínios... — [[general-agent-self-evolving-synthetic-environment]]

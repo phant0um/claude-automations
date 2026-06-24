@@ -117,3 +117,4 @@ Agentes falham por arquitetura, não inteligência:
 ## Perspectivas
 
 - **[2026-06-21]** Os 15 níveis progressivos (chatbot → autonomia 24/7) mostram que a maioria dos usuários de agentes pessoais nunca passa do nível 1 — o gap não é capacidade do modelo, é desenho de workflow. — [[15-levels-of-hermes-agent-from-chatbot-to-247-autonomous-system]]
+- **[2026-06-24]** Hermes é um runtime persistente, não um workflow — os prompts que você dá no dia 1 é que transformam o repo em... — [[17-prompts-that-make-hermes-run-while-you-sleep-copy-paste-inside]]
