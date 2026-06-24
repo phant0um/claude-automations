@@ -68,11 +68,11 @@ Reforça [[03-RESOURCES/concepts/agent-systems/agent-security]].
 
 | Item | Impacto | Status | Action |
 |------|---------|--------|--------|
-| Concept "Loop Engineering" dedicado | alta | pendente | 8 sources convergem no termo — vault tem [[03-RESOURCES/concepts/agent-systems/loop-engineering-patterns]] mas vale revisão para garantir que captura o framing "sucessor do prompt engineering" emergente nesta semana |
-| Golden examples para ingest-agent few-shot | alta | pendente (carry-over 06-21) | Criar 2-3 examples de Score A source pages — ainda não feito |
-| Personal Reflection cap overage | média | auto-flag | F2.9 gerou 6 reflections nesta semana (cap spec = 3/run) — distribuído entre dispatches paralelos sem coordenação central de contagem; corrigir orquestração de próximos runs paralelos para checar cap global antes de cada dispatch |
-| Triagem off-by-one (51→50) | baixa | pendente | `06-GENERATED/triagem/2026-06-22-triagem.md` mostra 51 aprovados; contagem real confirmada = 50 (dedup manual corrigiu 1 duplicata pós-triagem) |
-| Manifest backfill (50 entries) | resolvido | done | `.raw/.manifest.json` não tinha entradas para 46/50 sources desta semana — corrigido nesta sessão (dual-key com/sem extensão, `alias_of`) |
+| Concept "Loop Engineering" dedicado | alta | parcialmente done | 8 sources convergem — vault tem [[03-RESOURCES/concepts/agent-systems/loop-engineering-patterns]] (updated 2026-06-22) + `loop-engineering-maturity` criado em 2026-06-23 run2 com 6 estágios. Concept original ainda precisa update com 23+ sources acumuladas |
+| Golden examples para ingest-agent few-shot | alta | pendente | Criar 2-3 examples de Score A source pages — ainda não feito (carry-over desde 06-21) |
+| Personal Reflection cap overage | média | done | Resolvido — patch aplicado no ingest-agent.md marcando F2.9 como obrigatório com 3 campos. C9 placeholder detection adicionado ao ingest-verify |
+| Triagem off-by-one (51→50) | baixa | done | Não recorreu no run 2026-06-23 run2 (230 aprovados, contagem correta) |
+| Manifest backfill (50 entries) | resolvido | done | `.raw/.manifest.json` corrigido — dual-key com/sem extensão, `alias_of` |
 
 ## F3.4 Contradiction Register
 

@@ -100,13 +100,13 @@ IC3 paper: a maioria das plataformas de AI agents não tem evidência de trading
 
 | Item | Tipo | Prioridade | Esforço | Status |
 |------|------|-----------|---------|--------|
-| Atualizar [[03-RESOURCES/concepts/agent-systems/loop-engineering-patterns]] com 4+ novas sources (Foundry, OpenEnv, Pi LoopFlows) | Concept enrichment | alta | horas | pendente |
-| `agent-oversight-layers` — novo concept unindo OpenSigil, IFC, MosaicLeaks | Concept creation | alta | horas | pendente |
+| Atualizar [[03-RESOURCES/concepts/agent-systems/loop-engineering-patterns]] com 4+ novas sources (Foundry, OpenEnv, Pi LoopFlows) | Concept enrichment | alta | horas | pendente — 23+ sources acumuladas, criado `loop-engineering-maturity` complementar em 2026-06-23 run2 mas concept original ainda não atualizado |
+| `agent-oversight-layers` — novo concept unindo OpenSigil, IFC, MosaicLeaks | Concept creation | alta | horas | pendente — parcialmente coberto por `agent-runtime-security` criado em 2026-06-23 run2 (6 camadas de ameaça) |
 | `sparse-inference-optimization` — novo concept unindo TwELL, GGUF, MLX, diffusion-based | Concept creation | média | horas | pendente |
-| `bruno-api-tooling` — entity para Bruno (7 sources nesta run) | Entity creation | média | meia | pendente |
+| `bruno-api-tooling` — entity para Bruno (7 sources nesta run) | Entity creation | média | meia | pendente — existe `brunobertolini` (pessoa) mas não `bruno-api-tooling` (ferramenta) |
 | Auditar Hermes Skills por trigger quality — "How to Build a Claude Skill" recomenda checar descriptions vagas | Skill audit | média | dias | pendente |
 | `agent-benchmarking-frameworks` — concept unindo "is it agentic enough", Terminal Bench, LifeSciBench | Concept creation | baixa | horas | pendente |
-| Orphan rate 68% nos novos — acionar [[04-SYSTEM/skills/vault-michel/connection-finder]] | Connection repair | alta | dias | pendente |
+| Orphan rate 68% nos novos — acionar [[04-SYSTEM/skills/vault-michel/connection-finder]] | Connection repair | alta | dias | parcialmente done — link repair em 2026-06-23 run2 resolveu 1215/1215 wikilinks, mas backlinks incoming ainda ~90% |
 
 ---
 

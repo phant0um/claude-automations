@@ -70,17 +70,17 @@ verdict: PIPELINE OK
 
 ## F3.3 Vault Impact
 
-| Melhoria | Prioridade | Esforço | Status | Fonte |
-|----------|-----------|---------|--------|-------|
-| Concept: agent-runtime-security | alta | 2h | pendente | [[local-llm-agents-as-vulnerable-runtimes]] |
-| Concept: speculative-decoding-patterns | alta | 2h | pendente | [[boost-inference-performance-up-to-15x]] |
-| Concept: llm-as-judge-audit | alta | 1h | pendente | [[aura-adaptive-uncertainty-aware-refinement]] |
-| Concept: agent-memory-architecture | média | 3h | pendente | [[managing-procedural-memory-in-llm-agents]] |
-| Skill: adversarial-gate-v2 | média | 4h | pendente | [[rigorbench-benchmarking-engineering-process-discipline]] |
-| Entity: Apple-Neural-Engine | baixa | 30min | pendente | [[aneforge-python-for-direct-computation]] |
-| Concept: loop-engineering-maturity | alta | 2h | pendente | [[build-the-loop-not-the-agent]] |
-| Concept: beautiful-nonsense (from prev run) | alta | 1h | pendente | ver hot.md run anterior |
-| Concept: thermodynamic-computing | baixa | 1h | pendente | [[energy-efficient-codon-optimization]] |
+| Melhoria                                    | Prioridade | Esforço | Status   | Fonte                                                      |
+| ------------------------------------------- | ---------- | ------- | -------- | ---------------------------------------------------------- |
+| Concept: agent-runtime-security             | alta       | 2h      | done     | [[local-llm-agents-as-vulnerable-runtimes]]                |
+| Concept: speculative-decoding-patterns      | alta       | 2h      | done     | [[boost-inference-performance-up-to-15x]]                  |
+| Concept: llm-as-judge-audit                 | alta       | 1h      | done     | [[aura-adaptive-uncertainty-aware-refinement]]             |
+| Concept: agent-memory-architecture          | média      | 3h      | done     | [[managing-procedural-memory-in-llm-agents]]               |
+| Skill: adversarial-gate-v2                  | média      | 4h      | done     | [[rigorbench-benchmarking-engineering-process-discipline]] |
+| Entity: Apple-Neural-Engine                 | baixa      | 30min   | done     | [[aneforge-python-for-direct-computation]]                 |
+| Concept: loop-engineering-maturity          | alta       | 2h      | done     | [[build-the-loop-not-the-agent]]                           |
+| Concept: beautiful-nonsense (from prev run) | alta       | 1h      | done     | ver hot.md run anterior                                    |
+| Concept: thermodynamic-computing            | baixa      | 1h      | done     | [[energy-efficient-codon-optimization]]                    |
 
 ## F3.4 Contradiction Register
 
