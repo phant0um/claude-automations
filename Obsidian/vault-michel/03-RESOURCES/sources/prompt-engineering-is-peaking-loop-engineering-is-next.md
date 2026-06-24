@@ -51,8 +51,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Codex]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Prompt engineering está peaking; loop engineering é o próximo — projetar o sistema que prompts o modelo (work routing, verification, memory survival) em vez de otimizar prompts individuais; um engineer de loop melhora milhares de tarefas.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Esta é a transição que o vault já está fazendo — CLAUDE.md e skills são loop engineering, não prompt engineering; o Hermes Agent é o loop system.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Focar em melhorar o loop (routing, verification, memory) em vez de gastar mais tempo otimizando prompts individuais no vault.

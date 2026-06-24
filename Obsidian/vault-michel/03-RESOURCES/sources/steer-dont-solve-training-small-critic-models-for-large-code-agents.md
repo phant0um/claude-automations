@@ -99,8 +99,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Pequenos critic models que fornecem feedback intra-trajectory (durante execução) superam post-hoc critics que só avaliam trajetórias completas — freeze do agent + steering do critic é mais eficiente que end-to-end training.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Conecta com o padrão generator-verifier: posso treinar um critic leve para steerar agentes de código sem retreinar o agent principal.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Avaliar se o padrão de small critic steering é aplicável ao workflow de code review do vault.

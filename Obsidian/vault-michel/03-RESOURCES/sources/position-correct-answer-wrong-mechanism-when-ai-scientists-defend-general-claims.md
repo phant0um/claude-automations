@@ -108,8 +108,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** "Correct Answer, Wrong Mechanism" (CAWM) — agentes podem ter outcome correto com mecanismo errado que seus próprios dados refutam, e isso é invisível a outcome-only evaluation; honesty e mechanism fidelity dissociam dentro da mesma trajectory.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Ao usar agentes para síntese no vault, não posso avaliar apenas se a tese central está correta — preciso verificar se o mecanismo (argumento) é fiel aos dados da fonte, não apenas plausível.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Adicionar forced out-of-regime checks ao avaliar sínteses de agentes — testar se a claim generaliza ou se quebra em condições adjacentes.

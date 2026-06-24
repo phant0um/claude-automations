@@ -87,8 +87,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Rust]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Model routing (escolher modelo por task, não default para o mais caro) é a alavanca de custo — o top 1% das firms gasta $90k/ano/dev em AI vs $11/mês na mediana, e quem roteia bem paga fração do custo pelo mesmo resultado.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Diretamente aplicável: posso reduzir custo do vault roteando planning para modelo forte e execution para modelo barato/open-weight.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Implementar model routing no Hermes agent — planejamento com modelo frontier, execução com modelo open-weight ou local.

@@ -100,8 +100,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/AWS]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Sistemas agenticos devem ser projetados como economias de alocação marginal de tokens — router, agent, serving e training são fatias verticais de uma única equação com quatro preços diferentes (custo, latência, risco, ganho de capacidade).
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O conceito de token-economy conecta diretamente com o concept de [[03-RESOURCES/concepts/agent-systems/token-economy]] no vault — a ideia de que falhas recorrentes são corner cases quando um preço é mis-set.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Avaliar se o Hermes Agent pode expor shadow prices (de latência, risco) para upstream allocators tomarem decisões melhores.

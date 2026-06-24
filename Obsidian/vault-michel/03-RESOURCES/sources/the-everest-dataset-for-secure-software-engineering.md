@@ -126,8 +126,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Segurança de software precisa cobrir requirements→architecture→code end-to-end; datasets que faltam esse encadeamento impedem pesquisa de verificação de segurança integrada.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Reforça que segurança não é só code scanning — preciso pensar em requirements classification e trace linking ao projetar pipelines de verificação.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Explorar o dataset EVerest para entender como structured security requirements se conectam a architecture models.

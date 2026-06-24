@@ -111,8 +111,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/AWS]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** GQL e SQL/PGQ têm gaps de composicionalidade — #Datalog com RPQVs preenche esses gaps capturando todas as queries em NLOGSPACE, propondo mudanças backward-compatible ao ISO.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** A composicionalidade é um princípio que se aplica ao vault — queries Obsidian (Dataview, links) precisam ser composicionais para que resultados intermédios possam ser reusados.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Avaliar se #Datalog pode inspirar patterns de query composicional no vault para cross-referencing entre concepts.

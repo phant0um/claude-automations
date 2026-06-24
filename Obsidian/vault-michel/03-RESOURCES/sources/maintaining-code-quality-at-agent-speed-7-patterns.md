@@ -52,8 +52,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Rust]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Este estudo reforça que *by amit sharma and antonio garrote. *   how do you know whether code generated at agent speed can be [trusted]()? that  — impacta diretamente como projetar e avaliar agentes.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Conecto isso ao meu trabalho com Hermes Agent e o vault-michel: preciso aplicar este padrão nos meus fluxos de ingestão e consolidação.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Implementar um experimento prático com este conceito nos próximos ciclos de desenvolvimento do vault.

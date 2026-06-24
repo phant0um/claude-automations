@@ -101,8 +101,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Gemini]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Success Visitation Matching transforma sparse outcome rewards em dense process rewards via discriminator — reward por visitar state-actions de trajectories bem-sucedidas, preservando optimal policies sem precisar de human feedback.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O princípio de "reward intermediate states que aparecem em trajectories de sucesso" é aplicável a skill evolution no vault — dar crédito a passos intermediários, não apenas ao resultado final.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Avaliar se o pipeline de ingestão pode usar dense rewards intermediários em vez de apenas success/failure final.

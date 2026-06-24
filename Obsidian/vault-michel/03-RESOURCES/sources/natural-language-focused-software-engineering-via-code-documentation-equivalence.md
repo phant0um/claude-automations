@@ -118,8 +118,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Documentation-to-code equivalence é uma propriedade onde a docstring é tão completa que o LLM pode regenerar o código a partir dela — Documentary gera docstrings equivalentes com 53.4% de sucesso e 66.4% de precision.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** No vault, uma nota equivalente permitiria regenerar conteúdo a partir da síntese — a docstring do concept deveria ser tão boa que regenera o conceito sem perda.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Avaliar se as sínteses (Tese central) nos sources do vault são "equivalentes" ao conteúdo original — se permitem regenerar a ideia central.

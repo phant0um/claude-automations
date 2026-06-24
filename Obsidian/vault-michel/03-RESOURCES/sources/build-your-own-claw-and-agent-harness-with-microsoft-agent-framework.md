@@ -64,8 +64,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Um coding agent ("claw") é um model + harness que fornece tools, plan, memory, approvals, observability e deploy — o harness multiplica o modelo, mas precisa de um modelo que segue instruções confiavelmente.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O Microsoft Agent Framework é uma referência de implementação para o padrão harness que já uso com Claude Code — útil para entender a anatomia mínima de um claw.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Mapear os 6 componentes (tools, plan, memory, approvals, observability, deploy) contra a arquitetura atual do Hermes Agent.

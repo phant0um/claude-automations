@@ -101,8 +101,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Rust]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Persistent memory como 5 tools (retain, recall, reflect, getMentalModel, getDocument) com split entre semantic inputs (agente decide) e infrastructure inputs (app fixa) — o modelo não pode mudar bank ID nem blow o token budget.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O split semantic/infrastructure é o design principle para qualquer tool exposed ao Hermes Agent — o agente decide o quê, a app decide onde e quanto.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Auditar as tools do Hermes Agent para garantir que infrastructure decisions (caminhos, budgets, routing) estão locked na config, não expostas ao modelo.

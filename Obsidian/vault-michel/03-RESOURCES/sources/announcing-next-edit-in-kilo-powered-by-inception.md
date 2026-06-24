@@ -68,8 +68,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/concepts/ai-agents/benchmark]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Diffusion LLMs (dLLMs) geram código em paralelo, não left-to-right — Next-Edit Suggestion (NES) é uma categoria distinta de autocomplete que prevê a próxima edição, não o próximo token.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** A distinção NES vs autocomplete conecta com loop engineering — o modelo prevê a próxima ação na sequência de edição, não apenas o próximo caractere.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Monitorar Mercury Edit 2 e diffusion LLMs como possível próxima geração de assistência no Claude Code.

@@ -200,8 +200,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** O ecossistema de skills do Hermes é diverso — desde meta-skills que auto-detectam patterns (skill-factory) até skills de literate programming e self-memory — mostrando que o padrão SKILL.md virou substrate reutilizável.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Várias destas skills (drawio, skill-factory, litprog) são diretamente instaláveis no meu Hermes agent e podem melhorar workflows do vault.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Instalar e testar hermes-skill-factory e litprog-skill para automatizar extração de skills dos workflows do vault.

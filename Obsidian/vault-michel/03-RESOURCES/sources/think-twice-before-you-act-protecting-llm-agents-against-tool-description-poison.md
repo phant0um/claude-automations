@@ -110,8 +110,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Cross-tool description poisoning é um vetor de ataque onde envenenar a descrição de uma tool não-crítica pode steerar o planner a executar ações maliciosas com tools safety-critical — sem nunca chamar a tool envenenada.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Crítico para qualquer setup com MCP servers de terceiros — preciso auditar tool descriptions como attack surface, não só tool outputs.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Implementar isolated planning (Tool-Guard pattern) no Hermes agent ao consumir MCP tools de fontes externas.

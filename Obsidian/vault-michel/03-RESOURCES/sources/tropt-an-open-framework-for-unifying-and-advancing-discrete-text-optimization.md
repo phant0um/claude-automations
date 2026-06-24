@@ -111,8 +111,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/NVIDIA]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Discrete text optimizers (GCG, HotFlip, etc.) são modularmente componíveis via recipes — um otimizador de jailbreak pode ser repurposed para corpus poisoning sem mudar o algoritmo, apenas trocar loss/modelo.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** TROPT é um framework que valida o princípio de modularidade que uso no vault — separar modelo, loss, otimizador e inputs é exatamente como skills/memory/protocols são separados.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Estudar se a arquitetura recipe do TROPT pode inspirar um "recipe hub" para otimização de prompts no vault.

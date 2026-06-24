@@ -115,8 +115,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Rust]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Reviewers humanos ficam mais lenientes com PRs de agentes ao longo do tempo (+14.5pp approval, -22% comments) — habituation, não trust calibration, pois commenting effort cai junto com approval rising.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Ao usar agentes para editar o vault, preciso manter scrutiny constante — não posso cair em habituation rubber-stamping edits do Hermes Agent sem verificar mudanças.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Implementar streak audits: se uma sequência de approvals sem comentários aparece, forçar uma revisão manual mais profunda periódica.

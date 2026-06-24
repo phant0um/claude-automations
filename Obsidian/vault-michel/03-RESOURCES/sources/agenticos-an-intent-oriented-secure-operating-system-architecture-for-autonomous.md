@@ -114,8 +114,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Este estudo reforça que as llm-driven autonomous agents gradually acquire capabilities for autonomous planning, tool invocation, network access, — impacta diretamente como projetar e avaliar agentes.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Conecto isso ao meu trabalho com Hermes Agent e o vault-michel: preciso aplicar este padrão nos meus fluxos de ingestão e consolidação.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Implementar um experimento prático com este conceito nos próximos ciclos de desenvolvimento do vault.

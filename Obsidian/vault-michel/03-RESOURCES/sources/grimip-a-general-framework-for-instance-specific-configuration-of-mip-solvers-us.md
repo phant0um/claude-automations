@@ -104,8 +104,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** LLMs como surrogate models dentro de Bayesian Optimization resolvem o cold-start problem em solver configuration — o LLM gera warm-starts e reduz o espaço de busca, superando SMAC e AutoTuner.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O padrão "LLM as probabilistic component dentro do optimization loop" é aplicável a qualquer tuning no vault — usar LLM para gerar configurações iniciais antes de search iterativo.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Avaliar se o pipeline de ingestão do vault pode usar LLM-guided warm-start para otimizar parâmetros de processamento.

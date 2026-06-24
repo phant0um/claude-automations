@@ -83,8 +83,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Microsoft]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Simpson's Paradox em dados de PR de agentes: pooled, co-authorship parece prejudicial (-26pp); stratified por agente, 4 de 5 mostram efeito positivo — mas nem isso é causal, é selection e PR-structure.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Ao avaliar métricas de performance do Hermes Agent, preciso stratificar por perfil/tarefa antes de tirar conclusões — agregados pooled podem inverter conclusões.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Sempre stratificar métricas do vault por tipo de tarefa/perfil antes de reportar resultados agregados.

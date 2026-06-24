@@ -119,8 +119,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** KBSpec usa uma knowledge base que evolui via verifier feedback — internal knowledge (trajectórias de sucesso/repair) complementa external docs, melhorando pass rate de specs de 10% para 59% em JML.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O padrão de knowledge base evolving é exatamente o que o vault precisa — skills/concepts deveriam evoluir via feedback de verificação, não apenas acumular passivamente.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Implementar um ciclo de knowledge evolution no vault onde skills/concepts são refinados baseados em feedback de uso (success/failure traces).

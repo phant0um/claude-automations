@@ -110,8 +110,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Rust]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** LLMs são úteis para invariant propagation em proof engineering mas o judgment humano permanece central — aceitar um invariant requer entender o algoritmo, não apenas fazer o script compilar.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Ao usar Codex/Claude para proof assistance, preciso proteger o theorem statement como artifact — não deixar o agente adicionar preconditions ou strenghten specs para facilitar a prova.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Ao usar agentes para qualquer verificação formal no vault, sempre auditar definitions e preconditions, não apenas se a prova compila.

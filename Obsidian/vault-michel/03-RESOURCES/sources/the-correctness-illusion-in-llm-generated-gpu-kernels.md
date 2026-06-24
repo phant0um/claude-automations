@@ -100,8 +100,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/CUDA]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Benchmarks de código LLM passam bugs como "corretos" porque testam uma shape, um dtype, com tolerância frouxa — a ilusão de corretude é sistêmica e reproduzível cross-GPU.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Ao avaliar código gerado por agentes no vault, preciso de testes boundary-aware, não apenas testes que passam no caso feliz.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Adicionar fuzzing com boundary values como camada de verificação pós-geração de código agent.

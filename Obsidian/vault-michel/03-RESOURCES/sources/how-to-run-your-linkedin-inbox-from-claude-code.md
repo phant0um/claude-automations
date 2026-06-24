@@ -105,8 +105,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Rust]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Um orchestrator file (CLAUDE.md) com identidade, regras hard, tom de voz e sorting prompt é suficiente para transformar Claude Code em um inbox manager que rascunha mas nunca envia sem aprovação.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Este é o padrão exato do vault — CLAUDE.md como standing brief, hard rules como guardrails, e human-in-the-loop no envio. Diretamente aplicável a inbox de clientes.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Adaptar este padrão para gerenciar inbox de e-mails profissionais usando Claude Code + HeyReach ou equivalente.

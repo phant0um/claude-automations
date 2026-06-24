@@ -97,8 +97,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Codex]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** A unidade de avaliação para agentes CLI é a config model-CLI, não o modelo isolado — mesmo modelo com CLIs diferentes produz diferentes success, token e cost profiles, e o melhor CLI depende do modelo.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Ao escolher entre Claude Code, Codex CLI e outros para tarefas do vault, preciso avaliar a combinação model+CLI, não apenas o modelo — não existe CLI neutro.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Benchmarkar Claude Code vs Codex CLI com o mesmo modelo em tarefas reais do vault para identificar a melhor combinação.

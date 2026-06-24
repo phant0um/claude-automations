@@ -109,8 +109,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Código gerado por agentes introduz um custo de manutenção cumulativo — agentes que constroem sobre código de agentes performam pior (até -13.1%), e o sinal mais claro não é complexidade estática mas drift comportamental sutil.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** No vault, cada ingestão automatizada pode introduzir drift em arquivos .md; preciso avaliar manutenibilidade das notas geradas por agentes, não apenas acerto da tarefa.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Adicionar um check de drift comportamental no pipeline de ingestão — comparar estrutura semântica antes/depois de edições agent-generated.

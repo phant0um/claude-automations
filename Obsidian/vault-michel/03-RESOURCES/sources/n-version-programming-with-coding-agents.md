@@ -102,8 +102,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** N-version programming com agentes é viável a escala, mas falhas correlacionadas surgem de weaknesses na especificação, não no modelo — diversidade de harness/modelo/linguagem não elimina common-mode failures.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Ao usar múltiplos agentes (Claude Code + Codex) para mesma tarefa no vault, não posso assumir independência de falhas — a especificação compartilhada é o ponto de correlação.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Ao rodar N-version, diversificar a especificação (não apenas o modelo) e auditar falhas coincidentes por categoria.

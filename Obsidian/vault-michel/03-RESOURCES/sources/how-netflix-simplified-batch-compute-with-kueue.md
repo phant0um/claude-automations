@@ -80,7 +80,7 @@ Links to existing concepts in vault.
 ## Links
 - [[03-RESOURCES/concepts/llm-ml-foundations/llm]]
 - [[03-RESOURCES/concepts/software-engineering/concurrency]]
-- [[03-RESOURCES/concepts/ai-agents/rag]]
+- [[03-RESOURCES/concepts/llm-ml-foundations/rag.md]]
 - [[03-RESOURCES/entities/Netflix]]
 - [[03-RESOURCES/entities/Uber]]
 - [[03-RESOURCES/entities/Kubernetes]]

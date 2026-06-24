@@ -116,8 +116,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Guess-and-check loops combinam LLMs (que conjecturam) com formal methods (que verificam) — CNnotator sintetiza memory safety annotations em CN com 96.8% de sucesso via o3, validando cada spec com property-based testing.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O padrão guess-and-check é aplicável ao vault — o agente propõe (links, tags, structure) e um checker determinístico valida, separando geração criativa de verificação confiável.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Adotar guess-and-check em pipelines de ingestão do vault — agente gera, checker determinístico valida, loop de refinement se falhar.

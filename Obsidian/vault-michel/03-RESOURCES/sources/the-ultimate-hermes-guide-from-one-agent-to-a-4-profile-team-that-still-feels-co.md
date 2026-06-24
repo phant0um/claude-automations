@@ -118,8 +118,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Um 4-profile Hermes team (orchestrator/research/writer/engineer) só se mantém coerente no day 30 com handoff contracts, memory-KPI per profile, e policy ceilings — o operator layer é o que falha, não o profile system.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Este é o blueprint exato do Hermes Agent que estou usando — SOUL.md per profile, AGENTS.md para contexto de projeto, handoff contracts em ~/.hermes/team/handoffs/.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Criar o team-agents.md reference file e definir handoff contracts entre perfis Hermes para evitar profile drift.

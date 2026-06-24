@@ -110,8 +110,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Kubernetes]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Honeyquest adaptado para LLMs mostra que modelos caem em deceptive traps 78.5% vs 37% humanos, e deception não desvia atenção de riscos reais como em humanos — hipóteses human-centered de cyber deception não transferem para AI attackers.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Ao deployar agentes com acesso a recursos sensíveis, não posso confiar em deception defenses que assumem comportamento humano — LLMs engajam com tudo simultaneamente.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Repensar defenses do vault assumindo que agentes atacantes não se comportam como humanos — focus em hard boundaries, não em deception.

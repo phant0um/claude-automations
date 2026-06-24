@@ -112,8 +112,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Coding agents recebem autoridade ampla para uma tarefa inteira quando só precisam dela para um subgoal — Portico resolve isto com capabilities revocáveis: grant → use → closure remove a authority antes de effects stale.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O Hermes Agent precisa de capability lifecycle management — não posso dar acesso de escrita global para uma tarefa que só precisa de escrita em um subdiretório por um episódio.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Avaliar se o Hermes Agent pode implementar revocable capabilities — grant por task/episode com closure automática.

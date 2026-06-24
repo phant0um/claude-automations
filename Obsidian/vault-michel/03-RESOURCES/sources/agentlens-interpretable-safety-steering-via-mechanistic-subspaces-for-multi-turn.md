@@ -96,8 +96,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Gemini]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Safety-relevant signals em coding agents são linearly decodable de hidden states intermediários — um probe leve consegue detectar e steering suprimir ações maliciosas em multi-turn trajectories.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** A ideia de que segurança é linearly decodable do espaço latente sugere que monitoring leve (probe) pode ser mais efetivo que guardrails externos pesados no Hermes Agent.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Avaliar se probes leves podem complementar os guardrails existentes do Hermes Agent para detecção runtime de drift malicioso.

@@ -109,8 +109,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Rust]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Agent Behavior Mining transforma o black box de decisões de agentes GenAI em process mining observável — event data model estende XES com tokens, reasoning traces e transfer_to_agent para governance BPM.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O padrão de tornar prompts em process artifacts versionados e gerenciados é aplicável ao vault — tratar CLAUDE.md e skills como artefatos governados, não apenas arquivos de configuração.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Versionar e auditar prompts/skills do vault como artefatos governados, não apenas arquivos de config.

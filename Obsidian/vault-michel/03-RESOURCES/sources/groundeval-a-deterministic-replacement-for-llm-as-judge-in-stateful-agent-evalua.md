@@ -104,8 +104,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Rust]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Avaliação de agentes stateful precisa ser determinística sobre evidence paths, não sobre plausibility — GroundEval verifica se o agente usou evidence válida (temporal, access, causal), não se a resposta parece correta.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Ao avaliar ingestão automatizada no vault, preciso verificar se o agente citou a fonte certa, não apenas se a síntese parece boa — evidence path > final answer.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Adicionar verificação de evidence path no pipeline do vault — checar se wikilinks apontam para fontes que realmente existem e são relevantes.

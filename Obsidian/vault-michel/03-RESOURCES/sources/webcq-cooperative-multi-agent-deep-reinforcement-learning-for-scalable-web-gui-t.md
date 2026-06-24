@@ -123,8 +123,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** QTRAN (cooperative MARL com CTDE) aplicado a web GUI testing supera abordagens single-agent e tabular RL — formulação como Dec-POMDP com DQN decentralizado + centralized training reduz overhead de comunicação entre agentes paralelos.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Relevante para design de multi-agent testing: paralelizar explorers com coordenação via QTRAN é mais eficiente que independent agents que redundam estados.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Avaliar se o padrão CTDE (centralized training, decentralized execution) aplica ao orquestrar múltiplos subagents do vault.

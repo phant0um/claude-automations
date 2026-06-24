@@ -101,8 +101,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Rust]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** π-RAG separa zona untrusted (LLM + semantic router) de zona trusted (data vault) via π-keys — eliminando embedding inversion attacks ao não indexar dados sensíveis, apenas canonical intents.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Para o vault que pode conter dados financeiros sensíveis, o padrão split-brain com indirection layer é relevante — nunca expor embeddings de dados privados ao LLM.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Avaliar se dados financeiros no vault precisam de camada de indirection antes de alimentar qualquer RAG pipeline.

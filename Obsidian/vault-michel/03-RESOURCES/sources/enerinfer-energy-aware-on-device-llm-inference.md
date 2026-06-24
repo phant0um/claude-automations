@@ -123,8 +123,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Microsoft]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** On-device LLM inference consome 138% mais energia que cloud offloading — DVFS dinâmico (NPU + Mem frequency scaling) reduz 44% de consumo mantendo throughput acima de 10 tokens/s, sem perda de accuracy.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Para deployment mobile de agentes, energia é o bottleneck esquecido — otimizar para tokens/joule em vez de tokens/segundo é o design principle para on-device.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Considerar energy efficiency como métrica ao avaliar modelos para deployment edge no contexto de finanças mobile.

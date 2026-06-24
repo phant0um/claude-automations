@@ -127,8 +127,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Rust]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Moltbook prova que 63% de "posts" em plataformas de agentes são transações financeiras (MBC-20 token minting), não discurso — agregar sem filtrar intenção comunicativa produz métricas enganosas.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Ao analisar comportamento de agentes em plataformas, preciso separar camada transacional de camada discursiva antes de tirar conclusões sobre "social behavior".
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Aplicar o filtro de intenção comunicativa ao analisar logs de agentes do vault — separar tool calls de reasoning.

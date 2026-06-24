@@ -89,8 +89,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Codex]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Para usar Obsidian com AI, MCP não é necessário — folder path + 3 files (rules, skills, past output) é suficiente para 3 meses de operação diária, desde que o agente saiba o que fazer na pasta.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Valida que a abordagem do vault (folder-first, MCP como camada opcional) é pragmática — Claude Code apontado para o diretório do vault já funciona sem plugins complexos.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Manter MCP como opcional no vault e focar em melhorar os 3 arquivos de contexto (regras, skills, output template) que o agente usa.

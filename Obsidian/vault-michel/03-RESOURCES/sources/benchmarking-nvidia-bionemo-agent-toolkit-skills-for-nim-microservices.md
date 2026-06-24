@@ -127,8 +127,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/AWS]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Skills são uma camada de roteamento + progressive disclosure, não um upgrade de modelo — Haiku com skill vence Opus sem skill em endpoints não-óbvios, a 1/5 do custo.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O vault já usa SKILL.md via Hermes Agent — esta fonte valida empiricamente que progressive disclosure (768 tokens resident vs 12.9k tokens all-docs) é o mecanismo de scaling.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Auditar as skills do vault para garantir que o routing overview é o active ingredient, não as referências detalhadas.

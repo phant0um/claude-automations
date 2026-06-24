@@ -120,8 +120,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** RAC prova que decoupling recovery do ReAct Agent via transaction log+compensation pairs é mais eficiente que depender do LLM raciocinar saída de falhas — 1.5-8x melhor token efficiency e menos hallucinação.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Aplica diretamente ao vault: agentes que chamam MCP tools com side effects (file writes, git ops) precisam de compensation pairs no design do harness, não só error handling.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Mapear quais tools do Hermes agent têm side effects e definir compensation pairs no MCP tool definitions.

@@ -103,8 +103,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Procedural memory (skills) evolve via Collect-Diagnose-Revise-Promote — skills evolved from diverse traces transfer across models (+13.7pp), mas skills from narrow experience overfit e degradam generality.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O AFTER benchmark com Evolution harness é exatamente o padrão de skill evolution que o Hermes Agent implementa — trace collection, versioning, e promote/rollback.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Garantir que as skills do vault evoluem a partir de traces diversas (múltiplos modelos/tarefas), não de experiência narrow de uma só sessão.

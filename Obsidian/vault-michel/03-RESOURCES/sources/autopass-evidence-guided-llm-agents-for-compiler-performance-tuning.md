@@ -119,8 +119,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Gemini]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Evidence-guided multi-agent frameworks com feedback iterativo de runtime são efetivos para compiler tuning — o Reasoning Agent propõe, Evaluation Agent valida, e o loop refine via compiler diagnostics.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O padrão de 4-agent pipeline (Score/Analysis/Reasoning/Evaluation) é um template para qualquer otimização iterativa com feedback grounded, aplicável a tuning de prompts no vault.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Considerar este padrão de multi-agent com feedback loop para otimização de skills no vault — um agent propõe, outro valida via teste.

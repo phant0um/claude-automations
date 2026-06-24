@@ -112,8 +112,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Codex]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** DeepDiscovery trata repository understanding como task-level context recovery, não fragment retrieval — Location (anchor identification) + Inference (multi-relational path recovery) melhora SWE-bench em 8.2pp via metadata-first context.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O padrão de metadata-first context (carregar texto completo só quando necessário) é aplicável ao vault — preferir metadata views de concepts antes de carregar conteúdo completo no contexto.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Implementar metadata-first retrieval no pipeline de ingestão do vault — carregar títulos/tags/resumos antes de conteúdo completo.

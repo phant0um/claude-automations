@@ -106,11 +106,11 @@ Links to existing concepts in vault.
 ## Links
 - [[03-RESOURCES/concepts/llm-ml-foundations/diffusion]]
 - [[03-RESOURCES/concepts/software-engineering/proof]]
-- [[03-RESOURCES/concepts/ai-agents/rag]]
+- [[03-RESOURCES/concepts/llm-ml-foundations/rag.md]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Diffusion models adaptam-se a estrutura low-dimensional independentemente da escolha de coefficients — a adaptação é robusta e não sensível a hyperparameter tuning, justificando a eficácia empírica across samplers.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** A robustness de diffusion models a coefficient choices sugere que no vault não preciso de otimizar hyperparameters de geração obsessivamente — o modelo adapta-se à estrutura dos dados.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Aplicar este princípio ao usar diffusion models para geração de conteúdo — confiar na adaptação inerente em vez de over-tuning.

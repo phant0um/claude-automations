@@ -103,8 +103,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Rust]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Um único PPO regularizado com EMA de parâmetros e top-advantage filtering chega a desempenho super-humano sem league, behavior cloning, ou reward shaping — o inner loop bem tunado basta.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Evidência de que simplicidade bem executada vence arquiteturas complexas — relevante ao decidir entre MARL elaborado vs. policy gradient tunado em projetos de RL.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Estudar os ablations de EMA vs last iterate e top-advantage filtering para aplicação potencial em treinamento de agentes.

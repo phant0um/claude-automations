@@ -105,8 +105,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Rust]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Verificação em escala da Rust std lib mostra que manual proof engineering plateaua — Autoharness automatiza geração de proof harnesses e verificou 12K funções vs 725 manuais em 16 meses.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Evidência empírica de que automação de verificação é o caminho — não escalará com esforço humano manual, precisa de tooling que gera harnesses automaticamente.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Estudar como o padrão Autoharness (enumerate functions → synthesize harness → model check) pode ser adaptado para verificar skills e hooks do vault.

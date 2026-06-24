@@ -101,8 +101,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/GitHub-Copilot]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Este estudo reforça que 本次更新为 github copilot for jetbrains ides 带来了对来自 github 的组织和企业级 agent 的支持，让你可以在 copilot cli 会话中排队和引导消息，引入了全新的 agent 调试日志摘要 — impacta diretamente como projetar e avaliar agentes.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Conecto isso ao meu trabalho com Hermes Agent e o vault-michel: preciso aplicar este padrão nos meus fluxos de ingestão e consolidação.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Implementar um experimento prático com este conceito nos próximos ciclos de desenvolvimento do vault.

@@ -97,8 +97,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/concepts/ai-agents/benchmark]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Modularidade em continual learning só ajuda quando a dimensionalidade é baixa — em regimes high-dimensional lazy, single-network e modular performam igual; a separação se torna crítica apenas sob restrição de capacidade.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** No vault, modularity (perfis separados, skills isoladas) só traz benefício quando o context budget é restrito — com janelas grandes, a separação pode ser desnecessária overhead.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Avaliar se a separação de perfis Hermes traz benefício real ou se é overhead que só se justifica sob restrição de contexto.

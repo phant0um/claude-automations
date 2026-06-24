@@ -110,8 +110,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Rust]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Vibe-coded apps têm 90% de vulnerabilidades, com 76% rated high/critical — a insegurança emerge da interação de memory defects, objective defects e knowledge defects no workflow, não apenas do código gerado.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Ao usar agentes para gerar código no vault ou projetos, preciso tratar segurança como propriedade do workflow, não do código — cada estágio (spec, implementação, deploy) precisa de controls.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Adicionar um security checklist no pipeline de ingestão para código gerado por agentes, focando em hidden security rules e incomplete change propagation.

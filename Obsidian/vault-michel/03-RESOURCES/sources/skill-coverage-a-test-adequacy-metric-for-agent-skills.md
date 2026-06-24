@@ -101,8 +101,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Task success ≠ skill adequacy. Skill coverage mostra que execuções bem-sucedidas cobrem <44% do comportamento documentado da skill, expondo o gap entre "funcionou" e "testou o que a skill prescreve".
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Diretamente relevante para validar skills do Hermes agent — preciso saber quais comportamentos documentados nas SKILL.md nunca são exercidos em benchmarks.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Aplicar a metodologia de SBC extraction + coverage judging nas skills do vault para identificar partes não testadas.

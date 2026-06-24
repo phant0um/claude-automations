@@ -74,8 +74,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Rust]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** O desenvolvedor futuro é arquiteto de agentes, não codificador — escreve specs executáveis, desenha agentic architecture, e gerencia cognitive debt (perda de entendimento sobre código gerado por IA).
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** Reforça que investir em spec-driven development e agentic architecture é o caminho, não competir com agentes em code generation volume.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Praticar conversão de requirements em specs executáveis e mapear cognitive debt em projetos do vault.

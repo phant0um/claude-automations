@@ -110,8 +110,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Python]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** SFT seguido de GRPO com reward functions estruturadas (accuracy + formatting penalties) melhora IRs de code compliance — GRPO só funciona numa janela de SFT maturity (8-10 epochs), nem underfitted nem overfitted.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O padrão SFT→GRPO para refinement de structure é aplicável a skill evolution no vault — primeiro instill knowledge via SFT, depois refine structure via RL com reward functions.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Avaliar se o pipeline de skill evolution pode usar SFT→GRPO para refinar skills estruturalmente, não apenas conteúdo.

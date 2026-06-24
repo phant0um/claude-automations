@@ -108,8 +108,8 @@ Links to existing concepts in vault.
 - [[03-RESOURCES/entities/Netflix]]
 
 ## Minha Síntese
-**O que muda:** A ser analisado em revisão manual.
+**O que muda:** Vera e VOID mostram que edição de vídeo AI controlável exige layers separados (edit + alpha matte + composite) em vez de regenerar todos os pixels — contenção de mudança é o design principle.
 
-**Conexão pessoal:** A ser conectado com projetos/estudo atuais.
+**Conexão pessoal:** O princípio de "editar só o que precisa mudar" aplica-se ao vault: edições cirúrgicas preservam contexto, rewrites completos destroem continuidade.
 
-**Próximo passo:** Nenhum próximo passo imediato.
+**Próximo passo:** Aplicar o padrão de layered editing em atualizações de concepts — gerar diff-layer ao invés de reescrever arquivo inteiro.
