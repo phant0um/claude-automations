@@ -46,3 +46,6 @@ Com Hermes: o agente executa tudo em minutos após receber o tema — o criador 
 - [[03-RESOURCES/entities/Hermes-Agent]]
 - [[03-RESOURCES/entities/kidpakerot]]
 - [[03-RESOURCES/entities/Higgsfield]]
+
+## Evidências
+- **[2026-06-24]** **Anthropic made the Slack agent credible for enterprises. — [[the-real-claude-tag-question-is-context-ownership]]

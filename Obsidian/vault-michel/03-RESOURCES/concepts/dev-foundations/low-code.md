@@ -59,3 +59,6 @@ Plataformas que permitem desenvolvimento de software com mínimo (low-code) ou z
 
 - [[03-RESOURCES/concepts/dev-foundations/flow-based-programming|FBP]]
 - [[03-RESOURCES/entities/Node-RED|Node-RED]]
+
+## Evidências
+- **[2026-06-24]** How an eve session runs. — [[execution-model-and-durability]]

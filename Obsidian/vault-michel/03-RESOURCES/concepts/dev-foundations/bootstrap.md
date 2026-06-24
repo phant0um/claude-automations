@@ -127,3 +127,6 @@ Bootstrap usa um grid de **12 colunas** com 6 breakpoints:
 
 - [[02-AREAS/fiap/fase-4/fase-4-index|Fase 4 — View]]
 - [[03-RESOURCES/concepts/dev-foundations/git-github|Git e GitHub]] — versionamento dos projetos frontend
+
+## Evidências
+- **[2026-06-24]** ## Cybersecurity Skills Router / Reverse-Engineering Skill Routing Pack. — [[authorized-penetration-testing-security-research-skill-router-pack-ai-powered-routing-on-demand-toolchain-bootstrapping-self-evolving-knowledge-base-supports-claude-code-kiro-cursor-cline-and-other-ai-coding-clients-ai]]

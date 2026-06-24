@@ -48,3 +48,5 @@ Model selection é a primeira decisão de arquitetura em qualquer sistema LLM. E
 ## Evidências
 - **[2026-06-19]** Modelo caro (Claude) usado para escrever/refinar skills, modelo barato (MiniMax) usado para executar no dia a dia — roteamento por fase do ciclo de vida do skill, não só por tipo de tarefa — [[how-i-turned-minimax-into-fable-5-97-percent-cheaper]]
 - **[2026-06-19]** Kimi K2.7 Code com MCP de design inspiration rivaliza Claude Fable 5 em qualidade de landing page a 1/16 do custo — contexto > capacidade nominal do modelo — [[03-RESOURCES/sources/kimi-k27-code-vs-claude-fable-5-landing-pages]]
+
+- **[2026-06-24]** Deploy the full Claude desktop experience - chat, Claude Cowork, and Claude Code - using inference on AWS, Google Cloud — [[claude-desktop-on-aws-google-cloud-and-microsoft-foundry]]

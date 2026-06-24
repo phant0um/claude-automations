@@ -58,3 +58,13 @@ Claude Code is Michel's primary productivity tool. Understanding coding agent ar
 
 - **[2026-06-21]** Análise da Anthropic de ~400.000 sessões de Claude Code (out/2025-abr/2026, ~235.000 pessoas) mostra divisão de trabalho estável: humanos decidem o quê fazer (planejamento), Claude decide como fazer (execução). Quanto mais expertise de d... — [[agentic-coding-and-persistent-returns-to-expertise]]
 - **[2026-06-21]** Teste informal mas bem desenhado (Kilo Code DevRel): React/TS to-do app com 10 bugs plantados, 8 modelos revisando o mesmo working tree não commitado em worktrees isolados via Kilo Agent Manager. Grok Build 0.1 encontrou todos os 10 bugs... — [[grok-build-0-1-beat-every-frontier-model-in-a-kilo-code-reviews-test]]
+- **[2026-06-24]** The builder behind Claude Code stopped prompting his agent. — [[from-prompter-to-loop-engineer-the-14-step-roadmap-to-running-agents-you-don-t-babysit]]
+- **[2026-06-24]** AI applications are moving beyond text generation to multimodal systems that can perceive, search, a — [[run-step-3-7-flash-on-nvidia-gpus-with-enterprise-ready-multimodal-ai]]
+- **[2026-06-24]** A format specification for describing a visual identity to coding agents. — [[google-labs-codedesign-md-a-format-specification-for-describing-a-visual-identity-to-coding-agents-design-md-gives-agents-a-persistent-structured-understanding-of-a-design-system]]
+- **[2026-06-24]** Tuning AI systems by hand doesn't scale. — [[cocoevolve-evolutionary-optimization-for-ai-systems]]
+
+- **[2026-06-24]** Satya Nadella recently published an excellent article on what a future firm looks like in an AI-driven economy. He also — [[token-capital-efficiency]]
+- **[2026-06-24]** This is the fifth article in a series about Agent Experience (AX): the practice of making AI coding agents work correctl — [[when-the-model-has-never-seen-your-code]]
+- **[2026-06-24]** tags: — [[bayesian-control-for-coding-agents]]
+- **[2026-06-24]** This is the memo I shared with the Warp team about what building Warp needs to look like. It’s a combo of context on wha — [[we-are-now-factory-engineers-not-product-engineers]]
+- [[03-RESOURCES/sources/how-to-build-a-100m-warm-lead-database-with-an-ai-coding-agent]] — AI coding agent encontra intent signals públicos (job postings, complaints, funding) para prospecting

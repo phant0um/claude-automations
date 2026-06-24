@@ -62,3 +62,5 @@ Ref: [[03-RESOURCES/sources/adacom-adaptive-context-management]]
 
 ## Evidências
 - **[2026-06-19]** Project Fetch Phase 2: Opus 4.7 sem assistência humana, ~20x mais rápido que o time humano mais veloz da Fase 1, usando quase 10x menos código que Team Claude — [[03-RESOURCES/sources/project-fetch-phase-two]]
+
+- **[2026-06-24]** tags: — [[world-models-in-pieces-structural-certification-for-general-agents]]

@@ -52,3 +52,7 @@ No sistema de [[03-RESOURCES/entities/Ryan-Wiggins]]:
 ## Onde aparece no vault
 - [[03-RESOURCES/sources/pkm-obsidian-second-brain/second-brain-claude-code-ryanwiggins]] — implementação prática central
 - [[03-RESOURCES/entities/QMD]] — ferramenta que implementa vector search local
+
+## Evidências
+- [[03-RESOURCES/sources/bringing-polygres-to-san-francisco]] — Polygres unifica relacional + graph + vector em Postgres para agentes atravessarem relações de negócio
+- [[03-RESOURCES/sources/implement-multi-tenant-search-with-amazon-opensearch-serverless-next-generation]] — OpenSearch Serverless next-gen: scale-to-zero compute + regional endpoint para multi-tenant search

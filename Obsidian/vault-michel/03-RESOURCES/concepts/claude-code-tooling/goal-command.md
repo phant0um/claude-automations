@@ -172,3 +172,6 @@ Conflito superficial: `/goal` pula clarifying questions; Karpathy exige "ask if 
 - [[03-RESOURCES/concepts/learning-cognition/karpathy-four-principles]] — tensão acima
 - [[03-RESOURCES/concepts/agent-systems/agent-harness]]
 - [[03-RESOURCES/concepts/learning-cognition/ai-engineering-checklists]]
+
+## Evidências
+- **[2026-06-24]** The person who created Claude Code says he doesn't really prompt it anymore. — [[the-5-levels-of-loop-design-from-prompting-to-autonomous-agents]]

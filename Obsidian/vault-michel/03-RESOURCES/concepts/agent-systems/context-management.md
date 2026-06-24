@@ -64,6 +64,7 @@ Ref: [[03-RESOURCES/sources/adacom-adaptive-context-management]]
 
 ## Evidências
 - **[2026-06-22]** Compaction não deveria ser sumário único — deveria ser plano por segmento (keep_verbatim / extract_active_error / externalize_for_retrieval / structured_summary) avaliado por continuidade (ACCS), não por qualidade de resumo; agentes de suporte/voz/código têm modos de falha de compaction estruturalmente diferentes — [[03-RESOURCES/sources/your-agent-does-not-need-one-summary-it-needs-a-compaction-plan]]
+- [[03-RESOURCES/sources/remember-definitions]] — State persistente por sessão elimina re-explicação de contexto de team definitions
 
 ## Related
 - [[03-RESOURCES/concepts/agent-systems/prompt-caching]]

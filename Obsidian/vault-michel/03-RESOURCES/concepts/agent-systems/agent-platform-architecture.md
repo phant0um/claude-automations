@@ -65,3 +65,4 @@ The data era "great unbundling" — separate tools for ingestion, orchestration,
 ## Evidências
 - **[2026-06-19]** eve embute produção (durable execution, sandboxed compute, aprovações, sub-agentes, evals) por padrão em vez de adicionar depois do prototype — [[03-RESOURCES/sources/introducing-eve-open-source-agent-framework]]
 - **[2026-06-19]** Agente que autora suas próprias skills duráveis e as registra no orchestration engine — hot-deploy sem restart, skills sobrevivem ao processo que as criou — [[03-RESOURCES/sources/the-agent-loop-architecture]]
+- [[03-RESOURCES/sources/overview-1]] — eve frontend integration model: same-origin, hooks abstraem streaming e session state

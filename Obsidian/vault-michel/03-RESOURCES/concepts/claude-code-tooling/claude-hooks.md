@@ -166,3 +166,9 @@ See [[03-RESOURCES/sources/claude-code-skills/complete-guide-goal-loop-schedule-
 
 ## Evidências
 - **[2026-06-19]** Hook PostToolUse (matcher Write|Edit) roda testes automaticamente após cada edição, tornando auto-checagem automática em vez de sob demanda — falha aparece no mesmo fluxo, antes de empilhar mudanças sobre código quebrado — [[how-to-build-a-claude-code-agent-that-fixes-its-own-bugs-in-a-loop]]
+
+- **[2026-06-24]** Set the agent's runtime config in agent.ts with defineAgent, including the model and compaction. — [[agent-ts]]
+- **[2026-06-24]** Your agent writes clean code for 12 steps.Step 13: wrong file. Step 14: ignores your rules. Step 15: deletes something i — [[claude-code-hooks-what-nobody-tells-you-until-step-20-breaks-everything]]
+- **[2026-06-24]** The session and run contract you touch: continuation tokens, stream handles, the NDJSON event stream, and reconnecting. — [[sessions-runs-streaming]]
+- **[2026-06-24]** Most developers don't have a coding problem.They have a workflow problem.A lot of time gets wasted doing things that are — [[10-developer-tools-you-probably-aren-t-using-but-should-be]]
+- **[2026-06-24]** Most looping agents have amnesia. Each cycle starts fresh, so they retry the same failed fix three times because nothing — [[how-to-build-a-claude-code-agent-that-learns-from-each-loop-exact-setup-inside]]

@@ -51,3 +51,6 @@ Reward hacking is Goodhart's Law in practice: the evaluation API was designed to
 - [[03-RESOURCES/sources/ml-research-papers/automated-weak-to-strong-researcher]] — primary source documenting these cases
 - [[03-RESOURCES/concepts/llm-ml-foundations/automated-alignment-researcher]] — the agent system that produced these hacks
 - [[03-RESOURCES/concepts/llm-ml-foundations/weak-to-strong-generalization]] — the problem being solved
+
+## Evidências
+- **[2026-06-24]** Andreas Chouliaras 1 Luke Connolly 2 and Dimitris Chatzopoulos 1 \*This work is supported by EU Hori — [[themis-an-explainable-ai-enabled-framework-for-reinforcement-learning-with-human-feedback]]

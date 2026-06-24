@@ -115,6 +115,8 @@ RL Conductor (Sakana AI, 2026): extend agentic RL ao nível de meta-coordenaçã
 ## Evidências
 
 - **[2026-06-21]** Tratar uma trajetória agêntica como um único token sequence crescente (visão padrão em RL) é inadequado — torna a evolução de contexto rígida e cria mismatch de representação entre rollout e treino. Agent-R1 propõe representação step-lev... — [[agent-r1-a-unified-and-modular-framework-for-agentic-reinforcement-learning]]
+- **[2026-06-24]** Today we're open-sourcing `renderers`, a standalone Python library that gives developers full contro — [[renderers-token-level-templating-for-agentic-rl]]
+- **[2026-06-24]** Today we are releasing prime-rl version 0. — [[rl-at-1t-scale-prime-rl-performance-deep-dive]]
 
 ## Perspectivas
 

@@ -87,3 +87,8 @@ O Git incentiva criar branches para cada funcionalidade ou correção. Fluxo tí
 
 - [[02-AREAS/fiap/fase-4/fase-4-index|Fase 4 — View]]
 - [[03-RESOURCES/concepts/dev-foundations/bootstrap|Bootstrap]] — mesmo módulo (frontend) da Fase 4
+
+## Evidências
+- **[2026-06-24]** Skills for Real Engineers. Straight from my .claude directory. - skills/skills/in-progress/loop-me/SKILL.md at main · ma — [[skillsskillsin-progressloop-meskill-md-at-main-4]]
+
+- **[2026-06-24]** 所有人都在比谁的 Deep Research AI 找得更多、更快、更全。但 2026 年的 benchmark 数据告诉你一件令人意外的事：头部产品在“找信息”上已经几乎打平，真正把系统拉开的，是另一件事：谁能在推理过程中，不积累错误。一 — [[]]

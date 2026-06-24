@@ -52,3 +52,6 @@ Frase-âncora de Boris que reposiciona o debate de "qual modelo" para "qual sist
 - [[03-RESOURCES/concepts/agent-systems/subagent-pattern-empirical]]
 - [[03-RESOURCES/concepts/agent-systems/self-evolving-agents]]
 - [[03-RESOURCES/concepts/agent-systems/hermes-agent-architecture]]
+
+## Evidências
+- [[03-RESOURCES/sources/snowflake-aim-migration-agent-automating-enterprise-migrations]] — Fix vira regra reusável que se propaga pelo projeto; migration gets smarter as team works

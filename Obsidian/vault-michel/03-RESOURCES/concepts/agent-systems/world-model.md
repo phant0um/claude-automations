@@ -53,3 +53,6 @@ Understanding world models explains why LLM agents sometimes take surprising act
 ## Evidências
 - **[2026-06-19]** Padrão "modelos ajudam humanos → humanos ajudam modelos → modelos fazem sozinhos" replicado de cibersegurança para robótica física (Project Fetch) — [[03-RESOURCES/sources/project-fetch-phase-two]]
 - **[2026-06-21]** Padrões de RL para agentes de terminal (GRPO-style) descartam o stream de feedback do ambiente (stdout, erros, logs) como sinal de treino, aplicando loss só em tokens de ação. ECHO (Environment Cross-entropy Hybrid Objective) adiciona um... — [[1-echo-turns-terminal-feedback-into-supervision-during-agent-rl]]
+- **[2026-06-24]** Pretraining creates simulators, LLMs that can model their environment with high precision. — [[true-agents-model-the-world]]
+
+- **[2026-06-24]** tags: — [[world-models-in-pieces-structural-certification-for-general-agents]]

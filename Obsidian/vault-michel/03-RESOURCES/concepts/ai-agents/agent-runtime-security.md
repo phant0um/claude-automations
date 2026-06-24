@@ -42,6 +42,18 @@ O runtime de agentes autônomos (harness, tool execution layer, memory subsystem
 - **[2026-06-23]** Runtime layer auditable via source-code analysis — [[local-llm-agents-as-vulnerable-runtimes-a-source-code-audit-of-the-agent-runtime-layer]]
 - **[2026-06-23]** Capability governance via cryptographically verified skills — [[nvidia-verified-agent-skills-provide-capability-governance-for-ai-agents]]
 - **[2026-06-23]** Revocable resource-and-effect capabilities for coding agents — [[lingering-authority-revocable-resource-and-effect-capabilities-for-coding-agents]]
+- **[2026-06-24]** You can write "do not modify prod. — [[claude-code-hooks-the-most-powerful-feature-nobody-uses]]
+- **[2026-06-24]** Control what an eve agent's model sees and when, across instructions, skills, the workspace, and sub — [[context-control]]
+- **[2026-06-24]** Introducing Flounder: An Autonomous White-Hat Security Auditor. — [[flounder-an-autonomous-white-hat-security-auditor]]
+- **[2026-06-24]** The hype the last couple of weeks has been around implementing loops and to quote Satya Nadella: \*A — [[how-we-built-secure-automated-learning-loops-in-modal-and-claude-code]]
+- **[2026-06-24]** While the validity of LLMs’ use in the legal context remains subject to ethical and legal debate, le — [[llms-prompted-for-legal-context-object-more-overrefusal-from-small-on-premises-llms-in-criminal-legal-context]]
+- **[2026-06-24]** Memory is the word AI engineers borrow whenever dealing with a complex system that needs access to i — [[memory-is-not-storage]]
+- **[2026-06-24]** **Anthropic made the Slack agent credible for enterprises. — [[the-real-claude-tag-question-is-context-ownership]]
+- **[2026-06-24]** ## Cybersecurity Skills Router / Reverse-Engineering Skill Routing Pack. — [[authorized-penetration-testing-security-research-skill-router-pack-ai-powered-routing-on-demand-toolchain-bootstrapping-self-evolving-knowledge-base-supports-claude-code-kiro-cursor-cline-and-other-ai-coding-clients-ai]]
+- **[2026-06-24]** For an AI agent to do its best work on a human-agent team, it needs access to the same tools, docume — [[agent-identity-a-new-access-model-for-autonomous-team-wide-ai]]
+- **[2026-06-24]** If you run a clinic or hospital network, you already know the cost of missed appointments. — [[build-a-healthcare-appointment-agent-with-amazon-nova-2-sonic]]
+- **[2026-06-24]** How an eve session runs. — [[execution-model-and-durability]]
+- **[2026-06-24]** **TLDR:** The full playbook for optimizing GLM-5. — [[how-to-get-elite-glm-5-2-outputs]]
 
 ## Links
 

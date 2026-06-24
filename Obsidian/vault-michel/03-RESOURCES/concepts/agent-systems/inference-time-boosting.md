@@ -43,3 +43,6 @@ The classical ML scaling law trades training compute for model quality. Inferenc
 - [[03-RESOURCES/concepts/agent-systems/prompt-caching]]
 - [[03-RESOURCES/concepts/ai-strategy-org/inference-optimization]]
 - [[03-RESOURCES/concepts/agent-systems/_index]]
+
+## Evidências
+- **[2026-06-24]** tags: — [[probing-the-misaligned-thinking-process-of-language-models]]

@@ -61,6 +61,8 @@ RL é a espinha dorsal do alinhamento de LLMs modernos. **RLHF** usa PPO para aj
 - **[2026-06-23]** We present HAAS Studio, a simulation and decision-support tool implementing the HAAS framework for policy-aware adaptive task allocation between human — [[haas-studio-a-tool-for-simulating-benchmarking-and-governing-human-ai-work-alloc]]
 - **[2026-06-23]** A single regularized PPO policy with EMA and top-advantage filtering reaches superhuman play in Generals.io under sparse win/loss reward, no league or behavior cloning needed — [[superhuman-ai-for-generalsio-using-self-play-reinforcement-learning]]
 - **[2026-06-23]** WebCQ formulates multi-agent web GUI testing as a Dec-POMDP and uses QTRAN (cooperative MARL with CTDE) for scalable parallelized exploration — [[webcq-cooperative-multi-agent-deep-reinforcement-learning-for-scalable-web-gui-t]]
+- **[2026-06-24]** tags: — [[asalt-adaptive-state-alignment-for-lateral-transfer-in-multi-agent-reinforcement-learning]]
+- **[2026-06-24]** tags: — [[reinforcement-learning-for-computer-use-agents-with-autonomous-evaluationaccepted-to-the-4th-international-workshop-on-generalizing-from-limited-resources-in-the-open-world-glow-ijcai-2026-httpsglow-ijcai-2026-github-ioglow-ijcai-2026]]
 ## Perspectivas
 
 - **[2026-06-21]** Mascarar trajetórias com falha atribuída ao simulador de usuário (não ao agente) é técnica de denoising de sinal de recompensa generalizável a qualquer ambiente simulado — AutoForge. — [[autoforge-automated-environment-synthesis-for-agentic-reinforcement-learning]]

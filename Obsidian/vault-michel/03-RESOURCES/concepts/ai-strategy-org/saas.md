@@ -49,3 +49,5 @@ GitHub: você acessa via browser, a Microsoft mantém a infraestrutura, você pa
 
 ## Evidências
 - **[2026-06-19]** Service-as-a-software inverte o modelo SaaS: vende outcome com margem de software mas preço de agência, via 4 camadas (Company OS, client repos, skill library, MCP execution) — [[03-RESOURCES/sources/how-to-build-service-as-a-software-2026]]
+- **[2026-06-24]** Quanyan Zhu Department of Electrical and Computer Engineering, New York University Tandon School of  — [[ai-tokenomics-the-economics-of-tokens-computation-and-pricing-in-foundation-models]]
+- [[03-RESOURCES/sources/here-s-how-196-yc-p26-startups-sell-the-same-thing]] — YC P26 startups vendem 'autonomous workforce', não 'AI-powered SaaS'; shift de technology para headcount reduction

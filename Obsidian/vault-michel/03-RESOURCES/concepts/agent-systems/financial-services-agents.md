@@ -52,3 +52,7 @@ Vals AI Finance Agent benchmark (2026): Claude Opus 4.7 leads at 64.37%.
 - [[03-RESOURCES/entities/Claude-Cowork]]
 - [[03-RESOURCES/entities/Claude-Managed-Agents]]
 - [[03-RESOURCES/sources/financial-trading/agents-for-financial-services]]
+
+## Evidências
+- [[03-RESOURCES/sources/who-holds-ai-s-off-switch]] — Santander Chief AI Officer: 'Can I trust open-weight models? Will my supply chain be disrupted?'
+- [[03-RESOURCES/sources/how-commerce-is-being-reinvented-for-agentic-ai]] — Commerce reinvention para agentic AI: discovery, authorization, fulfillment com 5 níveis de autonomia

@@ -60,3 +60,6 @@ Quem constrói infraestrutura lucra de **cada usuário** da ferramenta — indep
 ## Evidências
 - **[2026-06-19]** Time de GTM de 5 agentes (prospector, researcher, sequencer, recoverer, reporter) sobre memória compartilhada por conta roda go-to-market inteiro por ~$400/mês, operado por uma pessoa que só edita o standup diário — [[how-to-build-a-gtm-team-on-claude-code-you-can-run-alone]]
 - **[2026-06-19]** Todo agente deve pertencer a um humano específico — sem isso ninguém responde pelo output e nada de fato é implantado; baseline de dois agentes por pessoa ativa para virar delegação real — [[gtm-engineering-chapter-two]]
+- [[03-RESOURCES/sources/the-agent-is-not-the-product]] — Process reengineering makes AI 100x more effective; deployment IS the product, not the agent
+- [[03-RESOURCES/sources/here-s-how-196-yc-p26-startups-sell-the-same-thing]] — YC P26: ninguém diz 'AI-powered', todos vendem headcount reduction; AI virou commodity
+- [[03-RESOURCES/sources/how-to-build-a-100m-warm-lead-database-with-an-ai-coding-agent]] — Intent-signal prospecting com AI agent: 11.4% reply rate vs 1-2% bought lists

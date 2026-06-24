@@ -51,3 +51,6 @@ Michel's vault uses orchestration daily: Nexus dispatches ingest jobs to subagen
 ## Evidências
 - **[2026-06-19]** "Se as skills morrem no restart do processo, o compounding reseta a zero" — durabilidade é pré-requisito para qualquer estratégia de longo prazo baseada em agentes — [[03-RESOURCES/sources/the-agent-loop-architecture]]
 - **[2026-06-19]** Padrão "council": juiz frontier lê respostas de painel de modelos baratos/abertos e escreve a melhor versão combinada — útil para orquestrar decisões de jobs longos e multi-etapa (qual o plano, o que é arriscado), com agente mais barato executando os passos — [[03-RESOURCES/sources/fable-intelligence-model-council]]
+
+- **[2026-06-24]** This two-part series explores how ontology-grounded agentic AI transforms Design Failure Mode and Effects Analysis (DFME — [[reimagining-b-pillar-dfmea-why-ontology-grounded-ai-is-the-future-of-automotive-engineering]]
+- [[03-RESOURCES/sources/snowflake-aim-migration-agent-automating-enterprise-migrations]] — Orquestração de migração enterprise com estado persistente, deployment waves por dependências

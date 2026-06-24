@@ -53,3 +53,9 @@ Michel's CLAUDE.md already encodes HITL explicitly for destructive ops and exter
 ## Evidências
 - **[2026-06-19]** "Zero humanos nos 95% chatos, atenção total nos 5% que carregam risco" — fronteiras de risco definidas uma vez nas instruções do loop, não revisitadas a cada execução — [[03-RESOURCES/sources/how-to-set-up-claude-loops]]
 - **[2026-06-22]** "Comprehension debt" — repo cresce mais rápido do que o humano entende, virando aprovador de diffs cego; cura é gate de leitura humana obrigatório que o loop nunca pode pular — [[03-RESOURCES/sources/loop-engineering-the-anatomy-of-an-autonomous-loop]]
+- **[2026-06-24]** Run a stateful `/grilling` session whose only output is **workflow** specs. — [[skillsskillsin-progressloop-meskill-md-at-main]]
+- **[2026-06-24]** Tuning AI systems by hand doesn't scale. — [[cocoevolve-evolutionary-optimization-for-ai-systems]]
+
+- **[2026-06-24]** Svelte 5 binding that drives an eve agent session from the browser. — [[useeveagent-svelte]]
+- **[2026-06-24]** Vue composable that drives an eve agent session from the browser. — [[useeveagent-vue]]
+- [[03-RESOURCES/sources/guard-the-spend]] — needsApproval campo na ferramenta: agente pausa em queries caras, pede approval, resume do exato step

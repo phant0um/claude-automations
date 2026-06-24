@@ -41,3 +41,6 @@ Para Michel: DT é cobrado em projetos FIAP interdisciplinares e em concursos de
 ## Related
 - [[03-RESOURCES/concepts/ux-ui-design]]
 - [[03-RESOURCES/concepts/dev-foundations/_index]]
+
+## Evidências
+- **[2026-06-24]** Skills for Real Engineers. Straight from my .claude directory. - skills/skills/in-progress/loop-me/SKILL.md at main · ma — [[skillsskillsin-progressloop-meskill-md-at-main-3]]

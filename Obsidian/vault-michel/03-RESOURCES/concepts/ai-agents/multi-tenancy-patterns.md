@@ -23,6 +23,7 @@ O vault é "silo" por área (FIAP, concurso, finance, AI agents). Pool model pod
 ## Evidências
 
 - [[03-RESOURCES/sources/articles/pool-model-multi-tenancy-bedrock-agentcore]] — Healthcare AI agents servindo múltiplas clínicas
+- [[03-RESOURCES/sources/team-playbooks]] — Per-tenant isolation via dynamic skills: auth claims determinam skill carregado, convenções não bleed
 
 ## Links
 

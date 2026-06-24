@@ -46,3 +46,6 @@ Controller → Service → Repository (JpaRepository) → DB
 - [[03-RESOURCES/concepts/dev-foundations/rest-api|REST API]]
 - [[03-RESOURCES/entities/Java|Java]]
 - [[03-RESOURCES/concepts/dev-foundations/jdbc|JDBC]]
+
+## Evidências
+- [[03-RESOURCES/sources/build-a-spring-boot-rest-api-with-amazon-aurora-dsql]] — Spring Boot 3.3 + HikariCP + Aurora DSQL JDBC com IAM auth e active-active multi-region

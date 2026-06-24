@@ -68,3 +68,4 @@ Routes tasks to the right model: reasoning model for complex planning, fast mode
 
 ## Evidências
 - **[2026-06-19]** Capacidade de agente com ferramentas é limitada por como tools são compostas, não por quais tools existem — interface de ação é o gargalo — [[03-RESOURCES/sources/spatialclaw-rethinking-action-interface]]
+- [[03-RESOURCES/sources/how-it-runs]] — Session/turn/step model: session durável span dias, turn = mensagem + work, step = checkpoint durável

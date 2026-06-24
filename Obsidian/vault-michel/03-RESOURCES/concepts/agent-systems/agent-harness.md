@@ -186,7 +186,9 @@ The harness prevents reward hacking by isolating the evaluator: agents can submi
 
 ## Evidências
 - **[2026-06-22]** Cloudflare abre os primitivos de durable execution, sandboxed code exec e virtual filesystem que usou para hardenizar seu harness first-party (Project Think), para qualquer harness/framework de terceiros (Flue/Pi) rodar em produção. — [[03-RESOURCES/sources/bringing-more-agent-harnesses-to-cloudflare-starting-with-flue]]
+- **[2026-06-24]** 过去这几个月，社区里关于 Agent 的讨论焦点经历了一次完整的下沉。年初大家还在比模型分数，到 2026 年中，X 与 GitHub 上的工程师已经在讨论两件更具体的事：. — [[harness-loop-engineering-2026-ai-agent]]
 
+- **[2026-06-24]** tags: — [[bayesian-control-for-coding-agents]]
 ## References
 
 - [[03-RESOURCES/sources/ai-agents-harness/ai-agent-stack-2026]] — complete harness architecture

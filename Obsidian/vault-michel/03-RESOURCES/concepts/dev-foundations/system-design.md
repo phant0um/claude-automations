@@ -50,3 +50,9 @@ In practice: network partitions happen → choose CP (banks, transactions) or AP
 - [[03-RESOURCES/concepts/dev-foundations/clean-code]]
 - [[03-RESOURCES/concepts/development/legacy-systems]]
 - [[03-RESOURCES/concepts/dev-foundations/_index]]
+
+## Evidências
+- **[2026-06-24]** Scaling adversarial evaluation of large language models requires two things at once: a way to genera — [[adversabench-automated-llm-red-teaming]]
+
+- **[2026-06-24]** Most developers don't have a coding problem.They have a workflow problem.A lot of time gets wasted doing things that are — [[10-developer-tools-you-probably-aren-t-using-but-should-be]]
+- **[2026-06-24]** tags: — [[accuracy-and-satisfaction-in-multi-turn-llm-dialogues-for-nfr-assessment]]

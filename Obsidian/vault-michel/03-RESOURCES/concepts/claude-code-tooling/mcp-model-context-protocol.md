@@ -222,3 +222,6 @@ Ver padrões completos em [[03-RESOURCES/sources/guides-courses-howtos/8-claude-
 - **[2026-06-22]** Bridge Claude↔Obsidian via plugin "Local REST API" expondo API key local consumida por `claude mcp add-json` apontando para `127.0.0.1:27124` — passo-a-passo replicável de setup — [[03-RESOURCES/sources/how-to-build-an-ai-second-brain-with-claude-and-obsidian-full-guide-he-s-getting-smarter-every-da]]
 - **[2026-06-22]** Agent-Native (BuilderIO) gera capability MCP automaticamente a partir da mesma definição de "action" que serve UI/API/CLI — MCP como uma de seis superfícies de exposição, não destino único. — [[03-RESOURCES/sources/builderioagent-native-a-framework-for-building-agent-native-applications]]
 - **[2026-06-22]** Connectors MCP como o que diferencia um loop que só lê arquivos de um que age no mundo real (broker API, banco, Slack, exchange) — [[03-RESOURCES/sources/how-to-use-loop-engineering-to-build-a-self-improving-quant-trading-system]]
+
+- **[2026-06-24]** The way we work with AI is evolving from a single-player to a multiplayer experience, where humans and agents work toget — [[lessons-from-anthropic-on-building-effective-human-agent-teams]]
+- **[2026-06-24]** Part 4 of the Build an Agent tutorial. Let each user connect their own warehouse over an OAuth MCP via Vercel Connect. — [[connect-a-warehouse]]

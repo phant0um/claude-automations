@@ -64,3 +64,5 @@ Ver também `[[03-RESOURCES/concepts/llm-ml-foundations/prompt-caching]]` — ca
 
 ## Evidências
 - **[2026-06-19]** Diferença de custo 10x no Claude Sonnet ($0.30/M cacheado vs $3.00/M não-cacheado); regra prática: conteúdo estável no topo, dinâmico no fundo, usar tool masking em vez de remoção de ferramentas — [[03-RESOURCES/sources/ai-agents-harness/context-engineering-complete-playbook]]
+
+- **[2026-06-24]** tags: — [[compresskv-semantic-retrieval-guided-kv-cache-compression-for-resource-efficient-long-context-llm-inference]]

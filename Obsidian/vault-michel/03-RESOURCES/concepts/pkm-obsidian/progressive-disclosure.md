@@ -204,3 +204,7 @@ At those points, redesign. You're not managing an agent anymore, you're managing
 - [[ai-agent-stack-2026]] — complete implementation
 - "Week 10: Context budget bloat" section describes collapse and recovery
 
+
+## Evidências
+- **[2026-06-24]** The domain model for what makes a skill great. — [[skillsskillsin-progressloop-meskill-md-at-main-6]]
+- **[2026-06-24]** A skill exists to wrangle determinism out of a stochastic system. — [[skillsskillsin-progressloop-meskill-md-at-main-7]]

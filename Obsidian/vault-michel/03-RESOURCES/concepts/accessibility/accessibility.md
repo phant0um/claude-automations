@@ -17,3 +17,6 @@ Este arquivo redireciona para a entrada principal em português. Ver [[03-RESOUR
 - [[03-RESOURCES/concepts/acessibilidade-web]]
 - [[03-RESOURCES/concepts/ux-ui-design]]
 - [[03-RESOURCES/concepts/dev-foundations/_index]]
+
+## Evidências
+- **[2026-06-24]** Andreas Chouliaras 1 Luke Connolly 2 and Dimitris Chatzopoulos 1 \*This work is supported by EU Hori — [[themis-an-explainable-ai-enabled-framework-for-reinforcement-learning-with-human-feedback]]

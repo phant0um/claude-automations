@@ -110,6 +110,10 @@ Rotinas do vault (`07-QUEUE/rotinas/`) têm custo de token muito diferente confo
 - **[2026-06-23]** Getting more from each token: how Copilot improves context handling and model routing — [[getting-more-from-each-token-how-copilot-improves-context-handling-and-model-rou]]
 - **[2026-06-23]** Agentic AI systems should be designed as marginal token allocators — [[agentic-ai-systems-should-be-designed-as-marginal-token-allocators]]
 
+- **[2026-06-24]** Satya Nadella recently published an excellent article on what a future firm looks like in an AI-driven economy. He also — [[token-capital-efficiency]]
+- [[03-RESOURCES/sources/ai-s-cost-crisis-how-fintech-could-save-billions]] — Uber burned annual AI budget in 4 months; AI cost crisis como oportunidade fintech
+- [[03-RESOURCES/sources/the-token-economy-pt2-the-intelligence-company-gets-built]] — Intelligence company: tokens não criam produtividade, operating model sim; Anthropic $1.5B JV forward-deploy
+
 ## Perspectivas
 - **[2026-06-22]** Abrir reasoning mode máximo para tarefa trivial é desperdício estrutural equivalente a usar modelo caro para tarefa simples — "modo de pensamento" é um lever de custo paralelo à escolha de modelo, não um botão neutro de qualidade — [[03-RESOURCES/sources/token-ai]]
 - **[2026-06-22]** HMM/filtro de Kalman como metáfora para scoring de triagem: modelar "qualidade real" de uma source como estado oculto que evolve no tempo, com observations = scores atribuídos por múltiplos passes do triagem-agent — ideia exploratória, não acionável ainda (prioridade baixa, esforço dias, sem implementação imediata) — [[03-RESOURCES/sources/how-quants-use-hidden-markov-models-to-build-regime-adaptive-trading-strategies-]]

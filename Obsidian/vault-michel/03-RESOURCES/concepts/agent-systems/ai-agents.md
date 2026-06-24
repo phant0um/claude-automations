@@ -54,3 +54,11 @@ Every agent in Michel's vault — Nexus, guard, hill, subagent batch ingesters �
 - [[03-RESOURCES/concepts/world-model]]
 - [[03-RESOURCES/concepts/agentic-memory-taxonomy]]
 - [[03-RESOURCES/concepts/long-horizon-agents]]
+
+## Evidências
+- **[2026-06-24]** According to Gartner, the average Global Fortune 500 enterprise will have over 150,000 AI agents in  — [[aws-genaiic-partner-agent-factory-new-ai-agents-now-in-aws-marketplace]]
+- **[2026-06-24]** Introducing Flounder: An Autonomous White-Hat Security Auditor. — [[flounder-an-autonomous-white-hat-security-auditor]]
+- **[2026-06-24]** Quanyan Zhu Department of Electrical and Computer Engineering, New York University Tandon School of  — [[ai-tokenomics-the-economics-of-tokens-computation-and-pricing-in-foundation-models]]
+- **[2026-06-24]** ## Cybersecurity Skills Router / Reverse-Engineering Skill Routing Pack. — [[authorized-penetration-testing-security-research-skill-router-pack-ai-powered-routing-on-demand-toolchain-bootstrapping-self-evolving-knowledge-base-supports-claude-code-kiro-cursor-cline-and-other-ai-coding-clients-ai]]
+- **[2026-06-24]** If you run a clinic or hospital network, you already know the cost of missed appointments. — [[build-a-healthcare-appointment-agent-with-amazon-nova-2-sonic]]
+- **[2026-06-24]** Loka transformed customer voice interactions by building a conversational AI agent with Amazon Nova  — [[how-loka-built-a-natural-low-latency-voice-agent-with-amazon-nova-2-sonic]]

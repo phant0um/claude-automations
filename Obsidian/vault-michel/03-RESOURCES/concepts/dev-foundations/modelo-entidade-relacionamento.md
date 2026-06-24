@@ -37,3 +37,9 @@ O modelo MER do projeto Fintech foi desenvolvido na Fase 3 usando Oracle SQL Dev
 - [[03-RESOURCES/concepts/dev-foundations/normalizacao|Normalização]]
 - [[03-RESOURCES/entities/Oracle-SQL|Oracle SQL]]
 - [[02-AREAS/fiap/fase-3/fase-3-index|Fase 3 — Modelling]]
+
+## Evidências
+- **[2026-06-24]** Skills for Real Engineers. Straight from my .claude directory. - skills/skills/in-progress/loop-me/SKILL.md at main · ma — [[skillsskillsin-progressloop-meskill-md-at-main-1]]
+
+- **[2026-06-24]** Skills for Real Engineers. Straight from my .claude directory. - skills/skills/in-progress/loop-me/SKILL.md at main · ma — [[skillsskillsin-progressloop-meskill-md-at-main-2]]
+- **[2026-06-24]** Skills for Real Engineers. Straight from my .claude directory. - skills/skills/in-progress/loop-me/SKILL.md at main · ma — [[skillsskillsin-progressloop-meskill-md-at-main-4]]

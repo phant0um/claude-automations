@@ -33,3 +33,9 @@ Three core motivations for adding agents:
 - [[03-RESOURCES/concepts/agent-systems/_index]]
 - [[03-RESOURCES/concepts/ai-agents]]
 - [[03-RESOURCES/concepts/parallel-reasoning]]
+
+## Evidências
+- **[2026-06-24]** According to Gartner, the average Global Fortune 500 enterprise will have over 150,000 AI agents in  — [[aws-genaiic-partner-agent-factory-new-ai-agents-now-in-aws-marketplace]]
+- **[2026-06-24]** Heng Ping 1,*, Arijit Bhattacharjee 2, Peiyu Zhang 1, Shixuan Li 1, Wei Yang 1,. — [[rem-moa-reasoning-memory-sustains-mixture-of-agents-scaling]]
+- **[2026-06-24]** Bingnan Xiao, Chenhao Yang, Wei Ni,, Xin Wang,, and Tony Q. — [[agentic-ai-for-bilevel-long-term-optimization-of-policy-driven-physical-layer-systems]]
+- **[2026-06-24]** In late 2023, a mid-sized systematic fund in Chicago - managing roughly $2. — [[how-quants-use-llm-agents-to-mine-alpha-from-unstructured-data-the-complete-rag-framework]]

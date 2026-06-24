@@ -50,3 +50,7 @@ HAVING SUM(valor) > 1000;
 - [[03-RESOURCES/concepts/dev-foundations/jdbc|JDBC]]
 - [[03-RESOURCES/concepts/joins-sql|JOINs em SQL]]
 - [[03-RESOURCES/entities/Oracle-SQL|Oracle SQL]]
+
+## Evidências
+- **[2026-06-24]** Introduction Migration assessment and planning is rarely a single-pass exercise. Inventory data is incomplete; assumptio — [[accelerating-migration-assessments-and-planning-with-aws-transform]]
+- [[03-RESOURCES/sources/ai-powered-bi-with-snowflake-and-amazon-quick]] — Snowflake semantic views: business logic na camada de dados unifica AI e BI, reduz hallucinations

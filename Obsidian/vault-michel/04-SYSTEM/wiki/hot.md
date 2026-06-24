@@ -243,7 +243,6 @@ Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline
 **Top action:** revisar loop-engineering-patterns contra framing "sucessor do prompt engineering" → kanban alta
 **Process gap auto-flagado:** F2.9 cap overage (6 vs 3) por falta de contador global entre dispatches paralelos; off-by-one em triagem (51→50, dedup manual pós-triagem)
 → [[06-GENERATED/relatorios/2026-06-22-relatorio-semanal]]
-- ⚠️ daily-scan: 75 candidatos ≥ threshold (30) — considerar rodar pipeline-semanal — 2026-06-22
 - 🔄 process-queue 2026-06-22: 1 task na fila, 0 processadas, 1 skip (revisão-manual — `execucao: manual` explícita, aguardando Michel) — [[06-GENERATED/queue/2026-06-22-process-queue-0]]
 
 ## Revisão Semanal 2026-06-22
@@ -279,7 +278,6 @@ Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline
 **Top action:** criar concepts agent-loop-pattern, beautiful-nonsense, prompt-debt (40 links unresolved pointing to estes)
 **Process gap:** candidates_aprovados.txt foi corrompido por rescore script (pipe-delimited grade appended) — fix aplicado, mas recomendo add validation no F1.0b
 → [[06-GENERATED/relatorios/2026-06-23-relatorio-semanal]]
-- [ALERT] daily-scan: 58 candidatos >= threshold (30) - considerar rodar pipeline-semanal -- 2026-06-23
 - ✅ process-queue 2026-06-23: 1 task na fila, 0 processadas, 1 arquivada (plano-acoes-revisao-2026-06-21 já executada manualmente 2026-06-22) — [[06-GENERATED/queue/2026-06-23-process-queue-1]]
 
 ## Pipeline Semanal 2026-06-23 (Run 2)
@@ -310,3 +308,17 @@ Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline
 **Process gap:** File evaporation 237→39 (100% batch 1). Subagentes sem vault context = zero wikilinks. Próxima run: passar concepts/entities como contexto.
 → [[06-GENERATED/relatorios/2026-06-23-relatorio-semanal]]
 ⚠️ commit pendente — vault-michel não tem .git próprio (git root = ~/). Arquivos rastreados: .raw/.manifest.json, hot.md, relatorio. Considerar init git repo no vault.
+- ⚠️ daily-scan: 141 candidatos ≥ threshold (30) — considerar rodar pipeline-semanal — 2026-06-24
+
+## Pipeline Semanal 2026-06-24
+**Veredito:** PIPELINE OK
+**Triagem:** 141 candidatos → 126 aprovados (89.4%) → 15 C/D rejeitados
+**Ingest:** 124 source pages (105 ai-agents, 15 articles, 4 fiap); manifest +168 entries; 126 Clippings arquivados (72 A, 54 B)
+**F2.8:** 3/3 spot-checked — APROVADO (1 malformado, resto sólido)
+**F2.5:** 487 evidence entries appended em 55+ concepts
+**F2.9:** 3 Minha Síntese escritas
+**F3.7:** orphan 11/124 (8%) — excelente (vs 100% em runs anteriores)
+**F3.6 top insight:** Agent security é o novo attack surface definitivo — 20+ sources, vetores distintos
+**Clusters:** Loop Engineering (23), Agent Architecture (20), Inference/Token (15), RAG (15), Coding Agents (12)
+**Top action:** Rodar connection-finder nos 11 orphans
+→ [[06-GENERATED/relatorios/2026-06-24-relatorio-semanal]]

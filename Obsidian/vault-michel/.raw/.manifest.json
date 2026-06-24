@@ -20705,14 +20705,2736 @@
         "03-RESOURCES/sources/no-wonder-youre-stuck-you-keep-strengthening-what-weakens-you.md"
       ]
     },
-    "No wonder you’re stuck. You keep strengthening what weakens you.": {
+    "No wonder you're stuck. You keep strengthening what weakens you.": {
       "hash": "9304d3dfe600583dfcb83de6c62a8758",
       "ingested_at": "2026-06-23",
       "category": "articles",
       "pages_created": [
         "03-RESOURCES/sources/no-wonder-youre-stuck-you-keep-strengthening-what-weakens-you.md"
       ],
-      "alias_of": "No wonder you’re stuck. You keep strengthening what weakens you..md"
+      "alias_of": "No wonder you're stuck. You keep strengthening what weakens you..md"
+    },
+    "30 Core Agentic Engineering Concepts Every Developer Should Know.md": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/30-core-agentic-engineering-concepts.md"
+      ],
+      "source_page": "03-RESOURCES/sources/ai-agents/30-core-agentic-engineering-concepts.md"
+    },
+    "30 Core Agentic Engineering Concepts Every Developer Should Know": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/30-core-agentic-engineering-concepts.md"
+      ],
+      "alias_of": "30 Core Agentic Engineering Concepts Every Developer Should Know.md"
+    },
+    "30 Skills That Turn Stock Claude Into a Stronger Model.md": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/30-skills-stock-claude-stronger-model.md"
+      ],
+      "source_page": "03-RESOURCES/sources/ai-agents/30-skills-stock-claude-stronger-model.md"
+    },
+    "30 Skills That Turn Stock Claude Into a Stronger Model": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/30-skills-stock-claude-stronger-model.md"
+      ],
+      "alias_of": "30 Skills That Turn Stock Claude Into a Stronger Model.md"
+    },
+    "30 分钟给你的 Agent 搭好永久记忆：能 cat 能 git 能直接编辑，保姆级教程零门槛上手.md": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/30-min-agent-permanent-memory-everos.md"
+      ],
+      "source_page": "03-RESOURCES/sources/ai-agents/30-min-agent-permanent-memory-everos.md"
+    },
+    "30 分钟给你的 Agent 搭好永久记忆：能 cat 能 git 能直接编辑，保姆级教程零门槛上手": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/30-min-agent-permanent-memory-everos.md"
+      ],
+      "alias_of": "30 分钟给你的 Agent 搭好永久记忆：能 cat 能 git 能直接编辑，保姆级教程零门槛上手.md"
+    },
+    "AI's next era isn't a smarter model. It's multi-model fusion..md": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/ai-next-era-multi-model-fusion.md"
+      ],
+      "source_page": "03-RESOURCES/sources/ai-agents/ai-next-era-multi-model-fusion.md"
+    },
+    "AI's next era isn't a smarter model. It's multi-model fusion.": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/ai-next-era-multi-model-fusion.md"
+      ],
+      "alias_of": "AI's next era isn't a smarter model. It's multi-model fusion..md"
+    },
+    "After Claude Fable 5 ban, Open Weights and Orchestration are the Hedge.md": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/after-claude-fable-5-ban-open-weights-orchestration-hedge.md"
+      ],
+      "source_page": "03-RESOURCES/sources/ai-agents/after-claude-fable-5-ban-open-weights-orchestration-hedge.md"
+    },
+    "After Claude Fable 5 ban, Open Weights and Orchestration are the Hedge": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/after-claude-fable-5-ban-open-weights-orchestration-hedge.md"
+      ],
+      "alias_of": "After Claude Fable 5 ban, Open Weights and Orchestration are the Hedge.md"
+    },
+    "Claude Code  Codex  Grok 长任务工作流：只读计划、按计划执行、单独验收.md": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/claude-code-codex-grok-long-task-workflow.md"
+      ],
+      "source_page": "03-RESOURCES/sources/ai-agents/claude-code-codex-grok-long-task-workflow.md"
+    },
+    "Claude Code  Codex  Grok 长任务工作流：只读计划、按计划执行、单独验收": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/claude-code-codex-grok-long-task-workflow.md"
+      ],
+      "alias_of": "Claude Code  Codex  Grok 长任务工作流：只读计划、按计划执行、单独验收.md"
+    },
+    "GLM-5.2 Is F*cking Incredible (Chinese Claude Killer?).md": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/glm-52-fucking-incredible-chinese-claude-killer.md"
+      ],
+      "source_page": "03-RESOURCES/sources/ai-agents/glm-52-fucking-incredible-chinese-claude-killer.md"
+    },
+    "GLM-5.2 Is F*cking Incredible (Chinese Claude Killer?)": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/glm-52-fucking-incredible-chinese-claude-killer.md"
+      ],
+      "alias_of": "GLM-5.2 Is F*cking Incredible (Chinese Claude Killer?).md"
+    },
+    "Getting started with the Gemini Interactions API.md": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/getting-started-gemini-interactions-api.md"
+      ],
+      "source_page": "03-RESOURCES/sources/ai-agents/getting-started-gemini-interactions-api.md"
+    },
+    "Getting started with the Gemini Interactions API": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/getting-started-gemini-interactions-api.md"
+      ],
+      "alias_of": "Getting started with the Gemini Interactions API.md"
+    },
+    "Here's How I Built a Power Apps Code App with OpenClaw and Codex.md": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/power-apps-code-app-openclaw-codex.md"
+      ],
+      "source_page": "03-RESOURCES/sources/ai-agents/power-apps-code-app-openclaw-codex.md"
+    },
+    "Here's How I Built a Power Apps Code App with OpenClaw and Codex": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/power-apps-code-app-openclaw-codex.md"
+      ],
+      "alias_of": "Here's How I Built a Power Apps Code App with OpenClaw and Codex.md"
+    },
+    "How much memory do we fucking need?.md": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/how-much-memory-do-we-need.md"
+      ],
+      "source_page": "03-RESOURCES/sources/ai-agents/how-much-memory-do-we-need.md"
+    },
+    "How much memory do we fucking need?": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/how-much-memory-do-we-need.md"
+      ],
+      "alias_of": "How much memory do we fucking need?.md"
+    },
+    "How to Build Private NotebookLM for Free.md": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/how-to-build-private-notebooklm-free.md"
+      ],
+      "source_page": "03-RESOURCES/sources/ai-agents/how-to-build-private-notebooklm-free.md"
+    },
+    "How to Build Private NotebookLM for Free": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/how-to-build-private-notebooklm-free.md"
+      ],
+      "alias_of": "How to Build Private NotebookLM for Free.md"
+    },
+    "I Built a Private AI Agent That Runs Fully Offline. Here's the Workflow..md": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/i-built-private-ai-agent-runs-fully-offline.md"
+      ],
+      "source_page": "03-RESOURCES/sources/ai-agents/i-built-private-ai-agent-runs-fully-offline.md"
+    },
+    "I Built a Private AI Agent That Runs Fully Offline. Here's the Workflow.": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/i-built-private-ai-agent-runs-fully-offline.md"
+      ],
+      "alias_of": "I Built a Private AI Agent That Runs Fully Offline. Here's the Workflow..md"
+    },
+    "Introducing Engram Scaling compute on your context.md": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/introducing-engram-scaling-compute-context.md"
+      ],
+      "source_page": "03-RESOURCES/sources/ai-agents/introducing-engram-scaling-compute-context.md"
+    },
+    "Introducing Engram Scaling compute on your context": {
+      "ingested_at": "2026-06-23",
+      "category": "ai-agents",
+      "batch": "batch-1-of-3",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/introducing-engram-scaling-compute-context.md"
+      ],
+      "alias_of": "Introducing Engram Scaling compute on your context.md"
+    },
+    "loop-engineering-delegating-judgment-not-code": {
+      "path": "03-RESOURCES/sources/ai-agents/loop-engineering-delegating-judgment-not-code.md",
+      "ingested": "2026-06-23"
+    },
+    "loop-engineering-delegating-judgment-not-code.md": {
+      "path": "03-RESOURCES/sources/ai-agents/loop-engineering-delegating-judgment-not-code.md",
+      "ingested": "2026-06-23"
+    },
+    "30-core-agentic-engineering-concepts": {
+      "path": "03-RESOURCES/sources/ai-agents/30-core-agentic-engineering-concepts.md",
+      "ingested": "2026-06-23"
+    },
+    "30-core-agentic-engineering-concepts.md": {
+      "path": "03-RESOURCES/sources/ai-agents/30-core-agentic-engineering-concepts.md",
+      "ingested": "2026-06-23"
+    },
+    "introducing-engram-scaling-compute-context": {
+      "path": "03-RESOURCES/sources/ai-agents/introducing-engram-scaling-compute-context.md",
+      "ingested": "2026-06-23"
+    },
+    "introducing-engram-scaling-compute-context.md": {
+      "path": "03-RESOURCES/sources/ai-agents/introducing-engram-scaling-compute-context.md",
+      "ingested": "2026-06-23"
+    },
+    "goodbye-rag-sag-sql-augmented-generation": {
+      "path": "03-RESOURCES/sources/ai-agents/goodbye-rag-sag-sql-augmented-generation.md",
+      "ingested": "2026-06-23"
+    },
+    "goodbye-rag-sag-sql-augmented-generation.md": {
+      "path": "03-RESOURCES/sources/ai-agents/goodbye-rag-sag-sql-augmented-generation.md",
+      "ingested": "2026-06-23"
+    },
+    "i-built-private-ai-agent-runs-fully-offline": {
+      "path": "03-RESOURCES/sources/ai-agents/i-built-private-ai-agent-runs-fully-offline.md",
+      "ingested": "2026-06-23"
+    },
+    "i-built-private-ai-agent-runs-fully-offline.md": {
+      "path": "03-RESOURCES/sources/ai-agents/i-built-private-ai-agent-runs-fully-offline.md",
+      "ingested": "2026-06-23"
+    },
+    "training-agents-class-1-sft-run-by-agent": {
+      "path": "03-RESOURCES/sources/ai-agents/training-agents-class-1-sft-run-by-agent.md",
+      "ingested": "2026-06-23"
+    },
+    "training-agents-class-1-sft-run-by-agent.md": {
+      "path": "03-RESOURCES/sources/ai-agents/training-agents-class-1-sft-run-by-agent.md",
+      "ingested": "2026-06-23"
+    },
+    "token-economy-technical-guide": {
+      "path": "03-RESOURCES/sources/ai-agents/token-economy-technical-guide.md",
+      "ingested": "2026-06-23"
+    },
+    "token-economy-technical-guide.md": {
+      "path": "03-RESOURCES/sources/ai-agents/token-economy-technical-guide.md",
+      "ingested": "2026-06-23"
+    },
+    "after-claude-fable-5-ban-open-weights-orchestration-hedge": {
+      "path": "03-RESOURCES/sources/ai-agents/after-claude-fable-5-ban-open-weights-orchestration-hedge.md",
+      "ingested": "2026-06-23"
+    },
+    "after-claude-fable-5-ban-open-weights-orchestration-hedge.md": {
+      "path": "03-RESOURCES/sources/ai-agents/after-claude-fable-5-ban-open-weights-orchestration-hedge.md",
+      "ingested": "2026-06-23"
+    },
+    "30-min-agent-permanent-memory-everos": {
+      "path": "03-RESOURCES/sources/ai-agents/30-min-agent-permanent-memory-everos.md",
+      "ingested": "2026-06-23"
+    },
+    "30-min-agent-permanent-memory-everos.md": {
+      "path": "03-RESOURCES/sources/ai-agents/30-min-agent-permanent-memory-everos.md",
+      "ingested": "2026-06-23"
+    },
+    "stop-writing-claude-md": {
+      "path": "03-RESOURCES/sources/ai-agents/stop-writing-claude-md.md",
+      "ingested": "2026-06-23"
+    },
+    "stop-writing-claude-md.md": {
+      "path": "03-RESOURCES/sources/ai-agents/stop-writing-claude-md.md",
+      "ingested": "2026-06-23"
+    },
+    "ai-next-era-multi-model-fusion": {
+      "path": "03-RESOURCES/sources/ai-agents/ai-next-era-multi-model-fusion.md",
+      "ingested": "2026-06-23"
+    },
+    "ai-next-era-multi-model-fusion.md": {
+      "path": "03-RESOURCES/sources/ai-agents/ai-next-era-multi-model-fusion.md",
+      "ingested": "2026-06-23"
+    },
+    "ultimate-guide-build-and-scale-consumer-apps": {
+      "path": "03-RESOURCES/sources/ai-agents/ultimate-guide-build-and-scale-consumer-apps.md",
+      "ingested": "2026-06-23"
+    },
+    "ultimate-guide-build-and-scale-consumer-apps.md": {
+      "path": "03-RESOURCES/sources/ai-agents/ultimate-guide-build-and-scale-consumer-apps.md",
+      "ingested": "2026-06-23"
+    },
+    "how-much-memory-do-we-need": {
+      "path": "03-RESOURCES/sources/ai-agents/how-much-memory-do-we-need.md",
+      "ingested": "2026-06-23"
+    },
+    "how-much-memory-do-we-need.md": {
+      "path": "03-RESOURCES/sources/ai-agents/how-much-memory-do-we-need.md",
+      "ingested": "2026-06-23"
+    },
+    "glm-52-open-source-ai-setup": {
+      "path": "03-RESOURCES/sources/ai-agents/glm-52-open-source-ai-setup.md",
+      "ingested": "2026-06-23"
+    },
+    "glm-52-open-source-ai-setup.md": {
+      "path": "03-RESOURCES/sources/ai-agents/glm-52-open-source-ai-setup.md",
+      "ingested": "2026-06-23"
+    },
+    "codex-excalidraw-canvas-annotation-image-editing": {
+      "path": "03-RESOURCES/sources/ai-agents/codex-excalidraw-canvas-annotation-image-editing.md",
+      "ingested": "2026-06-23"
+    },
+    "codex-excalidraw-canvas-annotation-image-editing.md": {
+      "path": "03-RESOURCES/sources/ai-agents/codex-excalidraw-canvas-annotation-image-editing.md",
+      "ingested": "2026-06-23"
+    },
+    "how-to-build-private-notebooklm-free": {
+      "path": "03-RESOURCES/sources/ai-agents/how-to-build-private-notebooklm-free.md",
+      "ingested": "2026-06-23"
+    },
+    "how-to-build-private-notebooklm-free.md": {
+      "path": "03-RESOURCES/sources/ai-agents/how-to-build-private-notebooklm-free.md",
+      "ingested": "2026-06-23"
+    },
+    "30-powerful-llms-free-2026": {
+      "path": "03-RESOURCES/sources/ai-agents/30-powerful-llms-free-2026.md",
+      "ingested": "2026-06-23"
+    },
+    "30-powerful-llms-free-2026.md": {
+      "path": "03-RESOURCES/sources/ai-agents/30-powerful-llms-free-2026.md",
+      "ingested": "2026-06-23"
+    },
+    "glm-52-fucking-incredible-chinese-claude-killer": {
+      "path": "03-RESOURCES/sources/ai-agents/glm-52-fucking-incredible-chinese-claude-killer.md",
+      "ingested": "2026-06-23"
+    },
+    "glm-52-fucking-incredible-chinese-claude-killer.md": {
+      "path": "03-RESOURCES/sources/ai-agents/glm-52-fucking-incredible-chinese-claude-killer.md",
+      "ingested": "2026-06-23"
+    },
+    "claude-code-codex-grok-long-task-workflow": {
+      "path": "03-RESOURCES/sources/ai-agents/claude-code-codex-grok-long-task-workflow.md",
+      "ingested": "2026-06-23"
+    },
+    "claude-code-codex-grok-long-task-workflow.md": {
+      "path": "03-RESOURCES/sources/ai-agents/claude-code-codex-grok-long-task-workflow.md",
+      "ingested": "2026-06-23"
+    },
+    "duckdb-internals-why-is-duckdb-fast": {
+      "path": "03-RESOURCES/sources/ai-agents/duckdb-internals-why-is-duckdb-fast.md",
+      "ingested": "2026-06-23"
+    },
+    "duckdb-internals-why-is-duckdb-fast.md": {
+      "path": "03-RESOURCES/sources/ai-agents/duckdb-internals-why-is-duckdb-fast.md",
+      "ingested": "2026-06-23"
+    },
+    "chatprd-codex-browser-use-ux-testing": {
+      "path": "03-RESOURCES/sources/ai-agents/chatprd-codex-browser-use-ux-testing.md",
+      "ingested": "2026-06-23"
+    },
+    "chatprd-codex-browser-use-ux-testing.md": {
+      "path": "03-RESOURCES/sources/ai-agents/chatprd-codex-browser-use-ux-testing.md",
+      "ingested": "2026-06-23"
+    },
+    "foundation-engineering": {
+      "path": "03-RESOURCES/sources/ai-agents/foundation-engineering.md",
+      "ingested": "2026-06-23"
+    },
+    "foundation-engineering.md": {
+      "path": "03-RESOURCES/sources/ai-agents/foundation-engineering.md",
+      "ingested": "2026-06-23"
+    },
+    "30-skills-stock-claude-stronger-model": {
+      "path": "03-RESOURCES/sources/ai-agents/30-skills-stock-claude-stronger-model.md",
+      "ingested": "2026-06-23"
+    },
+    "30-skills-stock-claude-stronger-model.md": {
+      "path": "03-RESOURCES/sources/ai-agents/30-skills-stock-claude-stronger-model.md",
+      "ingested": "2026-06-23"
+    },
+    "ai-fluency-divide-2027": {
+      "path": "03-RESOURCES/sources/ai-agents/ai-fluency-divide-2027.md",
+      "ingested": "2026-06-23"
+    },
+    "ai-fluency-divide-2027.md": {
+      "path": "03-RESOURCES/sources/ai-agents/ai-fluency-divide-2027.md",
+      "ingested": "2026-06-23"
+    },
+    "two-kinds-of-hard": {
+      "path": "03-RESOURCES/sources/ai-agents/two-kinds-of-hard.md",
+      "ingested": "2026-06-23"
+    },
+    "two-kinds-of-hard.md": {
+      "path": "03-RESOURCES/sources/ai-agents/two-kinds-of-hard.md",
+      "ingested": "2026-06-23"
+    },
+    "power-apps-code-app-openclaw-codex": {
+      "path": "03-RESOURCES/sources/ai-agents/power-apps-code-app-openclaw-codex.md",
+      "ingested": "2026-06-23"
+    },
+    "power-apps-code-app-openclaw-codex.md": {
+      "path": "03-RESOURCES/sources/ai-agents/power-apps-code-app-openclaw-codex.md",
+      "ingested": "2026-06-23"
+    },
+    "aws-continuum-security-machine-speed": {
+      "path": "03-RESOURCES/sources/ai-agents/aws-continuum-security-machine-speed.md",
+      "ingested": "2026-06-23"
+    },
+    "aws-continuum-security-machine-speed.md": {
+      "path": "03-RESOURCES/sources/ai-agents/aws-continuum-security-machine-speed.md",
+      "ingested": "2026-06-23"
+    },
+    "vibe-coding-is-a-ticking-time-bomb": {
+      "path": "03-RESOURCES/sources/ai-agents/vibe-coding-is-a-ticking-time-bomb.md",
+      "ingested": "2026-06-23"
+    },
+    "vibe-coding-is-a-ticking-time-bomb.md": {
+      "path": "03-RESOURCES/sources/ai-agents/vibe-coding-is-a-ticking-time-bomb.md",
+      "ingested": "2026-06-23"
+    },
+    "the-self-cleaning-codebase": {
+      "path": "03-RESOURCES/sources/ai-agents/the-self-cleaning-codebase.md",
+      "ingested": "2026-06-23"
+    },
+    "the-self-cleaning-codebase.md": {
+      "path": "03-RESOURCES/sources/ai-agents/the-self-cleaning-codebase.md",
+      "ingested": "2026-06-23"
+    },
+    "agentic-humans-building-human-infrastructure": {
+      "path": "03-RESOURCES/sources/ai-agents/agentic-humans-building-human-infrastructure.md",
+      "ingested": "2026-06-23"
+    },
+    "agentic-humans-building-human-infrastructure.md": {
+      "path": "03-RESOURCES/sources/ai-agents/agentic-humans-building-human-infrastructure.md",
+      "ingested": "2026-06-23"
+    },
+    "getting-started-gemini-interactions-api": {
+      "path": "03-RESOURCES/sources/ai-agents/getting-started-gemini-interactions-api.md",
+      "ingested": "2026-06-23"
+    },
+    "getting-started-gemini-interactions-api.md": {
+      "path": "03-RESOURCES/sources/ai-agents/getting-started-gemini-interactions-api.md",
+      "ingested": "2026-06-23"
+    },
+    "varos-relatorio-2-academy-maio-2026": {
+      "path": "02-AREAS/finance/sources/varos-relatorio-2-academy-maio-2026.md",
+      "ingested": "2026-06-23"
+    },
+    "varos-relatorio-2-academy-maio-2026.md": {
+      "path": "02-AREAS/finance/sources/varos-relatorio-2-academy-maio-2026.md",
+      "ingested": "2026-06-23"
+    },
+    "nord-research-iv-vs-ibov-1t26": {
+      "path": "02-AREAS/finance/sources/nord-research-iv-vs-ibov-1t26.md",
+      "ingested": "2026-06-23"
+    },
+    "nord-research-iv-vs-ibov-1t26.md": {
+      "path": "02-AREAS/finance/sources/nord-research-iv-vs-ibov-1t26.md",
+      "ingested": "2026-06-23"
+    },
+    "varos-relatorio-3-academy-pro-maio-2026": {
+      "path": "02-AREAS/finance/sources/varos-relatorio-3-academy-pro-maio-2026.md",
+      "ingested": "2026-06-23"
+    },
+    "varos-relatorio-3-academy-pro-maio-2026.md": {
+      "path": "02-AREAS/finance/sources/varos-relatorio-3-academy-pro-maio-2026.md",
+      "ingested": "2026-06-23"
+    },
+    "my-morning-trading-routine": {
+      "path": "02-AREAS/finance/sources/my-morning-trading-routine.md",
+      "ingested": "2026-06-23"
+    },
+    "my-morning-trading-routine.md": {
+      "path": "02-AREAS/finance/sources/my-morning-trading-routine.md",
+      "ingested": "2026-06-23"
+    },
+    "nord-research-renda-fixa-pro-maio-2026": {
+      "path": "02-AREAS/finance/sources/nord-research-renda-fixa-pro-maio-2026.md",
+      "ingested": "2026-06-23"
+    },
+    "nord-research-renda-fixa-pro-maio-2026.md": {
+      "path": "02-AREAS/finance/sources/nord-research-renda-fixa-pro-maio-2026.md",
+      "ingested": "2026-06-23"
+    },
+    "why-building-on-twitter-is-like-buying-bitcoin-in-2012": {
+      "path": "02-AREAS/finance/sources/why-building-on-twitter-is-like-buying-bitcoin-in-2012.md",
+      "ingested": "2026-06-23"
+    },
+    "why-building-on-twitter-is-like-buying-bitcoin-in-2012.md": {
+      "path": "02-AREAS/finance/sources/why-building-on-twitter-is-like-buying-bitcoin-in-2012.md",
+      "ingested": "2026-06-23"
+    },
+    "varos-relatorio-1-cobertura": {
+      "path": "02-AREAS/finance/sources/varos-relatorio-1-cobertura.md",
+      "ingested": "2026-06-23"
+    },
+    "varos-relatorio-1-cobertura.md": {
+      "path": "02-AREAS/finance/sources/varos-relatorio-1-cobertura.md",
+      "ingested": "2026-06-23"
+    },
+    "Clippings/Loops are Dead and TypeScript Sucks.md": {
+      "hash": "84b4a812be62a821f63911afa852c6a2",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/loops-are-dead-and-typescript-sucks.md"
+      ]
+    },
+    "Clippings/Loops are Dead and TypeScript Sucks": {
+      "hash": "84b4a812be62a821f63911afa852c6a2",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/loops-are-dead-and-typescript-sucks.md"
+      ]
+    },
+    "Clippings/agent.ts.md": {
+      "hash": "30d80f9513e2e980ceec8a1445c82cc3",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/agent-ts.md"
+      ]
+    },
+    "Clippings/agent.ts": {
+      "hash": "30d80f9513e2e980ceec8a1445c82cc3",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/agent-ts.md"
+      ]
+    },
+    "Clippings/skillsskillsin-progressloop-meSKILL.md at main 1.md": {
+      "hash": "b7716bb08ca6637b62df276321a84b97",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-1.md"
+      ]
+    },
+    "Clippings/skillsskillsin-progressloop-meSKILL at main 1": {
+      "hash": "b7716bb08ca6637b62df276321a84b97",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-1.md"
+      ]
+    },
+    "Clippings/skillsskillsin-progressloop-meSKILL.md at main 2.md": {
+      "hash": "bbf98dd517206e31345755263ed7273b",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-2.md"
+      ]
+    },
+    "Clippings/skillsskillsin-progressloop-meSKILL at main 2": {
+      "hash": "bbf98dd517206e31345755263ed7273b",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-2.md"
+      ]
+    },
+    "Clippings/skillsskillsin-progressloop-meSKILL.md at main 3.md": {
+      "hash": "e36de0005812247f970d6ab6f7aa5d26",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-3.md"
+      ]
+    },
+    "Clippings/skillsskillsin-progressloop-meSKILL at main 3": {
+      "hash": "e36de0005812247f970d6ab6f7aa5d26",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-3.md"
+      ]
+    },
+    "Clippings/skillsskillsin-progressloop-meSKILL.md at main 4.md": {
+      "hash": "08148c2e68754588c7d4729484763d8f",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-4.md"
+      ]
+    },
+    "Clippings/skillsskillsin-progressloop-meSKILL at main 4": {
+      "hash": "08148c2e68754588c7d4729484763d8f",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-4.md"
+      ]
+    },
+    "Clippings/Autonomous AI research for nanogpt speedrun.md": {
+      "hash": "1d791163e264a67467a90a28ff15f9fa",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/autonomous-ai-research-for-nanogpt-speedrun.md"
+      ]
+    },
+    "Clippings/Autonomous AI research for nanogpt speedrun": {
+      "hash": "1d791163e264a67467a90a28ff15f9fa",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/autonomous-ai-research-for-nanogpt-speedrun.md"
+      ]
+    },
+    "Clippings/Governed Shared Memory for Multi-Agent LLM Systems.md": {
+      "hash": "417ea9d4563f9684a7c4d0d6db4f47a1",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/governed-shared-memory-for-multi-agent-llm-systems.md"
+      ]
+    },
+    "Clippings/Governed Shared Memory for Multi-Agent LLM Systems": {
+      "hash": "417ea9d4563f9684a7c4d0d6db4f47a1",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/governed-shared-memory-for-multi-agent-llm-systems.md"
+      ]
+    },
+    "Clippings/为什么说 Wiki 和 Reflection 对 Agent Memory 很重要？.md": {
+      "hash": "dd7e330313fb30487e5e20e70f56ea99",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/wiki-reflection-agent-memory.md"
+      ]
+    },
+    "Clippings/为什么说 Wiki 和 Reflection 对 Agent Memory 很重要？": {
+      "hash": "dd7e330313fb30487e5e20e70f56ea99",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/wiki-reflection-agent-memory.md"
+      ]
+    },
+    "Clippings/Claude Code Hooks What Nobody Tells You Until Step 20 Breaks Everything.md": {
+      "hash": "97613b76287f7a20f928faaba56daead",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-code-hooks-what-nobody-tells-you-until-step-20-breaks-everything.md"
+      ]
+    },
+    "Clippings/Claude Code Hooks What Nobody Tells You Until Step 20 Breaks Everything": {
+      "hash": "97613b76287f7a20f928faaba56daead",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-code-hooks-what-nobody-tells-you-until-step-20-breaks-everything.md"
+      ]
+    },
+    "Clippings/Claude Desktop on AWS, Google Cloud, and Microsoft Foundry.md": {
+      "hash": "9eb0cfc7174f336f6eda8fb8a61870e1",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-desktop-on-aws-google-cloud-and-microsoft-foundry.md"
+      ]
+    },
+    "Clippings/Claude Desktop on AWS, Google Cloud, and Microsoft Foundry": {
+      "hash": "9eb0cfc7174f336f6eda8fb8a61870e1",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/claude-desktop-on-aws-google-cloud-and-microsoft-foundry.md"
+      ]
+    },
+    "Clippings/Edge-to-Cloud Architecture for Real-Time Surgical Intelligence with AWS and NVIDIA.md": {
+      "hash": "59cbdd77777a8b8609d36b6b53b76e32",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/edge-to-cloud-architecture-for-real-time-surgical-intelligence-with-aws-and-nvidia.md"
+      ]
+    },
+    "Clippings/Edge-to-Cloud Architecture for Real-Time Surgical Intelligence with AWS and NVIDIA": {
+      "hash": "59cbdd77777a8b8609d36b6b53b76e32",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/edge-to-cloud-architecture-for-real-time-surgical-intelligence-with-aws-and-nvidia.md"
+      ]
+    },
+    "Clippings/How NTU FRESH is using AWS to build predictive food safety at scale.md": {
+      "hash": "0aa51b08fee2d0aff41f1cf5c63c4c6c",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/how-ntu-fresh-is-using-aws-to-build-predictive-food-safety-at-scale.md"
+      ]
+    },
+    "Clippings/How NTU FRESH is using AWS to build predictive food safety at scale": {
+      "hash": "0aa51b08fee2d0aff41f1cf5c63c4c6c",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/how-ntu-fresh-is-using-aws-to-build-predictive-food-safety-at-scale.md"
+      ]
+    },
+    "Clippings/Lessons from Anthropic on building effective human-agent teams.md": {
+      "hash": "1a782aecd521317ac1fa5e5a276bfe4d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/lessons-from-anthropic-on-building-effective-human-agent-teams.md"
+      ]
+    },
+    "Clippings/Lessons from Anthropic on building effective human-agent teams": {
+      "hash": "1a782aecd521317ac1fa5e5a276bfe4d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/lessons-from-anthropic-on-building-effective-human-agent-teams.md"
+      ]
+    },
+    "Clippings/Our AI Agent now costs more than human junior bankers.md": {
+      "hash": "f6f9ff67907aefc95610151d1c9e0e38",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/our-ai-agent-now-costs-more-than-human-junior-bankers.md"
+      ]
+    },
+    "Clippings/Our AI Agent now costs more than human junior bankers": {
+      "hash": "f6f9ff67907aefc95610151d1c9e0e38",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/our-ai-agent-now-costs-more-than-human-junior-bankers.md"
+      ]
+    },
+    "Clippings/Probing the Misaligned Thinking Process of Language Models.md": {
+      "hash": "cf7f3e7c33b4fc7c3c3af12ee1c0c1e3",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/probing-the-misaligned-thinking-process-of-language-models.md"
+      ]
+    },
+    "Clippings/Probing the Misaligned Thinking Process of Language Models": {
+      "hash": "cf7f3e7c33b4fc7c3c3af12ee1c0c1e3",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/probing-the-misaligned-thinking-process-of-language-models.md"
+      ]
+    },
+    "Clippings/Reimagining B-Pillar DFMEA Why Ontology-Grounded AI Is the Future of Automotive Engineering.md": {
+      "hash": "2be05cdb055fd934e77d2a448070a833",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/reimagining-b-pillar-dfmea-why-ontology-grounded-ai-is-the-future-of-automotive-engineering.md"
+      ]
+    },
+    "Clippings/Reimagining B-Pillar DFMEA Why Ontology-Grounded AI Is the Future of Automotive Engineering": {
+      "hash": "2be05cdb055fd934e77d2a448070a833",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/reimagining-b-pillar-dfmea-why-ontology-grounded-ai-is-the-future-of-automotive-engineering.md"
+      ]
+    },
+    "Clippings/Sessions, Runs & Streaming.md": {
+      "hash": "b95eb8613cdcf6dfdecfc1de68924413",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/sessions-runs-streaming.md"
+      ]
+    },
+    "Clippings/Sessions, Runs & Streaming": {
+      "hash": "b95eb8613cdcf6dfdecfc1de68924413",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/sessions-runs-streaming.md"
+      ]
+    },
+    "Clippings/The Feynman Method Why You Forget 90% of What You Read (And the 4 Prompts That Fix It).md": {
+      "hash": "49ce39a2f58f74740058d54551af70f0",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/the-feynman-method-why-you-forget-90-of-what-you-read-and-the-4-prompts-that-fix-it.md"
+      ]
+    },
+    "Clippings/The Feynman Method Why You Forget 90% of What You Read (And the 4 Prompts That Fix It)": {
+      "hash": "49ce39a2f58f74740058d54551af70f0",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/the-feynman-method-why-you-forget-90-of-what-you-read-and-the-4-prompts-that-fix-it.md"
+      ]
+    },
+    "Clippings/Token Capital Efficiency.md": {
+      "hash": "53de01df12c5bf16762c5fc6f8a93c85",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/token-capital-efficiency.md"
+      ]
+    },
+    "Clippings/Token Capital Efficiency": {
+      "hash": "53de01df12c5bf16762c5fc6f8a93c85",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/token-capital-efficiency.md"
+      ]
+    },
+    "Clippings/When the model has never seen your code.md": {
+      "hash": "73d952ce350568ab007e88d6feecd221",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/when-the-model-has-never-seen-your-code.md"
+      ]
+    },
+    "Clippings/When the model has never seen your code": {
+      "hash": "73d952ce350568ab007e88d6feecd221",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/when-the-model-has-never-seen-your-code.md"
+      ]
+    },
+    "Clippings/Why Most Dependency Alerts Don’t Matter.md": {
+      "hash": "6429841559521e0666c59d3d47dab12a",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/why-most-dependency-alerts-don-t-matter.md"
+      ]
+    },
+    "Clippings/Why Most Dependency Alerts Don’t Matter": {
+      "hash": "6429841559521e0666c59d3d47dab12a",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/why-most-dependency-alerts-don-t-matter.md"
+      ]
+    },
+    "Clippings/useEveAgent (Svelte).md": {
+      "hash": "3e7fe2d786e25f74a44d9f96b177270f",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/useeveagent-svelte.md"
+      ]
+    },
+    "Clippings/useEveAgent (Svelte)": {
+      "hash": "3e7fe2d786e25f74a44d9f96b177270f",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/useeveagent-svelte.md"
+      ]
+    },
+    "Clippings/useEveAgent (Vue).md": {
+      "hash": "6f061dee1dff3ba6723cb575941179f6",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/useeveagent-vue.md"
+      ]
+    },
+    "Clippings/useEveAgent (Vue)": {
+      "hash": "6f061dee1dff3ba6723cb575941179f6",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/useeveagent-vue.md"
+      ]
+    },
+    "Clippings/10 Developer Tools You Probably Aren't Using (But Should Be).md": {
+      "hash": "fa019c97e97054d4d81d9eadf0dff3fd",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/10-developer-tools-you-probably-aren-t-using-but-should-be.md"
+      ]
+    },
+    "Clippings/10 Developer Tools You Probably Aren't Using (But Should Be)": {
+      "hash": "fa019c97e97054d4d81d9eadf0dff3fd",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/10-developer-tools-you-probably-aren-t-using-but-should-be.md"
+      ]
+    },
+    "Clippings/ASALT Adaptive State Alignment for Lateral Transfer in Multi-agent Reinforcement Learning.md": {
+      "hash": "1e5773bd45f082beaec4fd7ab56d8acd",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/asalt-adaptive-state-alignment-for-lateral-transfer-in-multi-agent-reinforcement-learning.md"
+      ]
+    },
+    "Clippings/ASALT Adaptive State Alignment for Lateral Transfer in Multi-agent Reinforcement Learning": {
+      "hash": "1e5773bd45f082beaec4fd7ab56d8acd",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/asalt-adaptive-state-alignment-for-lateral-transfer-in-multi-agent-reinforcement-learning.md"
+      ]
+    },
+    "Clippings/Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel.md": {
+      "hash": "5fb7918363440d291a30cbba98bd0493",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/accelerating-transformers-fine-tuning-with-nvidia-nemo-automodel.md"
+      ]
+    },
+    "Clippings/Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel": {
+      "hash": "5fb7918363440d291a30cbba98bd0493",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/accelerating-transformers-fine-tuning-with-nvidia-nemo-automodel.md"
+      ]
+    },
+    "Clippings/Accuracy and Satisfaction in Multi-Turn LLM Dialogues for NFR Assessment.md": {
+      "hash": "e005c4ef85d31cd3217e6656e4ce79c7",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/accuracy-and-satisfaction-in-multi-turn-llm-dialogues-for-nfr-assessment.md"
+      ]
+    },
+    "Clippings/Accuracy and Satisfaction in Multi-Turn LLM Dialogues for NFR Assessment": {
+      "hash": "e005c4ef85d31cd3217e6656e4ce79c7",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/accuracy-and-satisfaction-in-multi-turn-llm-dialogues-for-nfr-assessment.md"
+      ]
+    },
+    "Clippings/Bayesian Control for Coding Agents.md": {
+      "hash": "ef645b901303291c15410342c4de732b",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/bayesian-control-for-coding-agents.md"
+      ]
+    },
+    "Clippings/Bayesian Control for Coding Agents": {
+      "hash": "ef645b901303291c15410342c4de732b",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/bayesian-control-for-coding-agents.md"
+      ]
+    },
+    "Clippings/CompressKV Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference.md": {
+      "hash": "6407abea26bfc2eee89de5f855e82ae0",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/compresskv-semantic-retrieval-guided-kv-cache-compression-for-resource-efficient-long-context-llm-inference.md"
+      ]
+    },
+    "Clippings/CompressKV Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference": {
+      "hash": "6407abea26bfc2eee89de5f855e82ae0",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/compresskv-semantic-retrieval-guided-kv-cache-compression-for-resource-efficient-long-context-llm-inference.md"
+      ]
+    },
+    "Clippings/Data Recipes for Agentic Models.md": {
+      "hash": "d03fb7e727bab98825403042c9a120b1",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/data-recipes-for-agentic-models.md"
+      ]
+    },
+    "Clippings/Data Recipes for Agentic Models": {
+      "hash": "d03fb7e727bab98825403042c9a120b1",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/data-recipes-for-agentic-models.md"
+      ]
+    },
+    "Clippings/Grading the Grader Lessons from Evaluating an Agentic Data Analysis SystemCode and data available at GitHub httpsgithub.comTZstats-ColumbiaSTAI-X-Grade-The-Grader..md": {
+      "hash": "f927084993d64ef08ee43c4895e7a9c2",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/grading-the-grader-lessons-from-evaluating-an-agentic-data-analysis-systemcode-and-data-available-at-github-httpsgithub-comtzstats-columbiastai-x-grade-the-grader.md"
+      ]
+    },
+    "Clippings/Grading the Grader Lessons from Evaluating an Agentic Data Analysis SystemCode and data available at GitHub httpsgithub.comTZstats-ColumbiaSTAI-X-Grade-The-Grader.": {
+      "hash": "f927084993d64ef08ee43c4895e7a9c2",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/grading-the-grader-lessons-from-evaluating-an-agentic-data-analysis-systemcode-and-data-available-at-github-httpsgithub-comtzstats-columbiastai-x-grade-the-grader.md"
+      ]
+    },
+    "Clippings/How to Build a Business Intelligence System With Hermes and Claude That Learns Your Industry..md": {
+      "hash": "9fc8fc590134f3a10a0dd559bcec9eec",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/how-to-build-a-business-intelligence-system-with-hermes-and-claude-that-learns-your-industry.md"
+      ]
+    },
+    "Clippings/How to Build a Business Intelligence System With Hermes and Claude That Learns Your Industry.": {
+      "hash": "9fc8fc590134f3a10a0dd559bcec9eec",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/how-to-build-a-business-intelligence-system-with-hermes-and-claude-that-learns-your-industry.md"
+      ]
+    },
+    "Clippings/How to Build a Claude Code Agent That Learns From Each Loop (Exact Setup Inside).md": {
+      "hash": "ef5c63cf0993c539823dbb6e4a31c40b",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/how-to-build-a-claude-code-agent-that-learns-from-each-loop-exact-setup-inside.md"
+      ]
+    },
+    "Clippings/How to Build a Claude Code Agent That Learns From Each Loop (Exact Setup Inside)": {
+      "hash": "ef5c63cf0993c539823dbb6e4a31c40b",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/how-to-build-a-claude-code-agent-that-learns-from-each-loop-exact-setup-inside.md"
+      ]
+    },
+    "Clippings/Reinforcement Learning for Computer-Use Agents with Autonomous EvaluationAccepted to the 4th International Workshop on Generalizing from Limited Resources in the Open World (GLOW @ IJCAI 2026) httpsglow-ijcai-2026.github.ioglow-ijcai-2026..md": {
+      "hash": "84856f75f93f61a5a8253e98f1e8f1d6",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/reinforcement-learning-for-computer-use-agents-with-autonomous-evaluationaccepted-to-the-4th-international-workshop-on-generalizing-from-limited-resources-in-the-open-world-glow-ijcai-2026-httpsglow-ijcai-2026-github-ioglow-ijcai-2026.md"
+      ]
+    },
+    "Clippings/Reinforcement Learning for Computer-Use Agents with Autonomous EvaluationAccepted to the 4th International Workshop on Generalizing from Limited Resources in the Open World (GLOW @ IJCAI 2026) httpsglow-ijcai-2026.github.ioglow-ijcai-2026.": {
+      "hash": "84856f75f93f61a5a8253e98f1e8f1d6",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/reinforcement-learning-for-computer-use-agents-with-autonomous-evaluationaccepted-to-the-4th-international-workshop-on-generalizing-from-limited-resources-in-the-open-world-glow-ijcai-2026-httpsglow-ijcai-2026-github-ioglow-ijcai-2026.md"
+      ]
+    },
+    "Clippings/The Latent Bridge A Continuous Slow–Fast Channel for Real-Time Game Agents.md": {
+      "hash": "3d56aa00b1f6f2b670a992ba2678bb15",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/the-latent-bridge-a-continuous-slow-fast-channel-for-real-time-game-agents.md"
+      ]
+    },
+    "Clippings/The Latent Bridge A Continuous Slow–Fast Channel for Real-Time Game Agents": {
+      "hash": "3d56aa00b1f6f2b670a992ba2678bb15",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/the-latent-bridge-a-continuous-slow-fast-channel-for-real-time-game-agents.md"
+      ]
+    },
+    "Clippings/We are now factory engineers, not product engineers.md": {
+      "hash": "8562e92e78990e4aaa199dc5543f8889",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/we-are-now-factory-engineers-not-product-engineers.md"
+      ]
+    },
+    "Clippings/We are now factory engineers, not product engineers": {
+      "hash": "8562e92e78990e4aaa199dc5543f8889",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/we-are-now-factory-engineers-not-product-engineers.md"
+      ]
+    },
+    "Clippings/World Models in Pieces Structural Certification for General Agents.md": {
+      "hash": "4605777e6d8aa882975d6ae126ffae4d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/world-models-in-pieces-structural-certification-for-general-agents.md"
+      ]
+    },
+    "Clippings/World Models in Pieces Structural Certification for General Agents": {
+      "hash": "4605777e6d8aa882975d6ae126ffae4d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/world-models-in-pieces-structural-certification-for-general-agents.md"
+      ]
+    },
+    "Clippings/你以为在买搜索引擎，实际在买一个专家团.md": {
+      "hash": "88a0120709a4e572e40e917e937fb2f4",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ni-yi-wei-zai-mai-sou-suo-yin-qing-shi-ji-zai-mai-yi-ge-zhuan-jia-tuan.md"
+      ]
+    },
+    "Clippings/你以为在买搜索引擎，实际在买一个专家团": {
+      "hash": "88a0120709a4e572e40e917e937fb2f4",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ni-yi-wei-zai-mai-sou-suo-yin-qing-shi-ji-zai-mai-yi-ge-zhuan-jia-tuan.md"
+      ]
+    },
+    "Clippings/Accelerating migration assessments and planning with AWS Transform.md": {
+      "hash": "22effe5a05103befa506d2fe547f0dda",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/accelerating-migration-assessments-and-planning-with-aws-transform.md"
+      ]
+    },
+    "Clippings/Accelerating migration assessments and planning with AWS Transform": {
+      "hash": "22effe5a05103befa506d2fe547f0dda",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/accelerating-migration-assessments-and-planning-with-aws-transform.md"
+      ]
+    },
+    "Clippings/Apache Iceberg 1.11 Features REST Catalog & Encryption.md": {
+      "hash": "2d2de0c59ac1dfc5e3561f08b284a93d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/apache-iceberg-1-11-features-rest-catalog-encryption.md"
+      ]
+    },
+    "Clippings/Apache Iceberg 1.11 Features REST Catalog & Encryption": {
+      "hash": "2d2de0c59ac1dfc5e3561f08b284a93d",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/apache-iceberg-1-11-features-rest-catalog-encryption.md"
+      ]
+    },
+    "Clippings/Connect a Warehouse.md": {
+      "hash": "4aea8fc92497cd85f3eddd6150127c14",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/connect-a-warehouse.md"
+      ]
+    },
+    "Clippings/Connect a Warehouse": {
+      "hash": "4aea8fc92497cd85f3eddd6150127c14",
+      "ingested_at": "2026-06-24",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/connect-a-warehouse.md"
+      ]
+    },
+    "Clippings/Modernizing Lambda + S3 workloads with Amazon S3 Files.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/modernizing-lambda-s3-workloads-with-amazon-s3-files.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Modernizing Lambda + S3 workloads with Amazon S3 Files": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/modernizing-lambda-s3-workloads-with-amazon-s3-files.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Overview 1.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/overview-1.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Overview 1": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/overview-1.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Query Sample Data.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/query-sample-data.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Query Sample Data": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/query-sample-data.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Snowflake AIM Migration Agent Automating Enterprise Migrations.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/snowflake-aim-migration-agent-automating-enterprise-migrations.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Snowflake AIM Migration Agent Automating Enterprise Migrations": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/snowflake-aim-migration-agent-automating-enterprise-migrations.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/The Agent Is Not the Product.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/the-agent-is-not-the-product.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/The Agent Is Not the Product": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/the-agent-is-not-the-product.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Unlocking the Cloudflare app ecosystem with OAuth for all.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/unlocking-the-cloudflare-app-ecosystem-with-oauth-for-all.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Unlocking the Cloudflare app ecosystem with OAuth for all": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/unlocking-the-cloudflare-app-ecosystem-with-oauth-for-all.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/AI-powered BI with Snowflake and Amazon Quick.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-powered-bi-with-snowflake-and-amazon-quick.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/AI-powered BI with Snowflake and Amazon Quick": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-powered-bi-with-snowflake-and-amazon-quick.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Automating cross-account refresh for Amazon RDS Multi-AZ DB clusters.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/automating-cross-account-refresh-for-amazon-rds-multi-az-db-clusters.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Automating cross-account refresh for Amazon RDS Multi-AZ DB clusters": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/automating-cross-account-refresh-for-amazon-rds-multi-az-db-clusters.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Bringing Polygres to San Francisco..md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/bringing-polygres-to-san-francisco.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Bringing Polygres to San Francisco.": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/bringing-polygres-to-san-francisco.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Build a Spring Boot REST API with Amazon Aurora DSQL.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/build-a-spring-boot-rest-api-with-amazon-aurora-dsql.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Build a Spring Boot REST API with Amazon Aurora DSQL": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/build-a-spring-boot-rest-api-with-amazon-aurora-dsql.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Building beautiful web apps with GLM 5.2 fast, cheap, and polished.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/building-beautiful-web-apps-with-glm-5-2-fast-cheap-and-polished.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Building beautiful web apps with GLM 5.2 fast, cheap, and polished": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/building-beautiful-web-apps-with-glm-5-2-fast-cheap-and-polished.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Cultural Awareness in Global AI.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/cultural-awareness-in-global-ai.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Cultural Awareness in Global AI": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/cultural-awareness-in-global-ai.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Guard the Spend.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/guard-the-spend.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Guard the Spend": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/guard-the-spend.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Here's how 196 YC P26 startups sell the same thing.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/here-s-how-196-yc-p26-startups-sell-the-same-thing.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Here's how 196 YC P26 startups sell the same thing": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/here-s-how-196-yc-p26-startups-sell-the-same-thing.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Remember Definitions.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/remember-definitions.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Remember Definitions": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/remember-definitions.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Run Analysis.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/run-analysis.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Run Analysis": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/run-analysis.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Team Playbooks.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/team-playbooks.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Team Playbooks": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/team-playbooks.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/TypeScript SDK Overview.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/typescript-sdk-overview.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/TypeScript SDK Overview": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/typescript-sdk-overview.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/how to build a 100M+ warm lead database with an ai coding agent.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/how-to-build-a-100m-warm-lead-database-with-an-ai-coding-agent.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/how to build a 100M+ warm lead database with an ai coding agent": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/how-to-build-a-100m-warm-lead-database-with-an-ai-coding-agent.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/最大規模のオープン基盤モデルを各国仕様へ適応させる事後学習技術を開発.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/sakana-namazu-cultural-adaptation.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/最大規模のオープン基盤モデルを各国仕様へ適応させる事後学習技術を開発": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/sakana-namazu-cultural-adaptation.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/How It Runs.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/how-it-runs.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/How It Runs": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/how-it-runs.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Nuxt.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/nuxt.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Nuxt": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/nuxt.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/SvelteKit.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/sveltekit.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/SvelteKit": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "ai-agents",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/sveltekit.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Cost-Optimal Decision Diagrams for Stochastic Boolean Function Evaluation.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/cost-optimal-decision-diagrams-for-stochastic-boolean-function-evaluation.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Cost-Optimal Decision Diagrams for Stochastic Boolean Function Evaluation": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/cost-optimal-decision-diagrams-for-stochastic-boolean-function-evaluation.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/How the University of São Paulo is transforming how researchers access greenhouse gas data for the Amazon rainforest with AWS.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/how-the-university-of-s-o-paulo-is-transforming-how-researchers-access-greenhouse-gas-data-for-the-amazon-rainforest-with-aws.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/How the University of São Paulo is transforming how researchers access greenhouse gas data for the Amazon rainforest with AWS": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/how-the-university-of-s-o-paulo-is-transforming-how-researchers-access-greenhouse-gas-data-for-the-amazon-rainforest-with-aws.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Accelerating BEV Pooling on NVIDIA GPUs for Physical AI Applications.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/accelerating-bev-pooling-on-nvidia-gpus-for-physical-ai-applications.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Accelerating BEV Pooling on NVIDIA GPUs for Physical AI Applications": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/accelerating-bev-pooling-on-nvidia-gpus-for-physical-ai-applications.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Can virtual cell models beat a line of code?.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/can-virtual-cell-models-beat-a-line-of-code.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Can virtual cell models beat a line of code?": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/can-virtual-cell-models-beat-a-line-of-code.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Obsidian Is Not a Note-Taking App. Here Is What It Actually Is..md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/obsidian-is-not-a-note-taking-app-here-is-what-it-actually-is.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Obsidian Is Not a Note-Taking App. Here Is What It Actually Is.": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "A",
+      "pages_created": [
+        "03-RESOURCES/sources/obsidian-is-not-a-note-taking-app-here-is-what-it-actually-is.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/外注費ゼロでスライド量産の方法を公開.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/slide-mass-production-zero-outsourcing.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/外注費ゼロでスライド量産の方法を公開": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/slide-mass-production-zero-outsourcing.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Global SMS strategy for gaming Lessons from migrating 2FA across 100+ countries.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/global-sms-strategy-for-gaming-lessons-from-migrating-2fa-across-100-countries.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Global SMS strategy for gaming Lessons from migrating 2FA across 100+ countries": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/global-sms-strategy-for-gaming-lessons-from-migrating-2fa-across-100-countries.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Huntington Bank Redacting sensitive data from 400M+ documents with AWS.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/huntington-bank-redacting-sensitive-data-from-400m-documents-with-aws.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Huntington Bank Redacting sensitive data from 400M+ documents with AWS": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/huntington-bank-redacting-sensitive-data-from-400m-documents-with-aws.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Programmatic Savings Plans Management with AWS CLI and SDK.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/programmatic-savings-plans-management-with-aws-cli-and-sdk.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Programmatic Savings Plans Management with AWS CLI and SDK": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/programmatic-savings-plans-management-with-aws-cli-and-sdk.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Automated Schema Evolution in Pinterest’s Next-Generation DB Ingestion Framework.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/automated-schema-evolution-in-pinterest-s-next-generation-db-ingestion-framework.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Automated Schema Evolution in Pinterest’s Next-Generation DB Ingestion Framework": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/automated-schema-evolution-in-pinterest-s-next-generation-db-ingestion-framework.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/From Resilience to Innovation Ukraine’s Digital Transformation.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/from-resilience-to-innovation-ukraine-s-digital-transformation.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/From Resilience to Innovation Ukraine’s Digital Transformation": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/from-resilience-to-innovation-ukraine-s-digital-transformation.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Introducing AWS IoT Core’s Direct Messaging Lower-cost server-to-device communication with better observability.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/introducing-aws-iot-core-s-direct-messaging-lower-cost-server-to-device-communication-with-better-observability.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Introducing AWS IoT Core’s Direct Messaging Lower-cost server-to-device communication with better observability": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/introducing-aws-iot-core-s-direct-messaging-lower-cost-server-to-device-communication-with-better-observability.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Speed to Value Why Migrate-First Still Wins at Scale.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/speed-to-value-why-migrate-first-still-wins-at-scale.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Speed to Value Why Migrate-First Still Wins at Scale": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/speed-to-value-why-migrate-first-still-wins-at-scale.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Cloudflare on X \"Self-Managed OAuth is now available to all developers on Cloudflare. Here's how we executed a zero-downtime migration of our core OAuth engine to make it happen. httpst.cotoDIp6nQj4\".md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/cloudflare-on-x-self-managed-oauth-is-now-available-to-all-developers-on-cloudflare-here-s-how-we-executed-a-zero-downtime-migration-of-our-core-oauth-engine-to-make-it-happen-httpst-cotodip6nqj4.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Cloudflare on X \"Self-Managed OAuth is now available to all developers on Cloudflare. Here's how we executed a zero-downtime migration of our core OAuth engine to make it happen. httpst.cotoDIp6nQj4\"": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/cloudflare-on-x-self-managed-oauth-is-now-available-to-all-developers-on-cloudflare-here-s-how-we-executed-a-zero-downtime-migration-of-our-core-oauth-engine-to-make-it-happen-httpst-cotodip6nqj4.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Implement multi-tenant search with Amazon OpenSearch Serverless next generation.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/implement-multi-tenant-search-with-amazon-opensearch-serverless-next-generation.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/Implement multi-tenant search with Amazon OpenSearch Serverless next generation": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "articles",
+      "grade": "B",
+      "pages_created": [
+        "03-RESOURCES/sources/implement-multi-tenant-search-with-amazon-opensearch-serverless-next-generation.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/🤖 Who Holds AI's Off Switch?.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "fiap",
+      "grade": "A",
+      "pages_created": [
+        "02-AREAS/fiap/sources/who-holds-ai-s-off-switch.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/🤖 Who Holds AI's Off Switch?": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "fiap",
+      "grade": "A",
+      "pages_created": [
+        "02-AREAS/fiap/sources/who-holds-ai-s-off-switch.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/🧠 AI's Cost Crisis How Fintech Could Save Billions.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "fiap",
+      "grade": "B",
+      "pages_created": [
+        "02-AREAS/fiap/sources/ai-s-cost-crisis-how-fintech-could-save-billions.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/🧠 AI's Cost Crisis How Fintech Could Save Billions": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "fiap",
+      "grade": "B",
+      "pages_created": [
+        "02-AREAS/fiap/sources/ai-s-cost-crisis-how-fintech-could-save-billions.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/🧠 The Token Economy pt2 The Intelligence Company Gets Built.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "fiap",
+      "grade": "B",
+      "pages_created": [
+        "02-AREAS/fiap/sources/the-token-economy-pt2-the-intelligence-company-gets-built.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/🧠 The Token Economy pt2 The Intelligence Company Gets Built": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "fiap",
+      "grade": "B",
+      "pages_created": [
+        "02-AREAS/fiap/sources/the-token-economy-pt2-the-intelligence-company-gets-built.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/🧠 How Commerce is Being Reinvented for Agentic AI.md": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "fiap",
+      "grade": "B",
+      "pages_created": [
+        "02-AREAS/fiap/sources/how-commerce-is-being-reinvented-for-agentic-ai.md"
+      ],
+      "pages_updated": []
+    },
+    "Clippings/🧠 How Commerce is Being Reinvented for Agentic AI": {
+      "ingested_at": "2026-06-24",
+      "tool": "ingest-agent batch-3",
+      "category": "fiap",
+      "grade": "B",
+      "pages_created": [
+        "02-AREAS/fiap/sources/how-commerce-is-being-reinvented-for-agentic-ai.md"
+      ],
+      "pages_updated": []
     }
+  },
+  "Themis An explainable AI-enabled framework for Reinforcement Learning with Human Feedback.md": {
+    "hash": "971334e41211483612e088ddc49b3b53ecb9dc8c565d78dfad8c0607c90f379b",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/themis-an-explainable-ai-enabled-framework-for-reinforcement-learning-with-human-feedback.md"
+    ]
+  },
+  "Themis An explainable AI-enabled framework for Reinforcement Learning with Human Feedback": {
+    "hash": "971334e41211483612e088ddc49b3b53ecb9dc8c565d78dfad8c0607c90f379b",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/themis-an-explainable-ai-enabled-framework-for-reinforcement-learning-with-human-feedback.md"
+    ]
+  },
+  "一文看懂Harness 与 Loop Engineering：2026 年 AI Agent 工程的两层骨架.md": {
+    "hash": "adc65bc6e73021b85db6858f24f7de0fab95dcffc6c881496070db04b1be55f1",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/harness-loop-engineering-2026-ai-agent.md"
+    ]
+  },
+  "一文看懂Harness 与 Loop Engineering：2026 年 AI Agent 工程的两层骨架": {
+    "hash": "adc65bc6e73021b85db6858f24f7de0fab95dcffc6c881496070db04b1be55f1",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/harness-loop-engineering-2026-ai-agent.md"
+    ]
+  },
+  "AWS GenAIIC Partner Agent Factory New AI agents now in AWS Marketplace.md": {
+    "hash": "f93476513a72b50ab90d2533c34ffd0482aabd54c4923b55f223da382d175469",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/aws-genaiic-partner-agent-factory-new-ai-agents-now-in-aws-marketplace.md"
+    ]
+  },
+  "AWS GenAIIC Partner Agent Factory New AI agents now in AWS Marketplace": {
+    "hash": "f93476513a72b50ab90d2533c34ffd0482aabd54c4923b55f223da382d175469",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/aws-genaiic-partner-agent-factory-new-ai-agents-now-in-aws-marketplace.md"
+    ]
+  },
+  "AdversaBench Automated LLM Red-Teaming.md": {
+    "hash": "a94636180f85898521d27a87185c66c9026e2ef62effafda1469c9f0f178d35f",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/adversabench-automated-llm-red-teaming.md"
+    ]
+  },
+  "AdversaBench Automated LLM Red-Teaming": {
+    "hash": "a94636180f85898521d27a87185c66c9026e2ef62effafda1469c9f0f178d35f",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/adversabench-automated-llm-red-teaming.md"
+    ]
+  },
+  "Claude Code Hooks The Most Powerful Feature Nobody Uses.md": {
+    "hash": "df387da96b809dfc61a4f2a4949e60856435b52fec5448ceffe04e4987d9984f",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/claude-code-hooks-the-most-powerful-feature-nobody-uses.md"
+    ]
+  },
+  "Claude Code Hooks The Most Powerful Feature Nobody Uses": {
+    "hash": "df387da96b809dfc61a4f2a4949e60856435b52fec5448ceffe04e4987d9984f",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/claude-code-hooks-the-most-powerful-feature-nobody-uses.md"
+    ]
+  },
+  "Context Control.md": {
+    "hash": "f9733d4726b4fd88bfa086598e8ac70bd8062e9b302712fb9e77e286a789bf7f",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/context-control.md"
+    ]
+  },
+  "Context Control": {
+    "hash": "f9733d4726b4fd88bfa086598e8ac70bd8062e9b302712fb9e77e286a789bf7f",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/context-control.md"
+    ]
+  },
+  "Cycle-Consistent Neural Explanation of Formal Verification Certificates.md": {
+    "hash": "6813ddc76615fdfc93887be210f195cc50bbf0140a6f2dc84364b6270695a80b",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/cycle-consistent-neural-explanation-of-formal-verification-certificates.md"
+    ]
+  },
+  "Cycle-Consistent Neural Explanation of Formal Verification Certificates": {
+    "hash": "6813ddc76615fdfc93887be210f195cc50bbf0140a6f2dc84364b6270695a80b",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/cycle-consistent-neural-explanation-of-formal-verification-certificates.md"
+    ]
+  },
+  "Flounder An Autonomous White-Hat Security Auditor.md": {
+    "hash": "7acb0b9aa8538696cae0b01a222b0885d48678788aca0204769d7908a98e3483",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/flounder-an-autonomous-white-hat-security-auditor.md"
+    ]
+  },
+  "Flounder An Autonomous White-Hat Security Auditor": {
+    "hash": "7acb0b9aa8538696cae0b01a222b0885d48678788aca0204769d7908a98e3483",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/flounder-an-autonomous-white-hat-security-auditor.md"
+    ]
+  },
+  "From prompter to loop engineer the 14-step roadmap to running agents you don't babysit.md": {
+    "hash": "981c31580860b0feea2d4a5d32b1365aca9315a909106cbd74e5ad821bd996a8",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/from-prompter-to-loop-engineer-the-14-step-roadmap-to-running-agents-you-don-t-babysit.md"
+    ]
+  },
+  "From prompter to loop engineer the 14-step roadmap to running agents you don't babysit": {
+    "hash": "981c31580860b0feea2d4a5d32b1365aca9315a909106cbd74e5ad821bd996a8",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/from-prompter-to-loop-engineer-the-14-step-roadmap-to-running-agents-you-don-t-babysit.md"
+    ]
+  },
+  "How To Give Your Agent Memory.md": {
+    "hash": "c185e6a7a81d4160ac19cd68c8fd703f1d4488ef211cd24c155ef74a4da93467",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/how-to-give-your-agent-memory.md"
+    ]
+  },
+  "How To Give Your Agent Memory": {
+    "hash": "c185e6a7a81d4160ac19cd68c8fd703f1d4488ef211cd24c155ef74a4da93467",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/how-to-give-your-agent-memory.md"
+    ]
+  },
+  "How we built secure automated learning loops in Modal and Claude Code.md": {
+    "hash": "016bd21d46c58c91baf41b37a547b45d04787704f13e223338f0611ee7e75e1a",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/how-we-built-secure-automated-learning-loops-in-modal-and-claude-code.md"
+    ]
+  },
+  "How we built secure automated learning loops in Modal and Claude Code": {
+    "hash": "016bd21d46c58c91baf41b37a547b45d04787704f13e223338f0611ee7e75e1a",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/how-we-built-secure-automated-learning-loops-in-modal-and-claude-code.md"
+    ]
+  },
+  "LLMs Prompted for Legal Context Object More Overrefusal from Small On-Premises LLMs in Criminal Legal Context.md": {
+    "hash": "016e55f9c3f735a4c2e8601fbfd688668746f4f1981e1a1c24e5776889f7c43d",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/llms-prompted-for-legal-context-object-more-overrefusal-from-small-on-premises-llms-in-criminal-legal-context.md"
+    ]
+  },
+  "LLMs Prompted for Legal Context Object More Overrefusal from Small On-Premises LLMs in Criminal Legal Context": {
+    "hash": "016e55f9c3f735a4c2e8601fbfd688668746f4f1981e1a1c24e5776889f7c43d",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/llms-prompted-for-legal-context-object-more-overrefusal-from-small-on-premises-llms-in-criminal-legal-context.md"
+    ]
+  },
+  "Memory Is Not Storage.md": {
+    "hash": "bf45da42838d92697f9629488bb6953f53d296e13a8c2c9ef5c089a7b60ad1a5",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/memory-is-not-storage.md"
+    ]
+  },
+  "Memory Is Not Storage": {
+    "hash": "bf45da42838d92697f9629488bb6953f53d296e13a8c2c9ef5c089a7b60ad1a5",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/memory-is-not-storage.md"
+    ]
+  },
+  "Never loop without verifiers.md": {
+    "hash": "8f7a35f4476d155e6fa594184dc8ff60c8a634093fb08003222afcec1a01ecf9",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/never-loop-without-verifiers.md"
+    ]
+  },
+  "Never loop without verifiers": {
+    "hash": "8f7a35f4476d155e6fa594184dc8ff60c8a634093fb08003222afcec1a01ecf9",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/never-loop-without-verifiers.md"
+    ]
+  },
+  "OpenAI and Broadcom unveil LLM-optimized inference chip.md": {
+    "hash": "6033394b92b614fd645b832e5d4012a52d35bfd4b8bcedeb82167ad5a5cc6f78",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/openai-and-broadcom-unveil-llm-optimized-inference-chip.md"
+    ]
+  },
+  "OpenAI and Broadcom unveil LLM-optimized inference chip": {
+    "hash": "6033394b92b614fd645b832e5d4012a52d35bfd4b8bcedeb82167ad5a5cc6f78",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/openai-and-broadcom-unveil-llm-optimized-inference-chip.md"
+    ]
+  },
+  "PHANTOM A Large-Scale Dataset of Multimodal Adversarial Attacks for Vision-Language Models.md": {
+    "hash": "e821beb3b01823d5703816abbca90e4c4432f9505c0a33c4fc4edabb387fe7cd",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/phantom-a-large-scale-dataset-of-multimodal-adversarial-attacks-for-vision-language-models.md"
+    ]
+  },
+  "PHANTOM A Large-Scale Dataset of Multimodal Adversarial Attacks for Vision-Language Models": {
+    "hash": "e821beb3b01823d5703816abbca90e4c4432f9505c0a33c4fc4edabb387fe7cd",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/phantom-a-large-scale-dataset-of-multimodal-adversarial-attacks-for-vision-language-models.md"
+    ]
+  },
+  "ReM-MoA Reasoning Memory Sustains Mixture-of-Agents Scaling.md": {
+    "hash": "f27ff96371021af2abdb4520293a232630c24e19e03f35addd9569f0594d44ac",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/rem-moa-reasoning-memory-sustains-mixture-of-agents-scaling.md"
+    ]
+  },
+  "ReM-MoA Reasoning Memory Sustains Mixture-of-Agents Scaling": {
+    "hash": "f27ff96371021af2abdb4520293a232630c24e19e03f35addd9569f0594d44ac",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/rem-moa-reasoning-memory-sustains-mixture-of-agents-scaling.md"
+    ]
+  },
+  "Run Step 3.7 Flash on NVIDIA GPUs with Enterprise-Ready Multimodal AI.md": {
+    "hash": "3b919ebd98bbe03688265c13809a558cf667f824eda412b3af92284bf1bfe3c3",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/run-step-3-7-flash-on-nvidia-gpus-with-enterprise-ready-multimodal-ai.md"
+    ]
+  },
+  "Run Step 3.7 Flash on NVIDIA GPUs with Enterprise-Ready Multimodal AI": {
+    "hash": "3b919ebd98bbe03688265c13809a558cf667f824eda412b3af92284bf1bfe3c3",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/run-step-3-7-flash-on-nvidia-gpus-with-enterprise-ready-multimodal-ai.md"
+    ]
+  },
+  "ScaleToT Generalizing Structured LLM Reasoning for Billion-Scale Low-Activity User Modeling.md": {
+    "hash": "f22167536c94380c13e0c946efa218b51808e10a27546f3b4b73efd75b653e47",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/scaletot-generalizing-structured-llm-reasoning-for-billion-scale-low-activity-user-modeling.md"
+    ]
+  },
+  "ScaleToT Generalizing Structured LLM Reasoning for Billion-Scale Low-Activity User Modeling": {
+    "hash": "f22167536c94380c13e0c946efa218b51808e10a27546f3b4b73efd75b653e47",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/scaletot-generalizing-structured-llm-reasoning-for-billion-scale-low-activity-user-modeling.md"
+    ]
+  },
+  "The 5 Levels of Loop Design From Prompting to Autonomous Agents.md": {
+    "hash": "0b6dc31e254824fd5a7af8fa77aeada32fa2caea5596c2c3c3e4d36fae8b7a7e",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/the-5-levels-of-loop-design-from-prompting-to-autonomous-agents.md"
+    ]
+  },
+  "The 5 Levels of Loop Design From Prompting to Autonomous Agents": {
+    "hash": "0b6dc31e254824fd5a7af8fa77aeada32fa2caea5596c2c3c3e4d36fae8b7a7e",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/the-5-levels-of-loop-design-from-prompting-to-autonomous-agents.md"
+    ]
+  },
+  "The Best Codex Upgrade I Made Was Treating Repeated Work Like a Product.md": {
+    "hash": "6f4920e24dd30ccd9c4e41c5959590b53b0337b295a7e205c3d6dcf902ccf545",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/the-best-codex-upgrade-i-made-was-treating-repeated-work-like-a-product.md"
+    ]
+  },
+  "The Best Codex Upgrade I Made Was Treating Repeated Work Like a Product": {
+    "hash": "6f4920e24dd30ccd9c4e41c5959590b53b0337b295a7e205c3d6dcf902ccf545",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/the-best-codex-upgrade-i-made-was-treating-repeated-work-like-a-product.md"
+    ]
+  },
+  "The Real Claude Tag Question Is Context Ownership.md": {
+    "hash": "470f3b0d2efc201e108a7aa895ff880faf1f674eb7ec4bf22d2346ae47d844f0",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/the-real-claude-tag-question-is-context-ownership.md"
+    ]
+  },
+  "The Real Claude Tag Question Is Context Ownership": {
+    "hash": "470f3b0d2efc201e108a7aa895ff880faf1f674eb7ec4bf22d2346ae47d844f0",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/the-real-claude-tag-question-is-context-ownership.md"
+    ]
+  },
+  "True Agents Model the World.md": {
+    "hash": "35c064b539379bf0e253e3f076fdf7eedbce21ee1b184b854bd79c2a66d5856a",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/true-agents-model-the-world.md"
+    ]
+  },
+  "True Agents Model the World": {
+    "hash": "35c064b539379bf0e253e3f076fdf7eedbce21ee1b184b854bd79c2a66d5856a",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/true-agents-model-the-world.md"
+    ]
+  },
+  "Why we're bullish on loops.md": {
+    "hash": "a3a2d6ada53b743c1963655de09e059265fcad1f24178df4dee70d2c969bd71c",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/why-we-re-bullish-on-loops.md"
+    ]
+  },
+  "Why we're bullish on loops": {
+    "hash": "a3a2d6ada53b743c1963655de09e059265fcad1f24178df4dee70d2c969bd71c",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/why-we-re-bullish-on-loops.md"
+    ]
+  },
+  "google-labs-codedesign.md A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system..md": {
+    "hash": "62ac5f5419ef0ae542db38199f5954ed03258cf3d0ba2f72b5c2e4b4186384cc",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/google-labs-codedesign-md-a-format-specification-for-describing-a-visual-identity-to-coding-agents-design-md-gives-agents-a-persistent-structured-understanding-of-a-design-system.md"
+    ]
+  },
+  "google-labs-codedesign A format specification for describing a visual identity to coding agents. DESIGN gives agents a persistent, structured understanding of a design system.": {
+    "hash": "62ac5f5419ef0ae542db38199f5954ed03258cf3d0ba2f72b5c2e4b4186384cc",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/google-labs-codedesign-md-a-format-specification-for-describing-a-visual-identity-to-coding-agents-design-md-gives-agents-a-persistent-structured-understanding-of-a-design-system.md"
+    ]
+  },
+  "renderers Token-Level Templating for Agentic RL.md": {
+    "hash": "fb2399b64242347b15df58b479e7084478a092b88e0b22d836141a9a9f0a82bb",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/renderers-token-level-templating-for-agentic-rl.md"
+    ]
+  },
+  "renderers Token-Level Templating for Agentic RL": {
+    "hash": "fb2399b64242347b15df58b479e7084478a092b88e0b22d836141a9a9f0a82bb",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/renderers-token-level-templating-for-agentic-rl.md"
+    ]
+  },
+  "skillsskillsin-progressloop-meSKILL.md at main 5.md": {
+    "hash": "2c9a44392771cf7035a6413a78d4ca871fc26b73abfcf1db5e6960adb239efb0",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-5.md"
+    ]
+  },
+  "skillsskillsin-progressloop-meSKILL at main 5": {
+    "hash": "2c9a44392771cf7035a6413a78d4ca871fc26b73abfcf1db5e6960adb239efb0",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-5.md"
+    ]
+  },
+  "skillsskillsin-progressloop-meSKILL.md at main 6.md": {
+    "hash": "07811bf221e3b1cfe97b7f1a2ff2f8167421a9c87f8ed1815653c0ddecf2f776",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-6.md"
+    ]
+  },
+  "skillsskillsin-progressloop-meSKILL at main 6": {
+    "hash": "07811bf221e3b1cfe97b7f1a2ff2f8167421a9c87f8ed1815653c0ddecf2f776",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-6.md"
+    ]
+  },
+  "skillsskillsin-progressloop-meSKILL.md at main 7.md": {
+    "hash": "ca900b2128d47f35cc246d3a383f2075b69fc794b61734fbbfaaadca14b23c61",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-7.md"
+    ]
+  },
+  "skillsskillsin-progressloop-meSKILL at main 7": {
+    "hash": "ca900b2128d47f35cc246d3a383f2075b69fc794b61734fbbfaaadca14b23c61",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main-7.md"
+    ]
+  },
+  "skillsskillsin-progressloop-meSKILL.md at main.md": {
+    "hash": "37f0ab0f469411ea9c8622b422b184abd8f9ae24f4c8f73b05b2059ccc6e16f4",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main.md"
+    ]
+  },
+  "skillsskillsin-progressloop-meSKILL at main": {
+    "hash": "37f0ab0f469411ea9c8622b422b184abd8f9ae24f4c8f73b05b2059ccc6e16f4",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/skillsskillsin-progressloop-meskill-md-at-main.md"
+    ]
+  },
+  "AI Tokenomics The Economics of Tokens, Computation, and Pricing in Foundation Models.md": {
+    "hash": "b380bcca0562dae81a363111d89eacd910d46a8d692672d10adf1b70b30c298b",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/ai-tokenomics-the-economics-of-tokens-computation-and-pricing-in-foundation-models.md"
+    ]
+  },
+  "AI Tokenomics The Economics of Tokens, Computation, and Pricing in Foundation Models": {
+    "hash": "b380bcca0562dae81a363111d89eacd910d46a8d692672d10adf1b70b30c298b",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/ai-tokenomics-the-economics-of-tokens-computation-and-pricing-in-foundation-models.md"
+    ]
+  },
+  "Agentic AI for Bilevel Long-Term Optimization of Policy-Driven Physical Layer Systems.md": {
+    "hash": "6482b9c224a58e69412c4e128eb60ae45d282341765a6b114d7d1b32d4da3ee6",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/agentic-ai-for-bilevel-long-term-optimization-of-policy-driven-physical-layer-systems.md"
+    ]
+  },
+  "Agentic AI for Bilevel Long-Term Optimization of Policy-Driven Physical Layer Systems": {
+    "hash": "6482b9c224a58e69412c4e128eb60ae45d282341765a6b114d7d1b32d4da3ee6",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/agentic-ai-for-bilevel-long-term-optimization-of-policy-driven-physical-layer-systems.md"
+    ]
+  },
+  "Authorized Penetration Testing  Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向渗透安全技能路由包 - AI 自动.md": {
+    "hash": "580aebc7289ec8473ca0a608a91e8bdff516f2115193c9601007ecfda110cfec",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/authorized-penetration-testing-security-research-skill-router-pack-ai-powered-routing-on-demand-toolchain-bootstrapping-self-evolving-knowledge-base-supports-claude-code-kiro-cursor-cline-and-other-ai-coding-clients-ai.md"
+    ]
+  },
+  "Authorized Penetration Testing  Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向渗透安全技能路由包 - AI 自动": {
+    "hash": "580aebc7289ec8473ca0a608a91e8bdff516f2115193c9601007ecfda110cfec",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/authorized-penetration-testing-security-research-skill-router-pack-ai-powered-routing-on-demand-toolchain-bootstrapping-self-evolving-knowledge-base-supports-claude-code-kiro-cursor-cline-and-other-ai-coding-clients-ai.md"
+    ]
+  },
+  "How Quants Use LLM Agents To Mine Alpha From Unstructured Data (The Complete RAG Framework).md": {
+    "hash": "e6a37b95ee34d4d970b7b393188d28275d3594faa73585eac3f8de791904b584",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/how-quants-use-llm-agents-to-mine-alpha-from-unstructured-data-the-complete-rag-framework.md"
+    ]
+  },
+  "How Quants Use LLM Agents To Mine Alpha From Unstructured Data (The Complete RAG Framework)": {
+    "hash": "e6a37b95ee34d4d970b7b393188d28275d3594faa73585eac3f8de791904b584",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/how-quants-use-llm-agents-to-mine-alpha-from-unstructured-data-the-complete-rag-framework.md"
+    ]
+  },
+  "RL at 1T Scale prime-rl Performance Deep Dive.md": {
+    "hash": "2215b8969c52064094903698d3b1165acf6ae9780b2903ab4b8926e22f96ebfc",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/rl-at-1t-scale-prime-rl-performance-deep-dive.md"
+    ]
+  },
+  "RL at 1T Scale prime-rl Performance Deep Dive": {
+    "hash": "2215b8969c52064094903698d3b1165acf6ae9780b2903ab4b8926e22f96ebfc",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/rl-at-1t-scale-prime-rl-performance-deep-dive.md"
+    ]
+  },
+  "Agent identity a new access model for autonomous, team-wide AI.md": {
+    "hash": "4efa7b9fb700697490c7f5b6b1e411490febe8dad2718e292e518b7a2ecd8062",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/agent-identity-a-new-access-model-for-autonomous-team-wide-ai.md"
+    ]
+  },
+  "Agent identity a new access model for autonomous, team-wide AI": {
+    "hash": "4efa7b9fb700697490c7f5b6b1e411490febe8dad2718e292e518b7a2ecd8062",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/agent-identity-a-new-access-model-for-autonomous-team-wide-ai.md"
+    ]
+  },
+  "Build a healthcare appointment agent with Amazon Nova 2 Sonic.md": {
+    "hash": "63348906ab3d016be42632fd0a1195d492f4fe0b91aa6b2be003e5229d288d68",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/build-a-healthcare-appointment-agent-with-amazon-nova-2-sonic.md"
+    ]
+  },
+  "Build a healthcare appointment agent with Amazon Nova 2 Sonic": {
+    "hash": "63348906ab3d016be42632fd0a1195d492f4fe0b91aa6b2be003e5229d288d68",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/build-a-healthcare-appointment-agent-with-amazon-nova-2-sonic.md"
+    ]
+  },
+  "CoCoEvolve Evolutionary Optimization for AI Systems.md": {
+    "hash": "f4893b75f0907d1436d8f3394dfd29993d4eb50f0daf884a62df7ecb0d498475",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/cocoevolve-evolutionary-optimization-for-ai-systems.md"
+    ]
+  },
+  "CoCoEvolve Evolutionary Optimization for AI Systems": {
+    "hash": "f4893b75f0907d1436d8f3394dfd29993d4eb50f0daf884a62df7ecb0d498475",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/cocoevolve-evolutionary-optimization-for-ai-systems.md"
+    ]
+  },
+  "Execution Model and Durability.md": {
+    "hash": "d39a3ca00c85e0ea4d3b05ab875f13b274240da599f1aacbd8590ee86d8fd846",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/execution-model-and-durability.md"
+    ]
+  },
+  "Execution Model and Durability": {
+    "hash": "d39a3ca00c85e0ea4d3b05ab875f13b274240da599f1aacbd8590ee86d8fd846",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/execution-model-and-durability.md"
+    ]
+  },
+  "How Loka Built a Natural, Low-Latency Voice Agent with Amazon Nova 2 Sonic.md": {
+    "hash": "7f87e05f6f952a96a4cb0fdbb3377370f25e3d6d072827c04439dbeaea7d4c2e",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/how-loka-built-a-natural-low-latency-voice-agent-with-amazon-nova-2-sonic.md"
+    ]
+  },
+  "How Loka Built a Natural, Low-Latency Voice Agent with Amazon Nova 2 Sonic": {
+    "hash": "7f87e05f6f952a96a4cb0fdbb3377370f25e3d6d072827c04439dbeaea7d4c2e",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/how-loka-built-a-natural-low-latency-voice-agent-with-amazon-nova-2-sonic.md"
+    ]
+  },
+  "How to get elite GLM-5.2 outputs.md": {
+    "hash": "d2b5337f6a886fafec25ec924fe407cf712abdf677fcddb0bfbf138e319835f6",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/how-to-get-elite-glm-5-2-outputs.md"
+    ]
+  },
+  "How to get elite GLM-5.2 outputs": {
+    "hash": "d2b5337f6a886fafec25ec924fe407cf712abdf677fcddb0bfbf138e319835f6",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/how-to-get-elite-glm-5-2-outputs.md"
+    ]
+  },
+  "Install a skill once, use it everywhere.md": {
+    "hash": "153033462074c89a0fb26774f13239922d0bb4ad7b02126cbcdc3791e8acf976",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/install-a-skill-once-use-it-everywhere.md"
+    ]
+  },
+  "Install a skill once, use it everywhere": {
+    "hash": "153033462074c89a0fb26774f13239922d0bb4ad7b02126cbcdc3791e8acf976",
+    "ingested_at": "2026-06-24",
+    "category": "ai-agents",
+    "pages_created": [
+      "03-RESOURCES/sources/install-a-skill-once-use-it-everywhere.md"
+    ]
   }
 }

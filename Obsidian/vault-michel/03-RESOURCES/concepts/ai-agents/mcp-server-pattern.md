@@ -30,6 +30,7 @@ Agent principal (orchestrator)
 
 - [[03-RESOURCES/sources/articles/aws-devops-agent-spark-troubleshooting]] — AWS DevOps Agent + Apache Spark Troubleshooting Agent como MCP server
 
+- **[2026-06-24]** Part 4 of the Build an Agent tutorial. Let each user connect their own warehouse over an OAuth MCP via Vercel Connect. — [[connect-a-warehouse]]
 ## Links
 
 - [[04-SYSTEM/agents/nexus-agent-system/model-router]]

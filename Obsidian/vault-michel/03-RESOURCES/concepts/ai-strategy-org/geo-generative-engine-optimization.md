@@ -45,3 +45,15 @@ Padrão emergente: produtos que expõem MCP + llms.txt + OAuth aparecem em respo
 - [[03-RESOURCES/concepts/llm-ml-foundations/context-engineering]] — como LLMs processam informação de fontes externas
 - [[03-RESOURCES/sources/fseixas-super-geo-agent-readiness]] — skill de referência (Claude Skill)
 - [[03-RESOURCES/entities/Perplexity-AI]] — search engine que mais avança GEO como padrão
+
+## Evidências
+- **[2026-06-24]** Andreas Chouliaras 1 Luke Connolly 2 and Dimitris Chatzopoulos 1 \*This work is supported by EU Hori — [[themis-an-explainable-ai-enabled-framework-for-reinforcement-learning-with-human-feedback]]
+- **[2026-06-24]** According to Gartner, the average Global Fortune 500 enterprise will have over 150,000 AI agents in  — [[aws-genaiic-partner-agent-factory-new-ai-agents-now-in-aws-marketplace]]
+- **[2026-06-24]** Formal verification produces machine-checkable certificates that attest to the satisfaction or viola — [[cycle-consistent-neural-explanation-of-formal-verification-certificates]]
+- **[2026-06-24]** - Early testing shows that the first-generation accelerator will deliver performance per watt substa — [[openai-and-broadcom-unveil-llm-optimized-inference-chip]]
+- **[2026-06-24]** Tianbao Ma    Chang Xi    Yichuan Zou    Chengen Li    Linxun Chen    Zilong Lu    Yanan Niu    Zhao — [[scaletot-generalizing-structured-llm-reasoning-for-billion-scale-low-activity-user-modeling]]
+- **[2026-06-24]** Quanyan Zhu Department of Electrical and Computer Engineering, New York University Tandon School of  — [[ai-tokenomics-the-economics-of-tokens-computation-and-pricing-in-foundation-models]]
+- **[2026-06-24]** Bingnan Xiao, Chenhao Yang, Wei Ni,, Xin Wang,, and Tony Q. — [[agentic-ai-for-bilevel-long-term-optimization-of-policy-driven-physical-layer-systems]]
+- **[2026-06-24]** Today we are releasing prime-rl version 0. — [[rl-at-1t-scale-prime-rl-performance-deep-dive]]
+- **[2026-06-24]** Tuning AI systems by hand doesn't scale. — [[cocoevolve-evolutionary-optimization-for-ai-systems]]
+- **[2026-06-24]** Loka transformed customer voice interactions by building a conversational AI agent with Amazon Nova  — [[how-loka-built-a-natural-low-latency-voice-agent-with-amazon-nova-2-sonic]]

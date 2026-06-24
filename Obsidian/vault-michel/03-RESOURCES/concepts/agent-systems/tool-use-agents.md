@@ -58,3 +58,5 @@ Na superfície de **Managed Agents**, o mesmo contrato se aplica: custom tools s
 ## Evidências
 - **[2026-06-19]** SpatialClaw: código com kernel persistente como interface de ação supera tool-call estruturado em +11.2pp; >70% das vitórias rastreiam a composição que API fixa não provê — [[03-RESOURCES/sources/spatialclaw-rethinking-action-interface]]
 - **[2026-06-21]** ToRL treina LLMs para usar computational tools via RL diretamente de base models (sem SFT prévio). ToRL-7B alcança 43.3% em AIME24 (+14% vs RL sem tools, +17% vs melhor TIR model). Cognitive behaviors emergem sem instruction: strategic t... — [[torl-scaling-tool-integrated-rl]]
+
+- **[2026-06-24]** tags: — [[the-latent-bridge-a-continuous-slow-fast-channel-for-real-time-game-agents]]

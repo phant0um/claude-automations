@@ -58,3 +58,6 @@ ROI de estudar para concurso: investimento = horas de estudo × custo de oportun
 - [[03-RESOURCES/concepts/dev-foundations/_index]]
 - [[03-RESOURCES/concepts/gestao-projetos]]
 - [[03-RESOURCES/concepts/saas]]
+
+## Evidências
+- [[03-RESOURCES/sources/the-agent-is-not-the-product]] — ROI framework para agentes: 10x priorizar, 2x talvez, <1x deixar quieto; workflow mais doloroso ≠ mais valioso

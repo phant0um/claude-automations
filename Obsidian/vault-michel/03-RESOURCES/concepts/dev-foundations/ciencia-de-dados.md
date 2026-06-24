@@ -135,3 +135,6 @@ Complementa e supera as apostilas das Fases 3 e 5 do curso ADS. Cobertura de alg
 ## Fontes
 
 - [[02-AREAS/fiap/sources/ciencia-de-dados-luiza-reixach-castro]] — fonte principal; guia de ~110 páginas
+
+## Evidências
+- [[03-RESOURCES/sources/how-the-university-of-s-o-paulo-is-transforming-how-researchers-access-greenhouse-gas-data-for-the-amazon-rainforest-with-aws]] — Digital Amazon: 17 AWS services, 7TB, FAIR-aligned data para pesquisa climática Amazônia

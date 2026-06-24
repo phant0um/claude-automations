@@ -44,3 +44,6 @@ Representational State Transfer — estilo arquitetural p/ APIs web baseado em H
 ## Relacionado
 
 - [[03-RESOURCES/concepts/dev-foundations/spring-boot|Spring Boot]]
+
+## Evidências
+- [[03-RESOURCES/sources/build-a-spring-boot-rest-api-with-amazon-aurora-dsql]] — RESTful product inventory API com optimistic concurrency control e multi-region active-active

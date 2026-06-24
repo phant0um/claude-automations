@@ -34,3 +34,6 @@ Cada domínio de interesse recebe um slot fixo no calendário semanal e um promp
 - [[03-RESOURCES/sources/guides-courses-howtos/prompts-perplexity-rotinas-semanais-otimizadas]] — coleção completa v3.0
 - [[03-RESOURCES/concepts/pkm-obsidian/weekly-knowledge-routine]] — framework geral
 - [[03-RESOURCES/concepts/llm-ml-foundations/prompt-templates-pt]] — templates reutilizáveis PT-BR
+
+## Evidências
+- **[2026-06-24]** 所有人都在比谁的 Deep Research AI 找得更多、更快、更全。但 2026 年的 benchmark 数据告诉你一件令人意外的事：头部产品在“找信息”上已经几乎打平，真正把系统拉开的，是另一件事：谁能在推理过程中，不积累错误。一 — [[]]

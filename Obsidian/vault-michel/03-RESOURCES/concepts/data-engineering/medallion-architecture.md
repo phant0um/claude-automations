@@ -27,6 +27,7 @@ Arquitetura de dados em camadas: Bronze → Silver → Gold. Cada camada aumenta
 ## Evidências
 
 - [[03-RESOURCES/sources/articles/aws-devops-agent-spark-troubleshooting]] — Diagnóstico de falhas multi-layer em pipelines Medallion
+- [[03-RESOURCES/sources/automated-schema-evolution-in-pinterest-s-next-generation-db-ingestion-framework]] — Pinterest CDC pipeline: Kafka → Flink → Spark → Iceberg com schema evolution automatizada
 
 ## Links
 

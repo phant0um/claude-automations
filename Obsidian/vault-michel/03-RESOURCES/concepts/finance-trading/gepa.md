@@ -70,3 +70,6 @@ Qualidade: GEPA < RL/GRPO (mas suficiente para maioria dos casos)
 - [[03-RESOURCES/sources/hermes-agent/hermes-agent-masterclass-akshay-pachaar]] — fonte
 - [[03-RESOURCES/concepts/agent-systems/self-evolving-agents]] — pattern geral de auto-evolução
 - [[03-RESOURCES/concepts/llm-ml-foundations/recursive-self-improvement]] — conceito relacionado
+
+## Evidências
+- **[2026-06-24]** Tuning AI systems by hand doesn't scale. — [[cocoevolve-evolutionary-optimization-for-ai-systems]]

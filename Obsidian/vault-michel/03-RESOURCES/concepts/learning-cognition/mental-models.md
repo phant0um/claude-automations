@@ -42,3 +42,6 @@ The goal is to hold more fundamental models, especially for high-stakes decision
 - [[03-RESOURCES/entities/Charlie-Munger]] — "lattice of mental models" via Farnam Street
 - [[03-RESOURCES/entities/Shane-Parrish]] — Farnam Street; curating and teaching mental models
 - [[03-RESOURCES/sources/guides-courses-howtos/first-principles-thinking-see-what-everyone-misses]]
+
+## Evidências
+- **[2026-06-24]** This is the fifth article in a series about Agent Experience (AX): the practice of making AI coding agents work correctl — [[when-the-model-has-never-seen-your-code]]

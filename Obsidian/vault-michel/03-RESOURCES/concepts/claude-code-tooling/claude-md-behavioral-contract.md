@@ -42,6 +42,7 @@ Um arquivo Markdown carregado automaticamente pelo Claude Code em cada sessão, 
 ## Evidências
 - **[2026-06-19]** CLAUDE.md descrito como "a constituição do vault": regras de leitura/escrita/segurança com meta de menos de 200 linhas, citação obrigatória de caminho de nota como mecanismo de honestidade — [[03-RESOURCES/sources/ai-second-brain-obsidian-guide]]
 
+- **[2026-06-24]** Your agent writes clean code for 12 steps.Step 13: wrong file. Step 14: ignores your rules. Step 15: deletes something i — [[claude-code-hooks-what-nobody-tells-you-until-step-20-breaks-everything]]
 ## Related
 - [[03-RESOURCES/concepts/claude-code-tooling/claude-hooks]]
 - [[03-RESOURCES/concepts/claude-code-plugin-system]]

@@ -45,3 +45,14 @@ Every Claude Code session is agentic execution. Understanding the loop helps dia
 - [[03-RESOURCES/concepts/human-in-the-loop]]
 - [[03-RESOURCES/concepts/long-horizon-agents]]
 - [[03-RESOURCES/concepts/agent-security]]
+
+## Evidências
+- **[2026-06-24]** This post is about Loops. And TypeScript. In fact, it covers a few things:A bad pattern I found in our codebaseWhy the p — [[loops-are-dead-and-typescript-sucks]]
+
+- **[2026-06-24]** Deploy the full Claude desktop experience - chat, Claude Cowork, and Claude Code - using inference on AWS, Google Cloud — [[claude-desktop-on-aws-google-cloud-and-microsoft-foundry]]
+- **[2026-06-24]** Since January, our internal AI agent Archie has 10x'd in cost - now ~$35K/month run-rate ($420K+ a year). That's more th — [[our-ai-agent-now-costs-more-than-human-junior-bankers]]
+- **[2026-06-24]** This two-part series explores how ontology-grounded agentic AI transforms Design Failure Mode and Effects Analysis (DFME — [[reimagining-b-pillar-dfmea-why-ontology-grounded-ai-is-the-future-of-automotive-engineering]]
+- **[2026-06-24]** tags: — [[data-recipes-for-agentic-models]]
+- **[2026-06-24]** tags: — [[grading-the-grader-lessons-from-evaluating-an-agentic-data-analysis-systemcode-and-data-available-at-github-httpsgithub-comtzstats-columbiastai-x-grade-the-grader]]
+- **[2026-06-24]** tags: — [[the-latent-bridge-a-continuous-slow-fast-channel-for-real-time-game-agents]]
+- **[2026-06-24]** Introduction Migration assessment and planning is rarely a single-pass exercise. Inventory data is incomplete; assumptio — [[accelerating-migration-assessments-and-planning-with-aws-transform]]

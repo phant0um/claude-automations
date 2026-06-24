@@ -78,6 +78,11 @@ Claude Code CLI (harness)
 - **[2026-06-21]** A maioria usa Claude como caixa de chat (pergunta→resposta→fecha a aba), deixando inexplorada uma camada inteira que transforma a ferramenta de algo que se pergunta em algo que trabalha por você. 7 features — Projects, Connectors, Skills... — [[most-people-use-claude-like-a-chatbox-7-features-make-it-a-coworker]]
 - **[2026-06-21]** Eve (Vercel) é framework filesystem-first para agentes de IA duráveis: capacidades centrais do agente vivem em locais convencionais do sistema de arquivos (instructions.md, tools/, skills/, channels/, schedules/), tornando o projeto mais... — [[verceleve-the-framework-for-building-agents]]
 
+- **[2026-06-24]** We let Codex and Claude Code autonomously iterate on the nanoGPT speedrun optimizer track for two weeks, producing ~10k — [[autonomous-ai-research-for-nanogpt-speedrun]]
+- **[2026-06-24]** Your agent writes clean code for 12 steps.Step 13: wrong file. Step 14: ignores your rules. Step 15: deletes something i — [[claude-code-hooks-what-nobody-tells-you-until-step-20-breaks-everything]]
+- **[2026-06-24]** Deploy the full Claude desktop experience - chat, Claude Cowork, and Claude Code - using inference on AWS, Google Cloud — [[claude-desktop-on-aws-google-cloud-and-microsoft-foundry]]
+- **[2026-06-24]** tags: — [[data-recipes-for-agentic-models]]
+- **[2026-06-24]** Most looping agents have amnesia. Each cycle starts fresh, so they retry the same failed fix three times because nothing — [[how-to-build-a-claude-code-agent-that-learns-from-each-loop-exact-setup-inside]]
 ## Perspectivas
 
 - **[2026-06-21]** '7 setup layers' e os '7 features que tornam Claude um coworker' convergem no mesmo padrão: o ganho de produtividade vem de configuração (CLAUDE.md, skills, memória), não do modelo em si. — [[how-to-make-claude-100x-more-powerful-7-setup-layers]]

@@ -42,3 +42,8 @@ A common pattern for AI desktop apps: Rust handles the systems layer (memory, fi
 - [[03-RESOURCES/concepts/llm-ml-foundations/local-ai]] — Rust e a lingua de eleicao para runtimes locais
 - [[03-RESOURCES/concepts/llm-ml-foundations/self-hosted-ai]] — infra self-hosted frequentemente em Rust
 - [[03-RESOURCES/concepts/agent-systems/agent-architecture]] — harnesses de alta performance
+
+## Evidências
+- **[2026-06-24]** Skills for Real Engineers. Straight from my .claude directory. - skills/skills/in-progress/loop-me/SKILL.md at main · ma — [[skillsskillsin-progressloop-meskill-md-at-main-3]]
+
+- **[2026-06-24]** Skills for Real Engineers. Straight from my .claude directory. - skills/skills/in-progress/loop-me/SKILL.md at main · ma — [[skillsskillsin-progressloop-meskill-md-at-main-4]]

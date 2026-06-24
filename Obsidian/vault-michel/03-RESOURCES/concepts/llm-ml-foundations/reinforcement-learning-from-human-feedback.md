@@ -44,3 +44,6 @@ Sem RLHF, LLMs são bons em completar texto mas ruins em seguir instruções, re
 - [[03-RESOURCES/concepts/rlhf-pipeline]]
 - [[03-RESOURCES/concepts/llm-ml-foundations/_index]]
 - [[03-RESOURCES/concepts/reasoning-models]]
+
+## Evidências
+- **[2026-06-24]** Andreas Chouliaras 1 Luke Connolly 2 and Dimitris Chatzopoulos 1 \*This work is supported by EU Hori — [[themis-an-explainable-ai-enabled-framework-for-reinforcement-learning-with-human-feedback]]

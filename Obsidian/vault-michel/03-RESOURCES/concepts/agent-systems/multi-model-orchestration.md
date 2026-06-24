@@ -47,3 +47,6 @@ Evita o "one-size-fits-all" problem: modelos com pontos fortes diferentes compen
 ## Fontes
 
 - [[03-RESOURCES/sources/guides-courses-howtos/perplexity-computer-masterclass-beginners]] — Corey Ganim descreve os 19 modelos e o roteamento do Perplexity Computer
+
+## Evidências
+- **[2026-06-24]** Learn how to architect an end-to-end pipeline that processes surgical video at the edge for de-identification, instrumen — [[edge-to-cloud-architecture-for-real-time-surgical-intelligence-with-aws-and-nvidia]]

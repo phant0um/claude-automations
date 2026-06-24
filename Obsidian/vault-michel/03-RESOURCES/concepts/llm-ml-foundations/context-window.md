@@ -115,3 +115,12 @@ Cada subagent tem seu próprio context window independente. O agente pai recebe 
 - **[2026-06-23]** Agentic workflows burn tokens faster than flat per-seat budgets; context window management via model routing can reduce same-work cost by routing routine steps to cheaper models — [[we-predicted-the-100kyr-per-dev-ai-bill-now-the-winners-are-routing-around-it]]
 - **[2026-06-23]** VisualSkill uses MCP-based load_topic tool to deliver figures inline with text, avoiding the context inflation that plain Read causes when each figure incurs a separate call — [[visualskill-multimodal-skills-for-computer-use-agents]]
 - **[2026-06-23]** Most skills suffer from token overload: stuffed with documentation the model already knows, pushing out workspace files and conversation history from the finite context window — [[stop-overloading-your-skills]]
+- **[2026-06-24]** 过去这几个月，社区里关于 Agent 的讨论焦点经历了一次完整的下沉。年初大家还在比模型分数，到 2026 年中，X 与 GitHub 上的工程师已经在讨论两件更具体的事：. — [[harness-loop-engineering-2026-ai-agent]]
+- **[2026-06-24]** While the validity of LLMs’ use in the legal context remains subject to ethical and legal debate, le — [[llms-prompted-for-legal-context-object-more-overrefusal-from-small-on-premises-llms-in-criminal-legal-context]]
+- **[2026-06-24]** Loops are the least surprising thing to happen all year. — [[never-loop-without-verifiers]]
+- **[2026-06-24]** AI applications are moving beyond text generation to multimodal systems that can perceive, search, a — [[run-step-3-7-flash-on-nvidia-gpus-with-enterprise-ready-multimodal-ai]]
+- **[2026-06-24]** When the creators of both OpenClaw and Claude Code speak, people listen. — [[why-we-re-bullish-on-loops]]
+- **[2026-06-24]** The domain model for what makes a skill great. — [[skillsskillsin-progressloop-meskill-md-at-main-6]]
+
+- **[2026-06-24]** Set the agent's runtime config in agent.ts with defineAgent, including the model and compaction. — [[agent-ts]]
+- **[2026-06-24]** This is the fifth article in a series about Agent Experience (AX): the practice of making AI coding agents work correctl — [[when-the-model-has-never-seen-your-code]]

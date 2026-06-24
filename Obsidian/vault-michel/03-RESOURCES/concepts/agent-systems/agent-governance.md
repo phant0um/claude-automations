@@ -38,6 +38,8 @@ The vault CLAUDE.md encodes a governance model explicitly: destructive ops and v
 
 ## Evidências
 - **[2026-06-19]** "Rails" de permissão opt-in por categoria de acesso (escrita em banco, leitura em banco, egress de rede, acesso a PII) propostos como mecanismo para acelerar iteração sem perder controle de risco em código gerado por agente — [[03-RESOURCES/sources/fable-class-models-as-code-interpreters]]
+- **[2026-06-24]** According to Gartner, the average Global Fortune 500 enterprise will have over 150,000 AI agents in  — [[aws-genaiic-partner-agent-factory-new-ai-agents-now-in-aws-marketplace]]
+- [[03-RESOURCES/sources/who-holds-ai-s-off-switch]] — Commerce Department forced Anthropic to disable Fable 5; AI sovereignty como risco P0 para boards
 
 ## Related
 - [[03-RESOURCES/concepts/agent-security]]

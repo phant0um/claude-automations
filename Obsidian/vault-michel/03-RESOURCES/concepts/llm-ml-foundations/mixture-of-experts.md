@@ -66,3 +66,6 @@ Token → Router → Select K experts (out of N) → Combine outputs
 ---
 
 **Sources:** [[03-RESOURCES/sources/ml-research-papers/nemotron-3-super-hybrid-mamba-attention-moe]]
+
+## Evidências
+- **[2026-06-24]** Today we are releasing prime-rl version 0. — [[rl-at-1t-scale-prime-rl-performance-deep-dive]]

@@ -110,3 +110,4 @@ Salesforce and HubSpot have recognized the threat and are moving toward API-firs
 
 ## Evidências
 - **[2026-06-19]** No mundo agentic, o "banco de dados" do SaaS se torna os próprios workflows — quem possui onde eles são orquestrados possui o próximo moat — [[03-RESOURCES/sources/workflows-are-king]]
+- [[03-RESOURCES/sources/the-token-economy-pt2-the-intelligence-company-gets-built]] — System of record agent que roda operating model; Anthropic forward-deployed into FIS para Financial Crimes AI Agent

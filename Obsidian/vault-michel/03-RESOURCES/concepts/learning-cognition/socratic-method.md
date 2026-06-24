@@ -45,3 +45,6 @@ Para Michel: método socrático é o modo mais eficiente de preparação para co
 ## Related
 - [[03-RESOURCES/concepts/learning-cognition/_index]]
 - [[03-RESOURCES/concepts/experience-compression-spectrum]]
+
+## Evidências
+- **[2026-06-24]** You finish a great book. Two weeks later you cannot remember a single chapter. Not because you are dumb. Because nobody — [[the-feynman-method-why-you-forget-90-of-what-you-read-and-the-4-prompts-that-fix-it]]

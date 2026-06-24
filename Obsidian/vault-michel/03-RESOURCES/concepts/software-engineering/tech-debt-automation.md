@@ -39,6 +39,7 @@ Scan repos → Detect findings → Prioritize → Generate PRs → Teams merge �
 
 - [[03-RESOURCES/sources/articles/aws-transform-continuous-modernization]] — AWS Transform continuous modernization (preview)
 
+- **[2026-06-24]** How Kilo Security Agent uses AI reachability analysis to reduce false positives and prioritize exploitable vulnerabiliti — [[why-most-dependency-alerts-don-t-matter]]
 ## Links
 
 - [[04-SYSTEM/agents/core/hill]]

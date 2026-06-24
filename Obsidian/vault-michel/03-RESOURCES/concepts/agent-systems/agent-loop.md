@@ -107,3 +107,7 @@ Stages 1–3 são "old hat" na terminologia de @trashpandaemoji. Stage 5 é o qu
 - **[2026-06-19]** Loop = Claude + cron + intervalo; mudança mental de "o que prompto a seguir" para "que job deveria rodar sozinho" — [[03-RESOURCES/sources/how-to-set-up-claude-loops]]
 - **[2026-06-22]** Loop = objetivo perseguido até concluir (Discover→Plan→Execute→Verify→Iterate); prompt = instrução única que sempre passa pelo humano. Verify e State são onde loops quebram na prática — [[03-RESOURCES/sources/i-spent-a-week-inside-ai-loops-prompting-is-dead-here-is-what-replaced-it]]
 - **[2026-06-22]** Loop engineering aplicado a trading quant: 6 peças universais (automação, skill, state file, verifier, worktrees, connectors) mapeadas para estágios de um sistema autoaperfeiçoável de sinais — [[03-RESOURCES/sources/how-to-use-loop-engineering-to-build-a-self-improving-quant-trading-system]]
+- **[2026-06-24]** Control what an eve agent's model sees and when, across instructions, skills, the workspace, and sub — [[context-control]]
+
+- **[2026-06-24]** This post is about Loops. And TypeScript. In fact, it covers a few things:A bad pattern I found in our codebaseWhy the p — [[loops-are-dead-and-typescript-sucks]]
+- [[03-RESOURCES/sources/how-it-runs]] — eve modela turn como durable workflow com steps; completed steps never re-run, eve replays recorded result

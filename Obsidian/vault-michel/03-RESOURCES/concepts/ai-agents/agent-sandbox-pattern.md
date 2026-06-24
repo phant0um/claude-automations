@@ -34,6 +34,7 @@ Isolar tool calls do agent loop. O agent (LLM + loop) roda em infraestrutura do 
 ## Evidências
 
 - [[03-RESOURCES/sources/ai-agents/lambda-microvms-claude-managed-agents]] — AWS Lambda MicroVMs para Claude Managed Agents
+- [[03-RESOURCES/sources/run-analysis]] — Sandbox bash isolado com /workspace filesystem, seeding automático de reference files ao modelo
 
 ## Links
 

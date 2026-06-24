@@ -51,3 +51,7 @@ Cada página gbrain divide em duas metades por uma linha `---`: acima fica **Com
 - [[03-RESOURCES/sources/gbrain-shared-second-brain-hermes-openclaw]]
 - [[03-RESOURCES/concepts/agent-systems/agent-memory-architecture]]
 - [[03-RESOURCES/concepts/agent-systems/multi-agent-orchestration]]
+
+## Evidências
+- **[2026-06-24]** tags: — [[governed-shared-memory-for-multi-agent-llm-systems]]
+- [[03-RESOURCES/sources/modernizing-lambda-s3-workloads-with-amazon-s3-files]] — S3 Files como shared mutable state para agentes Lambda: filesystem substitui serialization para DynamoDB/S3

@@ -112,6 +112,7 @@ Agentes falham por arquitetura, não inteligência:
 - **[2026-06-21]** A maioria das automações cron com agentes desperdiça tokens disparando um turno completo do modelo a cada tick, mesmo sem nada para decidir. O fix é manter o modelo fora do loop até ser realmente necessário e encolher seu trabalho quando... — [[3-easy-ways-to-build-cheap-or-free-automation-pipelines-with-hermes-agent]]
 
 - **[2026-06-22]** Modelo de monetização em 3 camadas (managed $500-2k/mês, supervised $200-800/mês, licensed) para expertise encodada via Hermes+Obsidian — primeira source a tratar a arquitetura como oferta comercial, não só produtividade pessoal — [[03-RESOURCES/sources/how-to-productize-your-expertise-into-a-hermes-and-obsidian-system-clients-pay-to-access]]
+- **[2026-06-24]** In late 2023, a mid-sized systematic fund in Chicago - managing roughly $2. — [[how-quants-use-llm-agents-to-mine-alpha-from-unstructured-data-the-complete-rag-framework]]
 
 ## Perspectivas
 

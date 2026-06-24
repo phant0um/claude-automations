@@ -31,6 +31,7 @@ Frontmatter inline = annotations. Manifest externo = metadata DB. O vault usa am
 ## Evidências
 
 - [[03-RESOURCES/sources/articles/amazon-s3-annotations]]
+- [[03-RESOURCES/sources/automated-schema-evolution-in-pinterest-s-next-generation-db-ingestion-framework]] — Schema como cross-system contract: propagation controlada com SLA-based eventual consistency
 
 ## Links
 

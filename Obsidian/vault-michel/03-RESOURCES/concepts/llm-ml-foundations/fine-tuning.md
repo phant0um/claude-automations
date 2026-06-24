@@ -42,3 +42,15 @@ Quando prompt engineering não é suficiente — estilo muito específico, forma
 - [[03-RESOURCES/concepts/llm-ml-foundations/llm-pretraining]]
 - [[03-RESOURCES/concepts/model-compression]]
 - [[03-RESOURCES/sources/articles/research-papers-llm-engineer-must-read]] — 12 foundational papers (LoRA, DPO, InstructGPT)
+
+## Evidências
+- **[2026-06-24]** While the validity of LLMs’ use in the legal context remains subject to ethical and legal debate, le — [[llms-prompted-for-legal-context-object-more-overrefusal-from-small-on-premises-llms-in-criminal-legal-context]]
+- **[2026-06-24]** AI applications are moving beyond text generation to multimodal systems that can perceive, search, a — [[run-step-3-7-flash-on-nvidia-gpus-with-enterprise-ready-multimodal-ai]]
+- **[2026-06-24]** Tianbao Ma    Chang Xi    Yichuan Zou    Chengen Li    Linxun Chen    Zilong Lu    Yanan Niu    Zhao — [[scaletot-generalizing-structured-llm-reasoning-for-billion-scale-low-activity-user-modeling]]
+
+- **[2026-06-24]** Since January, our internal AI agent Archie has 10x'd in cost - now ~$35K/month run-rate ($420K+ a year). That's more th — [[our-ai-agent-now-costs-more-than-human-junior-bankers]]
+- **[2026-06-24]** tags: — [[asalt-adaptive-state-alignment-for-lateral-transfer-in-multi-agent-reinforcement-learning]]
+- **[2026-06-24]** A Blog post by NVIDIA on Hugging Face — [[accelerating-transformers-fine-tuning-with-nvidia-nemo-automodel]]
+- **[2026-06-24]** tags: — [[reinforcement-learning-for-computer-use-agents-with-autonomous-evaluationaccepted-to-the-4th-international-workshop-on-generalizing-from-limited-resources-in-the-open-world-glow-ijcai-2026-httpsglow-ijcai-2026-github-ioglow-ijcai-2026]]
+- [[03-RESOURCES/sources/cultural-awareness-in-global-ai]] — Cultural awareness via post-training: 81 respostas de 22+ países mostram necessidade de adaptação cultural
+- [[03-RESOURCES/sources/sakana-namazu-cultural-adaptation]] — Namazu: post-training em DeepSeek-V3.1, Llama-3.1-405B, gpt-oss-120B para adaptação japonesa

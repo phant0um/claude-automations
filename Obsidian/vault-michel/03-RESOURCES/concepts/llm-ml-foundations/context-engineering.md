@@ -135,3 +135,4 @@ Trade-off documentado em produção real:
 ## Evidências
 - **[2026-06-19]** Framework de 4 estratégias (Write/Select/Compress/Isolate) e 4 modos de falha (Poisoning/Distraction/Confusion/Clash); pipeline universal de 5 passos por turno (Collect→Select→Compress→Arrange→Assemble); caso Dex Horthy de 35k linhas em 7h via Frequent Intentional Compaction — [[03-RESOURCES/sources/ai-agents-harness/context-engineering-complete-playbook]]
 - **[2026-06-22]** "Less prompting is more" e "tool overlap is poison": caso de produção do Skipper (Cloudflare) onde prompts prescritivos pioraram qualidade e tools duplicadas confundiram o modelo — [[03-RESOURCES/sources/how-we-built-cloudflare-s-data-platform-and-an-ai-agent-on-top-of-it]]
+- **[2026-06-24]** Loops are the least surprising thing to happen all year. — [[never-loop-without-verifiers]]

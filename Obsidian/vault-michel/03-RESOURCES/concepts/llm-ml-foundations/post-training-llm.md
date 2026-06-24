@@ -113,3 +113,7 @@ Ver [[03-RESOURCES/sources/primer-post-training-reasoning-data]].
 - [[03-RESOURCES/entities/Perplexity-AI]] — gated GRPO para factualidade
 - [[03-RESOURCES/entities/NVIDIA]] — RL agentico para Nemotron 3 Super
 - [[03-RESOURCES/entities/Meta-AI]] — Self-Improving Pretraining
+
+## Evidências
+- [[03-RESOURCES/sources/cultural-awareness-in-global-ai]] — Multilingual ≠ multicultural; AI defaults para culturally dominant groups, context-switch para higher-resource languages
+- [[03-RESOURCES/sources/sakana-namazu-cultural-adaptation]] — Sakana AI Namazu: post-training para adaptar frontier open-weight models a requisitos culturais nacionais sem perder performance

@@ -65,6 +65,10 @@ Understanding agentic RL helps Michel evaluate claims about agent capability imp
 - **[2026-06-21]** Paper propõe StarPO (State-Thinking-Actions-Reward Policy Optimization), framework geral para RL de agente em nível de trajetória, e RAGEN, sistema modular para treinar/avaliar agentes LLM — estudo em 4 ambientes revela 3 achados centrai... — [[ragen-understanding-self-evolution-in-llm-agents-via-multi-turn-reinforcement-le]]
 - **[2026-06-21]** Identifica "template collapse": modelos em RL multi-turn podem manter entropia estável (sinal tradicionalmente lido como "saudável") enquanto, na prática, recorrem a templates fixos de raciocínio que parecem diversos mas são input-agnost... — [[ragen-2-reasoning-collapse-in-agentic-rl]]
 - **[2026-06-21]** On-policy distillation (sinal denso, token a token, de um professor melhor) funciona e é muito mais eficiente em compute que RL — mas "self-distillation ingênua" (tentar obter o professor de graça injetando informação privilegiada no pro... — [[why-on-policy-distillation-works-and-naive-self-distillation-doesn-t]]
+- **[2026-06-24]** Andreas Chouliaras 1 Luke Connolly 2 and Dimitris Chatzopoulos 1 \*This work is supported by EU Hori — [[themis-an-explainable-ai-enabled-framework-for-reinforcement-learning-with-human-feedback]]
+- **[2026-06-24]** Tianbao Ma    Chang Xi    Yichuan Zou    Chengen Li    Linxun Chen    Zilong Lu    Yanan Niu    Zhao — [[scaletot-generalizing-structured-llm-reasoning-for-billion-scale-low-activity-user-modeling]]
+- **[2026-06-24]** Bingnan Xiao, Chenhao Yang, Wei Ni,, Xin Wang,, and Tony Q. — [[agentic-ai-for-bilevel-long-term-optimization-of-policy-driven-physical-layer-systems]]
+- **[2026-06-24]** In late 2023, a mid-sized systematic fund in Chicago - managing roughly $2. — [[how-quants-use-llm-agents-to-mine-alpha-from-unstructured-data-the-complete-rag-framework]]
 
 ## Perspectivas
 

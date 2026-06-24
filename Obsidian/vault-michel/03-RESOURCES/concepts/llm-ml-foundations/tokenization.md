@@ -40,3 +40,7 @@ Tokenização determina custo (tokens faturados), capacidade de contexto efetiva
 - [[03-RESOURCES/concepts/llm-ml-foundations/_index]]
 - [[03-RESOURCES/concepts/llm-ml-foundations/llm-pretraining]]
 - [[03-RESOURCES/concepts/llm-ml-foundations/kv-caching]]
+
+## Evidências
+- **[2026-06-24]** Today we're open-sourcing `renderers`, a standalone Python library that gives developers full contro — [[renderers-token-level-templating-for-agentic-rl]]
+- **[2026-06-24]** Quanyan Zhu Department of Electrical and Computer Engineering, New York University Tandon School of  — [[ai-tokenomics-the-economics-of-tokens-computation-and-pricing-in-foundation-models]]

@@ -229,6 +229,8 @@ Long-Term Memory
 
 - **[2026-06-22]** Sem camada de memória, agente redescobre e re-aprende a mesma correção toda conversa; com memória, melhora monotonicamente em perguntas recorrentes (caso Skipper/Cloudflare) — [[03-RESOURCES/sources/how-we-built-cloudflare-s-data-platform-and-an-ai-agent-on-top-of-it]]
 
+- **[2026-06-24]** tags: — [[governed-shared-memory-for-multi-agent-llm-systems]]
+- **[2026-06-24]** 很多 AI 记忆系统，最后都会变成同一种形状：把聊天记录、用户信息、上传文档、工作流结果，全部切成 chunk，塞进向量库里，等下一次需要的时候再 RAG 出来。这当然有用。但问题是，“记得更多”不等于“记得更好”。真正难的是：不同类型的记 — [[wiki-reflection-agent-memory]]
 ## Perspectivas
 
 - **[2026-06-21]** Paralelismo e memória persistente são tratados como a segunda fase (não a primeira) na progressão de maturidade de um agente — vem depois da fundação, antes da autonomia plena. — [[15-levels-of-hermes-agent-from-chatbot-to-247-autonomous-system]]

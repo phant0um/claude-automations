@@ -48,3 +48,6 @@ Source: `awesome-autoresearch.md` (22KB)
 ## Related
 - [[multi-agent-orchestration]]
 - [[agent-memory-architecture]]
+
+## Evidências
+- **[2026-06-24]** 所有人都在比谁的 Deep Research AI 找得更多、更快、更全。但 2026 年的 benchmark 数据告诉你一件令人意外的事：头部产品在“找信息”上已经几乎打平，真正把系统拉开的，是另一件事：谁能在推理过程中，不积累错误。一 — [[ni-yi-wei-zai-mai-sou-suo-yin-qing-shi-ji-zai-mai-yi-ge-zhuan-jia-tuan]]

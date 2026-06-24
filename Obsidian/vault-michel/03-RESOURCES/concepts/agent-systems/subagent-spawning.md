@@ -120,6 +120,10 @@ Todo sub-agent spawna com **~20.000 tokens de overhead** antes de executar qualq
 - **[2026-06-19]** Cada sub-agente do swarm Kimi K2.6 opera em janela de contexto própria e isolada, retornando só output estruturado ao coordenador — evita colapso por lossy summarization em tarefas longas — [[03-RESOURCES/sources/self-improving-loop-300-agent-swarm-kimi]]
 - **[2026-06-22]** Subagents de pesquisa com contexto e acesso web próprios mantêm o "ruído" (dezenas de fontes abertas) fora do thread principal, retornando só a síntese — padrão "research department" para solo founders — [[03-RESOURCES/sources/how-to-build-a-solo-company-with-claude-code-9-systems-that-run-it]]
 
+- **[2026-06-24]** Set the agent's runtime config in agent.ts with defineAgent, including the model and compaction. — [[agent-ts]]
+- **[2026-06-24]** We let Codex and Claude Code autonomously iterate on the nanoGPT speedrun optimizer track for two weeks, producing ~10k — [[autonomous-ai-research-for-nanogpt-speedrun]]
+- **[2026-06-24]** Your agent writes clean code for 12 steps.Step 13: wrong file. Step 14: ignores your rules. Step 15: deletes something i — [[claude-code-hooks-what-nobody-tells-you-until-step-20-breaks-everything]]
+- **[2026-06-24]** The session and run contract you touch: continuation tokens, stream handles, the NDJSON event stream, and reconnecting. — [[sessions-runs-streaming]]
 ## Fontes
 
 - [[03-RESOURCES/sources/guides-courses-howtos/best-practices-claude-opus-47-claude-code]]
