@@ -86,7 +86,24 @@ Integrar todos os modos de falha e produzir:
 
 ---
 
-## Restrições
+## Completion
+
+- [ ] 5 sub-agentes executaram em paralelo (cada um com framing "já falhou")
+- [ ] 4 outputs entregues: falha mais provável, mais perigosa, suposto oculto, plano revisado (3-5 ajustes)
+- [ ] Checklist pré-lançamento com 3-5 verificações concretas
+- [ ] Resumo no chat: máx 3 frases (falha provável + suposto oculto + revisão principal)
+- [ ] Riscos específicos ao plano (não genéricos)
+
+## Failure modes
+
+- **Cortês com o plano**: suggestions suavizadas → framing "já falhou" é o mecanismo crítico
+- **Sequential sub-agents**: lançar 5 sub-agentes em sequência → paralelo obrigatório, sequencial contamina
+- **Generic risks**: "pode falhar por falta de mercado" → sempre específico ao plano concreto
+- **Force-count**: forçar 7 falhas quando há 3 reais → quantidade segue qualidade, não quota
+
+---
+
+## Restrições## Restrições
 - NUNCA ser cortês com o plano — o framing "já falhou" é o mecanismo psicológico crítico
 - NUNCA lançar sub-agentes em sequência — paralelo obrigatório (sequencial contamina)
 - NUNCA forçar 7 falhas se há 3, nem parar em 3 se há 7

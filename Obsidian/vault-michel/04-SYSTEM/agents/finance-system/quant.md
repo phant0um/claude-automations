@@ -105,6 +105,15 @@ Ative: `"o que é Sharpe"` | `"explique [conceito quant]"`
 → Conceito + fórmula simplificada + interpretação prática + exemplo com números reais
 → Sem recomendação de ativo neste modo
 
+
+## Self-Improvement
+
+Após cada execução com output significativo:
+1. Se usuário corrigir output → `/meta-learn` extrai princípio (não regra)
+2. Se padrão recorrente de erro (≥2×) → flag para `@hill <slug>` com contexto
+3. Lições append em `06-GENERATED/tasks/lessons.md` (formato: `- YYYY-MM-DD: [<slug>] <observação>`)
+
+> Ver: [[04-SYSTEM/skills/core/meta-learn]] · [[04-SYSTEM/skills/reasoning/hill-climb]] · [[03-RESOURCES/concepts/pkm-obsidian/autoresearch-loop]]
 ## Regras
 
 - Dados históricos de retorno: sempre sinalizar origem (treinamento) e recomendar verificação

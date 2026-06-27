@@ -64,6 +64,16 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 - Top action: Auditoria de duplicatas (119 entre current e Archive-B); trazer 1TDS-FIAP (78 files) de archive pra fiap-academic
 - Ref: [[03-RESOURCES/sources/]] | Manifest: 1280 entries
 
+**Career Uplift — plano 6 meses (2026-06-24):**
+- Novo projeto: [[01-PROJECTS/career-uplift/overview]] — gap analysis Amplify IT (26 vagas) + plano 6 fases
+- F1: TS/React/Next.js · F2: Node/Docker/CI-CD · F3: Go · F4: LangChain/FastAPI · F5: AWS/Terraform · F6: Go advanced/Portfolio
+- Go incluído como segunda linguagem backend (mercado cloud-native, alta demanda/baixa oferta)
+- Projeto prático central: migração FutManager ecosystem (vanilla JS → Next.js → Docker → Go API → AI layer → AWS)
+- 7 projetos alternativos mapeados de sources do vault (cass clone, React Doctor, Knowledge Graph, Quant Loop, Security Auditor, Memory Layer, RAG Agent)
+- Curriculum completo: [[01-PROJECTS/career-uplift/curriculum]] — 48 aulas via edu-system agents (Tutor + Stack + Sintese + Trilha)
+- Fluxo semanal: @tutor (conceito) → @tutor/@stack (lab) → @sintese (flashcards Anki + resumo Obsidian) — sem aulas tradicionais
+- Ref: [[01-PROJECTS/career-uplift/progress]] | [[03-RESOURCES/sources/guides-courses-howtos/effective-go-official-guide]]
+
 **Fintech FIAP — docs vault sincronizados (2026-06-01):**
 - ✅ `overview.md`: stack corrigida (HTML→React 18+Vite), endpoints REST, rotas frontend, repo structure
 - ✅ `progress.md`: Fase 2+3 marcadas ✅; Fase 4 🔄; bloqueios VPN Oracle + 5 entidades sem REST
@@ -331,3 +341,68 @@ Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline
 **F2.9:** 3 reflections (NVIDIA BioNeMo, metacognição Claude Code, agent loops scenarios)
 **Clippings/:** 0 arquivos remanescentes
 **Total dia:** 166 source pages, 625 evidence appends, 6 reflections
+
+## 2026-06-24 — Skill Audit Pocock + Self-Improvement Loop Wiring
+
+**Skill audit:** 37 vault skills auditadas contra princípios Pocock (Writing Great Skills)
+- Completion criterion: 4/37 (11%) — crítico
+- Failure modes: 4/37 (11%) — crítico
+- Sprawl (>80 linhas): 34/37 (92%) — 5 skills >200 linhas (triagem-scoring 722, pre-ingest-dedup 466, ingest-verify 462)
+- Progressive disclosure: 0/37 — nenhuma skill tem GLOSSARY
+- No-op risk: 16/37 com NUNCA x3+
+→ [[06-GENERATED/audits/2026-06-24-skill-audit-pocock]]
+
+**Ingest:** [[03-RESOURCES/sources/ai-agents/writing-great-skills-matt-pocock]] (Score A)
+**Conceito:** [[03-RESOURCES/concepts/ai-agents/skill-authoring-principles]]
+
+**Self-improvement loop wiring (sessão 2026-06-24):**
+- 7 rotinas: lessons log adicionado (daily-scan, ingest-fiap-batch, process-queue, srs-concurso, srs-sources, vault-hot-sweep, vault-reconcile-semanal)
+- 63 agentes: bloco ## Self-Improvement injetado
+- 3 skills: complexity-ratchet, code-optimize, archive-cleanup
+- `06-GENERATED/tasks/lessons.md` criado (sink central, append-only, cap 30)
+- adversarial-gate-v2 integrada ao pipeline-semanal (F2.10 Batch Quality Gate)
+- Rotinas compatíveis com autoresearch-loop: 4→11/14 (29%→79%)
+- X-thread: [[06-GENERATED/x-thread/2026-06-24-ai-weekly]] (meta-loop encadeado, 13 tweets)
+
+## 2026-06-24 — Pocock Skills Analysis + P0-P5 Upgrades
+
+**Ingest:** [[03-RESOURCES/sources/ai-agents/matt-pocock-skills-14-analysis]] — 14 skills engineering/personal analisadas
+**Conceito:** [[03-RESOURCES/concepts/ai-agents/skill-authoring-principles]] atualizado com patterns Pocock
+
+**P0 — diagnose v1→v2:** ETAPA 0 Build Tight Feedback Loop adicionada (10 ways de loop, tight/red-capable concepts, proibição de hipótese sem loop)
+**P1 — tdd skill criada:** vertical slices, tracer bullets, anti-pattern horizontal, good/bad tests, mocking em system boundaries
+**P2 — git-guardrails hook:** `.claude/hooks/block-dangerous-git.sh` (PreToolUse, bloqueia push/reset --hard/clean -D)
+**P3 — grill-me upgraded:** Doc Capture section (cria ADRs + glossário durante grilling, sharpen fuzzy terms)
+**P4 — decisions upgraded:** Domain Modeling Ativo (challenge terms, sharpen language, cross-ref código, ADR sparingly com 3 critérios)
+**P5 — code-optimize upgraded:** Deep Modules section (Ousterhout: shallow→deep, deletion test, friction signals, deepening opportunities)
+
+**Vault score:** 38 skills (37 + tdd nova), 36/38 com Completion + Failure modes (95%)
+
+## 2026-06-24 — 5 Skills Faltantes Criadas + 2 Upgrades
+
+**5 skills criadas (Pocock engineering):**
+- `implement` — PRD/issues com TDD, typecheck, review, commit
+- `prototype` — throwaway: TUI para lógica, variant switcher para UI
+- `resolving-merge-conflicts` — resolver merge/rebase preservando ambas intents
+- `to-issues` — quebrar PRD em vertical-slice tracer bullet issues
+- `triage` — state machine: needs-triage → needs-info → ready-for-agent/human/wontfix
+
+**2 upgrades:**
+- `pena` (agente): Melhoria de Escrita ganhou DAG de seções + max 240 chars/parágrafo (de edit-article)
+- `spec-lifecycle`: FASE 1 ganhou "sintetizar sem entrevistar" + FASE 1.5 Identify Test Seams com leading word `seam` (de to-prd)
+
+**Cobertura Pocock 14/14:** 6 upgrades (P0-P5) + 5 skills criadas + 2 upgrades + 1 já existia (obsidian-vault via CLAUDE.md) = 14/14 ✅
+
+## 2026-06-24 — process-queue
+✓ Queue: 0 tarefas processadas | Alta: 0 | Média: 0 | Baixa: 0 | Erros: 0 | Nexus: aprovado (queue vazia)
+→ [[06-GENERATED/queue/2026-06-24-process-queue-0]]
+- 2026-06-24: Nova rotina skill-audit (mensal, 1ª segunda) — skill health (Pocock criteria) + agent behavioral drift (score-drift + vault-probe) + Pocock coverage check. 15→16 rotinas ativas.
+- 2026-06-24: 5 integrações de skills externas — forge Query Review (8 categorias Supabase, on-demand), skill SDD (subagent-driven development, meio termo ralph-loop↔subagent-team), guard Agentic AI Top 10 (10 vetores agentic), requesting-code-review receiving section, plan eval data (Global Constraints 0/5→5/5, Interfaces 0→100%, right-sizing 9.4→8.4)
+- ⚠️ daily-scan: 681 candidatos ≥ threshold (30) — considerar rodar pipeline-semanal — 2026-06-27
+
+## Revisão Semanal 2026-06-27
+**System:** stale=0 drift=1(rotinas 15 vs 16 citado) anomalia=git-toplevel
+**Lint:** orphans~766(heurística,ruído esperado) dead~329(missing-pages backlog) manifest-dups=370
+**Conexões:** 3 encontradas (confiança média/baixa), 0 wikilinks adicionados
+**Meta-coaching:** top waste: F3.3 Vault Impact retrofitting (3 commits de patch pra 1 item)
+→ [[06-GENERATED/revisao-semanal/2026-06-27-revisao-semanal]]

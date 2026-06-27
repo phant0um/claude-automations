@@ -118,6 +118,36 @@ Se não existir `CONTEXT.md` e >3 termos de domínio emergiram: proponha criaç�
 
 ---
 
+## Completion
+
+- [ ] Perguntas não suavizadas ("Você considerou que X pode falhar?" não vira "Talvez valha pensar em X?")
+- [ ] Plano não aceita "vai funcionar" sem raciocínio específico
+- [ ] Máximo 8 perguntas por rodada
+- [ ] Se plano não sobreviveu: reportado como sucesso (encontrou problema barato)
+- [ ] Síntese com riscos e decisões entregue
+
+## Failure modes
+
+- **Softened questions**: suavizar perguntas críticas → mecanismo da skill é a tensão, não cortesia
+- **Accept vague assurance**: aceitar "vai funcionar" → exigir raciocínio específico de por que
+- **Over-asking**: 10+ perguntas por rodada → qualidade > quantidade, máx 8
+- **No docs captured**: grilling revela decisão arquitetural mas não registra ADR → capturar inline com /decisions
+- **Fuzzy term unsharpened**: user usa termo vago ("account") e skill não challenge → propor termo canônico
+
+---
+
+## Doc Capture (de grill-with-docs)
+
+Durante o grilling, sempre que uma decisão ou termo cristalizar:
+
+1. **Termo resolvido** → atualizar CONTEXT.md ou glossário do projeto inline (não batchar)
+2. **Decisão arquitetural** → oferecer ADR via `/decisions` se: hard to reverse + surprising sem contexto + real trade-off. Se qualquer critério falta, skip ADR.
+3. **Termo fuzzy** → challenge: "Você disse 'account' — quer dizer Customer ou User? São coisas diferentes."
+
+> Grilling sem doc capture é perguntas desperdiçadas — as decisões evaporam.
+
+---
+
 ## Regras de Ouro
 
 - **Não suavize perguntas** — "Você considerou que X pode falhar completamente?" não vira "Talvez valha pensar em X?"

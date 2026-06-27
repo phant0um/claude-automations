@@ -152,7 +152,23 @@ PRÓXIMO PASSO:
 
 ---
 
-## Restrições
+## Completion
+
+- [ ] Layer 1 (Intent Boundary) verificada: ## Identidade + ## Fora do Escopo + ## Restrições OU ## Propósito + ## Regras
+- [ ] Ops destrutivas identificadas (write_file, bash delete/push)
+- [ ] Escalation trigger presente para ops destrutivas
+- [ ] Veredito: COMPLIANT / NON-COMPLIANT com理由
+- [ ] NON-COMPLIANT: correção via @extend recomendada
+
+## Failure modes
+
+- **String literal grep**: buscar "Layer 1" / "Intent Boundary" literalmente → checar por seções equivalentes (Identidade+Restrições ou Propósito+Regras)
+- **COMPLIANT sem Layer 1**: marcar COMPLIANT sem Intent Boundary → NON-COMPLIANT automático
+- **Auto-fix**: governance-audit corrige em vez de diagnosticar → apenas diagnostica, correção via @extend
+
+---
+
+## Restrições## Restrições
 
 - Agente com ops destrutivas (`write_file`, `bash` com delete/push) sem escalation trigger = NON-COMPLIANT automático
 - NUNCA marcar COMPLIANT se Layer 1 está AUSENTE

@@ -96,6 +96,72 @@ Ao ser ativado com `@guard <alvo>`:
    Verificar: rate limiting protege contra extração de conhecimento?
 ```
 
+## Checklist Agentic AI Top 10
+
+Complementar ao OWASP LLM Top 10. Aplicar quando auditando sistemas multi-agente (94+ agentes do vault, projetos com AI integration, orquestradores com delegation).
+
+```
+□ AA01 — Prompt Injection (Agentic)
+   Verificar: inputs de usuário são sanitizados antes de chegar ao contexto de qualquer agente?
+   Verificar: agente resiste a "ignore previous instructions" via tool input, não só chat?
+   Verificar: tool outputs são tratados como dados não-confiáveis? (web_extract, web_search podem conter injection)
+   Verificar: subagent herda instruções do parent — injection no subagent pode escalar?
+
+□ AA02 — Tool Misuse
+   Verificar: ferramentas têm escopo mínimo (principle of least privilege)?
+   Verificar: agente pode chamar tool fora do seu escopo declarado?
+   Verificar: tools destrutivas (delete, write, exec) exigem confirmação?
+   Verificar: agente pode encadear tools para bypassar restrições? (ex: read_file → write_file para sobrescrever config)
+
+□ AA03 — Memory Poisoning
+   Verificar: agente pode escrever em memory de outro agente?
+   Verificar: memory persistente é validada antes de ser injetada no prompt?
+   Verificar: attack pode injetar instrução maliciosa via memory que persiste跨 sessões?
+   Verificar: session_search / session recall são tratados como dados não-confiáveis?
+
+□ AA04 — Excessive Agency (Agentic)
+   Verificar: agente pode tomar ações além da sua autoridade declarada?
+   Verificar: delegation permite que subagent execute ops que o parent não pode?
+   Verificar: cron jobs executam com permissões que o agente interativo não teria?
+   Verificar: agente pode criar outros agentes (delegate_task) sem limite de profundidade?
+
+□ AA05 — Data Exfiltration via Tools
+   Verificar: agente pode usar web_search/web_extract para enviar dados para endpoint externo?
+   Verificar: agente pode usar terminal para curl dados sensíveis para servidor externo?
+   Verificar: tools de comunicação (send_message, webhook) validam destino antes de enviar?
+   Verificar: logs e traces não contêm dados sensíveis que tools podem acessar?
+
+□ AA06 — Supply Chain (Agentic)
+   Verificar: skills de terceiros (hub, GitHub) são revisadas antes de carregar?
+   Verificar: skill pode se modificar durante execução (imutabilidade em sessão)?
+   Verificar: plugin/MCP server pode injetar tools não declaradas?
+   Verificar: skill maliciosa pode promover a si mesma no registry via SKILL.md manipulation?
+
+□ AA07 — Unbounded Resource Consumption
+   Verificar: agente tem max_turns configurado?
+   Verificar: subagent tem timeout? (delegation pode rodar indefinidamente)
+   Verificar: cron job tem hard interrupt? (3 min no Hermes)
+   Verificar: agente pode consumir tokens sem limite em loop?
+
+□ AA08 — Goal Hijacking
+   Verificar: agente pode ter seu goal sobrescrito por input malicioso?
+   Verificar: /goal persistente pode ser manipulado via tool output injection?
+   Verificar: agente aceita instruções de tool output como se fossem do user? (mid-turn steering)
+   Verificar: feedback loop (hill-climb, ralph-loop) pode ser manipulado para loop infinito?
+
+□ AA09 — Cross-Agent Contamination
+   Verificar: dados de um agente poluem contexto de outro? (tenant isolation)
+   Verificar: output de subagent é sanitizado antes de entrar no contexto do parent?
+   Verificar: session_search retorna resultados de outras sessões sem autorização?
+   Verificar: kanban cross-profile permite que um worker acesse tasks de outro tenant?
+
+□ AA10 — Model Identity Confusion
+   Verificar: agente pode ser confundido sobre sua identidade/role por input adversarial?
+   Verificar: SOUL.md / AGENTS.md pode ser sobrescrito por tool injection?
+   Verificar: agente mantém role mesmo sob prompt adversarial que tenta role-play?
+   Verificar: context files (CLAUDE.md, AGENTS.md) são tratados como trusted ou podem ser manipulados?
+```
+
 ## Checklist de Guardrails do Harness (12 componentes)
 
 ```

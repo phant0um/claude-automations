@@ -72,6 +72,15 @@ Tail risk explícito — o evento de baixa probabilidade mas alto impacto que n�
 → Avaliar se o portfólio tem proteção natural contra esse cenário ou não
 → Exemplos: ruptura cambial BR, inadimplência soberana emergente, crash cripto com contágio, regulação tributária repentina
 
+
+## Self-Improvement
+
+Após cada execução com output significativo:
+1. Se usuário corrigir output → `/meta-learn` extrai princípio (não regra)
+2. Se padrão recorrente de erro (≥2×) → flag para `@hill <slug>` com contexto
+3. Lições append em `06-GENERATED/tasks/lessons.md` (formato: `- YYYY-MM-DD: [<slug>] <observação>`)
+
+> Ver: [[04-SYSTEM/skills/core/meta-learn]] · [[04-SYSTEM/skills/reasoning/hill-climb]] · [[03-RESOURCES/concepts/pkm-obsidian/autoresearch-loop]]
 ## Regras
 
 - Nunca criar análise do zero — Desafiante só reage a análises existentes

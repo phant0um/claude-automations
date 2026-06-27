@@ -46,8 +46,19 @@ NÃO ative para: hotfixes urgentes (<10 linhas); mudanças de configuração pur
 
 ### FASE 1 — Specify *(Sonnet)*
 - Peça ao usuário: "Descreva O QUÊ e POR QUÊ — não a stack técnica"
+- **Sintetizar conversa existente** (de to-prd): NÃO entrevistar se contexto já existe — sintetizar o que já foi discutido
 - Gere `.specify/specs/<id>-<feature>/spec.md` com: user stories, critérios de aceitação, restrições
 - Deixe em branco: stack, arquitetura, implementação
+
+### FASE 1.5 — Identify Test Seams *(Sonnet)*
+
+> **Leading word: seam.** Ponto onde você testa. O fewer seams, melhor — ideal é 1.
+
+- Sketch dos seams onde a feature será testada
+- Preferir seams existentes a novos
+- Usar o seam mais alto possível (highest seam = testa mais behavior com menos setup)
+- Se novos seams são necessários, propô-los no ponto mais alto
+- Confirmar com user que seams match expectations
 
 ### FASE 2 — Clarify *(Haiku)*
 - Execute perguntas estruturadas sequenciais baseadas nos gaps da spec
@@ -99,8 +110,34 @@ NÃO ative para: hotfixes urgentes (<10 linhas); mudanças de configuração pur
 
 ---
 
-## Restrições
+## Completion
+
+- [ ] Fase Clarify: ambiguidades resolvidas com usuário antes de spec
+- [ ] Fase Specify: spec.md com acceptance criteria + data-model + api-spec (se aplicável)
+- [ ] Fase Plan: tasks.md com tarefas que mapeiam 1:1 para acceptance criteria
+- [ ] Fase Implement: código segue tasks.md (sem escopo expandido sem update)
+- [ ] Fase Verify: verify-report.md com cada acceptance criteria checado
+- [ ] Estrutura .specify/ criada com memory/constitution.md
+
+## Failure modes
+
+- **Skip Clarify**: pular direto para Specify → ambiguidade vira bug na implementação
+- **Code before tasks**: escrever código antes de tasks.md aprovado → sem plano, escopo creep
+- **Constitution drift**: modificar constitution.md durante feature → abrir issue separada
+
+---
+
+## Restrições## Restrições
 - NUNCA pule a fase Clarify — ambiguidade na spec vira bug na implementação
 - NUNCA escreva código antes de ter tasks.md aprovado
 - NUNCA modifique constitution.md durante uma feature — abra issue separada
 - Se usuário quiser pular fases (spike/protótipo): use `skill: spec-tinyspec` em vez desta
+
+---
+
+## Related
+
+- **SDD** ([[04-SYSTEM/skills/orchestration/sdd]]) — executa as tasks geradas por spec-lifecycle com subagentes frescos por task + review estruturado. Spec-lifecycle produz o plano; SDD executa.
+- **ralph-loop** ([[04-SYSTEM/skills/orchestration/ralph-loop]]) — versão heavy para projetos longos (>30 min, múltiplas features). Use SDD para features isoladas; ralph-loop para builds completos.
+- **plan** (Hermes skill) — authoring do plano markdown. Spec-lifecycle é mais completo (constitution → specify → clarify → plan → tasks → implement).
+- **complexity-ratchet** ([[04-SYSTEM/skills/core/complexity-ratchet]]) — ratchet de testes após implementação.

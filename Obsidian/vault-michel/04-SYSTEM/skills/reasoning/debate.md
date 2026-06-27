@@ -123,7 +123,23 @@ Condição de revisão: [quando mudar de ideia]
 
 ---
 
-## Restrições
+## Completion
+
+- [ ] Perspectivas A e B executadas em paralelo (não sequência)
+- [ ] Árbitro emite veredito com vencedor (não "depende" sem condição)
+- [ ] Se ambas concordam: reportado como não-debate, encaminhar para heavy-think
+- [ ] Output: decisão + razão + condição de reversão
+
+## Failure modes
+
+- **Sequential execution**: rodar A depois B → paralelo obrigatório, sequencial contamina
+- **"Depende" sem condição**: árbitro emite "depende" sem especificar quando A vs B → deve especificar condição
+- **Default middle-ground**: recomendar meio-termo como saída padrão → debate tem vencedor
+- **Non-debate**: ambas perspectivas concordam → não há debate real, usar heavy-think
+
+---
+
+## Restrições## Restrições
 
 - NUNCA executar Perspectivas A e B em sequência — paralelo obrigatório (sequencial contamina)
 - NUNCA deixar o árbitro emitir "depende" sem especificar a condição

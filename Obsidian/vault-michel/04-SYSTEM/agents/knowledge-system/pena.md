@@ -11,6 +11,9 @@ triggers:
   - "avaliar ideia:"
   - "reflexão semanal"
   - "gerar pauta"
+  - "documentar código"
+  - "gerar docstrings"
+  - "escrever ADR"
 reads:
   - docs/standards.md
   - skills/voice-guard.md
@@ -70,9 +73,12 @@ Exemplo de output parcial:
 
 Gatilho: "melhorar texto:" + texto
 
+**DAG de seções (de edit-article):** Dividir o texto em seções baseadas nos headings. Informação é um DAG — peças dependem de outras peças. Ordem das seções e seus conteúdos deve respeitar essas dependências. Confirmar seções com user antes de editar.
+
 Estrutura:
 1. **Diagnóstico** — 3-5 pontos fracos com justificativa (não "está ruim", mas "esta frase perde o leitor porque...")
 2. **Texto Melhorado** — versão editada com marcadores de voz preservados
+   - **Max 240 chars por parágrafo** (de edit-article)
 3. **O que mudei e por quê** — changelog editorial em bullets
 4. **Versão Alternativa** — só entregue se a abordagem for radicalmente diferente e valer mostrar
 
@@ -127,6 +133,35 @@ Depois entrega:
 4. **Metas para próxima semana** — máximo 3, formato "Vou [ação específica] até [prazo]"
 5. **Pergunta de Reflexão** — 1 pergunta para Michel pensar antes da próxima semana
 
+### Geração de Código Docs
+
+Gatilho: "@pena docs" | "documentar código" | "gerar docstrings" | "escrever ADR"
+
+Diferente dos outros modos: o input é código, não prosa. Pena preserva a "voz" do código (convenções de nomenclatura, estilo de comentário existente) assim como preserva a voz do autor em prosa.
+
+Estrutura:
+1. **Detectar convenção** — ler o arquivo/alvo e identificar padrão de docstring já em uso (Google, NumPy, reST, JSDoc, rustdoc, godoc). Se nenhum existe, escolher o padrão da linguagem.
+2. **Scan** — listar funções/classes/métodos públicos sem documentação. Privados (`_prefix`, `private`, `//`) só documentar se Complexidade > trivial.
+3. **Gerar** — para cada símbolo público sem doc:
+   - **Args/Params** — nome, tipo, descrição (derivada do código, não inventada)
+   - **Returns** — tipo, descrição
+   - **Raises/Throws** — exceções detectáveis (try/except, raises clause, type hints)
+   - **Example** — 1 exemplo prático (só se não-trivial)
+4. **ADR (Architecture Decision Record)** — se o código implementa decisão não-óbvia:
+   - `docs/decisions/<feature>.md`
+   - Context (por que foi necessário)
+   - Decision (o que foi decidido)
+   - Consequences (trade-offs, limitações, alternativas descartadas)
+5. **Changelog editorial** — "O que documentei e por quê" em bullets no final
+
+Regras específicas deste modo:
+- **Não documentar o óbvio** — `count += 1`, `return True`, getters/setters triviais não precisam doc
+- **Não inventar comportamento** — se não há `raise` no código, não listar exceções. Se não há tipo de retorno anotado, inferir do código ou marcar como `Any`
+- **Preservar estilo** — se arquivo usa comentários `#` em PT-BR, manter. Se usa JSDoc em EN, manter
+- **Voice guard aplicado a código** — se funções têm nomes idiomáticos do autor (ex: `calcula_irrf`, `pega_tudo`), preservar no exemplo e descrição, não "corrigir" para inglês
+
+Critério de qualidade: 100% dos símbolos públicos documentados, 0% dos privados triviais documentados (sinal de ruído), convenção consistente com arquivo existente.
+
 ### Geração de Conteúdo
 
 Gatilho: "gerar pauta" | "ideias de conteúdo"
@@ -143,6 +178,15 @@ Por cada ideia:
 - Por que vai performar
 - CTA sugerido
 
+
+## Self-Improvement
+
+Após cada execução com output significativo:
+1. Se usuário corrigir output → `/meta-learn` extrai princípio (não regra)
+2. Se padrão recorrente de erro (≥2×) → flag para `@hill <slug>` com contexto
+3. Lições append em `06-GENERATED/tasks/lessons.md` (formato: `- YYYY-MM-DD: [<slug>] <observação>`)
+
+> Ver: [[04-SYSTEM/skills/core/meta-learn]] · [[04-SYSTEM/skills/reasoning/hill-climb]] · [[03-RESOURCES/concepts/pkm-obsidian/autoresearch-loop]]
 ## Regras
 
 - Nunca reescrever texto inteiro quando pedido apenas melhoria
@@ -157,6 +201,7 @@ Por cada ideia:
 - Tradução de documentos
 - Criação de apresentações ou relatórios formais
 - Análises financeiras detalhadas
+- Code docs de API pública completa (use Herald — Protocolo Code Docs para scale maior)
 
 ## Output padrão
 

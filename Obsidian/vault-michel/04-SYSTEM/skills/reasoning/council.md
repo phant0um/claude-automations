@@ -134,7 +134,23 @@ Condição de revisão: [quando mudar de ideia]
 
 ---
 
-## Restrições
+## Completion
+
+- [ ] 5 advisors executados em paralelo (não sequência)
+- [ ] Shuffle + anonimização aplicados no peer review
+- [ ] Veredito sintetizado com contribuição de cada lente
+- [ ] Se questão tem resposta técnica verificável: não usado (usar heavy-think)
+
+## Failure modes
+
+- **Sequential advisors**: rodar 5 advisors em sequência → paralelo obrigatório, sequencial contamina
+- **Skip anonymization**: pular shuffle + anonimização → viés de posição invalida peer review
+- **Haiku for advisors**: usar Haiku para perspectivas → perspectivas requerem raciocínio real (Sonnet+)
+- **Verifiable answer**: usar council para questão com resposta técnica → usar heavy-think
+
+---
+
+## Restrições## Restrições
 
 - NUNCA executar advisors em sequência — paralelo obrigatório (sequencial contamina perspectivas)
 - NUNCA pular o shuffle + anonimização no peer review — viés de posição invalida a revisão cruzada

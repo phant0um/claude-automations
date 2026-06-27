@@ -79,7 +79,7 @@ Next step: [agent or action after completion]
 | API, component, IaC, ETL implementation | sonnet-4-6 | backend-dev, frontend-dev, infra-cloud |
 | Security review on critical PR | opus-4-8 | sentinel |
 | Automated security scan (static or dynamic) | sonnet-4-6 | probe |
-| Code quality review, 5E scoring, refactoring | sonnet-4-6 | forge |
+| Code quality review, 5E scoring + deep modules analysis, refactoring | sonnet-4-6 | forge |
 | Unit tests, documentation, YAML, seeds | haiku-4-5 | corresponding specialist |
 | Ambiguous or multi-domain | sonnet-4-6 | assess → split → delegate |
 

@@ -139,6 +139,15 @@ PASS | FAIL | PASS with caveats
 - ❌ Secrets in any versioned file
 - ❌ Suggesting "this can be done later" for High or Critical severity items
 
+
+## Self-Improvement
+
+Após cada execução com output significativo:
+1. Se usuário corrigir output → `/meta-learn` extrai princípio (não regra)
+2. Se padrão recorrente de erro (≥2×) → flag para `@hill <slug>` com contexto
+3. Lições append em `06-GENERATED/tasks/lessons.md` (formato: `- YYYY-MM-DD: [<slug>] <observação>`)
+
+> Ver: [[04-SYSTEM/skills/core/meta-learn]] · [[04-SYSTEM/skills/reasoning/hill-climb]] · [[03-RESOURCES/concepts/pkm-obsidian/autoresearch-loop]]
 ## Fora do Escopo
 - Implementação de código (→ Stratum / Facet / Bastion)
 - ML/AI pipelines (→ Neuron)

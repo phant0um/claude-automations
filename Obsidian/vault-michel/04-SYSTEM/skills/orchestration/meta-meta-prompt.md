@@ -1,6 +1,8 @@
 ---
+name: meta-meta-prompt
+description: "Transform workflows into reusable skills registered in the Nexus resolver. Use when a manual workflow repeats, when user says 'skillify', or when Nexus detects a recurring pattern across 3+ sessions."
 skill: meta-meta-prompt
-version: 1.0
+version: 1.1
 author: Nexus Agent System
 tags: [skillify, meta, compounding, resolver, optimization]
 ---
@@ -49,27 +51,50 @@ Se analisando histórico automaticamente:
 - Mapeie os artefatos produzidos
 
 ### PASSO 2 — Gerar Skill File *(Sonnet)*
-Produza um arquivo `skills/<nome-da-skill>.md` seguindo **exatamente** esta estrutura:
+Produza um arquivo `skills/<nome-da-skill>.md` seguindo **exatamente** esta estrutura. Aplicar princípios Pocock de qualidade (ver `references/writing-great-skills-pocock.md` no skill `evolve`):
 ```markdown
 ---
+name: <nome>
+description: "<trigger phrasing com leading word>"
 skill: <nome>
 version: 1.0
 ---
 # Skill: <Nome>
+
 ## Propósito
+<1-2 frases com leading word — conceito compacto do pretraining que ancora comportamento>
+
 ## Condições de Ativação [quando usar / quando NÃO usar]
+
 ## Modelo por Etapa [tabela: etapa | modelo | justificativa]
+
 ## Protocolo de Execução [passos numerados]
+<Cada passo termina em completion criterion: checkable + exhaustive>
+
 ## Artefatos de Saída
+
+## Completion
+<checklist checkable e exhaustive>
+
+## Failure modes
+<mínimo 2 modos: sintoma → defesa>
+
 ## Restrições [o que NUNCA fazer]
+<No-op test em cada NUNCA: "Muda comportamento vs default do modelo?" Se não, deletar.>
 ```
 
+**Progressive disclosure**: se skill >80 linhas, splitar reference em `references/<topico>.md`.
+**Leading word check**: conceito compacto do pretraining? Collapse restatements em single token.
+
 ### PASSO 3 — Cross-Modal Eval *(Opus)*
-Avalie a skill em 4 dimensões (score 1–10, threshold 7):
+Avalie a skill em 7 dimensões (score 1–10, threshold 7) — 4 originais + 3 Pocock:
 1. **Completude**: cobre todos os edge cases identificados?
 2. **Ativação precisa**: as condições de ativação evitam falsos positivos?
 3. **Modelo correto**: a seleção de modelo por etapa é otimizada para custo/qualidade?
-4. **Restrições suficientes**: as cláusulas NUNCA cobrem os failure modes conhecidos?
+4. **Restrições sufficientes**: as cláusulas NUNCA cobrem os failure modes conhecidos? (passou no no-op test?)
+5. **Leading word**: a skill tem um conceito compacto do pretraining que ancora comportamento?
+6. **Completion criterion**: cada passo tem critério checkable + exhaustive? (resiste premature completion)
+7. **Failure modes**: mínimo 2 modos documentados com sintoma → defesa?
 
 Se qualquer dimensão <7: retorne ao PASSO 2 com os gaps identificados.
 
@@ -107,6 +132,5 @@ Skills podem chamar outras skills. Ao escrever uma nova skill:
 
 ## Restrições
 - NUNCA crie uma skill genérica demais (ex: "faça coisas") — uma skill deve ter um propósito único e verificável
-- NUNCA pule o cross-modal eval — skills mal escritas compõem mal
 - NUNCA sobrescreva uma skill existente sem versionar (bump version number)
 - Se a skill tiver <3 usos esperados no próximo mês: documente como procedimento, não como skill

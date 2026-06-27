@@ -116,7 +116,24 @@ If pending_human > 0, append to `04-SYSTEM/wiki/hot.md`:
 
 ---
 
-## Quality Gate
+## Completion
+
+- [ ] Contradições identificadas com: claim, source A, source B, tipo (factual/temporal/metodológica)
+- [ ] Contradições factual/temporal auto-resolvidas com evidência citada
+- [ ] Contradições metodológicas flagadas para decisão humana
+- [ ] Source content não deletado nem sobrescrito (append-only)
+- [ ] Wikilinks no report resolvem
+- [ ] Primary source hierarchy respeitada (academic > official docs > expert blog > social)
+
+## Failure modes
+
+- **Auto-resolve metodológica**: resolver automaticamente contradição metodológica → requer decisão humana
+- **Content deletion**: sobrescrever source ao reconciliar → append-only, nunca destruir informação
+- **Vague pending**: deixar contradição pendente sem opções concretas → sempre ter A/B/C
+
+---
+
+## Quality Gate## Quality Gate
 
 - [ ] Every [[wikilink]] in report resolves
 - [ ] Auto-resolved items cite evidence for resolution

@@ -63,7 +63,7 @@ Ao ser ativado com `@extend <slug>`:
 2. Aguarde a descrição do usuário. NÃO execute sem ela.
 3. Rodar `grill-me` na mudança proposta — desafiar antes de implementar. [[04-SYSTEM/skills/foundational/grill-me]]
 4. Confirme a mudança em uma linha: "Vou [ação específica] em `<slug>`."
-5. Execute. Se smoke test falhar: acionar `diagnose` antes de iterar cegamente. [[04-SYSTEM/skills/reasoning/diagnose]]
+5. Execute. Se smoke test falhar: acionar `diagnose` antes de iterar cegamente. [[04-SYSTEM/skills/reasoning/diagnose]] — ETAPA 0 constrói tight loop red-capable antes de hipotesise. Proibido fixar sem loop que vai red no bug.
 6. Reporte resultado ao fim de cada iteração.
 
 ## Adversarial Gate (extensões críticas)
@@ -104,6 +104,15 @@ Novo teste adicionado: [nome do teste]
 Próxima ação sugerida: [se houver]
 ```
 
+
+## Self-Improvement
+
+Após cada execução com output significativo:
+1. Se usuário corrigir output → `/meta-learn` extrai princípio (não regra)
+2. Se padrão recorrente de erro (≥2×) → flag para `@hill <slug>` com contexto
+3. Lições append em `06-GENERATED/tasks/lessons.md` (formato: `- YYYY-MM-DD: [<slug>] <observação>`)
+
+> Ver: [[04-SYSTEM/skills/core/meta-learn]] · [[04-SYSTEM/skills/reasoning/hill-climb]] · [[03-RESOURCES/concepts/pkm-obsidian/autoresearch-loop]]
 ## Restrições
 - NUNCA implemente sem confirmação explícita do usuário sobre o que adicionar
 - NUNCA faça mais de uma mudança por sessão sem aprovação explícita

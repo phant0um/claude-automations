@@ -75,6 +75,22 @@ Spec-verify resultado:
 | Refactor de skill | O que muda, o que não muda, exemplos de input→output |
 | Reorganização vault | Quais paths mudam, quais wikilinks precisam update, backup antes |
 
-## Fontes
+## Completion
+
+- [ ] Spec escrita antes de qualquer código ( acceptance criteria + out of scope + Definition of Done)
+- [ ] Implementação executada com spec visível (sem escopo expandido sem update)
+- [ ] Step 3 verificação: cada acceptance criteria checado (✓/✗/parcial)
+- [ ] Desvios críticos: revertidos ou spec atualizada + re-aprovada
+- [ ] Spec-verify report entregue com status por critério
+
+## Failure modes
+
+- **Spec after code**: escrever spec depois de implementar → spec vira racionalização, não plano
+- **Scope creep silencioso**: expandir escopo sem atualizar spec → desvio não rastreado
+- **Vague acceptance criteria**: "funciona" sem condição verificável → não distingue done de not-done
+
+---
+
+## Fontes## Fontes
 
 - [[03-RESOURCES/sources/guides-courses-howtos/claude-code-10-techniques-master]] — técnica 6 (spec-driven development)

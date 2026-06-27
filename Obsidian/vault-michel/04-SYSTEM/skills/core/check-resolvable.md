@@ -1,8 +1,8 @@
 ---
 name: check-resolvable
-description: "Use when auditing resolver vs filesystem drift, after renames, or weekly on Fridays. Detects ghost agents, dead links, orphan triggers, and unregistered skills in AGENTS.md."
+description: "Use when auditing resolver vs filesystem drift, after renames, or weekly on Fridays. Detects ghost agents, dead links, orphan triggers, unregistered skills, and usage orphans (registered but never invoked by any agent/rotina)."
 skill: check-resolvable
-version: 1.1
+version: 1.2
 author: Nexus Agent System
 schedule: semanal (sexta-feira, pós-review)
 tags: [audit, resolver, drift, maintenance, governance]
@@ -73,6 +73,7 @@ Extrair de AGENTS.md:
 | **Agente fantasma** | Existe em filesystem, não consta em AGENTS.md |
 | **Dead link** | Consta em AGENTS.md, não existe em filesystem |
 | **Skill não registrada** | Existe em `04-SYSTEM/skills/`, não consta na tabela de skills |
+| **Skill usage orphan** | Registrada em AGENTS.md mas 0 referências em agentes/rotinas/wiki (ninguém invoca) |
 | **Trigger órfão** | Trigger em "Regras de Roteamento" aponta para agente inexistente |
 | **Sistema sem roteamento** | Pasta de sistema em `agents/` sem nenhuma entrada em "Regras de Roteamento" |
 
@@ -135,8 +136,28 @@ grep -r "old-name" --include="*.md" . | grep "\[\["
 
 ---
 
-## Pitfalls
+## Completion
+
+- [ ] Wikilinks path-style verificados (path existe no filesystem)
+- [ ] Bare-name wikilinks resolvidos por filename lookup (single-match = inbound)
+- [ ] Code blocks filtrados (não são refs reais)
+- [ ] Dead-refs reais vs ambíguos distinguidos
+- [ ] Zero wikilinks apontando para paths renomeados OU quebrados logados em errors.md
+
+## Failure modes
+
+- **Code block false positive**: ref-graph walk gera DEAD-REFs de code blocks → filtrar antes de reportar
+- **Bare-name inflation**: scanner só conta path-style → bare names também são inbound válido
+- **Skill v1 vs v2 não integrada**: skill com -v2 nunca integrada ao pipeline → flag como orphan de integração
+
+---
+
+## Pitfalls## Pitfalls
 
 1. **Ref-graph walk false positives de code blocks:** A função `refs_of()` que extrai paths de backtick-delimited code blocks (ex: `02-AREAS/fiap/fase-1/CONTENT\.md`) gera DEAD-REFs que não existem — são placeholders/exemplos em documentação, não refs reais. Antes de reportar dead-refs de um ref-graph walk, filtrar code blocks ou verificar se o path contém caracteres de escape (`\.`), placeholders (`YYYY`, `NN`, `$file`, `...`), ou segments de exemplo (`path/to`). Achado 2026-06-22: 375 arquivos no fecho CLAUDE.md prof.2, ~40 DEAD-REFs reportados, 0 reais após filtragem.
 
 2. **Bare-name wikilinks resolvem no Obsidian:** Um wikilink `[[ai-agents]]` sem path resolve no Obsidian por fuzzy match de filename — mas um scanner que só conta path-style links (`[[path/to/file]]`) como inbound vai superestimar orphans. Para orphan scanning acurado, resolver bare names por filename lookup (single-match = inbound; multi-match = ambiguous = skip).
+
+3. **Skill usage orphan vs skill não registrada:** Uma skill pode estar registrada em AGENTS.md (passa no diff filesystem↔resolver) mas ainda assim ser órfã de uso — nenhum agente, rotina, ou wiki a referencia. Achado 2026-06-24: `adversarial-gate-v2` registrada em 0 locais canônicos, única menção em relatório gerado. **Fix:** após o diff PASSO 3, rodar um passo extra de usage audit — para cada skill, grep por referências (wikilink, backtick, skill:name, @trigger) em `agents/`, `07-QUEUE/rotinas/`, `wiki/`, `AGENTS.md`. Skills com 0 refs = usage orphans. Falsos positivos comuns: skills de nome genérico (`brief`, `trace`, `probe`, `council`) — palavra aparece como substantivo comum, não como referência à skill. Para essas, confirmar com pattern estrutural: `[[...skill-name]]`, `skill:name`, `skills/<path>/name`.
+
+4. **Skill v1 vs v2 — versão não integrada:** Quando uma skill tem versões (v1, v2), a versão nova pode ser criada mas nunca integrada ao pipeline/rotina que a originou. Achado 2026-06-24: `adversarial-gate-v2` foi criada como evolução de v1 para batches de ingest >20, mas nunca foi referenciada na rotina `pipeline-semanal.md` nem no moc-skills. **Fix:** ao detectar skill com sufixo `-v2` (ou `-vN`), verificar se a versão anterior está ativa em rotinas/agentes. Se sim, confirmar que a nova versão também está integrada — ou flag como orphan de integração. **Resolved 2026-06-24:** `adversarial-gate-v2` integrada em `pipeline-semanal.md` v5.2 (F2.10 Batch Quality Gate), `AGENTS.md` v1.5, e `moc-skills.md`. v1 mantida para gate in-flight; v2 roda como gate pós-batch.

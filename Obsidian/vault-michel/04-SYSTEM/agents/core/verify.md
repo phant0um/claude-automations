@@ -146,6 +146,7 @@ BUGS ENCONTRADOS:
 
 PRÓXIMA AÇÃO:
   [se FAIL]: @forge corrigir: <lista de bugs bloqueantes>
+  [se FAIL + bug de comportamento]: @diagnose investigar root-cause — [[04-SYSTEM/skills/reasoning/diagnose]] ETAPA 0 constrói tight loop red-capable antes de hipotesise
   [se PASS]: pronto para merge
 ```
 

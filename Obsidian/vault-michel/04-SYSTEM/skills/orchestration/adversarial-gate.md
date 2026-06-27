@@ -151,6 +151,22 @@ source page individualmente, valida o batch inteiro em 5 dimensões:
 
 ---
 
+## Completion
+
+- [ ] Subagente adversarial disparado com contexto isolado
+- [ ] Cada tarefa validada antes de ser marcada como done
+- [ ] Veredito emitido por tarefa: PASS (tarefa válida) ou FAIL (issue específica)
+- [ ] Se FAIL: feedback específico retornado ao Generator (não só "reprovado")
+- [ ] Tempo de execução dentro do budget (não travar pipeline)
+
+## Failure modes
+
+- **Confirmation bias**: subagente aprova tudo porque shared context com Generator → contexto deve ser isolado
+- **Vague rejection**: "tarefa não está boa" sem especificar o quê → feedback deve citar arquivo/linha/condição
+- **Over-blocking**: subagente rejeita tarefas por perfeccionismo → só rejeitar se critério objetivo não atendido
+
+---
+
 ## Restrições
 
 - NUNCA usar o mesmo contexto da sessão principal no subagente adversarial — isolamento é o mecanismo crítico

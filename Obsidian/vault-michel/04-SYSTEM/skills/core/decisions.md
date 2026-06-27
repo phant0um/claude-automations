@@ -106,7 +106,52 @@ Depois: append da entrada formatada.
 
 ---
 
-## Restrições
+## Completion
+
+- [ ] Decisão tem trade-off real (não é óbvia — "usar markdown" não conta)
+- [ ] Entrada tem: Contexto, Decisão, Fundamentação, Alternativas, Data, Condição de revisão
+- [ ] Verificação de duplicação feita (grep antes de appendar)
+- [ ] Máximo 50 entradas (se exceder: consolidar antes de adicionar)
+
+## Failure modes
+
+- **Obvious decision**: registrar "usar markdown" sem trade-off → só registrar se há alternativa real rejeitada
+- **Missing fundamentação**: entrada sem "por que" → fundamentação é o campo mais valioso
+- **Passive registration**: só registrar ADRs quando someone pede → modelar domínio ativamente (challenge terms, sharpen fuzzy language, cross-ref com código)
+- **Batch capture**: acumular decisões para registrar depois → capturar inline no momento que cristaliza
+
+---
+
+## Domain Modeling Ativo (de domain-modeling)
+
+Não apenas registre — modele ativamente o domínio:
+
+### Challenge contra o glossary
+Quando um termo conflita com decisions.md existente: "Sua decisão define 'cancellation' como X, mas você parece significar Y — qual é?"
+
+### Sharpen fuzzy language
+Quando user usa termo vago ou overloaded: "Você disse 'account' — quer dizer Customer ou User? São coisas diferentes."
+
+### Discuss concrete scenarios
+Quando relações de domínio são discutidas: stress-test com cenários específicos que probe edge cases e forçam precisão sobre boundaries.
+
+### Cross-reference com código
+Quando user afirma como algo funciona: checar se código concorda. Se contradição: "Seu código cancela Orders inteiras, mas você disse partial cancellation é possível — qual está certo?"
+
+### Offer ADRs sparingly
+Só oferecer ADR quando 3 critérios true:
+1. **Hard to reverse** — custo de mudar ideia depois é significativo
+2. **Surprising sem contexto** — reader futuro vai pensar "por que fizeram assim?"
+3. **Real trade-off** — alternativas genuínas existiam e uma foi escolhida por razões específicas
+
+Se qualquer um falta → skip ADR, não é decisão arquitetural.
+
+> Decisions.md deve ser totalmente devoid de implementation details. É glossary + ADRs, nada mais.
+- **Duplicate**: appendar decisão já registrada → grep antes de appendar
+
+---
+
+## Restrições## Restrições
 
 - NUNCA registrar decisões óbvias sem trade-off real (ex: "usar markdown" não é decisão arquitetural)
 - NUNCA criar entrada sem "Fundamentação" — é o campo mais valioso

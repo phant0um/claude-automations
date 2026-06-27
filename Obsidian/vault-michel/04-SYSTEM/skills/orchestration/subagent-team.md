@@ -231,7 +231,25 @@ After all ingest subagents complete (or timeout), the parent orchestrator MUST:
 
 ---
 
-## Restrições
+## Completion
+
+- [ ] Sub-agentes convocados conforme necessidade (não todos para tarefa simples)
+- [ ] Brief injetado em cada sub-agente (decisões + skills + tarefa)
+- [ ] Critic findings BLOQUEANTES tratados (não ignorados)
+- [ ] Single-threaded writes: 1 agente escreve por arquivo
+- [ ] Max spawn depth: 2 (parent → subagent → 1 nível)
+- [ ] Se sub-agente exceder 2× tempo: cancelado e atribuído ao próximo
+
+## Failure modes
+
+- **Over-spawn**: convocar todos sub-agentes para tarefa que 1 resolve → desperdício
+- **Ignore blocking findings**: Critic flaga BLOQUEANTE e parent ignora → findings existem para isso
+- **Concurrent writes**: 2+ agentes escrevem mesmo arquivo → single-threaded writes obrigatório
+- **Deep spawn**: subagent spawna subagent que spawna subagent → max depth 2, retorna ao parent
+
+---
+
+## Restrições## Restrições
 - NUNCA convoque todos os sub-agentes para tarefas que um único agente resolve
 - NUNCA use Opus para Researcher, Editor, ou Ops — desperdício claro
 - NUNCA ignore findings BLOQUEANTES do Critic — eles existem para isso

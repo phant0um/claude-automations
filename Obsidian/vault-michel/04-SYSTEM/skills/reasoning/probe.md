@@ -115,6 +115,22 @@ uso_sugerido: "@hill <slug>" com esta suite como input
 
 ---
 
+## Completion
+
+- [ ] Suite com 8-12 probes gerada (todas as 7 categorias cobertas)
+- [ ] Cada probe tem: input, violação testada, expected behavior, critério PASS/FAIL
+- [ ] Suite salva em `06-GENERATED/probe/<slug>-probe-YYYY-MM-DD.md`
+- [ ] Suites existentes checadas (sem duplicação de vetores)
+- [ ] Frontmatter tem `agente`, `versão_testada`, `vetores_gerados`, `uso_sugerido`
+
+## Failure modes
+
+- **Generic probes**: inputs sem restrição alvo específica → descartar, cada probe deve visar uma restrição do agent file
+- **Duplicate vectors**: suite nova repete vetores de suite existente → ler suite anterior antes de gerar, marcar como complementar
+- **Subagent overwrite**: delegar o mesmo agente que está sendo probed → o subagent sobrescreve o arquivo da suite
+
+---
+
 ## Restrições
 
 - NUNCA executar os probes — apenas gerar. Execução é responsabilidade do hill ou do usuário

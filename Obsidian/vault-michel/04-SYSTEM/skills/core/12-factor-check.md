@@ -113,7 +113,23 @@ RECOMENDAÇÃO:
 
 ---
 
-## Restrições
+## Completion
+
+- [ ] Todos os 12 fatores avaliados (F1-F12) com score por fator
+- [ ] F7 (HITL) verificado: agente tem seção "Restrições" com confirmação para ops destrutivas
+- [ ] F10 (focused) verificado: agente tem ≤10 tools e propósito único
+- [ ] Failing factors listados com recomendação de correção para @hill/@extend
+- [ ] Score < 0.70 → action item para @extend
+
+## Failure modes
+
+- **F7 false PASS**: dar PASS em F7 sem seção "Restrições" explícita → F7 FAIL = bloqueante
+- **F10 ignore**: não flagar agente com >10 tools → F10 FAIL precisa ser flagado
+- **Score without per-factor**: emitir score composto sem score individual → cada fator deve ter score
+
+---
+
+## Restrições## Restrições
 
 - F7 (HITL) FAIL = flag imediata — agente sem HITL em op irreversível é bloqueante
 - F10 (focused) FAIL = flag — agente com >10 tools ou múltiplos propósitos precisa ser dividido

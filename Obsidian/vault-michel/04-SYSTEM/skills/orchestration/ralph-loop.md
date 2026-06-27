@@ -1,8 +1,9 @@
 ---
-skill: ralph-loop
-version: 1.0
+name: ralph-loop
+description: "Executar tarefas de desenvolvimento de longa duração (>30 min, múltiplas features) de forma autônoma, usando arquitetura Planner → Generator → Evaluator com context resets para evitar context anxiety e self-evaluation bias."
+version: 1.1
 author: Nexus Agent System
-tags: [long-running, multi-session, context-reset, planner, evaluator]
+tags: [long-running, multi-session, context-reset, planner, evaluator, cleanup, simplify-code]
 ---
 
 # Skill: Ralph Loop
@@ -31,6 +32,7 @@ NÃO ative para: features isoladas já especificadas (use `spec-lifecycle`); hot
 | Generator (escalada) | `claude-opus-4-8` | Apenas se 3+ sprints consecutivos falharem no QA |
 | Evaluator (QA) | `claude-sonnet-4-6` | Avaliação com Playwright MCP, custo moderado |
 | Context Handoff Writer | `claude-haiku-4-5` | Apenas se modelo não suportar compaction |
+| Cleanup Sweep | 3 subagentes paralelos | `simplify-code` — reuse, quality, efficiency |
 
 > **Default (Opus 4.6+, Sonnet 4.6+):** usar compaction automática. Sem context resets, sem handoff.md. Session contínua.
 > **Fallback (modelos anteriores):** context resets + handoff.md conforme protocolo abaixo.
@@ -84,6 +86,26 @@ Instruções:
 
 Se qualquer critério abaixo do threshold → SPRINT FAIL → Generator recebe feedback e refaz.
 
+### AGENTE 2.5 — Cleanup Sweep *(simplify-code)*
+
+Após Evaluator aprovar o sprint (score ≥ threshold), antes do próximo Sprint Contract:
+
+1. Carregar `simplify-code` skill no diff do sprint (`git diff sprint_<N-1>..sprint_<N>`)
+2. 3 reviewers paralelos acham issues estruturais que o Evaluator não cobre:
+   - **Code Reuse** — duplicação que acumula entre sprints
+   - **Code Quality** — débito técnico que passing tests não detectam
+   - **Efficiency** — N+1 e hot-path bloat que escapa do QA funcional
+3. Aplicar apenas SAFE fixes (auto-aplicáveis sem risco de quebrar comportamento)
+4. CAREFUL e RISKY findings → adicionar ao `qa-reports/qa_<N>.md` como debt para o próximo sprint
+5. Re-run test suite para confirmar que SAFE fixes não quebraram nada
+
+**Quando pular o Cleanup Sweep:**
+- Sprint gerou <50 linhas de diff → custo de 3 subagentes > ganho
+- Evaluator encontrou bugs (SPRINT FAIL) → cleanup é desperdício, refazer primeiro
+- Último sprint do projeto → cleanup vai para handoff/final review, não entre sprints
+
+**Custo-benefício:** 3 subagentes por sprint é caro. Para projetos curtos (<3 sprints), rodar apenas no sprint final. Para projetos longos (5+ sprints), rodar a cada 2-3 sprints para controlar acúmulo de débito.
+
 ---
 
 ## Artefatos de Saída
@@ -92,6 +114,26 @@ Se qualquer critério abaixo do threshold → SPRINT FAIL → Generator recebe f
 - `sprint-contracts/sprint_<N>.md` — contratos negociados
 - `qa-reports/qa_<N>.md` — relatórios do Evaluator
 - Codebase completo com git history
+
+---
+
+## Completion
+
+- [ ] Planner gerou `progress.md` com spec completa (features, user stories, critérios de aceitação)
+- [ ] Cada sprint teve Sprint Contract negociado (Generator + Evaluator alinhados antes do build)
+- [ ] Evaluator usou Playwright MCP (interação real, não screenshots estáticos)
+- [ ] Cleanup Sweep (simplify-code) executado entre sprints aprovados (ou skip justificado)
+- [ ] Todos os critérios de avaliação ≥ threshold (Funcionalidade 8/10, Design 7/10, Código 7/10, Produto 7/10)
+- [ ] Codebase com git history a cada sprint
+- [ ] Se 10+ rounds de QA sem convergir: pausou e relatou ao usuário
+
+## Failure modes
+
+- **Premature approval**: Evaluator aprova sprint com feature central não funcionando → proibido, feature central = FAIL automático
+- **Sprint contract drift**: Generator ignora o contract e constrói outra coisa → contract é lei para o sprint
+- **Static evaluation**: Evaluator avalia por screenshots sem interagir com o app → usar Playwright MCP, testar edge cases
+- **Opus no Planner**: usar Opus para expansão de prompt → desperdício, Planner é Haiku (template work)
+- **simplify-code em sprint pequeno**: rodar 3 subagentes para <50 linhas de diff → desperdício, skip
 
 ---
 

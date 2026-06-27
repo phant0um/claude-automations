@@ -218,11 +218,21 @@ Append to `04-SYSTEM/wiki/hot.md`:
 
 ## Quality Gate
 
+## Completion
+
 Before finalizing report:
 - [ ] Every [[wikilink]] resolves to existing file
 - [ ] No duplicate connections (check previous report)
 - [ ] Each connection has concrete action item
 - [ ] Hot cache entry added
+- [ ] Max 10 connections por relatório (qualidade sobre quantidade)
+- [ ] Wikilinks bidirecionais aplicados apenas em alta confiança
+
+## Failure modes
+
+- **Fabricated connections**: inventar convergência com <2 sources concordando → mínimo 2 sources para convergência
+- **Orphan inflation por mtime**: usar mtime em vez de `ingested:` frontmatter → false positives de "recentes"
+- **Over-linking**: adicionar wikilinks em média confiança → só alta confiança edita source page, média vai no relatório
 
 ---
 

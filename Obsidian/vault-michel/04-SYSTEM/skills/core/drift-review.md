@@ -78,6 +78,22 @@ Para cada item que requer decisão humana:
 
 ---
 
+## Completion
+
+- [ ] PASSO 1 varredura estrutural completa (paths, agents, env vars, staleness por frontmatter)
+- [ ] PASSO 2 drift semântico comparado (INSTRUCTIONS vs AGENTS.md, skills refs vs skills/)
+- [ ] PASSO 3 auto-fix aplicado apenas em drift mecânico (refs, paths, diagramas)
+- [ ] PASSO 4 relatório de drift não-automático gerado com Impacto + Ação recomendada
+- [ ] Staleness medido por `updated:` frontmatter, não mtime
+
+## Failure modes
+
+- **mtime como staleness**: mtime reseta em git checkout e mascara stale → sempre usar `updated:` do frontmatter
+- **Orphan inflation**: scanner só conta path-style wikilinks, ignora bare-name → resolver bare names por filename lookup antes de reportar orphan count
+- **Auto-fix em lógica**: drift review edita INSTRUCTIONS de agente em vez de só estrutura → apenas structure/config é auto-fix, lógica é human-gated
+
+---
+
 ## Restrições
 - NUNCA auto-fix em lógica de agente (INSTRUCTIONS) — apenas estrutura/config
 - NUNCA delete arquivos durante o drift review — apenas sinaliza

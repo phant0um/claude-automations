@@ -426,7 +426,24 @@ de repair tentou criar stubs em `agent-systems/` mas os links apontam para
 `ai-agents/`. O repair deve criar no path DO LINK, não no path "correto".
 Verificar sempre com: `python3 -c "target = VAULT / f'{link}.md'; print(target.exists())"`
 
-## Changelog
+## Completion
+
+- [ ] Checks C1-C10 executados (frontmatter, wikilinks, depth, categorização, etc.)
+- [ ] Cada check: PASS / WARN / FAIL com evidência
+- [ ] Source pages com ratio < 5% (stub): flag WARN
+- [ ] Wikilinks apontando para diretórios sem _index.md: flag FAIL
+- [ ] Categoria correta verificada (C10): keywords match contexto
+- [ ] Relatório de verificação entregue
+
+## Failure modes
+
+- **Stub acceptance**: aceitar page < 5% do original como completa → WARN, possível stub
+- **Directory link**: wikilink aponta para diretório sem _index.md → FAIL
+- **Miscategorization**: paper de computational finance categorizado como "concurso" por keyword "fiscal" → C10 deve verificar contexto, não só keyword
+
+---
+
+## Changelog## Changelog
 
 - v1.7 (2026-06-24): +C2 basename fallback pitfall — spot-check com os.path.isfile()
   reportou 6/6 broken mas batch completo com stem lookup mostrou 0 broken. Obsidian

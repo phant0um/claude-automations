@@ -50,3 +50,12 @@ Memória persistente cross-session. Padrão [[_template|agent-memory]].
 - Lições de pdf2md. Ver [[retrospectiva-pdf2md]] e [[code-review-ciclo2]].
 - Catálogo de resolução de path para subprocess de binário de sistema é
   responsabilidade compartilhada com [[bastion]].
+
+## Self-Improvement
+
+Após cada execução com output significativo:
+1. Se usuário corrigir output → `/meta-learn` extrai princípio (não regra)
+2. Se padrão recorrente de erro (≥2×) → flag para `@hill <slug>` com contexto
+3. Lições append em `06-GENERATED/tasks/lessons.md` (formato: `- YYYY-MM-DD: [<slug>] <observação>`)
+
+> Ver: [[04-SYSTEM/skills/core/meta-learn]] · [[04-SYSTEM/skills/reasoning/hill-climb]] · [[03-RESOURCES/concepts/pkm-obsidian/autoresearch-loop]]

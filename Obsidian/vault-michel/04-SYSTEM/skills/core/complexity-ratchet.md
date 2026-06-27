@@ -1,8 +1,9 @@
 ---
-skill: complexity-ratchet
-version: 1.0
+name: complexity-ratchet
+description: "Garantir que cada sessão de coding com agente adicione testes, documentação de decisões, e resultados de avaliação — criando um ratchet que só permite movimento para frente na qualidade."
+version: 1.1
 author: Nexus Agent System
-tags: [tests, coverage, behavioral-contract, institutional-memory, ratchet]
+tags: [tests, coverage, behavioral-contract, institutional-memory, ratchet, structural-review, simplify-code]
 ---
 
 # Skill: Complexity Ratchet
@@ -33,6 +34,7 @@ NÃO ative para: mudanças de documentação pura; typos; configuração.
 | Geração de integration/E2E tests | `claude-sonnet-4-6` | Complexidade moderada |
 | Documentação de decisões (ADR) | `claude-haiku-4-5` | Escrita estruturada |
 | Cross-model eval (quality check) | `claude-opus-4-8` | Precisão máxima para verificação crítica |
+| Structural review (PASSO 5.5) | 3 subagentes paralelos | `simplify-code` — reuse, quality, efficiency |
 
 ---
 
@@ -94,6 +96,24 @@ Use apenas quando o output afeta: autenticação, dados financeiros, PII, segura
 - Peça scoring em: correção factual, ausência de holder confusion, precisão de atribuição
 - Se score <7/10: retorne ao PASSO 2 com os failure modes identificados
 
+### PASSO 5.5 — Structural Review *(simplify-code)*
+
+Após documentar decisões (PASSO 4) e antes da verificação final (PASSO 6):
+
+1. Carregar `simplify-code` skill no diff da sessão atual
+2. 3 reviewers paralelos complementam o ratchet:
+   - **Code Reuse** — código novo duplica utilitários existentes? (fere economicidade)
+   - **Code Quality** — parameter sprawl, leaky abstractions, AI-generated slop patterns
+   - **Efficiency** — N+1, TOCTOU, hot-path bloat nos módulos tocados
+3. Aplicar SAFE fixes (unused imports, dead code, pass-through wrappers)
+4. CAREFUL/RISKY findings → registrar em `docs/decisions/<feature>.md` como tech debt conhecido
+5. Re-run test suite para confirmar que fixes não quebraram behavioral contracts do PASSO 3
+
+**Quando pular:**
+- Diff da sessão <30 linhas → ratchet de testes já é suficiente
+- Mudança é apenas adição de testes (sem código de produção novo) → structural review sem alvo
+- PASSO 5 (cross-model eval) já foi executado e encontrou 0 issues críticos → código já foi revisado por Opus
+
 ### PASSO 6 — Verificação Final *(Haiku)*
 ```bash
 coverage run -m pytest && coverage report --fail-under=90
@@ -107,6 +127,36 @@ coverage run -m pytest && coverage report --fail-under=90
 - Testes novos/atualizados em `tests/`
 - `docs/decisions/<feature>.md` — ADRs da sessão
 - `COVERAGE.md` — histórico de coverage por release
+
+---
+
+## Self-Improvement
+
+Após cada execução:
+1. Se coverage não subiu → registrar qual módulo resistiu e por quê em `06-GENERATED/tasks/lessons.md`
+2. Se behavioral contract falhou → flag para `@hill <slug>` com contrato quebrado
+3. Lições append: `- YYYY-MM-DD: [complexity-ratchet] coverage N%→M%, módulos pendentes=X`
+
+> Ver: [[04-SYSTEM/skills/reasoning/hill-climb]] · [[03-RESOURCES/concepts/pkm-obsidian/autoresearch-loop]] · `simplify-code` (PASSO 5.5) · `references/simplify-code-integration-pattern.md` (design principles for wiring simplify-code into pipelines)
+
+---
+
+## Completion
+
+- [ ] Coverage medida antes e depois (PASSO 1 + PASSO 6)
+- [ ] Testes gerados para módulos <90% (edge cases, failure modes, behavioral contracts)
+- [ ] Behavioral contract tests: protocolo interativo, gate confirmação, anti-shortcut, adversarial
+- [ ] Decisões documentadas em docs/decisions/<feature>.md
+- [ ] Structural Review (simplify-code PASSO 5.5) executada ou skip justificado
+- [ ] Coverage final ≥90% OU PR bloqueado com módulos pendentes listados
+- [ ] COVERAGE.md atualizado com novo baseline
+
+## Failure modes
+
+- **Test removal fraud**: remover teste para subir coverage → fraude no ratchet, proibido
+- **False PASS**: teste passa por razão errada (falso positivo) → marcar como FAIL mesmo se rubric OK
+- **Opus for simple tests**: usar Opus para geração de testes simples → só Opus para cross-model eval crítico
+- **simplify-code em diff pequeno**: rodar 3 subagentes para <30 linhas de diff → desperdício, skip
 
 ---
 

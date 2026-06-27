@@ -140,7 +140,23 @@ Briefs >7 days old can be deleted by wiki-lint.
 
 ---
 
-## Changelog
+## Completion
+
+- [ ] Brief tem máx 35 linhas
+- [ ] Follow-up section: ações da semana anterior tracked (acted on / pending)
+- [ ] Drift detection: áreas ativas negligenciadas flagadas
+- [ ] Blockers do hot.md surfaced
+- [ ] Queue section com blockers destacados
+
+## Failure modes
+
+- **Over-length**: brief >35 linhas → cortar para essencial
+- **No follow-up**: não checar se suggestions anteriores foram acted on → follow-up é obrigatório
+- **Miss blockers**: não ler hot.md para blockers → surface operational issues
+
+---
+
+## Changelog## Changelog
 
 - v2.0 (2026-05-25): Enhanced from v1. Added follow-up tracking, drift detection, hot.md blockers.
 - v1.0 (2026-05-09): Created.

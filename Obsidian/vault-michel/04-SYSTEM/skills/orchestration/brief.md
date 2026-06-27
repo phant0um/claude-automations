@@ -82,7 +82,22 @@ E. CONTEXTO IGNORAR
 - [decisão 1] — [justificativa se relevante]
 - [decisão 2]
 
-## Restrições ativas
+## Completion
+
+- [ ] Brief contém: decisões relevantes, skills injetadas, tarefa específica
+- [ ] Máximo 30 linhas (se precisar mais: problema de escopo, não de brief)
+- [ ] Decisões que o subagente poderia contradizer estão incluídas
+- [ ] Se não há decisões relevantes: brief de 3 linhas é suficiente
+
+## Failure modes
+
+- **Context dump**: incluir histórico completo da conversa → brief é filtro, não dump
+- **Missing contradiction-risk**: omitir decisão que subagente poderia contradizer → conflito não prevenida
+- **Over-length**: brief >30 linhas → sessão tem problema de escopo, não de brief
+
+---
+
+## Restrições## Restrições ativas
 - [restrição do CLAUDE.md]
 - [restrição específica da sessão]
 

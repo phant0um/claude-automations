@@ -434,7 +434,24 @@ sempre com `echo "NEW_COUNT=$NEW_COUNT"` antes do uso.
 
 ---
 
-## Changelog
+## Completion
+
+- [ ] Dedup por basename similarity executada (F1.0)
+- [ ] Cross-check campo source: das source pages existentes (F1.0c)
+- [ ] Quasi-duplicatas com slug normalization verificadas
+- [ ] File evaporation detectada (arquivos somem entre find e processamento)
+- [ ] Output: lista de candidatos genuinely novos (não duplicatas)
+
+## Failure modes
+
+- **Basename-only check**: só comparar basename × manifest → slug temático divergente passa (F1.0c obrigatório)
+- **Slug quoting bug**: inline python3 -c com regex quebra no macOS bash 3.x → usar arquivo externo
+- **File evaporation misdiagnosis**: arquivos somem por Readwise sync, não por bug → confirmar antes de debugar
+- **Short slug match**: slug < 40 chars gera falsos negativos no second-pass → usar 40+ chars ou fuzzy match
+
+---
+
+## Changelog## Changelog
 
 - v1.5 (2026-06-23): + Shell Variable Persistence pitfall — terminal() calls
   não compartilham estado de shell. Variáveis calculadas em uma call (NEW_COUNT)

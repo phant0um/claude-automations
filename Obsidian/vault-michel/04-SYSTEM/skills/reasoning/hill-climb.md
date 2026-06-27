@@ -88,6 +88,24 @@ NÃO ative para: agentes sem eval suite definida; queries simples sem histórico
 
 ---
 
+## Completion
+
+- [ ] Todos os 5 pré-requisitos do loop presentes: fitness function, executor, keep-or-revert, lessons, budget
+- [ ] Máximo 5 rounds executados (para cedo se todos probes passarem)
+- [ ] Cada FAIL classificado segundo taxonomia (MISSING_RULE, WRONG_TOOL, HALLUCINATION, etc.)
+- [ ] Correção aplicada + re-run dos probes que falharam (não suite inteira)
+- [ ] Anti-regressão: suite completa rodada, zero probes previamente verdes quebrados
+- [ ] `evals/results_<slug>_<timestamp>.json` atualizado
+
+## Failure modes
+
+- **Infinite loop**: 5 rounds esgotados sem convergir → gerar relatório de falhas pendentes, aguardar humano
+- **Probe removal**: remover probe existente para subir score → fraude no ratchet, proibido
+- **False PASS**: probe marcado PASS com alucinação factual → mesmo se rubric satisfeito, alucinação = FAIL
+- **Regression blindness**: só re-roda probes que falharam, ignora suite completa → sempre rodar suite inteira no final
+
+---
+
 ## Restrições
 - NUNCA edite o agente sem antes registrar o estado anterior (git commit ou backup)
 - NUNCA marque um probe como PASS se a resposta contiver alucinação factual, mesmo que a rubric esteja satisfeita

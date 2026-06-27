@@ -72,7 +72,22 @@ Mesmo princípio do Zero-Trust Framework em [[03-RESOURCES/concepts/agent-securi
 
 `claude-managed-agents-overview` (overview) · `define-your-agent` (Agent) · `define-outcomes` (Outcomes) · `start-a-session` + `session-operations` (Session) · `session-event-stream` (Events) · `multiagent-sessions` (coordenação) · `cloud-environment-setup` + `cloud-sandbox-reference` (Environment/sandbox) · `claude-platform-on-aws` (deploy) · `accessing-github` + `adding-files` + `files-api` (injeção de conteúdo) · `authenticate-with-vaults` (credenciais) · `skills` (Skills nesta superfície)
 
-## Restrições
+## Completion
+
+- [ ] Resposta usa a tabela de componente correta (Agent/Environment/Session/Events)
+- [ ] Limites citados correspondem à tabela documentada (20 skills, 8 memory stores, etc.)
+- [ ] Distinção mcp-connector vs mcp-connector-1 respeitada (superfícies diferentes)
+- [ ] Link para fonte específica fornecido para detalhe de implementação
+
+## Failure modes
+
+- **Surface confusion**: citar limite de Messages API (8 skills) em contexto de Managed Agents (20) → sempre confirmar superfície
+- **Attach-after-creation**: sugerir anexar memory/vault a session em execução → só na criação
+- **mcp-connector conflation**: tratar mcp-connector e mcp-connector-1 como sinônimos → são docs de superfícies diferentes
+
+---
+
+## Restrições## Restrições
 
 - NUNCA tratar `mcp-connector` e `mcp-connector-1` como sinônimos — são docs de superfícies diferentes (risco de citar limite errado).
 - NUNCA assumir que memory stores/vaults/arquivos podem ser anexados a uma session já em execução — só na criação.

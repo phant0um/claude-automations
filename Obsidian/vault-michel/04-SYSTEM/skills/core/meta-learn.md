@@ -134,6 +134,25 @@ PRÓXIMO PASSO:
 
 ---
 
+## Completion
+
+- [ ] Correções analisadas e classificadas (padrão vs erro pontual)
+- [ ] Padrões passaram Step 3 (zoom out para padrão geral, não caso isolado)
+- [ ] Princípios escritos como princípio (condição + ação + razão), não regra ("nunca X")
+- [ ] Verificação contra princípios existentes feita (grep em agents/core + CLAUDE.md)
+- [ ] Destino decidido por princípio (agent file, CLAUDE.md, skill, ou errors.md)
+- [ ] META-LEARN REPORT entregue com princípios + destino + gate status
+- [ ] Princípios para agent files/CLAUDE.md: PENDENTE APROVAÇÃO (não auto-aplicado)
+
+## Failure modes
+
+- **Regra em vez de princípio**: "Nunca faça X" sem contexto → rewrite como "Quando [condição], priorize [valor] porque [razão]"
+- **Padrão de correção única**: extrair princípio de 1 correção sem verificar recorrência → Step 3 obrigatório, mínimo 2 ocorrências
+- **Princípio duplicado**: criar princípio que já existe em CLAUDE.md ou agent file → grep antes, se existe = enforcement problem → encaminhar para hill
+- **Auto-aplicar em CLAUDE.md**: aplicar princípio sem confirmação → CLAUDE.md é INVARIANT, sempre gate humano
+
+---
+
 ## Restrições
 
 - NUNCA aplicar princípios em `04-SYSTEM/agents/` ou `CLAUDE.md` sem confirmação — apenas em skills

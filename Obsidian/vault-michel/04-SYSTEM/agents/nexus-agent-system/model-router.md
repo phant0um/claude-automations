@@ -86,6 +86,15 @@ unset ANTHROPIC_AUTH_TOKEN
 - ❌ Esquecer de reverter `ANTHROPIC_BASE_URL` após tarefa (vazamento para tarefas seguintes)
 - ❌ Confiar em output Ollama sem confidence check para decisões críticas
 
+
+## Self-Improvement
+
+Após cada execução com output significativo:
+1. Se usuário corrigir output → `/meta-learn` extrai princípio (não regra)
+2. Se padrão recorrente de erro (≥2×) → flag para `@hill <slug>` com contexto
+3. Lições append em `06-GENERATED/tasks/lessons.md` (formato: `- YYYY-MM-DD: [<slug>] <observação>`)
+
+> Ver: [[04-SYSTEM/skills/core/meta-learn]] · [[04-SYSTEM/skills/reasoning/hill-climb]] · [[03-RESOURCES/concepts/pkm-obsidian/autoresearch-loop]]
 ## Critério de Qualidade
 
 - Toda tarefa tem `model_tier` declarado no briefing

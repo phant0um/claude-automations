@@ -663,7 +663,25 @@ for key in list(sources.keys()):
 **Prevenção**: subagente instructions devem incluir exemplo explícito:
 "key = basename only, ex: 'The Log Is the Agent.md' NOT 'Clippings/The Log Is the Agent.md'"
 
-## Changelog
+## Completion
+
+- [ ] Score 0-10 calculado para cada candidato (heurística determinística, 0 AI calls)
+- [ ] Grade A (8-10), B (6-7), C (4-5), D (0-3) atribuída
+- [ ] Borderline (score 4-6): second-pass com expanded keywords + title relevance
+- [ ] Nexus Manual Override aplicado quando multi-match do mesmo domínio (core A)
+- [ ] Output: candidates_aprovados.txt (A/B) + candidates_rejeitados.txt (C/D)
+- [ ] File evaporation detectada e reportada
+
+## Failure modes
+
+- **macOS grep -P**: usar Perl regex no BSD grep → usar -oE + sed portável
+- **Multi-match inflation**: "loop engineering" score 4 mas é core A → Nexus Manual Override deve contar multi-match do mesmo domínio
+- **declare -A on bash 3.x**: associative arrays quebram no macOS → usar Python
+- **candidates_aprovados corruption**: rescore script appending |grade|score aos paths → validar antes de consumir
+
+---
+
+## Changelog## Changelog
 
 - v1.6 (2026-06-24): +Subagent manifest update failure pitfall — subagentes podem
   falhar ao atualizar manifest sem reportar erro. Fix: validar após cada batch.

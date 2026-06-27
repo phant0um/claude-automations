@@ -135,7 +135,23 @@ Estes são os padrões que este gate foi desenhado para catchar:
 
 ---
 
-## Restrições
+## Completion
+
+- [ ] Subagente adversarial disparado com contexto isolado (não shared com pipeline)
+- [ ] Sample ≥9 pages (3 random + 3 top + 3 bottom) verificadas
+- [ ] 5 checks executados: link integrity, categorização, placeholders, concept absorption, beautiful nonsense
+- [ ] Veredito: PIPELINE OK ou PIPELINE FAIL com issues específicas
+- [ ] Se 3× FAIL consecutivo: escalado (não iterado)
+
+## Failure modes
+
+- **Shared context**: subagente recebe contexto da sessão do pipeline → isolamento é obrigatório
+- **Auto-pass**: batch aprovado sem rodar o gate → se não rodou, não está aprovado
+- **Small sample**: verificar <9 pages → sem representatividade para detectar problemas sistêmicos
+
+---
+
+## Restrições## Restrições
 
 - **Isolamento obrigatório**: subagente NÃO recebe contexto da sessão do pipeline
 - **Sample ≥9**: mínimo 9 pages (3 random + 3 top + 3 bottom) para representatividade

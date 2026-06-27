@@ -74,7 +74,23 @@ Mudanças em `04-SYSTEM/skills/` podem ser aplicadas autonomamente se escopo for
 - 1 proposta concreta por padrão
 - Nenhuma mudança aplicada sem gate explícito para agents/CLAUDE.md
 
-## Relacionado
+## Completion
+
+- [ ] Histórico de N dias coletado (sessões, errors.md, commits)
+- [ ] 5 categorias analisadas (erros repetidos, desvios de princípio, fricção, gaps de skill, routing)
+- [ ] Máximo 3 padrões identificados com descrição concreta + causa provável + proposta
+- [ ] Propostas para agents/CLAUDE.md: PENDENTE APROVAÇÃO (não auto-aplicado)
+- [ ] Propostas para skills: aplicáveis autonomamente se escopo cirúrgico (1 arquivo, ≤20 linhas)
+
+## Failure modes
+
+- **Pattern inflation**: identificar 5+ padrões → forçar priorização, máximo 3
+- **Vague proposal**: "melhorar X" sem arquivo alvo e mudança específica → proposta deve ter path + seção + texto
+- **Auto-aplicar em agent files**: aplicar mudança em agents/ sem gate → requer confirmação explícita
+
+---
+
+## Relacionado## Relacionado
 
 - [[04-SYSTEM/skills/core/evolve]] — complementar: retrospective = olha N dias para trás; evolve = captura padrões da sessão ATUAL antes que sumam do contexto. Usar evolve ao fim de sessão intensa, retrospective como manutenção periódica.
 - [[04-SYSTEM/skills/reasoning/hill-climb]] — melhoria de agente específico (hill tem escopo, retrospective tem perspectiva temporal)

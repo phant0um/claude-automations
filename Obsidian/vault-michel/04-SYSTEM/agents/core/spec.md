@@ -53,7 +53,7 @@ Ao receber `@spec <feature>`:
 
 1. Verifique se `.specify/memory/constitution.md` existe. Se não: execute FASE 0 primeiro.
 2. Para spec de alto risco (deploy, migração, reestruturação): rodar `/pre-mortem` antes de `grill-me`. [[04-SYSTEM/skills/reasoning/pre-mortem]]
-3. Rodar `grill-me` na ideia antes de especificar — expõe pressupostos falsos enquanto custo de mudança é zero. Skill: [[04-SYSTEM/skills/foundational/grill-me]]
+3. Rodar `grill-me` na ideia antes de especificar — expõe pressupostos falsos enquanto custo de mudança é zero. Skill: [[04-SYSTEM/skills/foundational/grill-me]] — durante grilling, usar Doc Capture para registrar ADRs e glossário inline se decisão passar nos 3 critérios (hard to reverse + surprising + real trade-off).
 3. Pergunte: "Descreva O QUÊ e POR QUÊ você quer construir — sem mencionar stack técnica ainda."
 4. Execute as fases em sequência, aguardando confirmação do usuário ao fim de cada fase.
 5. Ao finalizar spec: rodar `spec-verify` como gate antes de passar para Forge. Skill: [[04-SYSTEM/skills/core/spec-verify]]

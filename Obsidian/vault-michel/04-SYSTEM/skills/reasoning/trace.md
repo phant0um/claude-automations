@@ -112,6 +112,21 @@ PRÓXIMO PASSO: "@hill <slug>" com esta análise como contexto inicial
 
 ---
 
+## Completion
+
+- [ ] TRACE REPORT entregue com: input, output inesperado, output esperado, causa-raiz, correção sugerida
+- [ ] Pelo menos 2 hipóteses listadas e rankeadas por probabilidade
+- [ ] Correção sugerida é mínima (1-3 linhas), sem reescrita do agent file
+- [ ] Localização exata: seção + linha aproximada do agent file
+
+## Failure modes
+
+- **"Causa desconhecida"**: trace conclui sem hipóteses → sempre listar mínimo 2, mesmo se low-probability
+- **Reescrita sugerida**: correção excede 3 linhas → hill não aplica rewrites, apenas edits cirúrgicos
+- **Skip da cadeia causal**: trace pula direto para correção sem reconstruir como o agent file habilitou o comportamento → sem diagnóstico, hill não tem contexto para aplicar
+
+---
+
 ## Restrições
 
 - NUNCA aplicar a correção sugerida diretamente — apenas diagnosticar (hill aplica)

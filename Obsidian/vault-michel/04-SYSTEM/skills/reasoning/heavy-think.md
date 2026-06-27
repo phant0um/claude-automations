@@ -93,7 +93,23 @@ FORMATO: apenas a resposta final + justificativa — sem meta-análise visível 
 
 ---
 
-## Restrições
+## Completion
+
+- [ ] 3 trajetórias independentes geradas (Expert, Beginner, adversarial/edge-case)
+- [ ] Score HMean ≥ 0.7 OU ETAPA 5 executada (max 3 rounds total)
+- [ ] Resposta final sintetizada (trajetórias internas não expostas ao usuário)
+- [ ] Se score < 0.7 após 3 rounds: reportar incerteza, não forçar resposta
+
+## Failure modes
+
+- **Trajectory exposure**: mostrar trajetórias internas ao usuário → apenas síntese final é visível
+- **Max-length bias**: selecionar trajetória mais longa como melhor → Max-Length é a estratégia pior
+- **N=4+ iterations**: executar além de 3 rounds → ganho não compensa custo, noise aumenta
+- **Trivial activation**: usar heavy-think para problema que Nexus resolve em <30s → desperdício
+
+---
+
+## Restrições## Restrições
 - NUNCA exponha as trajetórias internas ao usuário — apenas a síntese final
 - NUNCA selecione a trajetória mais longa como melhor (Max-Length é a estratégia pior)
 - NUNCA execute iteração N=4+ — o ganho não compensa o custo e o noise aumenta

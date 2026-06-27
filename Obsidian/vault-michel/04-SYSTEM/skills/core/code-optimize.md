@@ -114,9 +114,50 @@ Escreva resultado em `docs/logs/quality.md` (append, não overwrite).
 
 ---
 
+## Completion
+
+- [ ] 5 dimensões analisadas (Fluência, Eficiência, Eficácia, Economicidade, Efetividade)
+- [ ] Forge Score calculado (Σ 5 dimensões / 100)
+- [ ] Cada finding cita linha exata + before/after
+- [ ] Verdict emitido: APPROVE / APPROVE WITH NOTES / REFACTOR RECOMMENDED / REFACTOR REQUIRED
+- [ ] Se score <60: arquivo completo refatorado entregue
+- [ ] Resultado appendado em docs/logs/quality.md
+
+## Failure modes
+
+- **Finding sem linha**: citar problema sem número de linha → sempre cite linha exata
+- **Style blocking**: bloquear merge por style quando score ≥75 → style não bloqueia em score alto
+- **Partial refactor**: entregar refactor parcial → se entrega, entrega arquivo completo
+- **Shallow module blindness**: não identificar modules com interface tão complexa quanto implementation → deepening opportunity perdida
+
+---
+
+## Deep Modules (de improve-codebase-architecture)
+
+> **Leading word: deep.** Module com interface simples e implementação rica. O oposto de shallow (interface tão complexa quanto implementation).
+
+### The Deletion Test
+Para suspeito shallow module: "Deletar este module concentraria complexidade, ou só moveria?" Se "concentra" → deepening opportunity. Se "só move" → module é shallow, candidado a merge.
+
+### Friction signals a procurar
+- Entender 1 conceito requer bouncing entre muitos modules pequenos
+- Shallow modules: interface quase tão complexa quanto implementation
+- Pure functions extracted para testability, mas bugs reais vivem em como são chamadas (falta de locality)
+- Modules tightly-coupled leaking across seams
+- Código untested ou hard-to-test via interface atual
+
+### Deepening opportunities
+Transformar shallow → deep:
+1. Combinar modules pequenos em um maior com interface simples
+2. Mover complexidade para trás de interface menor
+3. Reduzir número de seams (pontos de acoplamento) — ideal é 1 seam por feature
+
+> Deep modules melhoram testability e AI-navigability: menos context switches para entender uma feature.
+
+---
+
 ## Regras Invariantes
 
-- NUNCA cite findings sem número de linha
 - NUNCA bloquear merge por style quando score ≥75
 - NUNCA penalizar trade-offs documentados/aprovados (ex: denormalização intencional)
 - NUNCA entregar refactor parcial — se entrega, entrega o arquivo completo
@@ -129,6 +170,17 @@ Escreva resultado em `docs/logs/quality.md` (append, não overwrite).
 - `docs/logs/quality.md` — histórico de scores por arquivo
 - Arquivo refatorado em `workspace/` (quando score <60 ou solicitado)
 - Score report inline na resposta
+
+---
+
+## Self-Improvement
+
+Após cada execução:
+1. Se score <75 em dimensão recorrente (≥2× mesmo arquivo) → flag para `@hill forge` com dimensão persistente
+2. Se refactor introduziu regressão → registrar padrão em `06-GENERATED/tasks/lessons.md`
+3. Lições append: `- YYYY-MM-DD: [code-optimize] <arquivo> score=X/100, dimensão mais fraca=<qual>`
+
+> Ver: [[04-SYSTEM/skills/reasoning/hill-climb]] · [[03-RESOURCES/concepts/pkm-obsidian/autoresearch-loop]]
 
 ---
 

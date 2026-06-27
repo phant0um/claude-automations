@@ -144,7 +144,23 @@ Dimensões críticas: [D* list] → "@hill <slug>"
 
 ---
 
-## Restrições
+## Completion
+
+- [ ] Score por dimensão emitido (não só composto)
+- [ ] Threshold aplicado: WARN < 7, FAIL < 5 por dimensão
+- [ ] Se score D4 (Restrições) < 5: escalado para Sonnet
+- [ ] Se não houver histórico: declarado "análise estática apenas"
+- [ ] Output: score card + dimensões com drift + recomendação para hill/trace
+
+## Failure modes
+
+- **Invented evidence**: emitir score sem histórico → declarar "análise estática apenas"
+- **Composite without per-dimension**: score composto sem score individual → cada dimensão deve ter score
+- **D4 underestimate**: não escalar D4 < 5 → Restrições é crítica, sempre escalar
+
+---
+
+## Restrições## Restrições
 
 - NUNCA inventar evidência — se não houver histórico, declarar "análise estática apenas"
 - NUNCA emitir score composto sem score de cada dimensão
