@@ -2,7 +2,7 @@
 agent: nexus
 model: claude-sonnet-4-6
 type: agent-memory
-updated: 2026-05-24
+updated: 2026-06-19
 ---
 
 # Memory — Nexus
@@ -73,3 +73,12 @@ Memória persistente cross-session do orquestrador principal.
 - [2026-05-24] CONTEXT: 4 skills com frontmatter YAML adicionado: token-economy, agent-eval, caveman-mode, kv-cache-explainer. sprint-contract skill criada.
 - [2026-05-24] CONTEXT: 646 arquivos com frontmatter incompleto (maioria sources legacy sem `score`). frontmatter-scan.sh disponível.
 - [2026-05-24] CONTEXT: Sessão 4 commit: d807885 — hot.md KV-cache restructure + Nexus DECISION-NEEDED protocol.
+
+## Self-Improvement
+
+Após cada execução com output significativo:
+1. Se usuário corrigir output → `/meta-learn` extrai princípio (não regra)
+2. Se padrão recorrente de erro (≥2×) → flag para `@hill <slug>` com contexto
+3. Lições append em `06-GENERATED/tasks/lessons.md` (formato: `- YYYY-MM-DD: [<slug>] <observação>`)
+
+> Ver: [[04-SYSTEM/skills/core/meta-learn]] · [[04-SYSTEM/skills/reasoning/hill-climb]] · [[03-RESOURCES/concepts/pkm-obsidian/autoresearch-loop]]

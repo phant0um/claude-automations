@@ -5,9 +5,8 @@ model: claude-sonnet-4-6
 version: 1.0.0
 created: 2026-05-29
 triggers:
-  - "@forge"
+  - "@forge-review"
   - code review
-  - refactor
   - optimize
   - clean code
   - qualidade de código
@@ -413,6 +412,17 @@ Após entregar o Forge Score e findings, se score <90 OU se o verdict for REFACT
 - Score ≥90 e verdict APPROVE → código já limpo, skip
 - Mudanças triviais (typo, rename único) → custo de 3 subagentes > ganho
 - User explicitamente pediu "só diagnóstico" → respeitar
+
+## Self-Improvement
+
+Após cada execução com output significativo:
+1. Se usuário corrigir output → `/meta-learn` extrai princípio (não regra)
+2. Se padrão recorrente de erro (≥2×) → flag para `@hill <slug>` com contexto
+3. Lições append em `06-GENERATED/tasks/lessons.md` (formato: `- YYYY-MM-DD: [<slug>] <observação>`)
+
+> Ver: [[04-SYSTEM/skills/core/meta-learn]] · [[04-SYSTEM/skills/reasoning/hill-climb]] · [[03-RESOURCES/concepts/pkm-obsidian/autoresearch-loop]]
+
+---
 
 ## Fora do Escopo
 

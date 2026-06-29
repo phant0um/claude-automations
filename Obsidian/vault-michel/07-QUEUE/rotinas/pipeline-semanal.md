@@ -2,8 +2,8 @@
 title: Pipeline Semanal — Triagem → Ingest → Relatório + Meta-padrões
 type: rotina
 schedule: "domingo 22h"
-last_improved: 2026-06-24
-version: 5.2
+last_improved: 2026-06-28
+version: 5.3
 tags: [rotina, pipeline, ingest, triagem, relatório, token-economy, weekly]
 ---
 
@@ -73,11 +73,11 @@ Se duplicata detectada: manter versão mais recente, mover outra para `08-ARCHIV
 
 ```bash
 find .raw/articles/ .raw/fiap/ .raw/ebooks/ .raw/images/ Clippings/ \
-  -maxdepth 2 \( -name "*.md" -o -name "*.pdf" \) 2>/dev/null | sort > /tmp/candidates_all.txt
+  -maxdepth 2 \( -name "*.md" -o -name "*.pdf" \) 2>/dev/null | sort > 06-GENERATED/tasks/candidates_all.txt
 
 # normaliza apóstrofo/aspas curvas → retas — evita falso "novo" por mismatch unicode (bug 2026-06-06).
 norm() { python3 -c "import sys;d=sys.stdin.read();print(d.replace('’',chr(39)).replace('‘',chr(39)).replace('“',chr(34)).replace('”',chr(34)),end='')"; }
-norm < .raw/.manifest.json > /tmp/manifest_norm.json
+norm < .raw/.manifest.json > 06-GENERATED/tasks/manifest_norm.json
 
 # slug normalizado: lowercase, remove tudo exceto alnum, colapsa hífens
 slug() { python3 -c "import sys,re;d=sys.stdin.read().strip();d=re.sub(r'[^a-z0-9]','-',d.lower());d=re.sub(r'-+','-',d).strip('-');print(d,end='')"; }
@@ -88,17 +88,17 @@ while IFS= read -r f; do
   stem="${bn%.*}"
   slug_stem=$(echo "$stem" | slug)
   # checa caminho completo (chave manifest = "Clippings/x.md") E basename solto
-  grep -qF "\"$fn\""       /tmp/manifest_norm.json 2>/dev/null || \
-  grep -qF "/$bn\""        /tmp/manifest_norm.json 2>/dev/null || \
-  grep -qF "\"$bn\""       /tmp/manifest_norm.json 2>/dev/null || \
-  grep -qF "/$stem.md\""   /tmp/manifest_norm.json 2>/dev/null || \
-  grep -qF "\"$stem.md\""  /tmp/manifest_norm.json 2>/dev/null || \
-  grep -qF "/$stem.pdf\""  /tmp/manifest_norm.json 2>/dev/null || \
-  grep -qF "\"$stem.pdf\"" /tmp/manifest_norm.json 2>/dev/null || \
-  grep -qF "$slug_stem"    /tmp/manifest_norm.json 2>/dev/null || echo "$f"
-done < /tmp/candidates_all.txt > /tmp/candidates_new.txt
+  grep -qF "\"$fn\""       06-GENERATED/tasks/manifest_norm.json 2>/dev/null || \
+  grep -qF "/$bn\""        06-GENERATED/tasks/manifest_norm.json 2>/dev/null || \
+  grep -qF "\"$bn\""       06-GENERATED/tasks/manifest_norm.json 2>/dev/null || \
+  grep -qF "/$stem.md\""   06-GENERATED/tasks/manifest_norm.json 2>/dev/null || \
+  grep -qF "\"$stem.md\""  06-GENERATED/tasks/manifest_norm.json 2>/dev/null || \
+  grep -qF "/$stem.pdf\""  06-GENERATED/tasks/manifest_norm.json 2>/dev/null || \
+  grep -qF "\"$stem.pdf\"" 06-GENERATED/tasks/manifest_norm.json 2>/dev/null || \
+  grep -qF "$slug_stem"    06-GENERATED/tasks/manifest_norm.json 2>/dev/null || echo "$f"
+done < 06-GENERATED/tasks/candidates_all.txt > 06-GENERATED/tasks/candidates_new.txt
 
-NEW_COUNT=$(wc -l < /tmp/candidates_new.txt | tr -d ' ')
+NEW_COUNT=$(wc -l < 06-GENERATED/tasks/candidates_new.txt | tr -d ' ')
 echo "Candidatos novos: $NEW_COUNT"
 ```
 
@@ -111,17 +111,33 @@ echo "Candidatos novos: $NEW_COUNT"
 Disparar:
 
 ```
-@triagem-agent — $NEW_COUNT candidatos em /tmp/candidates_new.txt
+@triagem-agent — $NEW_COUNT candidatos em 06-GENERATED/tasks/candidates_new.txt
 ```
 
 Agente: [[04-SYSTEM/agents/nexus-agent-system/triagem-agent]]
 
 Faz: scoring A–D, move C/D para `08-ARCHIVE/[C|D]/`, gera
-`06-GENERATED/triagem/$(date -I)-triagem.md`, gera `/tmp/candidates_aprovados.txt`,
+`06-GENERATED/triagem/$(date -I)-triagem.md`, gera `06-GENERATED/tasks/candidates_aprovados.txt`,
 chama `@ingest-agent`.
 
 **Gate opcional `[Sonnet]`**: se triagem flagar confidence < 0.6 em algum item,
 Nexus revisa só esses itens antes de seguir.
+
+### F1.1 Grade Assignment Verification `[bash, 0 tokens]`
+
+Após triagem, verificar que todos os arquivos aprovados têm `grade:` no frontmatter:
+
+```bash
+# Count approved files without grade
+NO_GRADE=$(grep -rL "^grade:" 03-RESOURCES/sources/ --include="*.md" | wc -l)
+if [[ "$NO_GRADE" -gt 0 ]]; then
+  echo "[F1.1] $NO_GRADE files without grade — running batch_enrich"
+  python3 04-SYSTEM/scripts/batch_enrich.py --assign-grades
+fi
+```
+
+**Princípio**: 67.6% do vault estava sem grade (1685/2491) porque não havia
+verificação pós-triagem. Programático em ~3s. Target: 0 files sem grade após F1.1.
 
 ---
 
@@ -162,6 +178,51 @@ com caveats. Issues críticos (>30% do batch com defeito) → abortar FASE 3, fl
 
 **Diferença de v1**: v1 valida tarefa-a-tarefa durante execução. v2 valida o batch inteiro
 após ingest — detecta problemas sistêmicos que per-file não vê.
+
+### F2.11 Batch Enrichment `[bash]`
+
+Skill: `references/batch-enrichment-pipeline.md` · Script: `scripts/batch_enrich.py`
+
+Após F2.10, roda enrichment programático (zero AI calls) nas source pages criadas:
+
+1. **Grade assignment**: files sem `grade:` → assignar por triagem_score/tags/heurística
+2. **Bold Tese fix**: `**Tese central**:` → `## Tese Central` (heading)
+3. **Tese generation**: files sem Tese Central → gerar do primeiro parágrafo
+4. **Resumo generation**: files sem Resumo → gerar da Tese Central (3 sentences)
+5. **Links generation**: files sem concept/entity wikilinks → tag-to-concept matching
+6. **Orphan resolution**: files com 0 backlinks → connection via tag/entity/category/directory
+
+```bash
+python3 04-SYSTEM/skills/core/scripts/batch_enrich.py --all
+python3 04-SYSTEM/skills/core/scripts/resolve_orphans.py
+```
+
+**Princípio**: structural debt eliminada programaticamente antes do AI spot-check.
+F2.8 Nexus foca em qualidade de conteúdo, não em seções faltando.
+
+**Performance**: ~6s para 2491 files (vs 600s+ para 441 files via subagent).
+
+### F2.9b Subagent Batch-Sizing Guard `[bash, 0 tokens]`
+
+Antes de dispatchar subagents para F2.9 Minha Síntese:
+
+```bash
+# Count Score A files needing Minha Síntese
+NEED_SINTESE=$(grep -rL "## Minha Síntese" 03-RESOURCES/sources/ --include="*.md" | xargs grep -l "grade: A" 2>/dev/null | wc -l)
+
+if [[ "$NEED_SINTESE" -gt 80 ]]; then
+  echo "[F2.9b] $NEED_SINTESE files — split into batches ≤50"
+  # Split and dispatch in waves
+elif [[ "$NEED_SINTESE" -gt 50 ]]; then
+  echo "[F2.9b] $NEED_SINTESE files — 2 subagents of ~25 each"
+else
+  echo "[F2.9b] $NEED_SINTESE files — 1 subagent OK"
+fi
+```
+
+**Validated thresholds**: ≤45 = safe (~310s) · 87+ = timeout (600s) · 147 = timeout (60% done).
+Ver `[[04-SYSTEM/skills/orchestration/references/subagent-batch-sizing]]` para heuristics completas.
+**Post-dispatch**: sempre re-contar placeholders restantes — subagents podem completar silenciosamente.
 
 ### F2.8 Nexus spot-check `[Sonnet]`
 
@@ -271,6 +332,7 @@ humana NÃO marcado; cobrar decisão (adotar/descartar). Evita pilha de candidat
 | F1 | borderline scoring (score 4-6, 1 batch) | Haiku | ~32×N_t |
 | F2 | ingest-agent (source pages + manifest + F2.5 absorption + F2.9 reflection) | Sonnet | 250×N_a + 500×N_f + 100×N_A |
 | F2.10 | adversarial-gate-v2 (batch >20 files, pós-ingest) | Sonnet | ~300 (só se >20) |
+| F2.11 | batch enrichment (grade/tese/resumo/links/orphans) | bash | 0 |
 | F2.8 | Nexus spot-check (3 amostras) | Sonnet | ~150 |
 | F3 | report-agent (clusters + cross-conn + vault impact + F3.4 + F3.4b + F3.6 + F3.5 + F3.7) | Sonnet/Haiku | inclui na verificação |
 | F3.5 | Nexus final review | Sonnet | ~100 |
@@ -281,6 +343,15 @@ onde N_A = número de Score A sources (F2.9 reflection cost). Se batch >20, +~30
 
 **Economia vs v4.4 diário**: 6 runs vazios/semana × ~350 tokens (3 gates Sonnet)
 = ~2.100 tokens/semana economizados em runs que produziam 0 sources.
+
+---
+
+## Self-improvement log `[bash]`
+
+```bash
+mkdir -p 06-GENERATED/tasks
+echo "- $(date -I): [pipeline-semanal] $NEW_COUNT candidatos, $(wc -l < 06-GENERATED/tasks/candidates_new.txt 2>/dev/null || echo 0) aprovados, $VERDICT" >> 06-GENERATED/tasks/lessons.md
+```
 
 ---
 
@@ -346,7 +417,7 @@ onde N_A = número de Score A sources (F2.9 reflection cost). Se batch >20, +~30
   report-agent, não rotina separada). Economia: ~2.100 tokens/semana em runs
   vazios que não happen mais 6x/semana. F1.0/F1.0b dedup+scan movidos para
   [[07-QUEUE/rotinas/daily-scan]] (bash-only, diário 16h) — este pipeline
-  consome `/tmp/candidates_new.txt` acumulado. SRS-sources (diário 09h)
+  consome `06-GENERATED/tasks/candidates_new.txt` acumulado. SRS-sources (diário 09h)
   mantido como rotina complementar independente. Rename: pipeline-diario.md
   → pipeline-semanal.md.weekly-synthesis.md → deletado (absorvido).
 - v4.4 (2026-06-18): 8 melhorias para maximizar extração de conhecimento das

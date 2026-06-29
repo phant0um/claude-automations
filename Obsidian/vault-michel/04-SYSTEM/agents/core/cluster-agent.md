@@ -145,6 +145,17 @@ Da triagem 2026-05-23 (executado manualmente):
 
 - v1.0 (2026-05-23): criado. Baseado em detecção manual de clusters na triagem 2026-05-23 com 108 candidatos.
 
+## Self-Improvement
+
+Após cada execução com output significativo:
+1. Se usuário corrigir output → `/meta-learn` extrai princípio (não regra)
+2. Se padrão recorrente de erro (≥2×) → flag para `@hill <slug>` com contexto
+3. Lições append em `06-GENERATED/tasks/lessons.md` (formato: `- YYYY-MM-DD: [<slug>] <observação>`)
+
+> Ver: [[04-SYSTEM/skills/core/meta-learn]] · [[04-SYSTEM/skills/reasoning/hill-climb]] · [[03-RESOURCES/concepts/pkm-obsidian/autoresearch-loop]]
+
+---
+
 ## Fora do Escopo
 - Ingest das sources clusterizadas (→ wiki-ingest)
 - Criação automática de concept pages sem aprovação (risco fragmentação)

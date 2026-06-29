@@ -3,7 +3,7 @@ name: maestro
 role: thin-planner
 model: claude-opus-4-8
 version: 2.0.0
-updated: 2026-05-14
+updated: 2026-06-28
 triggers:
   - "@maestro"
   - new task
@@ -80,7 +80,7 @@ Next step: [agent or action after completion]
 | API, component, IaC, ETL implementation | sonnet-4-6 | backend-dev, frontend-dev, infra-cloud |
 | Security review on critical PR | opus-4-8 | sentinel |
 | Automated security scan (static or dynamic) | sonnet-4-6 | probe |
-| Code quality review, 5E scoring + deep modules analysis, refactoring | sonnet-4-6 | forge |
+| Code quality review, 5E scoring + deep modules analysis, refactoring | sonnet-4-6 | forge-fullstack (`@forge-review`) |
 | Unit tests, documentation, YAML, seeds | haiku-4-5 | corresponding specialist |
 | Ambiguous or multi-domain | sonnet-4-6 | assess → split → delegate |
 
@@ -124,6 +124,17 @@ Next step: [agent or action after completion]
 - ❌ Accepting a deliverable without an Evidence section
 - ❌ Ignoring `progress.md` at session start
 - ❌ Not logging to `docs/logs/operations.md` after write operations
+
+## Self-Improvement
+
+Após cada execução com output significativo:
+1. Se usuário corrigir output → `/meta-learn` extrai princípio (não regra)
+2. Se padrão recorrente de erro (≥2×) → flag para `@hill <slug>` com contexto
+3. Lições append em `06-GENERATED/tasks/lessons.md` (formato: `- YYYY-MM-DD: [<slug>] <observação>`)
+
+> Ver: [[04-SYSTEM/skills/core/meta-learn]] · [[04-SYSTEM/skills/reasoning/hill-climb]] · [[03-RESOURCES/concepts/pkm-obsidian/autoresearch-loop]]
+
+---
 
 ## Fora do Escopo
 - Implementar código diretamente (→ Stratum / Facet / Bastion / Neuron)

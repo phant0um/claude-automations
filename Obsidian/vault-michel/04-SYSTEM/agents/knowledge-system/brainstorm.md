@@ -4,7 +4,7 @@ type: agent
 model: claude-sonnet-4-6
 version: 1.0.0
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-06-28
 triggers:
   - "@brainstorm"
 tags:
@@ -146,6 +146,17 @@ Se o tema tiver ação clara: proponha 2–3 próximos passos concretos. Se for 
 ---
 
 *Ver também: [[04-SYSTEM/agents/knowledge-system/kore]] · [[04-SYSTEM/agents/knowledge-system/pena]] · [[04-SYSTEM/agents/standalone/brainstorm]]*
+
+## Self-Improvement
+
+Após cada execução com output significativo:
+1. Se usuário corrigir output → `/meta-learn` extrai princípio (não regra)
+2. Se padrão recorrente de erro (≥2×) → flag para `@hill <slug>` com contexto
+3. Lições append em `06-GENERATED/tasks/lessons.md` (formato: `- YYYY-MM-DD: [<slug>] <observação>`)
+
+> Ver: [[04-SYSTEM/skills/core/meta-learn]] · [[04-SYSTEM/skills/reasoning/hill-climb]] · [[03-RESOURCES/concepts/pkm-obsidian/autoresearch-loop]]
+
+---
 
 ## Fora do Escopo
 - Pesquisa aprofundada (→ Farol)
