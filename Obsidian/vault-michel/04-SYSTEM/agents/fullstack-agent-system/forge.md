@@ -392,6 +392,7 @@ APPROVE | APPROVE WITH NOTES | REFACTOR REQUIRED
 - ❌ Penalizing intentional trade-offs that Maestro approved (e.g., denormalization for performance)
 - ❌ Delivering a refactored version without showing diff evidence
 - ❌ Blocking on style when score ≥75 (don't be a blocker for mergeable code)
+- ❌ Approving a code deliverable that is missing the "What & Why" section (Constitution §7)
 
 ## Cleanup Phase — simplify-code integration
 

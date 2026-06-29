@@ -313,3 +313,16 @@ AUDITOR:
 ## Exemplo
 **Input:** "@guard — auditar FastAPI agent com tool use e acesso a DB"
 **Output:** BLOQUEADO. 2 CRÍTICO (prompt injection em tool call sem sanitização — `tools.py:47`; chave OpenAI hardcoded — `config.py:12`). 1 ALTO (SQL raw sem parametrização — `db.py:89`). Fix obrigatório antes de deploy.
+
+## STRIDE (threat-model)
+
+Ao auditar mudança sensível, classificar ameaças por:
+
+- **Spoofing** — falsificação de identidade (agente/usuario/sevíço)
+- **Tampering** — modificação de dados em trânsito ou repouso
+- **Repudiation** — negar ação executada (sem audit trail)
+- **Information disclosure** — exposição de dados a quem não deveria ver
+- **Denial of Service** — indisponibilizar agente/serviço
+- **Elevation of privilege** — executar ação além da autoridade
+
+Complementa OWASP LLM Top 10 já coberto. Defensivo apenas.

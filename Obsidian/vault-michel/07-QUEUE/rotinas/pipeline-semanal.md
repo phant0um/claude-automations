@@ -240,6 +240,25 @@ rastreados em agents/skills/hot.md → commit automático
 Se `@ledger` falhar (hook/conflito): reportar `⚠️ commit pendente — <motivo>` no
 hot.md, não bloquear o resto da rotina.
 
+### F3.3 Squash Guardrail
+
+F3.3 Vault Impact closures devem ser squashadas em 1 commit por ciclo, não commits fragmentados (meta-coaching 2026-06-28: 5 commits em 1 dia para mesmo item = waste pattern recorrente).
+
+---
+
+## Passos extras (wiring skills novas)
+
+### Rodar `repo-radar` sobre repos novos da semana
+
+Rodar skill `repo-radar` sobre repos novos da semana (este loop de análise
+de repos = o caso de uso dela). Liga a T31.
+
+### Cobrar decisões `tooling-eval` pendentes
+
+Listar notas `type: tooling-eval` em `04-SYSTEM/wiki/` com checklist de decisão
+humana NÃO marcado; cobrar decisão (adotar/descartar). Evita pilha de candidatas
+órfãs (cc-switch, OpenBB, cognee, timesfm, gstack, opendraft…).
+
 ---
 
 ## Cost budget

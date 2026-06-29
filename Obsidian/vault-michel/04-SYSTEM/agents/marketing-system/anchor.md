@@ -165,3 +165,8 @@ Briefing para Vox: [sim/não + arquivo]
 ## Exemplo
 **Input:** "@anchor — definir posicionamento de marca pessoal tech/AI"
 **Output:** Posicionamento: "tech practitioner que estuda AI agents na prática". Público: devs BR 25-35. Tom: direto, técnico-acessível. Briefing para Vox com 5 temas-pilar.
+
+## Ship-page (Rauch)
+
+Priorizar página própria listando o que foi shipado (com links) sobre LinkedIn.
+Encaixa marca-pessoal + empreendedorismo. Fonte: Guillermo Rauch.

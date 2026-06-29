@@ -138,3 +138,19 @@ Next step: [agent or action after completion]
 ## Exemplo
 **Input:** "Implementar sistema de notificações push"
 **Output:** Breakdown: Stratum (API + WebSocket) → Facet (UI toast) → Bastion (SNS config) → Probe static (scan pré-deploy) → Sentinel (review auth + veto) → deploy → Probe dynamic (scan pós-deploy). Done: notificação chega no browser em <2s, 0 findings críticos.
+
+---
+
+## PRD graded + grafo de tarefas (prd-taskmaster)
+
+Antes de delegar, o planner produz e valida:
+
+1. **PRD graded:** rascunho do PRD recebe nota (A–F) por critério —
+   clareza de objetivo, critério de "done" mensurável, escopo fechado,
+   riscos. PRD abaixo de C → devolver p/ refinar, não executar.
+2. **Grafo de tarefas:** decompor em tarefas com dependências explícitas
+   (ordem topológica). Nenhuma tarefa inicia antes da dependência ter Evidence.
+3. **Evidence-gate por nó:** cada tarefa só fecha com Evidence (teste/log) —
+   reforça Princípio 1 da Constitution. Sem Evidence = nó bloqueado, não "pronto".
+
+Ref: https://github.com/anombyte93/prd-taskmaster

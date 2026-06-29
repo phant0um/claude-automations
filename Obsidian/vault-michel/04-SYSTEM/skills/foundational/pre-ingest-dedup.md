@@ -379,6 +379,26 @@ found=$(find 03-RESOURCES/sources/ -iname "*${slug}*" -type f 2>/dev/null | head
 
 ### F1.0 Pre-dedup False Positives — Hidden/System Files (2026-06-23 achado)
 
+**Updated 2026-06-28**: Em batch de 810 candidatos (pipeline-semanal 2026-06-28), F1.0
+rodou limpo — 0 duplicatas encontradas. O filtro `! -name ".*" ! -name "*.json"` aplicado
+ao `find` resolveu os falsos positivos de system files. Padrão confirmado como estável.
+
+### Large batch manifest dedup — 2026-06-28 achado
+
+**Sintoma**: 810 candidatos brutos → 774 novos após F1.0b (36 filtrados como já-ingestados).
+Em batch anterior (2026-06-24, 141 candidatos), F1.0b filtrou 15. Taxa de filtragem
+diminui com vault maduro (3867 manifest entries) — maioria de Clippings/ já foi ingerida
+em runs anteriores ou está no manifest por ingest programática.
+
+**Lições**:
+1. A taxa de filtragem do F1.0b é estável (4-10% em batches Clippings/)
+2. File evaporation foi 0 neste run — todos 774 candidatos existiam no momento de
+   processamento (vs runs anteriores com 20-40% evaporação)
+3. `f10b_scan.py` Python script é a forma correta de rodar F1.0b — inline `python3 -c`
+   continua quebrando (ver pitfall v1.5)
+
+**F1.0 Pre-dedup False Positives — Hidden/System Files (2026-06-23 achado)
+
 **Problema:** O F1.0 stem-dedup (`find ... | sed 's/\.[^.]*$//' | sort | uniq -d`)
 detecta falso positivo em arquivos de sistema como `.manifest.json.bak` — o stem
 `.manifest.json` existe tanto em `.raw/` quanto em `Clippings/`, mas são arquivos
@@ -453,6 +473,10 @@ sempre com `echo "NEW_COUNT=$NEW_COUNT"` antes do uso.
 
 ## Changelog## Changelog
 
+- v1.6 (2026-06-28): +Large batch manifest dedup observation — 810 candidatos, 36
+  filtrados (4.4%), file evaporation 0. F1.0 stem-dedup rodou limpo (0 dups) com
+  filtro de hidden/json files aplicado. f10b_scan.py Python script confirmado como
+  forma correta de rodar F1.0b (inline python3 -c continua quebrando no macOS).
 - v1.5 (2026-06-23): + Shell Variable Persistence pitfall — terminal() calls
   não compartilham estado de shell. Variáveis calculadas em uma call (NEW_COUNT)
   chegam vazias na próxima. Recalcular do arquivo ou unir em única call.

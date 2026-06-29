@@ -164,3 +164,18 @@ Condição de revisão: [quando mudar de ideia]
 - [[04-SYSTEM/skills/reasoning/debate]] — 2 perspectivas opostas; council = 5 lentes não-opostas
 - [[04-SYSTEM/skills/reasoning/heavy-think]] — múltiplas trajetórias de solução; council = perspectivas humanas de decisão
 - [[04-SYSTEM/skills/reasoning/pre-mortem]] — analisa riscos de plano já escolhido; council escolhe qual plano adotar
+
+---
+
+## Mecanismos importados (council-of-high-intelligence)
+
+Endurecem a deliberação contra groupthink e perguntas mal-formuladas:
+
+- **Problem-Restate Gate:** antes de qualquer análise, cada perspectiva reformula
+  a pergunta. Se as reformulações divergem, a pergunta É o problema — resolver isso primeiro.
+- **Dissent quota / novelty gate:** se >70% concordam cedo, forçar 2 perspectivas a
+  fazer steelman da posição oposta. Sem dissenso genuíno, sem veredito.
+- **Verdict lidera com incerteza:** veredito abre com "Perguntas Não-Resolvidas" +
+  "Próximos Passos", não com consenso confiante. O que não se sabe importa mais que onde concordam.
+- **Multi-provider (opcional):** membros baratos via Ollama (model-router), síntese via Claude.
+  Reduz custo e diversifica raciocínio. Ref: [[04-SYSTEM/agents/nexus-agent-system/model-router]].

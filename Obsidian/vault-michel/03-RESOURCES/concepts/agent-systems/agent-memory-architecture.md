@@ -236,3 +236,86 @@ Long-Term Memory
 - **[2026-06-21]** Paralelismo e memória persistente são tratados como a segunda fase (não a primeira) na progressão de maturidade de um agente — vem depois da fundação, antes da autonomia plena. — [[15-levels-of-hermes-agent-from-chatbot-to-247-autonomous-system]]
 - **[2026-06-24]** Agent Memory evoluiu de 'guardar chat' para uma arquitetura de 5 camadas: regras (constituição),画像 (常驻), histórico... — [[agent-memory-architecture-panorama]]
 - **[2026-06-24]** Implementando camada de metacognição (reflection/) em Claude Code: decisions-log.md... — [[metacognition-claude-code-reflection]]
+
+---
+
+## Frameworks Complementares (consolidado 2026-06-28)
+
+> Seções abaixo consolidadas de variants duplicados: `agent-memory-four-layers`, `agent-memory-layers`, `agent-memory-bottleneck`, `agent-shared-memory`, `agentic-memory-taxonomy`, `contextual-agentic-memory-is-a-memo`, e `ai-agents/agent-memory-architecture`. Estes agora são stubs apontando para este arquivo.
+
+### 4-Layer User Stack (dunik_7)
+
+Enquanto o framework técnico acima (Layers 1-4: Lista→Markdown→Vector→Graph) é code-level, existe um framing orientado ao usuário Claude:
+
+| Layer | Analogia | Mecanismo |
+|-------|----------|-----------|
+| 1 | Sticky Note | Configuração explícita de identidade/preferências nas memórias do usuário |
+| 2 | Projects | Custom instructions persistentes; **NÃO** persiste histórico de conversas |
+| 3 | CLAUDE.md / memory.md | Arquivo lido no início e atualizado no fim; estruturado (Preferences, Decisions, Workarounds, Mistakes) |
+| 4 | Dream/Consolidation | Cron job que consolida transcrições + memória em novo arquivo limpo |
+
+**Convergência:** Layer 4 = dream cycle do framework técnico. Layer 3 = semantic memory. Filtro central: "isso mudaria o comportamento futuro?"
+
+### 6-Layer Framework (Voxyz)
+
+Mais granular que o 4-layer. Camadas por lifespan + autoridade:
+
+| Camada | Lifespan | Autoridade | Falha Típica |
+|--------|----------|------------|--------------|
+| Hot session | Duração da task | Alta — contexto imediato | Compressão derruba instrução de turn anterior |
+| Day-state | 1 dia | Instrução mais nova vence | Prioridade muda, agente continua tarefa antiga |
+| Project memory | Weeks/meses | Lição atual supera antiga | Nota antiga ainda formata output, user mudou preferência |
+| Retrieval / Index | Persistente, decai | Superfície candidatos — não decide | Vector search retorna plano antigo como atual |
+| Canonical policy | Longo prazo | Alta — "constituição" | Ignorado por instrução de sessão sem traceback |
+| Direct instruction | Task atual | Mais alta para task corrente | Resumo substitui instrução original sem preservar fonte |
+
+**Hierarquia de autoridade (citation order):** direct instruction (rastreável) → canonical policy → project memory → long-term memory com source → retrieval summary → compressed summary. "O usuário pareceu autorizar" derivado de summary **não** conta como autorização.
+
+**3 Jobs da memória confiável:** Remember (por camada) · Cite (por proveniência) · Forget (por expiração: hard expiry / bitemporal / soft decay).
+
+### HBM Bottleneck
+
+HBM (High Bandwidth Memory) é o bottleneck real de performance em workstations agentic — não tokens, não compute. KV cache escala super-linearmente com contexto. Self-hosting de memória persistente é viável com ferramentas open-source.
+
+→ [[03-RESOURCES/entities/Engram]] — continual learning via context scaling
+
+### Shared Memory (Multi-Agent)
+
+Arquitetura em que múltiplos agentes acessam estado de conhecimento compartilhado em vez de skulls isolados. Resolve o "knowledge tax": fragmentação de contexto que faz agentes especializados operarem com visão parcial.
+
+**5 camadas compartilháveis:** user knowledge · project state · decision reasoning · failure memory · current champion.
+
+**Implementações:** AutoScientists (Harvard — shared experimental state, auto-organização sem orquestrador central) · Hermes profile (OpenClaw — profile portátil) · Vault: hot.md = compressed shared state, ~/.claude/memory = user knowledge. Ausência: reasoning log, failure memory sistemática.
+
+**Schema gbrain:** Compiled Truth (topo, reescrito quando conclusão muda) + Timeline (append-only). Memory Candidate card força pergunta "isso muda comportamento futuro?" antes de promover a long-term.
+
+→ [[03-RESOURCES/sources/stop-giving-agents-own-skull]] · [[03-RESOURCES/sources/gbrain-shared-second-brain-hermes-openclaw]]
+
+### Procedural Memory & Memory Contagion
+
+**Procedural memory**: como agentes armazenam e adaptam procedimentos (skills, workflows). Controle = quem escreve, adaptation = como evolui, evaluation = como validar.
+
+**Memory contagion**: bias de um evaluator propaga temporalmente via memória. Se um judge errado entra na memória, sessões futuras herdam o erro. O vault-michel é literalmente um sistema de memória procedural — se um concept errado entra, contamina 222+ source pages via F2.5 absorption.
+
+→ [[03-RESOURCES/sources/02-AREAS/concurso/sources/memory-contagion-cross-temporal-propagation-of-evaluator-bias-via-agent-memory]]
+
+### MEMO Taxonomy
+
+Framework **MEMO** — 4 tipos de memória agêntica:
+
+- **M — Memory (Semântica/Declarativa)**: fatos gerais, conhecimento do domínio, preferências do usuário
+- **E — Episodic**: histórico de interações passadas, eventos contextualizados no tempo
+- **M — Model (Procedimental)**: skills, workflows, planos reutilizáveis (`04-SYSTEM/skills/`)
+- **O — Observation**: percepções do ambiente atual, estado do mundo em tempo real (git status, arquivos modificados)
+
+**hot.md como MEMO estruturado**: contém memória semântica (estrutura do vault), model (convenções e skills), e serve como prefixo estável de cache quente.
+
+### Vault Mapping (consolidado)
+
+| Vault artifact | Memory type (MEMO) | Memory type (TsinghuaC3I) |
+|---------------|---------------------|---------------------------|
+| `hot.md` | Observation + Semantic | Short-Term (TTL implícito) |
+| `03-RESOURCES/sources/` | Semantic | Long-Term Memory |
+| `04-SYSTEM/wiki/errors.md` | Episodic | Experience (outcome-validated) |
+| `.raw/.manifest.json` | Episodic | Episodic (what was processed) |
+| `~/.claude/projects/.../memory/` | Semantic + Personal | Long-Term agent memory |

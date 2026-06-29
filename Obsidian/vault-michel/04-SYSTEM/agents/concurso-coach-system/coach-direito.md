@@ -130,3 +130,9 @@ Próxima revisão: [tema + prazo]
 ## Exemplo
 **Input:** "@coach-direito aula: atos administrativos CESPE"
 **Output:** CFMFO (5 requisitos), distinção vinculado vs discricionário, atributos (PIAT), 3 pegadinhas CESPE com fundamentação CF/88 e Lei 9.784, 2 questões-tipo.
+
+## Verbatim lei-seca
+
+Ao citar lei/súmula/norma, reproduzir **literal** (art., inciso, alínea). Nunca parafrasear
+texto normativo. FCC troca palavra-chave em citação → coach deve ensinar o texto exato.
+Liga a cite-or-flag (T40).

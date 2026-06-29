@@ -248,4 +248,17 @@ Before finalizing report:
 - v2.2 (2026-06-22): Added tese extraction snippet for top clusters — grep `## Tese central` from cluster sources to identify convergence/contradiction without reading every file. Validated with 276 recent sources: theme clustering identified loop-engineering (17 sources) as dominant pattern in seconds.
 - v2.1 (2026-06-22): Backported portability fixes from revisao-semanal v3/v7: `ingested:` frontmatter instead of `mtime -7` (mtime resets on git checkout/sync); `gshuf||shuf||sort -R` fallback (shuf absent on macOS). Added theme clustering shortcut for large recent-source sets. Added missing `description:` frontmatter.
 - v2.0 (2026-05-25): Formalized from archive B draft. Added quality gate, post-ingest trigger, confidence-based wikilink rules.
+## Passo de síntese (extend)
+
+Após surfacing de conexões (steps 1-8), gerar tese cruzada entre domínios
+(consumida por report-agent F3.8/T7). Uma frase-síntese por cluster de conexões
+que cruza ≥2 domínios, grounding via skill `writing/shape` (grounding de conceitos
+antes de usar). A síntese é o exploit da varredura — não duplica o scanner,
+produz o insight acionável que report-agent consome.
+
+> Não duplicar o scanner. connection-finder já varre cross-domain; só add o exploit
+> de síntese.
+
+---
+
 - v1.0 (2026-05-09): Created. Inspired by CyrilXBT + DamiDefi.

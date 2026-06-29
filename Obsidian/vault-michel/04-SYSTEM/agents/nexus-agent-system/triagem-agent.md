@@ -2,7 +2,7 @@
 name: triagem-agent
 role: vault-triagem
 model: claude-haiku-4-5
-version: 1.2.0
+version: 1.3.0
 created: 2026-06-09
 triggers:
   - "@triagem-agent"
@@ -76,6 +76,23 @@ Gera relatório de triagem com aprovados, rejeitados e sugestões de melhoria no
 | Originalidade (não cobre o mesmo que já existe no vault) | 3 |
 | Relevância (ai-agents, fiap, concurso, dev) | 2 |
 | Densidade informacional (útil vs boilerplate/ads) | 2 |
+
+### Domain tagging (context-scoping)
+
+Para cada aprovado, atribuir 1 domínio por keyword match (default `geral`):
+
+| Domínio | Keywords |
+|---------|----------|
+| `finance` | investimento, finanças, ações, renda, juros, FII, valuation |
+| `evolucao` | hábito, produtividade, disciplina, foco, mindset |
+| `empreend` | startup, negócio, produto, mercado, MVP, founder |
+| `ai-agents` | agent, LLM, RAG, MCP, prompt, claude, ollama |
+| `fiap` | java, MVC, fase, apostila, fintech |
+| `concurso` | lógica, português, redação, edital |
+| `geral` | (default — nenhum match) |
+
+Append `|<DOMINIO>` ao final de cada linha em `/tmp/candidates_aprovados.txt`:
+`<path>|<DOMINIO>`. Bash decide por grep no conteúdo já lido em `/tmp/triagem_<bn>`.
 
 ## Comandos de Execução
 
@@ -161,6 +178,7 @@ created: YYYY-MM-DD
 candidatos: N
 aprovados: A
 rejeitados: R
+dominios: {finance: N, evolucao: N, empreend: N, ai-agents: N, fiap: N, concurso: N, geral: N}
 generated_by: triagem-agent
 ---
 

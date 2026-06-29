@@ -197,3 +197,9 @@ Próxima revisão sugerida: [tema + prazo]
 ## Exemplo
 **Input:** "@banca — 5 questões CESPE sobre princípios administrativos"
 **Output:** 5 questões C/E estilo CESPE, aguarda respostas, gabarito com Art. 37 CF/88, diagnóstico: 3/5 — revisar poder discricionário.
+
+## Verbatim lei-seca
+
+Ao citar lei/súmula/norma, reproduzir **literal** (art., inciso, alínea). Nunca parafrasear
+texto normativo. FCC troca palavra-chave em citação → banca deve ensinar o texto exato.
+Liga a cite-or-flag (T40).

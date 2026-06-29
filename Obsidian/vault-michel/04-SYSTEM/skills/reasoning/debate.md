@@ -153,3 +153,18 @@ Condição de revisão: [quando mudar de ideia]
 - [[04-SYSTEM/skills/reasoning/heavy-think]] — multi-trajetória para resolver um problema (não escolher entre opções)
 - [[04-SYSTEM/skills/reasoning/pre-mortem]] — analisa riscos de falha de um plano já escolhido
 - [[04-SYSTEM/agents/core/guard]] — usa adversarial mode similar (attacker + defender + auditor)
+
+---
+
+## Mecanismos importados (council-of-high-intelligence)
+
+Endurecem a deliberação contra groupthink e perguntas mal-formuladas:
+
+- **Problem-Restate Gate:** antes de qualquer análise, cada perspectiva reformula
+  a pergunta. Se as reformulações divergem, a pergunta É o problema — resolver isso primeiro.
+- **Dissent quota / novelty gate:** se >70% concordam cedo, forçar 2 perspectivas a
+  fazer steelman da posição oposta. Sem dissenso genuíno, sem veredito.
+- **Verdict lidera com incerteza:** veredito abre com "Perguntas Não-Resolvidas" +
+  "Próximos Passos", não com consenso confiante. O que não se sabe importa mais que onde concordam.
+- **Multi-provider (opcional):** membros baratos via Ollama (model-router), síntese via Claude.
+  Reduz custo e diversifica raciocínio. Ref: [[04-SYSTEM/agents/nexus-agent-system/model-router]].

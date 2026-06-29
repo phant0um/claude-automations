@@ -72,3 +72,26 @@ criar ou descartar.| 2026-06-23 | Concept: agent-runtime-security | pendente | 2
 | 2026-06-23 | Concept: loop-engineering-maturity | pendente | 2h | [[2026-06-23-relatorio-semanal-run2]] |
 | 2026-06-23 | Concept: speculative-decoding-patterns | pendente | 2h | [[2026-06-23-relatorio-semanal-run2]] |
 | 2026-06-23 | Concept: llm-as-judge-audit | pendente | 1h | [[2026-06-23-relatorio-semanal-run2]] |
+
+## 2026-06-28 — F3.3 Vault Impact (concluído)
+
+| Data | Tipo | Nome | Status | Esforço | Fonte |
+|------|------|------|--------|---------|-------|
+| 2026-06-28 | Concept | `loop-engineering` (formalizar como 4-layer stack) — [[03-RESOURCES/concepts/agent-systems/agent-loops]] atualizado | done | 2h | [[03-RESOURCES/sources/ai-agents/loop-engineering-ieee-field-study]] |
+| 2026-06-28 | Concept | `progressive-disclosure` (como princípio de context) — [[03-RESOURCES/concepts/agent-systems/progressive-disclosure]] criado | done | 1h | [[03-RESOURCES/sources/ai-agents/harnesses-everything-optimize-yours]] |
+| 2026-06-28 | Concept | `generator-evaluator-split` (adversarial pattern) — [[03-RESOURCES/concepts/agent-systems/generator-evaluator-split]] criado | done | 1h | [[03-RESOURCES/sources/ai-agents/loop-engineering-ieee-field-study]] |
+| 2026-06-28 | Skill | `evaporation-reconcile` (manifest reconciliation para 51 files evaporadas) — [[04-SYSTEM/skills/core/evaporation-reconcile]] criado | done | 2h | triagem |
+| 2026-06-28 | Hook | `context-budget-alert` (alerta quando CLAUDE.md > 40% window) — [[04-SYSTEM/wiki/hooks-candidate-context-budget]] criado | done | 3h | [[03-RESOURCES/sources/ai-agents/prompt-engineering-dead-context-engineering]] |
+
+## 2026-06-28 — Consolidation Backlog (pending)
+- [ ] [pendente] **Agent Harness** — Consolidate Agent Harness insights — 26 new sources this batch
+- [ ] [pendente] **Code Review** — Consolidate Code Review insights — 151 new sources this batch
+- [ ] [pendente] **Agent Memory** — Consolidate Agent Memory insights — 72 new sources this batch
+- [ ] [pendente] **Loop Engineering** — Consolidate Loop Engineering insights — 39 new sources this batch
+- [ ] [pendente] **Evaluation** — Consolidate Evaluation insights — 27 new sources this batch
+- [ ] [pendente] **Claude Code** — Consolidate Claude Code insights — 69 new sources this batch
+- [ ] [pendente] **Reinforcement Learning** — Consolidate Reinforcement Learning insights — 24 new sources this batch
+- [ ] [pendente] **LLM Theory** — Consolidate LLM Theory insights — 42 new sources this batch
+- [ ] [pendente] **Security** — Consolidate Security insights — 13 new sources this batch
+- [ ] [pendente] **Fine-tuning** — Consolidate Fine-tuning insights — 34 new sources this batch
+- [ ] [pendente] **Trading/Quant** — Consolidate Trading/Quant insights — 10 new sources this batch

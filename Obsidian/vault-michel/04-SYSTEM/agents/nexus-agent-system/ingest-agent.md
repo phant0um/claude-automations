@@ -79,6 +79,8 @@ após ingest completo.
      (o que muda, conexão pessoal, próximo passo) são obrigatórios.
    - **F2.10 SRS register** (só Score A): popular linha no tracker do
      [[07-QUEUE/rotinas/srs-sources]]. Ver [[#F2.10 SRS register]] abaixo.
+   - **F2.11 Explainer visual** (fontes densas: paper/FIAP/>6000 palavras):
+     embutir diagrama Mermaid na source page. Ver [[#F2.11 Explainer visual]] abaixo.
    - Se faltar entity relacionada:
      - `fiap` → `02-AREAS/fiap/entities/<nome>.md`
      - `concurso` → `02-AREAS/concurso/entities/<nome>.md`
@@ -311,6 +313,42 @@ grep -qF "| $SLUG |" "$TRACKER" || \
 ```
 
 **Guardrail**: só Score A (Score B não entra — densidade não justifica revisita). Append-only.
+
+---
+
+## F2.11 Explainer visual (fontes densas)
+
+**Princípio**: papers e apostilas são densos — um diagrama da estrutura conceitual
+acelera revisão e fixa a relação entre conceitos (insight McAteer: explainer visual
+antes do entendimento próprio).
+
+### Quando ativar
+- Source é paper acadêmico, apostila FIAP (`type: study-material`), OU >6000 palavras
+  com densidade técnica alta.
+- Fontes curtas/simples → NÃO disparar (zero custo extra).
+
+### Fluxo
+1. Após criar a source page, gerar um bloco Mermaid (`flowchart TD` ou `mindmap`)
+   resumindo a estrutura conceitual da fonte (conceitos-chave + relações).
+2. Embutir o bloco na source page sob nova seção `## Explainer`.
+3. Opcional: se a skill `json-canvas` estiver disponível, criar
+   `06-GENERATED/explainers/<slug>.canvas` ligando os conceitos principais.
+
+### Template (seção na source page)
+```markdown
+## Explainer
+
+```mermaid
+flowchart TD
+  A[Conceito central] --> B[Sub-conceito 1]
+  A --> C[Sub-conceito 2]
+```
+```
+
+### Regra
+- **Mermaid inline preferido** sobre canvas — mais barato, versionável em markdown.
+- **Sem custo para fontes simples** — gatilho restrito a fontes densas.
+- **Append** — adiciona seção, não reescreve a source page.
 
 ---
 

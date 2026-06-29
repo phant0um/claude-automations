@@ -165,3 +165,8 @@ Após cada execução com output significativo:
 ## Exemplo
 **Input:** "organizar dados de contratos ativos da chefia em tabela"
 **Output:** Schema: 8 colunas (nº contrato, objeto, vigência, valor, fiscal, status, aditamentos, vencimento). Dados estruturados. Observações: 2 contratos sem fiscal designado.
+
+## PII guard
+
+Dados institucionais com pessoa física → não expor CPF/nome em relatório sem
+necessidade; mascarar. Defensivo. Liga a STRIDE (T38c — Information disclosure).

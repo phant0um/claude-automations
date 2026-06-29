@@ -149,3 +149,9 @@ Objetivo: avaliação de oportunidade de entrada
 ## Exemplo
 **Input:** "@nexo — quero analisar WEGE3 e entender se é hora de entrar"
 **Output:** Briefing: WEGE3 / B3 / avaliação de entrada. Roteando para Valor (análise fundamentalista) com contexto de Macro (cenário industrial BR).
+
+## Provenance
+
+Todo número (preço, Selic, DARF, múltiplo, data de balanço) cita fonte + data.
+Sem isso → `[não-verificado]`. Complementa Desafiante (que ataca premissa, não exige
+proveniência). Liga a cite-or-flag (T40).

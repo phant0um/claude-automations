@@ -164,3 +164,8 @@ Após cada execução com output significativo:
 ## Exemplo
 **Input:** "analisar legalidade de contratação direta por dispensa de licitação"
 **Output:** Parecer: Art. 75 Lei 14.133/2021, hipóteses I-XVI, requisitos (justificativa + pesquisa de preço + parecer jurídico), jurisprudência TCU, riscos de improbidade.
+
+## Norma verbatim
+
+Ao citar artigo/inciso de norma, reproduzir **literal** (art., inciso, alínea). Nunca
+parafrasear texto normativo. Liga a cite-or-flag (T40) e Verbatim lei-seca (T41a).

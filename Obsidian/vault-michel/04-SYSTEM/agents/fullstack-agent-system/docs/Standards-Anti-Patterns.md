@@ -1,6 +1,6 @@
 ---
 title: "standards-anti-patterns"
-version: 2.1.0
+version: 2.2.0
 updated: 2026-05-30
 ---
 
@@ -15,6 +15,9 @@ Every specialist deliverable must have three sections:
 ```markdown
 ## Deliverable
 [Complete code, config, or artifact]
+
+## What & Why
+[Each logical block → one-line reason. Non-obvious decisions explained.]
 
 ## Evidence
 [Passing tests, scan output, execution log, metrics]
@@ -49,9 +52,15 @@ Always: environment variables, AWS Secrets Manager, HashiCorp Vault, SOPS.
 - Structured JSON logs with appropriate level
 - Parameterized queries — no SQL string concatenation
 - Migrations with `up()` and `down()`
+- OpenAPI/Swagger spec generated for every API
+- Runnable Postman/Insomnia collection in repo
+- Pre-request script injecting auth token on EVERY collection route
+- README with build + run-mock script
 
 ### Anti-patterns
 - `console.log` in production
+- Collection route without auth pre-request script (consumer hits 401, blames API)
+- Endpoint shipped without OpenAPI entry or example request
 - `any` in TypeScript without justification
 - Hardcoded IPs, secrets, connection strings
 - Unaddressed N+1

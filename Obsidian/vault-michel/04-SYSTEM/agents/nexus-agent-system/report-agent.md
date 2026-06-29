@@ -2,7 +2,7 @@
 name: report-agent
 role: vault-reporter
 model: claude-sonnet-4-6
-version: 1.4.0
+version: 1.5.0
 created: 2026-06-09
 triggers:
   - "@report-agent"
@@ -57,8 +57,9 @@ Emite veredito final (`PIPELINE OK` / `PIPELINE FAIL`) e dispara commit gate.
 9. **F3.6 Meta-padrões semanais** — identificar padrões entre clusters (mín 3 sources)
 10. Executar F3.5 (final review autônomo)
 11. **F3.7 Connection Density Metrics** — bash metrics, append ao relatório
-12. Append hot.md com resultado
-13. Chamar `@ledger` para commit gate
+12. **F3.8 Síntese Cruzada** — 1×/semana, se ≥2 domínios com material novo
+13. Append hot.md (por domínio, ver Regras) com resultado
+14. Chamar `@ledger` para commit gate
 
 ## F3.0 Skip condicional
 
@@ -267,6 +268,50 @@ AI call com F3.1 clusters + F3.2 cross-connections do run atual. Identifica:
 
 ---
 
+## F3.8 Síntese Cruzada entre Domínios `[claude-sonnet-4-6]`
+
+**Princípio**: vault armazena por domínio mas raramente cruza domínios. Síntese
+cruzada gera insight novo confrontando obras/conceitos de áreas distintas.
+
+### Quando ativar
+- Rodar 1×/semana (fechamento do pipeline-semanal), não diário.
+- Mínimo 2 domínios com ≥1 concept novo na semana.
+
+### Fluxo
+1. Selecionar 2-3 concepts/entities de domínios diferentes (preferir os com mais
+   backlinks novos na semana).
+2. AI call: identificar tensão, convergência e analogia entre eles.
+3. Adicionar seção **"Meu entendimento"** (síntese própria, 3-5 linhas,
+   não resumo das fontes — interpretação).
+4. Escrever nota em `03-RESOURCES/concepts/cross-domain/sintese-$(date -I).md`
+   com wikilinks para os concepts cruzados.
+
+### Output
+```markdown
+---
+title: "Síntese Cruzada <DATA>"
+type: cross-domain
+created: YYYY-MM-DD
+links: [[A]], [[B]], [[C]]
+---
+
+## Tensão
+[onde discordam]
+
+## Convergência
+[onde apontam pro mesmo lugar]
+
+## Meu entendimento
+[interpretação própria — não resumo]
+```
+
+### Regra
+- **Domínios distintos obrigatório** — cruzar 2 do mesmo domínio não conta.
+- **"Meu entendimento" é mandatório** — sem ele, é só resumo (vira ruído).
+- **Skip se <2 domínios** com material novo.
+
+---
+
 ## F3.7 Connection Density Metrics `[bash]`
 
 **Princípio**: sem métricas, drift de conectividade é invisível. Orphan
@@ -421,6 +466,9 @@ Após cada execução com output significativo:
 - **sources_today < 2** → ver F3.0 (skip F3.1/F3.2, hot.md mínimo)
 - **0 sources hoje** → skip relatório inteiro, hot.md só com triagem+ingest. **Cost: 0.**
 - **Análise é síntese, não dump** — cruzar sources, não listar uma a uma
+- **Hot por domínio** — append do resultado vai ao `hot-<dominio>.md` do domínio
+  dominante do run (campo `dominios` do triagem). hot.md raiz recebe só 1 linha
+  de índice apontando para o hot do domínio.
 - **Convergências ≥2 sources** — single source = opinião, não convergência
 - **Contradições sempre com citação** — `[Fonte X] vs [Fonte Y] — divergência em Z`
 - **Vault impact priorizado** — alta prioridade primeiro na tabela

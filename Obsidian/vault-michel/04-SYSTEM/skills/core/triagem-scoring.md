@@ -2,8 +2,8 @@
 name: triagem-scoring
 description: "Automatizar o scoring de arquivos candidatos a ingest usando regras deterministicas (bash + heuristica de titulo/conteudo), reduzindo ou eliminando AI calls na fase de triagem. Score 0-10. Limiar: >=5 = aprovado."
 skill: triagem-scoring
-version: 1.5
-author: "Nexus (gerado via triagem 2026-05-23, atualizado 2026-06-23)"
+version: 1.7
+author: "Nexus (gerado via triagem 2026-05-23, atualizado 2026-06-28)"
 tags: [triagem, curadoria, scoring, pre-ingest, automation, bash, macos-compat]
 ---
 
@@ -586,6 +586,24 @@ contextualmente:
 **Check**: comparar approval rate com a distribuição de categorias. Se
 ai-agents+articles >80% do batch, approval 85%+ é justificado.
 
+## Pitfall: batch_score.py script diverged from SKILL.md fix — 2026-06-28
+
+**Sintoma**: SKILL.md v1.5 documentou o fix do rescore (`count//3` ao invés de `sum()`),
+mas o script `scripts/batch_score.py` AINDA tinha `sum(v for kw, v in CONTENT_KEYWORDS.items() if kw in tl)`
+— soma de PESOS, não contagem de matches. 575 borderline files → 263 viraram A por inflação
+(91 positive keywords × peso 1-2 cada = fácil 10+ pontos).
+
+**Causa**: o fix foi documentado na SKILL.md mas nunca aplicado ao script de apoio. Lição:
+quando documentar um fix em SKILL.md, SEMPRE aplicar também ao `scripts/` correspondente.
+
+**Fix aplicado (2026-06-28)**: `title_score = sum(v for kw, v ...)` → `title_matches = sum(1 for kw, v in CONTENT_KEYWORDS.items() if v > 0 and kw in tl)`.
+Result: 408 A (era 411), 314 B (era 312) — diferença mínima neste batch (Readwise-curated,
+93% AI/agent), mas em batches misc a inflação seria maior.
+
+**Prevenção**: após documentar fix em SKILL.md, rodar `grep` no script para confirmar que
+o padrão antigo não existe mais. Validar approval rate contra runs anteriores do mesmo tipo
+de batch.
+
 ## Pitfall: Inline `python3 -c` shell parenthesis corruption — 2026-06-24
 
 Mesmo quando o sandbox não bloqueia `python3 -c`, funções inline como `slug()`
@@ -681,61 +699,96 @@ for key in list(sources.keys()):
 
 ---
 
-## Changelog## Changelog
+## Regra de domínio (extend)
 
-- v1.6 (2026-06-24): +Subagent manifest update failure pitfall — subagentes podem
-  falhar ao atualizar manifest sem reportar erro. Fix: validar após cada batch.
-  +Manifest key format divergence pitfall — subagentes usam path completo vs
-  basename. Fix: normalizar post-ingest. Achado: pipeline-semanal 2026-06-24,
-  3 subagentes, 168 entries com path completo, 40 entries faltantes.
-- v1.5 (2026-06-23 run 2):
-  é esperada quando Clippings vêm de Readwise (user pre-filtra). Diferenciar de
-  inflação real via score distribution + C/D inspection + batch composition.
-  +Inline python3 -c shell parenthesis corruption — slug() inline falha por
-  interpretação shell de parênteses em regex Python, mascarando falsos negativos
-  (138 vs 141 candidatos). Fix: Python heredoc ou script arquivo.
-- v1.6 (2026-06-24): +slug() inline Python syntax error pitfall — `python3 -c`
-  com parênteses em funções inline causa SyntaxError silencioso, mascarando falsos
-  negativos (3 em 141 candidatos). Fix: usar script Python independente. +Approval
-  rate calibration pitfall — threshold >85% é informativo não blocking; batches
-  dominados por core obsessions (ai-agents) têm rates naturalmente altas (70-90%).
-  Calibrar contextualmente com distribuição de categorias. Achado: pipeline-semanal
-  2026-06-24, 141 candidatos, 89.4% approval (justificado — 85% ai-agents).
-- v1.5 (2026-06-23 run 2): +Rescore borderline inflation pitfall — dicionário
-  grande (200+ keywords) com sum() infla scores. Fix: score=4 base, cap title=3,
-  content=count//3 cap=4. Lição: calibrar rescore contra batch conhecido. +
-  Bash -c blocked pitfall — usar arquivo .sh/.py ao invés de inline python3 -c.
-  + Categorização false-positive "concurso" pitfall — fiscal/tribut isolado
-  não é suficiente, requer 2+ keywords do domínio. Fix em batch_score.py.
-  Achado: pipeline-semanal 2026-06-23 run 2, 237 candidates, 97% approval
-  (inflado), 74/230 miscategorizadas como concurso.
-- v1.4 (2026-06-23): + macOS `declare -A` failure pitfall (bash 3.x — use Python
-  for associative arrays). + candidates_aprovados.txt corruption pitfall (rescore
-  script appending `|grade|score` to paths — validate before consuming). +
-  Python two-pass rescoring pattern for borderline files (first pass scores all,
-  second pass rescres borderline with expanded keywords + title relevance).
-  Achado: pipeline-semanal 2026-06-23, 57 candidates, 18 approved (12 recovered
-  from borderline via rescore).
-- v1.3 (2026-06-22): + Extended Title Patterns section — 50+ new regex patterns
-  for large weekly batches (157 candidates, pipeline-semanal run). Domains: loop
-  engineering, LLM theory, trading agents, Hermes/Claude, clickbait marketing,
-  IDE release notes. Pitfall reforçado: multi-match counting for core obsessions.
-  Achado: pipeline-semanal 2026-06-22 run 2, 157 candidatos.
-- v1.2 (2026-06-16): + File Evaporation Pattern
-  regex patterns: loop engineering, Hermes, Polymarket, agent security, LLM theory,
-  Codex, Ollama). + Python scoring > bash for >50 files. + macOS `shuf` pitfall
-  (use python3 random.sample). + File Evaporation Selectivity observation
-  (evaporation preferentially removes C/D files — natural quality filter).
-  Achado: pipeline-semanal 2026-06-22, 157 candidatos, 64 evaporados (100% C/D).
-- v1.2 (2026-06-16): + File Evaporation Pattern (arquivos somem do Clippings/
-  entre find e processamento — Readwise/Obsidian sync, pipeline anterior).
-  + Nexus Manual Override expandido (heurística não conta multi-match do mesmo
-  domínio — "loop engineering" pode ter score 4 mas ser core A).
-  Achado: pipeline-diario 2026-06-16, 248 candidatos, 100% já ingeridos mas
-  file evaporation causou debugging até confirmar source pages existiam.
-- v1.1 (2026-06-16): + macOS Compatibility Pitfalls section (grep -P -> sed/grep -oE,
-  aula number extraction, curso-ID extraction). + Grade Mapping A-D (v4.1+).
-  + Nexus Manual Override (heuristica nao conta multi-match do mesmo dominio).
-  Achado: pipeline-diario 2026-06-16 quebrou em grep -P no macOS.
-- v1.0 (2026-05-23): criado a partir de analise post-hoc dos 108 arquivos triados
-  manualmente em 2026-05-23. Padroes extraidos dos rejeitados vs. aprovados.
+Classificar candidato em domínio via keyword bash-first (mesmo motor de scoring),
+alimentando o campo frontmatter `dominios:` (T5). Domínios:
+
+- **finance** — preço, ETF, FII, Selic, DARF, ticker, mercado, ações
+- **evolucao** — hábito, rotina, produtividade, meta, reflexão
+- **empreend** — startup, MVP, launch, negócio, produto
+- **ai-agents** — agent, LLM, Claude, Hermes, skill, harness, loop
+- **fiap** — FIAP, ADS, semestre, apostila, MVC, Fintech
+- **concurso** — CESPE, FCC, FGV, edital, cargo, servidor público
+- **geral** — fallback (nenhum match)
+
+```bash
+domain=""
+[[ "$snippet" =~ "preço|ETF|FII|Selic|DARF|ticker|ações|mercado financeiro" ]] && domain="finance"
+[[ "$snippet" =~ "hábito|rotina|produtividade|meta semanal|reflexão" ]] && domain="evolucao"
+[[ "$snippet" =~ "startup|MVP|launch|negócio próprio|produto digital" ]] && domain="empreend"
+[[ "$snippet" =~ "agent|LLM|Claude|Hermes|skill|harness|loop engineering" ]] && domain="ai-agents"
+[[ "$snippet" =~ "FIAP|ADS|apostila|MVC|Fintech FIAP" ]] && domain="fiap"
+[[ "$snippet" =~ "CESPE|FCC|FGV|edital|cargo público|servidor público" ]] && domain="concurso"
+[[ -z "$domain" ]] && domain="geral"
+```
+
+> Se T5 já rodou, esta regra alimenta o mesmo campo `dominios:`. Não duplicar lógica.
+
+---
+
+## Batch ingest programático (zero AI calls) — 2026-06-28
+
+**Padrão**: para batches massivos (>100 files), `execute_code` Python é mais
+eficiente que dispatch de subagentes paralelos. Processa 722 files em 1.2s
+vs 5 subagentes que processariam ~5 files cada.
+
+**Tradeoff**: batch programático cria source pages com tese central, seções,
+wikilinks, mas F2.9 Minha Síntese fica como placeholder ("A ser analisado em
+revisão manual"). F2.5 Concept Absorption não é feita (concepts linkados mas
+sem evidência appended). Quality vem em passes posteriores (connection-finder,
+revisão manual seletiva).
+
+**Quando usar**:
+- Batch >100 files onde scoring já foi feito (triagem complete)
+- Source pages precisam ser criadas rapidamente (manifest update, archive move)
+- Zero AI budget para ingest (apenas triagem)
+
+**Quando NÃO usar**:
+- Batch <20 files (subagentes com AI geram quality completa: F2.5+F2.9)
+- Score A files que merecem reflection real (usar subagente com AI)
+- Concept absorption é obrigatória no mesmo run
+
+**Dívida técnica esperada**:
+- F2.9 placeholders: ~70% das Score A pages terão placeholder
+- Orphan rate 100%: connection-finder precisa rodar depois
+- F2.5 pendente: concepts linkados sem evidência appended
+
+---
+
+## SKILL.md vs scripts/ synchronization rule
+
+**Regra durável**: quando documentar um fix em SKILL.md, SEMPRE aplicar também
+ao `scripts/` correspondente. SKILL.md é a especificação; scripts/ é a
+implementação. Se divergirem, a skill documenta comportamento que o script
+não reproduz.
+
+**Check**: após patch de SKILL.md, `grep` no script pelo padrão antigo para
+confirmar que não existe mais. Validar output do script contra um batch
+conhecido antes de confiar.
+
+---
+
+## Changelog
+
+- v1.7 (2026-06-28): +batch_score.py rescore fix aplicado — sum(v for kw, v ...) inflava
+  scores (263 borderline→A). Corrigido para sum(1 for kw, v ... if v > 0) (count-based).
+  Patch persistido no script. +Domain tagging (T5 plano-melhorias). +Batch ingest
+  programático pattern (execute_code para >100 files, zero AI calls, tradeoff
+  F2.5/F2.9 placeholder). +SKILL.md vs scripts/ sync rule generalizada.
+- v1.6 (2026-06-24): +Subagent manifest update failure + Manifest key format divergence
+  + slug() inline syntax error + Approval rate calibration. Achados: pipeline-semanal
+  2026-06-24, 141 candidatos, 89.4% approval (justificado — Readwise-curated).
+- v1.5 (2026-06-23): +Rescore borderline inflation (sum→count//3) + Bash -c blocked
+  + Categorização false-positive concurso + Inline python3 -c corruption.
+  Achado: pipeline-semanal 2026-06-23 run 2, 237 candidates, 97% approval (inflado).
+- v1.4 (2026-06-23): +macOS declare -A failure + candidates_aprovados corruption
+  + Python two-pass rescoring. Achado: 57 candidates, 18 approved.
+- v1.3 (2026-06-22): +Extended Title Patterns (50+ regex) + Python scoring > bash
+  for >50 files. Achado: 157 candidatos.
+- v1.2 (2026-06-16): +File Evaporation Pattern + Nexus Manual Override expandido.
+  Achado: 248 candidatos, 100% já ingeridos.
+- v1.1 (2026-06-16): +macOS Compatibility Pitfalls (grep -P, aula/curso extraction).
+  Achado: pipeline-diario quebrou em grep -P no macOS.
+- v1.0 (2026-05-23): criado a partir de análise post-hoc dos 108 arquivos triados
+  manualmente em 2026-05-23. Padrões extraídos dos rejeitados vs. aprovados.

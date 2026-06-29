@@ -403,6 +403,7 @@ Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline
 ✓ Queue: 0 tarefas processadas | Alta: 0 | Média: 0 | Baixa: 0 | Erros: 0 | Nexus: aprovado (queue vazia)
 → [[06-GENERATED/queue/2026-06-24-process-queue-0]]
 - 2026-06-24: Nova rotina skill-audit (mensal, 1ª segunda) — skill health (Pocock criteria) + agent behavioral drift (score-drift + vault-probe) + Pocock coverage check. 15→16 rotinas ativas.
+- ⚠️ **CORREÇÃO 2026-06-28:** Contagem real = **15 rotinas** (`ls 07-QUEUE/rotinas/*.md | wc -l = 15`). A entrada acima cita "15→16" mas skill-audit nunca foi criada como arquivo em `07-QUEUE/rotinas/` — drift recorrente detectado em revisão-semanal 2026-06-27 e 2026-06-28. Contagem canônica: **15**.
 - 2026-06-24: 5 integrações de skills externas — forge Query Review (8 categorias Supabase, on-demand), skill SDD (subagent-driven development, meio termo ralph-loop↔subagent-team), guard Agentic AI Top 10 (10 vetores agentic), requesting-code-review receiving section, plan eval data (Global Constraints 0/5→5/5, Interfaces 0→100%, right-sizing 9.4→8.4)
 - ⚠️ daily-scan: 681 candidatos ≥ threshold (30) — considerar rodar pipeline-semanal — 2026-06-27
 
@@ -433,3 +434,24 @@ Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline
 **F2.5:** 2 concepts absorvidos (harness-engineering + agent-loop-design)
 **F2.9:** 1 reflection (self-improving-company-brain)
 → [[06-GENERATED/ingest-report/ingest-diario-2026-06-28]]
+
+## 2026-06-28 — pipeline-semanal
+**Batch**: 774 candidatos → 722 aprovados → 722 source pages
+**Clusters**: ai-agents (333), memory-context-rag (196), llm-theory (56), claude-code-skills (42)
+**Quality**: F2.10 OK, F2.8 3/3 spot-check OK, 0 erros
+**Insights**: Loop Engineering dominante (10+ sources), Agent Memory converging, Claude Code ecosystem expanding
+→ [[06-GENERATED/relatorios/2026-06-28-relatorio-semanal]]
+
+## 2026-06-28 — melhorias/otimizações (5 subagentes paralelos)
+**Despachado**: hygiene + plano-melhorias T0-T48 + F3.3 items
+**Fontes**: triagem, revisao-semanal ×2, meta-coaching, connections, ingest-diario, plano-melhorias 2518 linhas
+→ Resultados pendentes (5 subagentes background)
+
+## 2026-06-28 — melhorias concluídas (plano-melhorias T0-T48)
+**Plano**: 48 tarefas, 5 subagentes paralelos, 44 arquivos criados, 17 modificados
+**Lote 1**: ADR 0001, Constitution §7 What&Why, backend-dev+standards+forge, triagem domain tagging, 6 hot-*.md, F3.8 síntese cruzada, F2.11 explainer
+**Lotes 2-3**: AGENTS.md v1.6 aidd, 3 writing skills, council+debate mechanisms, golden-example Go, iwe, iFixAi frontier-risk, prd-taskmaster, Agent-Reach, 3 security skills, archify, design.md, pentest ref, sources
+**Lotes 4-13**: cc-switch, OpenBB, ECC, firecrawl, design cluster, skill sourcing, karpathy compare, repo-radar, tooling-eval, prd-grade, memory-engine eval, timesfm, hedge-fund, opendraft, gstack+office-hours+STRIDE, firmware universal, cite-or-flag, 3 domain guards, hooks spec, wiring, stack SaaS, evo+hill tree-search, paperclip, no-op audit, rewind+ship-page
+**F3.3 items**: 5/5 concluídos (loop-engineering 4-layer, progressive-disclosure, generator-evaluator-split, evaporation-reconcile skill, context-budget-alert hook)
+**Hygiene**: rotinas drift corrigido, 9→8 agent-memory concepts (1 canonical + 7 stubs), manifest 0 sem categoria (vs 1442), F3.3 squash guardrail
+→ [[07-QUEUE/plano-melhorias-agents-2026-06-27]] (status: concluido)

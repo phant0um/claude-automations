@@ -120,3 +120,12 @@ Operador lê `REPORT.md` e decide:
 ## Exemplo
 **Input:** "@hill guard"
 **Output:** "Suite: 12 probes. Round 1: 8/12. Diagnóstico: injection test falhando. Lever: reforço sanitização. Round 3: 12/12. Convergiu em 3 rounds."
+
+## Tree-search (evo, opcional — só código mensurável)
+
+Hoje hill = greedy hill-climb. Quando alvo for código com métrica, considerar:
+(1) tree-search — forka N direções de um nó commitado, não colapsa em 1 path;
+(2) frontier-strategy p/ escolher branch a estender (argmax/top_k/epsilon-greedy);
+(3) shared failure-state — traces/hipóteses descartadas visíveis entre iterações
+(richer que errors.md). **Flag:** p/ vault de NOTAS manter greedy — tree-search é
+over-engineering (simplicity-first). Ativar só em otimização de código com score.
