@@ -122,6 +122,15 @@ Layer 1 — Credential Management (lifecycle)
 
 ---
 
+## Ameaças Emergentes (2026-06-22/23) — Vetores Não Cobertos pelo Stack Atual
+
+Connection Finder (revisão-semanal 2026-06-28) achou convergência de 2 sources na mesma semana, cada uma cobrindo ameaça distinta do stack 3-camadas acima:
+
+- **Mosaic leakage** (vazamento por agregação): deep research agents combinando docs privados + web retrieval podem vazar segredo via múltiplas queries externas inocentes — nenhuma revela individualmente, mas observador de outbound traffic reassembla. Não é exfiltração de credential (Layer 2) — é vazamento de **conteúdo do contexto**, vetor que iron-proxy não cobre.
+- **OS-level enforcement** (em vez de network-boundary proxy): AgenticOS propõe interface intent-oriented substituindo syscalls POSIX genéricos — abordagem arquiteturalmente diferente do iron-proxy (proxy na borda vs. kernel redesenhado).
+
+→ Candidato a **Layer 4** (Context/Output Leakage) no roadmap Hermes — gap real: stack atual protege credentials, não conteúdo de contexto agregado.
+
 ## Ver Também
 
 - [[03-RESOURCES/entities/Hermes-Agent]] — implementação de referência (Layer 1+2)
@@ -130,3 +139,5 @@ Layer 1 — Credential Management (lifecycle)
 - [[03-RESOURCES/sources/ml-research-papers/skill-md-semantic-supply-chain-attacks]] — ataques semânticos a registries de skills (Saha et al., UMD 2026); SKILL.md como superfície de ataque pré-execução
 - [[03-RESOURCES/sources/claude-code-skills/skillspector-nvidia-security-scanner]] — NVIDIA SkillSpector (Layer 3)
 - [[03-RESOURCES/sources/claude-code-skills/anthropic-cybersecurity-skills-mukul975]] — 754 security skills mapeadas para 5 frameworks
+- [[03-RESOURCES/sources/ai-agents/mosaicleaks-can-your-research-agent-keep-a-secret]] — mosaic effect, vazamento por agregação de queries (gap: Layer 4 candidato)
+- [[03-RESOURCES/sources/agenticos-an-intent-oriented-secure-operating-system-architecture-for-autonomous]] — enforcement no nível OS vs. proxy de borda

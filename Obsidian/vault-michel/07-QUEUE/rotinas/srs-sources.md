@@ -2,8 +2,8 @@
 title: SRS Sources — Revisão Espaçada de Sources Score A
 type: rotina
 schedule: "diário 09h"
-version: 2
-last_improved: 2026-06-19
+version: 3
+last_improved: 2026-06-24
 created: 2026-06-18
 tags: [rotina, srs, sources, spaced-repetition, retention]
 ---
@@ -208,6 +208,15 @@ adiciona uma linha com:
 
 ---
 
+## Self-improvement log `[bash]`
+
+```bash
+mkdir -p 06-GENERATED/tasks
+echo "- $(date -I): [srs-sources] $SOURCES_REVISADAS revisadas, média recall=${AVG_RECALL:-N/A}, novas conexões=${NEW_CONNS:-0}" >> 06-GENERATED/tasks/lessons.md
+```
+
+---
+
 ## Guardrails
 
 - **Max 3 sources por sessão** — não sobrecarregar
@@ -231,5 +240,6 @@ adiciona uma linha com:
 
 ## Changelog
 
+- v3 (2026-06-24): + self-improvement log — append métricas (sources, recall, conexões) em `06-GENERATED/tasks/lessons.md`. Completa pré-requisito lessons log do padrão autoresearch-loop.
 - v2 (2026-06-19): tracker `07-QUEUE/trackers/srs-sources-tracker.md` criado (estava referenciado mas inexistente → FASE 1 falhava); ingest-agent (F2.10) passa a fazer `mkdir -p` + popular linha por Score A. (Sem commit gate — tracker e source pages são gitignored por design.)
 - v1 (2026-06-18): criado.

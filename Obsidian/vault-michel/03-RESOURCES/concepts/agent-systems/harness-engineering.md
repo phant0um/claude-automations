@@ -172,3 +172,6 @@ Matched-budget intervention: mesmo orçamento bruto, qualidade diferente → suc
 - **[2026-06-24]** Agent = Modelo + Harness. O harness (ferramentas, memória, sandbox, guardrails, loops de feedback) é o que transforma... — [[ai-agent-harness-databricks]]
 - **[2026-06-24]** Eve é framework open-source da Vercel onde agent = diretório. Production built-in: durable execution, sandbox, HITL... — [[introducing-eve-vercel]]
 - **[2026-06-24]** Default harness = agent loop + built-in tools (bash, read_file, write_file, glob, grep, web_fetch, web_search, todo,... — [[the-harness-eve-default]]
+- **[2026-06-28]** Harness otimização = 3 práticas: config lean/human-written (LLM-generated degrada 20%), R.P.I. framework (Research→Plan→Implement), subagents para context clean. Progressive disclosure: Claude Code MCP search = 85% context reduction — [[harnesses-everything-optimize-yours]]
+- **[2026-06-28]** Instruction budget: frontier LLMs entram "dumb zone" após algumas centenas de instruções. "When everything is marked important, nothing is." 70%+ performance vive fora dos pesos do modelo — [[prompt-engineering-dead-context-engineering]]
+- **[2026-06-28]** Personal agent = harness estruturado para crons. OpenClaw (MIT) e Hermes = implementações que definiram o categoria. "Mail thing is the demo. The system is the product." — [[anatomy-personal-agent-hermes-openclaw]]

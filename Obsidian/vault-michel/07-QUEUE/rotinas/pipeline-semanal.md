@@ -2,8 +2,8 @@
 title: Pipeline Semanal — Triagem → Ingest → Relatório + Meta-padrões
 type: rotina
 schedule: "domingo 22h"
-last_improved: 2026-06-20
-version: 5.1
+last_improved: 2026-06-24
+version: 5.2
 tags: [rotina, pipeline, ingest, triagem, relatório, token-economy, weekly]
 ---
 
@@ -140,7 +140,28 @@ detecta skills/agents/hooks recorrentes, atualiza `.raw/.manifest.json` (jq atô
 key com e sem extensão — dedup-gap fix), move A/B para `08-ARCHIVE/[A|B]/`, chama `@report-agent`.
 
 Se >20 arquivos: dispatch `claude-obsidian:wiki-ingest` paralelo (1 por fonte) +
-adversarial gate ([[04-SYSTEM/skills/orchestration/adversarial-gate]]).
+adversarial gate v1 in-flight ([[04-SYSTEM/skills/orchestration/adversarial-gate]]).
+Ao final do batch, F2.10 roda adversarial gate v2 (pós-batch).
+
+### F2.10 Batch Quality Gate `[Sonnet]` — adversarial-gate-v2
+
+Skill: [[04-SYSTEM/skills/orchestration/adversarial-gate-v2]]
+
+Ativa automaticamente quando batch de ingest >20 source pages conclui FASE 2.
+Dispara subagente adversarial com contexto isolado que valida qualidade agregada do batch:
+
+1. **Link integrity**: wikilinks quebrados em source pages recém-criadas
+2. **Categorização**: fonte classificada na categoria errada (articles vs ai-agents vs concurso vs fiap)
+3. **Placeholder detection**: stubs com `<placeholder>` ou seções vazias
+4. **Concept absorption completeness**: concepts linkados mas sem evidência appended (F2.5)
+5. **Beautiful nonsense**: batches que parecem completos mas têm defeitos sistêmicos invisíveis source-a-source
+
+Resultado → `PIPELINE OK` (batch aprovado) ou `PIPELINE FAIL` (reportar issues sistêmicos).
+Se FAIL: logar issues em hot.md, não bloquear FASE 3 — report-agent pode ainda gerar relatório
+com caveats. Issues críticos (>30% do batch com defeito) → abortar FASE 3, flag para Nexus.
+
+**Diferença de v1**: v1 valida tarefa-a-tarefa durante execução. v2 valida o batch inteiro
+após ingest — detecta problemas sistêmicos que per-file não vê.
 
 ### F2.8 Nexus spot-check `[Sonnet]`
 
@@ -230,13 +251,14 @@ hot.md, não bloquear o resto da rotina.
 | F1 | heurística bash (≥60% dos candidatos, score 0-3/7-10) | — | 0 |
 | F1 | borderline scoring (score 4-6, 1 batch) | Haiku | ~32×N_t |
 | F2 | ingest-agent (source pages + manifest + F2.5 absorption + F2.9 reflection) | Sonnet | 250×N_a + 500×N_f + 100×N_A |
+| F2.10 | adversarial-gate-v2 (batch >20 files, pós-ingest) | Sonnet | ~300 (só se >20) |
 | F2.8 | Nexus spot-check (3 amostras) | Sonnet | ~150 |
 | F3 | report-agent (clusters + cross-conn + vault impact + F3.4 + F3.4b + F3.6 + F3.5 + F3.7) | Sonnet/Haiku | inclui na verificação |
 | F3.5 | Nexus final review | Sonnet | ~100 |
 | — | ledger (commit + session log) | Haiku | 0–50 |
 
 **Total Claude estimado**: `~32×N_t + 250×N_a + 500×N_f + 100×N_A + ~1450-1850 fixed`
-onde N_A = número de Score A sources (F2.9 reflection cost).
+onde N_A = número de Score A sources (F2.9 reflection cost). Se batch >20, +~300 (F2.10 adversarial-gate-v2).
 
 **Economia vs v4.4 diário**: 6 runs vazios/semana × ~350 tokens (3 gates Sonnet)
 = ~2.100 tokens/semana economizados em runs que produziam 0 sources.
@@ -252,7 +274,7 @@ onde N_A = número de Score A sources (F2.9 reflection cost).
 - Se Nexus bloquear: parar pipeline, não pular gate
 - Erros: log + continue batch
 - FIAP: criar entity de fase se não existir
-- Se >20 arquivos: dispatch wiki-ingest agents paralelo
+- Se >20 arquivos: dispatch wiki-ingest agents paralelo + F2.10 adversarial-gate-v2 (pós-batch)
 - Confidence < 0.6 (triagem): escalar para Nexus/Sonnet conforme [[04-SYSTEM/agents/nexus-agent-system/model-router]]
 - Borderline scoring (F1, score 4-6): SEMPRE 1 chamada batch, nunca loop per-file
 - Triagem § "Sugestões/Melhorias": caveman ultra (flags 1-linha) — versão
@@ -293,6 +315,12 @@ onde N_A = número de Score A sources (F2.9 reflection cost).
 
 ## Changelog
 
+- v5.2 (2026-06-24): Integrada skill órfã `adversarial-gate-v2` (pós-batch quality gate).
+  F2.10 Batch Quality Gate adicionado após FASE 2 — auto-ativa quando batch >20 source pages.
+  Valida: link integrity, categorização, placeholders, concept absorption completeness, beautiful nonsense.
+  Diferença de v1: v1 = in-flight tarefa-a-tarefa, v2 = pós-batch agregado. v1 mantida na FASE 2
+  para dispatches paralelos. Cost budget: +~300 tokens (só se >20 files). Registrada em AGENTS.md
+  e moc-skills.md. Resolve órfã detectada em skill audit 2026-06-24.
 - v5.1 (2026-06-20): naming — triagem invertida p/ `06-GENERATED/triagem/YYYY-MM-DD-triagem.md` (prefixo de data). Triagens já criadas mantidas. Só cosmético; lógica do pipeline intocada.
 - v5.0 (2026-06-18): Pipeline diário → semanal. Schedule domingo 22h. Merge
   completo de weekly-synthesis (F3.6 meta-padrões agora é fase nativa do

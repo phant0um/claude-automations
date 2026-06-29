@@ -150,6 +150,12 @@ rotation-policy: "SESSÕES-RECENTES max 5 entries; ARQUIVO max 30 rows; ceiling 
 <!-- SECTION:sessoes-recentes -->
 ## [SESSÕES-RECENTES]
 
+### 2026-06-28
+
+**process-queue run:** 1 task na fila → `plano-melhorias-agents-2026-06-27.md` skip (revisão-manual). 48+ sub-tarefas excede backpressure (max 10/run); sub-tarefas T9/T39 editam `AGENTS.md` e `Constitution.md` (invariantes → exigem confirmação humana). Task permanece para ação humana. Consolidado: `06-GENERATED/queue/2026-06-28-process-queue-1.md`.
+
+---
+
 ### 2026-06-22
 
 **Plano de ações revisão 2026-06-21 — 3 itens executados:**
@@ -406,3 +412,24 @@ Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline
 **Conexões:** 3 encontradas (confiança média/baixa), 0 wikilinks adicionados
 **Meta-coaching:** top waste: F3.3 Vault Impact retrofitting (3 commits de patch pra 1 item)
 → [[06-GENERATED/revisao-semanal/2026-06-27-revisao-semanal]]
+
+## Vault Reconcile 2026-06-27 — SKIP
+**Motivo:** 0 arquivos em 08-ARCHIVE/A/ + B/ — gate cost-0, sem reconciliação a fazer.
+
+## Revisão Semanal 2026-06-28
+**System:** stale=0 drift=1(rotinas 15 vs 16 citado, recorrente) anomalia=git-toplevel confirmada (.git no home dir — SEGURANÇA, human-gated)
+**Lint:** orphans~766 dead~839 manifest-dups=370 (estável)
+**Conexões:** 3 encontradas, 2 wikilinks adicionados (agent-security-stack ↔ mosaicleaks+agenticos)
+**Meta-coaching:** top waste: F3.3 retrofitting fragmentado (recorrente, piorou 3→5 commits)
+→ [[06-GENERATED/revisao-semanal/2026-06-28-revisao-semanal]]
+- ⚠️ daily-scan: 746 candidatos ≥ threshold (30) — considerar rodar pipeline-semanal — 2026-06-28
+
+## Pipeline Semanal 2026-06-28
+**Veredito:** PIPELINE OK (partial batch)
+**Triagem:** 774 candidatos → 722 aprovados (93.3%), 52 rejeitados (51 evaporados + 1 C)
+**Ingest:** 5 source pages criadas (batch parcial — 717 backlog)
+**Clusters:** Loop Engineering, Context Engineering, Wiki LLM, Personal Agent
+**Top action:** formalizar concept loop-engineering (4-layer stack) + progressive-disclosure
+**F2.5:** 2 concepts absorvidos (harness-engineering + agent-loop-design)
+**F2.9:** 1 reflection (self-improving-company-brain)
+→ [[06-GENERATED/ingest-report/ingest-diario-2026-06-28]]

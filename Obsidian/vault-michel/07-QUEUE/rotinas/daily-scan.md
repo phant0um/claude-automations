@@ -2,8 +2,8 @@
 title: Daily Scan — Dedup + Candidatos (bash-only)
 type: rotina
 schedule: "diário 16h"
-version: 2
-last_improved: 2026-06-19
+version: 2.2
+last_improved: 2026-06-24
 created: 2026-06-18
 tags: [rotina, daily, scan, dedup, bash-only]
 ---
@@ -149,6 +149,16 @@ fi
 
 ---
 
+## Self-improvement log `[bash]`
+
+```bash
+mkdir -p 06-GENERATED/tasks
+DUP_COUNT=$(ls Clippings/ .raw/articles/ 2>/dev/null | sort | uniq -d | wc -l | tr -d ' ')
+echo "- $(date -I): [daily-scan] $NEW_COUNT candidatos, $DUP_COUNT duplicatas, threshold=$THRESHOLD → ${NEW_COUNT:-0}≥${THRESHOLD:+flag}" >> 06-GENERATED/tasks/lessons.md
+```
+
+---
+
 ## Guardrails
 
 - **Zero AI cost** — bash only, sem chamadas de modelo
@@ -171,6 +181,7 @@ antes do domingo.
 
 ## Changelog
 
+- v2.2 (2026-06-24): + self-improvement log — append métricas (candidatos, duplicatas, threshold) em `06-GENERATED/tasks/lessons.md`. Completa pré-requisito lessons log do padrão autoresearch-loop.
 - v2.1 (2026-06-24): fix slug() inline python3 -c quoting bug no macOS bash 3.x — extraído para
   04-SYSTEM/scripts/slug_fn.py. Pitfall: inline python3 -c com regex + parênteses quebra
   silenciosamente no bash 3.x (macOS). Resultado: slug vazio → grep -qF "" retorna true

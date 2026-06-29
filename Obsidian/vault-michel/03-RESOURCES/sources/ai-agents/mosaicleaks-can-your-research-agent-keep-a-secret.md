@@ -30,3 +30,4 @@ Deep research agents que combinam documentos privados com web retrieval vazam in
 
 - [[03-RESOURCES/concepts/agent-systems]]
 - [[03-RESOURCES/sources/towards-secure-autonomous-agents-with-information-flow-control-ifc]]
+- [[03-RESOURCES/concepts/agent-systems/agent-security-stack]] — gap candidato Layer 4 (context/output leakage), distinto de credential exfil (Layer 1-2)
