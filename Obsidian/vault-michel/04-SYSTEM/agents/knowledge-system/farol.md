@@ -12,6 +12,7 @@ triggers:
 reads:
   - docs/standards.md
   - skills/source-validator.md
+  - skills/core/cite-or-flag.md
   - 04-SYSTEM/AGENTS.md
   - 04-SYSTEM/wiki/hot.md
 writes: []

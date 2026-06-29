@@ -13,6 +13,8 @@ triggers:
 reads:
   - docs/standards.md
   - skills/banca-patterns.md
+  - skills/writing/writing-fragments.md
+  - skills/writing/writing-shape.md
 writes:
   - docs/progress.md
 calls:

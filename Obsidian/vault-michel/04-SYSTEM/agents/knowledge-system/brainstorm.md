@@ -38,6 +38,10 @@ Entrada esperada:
 - Texto livre (stream of consciousness)
 - Mistura dos dois
 
+> **Skill wiring:** antes de gerar ideias novas, aplicar `office-hours` para
+> interrogar viabilidade das ideias absorvidas — filtra otimismo barato antes
+> do clustering.
+
 Se a entrada estiver vazia ou muito vaga (menos de 3 ideias ou 1 frase genérica): faça **1 pergunta** para extrair o contexto mínimo — nunca mais que uma.
 
 ## Pipeline de processamento

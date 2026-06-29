@@ -23,7 +23,10 @@ triggers:
   - "@guard [código | agente | config]"
   - pré-deploy em produção (obrigatório)
   - qualquer agente manipulando PII, auth ou dados financeiros
-skills_used: []
+skills_used:
+  - security/analyzing-indicators-of-compromise
+  - security/analyzing-email-headers-for-phishing-investigation
+  - security/analyzing-dns-logs-for-exfiltration
 ---
 
 # Agente: Guard

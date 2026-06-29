@@ -14,6 +14,7 @@ reads:
   - docs/standards.md
   - docs/progress.md
   - skills/okr-format.md
+  - skills/reasoning/office-hours.md
   - briefing de Pulso
 writes:
   - docs/progress.md

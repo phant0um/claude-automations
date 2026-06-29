@@ -455,3 +455,8 @@ Log cronológico (pipeline diário/semanal) movido para `04-SYSTEM/logs/pipeline
 **F3.3 items**: 5/5 concluídos (loop-engineering 4-layer, progressive-disclosure, generator-evaluator-split, evaporation-reconcile skill, context-budget-alert hook)
 **Hygiene**: rotinas drift corrigido, 9→8 agent-memory concepts (1 canonical + 7 stubs), manifest 0 sem categoria (vs 1442), F3.3 squash guardrail
 → [[07-QUEUE/plano-melhorias-agents-2026-06-27]] (status: concluido)
+
+## Vault Reconcile 2026-06-28
+**Status:** SKIP — 0 arquivos em 08-ARCHIVE/A/ + 08-ARCHIVE/B/
+**Cost:** 0
+- 🩺 weekly-ops 2026-06-28: 2 issues scheduler (❌skill-audit não-agendada, ❌rotina-audit-mensal cron-diverge), +4 tickets, 0 runtime-unverified (5/5 F3.3 verificados)

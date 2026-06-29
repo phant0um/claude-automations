@@ -33,6 +33,7 @@ Tipo: **Verification skill** — inspirado em Anthropic lessons-skills. Garante 
 - Auditar wikilinks globais do vault inteiro → usar `wiki-lint`
 - Auditar agentes/skills registrados → usar `check-resolvable`
 - Avaliar profundidade de conceitos existentes → usar `drift-review`
+- Detectar evaporação conceitual temporal (concept stale >30d) → usar `evaporation-reconcile`
 
 ---
 
@@ -494,7 +495,7 @@ broken. Investigation: the remaining "broken" links are `[[wikilinks]]` and
 `[[Books.base]]` — text inside article content ABOUT Obsidian syntax, not actual
 wikilinks pointing to vault notes.
 
-**Causa**: The regex `\[\[([^\]]+)\]\]` matches ANY `[[...]]` in the file content,
+**Causa**: The regex `\\[\\[([^\\]]+)\\]\\]` matches ANY `[[...]]` in the file content,
 including inline code examples, quoted syntax demonstrations, and article text
 that describes wikilink syntax. Articles about Obsidian/PKM naturally contain
 `[[wikilinks]]` as examples.
@@ -509,11 +510,11 @@ that describes wikilink syntax. Articles about Obsidian/PKM naturally contain
 **Implementation**: filter after regex extraction:
 ```python
 # Remove inline-code wrapped matches
-content_no_code = re.sub(r'`[^`]*\[\[[^\]]+\]\][^`]*`', '', content)
+content_no_code = re.sub(r'`[^`]*\\[\\[[^\\]]+\\]\\][^`]*`', '', content)
 # Remove code blocks
 content_no_code = re.sub(r'```.*?```', '', content_no_code, flags=re.DOTALL)
 # Then extract wikilinks from cleaned content
-links = re.findall(r'\[\[([^\]]+)\]\]', content_no_code)
+links = re.findall(r'\\[\\[([^\\]]+)\\]\\]', content_no_code)
 ```
 
 **Evidência**: pipeline-semanal 2026-06-28, 722 source pages. Initial F2.10
@@ -521,6 +522,25 @@ showed 159/496 (32.1%) broken. After creating 8 stubs for real missing targets,
 re-check showed 108/496 (21.8%) broken. All remaining were false positives from
 article content (`[[wikilinks]]`, `[[Books.base]]`). After filtering code blocks,
 0 real broken links.
+
+## Pitfall: GitHub README ingest — miscategorization by README content keywords — 2026-06-28
+
+**Sintoma**: 21 GitHub repo READMEs ingestados. 2 miscategorizados:
+- JavaGuide → `memory-context-rag` (README menciona "memory" em contexto JVM)
+- llm-course → `financial-trading` (README menciona "stock" em examples)
+
+**Causa**: `categorize()` faz keyword matching no conteúdo do README. READMEs de
+repos técnicos frequentemente mencionam keywords de outros domínios em exemplos,
+seções de "related projects", ou metadata. Um README sobre Java menciona "memory"
+(JVM heap) e um curso de LLM usa "stock market prediction" como exemplo.
+
+**Fix**: Para READMEs de GitHub repos, a categorização deve pesar o TÍTULO do repo
+e a descrição do GitHub API (`gh api repos/owner/repo --jq '.description'`) mais
+que o conteúdo do README. Ou usar a tag `source: "gh:repos/..."` no frontmatter
+para identificar READMEs e aplicar categorização mais conservadora.
+
+**Evidência**: 21 repos baixados via `gh api`, 2/21 miscategorizados (9.5%).
+Fix aplicado: mover arquivos para categoria correta + atualizar frontmatter.
 
 ---
 
@@ -541,8 +561,12 @@ article content (`[[wikilinks]]`, `[[Books.base]]`). After filtering code blocks
 
 ---
 
-## Changelog## Changelog
+## Changelog
 
+- v1.9 (2026-06-28): +GitHub README miscategorization pitfall — READMEs mencionam
+  keywords de outros domínios em examples/metadata (Java "memory" = JVM, LLM course
+  "stock" = example). Fix: pesar título do repo + GitHub API description sobre
+  conteúdo do README para categorização.
 - v1.8 (2026-06-28): +Batch ingest programmatic wikilinks pitfall — 722 source pages
   com wikilinks gerados por keyword matching → 32.1% broken. Fix: índice basename→path,
   coletar broken targets, criar stubs no EXACT path do link. 8 stubs → 0.5% broken

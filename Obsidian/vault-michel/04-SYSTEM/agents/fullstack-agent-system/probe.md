@@ -12,6 +12,7 @@ triggers:
   - "dynamic scan"
 reads:
   - target codebase or config
+  - skills/security/pentest-agents-ref.md
 writes:
   - scan-report.md (no target dir)
 calls: []

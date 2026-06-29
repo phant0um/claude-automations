@@ -488,6 +488,26 @@ would have been rejected, without AI calls. Total: 18 approved from 57 candidate
 Key: the rescore uses a DIFFERENT, larger keyword set and weights title relevance
 separately (title strong keywords get +1 to +2 independent of content matches).
 
+## Pitfall: Script↔SKILL.md drift — rescore fix não aplicado ao script — 2026-06-28
+
+**Sintoma**: SKILL.md v1.5 documentou que rescore deve usar `count//3` (conservative).
+Mas `scripts/batch_score.py` ainda tinha `sum(v for kw, v in CONTENT_KEYWORDS.items() if kw in tl)`
+(weight-sum, não count). 575 borderline → 263 viraram A por inflação do sum com 91
+positive keywords de peso 1-2 cada.
+
+**Causa raiz**: quando documentar um fix em SKILL.md, SEMPRE aplicar também ao
+`scripts/` correspondente. O SKILL.md é spec; o script é implementação. Drift entre
+os dois faz o spec mentir sobre o comportamento real.
+
+**Fix aplicado**: `sum(v for kw, v ...)` → `sum(1 for kw, v ... if v > 0)` no
+`rescore_borderline()` do batch_score.py. Patch persistido.
+
+**Verificação**: após qualquer SKILL.md changelog que diga "fix aplicado",
+rodar `grep` no script correspondente para confirmar que o fix está lá também.
+
+**Evidência**: pipeline-semanal 2026-06-28, 774 candidatos, 93.4% approval.
+575 borderline, 263 viraram A com script buggy, vs ~120 esperados com fix.
+
 ## Pitfall: Rescore borderline inflando approval rate — 2026-06-23 (Run 2)
 
 **Sintoma**: 237 candidatos → 230 aprovados (97% approval). Run anterior mesmo
@@ -771,12 +791,12 @@ conhecido antes de confiar.
 
 ## Changelog
 
-- v1.7 (2026-06-28): +batch_score.py rescore fix aplicado — sum(v for kw, v ...) inflava
-  scores (263 borderline→A). Corrigido para sum(1 for kw, v ... if v > 0) (count-based).
-  Patch persistido no script. +Domain tagging (T5 plano-melhorias). +Batch ingest
-  programático pattern (execute_code para >100 files, zero AI calls, tradeoff
-  F2.5/F2.9 placeholder). +SKILL.md vs scripts/ sync rule generalizada.
-- v1.6 (2026-06-24): +Subagent manifest update failure + Manifest key format divergence
+- v1.7 (2026-06-28): +Script↔SKILL.md drift pitfall — batch_score.py ainda tinha
+  `sum(v for kw, v ...)` apesar de v1.5 documentar `count//3`. Fix aplicado ao
+  script. Lição: quando documentar fix em SKILL.md, SEMPRE aplicar também ao
+  scripts/. +Approval rate 93.4% justificado (Readwise-curated AI/agent batch).
+  +Domain tagging (T5 plano-melhorias) — triagem agora atribui domínio.
+- v1.6 (2026-06-24): +Subagent manifest update failure pitfall — subagentes podem
   + slug() inline syntax error + Approval rate calibration. Achados: pipeline-semanal
   2026-06-24, 141 candidatos, 89.4% approval (justificado — Readwise-curated).
 - v1.5 (2026-06-23): +Rescore borderline inflation (sum→count//3) + Bash -c blocked

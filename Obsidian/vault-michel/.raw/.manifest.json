@@ -18391,17 +18391,15 @@
       "duplicate_flag": "CONSIDER_MERGE"
     },
     "Co-Scientist A multi-agent AI partner to accelerate research.md": {
-      "hash": "batch-ingested",
-      "ingested_at": "2026-06-22",
-      "category": "articles",
+      "hash": "381180b25ff42078897a5c2449549297",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
       "pages_created": [
-        "03-RESOURCES/sources/ai-agents/co-scientist-a-multi-agent-ai-partner-to-accelerate-research.md"
+        "03-RESOURCES/sources/ai-agents/co-scientist-a-multi-agent-ai-partner-to-accelerate-research-2.md"
       ],
-      "note": "pipeline-semanal 2026-06-22 batch ingest",
-      "duplicate_hash": "batch-ingested",
-      "duplicate_group_size": 186,
-      "duplicate_type": "true_duplicate",
-      "duplicate_flag": "CONSIDER_MERGE"
+      "grade": "A",
+      "score": 10,
+      "note": "dedup-gap fix: source page created retroactively"
     },
     "Co-Scientist A multi-agent AI partner to accelerate research": {
       "hash": "batch-ingested",
@@ -19388,17 +19386,15 @@
       "duplicate_flag": "CONSIDER_MERGE"
     },
     "Natural Language Autoencoders.md": {
-      "hash": "batch-ingested",
-      "ingested_at": "2026-06-22",
-      "category": "articles",
+      "hash": "3d3e19b3b3f5e1744e871cd89c838388",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
       "pages_created": [
-        "03-RESOURCES/sources/llm-theory/natural-language-autoencoders.md"
+        "03-RESOURCES/sources/open-source-ecosystems/natural-language-autoencoders.md"
       ],
-      "note": "pipeline-semanal 2026-06-22 batch ingest",
-      "duplicate_hash": "batch-ingested",
-      "duplicate_group_size": 186,
-      "duplicate_type": "true_duplicate",
-      "duplicate_flag": "CONSIDER_MERGE"
+      "grade": "A",
+      "score": 8,
+      "note": "dedup-gap fix: source page created retroactively"
     },
     "Natural Language Autoencoders": {
       "hash": "batch-ingested",
@@ -19777,17 +19773,15 @@
       "duplicate_flag": "CONSIDER_MERGE"
     },
     "Trinity An Evolved LLM Coordinator.md": {
-      "hash": "batch-ingested",
-      "ingested_at": "2026-06-22",
-      "category": "articles",
+      "hash": "3c1dc0230015016f4e0d56bfaf679019",
+      "ingested_at": "2026-06-28",
+      "category": "llm-theory",
       "pages_created": [
-        "03-RESOURCES/sources/llm-theory/trinity-an-evolved-llm-coordinator.md"
+        "03-RESOURCES/sources/llm-theory/trinity-an-evolved-llm-coordinator-2.md"
       ],
-      "note": "pipeline-semanal 2026-06-22 batch ingest",
-      "duplicate_hash": "batch-ingested",
-      "duplicate_group_size": 186,
-      "duplicate_type": "true_duplicate",
-      "duplicate_flag": "CONSIDER_MERGE"
+      "grade": "A",
+      "score": 9,
+      "note": "dedup-gap fix: source page created retroactively"
     },
     "Trinity An Evolved LLM Coordinator": {
       "hash": "batch-ingested",
@@ -20626,14 +20620,13 @@
       "category_derived": true
     },
     "How To Use The Kalman Filter To Build Smarter Trading Systems (Complete Framework)": {
-      "hash": "batch-moved",
-      "ingested_at": "2026-06-23",
+      "hash": "a3e452095db0df3fae8b449c6df09478",
+      "ingested_at": "2026-06-28",
       "category": "financial-trading",
-      "alias_of": "How To Use The Kalman Filter To Build Smarter Trading Systems (Complete Framework).md",
-      "note": "dual-key alias (without .md)",
-      "duplicate_hash": "batch-moved",
-      "duplicate_group_size": 51,
-      "duplicate_type": "lineage"
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/how-to-use-the-kalman-filter-to-build-smarter-trading-systems-complete-framework.md"
+      ],
+      "alias_of": "How To Use The Kalman Filter To Build Smarter Trading Systems (Complete Framework).md"
     },
     "Clippings/How to Build a Claude Agent You Can Actually Trust in Production - Full course.md|A|8": {
       "ingested_at": "2026-06-23",
@@ -21112,16 +21105,15 @@
       "duplicate_type": "lineage"
     },
     "How To Use The Kalman Filter To Build Smarter Trading Systems (Complete Framework).md": {
-      "hash": "batch-moved",
-      "ingested_at": "2026-06-23",
+      "hash": "a3e452095db0df3fae8b449c6df09478",
+      "ingested_at": "2026-06-28",
       "category": "financial-trading",
       "pages_created": [
-        "03-RESOURCES/sources/financial-trading/kalman-filter-trading-systems-framework.md"
+        "03-RESOURCES/sources/financial-trading/how-to-use-the-kalman-filter-to-build-smarter-trading-systems-complete-framework.md"
       ],
-      "note": "batch-moved ingest from 08-ARCHIVE/A/2026-06-23",
-      "duplicate_hash": "batch-moved",
-      "duplicate_group_size": 51,
-      "duplicate_type": "lineage"
+      "grade": "A",
+      "score": 10,
+      "note": "dedup-gap fix: source page created retroactively"
     },
     "How to Make $11,000 a Month with Computer Vision Using AI.md": {
       "hash": "batch-moved",
@@ -21670,15 +21662,15 @@
       "duplicate_flag": "CONSIDER_MERGE"
     },
     "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding.md": {
-      "hash": "cfe4ca74fa030069add966813bcec4b7",
-      "ingested_at": "2026-06-23",
-      "category": "ai-agents",
+      "hash": "b5fa2498dabb7d1d7ec4f2d954b51d05",
+      "ingested_at": "2026-06-28",
+      "category": "llm-theory",
       "pages_created": [
-        "03-RESOURCES/sources/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculati.md"
+        "03-RESOURCES/sources/llm-theory/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash.md"
       ],
-      "duplicate_hash": "cfe4ca74fa030069add966813bcec4b7",
-      "duplicate_group_size": 2,
-      "duplicate_type": "true_duplicate"
+      "grade": "A",
+      "score": 10,
+      "note": "dedup-gap fix: source page created retroactively"
     },
     "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding": {
       "hash": "cfe4ca74fa030069add966813bcec4b7",
@@ -22318,15 +22310,15 @@
       "duplicate_flag": "CONSIDER_MERGE"
     },
     "How Telcos Build Autonomous Networks with Agentic AI.md": {
-      "hash": "80a6622313431f8a85ac2686292eda2a",
-      "ingested_at": "2026-06-23",
-      "category": "ai-agents",
+      "hash": "d2ccfb339b0b7566f4ffe54797ae479c",
+      "ingested_at": "2026-06-28",
+      "category": "llm-theory",
       "pages_created": [
-        "03-RESOURCES/sources/how-telcos-build-autonomous-networks-with-agentic-ai.md"
+        "03-RESOURCES/sources/llm-theory/how-telcos-build-autonomous-networks-with-agentic-ai.md"
       ],
-      "duplicate_hash": "80a6622313431f8a85ac2686292eda2a",
-      "duplicate_group_size": 2,
-      "duplicate_type": "true_duplicate"
+      "grade": "A",
+      "score": 8,
+      "note": "dedup-gap fix: source page created retroactively"
     },
     "How Telcos Build Autonomous Networks with Agentic AI": {
       "hash": "80a6622313431f8a85ac2686292eda2a",
@@ -22486,15 +22478,15 @@
       "duplicate_flag": "CONSIDER_MERGE"
     },
     "Inside NVIDIA Halos for Robotics A Full-Stack Functional Safety System for Physical AI.md": {
-      "hash": "9c1f42d1afa3d0c2fe4d70f3fc257b67",
-      "ingested_at": "2026-06-23",
-      "category": "articles",
+      "hash": "2411bd4670db9c56dba974ad85223eeb",
+      "ingested_at": "2026-06-28",
+      "category": "llm-theory",
       "pages_created": [
-        "03-RESOURCES/sources/inside-nvidia-halos-for-robotics-a-full-stack-functional-safety-system-for-physi.md"
+        "03-RESOURCES/sources/llm-theory/inside-nvidia-halos-for-robotics-a-full-stack-functional-safety-system-for.md"
       ],
-      "duplicate_hash": "9c1f42d1afa3d0c2fe4d70f3fc257b67",
-      "duplicate_group_size": 2,
-      "duplicate_type": "true_duplicate"
+      "grade": "A",
+      "score": 9,
+      "note": "dedup-gap fix: source page created retroactively"
     },
     "Inside NVIDIA Halos for Robotics A Full-Stack Functional Safety System for Physical AI": {
       "hash": "9c1f42d1afa3d0c2fe4d70f3fc257b67",
@@ -25174,15 +25166,15 @@
       "duplicate_flag": "CONSIDER_MERGE"
     },
     "Enable Real-Time AI for High-Speed Data Acquisition with DAQIRI.md": {
-      "hash": "f0dc473ed50005262d58ebe7d49ad9bf",
-      "ingested_at": "2026-06-23",
-      "category": "articles",
+      "hash": "1b499461f1b958b940734a3ccc815286",
+      "ingested_at": "2026-06-28",
+      "category": "llm-theory",
       "pages_created": [
-        "03-RESOURCES/sources/enable-real-time-ai-for-high-speed-data-acquisition-with-daqiri.md"
+        "03-RESOURCES/sources/llm-theory/enable-real-time-ai-for-high-speed-data-acquisition-with-daqiri.md"
       ],
-      "duplicate_hash": "f0dc473ed50005262d58ebe7d49ad9bf",
-      "duplicate_group_size": 2,
-      "duplicate_type": "true_duplicate"
+      "grade": "B",
+      "score": 7,
+      "note": "dedup-gap fix: source page created retroactively"
     },
     "Enable Real-Time AI for High-Speed Data Acquisition with DAQIRI": {
       "hash": "f0dc473ed50005262d58ebe7d49ad9bf",
@@ -25967,15 +25959,15 @@
       "duplicate_flag": "CONSIDER_MERGE"
     },
     "I automated my job (and it made me a better leader).md": {
-      "hash": "608f6c011884ef41b342c0f9d91bbb0b",
-      "ingested_at": "2026-06-23",
-      "category": "ai-agents",
+      "hash": "e9844b9e30e3ae0331b211c0c60c6714",
+      "ingested_at": "2026-06-28",
+      "category": "articles",
       "pages_created": [
-        "03-RESOURCES/sources/i-automated-my-job-and-it-made-me-a-better-leader.md"
+        "03-RESOURCES/sources/articles/i-automated-my-job-and-it-made-me-a-better-leader.md"
       ],
-      "duplicate_hash": "608f6c011884ef41b342c0f9d91bbb0b",
-      "duplicate_group_size": 2,
-      "duplicate_type": "true_duplicate"
+      "grade": "B",
+      "score": 7,
+      "note": "dedup-gap fix: source page created retroactively"
     },
     "I automated my job (and it made me a better leader)": {
       "hash": "608f6c011884ef41b342c0f9d91bbb0b",
@@ -27894,15 +27886,15 @@
       "duplicate_flag": "CONSIDER_MERGE"
     },
     "Lessons from Anthropic on building effective human-agent teams.md": {
-      "hash": "1a782aecd521317ac1fa5e5a276bfe4d",
-      "ingested_at": "2026-06-24",
-      "category": "ai-agents",
+      "hash": "b1600158575ba5d0fccd649b87dfc115",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
       "pages_created": [
-        "03-RESOURCES/sources/lessons-from-anthropic-on-building-effective-human-agent-teams.md"
+        "03-RESOURCES/sources/open-source-ecosystems/lessons-from-anthropic-on-building-effective-human-agent-teams.md"
       ],
-      "duplicate_hash": "1a782aecd521317ac1fa5e5a276bfe4d",
-      "duplicate_group_size": 2,
-      "duplicate_type": "true_duplicate"
+      "grade": "B",
+      "score": 7,
+      "note": "dedup-gap fix: source page created retroactively"
     },
     "Lessons from Anthropic on building effective human-agent teams": {
       "hash": "1a782aecd521317ac1fa5e5a276bfe4d",
@@ -28895,14 +28887,15 @@
       "alias_of": "Building beautiful web apps with GLM 5.2 fast, cheap, and polished"
     },
     "Cultural Awareness in Global AI.md": {
-      "ingested_at": "2026-06-24",
-      "tool": "ingest-agent batch-3",
-      "category": "ai-agents",
-      "grade": "B",
+      "hash": "259e003e407a0eed032cd250eef1fb5c",
+      "ingested_at": "2026-06-28",
+      "category": "articles",
       "pages_created": [
-        "03-RESOURCES/sources/cultural-awareness-in-global-ai.md"
+        "03-RESOURCES/sources/articles/cultural-awareness-in-global-ai.md"
       ],
-      "pages_updated": []
+      "grade": "B",
+      "score": 6,
+      "note": "dedup-gap fix: source page created retroactively"
     },
     "Cultural Awareness in Global AI": {
       "ingested_at": "2026-06-24",
@@ -49233,6 +49226,861 @@
       "duplicate_group_size": 2,
       "duplicate_type": "true_duplicate",
       "duplicate_flag": "CONSIDER_MERGE"
+    },
+    "30-seconds-of-code-snippets.md": {
+      "hash": "23162f67c3fd9f2f297a214e3412a62f",
+      "ingested_at": "2026-06-28",
+      "category": "articles",
+      "pages_created": [
+        "03-RESOURCES/sources/articles/30-seconds-of-code-readme.md"
+      ],
+      "grade": "B",
+      "score": 6
+    },
+    "30-seconds-of-code-snippets": {
+      "hash": "23162f67c3fd9f2f297a214e3412a62f",
+      "ingested_at": "2026-06-28",
+      "category": "articles",
+      "pages_created": [
+        "03-RESOURCES/sources/articles/30-seconds-of-code-readme.md"
+      ],
+      "alias_of": "30-seconds-of-code-snippets.md"
+    },
+    "ai-hedge-fund-multi-agent.md": {
+      "hash": "ce5530669c5b2103251623141c717b68",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/ai-hedge-fund-readme.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "ai-hedge-fund-multi-agent": {
+      "hash": "ce5530669c5b2103251623141c717b68",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/ai-hedge-fund-readme.md"
+      ],
+      "alias_of": "ai-hedge-fund-multi-agent.md"
+    },
+    "aperag-graphrag-production.md": {
+      "hash": "46b863b0f82375b83a03863065f06609",
+      "ingested_at": "2026-06-28",
+      "category": "memory-context-rag",
+      "pages_created": [
+        "03-RESOURCES/sources/memory-context-rag/aperag-readme.md"
+      ],
+      "grade": "A",
+      "score": 9
+    },
+    "aperag-graphrag-production": {
+      "hash": "46b863b0f82375b83a03863065f06609",
+      "ingested_at": "2026-06-28",
+      "category": "memory-context-rag",
+      "pages_created": [
+        "03-RESOURCES/sources/memory-context-rag/aperag-readme.md"
+      ],
+      "alias_of": "aperag-graphrag-production.md"
+    },
+    "awesome-cybersecurity-datasets.md": {
+      "hash": "daa2fb085871769eb23886a577588ed8",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/awesome-cybersecurity-datasets-readme.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "awesome-cybersecurity-datasets": {
+      "hash": "daa2fb085871769eb23886a577588ed8",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/awesome-cybersecurity-datasets-readme.md"
+      ],
+      "alias_of": "awesome-cybersecurity-datasets.md"
+    },
+    "captain-claw-multi-agent-orchestration.md": {
+      "hash": "a8f58b3bf30e7332137c7eb038383f41",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/captain-claw-readme.md"
+      ],
+      "grade": "B",
+      "score": 7
+    },
+    "captain-claw-multi-agent-orchestration": {
+      "hash": "a8f58b3bf30e7332137c7eb038383f41",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/captain-claw-readme.md"
+      ],
+      "alias_of": "captain-claw-multi-agent-orchestration.md"
+    },
+    "cognee-agent-memory-kg.md": {
+      "hash": "1235e27019bb9df8a7cba96ec40c9438",
+      "ingested_at": "2026-06-28",
+      "category": "memory-context-rag",
+      "pages_created": [
+        "03-RESOURCES/sources/memory-context-rag/cognee-readme.md"
+      ],
+      "grade": "B",
+      "score": 7
+    },
+    "cognee-agent-memory-kg": {
+      "hash": "1235e27019bb9df8a7cba96ec40c9438",
+      "ingested_at": "2026-06-28",
+      "category": "memory-context-rag",
+      "pages_created": [
+        "03-RESOURCES/sources/memory-context-rag/cognee-readme.md"
+      ],
+      "alias_of": "cognee-agent-memory-kg.md"
+    },
+    "daily-stock-analysis-llm.md": {
+      "hash": "30e64a33673cdffc111f8cbb31e445df",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/daily-stock-analysis-readme.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "daily-stock-analysis-llm": {
+      "hash": "30e64a33673cdffc111f8cbb31e445df",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/daily-stock-analysis-readme.md"
+      ],
+      "alias_of": "daily-stock-analysis-llm.md"
+    },
+    "deer-flow-superagent-harness.md": {
+      "hash": "b53b8c7ace3e5a0b6c13234fe575f933",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/deer-flow-readme.md"
+      ],
+      "grade": "B",
+      "score": 7
+    },
+    "deer-flow-superagent-harness": {
+      "hash": "b53b8c7ace3e5a0b6c13234fe575f933",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/deer-flow-readme.md"
+      ],
+      "alias_of": "deer-flow-superagent-harness.md"
+    },
+    "graphrag-rs-rust-ollama.md": {
+      "hash": "043293175047a469ec4990c7b7c7e6d9",
+      "ingested_at": "2026-06-28",
+      "category": "memory-context-rag",
+      "pages_created": [
+        "03-RESOURCES/sources/memory-context-rag/graphrag-rs-readme.md"
+      ],
+      "grade": "A",
+      "score": 9
+    },
+    "graphrag-rs-rust-ollama": {
+      "hash": "043293175047a469ec4990c7b7c7e6d9",
+      "ingested_at": "2026-06-28",
+      "category": "memory-context-rag",
+      "pages_created": [
+        "03-RESOURCES/sources/memory-context-rag/graphrag-rs-readme.md"
+      ],
+      "alias_of": "graphrag-rs-rust-ollama.md"
+    },
+    "javaguide-backend-interview.md": {
+      "hash": "5937913f545db8b66580fc79f7a41988",
+      "ingested_at": "2026-06-28",
+      "category": "memory-context-rag",
+      "pages_created": [
+        "03-RESOURCES/sources/memory-context-rag/javaguide-readme.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "javaguide-backend-interview": {
+      "hash": "5937913f545db8b66580fc79f7a41988",
+      "ingested_at": "2026-06-28",
+      "category": "memory-context-rag",
+      "pages_created": [
+        "03-RESOURCES/sources/memory-context-rag/javaguide-readme.md"
+      ],
+      "alias_of": "javaguide-backend-interview.md"
+    },
+    "learn-coding-agent-arch.md": {
+      "hash": "3163fa80a612f92724a2b39e0cd8b272",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/learn-coding-agent-readme.md"
+      ],
+      "grade": "B",
+      "score": 7
+    },
+    "learn-coding-agent-arch": {
+      "hash": "3163fa80a612f92724a2b39e0cd8b272",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/learn-coding-agent-readme.md"
+      ],
+      "alias_of": "learn-coding-agent-arch.md"
+    },
+    "llm-course-roadmap.md": {
+      "hash": "b0f19238bbb7098b3e316efa548380d7",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/llm-course-readme.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "llm-course-roadmap": {
+      "hash": "b0f19238bbb7098b3e316efa548380d7",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/llm-course-readme.md"
+      ],
+      "alias_of": "llm-course-roadmap.md"
+    },
+    "mahoraga-trading-agent-sentiment.md": {
+      "hash": "1068343659c41d55c1b69e064eab580d",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/mahoraga-readme.md"
+      ],
+      "grade": "A",
+      "score": 9
+    },
+    "mahoraga-trading-agent-sentiment": {
+      "hash": "1068343659c41d55c1b69e064eab580d",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/mahoraga-readme.md"
+      ],
+      "alias_of": "mahoraga-trading-agent-sentiment.md"
+    },
+    "openhands-ai-dev-agent.md": {
+      "hash": "f76fc92c66a03d4d5df491d5221a428f",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/openhands-readme.md"
+      ],
+      "grade": "B",
+      "score": 7
+    },
+    "openhands-ai-dev-agent": {
+      "hash": "f76fc92c66a03d4d5df491d5221a428f",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/openhands-readme.md"
+      ],
+      "alias_of": "openhands-ai-dev-agent.md"
+    },
+    "paper2agent-multi-agent.md": {
+      "hash": "38c2b79b26a92bd5dfa03c575c9c1069",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/paper2agent-readme.md"
+      ],
+      "grade": "A",
+      "score": 10
+    },
+    "paper2agent-multi-agent": {
+      "hash": "38c2b79b26a92bd5dfa03c575c9c1069",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/paper2agent-readme.md"
+      ],
+      "alias_of": "paper2agent-multi-agent.md"
+    },
+    "pentestgpt-framework.md": {
+      "hash": "9dc95bd061d1547f72585df46de5b070",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/pentestgpt-readme.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "pentestgpt-framework": {
+      "hash": "9dc95bd061d1547f72585df46de5b070",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/pentestgpt-readme.md"
+      ],
+      "alias_of": "pentestgpt-framework.md"
+    },
+    "second-brain-ai-assistant-course.md": {
+      "hash": "3eacb383d63ca5f98bc11ce1d29cda9d",
+      "ingested_at": "2026-06-28",
+      "category": "memory-context-rag",
+      "pages_created": [
+        "03-RESOURCES/sources/memory-context-rag/second-brain-ai-assistant-course-readme.md"
+      ],
+      "grade": "B",
+      "score": 7
+    },
+    "second-brain-ai-assistant-course": {
+      "hash": "3eacb383d63ca5f98bc11ce1d29cda9d",
+      "ingested_at": "2026-06-28",
+      "category": "memory-context-rag",
+      "pages_created": [
+        "03-RESOURCES/sources/memory-context-rag/second-brain-ai-assistant-course-readme.md"
+      ],
+      "alias_of": "second-brain-ai-assistant-course.md"
+    },
+    "supabase-postgres-pgvector-auth.md": {
+      "hash": "e49ed28b25b30fd9d6d4563e495a4135",
+      "ingested_at": "2026-06-28",
+      "category": "memory-context-rag",
+      "pages_created": [
+        "03-RESOURCES/sources/memory-context-rag/supabase-readme.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "supabase-postgres-pgvector-auth": {
+      "hash": "e49ed28b25b30fd9d6d4563e495a4135",
+      "ingested_at": "2026-06-28",
+      "category": "memory-context-rag",
+      "pages_created": [
+        "03-RESOURCES/sources/memory-context-rag/supabase-readme.md"
+      ],
+      "alias_of": "supabase-postgres-pgvector-auth.md"
+    },
+    "timesfm-forecasting-model.md": {
+      "hash": "9e10a5a27d30f4d4c8a26291e7da4b98",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/timesfm-readme.md"
+      ],
+      "grade": "B",
+      "score": 7
+    },
+    "timesfm-forecasting-model": {
+      "hash": "9e10a5a27d30f4d4c8a26291e7da4b98",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/timesfm-readme.md"
+      ],
+      "alias_of": "timesfm-forecasting-model.md"
+    },
+    "trademaster-quant-rl.md": {
+      "hash": "74de6f2ef05249684530203a45b3860c",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/trademaster-readme.md"
+      ],
+      "grade": "B",
+      "score": 7
+    },
+    "trademaster-quant-rl": {
+      "hash": "74de6f2ef05249684530203a45b3860c",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/trademaster-readme.md"
+      ],
+      "alias_of": "trademaster-quant-rl.md"
+    },
+    "tradingagents-multi-agent-llm.md": {
+      "hash": "1313e215dfe722f844ad1b66588f76a1",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/tradingagents-readme.md"
+      ],
+      "grade": "A",
+      "score": 9
+    },
+    "tradingagents-multi-agent-llm": {
+      "hash": "1313e215dfe722f844ad1b66588f76a1",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/tradingagents-readme.md"
+      ],
+      "alias_of": "tradingagents-multi-agent-llm.md"
+    },
+    "Agent identity a new access model for autonomous, team-wide AI.md": {
+      "hash": "d811b2b35293ef4170b56b6af183d15f",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/agent-identity-a-new-access-model-for-autonomous-team-wide-ai.md"
+      ],
+      "grade": "B",
+      "score": 7
+    },
+    "Agent identity a new access model for autonomous, team-wide AI": {
+      "hash": "d811b2b35293ef4170b56b6af183d15f",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/agent-identity-a-new-access-model-for-autonomous-team-wide-ai.md"
+      ],
+      "alias_of": "Agent identity a new access model for autonomous, team-wide AI.md"
+    },
+    "Agentic coding and persistent returns to expertise.md": {
+      "hash": "6f8bbb04034aeaa5e10af6fffdf6213a",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/agentic-coding-and-persistent-returns-to-expertise.md"
+      ],
+      "grade": "A",
+      "score": 9
+    },
+    "Agentic coding and persistent returns to expertise": {
+      "hash": "6f8bbb04034aeaa5e10af6fffdf6213a",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/agentic-coding-and-persistent-returns-to-expertise.md"
+      ],
+      "alias_of": "Agentic coding and persistent returns to expertise.md"
+    },
+    "Deploy Long-Context Reasoning and Agentic Workflows with MiniMax M3 on NVIDIA Accelerated Infrastructure.md": {
+      "hash": "8047175f061b84b8061e85008d0a2776",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia.md"
+      ],
+      "grade": "A",
+      "score": 9
+    },
+    "Deploy Long-Context Reasoning and Agentic Workflows with MiniMax M3 on NVIDIA Accelerated Infrastructure": {
+      "hash": "8047175f061b84b8061e85008d0a2776",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia.md"
+      ],
+      "alias_of": "Deploy Long-Context Reasoning and Agentic Workflows with MiniMax M3 on NVIDIA Accelerated Infrastructure.md"
+    },
+    "Empowering Users to Get More Done With Agent Mode.md": {
+      "hash": "ceda36f5c30f3a3a910f9111de6bb532",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/empowering-users-to-get-more-done-with-agent-mode.md"
+      ],
+      "grade": "B",
+      "score": 6
+    },
+    "Empowering Users to Get More Done With Agent Mode": {
+      "hash": "ceda36f5c30f3a3a910f9111de6bb532",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/empowering-users-to-get-more-done-with-agent-mode.md"
+      ],
+      "alias_of": "Empowering Users to Get More Done With Agent Mode.md"
+    },
+    "Get started.md": {
+      "hash": "6e2958c3d7a94aec933cdf2852e3a782",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/get-started.md"
+      ],
+      "grade": "B",
+      "score": 6
+    },
+    "Get started": {
+      "hash": "6e2958c3d7a94aec933cdf2852e3a782",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/get-started.md"
+      ],
+      "alias_of": "Get started.md"
+    },
+    "Guardrails Protect your Agents, Data, and Costs.md": {
+      "hash": "e31d700d7e2b174785ee08e6f8497beb",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/guardrails-protect-your-agents-data-and-costs.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "Guardrails Protect your Agents, Data, and Costs": {
+      "hash": "e31d700d7e2b174785ee08e6f8497beb",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/guardrails-protect-your-agents-data-and-costs.md"
+      ],
+      "alias_of": "Guardrails Protect your Agents, Data, and Costs.md"
+    },
+    "Human in the loop.md": {
+      "hash": "76747b5535e3ed02c42e9c9e4e705a64",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/human-in-the-loop.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "Human in the loop": {
+      "hash": "76747b5535e3ed02c42e9c9e4e705a64",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/human-in-the-loop.md"
+      ],
+      "alias_of": "Human in the loop.md"
+    },
+    "Inference Engines for LLMs & Local AI Hardware (2026 Edition).md": {
+      "hash": "c3f795502fce0b2b42857d029652a6e2",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/inference-engines-for-llms-local-ai-hardware-2026-edition.md"
+      ],
+      "grade": "A",
+      "score": 9
+    },
+    "Inference Engines for LLMs & Local AI Hardware (2026 Edition)": {
+      "hash": "c3f795502fce0b2b42857d029652a6e2",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/inference-engines-for-llms-local-ai-hardware-2026-edition.md"
+      ],
+      "alias_of": "Inference Engines for LLMs & Local AI Hardware (2026 Edition).md"
+    },
+    "Inference.md": {
+      "hash": "0760153821a1f66134fc04c614694a0d",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/inference.md"
+      ],
+      "grade": "A",
+      "score": 9
+    },
+    "Inference": {
+      "hash": "0760153821a1f66134fc04c614694a0d",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/inference.md"
+      ],
+      "alias_of": "Inference.md"
+    },
+    "Kubernetes.md": {
+      "hash": "6b03178264109096721eedb16c894468",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/kubernetes.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "Kubernetes": {
+      "hash": "6b03178264109096721eedb16c894468",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/kubernetes.md"
+      ],
+      "alias_of": "Kubernetes.md"
+    },
+    "LLM Inference.md": {
+      "hash": "95d268800f8276d23cca0a184223c06f",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/llm-inference.md"
+      ],
+      "grade": "A",
+      "score": 9
+    },
+    "LLM Inference": {
+      "hash": "95d268800f8276d23cca0a184223c06f",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/llm-inference.md"
+      ],
+      "alias_of": "LLM Inference.md"
+    },
+    "Large language model.md": {
+      "hash": "5948be6018beab10aa83393dd43d0859",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/large-language-model.md"
+      ],
+      "grade": "B",
+      "score": 7
+    },
+    "Large language model": {
+      "hash": "5948be6018beab10aa83393dd43d0859",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/large-language-model.md"
+      ],
+      "alias_of": "Large language model.md"
+    },
+    "Machine learning.md": {
+      "hash": "1082b9a5245d5d3a88253218e26a1f01",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/machine-learning.md"
+      ],
+      "grade": "B",
+      "score": 7
+    },
+    "Machine learning": {
+      "hash": "1082b9a5245d5d3a88253218e26a1f01",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/machine-learning.md"
+      ],
+      "alias_of": "Machine learning.md"
+    },
+    "NVIDIA Achieves Leading Agentic Coding Performance on First Agentic AI Benchmark.md": {
+      "hash": "c205c159059b6f721d97e686a3c85dd1",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/nvidia-achieves-leading-agentic-coding-performance-on-first-agentic-ai-benchmark.md"
+      ],
+      "grade": "A",
+      "score": 10
+    },
+    "NVIDIA Achieves Leading Agentic Coding Performance on First Agentic AI Benchmark": {
+      "hash": "c205c159059b6f721d97e686a3c85dd1",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/nvidia-achieves-leading-agentic-coding-performance-on-first-agentic-ai-benchmark.md"
+      ],
+      "alias_of": "NVIDIA Achieves Leading Agentic Coding Performance on First Agentic AI Benchmark.md"
+    },
+    "Prompt engineering.md": {
+      "hash": "4f4caf03a28f1ee3ffa30066dc849891",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/prompt-engineering.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "Prompt engineering": {
+      "hash": "4f4caf03a28f1ee3ffa30066dc849891",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/prompt-engineering.md"
+      ],
+      "alias_of": "Prompt engineering.md"
+    },
+    "Prompt library.md": {
+      "hash": "fb8ce20796ce9b5f5acc1549416a684c",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/prompt-library.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "Prompt library": {
+      "hash": "fb8ce20796ce9b5f5acc1549416a684c",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/prompt-library.md"
+      ],
+      "alias_of": "Prompt library.md"
+    },
+    "The Agentic Economy Is Here.md": {
+      "hash": "e53ea47aaad4d11f3c66643ab91bff02",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/the-agentic-economy-is-here.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "The Agentic Economy Is Here": {
+      "hash": "e53ea47aaad4d11f3c66643ab91bff02",
+      "ingested_at": "2026-06-28",
+      "category": "financial-trading",
+      "pages_created": [
+        "03-RESOURCES/sources/financial-trading/the-agentic-economy-is-here.md"
+      ],
+      "alias_of": "The Agentic Economy Is Here.md"
+    },
+    "The Token-Efficient Memory Algorithm Now Has Temporal Reasoning.md": {
+      "hash": "5b46ea42aabaeaaf79d632d9dd15757c",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/the-token-efficient-memory-algorithm-now-has-temporal-reasoning.md"
+      ],
+      "grade": "A",
+      "score": 9
+    },
+    "The Token-Efficient Memory Algorithm Now Has Temporal Reasoning": {
+      "hash": "5b46ea42aabaeaaf79d632d9dd15757c",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/the-token-efficient-memory-algorithm-now-has-temporal-reasoning.md"
+      ],
+      "alias_of": "The Token-Efficient Memory Algorithm Now Has Temporal Reasoning.md"
+    },
+    "The next biggest moat in AI.md": {
+      "hash": "040027adcfc70800b96f976238bd93bf",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/the-next-biggest-moat-in-ai.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "The next biggest moat in AI": {
+      "hash": "040027adcfc70800b96f976238bd93bf",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/the-next-biggest-moat-in-ai.md"
+      ],
+      "alias_of": "The next biggest moat in AI.md"
+    },
+    "Zed 完全ガイド.md": {
+      "hash": "55124ac47767517c39f83dce437dc7eb",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/zed.md"
+      ],
+      "grade": "B",
+      "score": 6
+    },
+    "Zed 完全ガイド": {
+      "hash": "55124ac47767517c39f83dce437dc7eb",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/zed.md"
+      ],
+      "alias_of": "Zed 完全ガイド.md"
+    },
+    "garrytangstack Use Garry Tan's exact Claude Code setup 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA.md": {
+      "hash": "b42c9114e3605356b2b4684adc4c37a9",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/garrytan-gstack-use-garry-tan-s-exact-claude-code-setup-23-opinionated-tools.md"
+      ],
+      "grade": "A",
+      "score": 8
+    },
+    "garrytangstack Use Garry Tan's exact Claude Code setup 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA": {
+      "hash": "b42c9114e3605356b2b4684adc4c37a9",
+      "ingested_at": "2026-06-28",
+      "category": "open-source-ecosystems",
+      "pages_created": [
+        "03-RESOURCES/sources/open-source-ecosystems/garrytan-gstack-use-garry-tan-s-exact-claude-code-setup-23-opinionated-tools.md"
+      ],
+      "alias_of": "garrytangstack Use Garry Tan's exact Claude Code setup 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA.md"
+    },
+    "为你的 Agent 配置更好的记忆架构：从四层模型到本地部署.md": {
+      "hash": "bad7b42a5da6b0f62d0f19aae89f5ee3",
+      "ingested_at": "2026-06-28",
+      "category": "llm-theory",
+      "pages_created": [
+        "03-RESOURCES/sources/llm-theory/agent.md"
+      ],
+      "grade": "B",
+      "score": 7
+    },
+    "为你的 Agent 配置更好的记忆架构：从四层模型到本地部署": {
+      "hash": "bad7b42a5da6b0f62d0f19aae89f5ee3",
+      "ingested_at": "2026-06-28",
+      "category": "llm-theory",
+      "pages_created": [
+        "03-RESOURCES/sources/llm-theory/agent.md"
+      ],
+      "alias_of": "为你的 Agent 配置更好的记忆架构：从四层模型到本地部署.md"
+    },
+    "小白教程：一文带你搞明白Loop Engineering并快速上手.md": {
+      "hash": "e33786d4312bc108eb55ee8200857a8b",
+      "ingested_at": "2026-06-28",
+      "category": "skills-prompting-mcp",
+      "pages_created": [
+        "03-RESOURCES/sources/skills-prompting-mcp/loop-engineering.md"
+      ],
+      "grade": "A",
+      "score": 10
+    },
+    "小白教程：一文带你搞明白Loop Engineering并快速上手": {
+      "hash": "e33786d4312bc108eb55ee8200857a8b",
+      "ingested_at": "2026-06-28",
+      "category": "skills-prompting-mcp",
+      "pages_created": [
+        "03-RESOURCES/sources/skills-prompting-mcp/loop-engineering.md"
+      ],
+      "alias_of": "小白教程：一文带你搞明白Loop Engineering并快速上手.md"
+    },
+    "用好 Loop 能让你事半功倍，六个实战场景教你驾驭循环工程.md": {
+      "hash": "7a701a9889985afa088476bc9a12a095",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/loop.md"
+      ],
+      "grade": "B",
+      "score": 7
+    },
+    "用好 Loop 能让你事半功倍，六个实战场景教你驾驭循环工程": {
+      "hash": "7a701a9889985afa088476bc9a12a095",
+      "ingested_at": "2026-06-28",
+      "category": "ai-agents",
+      "pages_created": [
+        "03-RESOURCES/sources/ai-agents/loop.md"
+      ],
+      "alias_of": "用好 Loop 能让你事半功倍，六个实战场景教你驾驭循环工程.md"
     }
   },
   "Themis An explainable AI-enabled framework for Reinforcement Learning with Human Feedback.md": {

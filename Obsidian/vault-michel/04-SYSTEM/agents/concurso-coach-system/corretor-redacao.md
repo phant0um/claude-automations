@@ -11,6 +11,8 @@ triggers:
 reads:
   - docs/standards.md
   - docs/progress.md
+  - skills/writing/writing-fragments.md
+  - skills/writing/writing-shape.md
 writes:
   - docs/progress.md
 calls:

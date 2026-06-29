@@ -14,6 +14,7 @@ reads:
   - docs/progress.md
   - docs/constitution.md
   - 04-SYSTEM/AGENTS.md
+  - skills/core/prd-grade.md
 writes:
   - docs/progress.md
   - docs/logs/operations.md

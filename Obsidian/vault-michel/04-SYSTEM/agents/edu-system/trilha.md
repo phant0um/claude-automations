@@ -15,6 +15,7 @@ triggers:
 reads:
   - docs/standards.md
   - docs/progress.md
+  - skills/writing/writing-beats.md
 writes:
   - docs/progress.md
 calls:

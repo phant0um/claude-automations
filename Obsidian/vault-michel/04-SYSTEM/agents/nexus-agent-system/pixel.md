@@ -13,6 +13,8 @@ reads:
   - design tokens
   - docs/standards.md
   - brief de Herald
+  - skills/diagram/archify.md
+  - skills/design-cluster.md
 writes:
   - src/components/
   - assets/

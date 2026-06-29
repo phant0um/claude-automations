@@ -17,6 +17,8 @@ triggers:
 reads:
   - docs/standards.md
   - skills/voice-guard.md
+  - skills/writing/writing-fragments.md
+  - skills/writing/writing-shape.md
 writes: []
 calls: []
 ---

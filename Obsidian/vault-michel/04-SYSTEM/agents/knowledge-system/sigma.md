@@ -11,6 +11,7 @@ triggers:
   - "reescrever prompt:"
 reads:
   - docs/standards.md
+  - skills/core/cite-or-flag.md
 writes: []
 calls: []
 ---

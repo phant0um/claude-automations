@@ -15,6 +15,8 @@ triggers:
   - página de serviços
 reads:
   - docs/standards.md
+  - skills/design-cluster.md
+  - skills/diagram/archify.md
   - briefing de Signal
 writes:
   - especificação de site (sem código)
