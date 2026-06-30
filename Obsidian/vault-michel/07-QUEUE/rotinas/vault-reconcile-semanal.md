@@ -1,7 +1,7 @@
 ---
 title: Vault Reconcile Semanal — Archive vs Sources
 type: rotina
-schedule: "sexta 22h"
+schedule: "quarta 22h"
 last_improved: 2026-06-24
 version: 4
 tags: [rotina, reconciliação, audit, vault-reconcile, ollama]

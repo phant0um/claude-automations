@@ -1,7 +1,7 @@
 ---
 title: Codex Retrospective — Padrões Temporais de Comportamento
 type: rotina
-schedule: "domingo 5h"
+schedule: "sábado 4h"
 version: 1
 created: 2026-06-29
 tags: [rotina, retrospective, self-improvement, temporal, session-review]

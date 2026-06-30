@@ -1,7 +1,7 @@
 ---
 title: Revisão Semanal — System Review + Lint + Conexões + Meta-Coaching
 type: rotina
-schedule: "domingo 4h AM"
+schedule: "sábado 4h AM"
 last_improved: 2026-06-20
 version: 6
 replaces: [manutencao-semanal, meta-coaching-semanal, metricas-ingest]
