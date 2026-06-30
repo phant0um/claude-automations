@@ -1,0 +1,9 @@
+# Whitelist-only: este repo (~/.git, remote claude-automations) tem toplevel no
+# home dir. Sem isso, um `git add -A`/`git add .` futuro varre o home inteiro
+# (Desktop, Downloads, outros repos, .ssh, .aws, .env, dotfiles).
+# Escopo intencional rastreado: README.md, commands/, routines/
+/*
+!/README.md
+!/commands/
+!/routines/
+Obsidian/
